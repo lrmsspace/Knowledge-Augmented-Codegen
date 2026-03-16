@@ -1,0 +1,59 @@
+{
+  "slug": "count-of-integers",
+  "link": "https://leetcode.com/problems/count-of-integers/",
+  "difficulty": "Hard",
+  "index": "2249",
+  "description_full": "You are given two numeric strings num1 and num2 and two integers max_sum and min_sum. We denote an integer x to be good if:\n\n\n\tnum1 <= x <= num2\n\tmin_sum <= digit_sum(x) <= max_sum.\n\n\nReturn the number of good integers. Since the answer may be large, return it modulo 109 + 7.\n\nNote that digit_sum(x) denotes the sum of the digits of x.\n\n \nExample 1:\n\n\nInput: num1 = \"1\", num2 = \"12\", min_sum = 1, max_sum = 8\nOutput: 11\nExplanation: There are 11 integers whose sum of digits lies between 1 and 8 are 1,2,3,4,5,6,7,8,10,11, and 12. Thus, we return 11.\n\n\nExample 2:\n\n\nInput: num1 = \"1\", num2 = \"5\", min_sum = 1, max_sum = 5\nOutput: 5\nExplanation: The 5 integers whose sum of digits lies between 1 and 5 are 1,2,3,4, and 5. Thus, we return 5.\n\n\n \nConstraints:\n\n\n\t1 <= num1 <= num2 <= 1022\n\t1 <= min_sum <= max_sum <= 400\n\n",
+  "description": "You are given two numeric strings num1 and num2 and two integers max_sum and min_sum. We denote an integer x to be good if:\n\n\n\tnum1 <= x <= num2\n\tmin_sum <= digit_sum(x) <= max_sum.\n\n\nReturn the number of good integers. Since the answer may be large, return it modulo 109 + 7.\n\nNote that digit_sum(x) denotes the sum of the digits of x.",
+  "example": "Input: num1 = \"1\", num2 = \"12\", min_sum = 1, max_sum = 8\nOutput: 11\nExplanation: There are 11 integers whose sum of digits lies between 1 and 8 are 1,2,3,4,5,6,7,8,10,11, and 12. Thus, we return 11.",
+  "constraints_text": "1 <= num1 <= num2 <= 1022\n\t1 <= min_sum <= max_sum <= 400",
+  "templates": {
+    "c": "int count(char* num1, char* num2, int min_sum, int max_sum) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int count(string num1, string num2, int min_sum, int max_sum) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int count(String num1, String num2, int min_sum, int max_sum) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num1\n * @param {string} num2\n * @param {number} min_sum\n * @param {number} max_sum\n * @return {number}\n */\nvar count = function(num1, num2, min_sum, max_sum) {\n    \n};",
+    "python": "class Solution(object):\n    def count(self, num1, num2, min_sum, max_sum):\n        \"\"\"\n        :type num1: str\n        :type num2: str\n        :type min_sum: int\n        :type max_sum: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Develop a recursive, memoized digit DP function to count numbers x <= s with digit sum in a given range.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "digit-dp",
+        "recursion",
+        "dp-2d"
+      ],
+      "cues": [
+        "digit-sum-x",
+        "min-sum-digit-sum-x-max-sum"
+      ],
+      "constraints": [
+        "num1-num2-10-22",
+        "max-sum-400",
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Calculate the final count by applying the digit DP function to num2 and num1 - 1, handling string subtraction and modulo arithmetic.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "num1-x-num2",
+        "return-it-modulo-10-9-7"
+      ],
+      "constraints": [
+        "num1-num2",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

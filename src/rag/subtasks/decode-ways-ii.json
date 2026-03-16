@@ -1,0 +1,63 @@
+{
+  "slug": "decode-ways-ii",
+  "link": "https://leetcode.com/problems/decode-ways-ii/",
+  "difficulty": "Hard",
+  "index": "1858",
+  "description_full": "A message containing letters from A-Z can be encoded into numbers using the following mapping:\n\n\n'A' -> \"1\"\n'B' -> \"2\"\n...\n'Z' -> \"26\"\n\n\nTo decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, \"11106\" can be mapped into:\n\n\n\t\"AAJF\" with the grouping (1 1 10 6)\n\t\"KJF\" with the grouping (11 10 6)\n\n\nNote that the grouping (1 11 06) is invalid because \"06\" cannot be mapped into 'F' since \"6\" is different from \"06\".\n\nIn addition to the mapping above, an encoded message may contain the '*' character, which can represent any digit from '1' to '9' ('0' is excluded). For example, the encoded message \"1*\" may represent any of the encoded messages \"11\", \"12\", \"13\", \"14\", \"15\", \"16\", \"17\", \"18\", or \"19\". Decoding \"1*\" is equivalent to decoding any of the encoded messages it can represent.\n\nGiven a string s consisting of digits and '*' characters, return the number of ways to decode it.\n\nSince the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: s = \"*\"\nOutput: 9\nExplanation: The encoded message can represent any of the encoded messages \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", or \"9\".\nEach of these can be decoded to the strings \"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", and \"I\" respectively.\nHence, there are a total of 9 ways to decode \"*\".\n\n\nExample 2:\n\n\nInput: s = \"1*\"\nOutput: 18\nExplanation: The encoded message can represent any of the encoded messages \"11\", \"12\", \"13\", \"14\", \"15\", \"16\", \"17\", \"18\", or \"19\".\nEach of these encoded messages have 2 ways to be decoded (e.g. \"11\" can be decoded to \"AA\" or \"K\").\nHence, there are a total of 9 * 2 = 18 ways to decode \"1*\".\n\n\nExample 3:\n\n\nInput: s = \"2*\"\nOutput: 15\nExplanation: The encoded message can represent any of the encoded messages \"21\", \"22\", \"23\", \"24\", \"25\", \"26\", \"27\", \"28\", or \"29\".\n\"21\", \"22\", \"23\", \"24\", \"25\", and \"26\" have 2 ways of being decoded, but \"27\", \"28\", and \"29\" only have 1 way.\nHence, there are a total of (6 * 2) + (3 * 1) = 12 + 3 = 15 ways to decode \"2*\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts[i] is a digit or '*'.\n\n",
+  "description": "A message containing letters from A-Z can be encoded into numbers using the following mapping:\n\n\n'A' -> \"1\"\n'B' -> \"2\"\n...\n'Z' -> \"26\"\n\n\nTo decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, \"11106\" can be mapped into:\n\n\n\t\"AAJF\" with the grouping (1 1 10 6)\n\t\"KJF\" with the grouping (11 10 6)\n\n\nNote that the grouping (1 11 06) is invalid because \"06\" cannot be mapped into 'F' since \"6\" is different from \"06\".\n\nIn addition to the mapping above, an encoded message may contain the '*' character, which can represent any digit from '1' to '9' ('0' is excluded). For example, the encoded message \"1*\" may represent any of the encoded messages \"11\", \"12\", \"13\", \"14\", \"15\", \"16\", \"17\", \"18\", or \"19\". Decoding \"1*\" is equivalent to decoding any of the encoded messages it can represent.\n\nGiven a string s consisting of digits and '*' characters, return the number of ways to decode it.\n\nSince the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: s = \"*\"\nOutput: 9\nExplanation: The encoded message can represent any of the encoded messages \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", or \"9\".\nEach of these can be decoded to the strings \"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\", and \"I\" respectively.\nHence, there are a total of 9 ways to decode \"*\".",
+  "constraints_text": "1 <= s.length <= 105\n\ts[i] is a digit or '*'.",
+  "templates": {
+    "c": "int numDecodings(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numDecodings(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numDecodings(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numDecodings = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def numDecodings(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize dynamic programming states and handle base cases for decoding an empty or single-character string.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "number-of-ways",
+        "decode-it",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "s-consisting-of-digits-and-characters",
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Iterate through the input string, calculating the number of decoding ways for each prefix by considering single and two-character groupings, including '*' wildcard, applying modulo arithmetic.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "dp-1d",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "all-digits-must-be-grouped",
+        "multiple-ways",
+        "character",
+        "represent-any-digit-from-1-to-9"
+      ],
+      "constraints": [
+        "0-is-excluded",
+        "06-cannot-be-mapped",
+        "10-26-for-two-digit-codes",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

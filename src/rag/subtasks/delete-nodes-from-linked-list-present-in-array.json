@@ -1,0 +1,56 @@
+{
+  "slug": "delete-nodes-from-linked-list-present-in-array",
+  "link": "https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/",
+  "difficulty": "Medium",
+  "index": "2533",
+  "description_full": "You are given an array of integers nums and the head of a linked list. Return the head of the modified linked list after removing all nodes from the linked list that have a value that exists in nums.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3], head = [1,2,3,4,5]\n\nOutput: [4,5]\n\nExplanation:\n\n\n\nRemove the nodes with values 1, 2, and 3.\n\n\nExample 2:\n\n\nInput: nums = [1], head = [1,2,1,2,1,2]\n\nOutput: [2,2,2]\n\nExplanation:\n\n\n\nRemove the nodes with value 1.\n\n\nExample 3:\n\n\nInput: nums = [5], head = [1,2,3,4]\n\nOutput: [1,2,3,4]\n\nExplanation:\n\n\n\nNo node has value 5.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 105\n\tAll elements in nums are unique.\n\tThe number of nodes in the given list is in the range [1, 105].\n\t1 <= Node.val <= 105\n\tThe input is generated such that there is at least one node in the linked list that has a value not present in nums.\n\n",
+  "description": "You are given an array of integers nums and the head of a linked list. Return the head of the modified linked list after removing all nodes from the linked list that have a value that exists in nums.",
+  "example": "Input: nums = [1,2,3], head = [1,2,3,4,5]\n\nOutput: [4,5]\n\nExplanation:\n\n\n\nRemove the nodes with values 1, 2, and 3.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 105\n\tAll elements in nums are unique.\n\tThe number of nodes in the given list is in the range [1, 105].\n\t1 <= Node.val <= 105\n\tThe input is generated such that there is at least one node in the linked list that has a value not present in nums.",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* modifiedList(int* nums, int numsSize, struct ListNode* head) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* modifiedList(vector<int>& nums, ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode modifiedList(int[] nums, ListNode head) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {number[]} nums\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar modifiedList = function(nums, head) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def modifiedList(self, nums, head):\n        \"\"\"\n        :type nums: List[int]\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Build a hash set of values from 'nums' for efficient lookup.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "hashing"
+      ],
+      "cues": [
+        "values-that-exists-in-nums",
+        "remove-all-nodes"
+      ],
+      "constraints": [
+        "nums-length-105",
+        "all-elements-in-nums-are-unique"
+      ]
+    },
+    {
+      "intent": "Traverse the linked list, removing nodes whose values are in the set.",
+      "structures": [
+        "linked-list",
+        "ds"
+      ],
+      "actions": [
+        "two-pointers"
+      ],
+      "cues": [
+        "head-of-a-linked-list",
+        "removing-all-nodes",
+        "modified-linked-list"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-given-list-is-in-the-range-1-105",
+        "at-least-one-node-in-the-linked-list-that-has-a-value-not-present-in-nums"
+      ]
+    }
+  ]
+}

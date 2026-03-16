@@ -1,0 +1,61 @@
+# Source: https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/   |   Difficulty: Hard
+#
+# Problem Description:
+# You are given a 0-indexed 2D integer array grid of size m x n. Each cell has one of two values:
+#
+#
+# 	0 represents an empty cell,
+# 	1 represents an obstacle that may be removed.
+#
+#
+# You can move up, down, left, or right from and to an empty cell.
+#
+# Return the minimum number of obstacles to remove so you can move from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1).
+#
+# Example:
+# Input: grid = [[0,1,1],[1,1,0],[1,1,0]]
+# Output: 2
+# Explanation: We can remove the obstacles at (0, 1) and (0, 2) to create a path from (0, 0) to (2, 2).
+# It can be shown that we need to remove at least 2 obstacles, so we return 2.
+# Note that there may be other ways to remove 2 obstacles to create a path.
+#
+# Constraints:
+# m == grid.length
+# 	n == grid[i].length
+# 	1 <= m, n <= 105
+# 	2 <= m * n <= 105
+# 	grid[i][j] is either 0 or 1.
+# 	grid[0][0] == grid[m - 1][n - 1] == 0
+#
+
+class Solution(object):
+    def minimumObstacles(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        from collections import deque
+        import heapq
+
+        m, n = len(grid), len(grid[0])
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+        min_heap = [(0, 0, 0)]  # (obstacles_removed, x, y)
+        visited = set()
+
+        while min_heap:
+            obstacles_removed, x, y = heapq.heappop(min_heap)
+
+            if (x, y) in visited:
+                continue
+            visited.add((x, y))
+
+            if x == m - 1 and y == n - 1:
+                return obstacles_removed
+
+            for dx, dy in directions:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < m and 0 <= ny < n and (nx, ny) not in visited:
+                    new_obstacles_removed = obstacles_removed + grid[nx][ny]
+                    heapq.heappush(min_heap, (new_obstacles_removed, nx, ny))
+
+        return -1

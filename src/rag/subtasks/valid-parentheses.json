@@ -1,0 +1,39 @@
+{
+  "slug": "valid-parentheses",
+  "link": "https://leetcode.com/problems/valid-parentheses/",
+  "difficulty": "Easy",
+  "index": "5",
+  "description_full": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n\n \nExample 1:\n\n\nInput: s = \"()\"\n\nOutput: true\n\n\nExample 2:\n\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\n\nExample 3:\n\n\nInput: s = \"(]\"\n\nOutput: false\n\n\nExample 4:\n\n\nInput: s = \"([])\"\n\nOutput: true\n\n\nExample 5:\n\n\nInput: s = \"([)]\"\n\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.\n\n",
+  "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.",
+  "example": "Input: s = \"()\"\n\nOutput: true",
+  "constraints_text": "1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.",
+  "templates": {
+    "c": "bool isValid(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isValid(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isValid(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isValid = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def isValid(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Process the input string character by character, using a stack to track open brackets and validate their corresponding closing brackets for type and order.",
+      "structures": [
+        "stack",
+        "string"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "open-brackets-must-be-closed",
+        "same-type",
+        "correct-order",
+        "corresponding-open-bracket"
+      ],
+      "constraints": [
+        "1-s-length-104",
+        "s-consists-of-parentheses-only"
+      ]
+    }
+  ]
+}

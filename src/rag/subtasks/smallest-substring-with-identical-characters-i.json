@@ -1,0 +1,57 @@
+{
+  "slug": "smallest-substring-with-identical-characters-i",
+  "link": "https://leetcode.com/problems/smallest-substring-with-identical-characters-i/",
+  "difficulty": "Hard",
+  "index": "2786",
+  "description_full": "You are given a binary string s of length n and an integer numOps.\n\nYou are allowed to perform the following operation on s at most numOps times:\n\n\n\tSelect any index i (where 0 <= i < n) and flip s[i]. If s[i] == '1', change s[i] to '0' and vice versa.\n\n\nYou need to minimize the length of the longest substring of s such that all the characters in the substring are identical.\n\nReturn the minimum length after the operations.\n\n \nExample 1:\n\n\nInput: s = \"000001\", numOps = 1\n\nOutput: 2\n\nExplanation: \n\nBy changing s[2] to '1', s becomes \"001001\". The longest substrings with identical characters are s[0..1] and s[3..4].\n\n\nExample 2:\n\n\nInput: s = \"0000\", numOps = 2\n\nOutput: 1\n\nExplanation: \n\nBy changing s[0] and s[2] to '1', s becomes \"1010\".\n\n\nExample 3:\n\n\nInput: s = \"0101\", numOps = 0\n\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= n == s.length <= 1000\n\ts consists only of '0' and '1'.\n\t0 <= numOps <= n\n\n",
+  "description": "You are given a binary string s of length n and an integer numOps.\n\nYou are allowed to perform the following operation on s at most numOps times:\n\n\n\tSelect any index i (where 0 <= i < n) and flip s[i]. If s[i] == '1', change s[i] to '0' and vice versa.\n\n\nYou need to minimize the length of the longest substring of s such that all the characters in the substring are identical.\n\nReturn the minimum length after the operations.",
+  "example": "Input: s = \"000001\", numOps = 1\n\nOutput: 2\n\nExplanation: \n\nBy changing s[2] to '1', s becomes \"001001\". The longest substrings with identical characters are s[0..1] and s[3..4].",
+  "constraints_text": "1 <= n == s.length <= 1000\n\ts consists only of '0' and '1'.\n\t0 <= numOps <= n",
+  "templates": {
+    "c": "int minLength(char* s, int numOps) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minLength(string s, int numOps) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minLength(String s, int numOps) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} numOps\n * @return {number}\n */\nvar minLength = function(s, numOps) {\n    \n};",
+    "python": "class Solution(object):\n    def minLength(self, s, numOps):\n        \"\"\"\n        :type s: str\n        :type numOps: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the minimum possible maximum length of identical substrings using binary search on the answer.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "minimize-the-length-of-the-longest-substring"
+      ],
+      "constraints": [
+        "1-n-1000",
+        "0-numops-n",
+        "answer-k-in-1-n"
+      ]
+    },
+    {
+      "intent": "Implement a check function to determine if a given maximum length 'k' is achievable within 'numOps' using dynamic programming.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "no-substring-k",
+        "minimum-flips",
+        "at-most-numops"
+      ],
+      "constraints": [
+        "k-is-target-max-length",
+        "numops-is-flip-budget",
+        "n-1000"
+      ]
+    }
+  ]
+}

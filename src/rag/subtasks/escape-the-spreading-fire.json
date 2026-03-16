@@ -1,0 +1,75 @@
+{
+  "slug": "escape-the-spreading-fire",
+  "link": "https://leetcode.com/problems/escape-the-spreading-fire/",
+  "difficulty": "Hard",
+  "index": "2163",
+  "description_full": "You are given a 0-indexed 2D integer array grid of size m x n which represents a field. Each cell has one of three values:\n\n\n\t0 represents grass,\n\t1 represents fire,\n\t2 represents a wall that you and fire cannot pass through.\n\n\nYou are situated in the top-left cell, (0, 0), and you want to travel to the safehouse at the bottom-right cell, (m - 1, n - 1). Every minute, you may move to an adjacent grass cell. After your move, every fire cell will spread to all adjacent cells that are not walls.\n\nReturn the maximum number of minutes that you can stay in your initial position before moving while still safely reaching the safehouse. If this is impossible, return -1. If you can always reach the safehouse regardless of the minutes stayed, return 109.\n\nNote that even if the fire spreads to the safehouse immediately after you have reached it, it will be counted as safely reaching the safehouse.\n\nA cell is adjacent to another cell if the former is directly north, east, south, or west of the latter (i.e., their sides are touching).\n\n \nExample 1:\n\n\nInput: grid = [[0,2,0,0,0,0,0],[0,0,0,2,2,1,0],[0,2,0,0,1,2,0],[0,0,2,2,2,0,2],[0,0,0,0,0,0,0]]\nOutput: 3\nExplanation: The figure above shows the scenario where you stay in the initial position for 3 minutes.\nYou will still be able to safely reach the safehouse.\nStaying for more than 3 minutes will not allow you to safely reach the safehouse.\n\nExample 2:\n\n\nInput: grid = [[0,0,0,0],[0,1,2,0],[0,2,0,0]]\nOutput: -1\nExplanation: The figure above shows the scenario where you immediately move towards the safehouse.\nFire will spread to any cell you move towards and it is impossible to safely reach the safehouse.\nThus, -1 is returned.\n\n\nExample 3:\n\n\nInput: grid = [[0,0,0],[2,2,0],[1,2,0]]\nOutput: 1000000000\nExplanation: The figure above shows the initial grid.\nNotice that the fire is contained by walls and you will always be able to safely reach the safehouse.\nThus, 109 is returned.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t2 <= m, n <= 300\n\t4 <= m * n <= 2 * 104\n\tgrid[i][j] is either 0, 1, or 2.\n\tgrid[0][0] == grid[m - 1][n - 1] == 0\n\n",
+  "description": "You are given a 0-indexed 2D integer array grid of size m x n which represents a field. Each cell has one of three values:\n\n\n\t0 represents grass,\n\t1 represents fire,\n\t2 represents a wall that you and fire cannot pass through.\n\n\nYou are situated in the top-left cell, (0, 0), and you want to travel to the safehouse at the bottom-right cell, (m - 1, n - 1). Every minute, you may move to an adjacent grass cell. After your move, every fire cell will spread to all adjacent cells that are not walls.\n\nReturn the maximum number of minutes that you can stay in your initial position before moving while still safely reaching the safehouse. If this is impossible, return -1. If you can always reach the safehouse regardless of the minutes stayed, return 109.\n\nNote that even if the fire spreads to the safehouse immediately after you have reached it, it will be counted as safely reaching the safehouse.\n\nA cell is adjacent to another cell if the former is directly north, east, south, or west of the latter (i.e., their sides are touching).",
+  "example": "Input: grid = [[0,2,0,0,0,0,0],[0,0,0,2,2,1,0],[0,2,0,0,1,2,0],[0,0,2,2,2,0,2],[0,0,0,0,0,0,0]]\nOutput: 3\nExplanation: The figure above shows the scenario where you stay in the initial position for 3 minutes.\nYou will still be able to safely reach the safehouse.\nStaying for more than 3 minutes will not allow you to safely reach the safehouse.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t2 <= m, n <= 300\n\t4 <= m * n <= 2 * 104\n\tgrid[i][j] is either 0, 1, or 2.\n\tgrid[0][0] == grid[m - 1][n - 1] == 0",
+  "templates": {
+    "c": "int maximumMinutes(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumMinutes(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumMinutes(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maximumMinutes = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumMinutes(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum time for fire to reach each cell in the grid using a multi-source BFS.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "multi-source-bfs"
+      ],
+      "cues": [
+        "fire-cell-will-spread",
+        "adjacent-cells",
+        "not-walls"
+      ],
+      "constraints": [
+        "0-indexed-2d-integer-array-grid",
+        "2-represents-a-wall"
+      ]
+    },
+    {
+      "intent": "Implement a check function to determine if the player can safely reach the safehouse given a specific 'stay_time' and precomputed fire spread times.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "safely-reaching-the-safehouse",
+        "after-your-move-every-fire-cell-will-spread"
+      ],
+      "constraints": [
+        "2-represents-a-wall",
+        "fire-spreads-to-all-adjacent-cells-that-are-not-walls",
+        "even-if-the-fire-spreads-to-the-safehouse-immediately-after-you-have-reached-it-it-will-be-counted-as-safely-reaching-the-safehouse"
+      ]
+    },
+    {
+      "intent": "Use binary search on the possible 'stay_time' values to find the maximum number of minutes the player can wait.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "maximum-number-of-minutes",
+        "return-1",
+        "return-1000000000"
+      ],
+      "constraints": [
+        "stay-in-your-initial-position-before-moving"
+      ]
+    }
+  ]
+}

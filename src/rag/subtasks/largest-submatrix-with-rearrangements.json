@@ -1,0 +1,55 @@
+{
+  "slug": "largest-submatrix-with-rearrangements",
+  "link": "https://leetcode.com/problems/largest-submatrix-with-rearrangements/",
+  "difficulty": "Medium",
+  "index": "1350",
+  "description_full": "You are given a binary matrix matrix of size m x n, and you are allowed to rearrange the columns of the matrix in any order.\n\nReturn the area of the largest submatrix within matrix where every element of the submatrix is 1 after reordering the columns optimally.\n\n \nExample 1:\n\n\nInput: matrix = [[0,0,1],[1,1,1],[1,0,1]]\nOutput: 4\nExplanation: You can rearrange the columns as shown above.\nThe largest submatrix of 1s, in bold, has an area of 4.\n\n\nExample 2:\n\n\nInput: matrix = [[1,0,1,0,1]]\nOutput: 3\nExplanation: You can rearrange the columns as shown above.\nThe largest submatrix of 1s, in bold, has an area of 3.\n\n\nExample 3:\n\n\nInput: matrix = [[1,1,0],[1,0,1]]\nOutput: 2\nExplanation: Notice that you must rearrange entire columns, and there is no way to make a submatrix of 1s larger than an area of 2.\n\n\n \nConstraints:\n\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m * n <= 105\n\tmatrix[i][j] is either 0 or 1.\n\n",
+  "description": "You are given a binary matrix matrix of size m x n, and you are allowed to rearrange the columns of the matrix in any order.\n\nReturn the area of the largest submatrix within matrix where every element of the submatrix is 1 after reordering the columns optimally.",
+  "example": "Input: matrix = [[0,0,1],[1,1,1],[1,0,1]]\nOutput: 4\nExplanation: You can rearrange the columns as shown above.\nThe largest submatrix of 1s, in bold, has an area of 4.",
+  "constraints_text": "m == matrix.length\n\tn == matrix[i].length\n\t1 <= m * n <= 105\n\tmatrix[i][j] is either 0 or 1.",
+  "templates": {
+    "c": "int largestSubmatrix(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int largestSubmatrix(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestSubmatrix(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number}\n */\nvar largestSubmatrix = function(matrix) {\n    \n};",
+    "python": "class Solution(object):\n    def largestSubmatrix(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iteratively compute the height of consecutive 1s for each column, updating row by row.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "simulation"
+      ],
+      "cues": [
+        "binary-matrix",
+        "consecutive-1s"
+      ],
+      "constraints": [
+        "m-n-105"
+      ]
+    },
+    {
+      "intent": "For each row's calculated column heights, sort them and determine the maximum possible rectangular area.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "rearrange-columns",
+        "largest-submatrix",
+        "optimally"
+      ],
+      "constraints": [
+        "m-n-105"
+      ]
+    }
+  ]
+}

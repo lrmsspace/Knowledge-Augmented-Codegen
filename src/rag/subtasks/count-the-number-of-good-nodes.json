@@ -1,0 +1,58 @@
+{
+  "slug": "count-the-number-of-good-nodes",
+  "link": "https://leetcode.com/problems/count-the-number-of-good-nodes/",
+  "difficulty": "Medium",
+  "index": "2544",
+  "description_full": "There is an undirected tree with n nodes labeled from 0 to n - 1, and rooted at node 0. You are given a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.\n\nA node is good if all the subtrees rooted at its children have the same size.\n\nReturn the number of good nodes in the given tree.\n\nA subtree of treeName is a tree consisting of a node in treeName and all of its descendants.\n\n \nExample 1:\n\n\nInput: edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]\n\nOutput: 7\n\nExplanation:\n\nAll of the nodes of the given tree are good.\n\n\nExample 2:\n\n\nInput: edges = [[0,1],[1,2],[2,3],[3,4],[0,5],[1,6],[2,7],[3,8]]\n\nOutput: 6\n\nExplanation:\n\nThere are 6 good nodes in the given tree. They are colored in the image above.\n\nExample 3:\n\n\nInput: edges = [[0,1],[1,2],[1,3],[1,4],[0,5],[5,6],[6,7],[7,8],[0,9],[9,10],[9,12],[10,11]]\n\nOutput: 12\n\nExplanation:\n\nAll nodes except node 9 are good.\n\n\n\n \nConstraints:\n\n\n\t2 <= n <= 105\n\tedges.length == n - 1\n\tedges[i].length == 2\n\t0 <= ai, bi < n\n\tThe input is generated such that edges represents a valid tree.\n\n",
+  "description": "There is an undirected tree with n nodes labeled from 0 to n - 1, and rooted at node 0. You are given a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree.\n\nA node is good if all the subtrees rooted at its children have the same size.\n\nReturn the number of good nodes in the given tree.\n\nA subtree of treeName is a tree consisting of a node in treeName and all of its descendants.",
+  "example": "Input: edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]]\n\nOutput: 7\n\nExplanation:\n\nAll of the nodes of the given tree are good.",
+  "constraints_text": "2 <= n <= 105\n\tedges.length == n - 1\n\tedges[i].length == 2\n\t0 <= ai, bi < n\n\tThe input is generated such that edges represents a valid tree.",
+  "templates": {
+    "c": "int countGoodNodes(int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countGoodNodes(vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodNodes(int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @return {number}\n */\nvar countGoodNodes = function(edges) {\n    \n};",
+    "python": "class Solution(object):\n    def countGoodNodes(self, edges):\n        \"\"\"\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct an adjacency list representation of the tree from the given edge list.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "undirected-tree",
+        "edges-i-ai-bi"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    },
+    {
+      "intent": "Perform a Depth-First Search (DFS) to calculate subtree sizes for all nodes and count 'good' nodes based on their children's subtree sizes.",
+      "structures": [
+        "graph",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "tree-dp",
+        "dfs",
+        "counting"
+      ],
+      "cues": [
+        "rooted-at-node-0",
+        "subtree-size",
+        "node-is-good-if-all-subtrees-rooted-at-its-children-have-the-same-size",
+        "return-the-number-of-good-nodes"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    }
+  ]
+}

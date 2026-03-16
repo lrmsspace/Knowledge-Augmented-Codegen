@@ -1,0 +1,56 @@
+{
+  "slug": "minimum-operations-to-reduce-x-to-zero",
+  "link": "https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/",
+  "difficulty": "Medium",
+  "index": "1324",
+  "description_full": "You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.\n\nReturn the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1.\n\n \nExample 1:\n\n\nInput: nums = [1,1,4,2,3], x = 5\nOutput: 2\nExplanation: The optimal solution is to remove the last two elements to reduce x to zero.\n\n\nExample 2:\n\n\nInput: nums = [5,6,7,8,9], x = 4\nOutput: -1\n\n\nExample 3:\n\n\nInput: nums = [3,2,20,1,1,3], x = 10\nOutput: 5\nExplanation: The optimal solution is to remove the last three elements and the first two elements (5 operations in total) to reduce x to zero.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 104\n\t1 <= x <= 109\n\n",
+  "description": "You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.\n\nReturn the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1.",
+  "example": "Input: nums = [1,1,4,2,3], x = 5\nOutput: 2\nExplanation: The optimal solution is to remove the last two elements to reduce x to zero.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 104\n\t1 <= x <= 109",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize, int x) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} x\n * @return {number}\n */\nvar minOperations = function(nums, x) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums, x):\n        \"\"\"\n        :type nums: List[int]\n        :type x: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the target sum for the remaining subarray by subtracting x from the total sum of all elements in nums.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "reduce-x-to-exactly-0",
+        "remove-leftmost-or-rightmost"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "1-x-109"
+      ]
+    },
+    {
+      "intent": "Find the longest contiguous subarray in nums whose sum equals the calculated target sum.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "reduce-x-to-exactly-0"
+      ],
+      "constraints": [
+        "1-nums-length-105"
+      ]
+    }
+  ]
+}

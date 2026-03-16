@@ -1,0 +1,75 @@
+{
+  "slug": "rearranging-fruits",
+  "link": "https://leetcode.com/problems/rearranging-fruits/",
+  "difficulty": "Hard",
+  "index": "2226",
+  "description_full": "You have two fruit baskets containing n fruits each. You are given two 0-indexed integer arrays basket1 and basket2 representing the cost of fruit in each basket. You want to make both baskets equal. To do so, you can use the following operation as many times as you want:\n\n\n\tChoose two indices i and j, and swap the ith fruit of basket1 with the jth fruit of basket2.\n\tThe cost of the swap is min(basket1[i], basket2[j]).\n\n\nTwo baskets are considered equal if sorting them according to the fruit cost makes them exactly the same baskets.\n\nReturn the minimum cost to make both the baskets equal or -1 if impossible.\n\n \nExample 1:\n\n\nInput: basket1 = [4,2,2,2], basket2 = [1,4,1,2]\nOutput: 1\nExplanation: Swap index 1 of basket1 with index 0 of basket2, which has cost 1. Now basket1 = [4,1,2,2] and basket2 = [2,4,1,2]. Rearranging both the arrays makes them equal.\n\n\nExample 2:\n\n\nInput: basket1 = [2,3,4,1], basket2 = [3,2,5,1]\nOutput: -1\nExplanation: It can be shown that it is impossible to make both the baskets equal.\n\n\n \nConstraints:\n\n\n\tbasket1.length == basket2.length\n\t1 <= basket1.length <= 105\n\t1 <= basket1[i], basket2[i] <= 109\n\n",
+  "description": "You have two fruit baskets containing n fruits each. You are given two 0-indexed integer arrays basket1 and basket2 representing the cost of fruit in each basket. You want to make both baskets equal. To do so, you can use the following operation as many times as you want:\n\n\n\tChoose two indices i and j, and swap the ith fruit of basket1 with the jth fruit of basket2.\n\tThe cost of the swap is min(basket1[i], basket2[j]).\n\n\nTwo baskets are considered equal if sorting them according to the fruit cost makes them exactly the same baskets.\n\nReturn the minimum cost to make both the baskets equal or -1 if impossible.",
+  "example": "Input: basket1 = [4,2,2,2], basket2 = [1,4,1,2]\nOutput: 1\nExplanation: Swap index 1 of basket1 with index 0 of basket2, which has cost 1. Now basket1 = [4,1,2,2] and basket2 = [2,4,1,2]. Rearranging both the arrays makes them equal.",
+  "constraints_text": "basket1.length == basket2.length\n\t1 <= basket1.length <= 105\n\t1 <= basket1[i], basket2[i] <= 109",
+  "templates": {
+    "c": "long long minCost(int* basket1, int basket1Size, int* basket2, int basket2Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minCost(vector<int>& basket1, vector<int>& basket2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCost(int[] basket1, int[] basket2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} basket1\n * @param {number[]} basket2\n * @return {number}\n */\nvar minCost = function(basket1, basket2) {\n    \n};",
+    "python": "class Solution(object):\n    def minCost(self, basket1, basket2):\n        \"\"\"\n        :type basket1: List[int]\n        :type basket2: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate total fruit frequencies, verify equality possibility, and find the minimum fruit cost across both baskets.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "n-fruits-each",
+        "basket1",
+        "basket2",
+        "impossible"
+      ],
+      "constraints": [
+        "return-1-if-impossible",
+        "0-indexed-integer-arrays"
+      ]
+    },
+    {
+      "intent": "Identify and collect fruits that are in the wrong basket based on the determined target frequencies.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "make-both-baskets-equal",
+        "swap"
+      ],
+      "constraints": [
+        "minimum-cost"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum total swap cost by greedily pairing excess fruits, considering direct or indirect swaps via the global minimum fruit cost.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-cost",
+        "swap",
+        "min-basket1-i-basket2-j"
+      ],
+      "constraints": [
+        "minimum-cost"
+      ]
+    }
+  ]
+}

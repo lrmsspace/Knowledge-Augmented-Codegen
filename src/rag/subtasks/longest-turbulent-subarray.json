@@ -1,0 +1,37 @@
+{
+  "slug": "longest-turbulent-subarray",
+  "link": "https://leetcode.com/problems/longest-turbulent-subarray/",
+  "difficulty": "Medium",
+  "index": "1055",
+  "description_full": "Given an integer array arr, return the length of a maximum size turbulent subarray of arr.\n\nA subarray is turbulent if the comparison sign flips between each adjacent pair of elements in the subarray.\n\nMore formally, a subarray [arr[i], arr[i + 1], ..., arr[j]] of arr is said to be turbulent if and only if:\n\n\n\tFor i <= k < j:\n\n\t\n\t\tarr[k] > arr[k + 1] when k is odd, and\n\t\tarr[k] < arr[k + 1] when k is even.\n\t\n\t\n\tOr, for i <= k < j:\n\t\n\t\tarr[k] > arr[k + 1] when k is even, and\n\t\tarr[k] < arr[k + 1] when k is odd.\n\t\n\t\n\n\n \nExample 1:\n\n\nInput: arr = [9,4,2,10,7,8,8,1,9]\nOutput: 5\nExplanation: arr[1] > arr[2] < arr[3] > arr[4] < arr[5]\n\n\nExample 2:\n\n\nInput: arr = [4,8,12,16]\nOutput: 2\n\n\nExample 3:\n\n\nInput: arr = [100]\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 4 * 104\n\t0 <= arr[i] <= 109\n\n",
+  "description": "Given an integer array arr, return the length of a maximum size turbulent subarray of arr.\n\nA subarray is turbulent if the comparison sign flips between each adjacent pair of elements in the subarray.\n\nMore formally, a subarray [arr[i], arr[i + 1], ..., arr[j]] of arr is said to be turbulent if and only if:\n\n\n\tFor i <= k < j:\n\n\t\n\t\tarr[k] > arr[k + 1] when k is odd, and\n\t\tarr[k] < arr[k + 1] when k is even.\n\t\n\t\n\tOr, for i <= k < j:\n\t\n\t\tarr[k] > arr[k + 1] when k is even, and\n\t\tarr[k] < arr[k + 1] when k is odd.",
+  "example": "Input: arr = [9,4,2,10,7,8,8,1,9]\nOutput: 5\nExplanation: arr[1] > arr[2] < arr[3] > arr[4] < arr[5]",
+  "constraints_text": "1 <= arr.length <= 4 * 104\n\t0 <= arr[i] <= 109",
+  "templates": {
+    "c": "int maxTurbulenceSize(int* arr, int arrSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxTurbulenceSize(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxTurbulenceSize(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar maxTurbulenceSize = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def maxTurbulenceSize(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum length of a turbulent subarray by iterating through the array and dynamically tracking lengths of increasing and decreasing sequences.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "maximum-size-turbulent-subarray",
+        "comparison-sign-flips"
+      ],
+      "constraints": [
+        "1-arr-length-4-104"
+      ]
+    }
+  ]
+}

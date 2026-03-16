@@ -1,0 +1,58 @@
+{
+  "slug": "distinct-echo-substrings",
+  "link": "https://leetcode.com/problems/distinct-echo-substrings/",
+  "difficulty": "Hard",
+  "index": "1979",
+  "description_full": "Return the number of distinct non-empty substrings of text that can be written as the concatenation of some string with itself (i.e. it can be written as a + a where a is some string).\n\n \nExample 1:\n\n\nInput: text = \"abcabcabc\"\nOutput: 3\nExplanation: The 3 substrings are \"abcabc\", \"bcabca\" and \"cabcab\".\n\n\nExample 2:\n\n\nInput: text = \"leetcodeleetcode\"\nOutput: 2\nExplanation: The 2 substrings are \"ee\" and \"leetcodeleetcode\".\n\n\n \nConstraints:\n\n\n\t1 <= text.length <= 2000\n\ttext has only lowercase English letters.\n\n",
+  "description": "Return the number of distinct non-empty substrings of text that can be written as the concatenation of some string with itself (i.e. it can be written as a + a where a is some string).",
+  "example": "Input: text = \"abcabcabc\"\nOutput: 3\nExplanation: The 3 substrings are \"abcabc\", \"bcabca\" and \"cabcab\".",
+  "constraints_text": "1 <= text.length <= 2000\n\ttext has only lowercase English letters.",
+  "templates": {
+    "c": "int distinctEchoSubstrings(char* text) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int distinctEchoSubstrings(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctEchoSubstrings(String text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar distinctEchoSubstrings = function(text) {\n    \n};",
+    "python": "class Solution(object):\n    def distinctEchoSubstrings(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute rolling hashes for efficient substring comparison.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "hashing"
+      ],
+      "cues": [
+        "substrings",
+        "compare"
+      ],
+      "constraints": [
+        "text-length-2000"
+      ]
+    },
+    {
+      "intent": "Iterate all possible even-length substrings, compare halves using hashes, and collect distinct results.",
+      "structures": [
+        "string",
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "counting"
+      ],
+      "cues": [
+        "distinct-non-empty-substrings",
+        "a-a",
+        "number-of"
+      ],
+      "constraints": [
+        "text-length-2000"
+      ]
+    }
+  ]
+}

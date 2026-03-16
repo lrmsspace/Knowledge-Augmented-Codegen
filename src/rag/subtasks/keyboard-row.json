@@ -1,0 +1,61 @@
+{
+  "slug": "keyboard-row",
+  "link": "https://leetcode.com/problems/keyboard-row/",
+  "difficulty": "Easy",
+  "index": "104",
+  "description_full": "Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.\n\nNote that the strings are case-insensitive, both lowercased and uppercased of the same letter are treated as if they are at the same row.\n\nIn the American keyboard:\n\n\n\tthe first row consists of the characters \"qwertyuiop\",\n\tthe second row consists of the characters \"asdfghjkl\", and\n\tthe third row consists of the characters \"zxcvbnm\".\n\n\n \nExample 1:\n\n\nInput: words = [\"Hello\",\"Alaska\",\"Dad\",\"Peace\"]\n\nOutput: [\"Alaska\",\"Dad\"]\n\nExplanation:\n\nBoth \"a\" and \"A\" are in the 2nd row of the American keyboard due to case insensitivity.\n\n\nExample 2:\n\n\nInput: words = [\"omk\"]\n\nOutput: []\n\n\nExample 3:\n\n\nInput: words = [\"adsdf\",\"sfd\"]\n\nOutput: [\"adsdf\",\"sfd\"]\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 20\n\t1 <= words[i].length <= 100\n\twords[i] consists of English letters (both lowercase and uppercase). \n\n",
+  "description": "Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.\n\nNote that the strings are case-insensitive, both lowercased and uppercased of the same letter are treated as if they are at the same row.\n\nIn the American keyboard:\n\n\n\tthe first row consists of the characters \"qwertyuiop\",\n\tthe second row consists of the characters \"asdfghjkl\", and\n\tthe third row consists of the characters \"zxcvbnm\".",
+  "example": "Input: words = [\"Hello\",\"Alaska\",\"Dad\",\"Peace\"]\n\nOutput: [\"Alaska\",\"Dad\"]\n\nExplanation:\n\nBoth \"a\" and \"A\" are in the 2nd row of the American keyboard due to case insensitivity.",
+  "constraints_text": "1 <= words.length <= 20\n\t1 <= words[i].length <= 100\n\twords[i] consists of English letters (both lowercase and uppercase).",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findWords(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findWords(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] findWords(String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string[]}\n */\nvar findWords = function(words) {\n    \n};",
+    "python": "class Solution(object):\n    def findWords(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess keyboard rows to create a character-to-row mapping for quick lookup.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "first-row-consists-of",
+        "second-row-consists-of",
+        "third-row-consists-of",
+        "case-insensitive"
+      ],
+      "constraints": [
+        "english-letters-both-lowercase-and-uppercase"
+      ]
+    },
+    {
+      "intent": "Iterate through each word, verify if all its characters belong to the same keyboard row, and collect valid words.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "given-an-array-of-strings-words",
+        "return-the-words-that-can-be-typed",
+        "only-one-row"
+      ],
+      "constraints": [
+        "1-words-length-20",
+        "1-words-i-length-100",
+        "words-i-consists-of-english-letters"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "backspace-string-compare",
+  "link": "https://leetcode.com/problems/backspace-string-compare/",
+  "difficulty": "Easy",
+  "index": "184",
+  "description_full": "Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.\n\nNote that after backspacing an empty text, the text will continue empty.\n\n \nExample 1:\n\n\nInput: s = \"ab#c\", t = \"ad#c\"\nOutput: true\nExplanation: Both s and t become \"ac\".\n\n\nExample 2:\n\n\nInput: s = \"ab##\", t = \"c#d#\"\nOutput: true\nExplanation: Both s and t become \"\".\n\n\nExample 3:\n\n\nInput: s = \"a#c\", t = \"b\"\nOutput: false\nExplanation: s becomes \"c\" while t becomes \"b\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length, t.length <= 200\n\ts and t only contain lowercase letters and '#' characters.\n\n\n \nFollow up: Can you solve it in O(n) time and O(1) space?\n",
+  "description": "Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.\n\nNote that after backspacing an empty text, the text will continue empty.",
+  "example": "Input: s = \"ab#c\", t = \"ad#c\"\nOutput: true\nExplanation: Both s and t become \"ac\".",
+  "constraints_text": "1 <= s.length, t.length <= 200\n\ts and t only contain lowercase letters and '#' characters.\n\n\n \nFollow up: Can you solve it in O(n) time and O(1) space?",
+  "templates": {
+    "c": "bool backspaceCompare(char* s, char* t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool backspaceCompare(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean backspaceCompare(String s, String t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar backspaceCompare = function(s, t) {\n    \n};",
+    "python": "class Solution(object):\n    def backspaceCompare(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compare two strings character by character from end, accounting for backspaces to achieve O(1) space.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "return-true-if-they-are-equal",
+        "backspace-character",
+        "o-1-space"
+      ],
+      "constraints": [
+        "1-s-length-t-length-200",
+        "s-and-t-only-contain-lowercase-letters-and-characters"
+      ]
+    }
+  ]
+}

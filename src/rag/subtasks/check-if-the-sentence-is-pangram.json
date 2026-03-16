@@ -1,0 +1,38 @@
+{
+  "slug": "check-if-the-sentence-is-pangram",
+  "link": "https://leetcode.com/problems/check-if-the-sentence-is-pangram/",
+  "difficulty": "Easy",
+  "index": "394",
+  "description_full": "A pangram is a sentence where every letter of the English alphabet appears at least once.\n\nGiven a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.\n\n \nExample 1:\n\n\nInput: sentence = \"thequickbrownfoxjumpsoverthelazydog\"\nOutput: true\nExplanation: sentence contains at least one of every letter of the English alphabet.\n\n\nExample 2:\n\n\nInput: sentence = \"leetcode\"\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= sentence.length <= 1000\n\tsentence consists of lowercase English letters.\n\n",
+  "description": "A pangram is a sentence where every letter of the English alphabet appears at least once.\n\nGiven a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.",
+  "example": "Input: sentence = \"thequickbrownfoxjumpsoverthelazydog\"\nOutput: true\nExplanation: sentence contains at least one of every letter of the English alphabet.",
+  "constraints_text": "1 <= sentence.length <= 1000\n\tsentence consists of lowercase English letters.",
+  "templates": {
+    "c": "bool checkIfPangram(char* sentence) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkIfPangram(string sentence) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkIfPangram(String sentence) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} sentence\n * @return {boolean}\n */\nvar checkIfPangram = function(sentence) {\n    \n};",
+    "python": "class Solution(object):\n    def checkIfPangram(self, sentence):\n        \"\"\"\n        :type sentence: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if all 26 lowercase English letters are present in the given sentence.",
+      "structures": [
+        "string",
+        "bitset"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "pangram",
+        "every-letter-of-the-english-alphabet-appears-at-least-once"
+      ],
+      "constraints": [
+        "1-sentence-length-1000",
+        "sentence-consists-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

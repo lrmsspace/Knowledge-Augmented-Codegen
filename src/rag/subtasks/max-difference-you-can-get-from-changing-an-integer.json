@@ -1,0 +1,71 @@
+{
+  "slug": "max-difference-you-can-get-from-changing-an-integer",
+  "link": "https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/",
+  "difficulty": "Medium",
+  "index": "1239",
+  "description_full": "You are given an integer num. You will apply the following steps to num two separate times:\n\n\n\tPick a digit x (0 <= x <= 9).\n\tPick another digit y (0 <= y <= 9). Note y can be equal to x.\n\tReplace all the occurrences of x in the decimal representation of num by y.\n\n\nLet a and b be the two results from applying the operation to num independently.\n\nReturn the max difference between a and b.\n\nNote that neither a nor b may have any leading zeros, and must not be 0.\n\n \nExample 1:\n\n\nInput: num = 555\nOutput: 888\nExplanation: The first time pick x = 5 and y = 9 and store the new integer in a.\nThe second time pick x = 5 and y = 1 and store the new integer in b.\nWe have now a = 999 and b = 111 and max difference = 888\n\n\nExample 2:\n\n\nInput: num = 9\nOutput: 8\nExplanation: The first time pick x = 9 and y = 9 and store the new integer in a.\nThe second time pick x = 9 and y = 1 and store the new integer in b.\nWe have now a = 9 and b = 1 and max difference = 8\n\n\n \nConstraints:\n\n\n\t1 <= num <= 108\n\n",
+  "description": "You are given an integer num. You will apply the following steps to num two separate times:\n\n\n\tPick a digit x (0 <= x <= 9).\n\tPick another digit y (0 <= y <= 9). Note y can be equal to x.\n\tReplace all the occurrences of x in the decimal representation of num by y.\n\n\nLet a and b be the two results from applying the operation to num independently.\n\nReturn the max difference between a and b.\n\nNote that neither a nor b may have any leading zeros, and must not be 0.",
+  "example": "Input: num = 555\nOutput: 888\nExplanation: The first time pick x = 5 and y = 9 and store the new integer in a.\nThe second time pick x = 5 and y = 1 and store the new integer in b.\nWe have now a = 999 and b = 111 and max difference = 888",
+  "constraints_text": "1 <= num <= 108",
+  "templates": {
+    "c": "int maxDiff(int num) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxDiff(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDiff(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar maxDiff = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def maxDiff(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Transform the input number into its largest possible variant 'a' by replacing a single digit with '9'.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "max-difference",
+        "replace-all-occurrences",
+        "pick-a-digit-x-and-y"
+      ],
+      "constraints": []
+    },
+    {
+      "intent": "Transform the input number into its smallest possible variant 'b' by replacing a single digit with '0' or '1'.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "max-difference",
+        "replace-all-occurrences",
+        "pick-a-digit-x-and-y"
+      ],
+      "constraints": [
+        "no-leading-zeros",
+        "must-not-be-0"
+      ]
+    },
+    {
+      "intent": "Calculate the difference between the maximum value 'a' and the minimum value 'b'.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "return-the-max-difference"
+      ],
+      "constraints": []
+    }
+  ]
+}

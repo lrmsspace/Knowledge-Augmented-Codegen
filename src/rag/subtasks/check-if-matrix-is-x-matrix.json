@@ -1,0 +1,39 @@
+{
+  "slug": "check-if-matrix-is-x-matrix",
+  "link": "https://leetcode.com/problems/check-if-matrix-is-x-matrix/",
+  "difficulty": "Easy",
+  "index": "495",
+  "description_full": "A square matrix is said to be an X-Matrix if both of the following conditions hold:\n\n\n\tAll the elements in the diagonals of the matrix are non-zero.\n\tAll other elements are 0.\n\n\nGiven a 2D integer array grid of size n x n representing a square matrix, return true if grid is an X-Matrix. Otherwise, return false.\n\n \nExample 1:\n\n\nInput: grid = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]\nOutput: true\nExplanation: Refer to the diagram above. \nAn X-Matrix should have the green elements (diagonals) be non-zero and the red elements be 0.\nThus, grid is an X-Matrix.\n\n\nExample 2:\n\n\nInput: grid = [[5,7,0],[0,3,1],[0,5,0]]\nOutput: false\nExplanation: Refer to the diagram above.\nAn X-Matrix should have the green elements (diagonals) be non-zero and the red elements be 0.\nThus, grid is not an X-Matrix.\n\n\n \nConstraints:\n\n\n\tn == grid.length == grid[i].length\n\t3 <= n <= 100\n\t0 <= grid[i][j] <= 105\n\n",
+  "description": "A square matrix is said to be an X-Matrix if both of the following conditions hold:\n\n\n\tAll the elements in the diagonals of the matrix are non-zero.\n\tAll other elements are 0.\n\n\nGiven a 2D integer array grid of size n x n representing a square matrix, return true if grid is an X-Matrix. Otherwise, return false.",
+  "example": "Input: grid = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]\nOutput: true\nExplanation: Refer to the diagram above. \nAn X-Matrix should have the green elements (diagonals) be non-zero and the red elements be 0.\nThus, grid is an X-Matrix.",
+  "constraints_text": "n == grid.length == grid[i].length\n\t3 <= n <= 100\n\t0 <= grid[i][j] <= 105",
+  "templates": {
+    "c": "bool checkXMatrix(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkXMatrix(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkXMatrix(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar checkXMatrix = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def checkXMatrix(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the matrix to verify each element adheres to X-Matrix rules: diagonal elements must be non-zero, and off-diagonal elements must be zero.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "x-matrix",
+        "diagonals-non-zero",
+        "other-elements-0"
+      ],
+      "constraints": [
+        "n-x-n-matrix",
+        "3-n-100"
+      ]
+    }
+  ]
+}

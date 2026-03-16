@@ -1,0 +1,43 @@
+{
+  "slug": "fruit-into-baskets",
+  "link": "https://leetcode.com/problems/fruit-into-baskets/",
+  "difficulty": "Medium",
+  "index": "1014",
+  "description_full": "You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.\n\nYou want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:\n\n\n\tYou only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.\n\tStarting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.\n\tOnce you reach a tree with fruit that cannot fit in your baskets, you must stop.\n\n\nGiven the integer array fruits, return the maximum number of fruits you can pick.\n\n \nExample 1:\n\n\nInput: fruits = [1,2,1]\nOutput: 3\nExplanation: We can pick from all 3 trees.\n\n\nExample 2:\n\n\nInput: fruits = [0,1,2,2]\nOutput: 3\nExplanation: We can pick from trees [1,2,2].\nIf we had started at the first tree, we would only pick from trees [0,1].\n\n\nExample 3:\n\n\nInput: fruits = [1,2,3,2,2]\nOutput: 4\nExplanation: We can pick from trees [2,3,2,2].\nIf we had started at the first tree, we would only pick from trees [1,2].\n\n\n \nConstraints:\n\n\n\t1 <= fruits.length <= 105\n\t0 <= fruits[i] < fruits.length\n\n",
+  "description": "You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.\n\nYou want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:\n\n\n\tYou only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.\n\tStarting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.\n\tOnce you reach a tree with fruit that cannot fit in your baskets, you must stop.\n\n\nGiven the integer array fruits, return the maximum number of fruits you can pick.",
+  "example": "Input: fruits = [1,2,1]\nOutput: 3\nExplanation: We can pick from all 3 trees.",
+  "constraints_text": "1 <= fruits.length <= 105\n\t0 <= fruits[i] < fruits.length",
+  "templates": {
+    "c": "int totalFruit(int* fruits, int fruitsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int totalFruit(vector<int>& fruits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalFruit(int[] fruits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} fruits\n * @return {number}\n */\nvar totalFruit = function(fruits) {\n    \n};",
+    "python": "class Solution(object):\n    def totalFruit(self, fruits):\n        \"\"\"\n        :type fruits: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the maximum length of a contiguous subarray in 'fruits' that contains at most two distinct fruit types.",
+      "structures": [
+        "array",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "counting"
+      ],
+      "cues": [
+        "two-baskets",
+        "moving-to-the-right",
+        "maximum-number-of-fruits",
+        "stop"
+      ],
+      "constraints": [
+        "at-most-two-distinct-fruit-types",
+        "contiguous-subarray",
+        "1-fruits-length-105"
+      ]
+    }
+  ]
+}

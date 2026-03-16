@@ -1,0 +1,74 @@
+{
+  "slug": "sum-of-largest-prime-substrings",
+  "link": "https://leetcode.com/problems/sum-of-largest-prime-substrings/",
+  "difficulty": "Medium",
+  "index": "2646",
+  "description_full": "Given a string s, find the sum of the 3 largest unique prime numbers that can be formed using any of its substrings.\n\nReturn the sum of the three largest unique prime numbers that can be formed. If fewer than three exist, return the sum of all available primes. If no prime numbers can be formed, return 0.\n\nNote: Each prime number should be counted only once, even if it appears in multiple substrings. Additionally, when converting a substring to an integer, any leading zeros are ignored.\n\n \nExample 1:\n\n\nInput: s = \"12234\"\n\nOutput: 1469\n\nExplanation:\n\n\n\tThe unique prime numbers formed from the substrings of \"12234\" are 2, 3, 23, 223, and 1223.\n\tThe 3 largest primes are 1223, 223, and 23. Their sum is 1469.\n\n\n\nExample 2:\n\n\nInput: s = \"111\"\n\nOutput: 11\n\nExplanation:\n\n\n\tThe unique prime number formed from the substrings of \"111\" is 11.\n\tSince there is only one prime number, the sum is 11.\n\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 10\n\ts consists of only digits.\n\n",
+  "description": "Given a string s, find the sum of the 3 largest unique prime numbers that can be formed using any of its substrings.\n\nReturn the sum of the three largest unique prime numbers that can be formed. If fewer than three exist, return the sum of all available primes. If no prime numbers can be formed, return 0.\n\nNote: Each prime number should be counted only once, even if it appears in multiple substrings. Additionally, when converting a substring to an integer, any leading zeros are ignored.",
+  "example": "Input: s = \"12234\"\n\nOutput: 1469\n\nExplanation:\n\n\n\tThe unique prime numbers formed from the substrings of \"12234\" are 2, 3, 23, 223, and 1223.\n\tThe 3 largest primes are 1223, 223, and 23. Their sum is 1469.",
+  "constraints_text": "1 <= s.length <= 10\n\ts consists of only digits.",
+  "templates": {
+    "c": "long long sumOfLargestPrimes(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long sumOfLargestPrimes(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long sumOfLargestPrimes(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar sumOfLargestPrimes = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def sumOfLargestPrimes(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all unique integer values from substrings, handling leading zeros.",
+      "structures": [
+        "string",
+        "number",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "substrings",
+        "unique",
+        "leading-zeros-are-ignored"
+      ],
+      "constraints": [
+        "1-s-length-10"
+      ]
+    },
+    {
+      "intent": "Filter the generated unique numbers to identify which ones are prime.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "sieve",
+        "simulation"
+      ],
+      "cues": [
+        "prime-numbers"
+      ],
+      "constraints": [
+        "max-number-value-is-10-10"
+      ]
+    },
+    {
+      "intent": "Calculate the sum of the three largest unique prime numbers found.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "sum-of-the-3-largest-unique-prime-numbers",
+        "fewer-than-three-exist-return-the-sum-of-all",
+        "no-prime-numbers-can-be-formed-return-0"
+      ],
+      "constraints": [
+        "unique-prime-numbers"
+      ]
+    }
+  ]
+}

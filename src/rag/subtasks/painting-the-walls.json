@@ -1,0 +1,74 @@
+{
+  "slug": "painting-the-walls",
+  "link": "https://leetcode.com/problems/painting-the-walls/",
+  "difficulty": "Hard",
+  "index": "2252",
+  "description_full": "You are given two 0-indexed integer arrays, cost and time, of size n representing the costs and the time taken to paint n different walls respectively. There are two painters available:\n\n\n\tA paid painter that paints the ith wall in time[i] units of time and takes cost[i] units of money.\n\tA free painter that paints any wall in 1 unit of time at a cost of 0. But the free painter can only be used if the paid painter is already occupied.\n\n\nReturn the minimum amount of money required to paint the n walls.\n\n \nExample 1:\n\n\nInput: cost = [1,2,3,2], time = [1,2,3,2]\nOutput: 3\nExplanation: The walls at index 0 and 1 will be painted by the paid painter, and it will take 3 units of time; meanwhile, the free painter will paint the walls at index 2 and 3, free of cost in 2 units of time. Thus, the total cost is 1 + 2 = 3.\n\n\nExample 2:\n\n\nInput: cost = [2,3,4,2], time = [1,1,1,1]\nOutput: 4\nExplanation: The walls at index 0 and 3 will be painted by the paid painter, and it will take 2 units of time; meanwhile, the free painter will paint the walls at index 1 and 2, free of cost in 2 units of time. Thus, the total cost is 2 + 2 = 4.\n\n\n \nConstraints:\n\n\n\t1 <= cost.length <= 500\n\tcost.length == time.length\n\t1 <= cost[i] <= 106\n\t1 <= time[i] <= 500\n\n",
+  "description": "You are given two 0-indexed integer arrays, cost and time, of size n representing the costs and the time taken to paint n different walls respectively. There are two painters available:\n\n\n\tA paid painter that paints the ith wall in time[i] units of time and takes cost[i] units of money.\n\tA free painter that paints any wall in 1 unit of time at a cost of 0. But the free painter can only be used if the paid painter is already occupied.\n\n\nReturn the minimum amount of money required to paint the n walls.",
+  "example": "Input: cost = [1,2,3,2], time = [1,2,3,2]\nOutput: 3\nExplanation: The walls at index 0 and 1 will be painted by the paid painter, and it will take 3 units of time; meanwhile, the free painter will paint the walls at index 2 and 3, free of cost in 2 units of time. Thus, the total cost is 1 + 2 = 3.",
+  "constraints_text": "1 <= cost.length <= 500\n\tcost.length == time.length\n\t1 <= cost[i] <= 106\n\t1 <= time[i] <= 500",
+  "templates": {
+    "c": "int paintWalls(int* cost, int costSize, int* time, int timeSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int paintWalls(vector<int>& cost, vector<int>& time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int paintWalls(int[] cost, int[] time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cost\n * @param {number[]} time\n * @return {number}\n */\nvar paintWalls = function(cost, time) {\n    \n};",
+    "python": "class Solution(object):\n    def paintWalls(self, cost, time):\n        \"\"\"\n        :type cost: List[int]\n        :type time: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a DP table to store the minimum cost for achieving a certain 'net wall count'.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "minimum-amount-of-money",
+        "paint-n-walls"
+      ],
+      "constraints": [
+        "1-cost-length-500"
+      ]
+    },
+    {
+      "intent": "Populate the DP table using a 0/1 knapsack approach, considering each wall's cost and time contribution.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "knapsack"
+      ],
+      "cues": [
+        "paid-painter",
+        "free-painter",
+        "cost-i",
+        "time-i"
+      ],
+      "constraints": [
+        "1-cost-i-106",
+        "1-time-i-500"
+      ]
+    },
+    {
+      "intent": "Find the minimum cost from the DP table that satisfies the condition of painting at least 'n' walls.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-amount-of-money-required-to-paint-the-n-walls"
+      ],
+      "constraints": [
+        "cost-length-time-length"
+      ]
+    }
+  ]
+}

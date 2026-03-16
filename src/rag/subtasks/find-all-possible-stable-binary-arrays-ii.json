@@ -1,0 +1,61 @@
+{
+  "slug": "find-all-possible-stable-binary-arrays-ii",
+  "link": "https://leetcode.com/problems/find-all-possible-stable-binary-arrays-ii/",
+  "difficulty": "Hard",
+  "index": "2721",
+  "description_full": "You are given 3 positive integers zero, one, and limit.\n\nA binary array arr is called stable if:\n\n\n\tThe number of occurrences of 0 in arr is exactly zero.\n\tThe number of occurrences of 1 in arr is exactly one.\n\tEach subarray of arr with a size greater than limit must contain both 0 and 1.\n\n\nReturn the total number of stable binary arrays.\n\nSince the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: zero = 1, one = 1, limit = 2\n\nOutput: 2\n\nExplanation:\n\nThe two possible stable binary arrays are [1,0] and [0,1].\n\n\nExample 2:\n\n\nInput: zero = 1, one = 2, limit = 1\n\nOutput: 1\n\nExplanation:\n\nThe only possible stable binary array is [1,0,1].\n\n\nExample 3:\n\n\nInput: zero = 3, one = 3, limit = 2\n\nOutput: 14\n\nExplanation:\n\nAll the possible stable binary arrays are [0,0,1,0,1,1], [0,0,1,1,0,1], [0,1,0,0,1,1], [0,1,0,1,0,1], [0,1,0,1,1,0], [0,1,1,0,0,1], [0,1,1,0,1,0], [1,0,0,1,0,1], [1,0,0,1,1,0], [1,0,1,0,0,1], [1,0,1,0,1,0], [1,0,1,1,0,0], [1,1,0,0,1,0], and [1,1,0,1,0,0].\n\n\n \nConstraints:\n\n\n\t1 <= zero, one, limit <= 1000\n\n",
+  "description": "You are given 3 positive integers zero, one, and limit.\n\nA binary array arr is called stable if:\n\n\n\tThe number of occurrences of 0 in arr is exactly zero.\n\tThe number of occurrences of 1 in arr is exactly one.\n\tEach subarray of arr with a size greater than limit must contain both 0 and 1.\n\n\nReturn the total number of stable binary arrays.\n\nSince the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: zero = 1, one = 1, limit = 2\n\nOutput: 2\n\nExplanation:\n\nThe two possible stable binary arrays are [1,0] and [0,1].",
+  "constraints_text": "1 <= zero, one, limit <= 1000",
+  "templates": {
+    "c": "int numberOfStableArrays(int zero, int one, int limit) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfStableArrays(int zero, int one, int limit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfStableArrays(int zero, int one, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} zero\n * @param {number} one\n * @param {number} limit\n * @return {number}\n */\nvar numberOfStableArrays = function(zero, one, limit) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfStableArrays(self, zero, one, limit):\n        \"\"\"\n        :type zero: int\n        :type one: int\n        :type limit: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Formulate the dynamic programming state and recurrence relations to count stable binary arrays.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "counting"
+      ],
+      "cues": [
+        "total-number",
+        "stable-binary-array",
+        "exactly-zero",
+        "exactly-one",
+        "subarray-size-limit"
+      ],
+      "constraints": [
+        "zero-one-limit-up-to-200",
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Implement the dynamic programming solution, including base cases, iteration order, state transitions, and modulo arithmetic to compute the final result.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "simulation",
+        "prefix-sum"
+      ],
+      "cues": [
+        "return-the-total-number",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "zero-one-limit-up-to-200",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

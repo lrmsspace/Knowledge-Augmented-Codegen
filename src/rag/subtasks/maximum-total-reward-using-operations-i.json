@@ -1,0 +1,53 @@
+{
+  "slug": "maximum-total-reward-using-operations-i",
+  "link": "https://leetcode.com/problems/maximum-total-reward-using-operations-i/",
+  "difficulty": "Medium",
+  "index": "2520",
+  "description_full": "You are given an integer array rewardValues of length n, representing the values of rewards.\n\nInitially, your total reward x is 0, and all indices are unmarked. You are allowed to perform the following operation any number of times:\n\n\n\tChoose an unmarked index i from the range [0, n - 1].\n\tIf rewardValues[i] is greater than your current total reward x, then add rewardValues[i] to x (i.e., x = x + rewardValues[i]), and mark the index i.\n\n\nReturn an integer denoting the maximum total reward you can collect by performing the operations optimally.\n\n \nExample 1:\n\n\nInput: rewardValues = [1,1,3,3]\n\nOutput: 4\n\nExplanation:\n\nDuring the operations, we can choose to mark the indices 0 and 2 in order, and the total reward will be 4, which is the maximum.\n\n\nExample 2:\n\n\nInput: rewardValues = [1,6,4,3,2]\n\nOutput: 11\n\nExplanation:\n\nMark the indices 0, 2, and 1 in order. The total reward will then be 11, which is the maximum.\n\n\n \nConstraints:\n\n\n\t1 <= rewardValues.length <= 2000\n\t1 <= rewardValues[i] <= 2000\n\n",
+  "description": "You are given an integer array rewardValues of length n, representing the values of rewards.\n\nInitially, your total reward x is 0, and all indices are unmarked. You are allowed to perform the following operation any number of times:\n\n\n\tChoose an unmarked index i from the range [0, n - 1].\n\tIf rewardValues[i] is greater than your current total reward x, then add rewardValues[i] to x (i.e., x = x + rewardValues[i]), and mark the index i.\n\n\nReturn an integer denoting the maximum total reward you can collect by performing the operations optimally.",
+  "example": "Input: rewardValues = [1,1,3,3]\n\nOutput: 4\n\nExplanation:\n\nDuring the operations, we can choose to mark the indices 0 and 2 in order, and the total reward will be 4, which is the maximum.",
+  "constraints_text": "1 <= rewardValues.length <= 2000\n\t1 <= rewardValues[i] <= 2000",
+  "templates": {
+    "c": "int maxTotalReward(int* rewardValues, int rewardValuesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxTotalReward(vector<int>& rewardValues) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxTotalReward(int[] rewardValues) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} rewardValues\n * @return {number}\n */\nvar maxTotalReward = function(rewardValues) {\n    \n};",
+    "python": "class Solution(object):\n    def maxTotalReward(self, rewardValues):\n        \"\"\"\n        :type rewardValues: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute all achievable total rewards using dynamic programming with bitset optimization, processing rewards in increasing order.",
+      "structures": [
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "dp-1d",
+        "bitmask-dp"
+      ],
+      "cues": [
+        "maximum-total-reward",
+        "add-rewardvalues-i-to-x",
+        "rewardvalues-i-is-greater-than-x",
+        "optimally"
+      ],
+      "constraints": [
+        "rewardvalues-length-2000",
+        "1-rewardvalues-i"
+      ]
+    },
+    {
+      "intent": "Find the largest achievable reward from the computed bitset state.",
+      "structures": [
+        "bitset"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-an-integer-denoting-the-maximum-total-reward"
+      ],
+      "constraints": []
+    }
+  ]
+}

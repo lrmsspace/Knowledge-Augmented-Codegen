@@ -1,0 +1,37 @@
+{
+  "slug": "check-if-n-and-its-double-exist",
+  "link": "https://leetcode.com/problems/check-if-n-and-its-double-exist/",
+  "difficulty": "Easy",
+  "index": "281",
+  "description_full": "Given an array arr of integers, check if there exist two indices i and j such that :\n\n\n\ti != j\n\t0 <= i, j < arr.length\n\tarr[i] == 2 * arr[j]\n\n\n \nExample 1:\n\n\nInput: arr = [10,2,5,3]\nOutput: true\nExplanation: For i = 0 and j = 2, arr[i] == 10 == 2 * 5 == 2 * arr[j]\n\n\nExample 2:\n\n\nInput: arr = [3,1,7,11]\nOutput: false\nExplanation: There is no i and j that satisfy the conditions.\n\n\n \nConstraints:\n\n\n\t2 <= arr.length <= 500\n\t-103 <= arr[i] <= 103\n\n",
+  "description": "Given an array arr of integers, check if there exist two indices i and j such that :\n\n\n\ti != j\n\t0 <= i, j < arr.length\n\tarr[i] == 2 * arr[j]",
+  "example": "Input: arr = [10,2,5,3]\nOutput: true\nExplanation: For i = 0 and j = 2, arr[i] == 10 == 2 * 5 == 2 * arr[j]",
+  "constraints_text": "2 <= arr.length <= 500\n\t-103 <= arr[i] <= 103",
+  "templates": {
+    "c": "bool checkIfExist(int* arr, int arrSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkIfExist(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkIfExist(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {boolean}\n */\nvar checkIfExist = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def checkIfExist(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all distinct pairs of indices (i, j) and check if the element at index i is exactly twice the element at index j.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "i-j",
+        "arr-i-2-arr-j"
+      ],
+      "constraints": [
+        "2-arr-length-500",
+        "1000-arr-i-1000"
+      ]
+    }
+  ]
+}

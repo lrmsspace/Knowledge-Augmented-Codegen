@@ -1,0 +1,41 @@
+{
+  "slug": "reverse-prefix-of-word",
+  "link": "https://leetcode.com/problems/reverse-prefix-of-word/",
+  "difficulty": "Easy",
+  "index": "430",
+  "description_full": "Given a 0-indexed string word and a character ch, reverse the segment of word that starts at index 0 and ends at the index of the first occurrence of ch (inclusive). If the character ch does not exist in word, do nothing.\n\n\n\tFor example, if word = \"abcdefd\" and ch = \"d\", then you should reverse the segment that starts at 0 and ends at 3 (inclusive). The resulting string will be \"dcbaefd\".\n\n\nReturn the resulting string.\n\n \nExample 1:\n\n\nInput: word = \"abcdefd\", ch = \"d\"\nOutput: \"dcbaefd\"\nExplanation: The first occurrence of \"d\" is at index 3. \nReverse the part of word from 0 to 3 (inclusive), the resulting string is \"dcbaefd\".\n\n\nExample 2:\n\n\nInput: word = \"xyxzxe\", ch = \"z\"\nOutput: \"zxyxxe\"\nExplanation: The first and only occurrence of \"z\" is at index 3.\nReverse the part of word from 0 to 3 (inclusive), the resulting string is \"zxyxxe\".\n\n\nExample 3:\n\n\nInput: word = \"abcd\", ch = \"z\"\nOutput: \"abcd\"\nExplanation: \"z\" does not exist in word.\nYou should not do any reverse operation, the resulting string is \"abcd\".\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 250\n\tword consists of lowercase English letters.\n\tch is a lowercase English letter.\n\n",
+  "description": "Given a 0-indexed string word and a character ch, reverse the segment of word that starts at index 0 and ends at the index of the first occurrence of ch (inclusive). If the character ch does not exist in word, do nothing.\n\n\n\tFor example, if word = \"abcdefd\" and ch = \"d\", then you should reverse the segment that starts at 0 and ends at 3 (inclusive). The resulting string will be \"dcbaefd\".\n\n\nReturn the resulting string.",
+  "example": "Input: word = \"abcdefd\", ch = \"d\"\nOutput: \"dcbaefd\"\nExplanation: The first occurrence of \"d\" is at index 3. \nReverse the part of word from 0 to 3 (inclusive), the resulting string is \"dcbaefd\".",
+  "constraints_text": "1 <= word.length <= 250\n\tword consists of lowercase English letters.\n\tch is a lowercase English letter.",
+  "templates": {
+    "c": "char* reversePrefix(char* word, char ch) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string reversePrefix(string word, char ch) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reversePrefix(String word, char ch) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {character} ch\n * @return {string}\n */\nvar reversePrefix = function(word, ch) {\n    \n};",
+    "python": "class Solution(object):\n    def reversePrefix(self, word, ch):\n        \"\"\"\n        :type word: str\n        :type ch: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the first occurrence of a character in a string, then reverse the prefix up to that index, or return the original string if not found.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "reverse-the-segment",
+        "first-occurrence-of-ch",
+        "if-the-character-ch-does-not-exist-in-word-do-nothing",
+        "return-the-resulting-string"
+      ],
+      "constraints": [
+        "1-word-length-250",
+        "word-consists-of-lowercase-english-letters",
+        "ch-is-a-lowercase-english-letter"
+      ]
+    }
+  ]
+}

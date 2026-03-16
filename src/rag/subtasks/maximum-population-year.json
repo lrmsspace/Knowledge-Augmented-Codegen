@@ -1,0 +1,54 @@
+{
+  "slug": "maximum-population-year",
+  "link": "https://leetcode.com/problems/maximum-population-year/",
+  "difficulty": "Easy",
+  "index": "398",
+  "description_full": "You are given a 2D integer array logs where each logs[i] = [birthi, deathi] indicates the birth and death years of the ith person.\n\nThe population of some year x is the number of people alive during that year. The ith person is counted in year x's population if x is in the inclusive range [birthi, deathi - 1]. Note that the person is not counted in the year that they die.\n\nReturn the earliest year with the maximum population.\n\n \nExample 1:\n\n\nInput: logs = [[1993,1999],[2000,2010]]\nOutput: 1993\nExplanation: The maximum population is 1, and 1993 is the earliest year with this population.\n\n\nExample 2:\n\n\nInput: logs = [[1950,1961],[1960,1971],[1970,1981]]\nOutput: 1960\nExplanation: \nThe maximum population is 2, and it had happened in years 1960 and 1970.\nThe earlier year between them is 1960.\n\n \nConstraints:\n\n\n\t1 <= logs.length <= 100\n\t1950 <= birthi < deathi <= 2050\n\n",
+  "description": "You are given a 2D integer array logs where each logs[i] = [birthi, deathi] indicates the birth and death years of the ith person.\n\nThe population of some year x is the number of people alive during that year. The ith person is counted in year x's population if x is in the inclusive range [birthi, deathi - 1]. Note that the person is not counted in the year that they die.\n\nReturn the earliest year with the maximum population.",
+  "example": "Input: logs = [[1993,1999],[2000,2010]]\nOutput: 1993\nExplanation: The maximum population is 1, and 1993 is the earliest year with this population.",
+  "constraints_text": "1 <= logs.length <= 100\n\t1950 <= birthi < deathi <= 2050",
+  "templates": {
+    "c": "int maximumPopulation(int** logs, int logsSize, int* logsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumPopulation(vector<vector<int>>& logs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumPopulation(int[][] logs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} logs\n * @return {number}\n */\nvar maximumPopulation = function(logs) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumPopulation(self, logs):\n        \"\"\"\n        :type logs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Aggregate population changes for each year by marking birth and death events.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "difference-array"
+      ],
+      "cues": [
+        "birthi-deathi",
+        "not-counted-in-the-year-that-they-die"
+      ],
+      "constraints": [
+        "1950-birthi-deathi-2050"
+      ]
+    },
+    {
+      "intent": "Calculate cumulative population for each year and find the earliest year with the maximum population.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "earliest-year-with-the-maximum-population"
+      ],
+      "constraints": [
+        "1950-birthi-deathi-2050"
+      ]
+    }
+  ]
+}

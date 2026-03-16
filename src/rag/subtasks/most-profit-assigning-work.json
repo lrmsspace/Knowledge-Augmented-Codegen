@@ -1,0 +1,57 @@
+{
+  "slug": "most-profit-assigning-work",
+  "link": "https://leetcode.com/problems/most-profit-assigning-work/",
+  "difficulty": "Medium",
+  "index": "974",
+  "description_full": "You have n jobs and m workers. You are given three arrays: difficulty, profit, and worker where:\n\n\n\tdifficulty[i] and profit[i] are the difficulty and the profit of the ith job, and\n\tworker[j] is the ability of jth worker (i.e., the jth worker can only complete a job with difficulty at most worker[j]).\n\n\nEvery worker can be assigned at most one job, but one job can be completed multiple times.\n\n\n\tFor example, if three workers attempt the same job that pays $1, then the total profit will be $3. If a worker cannot complete any job, their profit is $0.\n\n\nReturn the maximum profit we can achieve after assigning the workers to the jobs.\n\n \nExample 1:\n\n\nInput: difficulty = [2,4,6,8,10], profit = [10,20,30,40,50], worker = [4,5,6,7]\nOutput: 100\nExplanation: Workers are assigned jobs of difficulty [4,4,6,6] and they get a profit of [20,20,30,30] separately.\n\n\nExample 2:\n\n\nInput: difficulty = [85,47,57], profit = [24,66,99], worker = [40,25,25]\nOutput: 0\n\n\n \nConstraints:\n\n\n\tn == difficulty.length\n\tn == profit.length\n\tm == worker.length\n\t1 <= n, m <= 104\n\t1 <= difficulty[i], profit[i], worker[i] <= 105\n\n",
+  "description": "You have n jobs and m workers. You are given three arrays: difficulty, profit, and worker where:\n\n\n\tdifficulty[i] and profit[i] are the difficulty and the profit of the ith job, and\n\tworker[j] is the ability of jth worker (i.e., the jth worker can only complete a job with difficulty at most worker[j]).\n\n\nEvery worker can be assigned at most one job, but one job can be completed multiple times.\n\n\n\tFor example, if three workers attempt the same job that pays $1, then the total profit will be $3. If a worker cannot complete any job, their profit is $0.\n\n\nReturn the maximum profit we can achieve after assigning the workers to the jobs.",
+  "example": "Input: difficulty = [2,4,6,8,10], profit = [10,20,30,40,50], worker = [4,5,6,7]\nOutput: 100\nExplanation: Workers are assigned jobs of difficulty [4,4,6,6] and they get a profit of [20,20,30,30] separately.",
+  "constraints_text": "n == difficulty.length\n\tn == profit.length\n\tm == worker.length\n\t1 <= n, m <= 104\n\t1 <= difficulty[i], profit[i], worker[i] <= 105",
+  "templates": {
+    "c": "int maxProfitAssignment(int* difficulty, int difficultySize, int* profit, int profitSize, int* worker, int workerSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxProfitAssignment(vector<int>& difficulty, vector<int>& profit, vector<int>& worker) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} difficulty\n * @param {number[]} profit\n * @param {number[]} worker\n * @return {number}\n */\nvar maxProfitAssignment = function(difficulty, profit, worker) {\n    \n};",
+    "python": "class Solution(object):\n    def maxProfitAssignment(self, difficulty, profit, worker):\n        \"\"\"\n        :type difficulty: List[int]\n        :type profit: List[int]\n        :type worker: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Prepare jobs by combining difficulty and profit, then sort them and compute the maximum achievable profit for each difficulty level.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "difficulty",
+        "profit",
+        "job"
+      ],
+      "constraints": [
+        "n-10-4"
+      ]
+    },
+    {
+      "intent": "Iterate through each worker, find the most profitable job they can complete using binary search on the preprocessed jobs, and accumulate the total profit.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "binary-search",
+        "enumeration"
+      ],
+      "cues": [
+        "worker",
+        "ability",
+        "maximum-profit",
+        "total-profit"
+      ],
+      "constraints": [
+        "m-10-4"
+      ]
+    }
+  ]
+}

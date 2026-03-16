@@ -1,0 +1,53 @@
+{
+  "slug": "check-if-strings-can-be-made-equal-with-operations-ii",
+  "link": "https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/",
+  "difficulty": "Medium",
+  "index": "2400",
+  "description_full": "You are given two strings s1 and s2, both of length n, consisting of lowercase English letters.\n\nYou can apply the following operation on any of the two strings any number of times:\n\n\n\tChoose any two indices i and j such that i < j and the difference j - i is even, then swap the two characters at those indices in the string.\n\n\nReturn true if you can make the strings s1 and s2 equal, and false otherwise.\n\n \nExample 1:\n\n\nInput: s1 = \"abcdba\", s2 = \"cabdab\"\nOutput: true\nExplanation: We can apply the following operations on s1:\n- Choose the indices i = 0, j = 2. The resulting string is s1 = \"cbadba\".\n- Choose the indices i = 2, j = 4. The resulting string is s1 = \"cbbdaa\".\n- Choose the indices i = 1, j = 5. The resulting string is s1 = \"cabdab\" = s2.\n\n\nExample 2:\n\n\nInput: s1 = \"abe\", s2 = \"bea\"\nOutput: false\nExplanation: It is not possible to make the two strings equal.\n\n\n \nConstraints:\n\n\n\tn == s1.length == s2.length\n\t1 <= n <= 105\n\ts1 and s2 consist only of lowercase English letters.\n\n",
+  "description": "You are given two strings s1 and s2, both of length n, consisting of lowercase English letters.\n\nYou can apply the following operation on any of the two strings any number of times:\n\n\n\tChoose any two indices i and j such that i < j and the difference j - i is even, then swap the two characters at those indices in the string.\n\n\nReturn true if you can make the strings s1 and s2 equal, and false otherwise.",
+  "example": "Input: s1 = \"abcdba\", s2 = \"cabdab\"\nOutput: true\nExplanation: We can apply the following operations on s1:\n- Choose the indices i = 0, j = 2. The resulting string is s1 = \"cbadba\".\n- Choose the indices i = 2, j = 4. The resulting string is s1 = \"cbbdaa\".\n- Choose the indices i = 1, j = 5. The resulting string is s1 = \"cabdab\" = s2.",
+  "constraints_text": "n == s1.length == s2.length\n\t1 <= n <= 105\n\ts1 and s2 consist only of lowercase English letters.",
+  "templates": {
+    "c": "bool checkStrings(char* s1, char* s2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkStrings(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkStrings(String s1, String s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {boolean}\n */\nvar checkStrings = function(s1, s2) {\n    \n};",
+    "python": "class Solution(object):\n    def checkStrings(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate frequency counts of characters at even and odd indices for both input strings s1 and s2.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "swap-i-and-j",
+        "j-i-is-even",
+        "lowercase-english-letters"
+      ],
+      "constraints": [
+        "n-105"
+      ]
+    },
+    {
+      "intent": "Compare the character frequency counts for even positions and odd positions separately between s1 and s2.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "make-strings-equal",
+        "return-true-false"
+      ],
+      "constraints": [
+        "n-105"
+      ]
+    }
+  ]
+}

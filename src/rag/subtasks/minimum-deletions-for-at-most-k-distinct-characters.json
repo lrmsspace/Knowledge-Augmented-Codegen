@@ -1,0 +1,55 @@
+{
+  "slug": "minimum-deletions-for-at-most-k-distinct-characters",
+  "link": "https://leetcode.com/problems/minimum-deletions-for-at-most-k-distinct-characters/",
+  "difficulty": "Easy",
+  "index": "2389",
+  "description_full": "You are given a string s consisting of lowercase English letters, and an integer k.\n\nYour task is to delete some (possibly none) of the characters in the string so that the number of distinct characters in the resulting string is at most k.\n\nReturn the minimum number of deletions required to achieve this.\n\n \nExample 1:\n\n\nInput: s = \"abc\", k = 2\n\nOutput: 1\n\nExplanation:\n\n\n\ts has three distinct characters: 'a', 'b' and 'c', each with a frequency of 1.\n\tSince we can have at most k = 2 distinct characters, remove all occurrences of any one character from the string.\n\tFor example, removing all occurrences of 'c' results in at most k distinct characters. Thus, the answer is 1.\n\n\n\nExample 2:\n\n\nInput: s = \"aabb\", k = 2\n\nOutput: 0\n\nExplanation:\n\n\n\ts has two distinct characters ('a' and 'b') with frequencies of 2 and 2, respectively.\n\tSince we can have at most k = 2 distinct characters, no deletions are required. Thus, the answer is 0.\n\n\n\nExample 3:\n\n\nInput: s = \"yyyzz\", k = 1\n\nOutput: 2\n\nExplanation:\n\n\n\ts has two distinct characters ('y' and 'z') with frequencies of 3 and 2, respectively.\n\tSince we can have at most k = 1 distinct character, remove all occurrences of any one character from the string.\n\tRemoving all 'z' results in at most k distinct characters. Thus, the answer is 2.\n\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 16\n\t1 <= k <= 16\n\ts consists only of lowercase English letters.\n\n\n \n",
+  "description": "You are given a string s consisting of lowercase English letters, and an integer k.\n\nYour task is to delete some (possibly none) of the characters in the string so that the number of distinct characters in the resulting string is at most k.\n\nReturn the minimum number of deletions required to achieve this.",
+  "example": "Input: s = \"abc\", k = 2\n\nOutput: 1\n\nExplanation:\n\n\n\ts has three distinct characters: 'a', 'b' and 'c', each with a frequency of 1.\n\tSince we can have at most k = 2 distinct characters, remove all occurrences of any one character from the string.\n\tFor example, removing all occurrences of 'c' results in at most k distinct characters. Thus, the answer is 1.",
+  "constraints_text": "1 <= s.length <= 16\n\t1 <= k <= 16\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int minDeletion(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minDeletion(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDeletion(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar minDeletion = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minDeletion(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the frequency of each unique lowercase English letter present in the input string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "string-s",
+        "lowercase-english-letters"
+      ],
+      "constraints": [
+        "s-consists-only-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum number of deletions by greedily removing characters with the lowest frequencies until at most k distinct characters remain.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "heap-select"
+      ],
+      "cues": [
+        "minimum-number-of-deletions",
+        "at-most-k-distinct-characters"
+      ],
+      "constraints": [
+        "1-k-16"
+      ]
+    }
+  ]
+}

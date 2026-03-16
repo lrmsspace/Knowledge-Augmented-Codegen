@@ -1,0 +1,52 @@
+{
+  "slug": "happy-number",
+  "link": "https://leetcode.com/problems/happy-number/",
+  "difficulty": "Easy",
+  "index": "48",
+  "description_full": "Write an algorithm to determine if a number n is happy.\n\nA happy number is a number defined by the following process:\n\n\n\tStarting with any positive integer, replace the number by the sum of the squares of its digits.\n\tRepeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.\n\tThose numbers for which this process ends in 1 are happy.\n\n\nReturn true if n is a happy number, and false if not.\n\n \nExample 1:\n\n\nInput: n = 19\nOutput: true\nExplanation:\n12 + 92 = 82\n82 + 22 = 68\n62 + 82 = 100\n12 + 02 + 02 = 1\n\n\nExample 2:\n\n\nInput: n = 2\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= n <= 231 - 1\n\n",
+  "description": "Write an algorithm to determine if a number n is happy.\n\nA happy number is a number defined by the following process:\n\n\n\tStarting with any positive integer, replace the number by the sum of the squares of its digits.\n\tRepeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.\n\tThose numbers for which this process ends in 1 are happy.\n\n\nReturn true if n is a happy number, and false if not.",
+  "example": "Input: n = 19\nOutput: true\nExplanation:\n12 + 92 = 82\n82 + 22 = 68\n62 + 82 = 100\n12 + 02 + 02 = 1",
+  "constraints_text": "1 <= n <= 231 - 1",
+  "templates": {
+    "c": "bool isHappy(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isHappy(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isHappy(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar isHappy = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def isHappy(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a helper function to calculate the sum of the squares of an integer's digits.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "sum-of-the-squares-of-its-digits"
+      ],
+      "constraints": [
+        "positive-integer"
+      ]
+    },
+    {
+      "intent": "Simulate the happy number process, using a set to detect cycles or termination at 1.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "hashing"
+      ],
+      "cues": [
+        "repeat-the-process-until-the-number-equals-1",
+        "loops-endlessly-in-a-cycle"
+      ],
+      "constraints": [
+        "1-n-2-31-1"
+      ]
+    }
+  ]
+}

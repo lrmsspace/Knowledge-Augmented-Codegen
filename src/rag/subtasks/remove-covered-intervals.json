@@ -1,0 +1,53 @@
+{
+  "slug": "remove-covered-intervals",
+  "link": "https://leetcode.com/problems/remove-covered-intervals/",
+  "difficulty": "Medium",
+  "index": "1177",
+  "description_full": "Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.\n\nThe interval [a, b) is covered by the interval [c, d) if and only if c <= a and b <= d.\n\nReturn the number of remaining intervals.\n\n \nExample 1:\n\n\nInput: intervals = [[1,4],[3,6],[2,8]]\nOutput: 2\nExplanation: Interval [3,6] is covered by [2,8], therefore it is removed.\n\n\nExample 2:\n\n\nInput: intervals = [[1,4],[2,3]]\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= intervals.length <= 1000\n\tintervals[i].length == 2\n\t0 <= li < ri <= 105\n\tAll the given intervals are unique.\n\n",
+  "description": "Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.\n\nThe interval [a, b) is covered by the interval [c, d) if and only if c <= a and b <= d.\n\nReturn the number of remaining intervals.",
+  "example": "Input: intervals = [[1,4],[3,6],[2,8]]\nOutput: 2\nExplanation: Interval [3,6] is covered by [2,8], therefore it is removed.",
+  "constraints_text": "1 <= intervals.length <= 1000\n\tintervals[i].length == 2\n\t0 <= li < ri <= 105\n\tAll the given intervals are unique.",
+  "templates": {
+    "c": "int removeCoveredIntervals(int** intervals, int intervalsSize, int* intervalsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int removeCoveredIntervals(vector<vector<int>>& intervals) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int removeCoveredIntervals(int[][] intervals) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} intervals\n * @return {number}\n */\nvar removeCoveredIntervals = function(intervals) {\n    \n};",
+    "python": "class Solution(object):\n    def removeCoveredIntervals(self, intervals):\n        \"\"\"\n        :type intervals: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort intervals by their start points in ascending order, and for intervals with the same start point, sort by their end points in descending order.",
+      "structures": [
+        "array",
+        "interval"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "remove-all-intervals-that-are-covered"
+      ],
+      "constraints": [
+        "1-intervals-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted intervals, tracking the maximum end point encountered so far among non-covered intervals to identify and count covered ones.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "covered-by-another-interval",
+        "return-the-number-of-remaining-intervals"
+      ],
+      "constraints": [
+        "0-li-ri-105"
+      ]
+    }
+  ]
+}

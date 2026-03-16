@@ -1,0 +1,39 @@
+{
+  "slug": "count-square-submatrices-with-all-ones",
+  "link": "https://leetcode.com/problems/count-square-submatrices-with-all-ones/",
+  "difficulty": "Medium",
+  "index": "1173",
+  "description_full": "Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.\n\n \nExample 1:\n\n\nInput: matrix =\n[\n  [0,1,1,1],\n  [1,1,1,1],\n  [0,1,1,1]\n]\nOutput: 15\nExplanation: \nThere are 10 squares of side 1.\nThere are 4 squares of side 2.\nThere is  1 square of side 3.\nTotal number of squares = 10 + 4 + 1 = 15.\n\n\nExample 2:\n\n\nInput: matrix = \n[\n  [1,0,1],\n  [1,1,0],\n  [1,1,0]\n]\nOutput: 7\nExplanation: \nThere are 6 squares of side 1.  \nThere is 1 square of side 2. \nTotal number of squares = 6 + 1 = 7.\n\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 300\n\t1 <= arr[0].length <= 300\n\t0 <= arr[i][j] <= 1\n\n",
+  "description": "Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.",
+  "example": "Input: matrix =\n[\n  [0,1,1,1],\n  [1,1,1,1],\n  [0,1,1,1]\n]\nOutput: 15\nExplanation: \nThere are 10 squares of side 1.\nThere are 4 squares of side 2.\nThere is  1 square of side 3.\nTotal number of squares = 10 + 4 + 1 = 15.",
+  "constraints_text": "1 <= arr.length <= 300\n\t1 <= arr[0].length <= 300\n\t0 <= arr[i][j] <= 1",
+  "templates": {
+    "c": "int countSquares(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countSquares(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSquares(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number}\n */\nvar countSquares = function(matrix) {\n    \n};",
+    "python": "class Solution(object):\n    def countSquares(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the side length of the largest square of ones ending at each cell using dynamic programming, then sum all computed values.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "counting"
+      ],
+      "cues": [
+        "square-submatrices",
+        "all-ones",
+        "how-many"
+      ],
+      "constraints": [
+        "1-arr-length-300",
+        "1-arr-0-length-300"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "count-the-number-of-computer-unlocking-permutations",
+  "link": "https://leetcode.com/problems/count-the-number-of-computer-unlocking-permutations/",
+  "difficulty": "Medium",
+  "index": 2656,
+  "description_full": "You are given an array complexity of length n.\n\nThere are n locked computers in a room with labels from 0 to n - 1, each with its own unique password. The password of the computer i has a complexity complexity[i].\n\nThe password for the computer labeled 0 is already decrypted and serves as the root. All other computers must be unlocked using it or another previously unlocked computer, following this information:\n\n\n You can decrypt the password for the computer i using the password for computer j, where j is any integer less than i with a lower complexity. (i.e. j < i and complexity[j] < complexity[i])\n To decrypt the password for computer i, you must have already unlocked a computer j such that j < i and complexity[j] < complexity[i].\n\n\nFind the number of permutations of [0, 1, 2, ..., (n - 1)] that represent a valid order in which the computers can be unlocked, starting from computer 0 as the only initially unlocked one.\n\nSince the answer may be large, return it modulo 109 + 7.\n\nNote that the password for the computer with label 0 is decrypted, and not the computer with the first position in the permutation.\n\n \nExample 1:\n\n\nInput: complexity = [1,2,3]\n\nOutput: 2\n\nExplanation:\n\nThe valid permutations are:\n\n\n [0, 1, 2]\n \n  Unlock computer 0 first with root password.\n  Unlock computer 1 with password of computer 0 since complexity[0] < complexity[1].\n  Unlock computer 2 with password of computer 1 since complexity[1] < complexity[2].\n \n \n [0, 2, 1]\n \n  Unlock computer 0 first with root password.\n  Unlock computer 2 with password of computer 0 since complexity[0] < complexity[2].\n  Unlock computer 1 with password of computer 0 since complexity[0] < complexity[1].\n \n \n\n\n\nExample 2:\n\n\nInput: complexity = [3,3,3,4,4,4]\n\nOutput: 0\n\nExplanation:\n\nThere are no possible permutations which can unlock all computers.\n\n\n \nConstraints:\n\n\n 2 <= complexity.length <= 105\n 1 <= complexity[i] <= 109\n\n",
+  "description": "You are given an array complexity of length n.\n\nThere are n locked computers in a room with labels from 0 to n - 1, each with its own unique password. The password of the computer i has a complexity complexity[i].\n\nThe password for the computer labeled 0 is already decrypted and serves as the root. All other computers must be unlocked using it or another previously unlocked computer, following this information:\n\n\n You can decrypt the password for the computer i using the password for computer j, where j is any integer less than i with a lower complexity. (i.e. j < i and complexity[j] < complexity[i])\n To decrypt the password for computer i, you must have already unlocked a computer j such that j < i and complexity[j] < complexity[i].\n\n\nFind the number of permutations of [0, 1, 2, ..., (n - 1)] that represent a valid order in which the computers can be unlocked, starting from computer 0 as the only initially unlocked one.\n\nSince the answer may be large, return it modulo 109 + 7.\n\nNote that the password for the computer with label 0 is decrypted, and not the computer with the first position in the permutation.",
+  "example": "Input: complexity = [1,2,3]\n\nOutput: 2\n\nExplanation:\n\nThe valid permutations are:\n\n\n [0, 1, 2]\n \n  Unlock computer 0 first with root password.\n  Unlock computer 1 with password of computer 0 since complexity[0] < complexity[1].\n  Unlock computer 2 with password of computer 1 since complexity[1] < complexity[2].\n \n \n [0, 2, 1]\n \n  Unlock computer 0 first with root password.\n  Unlock computer 2 with password of computer 0 since complexity[0] < complexity[2].\n  Unlock computer 1 with password of computer 0 since complexity[0] < complexity[1].",
+  "constraints_text": "2 <= complexity.length <= 105\n 1 <= complexity[i] <= 109",
+  "templates": {
+    "c": "int countPermutations(int* complexity, int complexitySize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countPermutations(vector<int>& complexity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPermutations(int[] complexity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} complexity\n * @return {number}\n */\nvar countPermutations = function(complexity) {\n    \n};",
+    "python": "class Solution(object):\n    def countPermutations(self, complexity):\n        \"\"\"\n        :type complexity: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Build a tree structure: for each computer $i$, find its unique 'parent' $p_i$, which is the computer $j < i$ with the maximum complexity[j] such that complexity[j] < complexity[i].",
+      "structures": [
+        "array",
+        "tree"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "j < i",
+        "complexity[j] < complexity[i]"
+      ],
+      "constraints": [
+        "unique parent"
+      ]
+    },
+    {
+      "intent": "Apply Dynamic Programming (DFS on the tree) to count the number of valid permutations (topological sorts) using multinomial coefficients for interleaving subtrees.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "dp-2d"
+      ],
+      "cues": [
+        "permutations",
+        "valid order"
+      ],
+      "constraints": [
+        "modulo 10^9 + 7"
+      ]
+    }
+  ]
+}

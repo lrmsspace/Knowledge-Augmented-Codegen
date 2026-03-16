@@ -1,0 +1,40 @@
+{
+  "slug": "detect-pattern-of-length-m-repeated-k-or-more-times",
+  "link": "https://leetcode.com/problems/detect-pattern-of-length-m-repeated-k-or-more-times/",
+  "difficulty": "Easy",
+  "index": "330",
+  "description_full": "Given an array of positive integers arr, find a pattern of length m that is repeated k or more times.\n\nA pattern is a subarray (consecutive sub-sequence) that consists of one or more values, repeated multiple times consecutively without overlapping. A pattern is defined by its length and the number of repetitions.\n\nReturn true if there exists a pattern of length m that is repeated k or more times, otherwise return false.\n\n \nExample 1:\n\n\nInput: arr = [1,2,4,4,4,4], m = 1, k = 3\nOutput: true\nExplanation: The pattern (4) of length 1 is repeated 4 consecutive times. Notice that pattern can be repeated k or more times but not less.\n\n\nExample 2:\n\n\nInput: arr = [1,2,1,2,1,1,1,3], m = 2, k = 2\nOutput: true\nExplanation: The pattern (1,2) of length 2 is repeated 2 consecutive times. Another valid pattern (2,1) is also repeated 2 times.\n\n\nExample 3:\n\n\nInput: arr = [1,2,1,2,1,3], m = 2, k = 3\nOutput: false\nExplanation: The pattern (1,2) is of length 2 but is repeated only 2 times. There is no pattern of length 2 that is repeated 3 or more times.\n\n\n \nConstraints:\n\n\n\t2 <= arr.length <= 100\n\t1 <= arr[i] <= 100\n\t1 <= m <= 100\n\t2 <= k <= 100\n\n",
+  "description": "Given an array of positive integers arr, find a pattern of length m that is repeated k or more times.\n\nA pattern is a subarray (consecutive sub-sequence) that consists of one or more values, repeated multiple times consecutively without overlapping. A pattern is defined by its length and the number of repetitions.\n\nReturn true if there exists a pattern of length m that is repeated k or more times, otherwise return false.",
+  "example": "Input: arr = [1,2,4,4,4,4], m = 1, k = 3\nOutput: true\nExplanation: The pattern (4) of length 1 is repeated 4 consecutive times. Notice that pattern can be repeated k or more times but not less.",
+  "constraints_text": "2 <= arr.length <= 100\n\t1 <= arr[i] <= 100\n\t1 <= m <= 100\n\t2 <= k <= 100",
+  "templates": {
+    "c": "bool containsPattern(int* arr, int arrSize, int m, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool containsPattern(vector<int>& arr, int m, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean containsPattern(int[] arr, int m, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} m\n * @param {number} k\n * @return {boolean}\n */\nvar containsPattern = function(arr, m, k) {\n    \n};",
+    "python": "class Solution(object):\n    def containsPattern(self, arr, m, k):\n        \"\"\"\n        :type arr: List[int]\n        :type m: int\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all possible starting positions to find a pattern of length m that repeats k or more times consecutively.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "pattern-of-length-m",
+        "repeated-k-or-more-times",
+        "consecutive-sub-sequence",
+        "without-overlapping"
+      ],
+      "constraints": [
+        "arr-length-100",
+        "m-100",
+        "k-100"
+      ]
+    }
+  ]
+}

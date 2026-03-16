@@ -1,0 +1,37 @@
+{
+  "slug": "minimum-operations-to-convert-all-elements-to-zero",
+  "link": "https://leetcode.com/problems/minimum-operations-to-convert-all-elements-to-zero/",
+  "difficulty": "Medium",
+  "index": "2641",
+  "description_full": "You are given an array nums of size n, consisting of non-negative integers. Your task is to apply some (possibly zero) operations on the array so that all elements become 0.\n\nIn one operation, you can select a subarray [i, j] (where 0 <= i <= j < n) and set all occurrences of the minimum non-negative integer in that subarray to 0.\n\nReturn the minimum number of operations required to make all elements in the array 0.\n\n \nExample 1:\n\n\nInput: nums = [0,2]\n\nOutput: 1\n\nExplanation:\n\n\n\tSelect the subarray [1,1] (which is [2]), where the minimum non-negative integer is 2. Setting all occurrences of 2 to 0 results in [0,0].\n\tThus, the minimum number of operations required is 1.\n\n\n\nExample 2:\n\n\nInput: nums = [3,1,2,1]\n\nOutput: 3\n\nExplanation:\n\n\n\tSelect subarray [1,3] (which is [1,2,1]), where the minimum non-negative integer is 1. Setting all occurrences of 1 to 0 results in [3,0,2,0].\n\tSelect subarray [2,2] (which is [2]), where the minimum non-negative integer is 2. Setting all occurrences of 2 to 0 results in [3,0,0,0].\n\tSelect subarray [0,0] (which is [3]), where the minimum non-negative integer is 3. Setting all occurrences of 3 to 0 results in [0,0,0,0].\n\tThus, the minimum number of operations required is 3.\n\n\n\nExample 3:\n\n\nInput: nums = [1,2,1,2,1,2]\n\nOutput: 4\n\nExplanation:\n\n\n\tSelect subarray [0,5] (which is [1,2,1,2,1,2]), where the minimum non-negative integer is 1. Setting all occurrences of 1 to 0 results in [0,2,0,2,0,2].\n\tSelect subarray [1,1] (which is [2]), where the minimum non-negative integer is 2. Setting all occurrences of 2 to 0 results in [0,0,0,2,0,2].\n\tSelect subarray [3,3] (which is [2]), where the minimum non-negative integer is 2. Setting all occurrences of 2 to 0 results in [0,0,0,0,0,2].\n\tSelect subarray [5,5] (which is [2]), where the minimum non-negative integer is 2. Setting all occurrences of 2 to 0 results in [0,0,0,0,0,0].\n\tThus, the minimum number of operations required is 4.\n\n\n\n \nConstraints:\n\n\n\t1 <= n == nums.length <= 105\n\t0 <= nums[i] <= 105\n\n",
+  "description": "You are given an array nums of size n, consisting of non-negative integers. Your task is to apply some (possibly zero) operations on the array so that all elements become 0.\n\nIn one operation, you can select a subarray [i, j] (where 0 <= i <= j < n) and set all occurrences of the minimum non-negative integer in that subarray to 0.\n\nReturn the minimum number of operations required to make all elements in the array 0.",
+  "example": "Input: nums = [0,2]\n\nOutput: 1\n\nExplanation:\n\n\n\tSelect the subarray [1,1] (which is [2]), where the minimum non-negative integer is 2. Setting all occurrences of 2 to 0 results in [0,0].\n\tThus, the minimum number of operations required is 1.",
+  "constraints_text": "1 <= n == nums.length <= 105\n\t0 <= nums[i] <= 105",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the number of distinct positive integers in the input array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "non-negative-integers",
+        "minimum-number-of-operations",
+        "all-elements-become-0"
+      ],
+      "constraints": [
+        "non-negative-integers"
+      ]
+    }
+  ]
+}

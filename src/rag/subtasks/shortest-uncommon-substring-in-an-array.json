@@ -1,0 +1,60 @@
+{
+  "slug": "shortest-uncommon-substring-in-an-array",
+  "link": "https://leetcode.com/problems/shortest-uncommon-substring-in-an-array/",
+  "difficulty": "Medium",
+  "index": "2481",
+  "description_full": "You are given an array arr of size n consisting of non-empty strings.\n\nFind a string array answer of size n such that:\n\n\n\tanswer[i] is the shortest substring of arr[i] that does not occur as a substring in any other string in arr. If multiple such substrings exist, answer[i] should be the lexicographically smallest. And if no such substring exists, answer[i] should be an empty string.\n\n\nReturn the array answer.\n\n \nExample 1:\n\n\nInput: arr = [\"cab\",\"ad\",\"bad\",\"c\"]\nOutput: [\"ab\",\"\",\"ba\",\"\"]\nExplanation: We have the following:\n- For the string \"cab\", the shortest substring that does not occur in any other string is either \"ca\" or \"ab\", we choose the lexicographically smaller substring, which is \"ab\".\n- For the string \"ad\", there is no substring that does not occur in any other string.\n- For the string \"bad\", the shortest substring that does not occur in any other string is \"ba\".\n- For the string \"c\", there is no substring that does not occur in any other string.\n\n\nExample 2:\n\n\nInput: arr = [\"abc\",\"bcd\",\"abcd\"]\nOutput: [\"\",\"\",\"abcd\"]\nExplanation: We have the following:\n- For the string \"abc\", there is no substring that does not occur in any other string.\n- For the string \"bcd\", there is no substring that does not occur in any other string.\n- For the string \"abcd\", the shortest substring that does not occur in any other string is \"abcd\".\n\n\n \nConstraints:\n\n\n\tn == arr.length\n\t2 <= n <= 100\n\t1 <= arr[i].length <= 20\n\tarr[i] consists only of lowercase English letters.\n\n",
+  "description": "You are given an array arr of size n consisting of non-empty strings.\n\nFind a string array answer of size n such that:\n\n\n\tanswer[i] is the shortest substring of arr[i] that does not occur as a substring in any other string in arr. If multiple such substrings exist, answer[i] should be the lexicographically smallest. And if no such substring exists, answer[i] should be an empty string.\n\n\nReturn the array answer.",
+  "example": "Input: arr = [\"cab\",\"ad\",\"bad\",\"c\"]\nOutput: [\"ab\",\"\",\"ba\",\"\"]\nExplanation: We have the following:\n- For the string \"cab\", the shortest substring that does not occur in any other string is either \"ca\" or \"ab\", we choose the lexicographically smaller substring, which is \"ab\".\n- For the string \"ad\", there is no substring that does not occur in any other string.\n- For the string \"bad\", the shortest substring that does not occur in any other string is \"ba\".\n- For the string \"c\", there is no substring that does not occur in any other string.",
+  "constraints_text": "n == arr.length\n\t2 <= n <= 100\n\t1 <= arr[i].length <= 20\n\tarr[i] consists only of lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** shortestSubstrings(char** arr, int arrSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> shortestSubstrings(vector<string>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] shortestSubstrings(String[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} arr\n * @return {string[]}\n */\nvar shortestSubstrings = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestSubstrings(self, arr):\n        \"\"\"\n        :type arr: List[str]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all unique substrings from all input strings and map each to the list of original string indices it appears in.",
+      "structures": [
+        "string",
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "substring",
+        "occur-as-a-substring"
+      ],
+      "constraints": [
+        "arr-i-length-20",
+        "n-100"
+      ]
+    },
+    {
+      "intent": "For each input string, find its shortest lexicographically smallest substring that appears only in that string, using the precomputed map.",
+      "structures": [
+        "string",
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "shortest-substring",
+        "lexicographically-smallest",
+        "does-not-occur-as-a-substring-in-any-other-string"
+      ],
+      "constraints": [
+        "arr-i-length-20",
+        "n-100"
+      ]
+    }
+  ]
+}

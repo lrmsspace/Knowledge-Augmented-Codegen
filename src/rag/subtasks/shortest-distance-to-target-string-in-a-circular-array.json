@@ -1,0 +1,42 @@
+{
+  "slug": "shortest-distance-to-target-string-in-a-circular-array",
+  "link": "https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/",
+  "difficulty": "Easy",
+  "index": "535",
+  "description_full": "You are given a 0-indexed circular string array words and a string target. A circular array means that the array's end connects to the array's beginning.\n\n\n\tFormally, the next element of words[i] is words[(i + 1) % n] and the previous element of words[i] is words[(i - 1 + n) % n], where n is the length of words.\n\n\nStarting from startIndex, you can move to either the next word or the previous word with 1 step at a time.\n\nReturn the shortest distance needed to reach the string target. If the string target does not exist in words, return -1.\n\n \nExample 1:\n\n\nInput: words = [\"hello\",\"i\",\"am\",\"leetcode\",\"hello\"], target = \"hello\", startIndex = 1\nOutput: 1\nExplanation: We start from index 1 and can reach \"hello\" by\n- moving 3 units to the right to reach index 4.\n- moving 2 units to the left to reach index 4.\n- moving 4 units to the right to reach index 0.\n- moving 1 unit to the left to reach index 0.\nThe shortest distance to reach \"hello\" is 1.\n\n\nExample 2:\n\n\nInput: words = [\"a\",\"b\",\"leetcode\"], target = \"leetcode\", startIndex = 0\nOutput: 1\nExplanation: We start from index 0 and can reach \"leetcode\" by\n- moving 2 units to the right to reach index 3.\n- moving 1 unit to the left to reach index 3.\nThe shortest distance to reach \"leetcode\" is 1.\n\nExample 3:\n\n\nInput: words = [\"i\",\"eat\",\"leetcode\"], target = \"ate\", startIndex = 0\nOutput: -1\nExplanation: Since \"ate\" does not exist in words, we return -1.\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 100\n\t1 <= words[i].length <= 100\n\twords[i] and target consist of only lowercase English letters.\n\t0 <= startIndex < words.length\n\n",
+  "description": "You are given a 0-indexed circular string array words and a string target. A circular array means that the array's end connects to the array's beginning.\n\n\n\tFormally, the next element of words[i] is words[(i + 1) % n] and the previous element of words[i] is words[(i - 1 + n) % n], where n is the length of words.\n\n\nStarting from startIndex, you can move to either the next word or the previous word with 1 step at a time.\n\nReturn the shortest distance needed to reach the string target. If the string target does not exist in words, return -1.",
+  "example": "Input: words = [\"hello\",\"i\",\"am\",\"leetcode\",\"hello\"], target = \"hello\", startIndex = 1\nOutput: 1\nExplanation: We start from index 1 and can reach \"hello\" by\n- moving 3 units to the right to reach index 4.\n- moving 2 units to the left to reach index 4.\n- moving 4 units to the right to reach index 0.\n- moving 1 unit to the left to reach index 0.\nThe shortest distance to reach \"hello\" is 1.",
+  "constraints_text": "1 <= words.length <= 100\n\t1 <= words[i].length <= 100\n\twords[i] and target consist of only lowercase English letters.\n\t0 <= startIndex < words.length",
+  "templates": {
+    "c": "int closestTarget(char** words, int wordsSize, char* target, int startIndex) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int closestTarget(vector<string>& words, string target, int startIndex) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int closestTarget(String[] words, String target, int startIndex) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} target\n * @param {number} startIndex\n * @return {number}\n */\nvar closestTarget = function(words, target, startIndex) {\n    \n};",
+    "python": "class Solution(object):\n    def closestTarget(self, words, target, startIndex):\n        \"\"\"\n        :type words: List[str]\n        :type target: str\n        :type startIndex: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the minimum circular distance from startIndex to any occurrence of target, returning -1 if target is not found.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "shortest-distance",
+        "circular-string-array",
+        "startindex",
+        "target",
+        "return-1-if-not-exist"
+      ],
+      "constraints": [
+        "words-length-100"
+      ]
+    }
+  ]
+}

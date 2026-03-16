@@ -1,0 +1,58 @@
+{
+  "slug": "select-cells-in-grid-with-maximum-score",
+  "link": "https://leetcode.com/problems/select-cells-in-grid-with-maximum-score/",
+  "difficulty": "Hard",
+  "index": "2755",
+  "description_full": "You are given a 2D matrix grid consisting of positive integers.\n\nYou have to select one or more cells from the matrix such that the following conditions are satisfied:\n\n\n\tNo two selected cells are in the same row of the matrix.\n\tThe values in the set of selected cells are unique.\n\n\nYour score will be the sum of the values of the selected cells.\n\nReturn the maximum score you can achieve.\n\n \nExample 1:\n\n\nInput: grid = [[1,2,3],[4,3,2],[1,1,1]]\n\nOutput: 8\n\nExplanation:\n\n\n\nWe can select the cells with values 1, 3, and 4 that are colored above.\n\n\nExample 2:\n\n\nInput: grid = [[8,7,6],[8,3,2]]\n\nOutput: 15\n\nExplanation:\n\n\n\nWe can select the cells with values 7 and 8 that are colored above.\n\n\n \nConstraints:\n\n\n\t1 <= grid.length, grid[i].length <= 10\n\t1 <= grid[i][j] <= 100\n\n",
+  "description": "You are given a 2D matrix grid consisting of positive integers.\n\nYou have to select one or more cells from the matrix such that the following conditions are satisfied:\n\n\n\tNo two selected cells are in the same row of the matrix.\n\tThe values in the set of selected cells are unique.\n\n\nYour score will be the sum of the values of the selected cells.\n\nReturn the maximum score you can achieve.",
+  "example": "Input: grid = [[1,2,3],[4,3,2],[1,1,1]]\n\nOutput: 8\n\nExplanation:\n\n\n\nWe can select the cells with values 1, 3, and 4 that are colored above.",
+  "constraints_text": "1 <= grid.length, grid[i].length <= 10\n\t1 <= grid[i][j] <= 100",
+  "templates": {
+    "c": "int maxScore(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(List<List<Integer>> grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar maxScore = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def maxScore(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a min-cost max-flow graph representing cell selections.",
+      "structures": [
+        "graph",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "2d-matrix",
+        "no-two-selected-cells-are-in-the-same-row",
+        "values-unique"
+      ],
+      "constraints": [
+        "1-grid-length-grid-i-length-10",
+        "1-grid-i-j-100"
+      ]
+    },
+    {
+      "intent": "Compute the minimum cost maximum flow to determine the maximum achievable score.",
+      "structures": [
+        "graph",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bellman-ford"
+      ],
+      "cues": [
+        "maximum-score",
+        "select-one-or-more-cells"
+      ],
+      "constraints": [
+        "1-grid-length-grid-i-length-10",
+        "1-grid-i-j-100"
+      ]
+    }
+  ]
+}

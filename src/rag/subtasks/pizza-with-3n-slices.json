@@ -1,0 +1,55 @@
+{
+  "slug": "pizza-with-3n-slices",
+  "link": "https://leetcode.com/problems/pizza-with-3n-slices/",
+  "difficulty": "Hard",
+  "index": "1994",
+  "description_full": "There is a pizza with 3n slices of varying size, you and your friends will take slices of pizza as follows:\n\n\n\tYou will pick any pizza slice.\n\tYour friend Alice will pick the next slice in the anti-clockwise direction of your pick.\n\tYour friend Bob will pick the next slice in the clockwise direction of your pick.\n\tRepeat until there are no more slices of pizzas.\n\n\nGiven an integer array slices that represent the sizes of the pizza slices in a clockwise direction, return the maximum possible sum of slice sizes that you can pick.\n\n \nExample 1:\n\n\nInput: slices = [1,2,3,4,5,6]\nOutput: 10\nExplanation: Pick pizza slice of size 4, Alice and Bob will pick slices with size 3 and 5 respectively. Then Pick slices with size 6, finally Alice and Bob will pick slice of size 2 and 1 respectively. Total = 4 + 6.\n\n\nExample 2:\n\n\nInput: slices = [8,9,8,6,1,1]\nOutput: 16\nExplanation: Pick pizza slice of size 8 in each turn. If you pick slice with size 9 your partners will pick slices of size 8.\n\n\n \nConstraints:\n\n\n\t3 * n == slices.length\n\t1 <= slices.length <= 500\n\t1 <= slices[i] <= 1000\n\n",
+  "description": "There is a pizza with 3n slices of varying size, you and your friends will take slices of pizza as follows:\n\n\n\tYou will pick any pizza slice.\n\tYour friend Alice will pick the next slice in the anti-clockwise direction of your pick.\n\tYour friend Bob will pick the next slice in the clockwise direction of your pick.\n\tRepeat until there are no more slices of pizzas.\n\n\nGiven an integer array slices that represent the sizes of the pizza slices in a clockwise direction, return the maximum possible sum of slice sizes that you can pick.",
+  "example": "Input: slices = [1,2,3,4,5,6]\nOutput: 10\nExplanation: Pick pizza slice of size 4, Alice and Bob will pick slices with size 3 and 5 respectively. Then Pick slices with size 6, finally Alice and Bob will pick slice of size 2 and 1 respectively. Total = 4 + 6.",
+  "constraints_text": "3 * n == slices.length\n\t1 <= slices.length <= 500\n\t1 <= slices[i] <= 1000",
+  "templates": {
+    "c": "int maxSizeSlices(int* slices, int slicesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxSizeSlices(vector<int>& slices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSizeSlices(int[] slices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} slices\n * @return {number}\n */\nvar maxSizeSlices = function(slices) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSizeSlices(self, slices):\n        \"\"\"\n        :type slices: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a dynamic programming function to find the maximum sum of 'k' non-adjacent slices from a linear array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "linear-array",
+        "k-picks",
+        "non-adjacent"
+      ],
+      "constraints": [
+        "k-slices",
+        "no-adjacent-picks"
+      ]
+    },
+    {
+      "intent": "Apply the linear DP function twice to handle the circular arrangement of pizza slices and determine the overall maximum sum.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "dp-2d"
+      ],
+      "cues": [
+        "circular-array",
+        "first-last-element-adjacency"
+      ],
+      "constraints": [
+        "3n-total-slices",
+        "n-picks"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "rearrange-k-substrings-to-form-target-string",
+  "link": "https://leetcode.com/problems/rearrange-k-substrings-to-form-target-string/",
+  "difficulty": "Medium",
+  "index": "2583",
+  "description_full": "You are given two strings s and t, both of which are anagrams of each other, and an integer k.\n\nYour task is to determine whether it is possible to split the string s into k equal-sized substrings, rearrange the substrings, and concatenate them in any order to create a new string that matches the given string t.\n\nReturn true if this is possible, otherwise, return false.\n\nAn anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.\n\nA substring is a contiguous non-empty sequence of characters within a string.\n\n \nExample 1:\n\n\nInput: s = \"abcd\", t = \"cdab\", k = 2\n\nOutput: true\n\nExplanation:\n\n\n\tSplit s into 2 substrings of length 2: [\"ab\", \"cd\"].\n\tRearranging these substrings as [\"cd\", \"ab\"], and then concatenating them results in \"cdab\", which matches t.\n\n\n\nExample 2:\n\n\nInput: s = \"aabbcc\", t = \"bbaacc\", k = 3\n\nOutput: true\n\nExplanation:\n\n\n\tSplit s into 3 substrings of length 2: [\"aa\", \"bb\", \"cc\"].\n\tRearranging these substrings as [\"bb\", \"aa\", \"cc\"], and then concatenating them results in \"bbaacc\", which matches t.\n\n\n\nExample 3:\n\n\nInput: s = \"aabbcc\", t = \"bbaacc\", k = 2\n\nOutput: false\n\nExplanation:\n\n\n\tSplit s into 2 substrings of length 3: [\"aab\", \"bcc\"].\n\tThese substrings cannot be rearranged to form t = \"bbaacc\", so the output is false.\n\n\n\n \nConstraints:\n\n\n\t1 <= s.length == t.length <= 2 * 105\n\t1 <= k <= s.length\n\ts.length is divisible by k.\n\ts and t consist only of lowercase English letters.\n\tThe input is generated such that s and t are anagrams of each other.\n\n",
+  "description": "You are given two strings s and t, both of which are anagrams of each other, and an integer k.\n\nYour task is to determine whether it is possible to split the string s into k equal-sized substrings, rearrange the substrings, and concatenate them in any order to create a new string that matches the given string t.\n\nReturn true if this is possible, otherwise, return false.\n\nAn anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once.\n\nA substring is a contiguous non-empty sequence of characters within a string.",
+  "example": "Input: s = \"abcd\", t = \"cdab\", k = 2\n\nOutput: true\n\nExplanation:\n\n\n\tSplit s into 2 substrings of length 2: [\"ab\", \"cd\"].\n\tRearranging these substrings as [\"cd\", \"ab\"], and then concatenating them results in \"cdab\", which matches t.",
+  "constraints_text": "1 <= s.length == t.length <= 2 * 105\n\t1 <= k <= s.length\n\ts.length is divisible by k.\n\ts and t consist only of lowercase English letters.\n\tThe input is generated such that s and t are anagrams of each other.",
+  "templates": {
+    "c": "bool isPossibleToRearrange(char* s, char* t, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isPossibleToRearrange(string s, string t, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPossibleToRearrange(String s, String t, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number} k\n * @return {boolean}\n */\nvar isPossibleToRearrange = function(s, t, k) {\n    \n};",
+    "python": "class Solution(object):\n    def isPossibleToRearrange(self, s, t, k):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate frequency maps for the k equal-sized substrings of both s and t.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "split-s-into-k-equal-sized-substrings",
+        "s-length-is-divisible-by-k",
+        "matches-the-given-string-t"
+      ],
+      "constraints": [
+        "s-length-t-length-2-10-5"
+      ]
+    },
+    {
+      "intent": "Compare the two generated frequency maps of substrings.",
+      "structures": [
+        "ds"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "rearrange-the-substrings",
+        "concatenate-them-in-any-order-to-create-a-new-string-that-matches-t"
+      ],
+      "constraints": [
+        "s-length-2-10-5"
+      ]
+    }
+  ]
+}

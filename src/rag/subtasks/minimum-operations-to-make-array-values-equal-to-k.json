@@ -1,0 +1,42 @@
+{
+  "slug": "minimum-operations-to-make-array-values-equal-to-k",
+  "link": "https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/",
+  "difficulty": "Easy",
+  "index": "2359",
+  "description_full": "You are given an integer array nums and an integer k.\n\nAn integer h is called valid if all values in the array that are strictly greater than h are identical.\n\nFor example, if nums = [10, 8, 10, 8], a valid integer is h = 9 because all nums[i] > 9 are equal to 10, but 5 is not a valid integer.\n\nYou are allowed to perform the following operation on nums:\n\n\n\tSelect an integer h that is valid for the current values in nums.\n\tFor each index i where nums[i] > h, set nums[i] to h.\n\n\nReturn the minimum number of operations required to make every element in nums equal to k. If it is impossible to make all elements equal to k, return -1.\n\n \nExample 1:\n\n\nInput: nums = [5,2,5,4,5], k = 2\n\nOutput: 2\n\nExplanation:\n\nThe operations can be performed in order using valid integers 4 and then 2.\n\n\nExample 2:\n\n\nInput: nums = [2,1,2], k = 2\n\nOutput: -1\n\nExplanation:\n\nIt is impossible to make all the values equal to 2.\n\n\nExample 3:\n\n\nInput: nums = [9,7,5,3], k = 1\n\nOutput: 4\n\nExplanation:\n\nThe operations can be performed using valid integers in the order 7, 5, 3, and 1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100 \n\t1 <= nums[i] <= 100\n\t1 <= k <= 100\n\n",
+  "description": "You are given an integer array nums and an integer k.\n\nAn integer h is called valid if all values in the array that are strictly greater than h are identical.\n\nFor example, if nums = [10, 8, 10, 8], a valid integer is h = 9 because all nums[i] > 9 are equal to 10, but 5 is not a valid integer.\n\nYou are allowed to perform the following operation on nums:\n\n\n\tSelect an integer h that is valid for the current values in nums.\n\tFor each index i where nums[i] > h, set nums[i] to h.\n\n\nReturn the minimum number of operations required to make every element in nums equal to k. If it is impossible to make all elements equal to k, return -1.",
+  "example": "Input: nums = [5,2,5,4,5], k = 2\n\nOutput: 2\n\nExplanation:\n\nThe operations can be performed in order using valid integers 4 and then 2.",
+  "constraints_text": "1 <= nums.length <= 100 \n\t1 <= nums[i] <= 100\n\t1 <= k <= 100",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minOperations = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the minimum operations by counting distinct values greater than k, ensuring no elements are initially less than k.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "make-every-element-in-nums-equal-to-k",
+        "valid-integer-h",
+        "all-values-strictly-greater-than-h-are-identical",
+        "return-1"
+      ],
+      "constraints": [
+        "1-nums-length-100",
+        "1-nums-i-100",
+        "1-k-100"
+      ]
+    }
+  ]
+}

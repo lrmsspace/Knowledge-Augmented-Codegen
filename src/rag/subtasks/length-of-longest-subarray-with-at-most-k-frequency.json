@@ -1,0 +1,43 @@
+{
+  "slug": "length-of-longest-subarray-with-at-most-k-frequency",
+  "link": "https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/",
+  "difficulty": "Medium",
+  "index": "2442",
+  "description_full": "You are given an integer array nums and an integer k.\n\nThe frequency of an element x is the number of times it occurs in an array.\n\nAn array is called good if the frequency of each element in this array is less than or equal to k.\n\nReturn the length of the longest good subarray of nums.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3,1,2,3,1,2], k = 2\nOutput: 6\nExplanation: The longest possible good subarray is [1,2,3,1,2,3] since the values 1, 2, and 3 occur at most twice in this subarray. Note that the subarrays [2,3,1,2,3,1] and [3,1,2,3,1,2] are also good.\nIt can be shown that there are no good subarrays with length more than 6.\n\n\nExample 2:\n\n\nInput: nums = [1,2,1,2,1,2,1,2], k = 1\nOutput: 2\nExplanation: The longest possible good subarray is [1,2] since the values 1 and 2 occur at most once in this subarray. Note that the subarray [2,1] is also good.\nIt can be shown that there are no good subarrays with length more than 2.\n\n\nExample 3:\n\n\nInput: nums = [5,5,5,5,5,5,5], k = 4\nOutput: 4\nExplanation: The longest possible good subarray is [5,5,5,5] since the value 5 occurs 4 times in this subarray.\nIt can be shown that there are no good subarrays with length more than 4.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\t1 <= k <= nums.length\n\n",
+  "description": "You are given an integer array nums and an integer k.\n\nThe frequency of an element x is the number of times it occurs in an array.\n\nAn array is called good if the frequency of each element in this array is less than or equal to k.\n\nReturn the length of the longest good subarray of nums.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [1,2,3,1,2,3,1,2], k = 2\nOutput: 6\nExplanation: The longest possible good subarray is [1,2,3,1,2,3] since the values 1, 2, and 3 occur at most twice in this subarray. Note that the subarrays [2,3,1,2,3,1] and [3,1,2,3,1,2] are also good.\nIt can be shown that there are no good subarrays with length more than 6.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\t1 <= k <= nums.length",
+  "templates": {
+    "c": "int maxSubarrayLength(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxSubarrayLength(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSubarrayLength(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxSubarrayLength = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSubarrayLength(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the longest subarray where each element's frequency is at most k, using a sliding window approach.",
+      "structures": [
+        "array",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "counting",
+        "max-window"
+      ],
+      "cues": [
+        "longest-good-subarray",
+        "frequency-of-each-element-less-than-or-equal-to-k",
+        "contiguous-non-empty-sequence"
+      ],
+      "constraints": [
+        "1-nums-length-10-5",
+        "1-nums-i-10-9",
+        "1-k-nums-length"
+      ]
+    }
+  ]
+}

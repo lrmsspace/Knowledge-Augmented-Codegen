@@ -1,0 +1,51 @@
+{
+  "slug": "find-subsequence-of-length-k-with-the-largest-sum",
+  "link": "https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/",
+  "difficulty": "Easy",
+  "index": "450",
+  "description_full": "You are given an integer array nums and an integer k. You want to find a subsequence of nums of length k that has the largest sum.\n\nReturn any such subsequence as an integer array of length k.\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\n\n \nExample 1:\n\n\nInput: nums = [2,1,3,3], k = 2\nOutput: [3,3]\nExplanation:\nThe subsequence has the largest sum of 3 + 3 = 6.\n\nExample 2:\n\n\nInput: nums = [-1,-2,3,4], k = 3\nOutput: [-1,3,4]\nExplanation: \nThe subsequence has the largest sum of -1 + 3 + 4 = 6.\n\n\nExample 3:\n\n\nInput: nums = [3,4,3,3], k = 2\nOutput: [3,4]\nExplanation:\nThe subsequence has the largest sum of 3 + 4 = 7. \nAnother possible subsequence is [4, 3].\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t-105 <= nums[i] <= 105\n\t1 <= k <= nums.length\n\n",
+  "description": "You are given an integer array nums and an integer k. You want to find a subsequence of nums of length k that has the largest sum.\n\nReturn any such subsequence as an integer array of length k.\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.",
+  "example": "Input: nums = [2,1,3,3], k = 2\nOutput: [3,3]\nExplanation:\nThe subsequence has the largest sum of 3 + 3 = 6.",
+  "constraints_text": "1 <= nums.length <= 1000\n\t-105 <= nums[i] <= 105\n\t1 <= k <= nums.length",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maxSubsequence(int* nums, int numsSize, int k, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> maxSubsequence(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maxSubsequence(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar maxSubsequence = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSubsequence(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the k elements with the largest values from the input array, associating them with their original indices.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "largest-sum",
+        "length-k"
+      ],
+      "constraints": [
+        "1-k-nums-length"
+      ]
+    },
+    {
+      "intent": "Construct the final subsequence by arranging the selected k elements in their original relative order.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "subsequence",
+        "without-changing-the-order"
+      ],
+      "constraints": [
+        "length-k"
+      ]
+    }
+  ]
+}

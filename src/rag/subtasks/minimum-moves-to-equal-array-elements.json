@@ -1,0 +1,41 @@
+{
+  "slug": "minimum-moves-to-equal-array-elements",
+  "link": "https://leetcode.com/problems/minimum-moves-to-equal-array-elements/",
+  "difficulty": "Medium",
+  "index": "822",
+  "description_full": "Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.\n\nIn one move, you can increment n - 1 elements of the array by 1.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3]\nOutput: 3\nExplanation: Only three moves are needed (remember each move increments two elements):\n[1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]\n\n\nExample 2:\n\n\nInput: nums = [1,1,1]\nOutput: 0\n\n\n \nConstraints:\n\n\n\tn == nums.length\n\t1 <= nums.length <= 105\n\t-109 <= nums[i] <= 109\n\tThe answer is guaranteed to fit in a 32-bit integer.\n\n",
+  "description": "Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.\n\nIn one move, you can increment n - 1 elements of the array by 1.",
+  "example": "Input: nums = [1,2,3]\nOutput: 3\nExplanation: Only three moves are needed (remember each move increments two elements):\n[1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]",
+  "constraints_text": "n == nums.length\n\t1 <= nums.length <= 105\n\t-109 <= nums[i] <= 109\n\tThe answer is guaranteed to fit in a 32-bit integer.",
+  "templates": {
+    "c": "int minMoves(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minMoves(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMoves(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minMoves = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minMoves(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total sum and minimum value of the array to determine the minimum moves.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-moves",
+        "increment-n-1-elements",
+        "make-all-array-elements-equal"
+      ],
+      "constraints": [
+        "n-nums-length",
+        "1-nums-length-105",
+        "109-nums-i-109",
+        "the-answer-is-guaranteed-to-fit-in-a-32-bit-integer"
+      ]
+    }
+  ]
+}

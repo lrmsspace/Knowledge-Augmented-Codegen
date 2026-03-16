@@ -1,0 +1,55 @@
+{
+  "slug": "total-hamming-distance",
+  "link": "https://leetcode.com/problems/total-hamming-distance/",
+  "difficulty": "Medium",
+  "index": "834",
+  "description_full": "The Hamming distance between two integers is the number of positions at which the corresponding bits are different.\n\nGiven an integer array nums, return the sum of Hamming distances between all the pairs of the integers in nums.\n\n \nExample 1:\n\n\nInput: nums = [4,14,2]\nOutput: 6\nExplanation: In binary representation, the 4 is 0100, 14 is 1110, and 2 is 0010 (just\nshowing the four bits relevant in this case).\nThe answer will be:\nHammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 + 2 = 6.\n\n\nExample 2:\n\n\nInput: nums = [4,14,4]\nOutput: 4\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 104\n\t0 <= nums[i] <= 109\n\tThe answer for the given input will fit in a 32-bit integer.\n\n",
+  "description": "The Hamming distance between two integers is the number of positions at which the corresponding bits are different.\n\nGiven an integer array nums, return the sum of Hamming distances between all the pairs of the integers in nums.",
+  "example": "Input: nums = [4,14,2]\nOutput: 6\nExplanation: In binary representation, the 4 is 0100, 14 is 1110, and 2 is 0010 (just\nshowing the four bits relevant in this case).\nThe answer will be:\nHammingDistance(4, 14) + HammingDistance(4, 2) + HammingDistance(14, 2) = 2 + 2 + 2 = 6.",
+  "constraints_text": "1 <= nums.length <= 104\n\t0 <= nums[i] <= 109\n\tThe answer for the given input will fit in a 32-bit integer.",
+  "templates": {
+    "c": "int totalHammingDistance(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int totalHammingDistance(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalHammingDistance(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar totalHammingDistance = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def totalHammingDistance(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "For each bit position from 0 to 30, count how many numbers in the input array have that bit set to 0 and how many have it set to 1.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "hamming-distance",
+        "corresponding-bits",
+        "nums"
+      ],
+      "constraints": [
+        "0-nums-i-10-9"
+      ]
+    },
+    {
+      "intent": "Calculate the total sum of Hamming distances by summing the product of (count of 0s) * (count of 1s) for each bit position.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "greedy"
+      ],
+      "cues": [
+        "sum-of-hamming-distances",
+        "return-the-sum"
+      ],
+      "constraints": [
+        "the-answer-for-the-given-input-will-fit-in-a-32-bit-integer"
+      ]
+    }
+  ]
+}

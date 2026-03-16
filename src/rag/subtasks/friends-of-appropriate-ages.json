@@ -1,0 +1,56 @@
+{
+  "slug": "friends-of-appropriate-ages",
+  "link": "https://leetcode.com/problems/friends-of-appropriate-ages/",
+  "difficulty": "Medium",
+  "index": "973",
+  "description_full": "There are n persons on a social media website. You are given an integer array ages where ages[i] is the age of the ith person.\n\nA Person x will not send a friend request to a person y (x != y) if any of the following conditions is true:\n\n\n\tage[y] <= 0.5 * age[x] + 7\n\tage[y] > age[x]\n\tage[y] > 100 && age[x] < 100\n\n\nOtherwise, x will send a friend request to y.\n\nNote that if x sends a request to y, y will not necessarily send a request to x. Also, a person will not send a friend request to themself.\n\nReturn the total number of friend requests made.\n\n \nExample 1:\n\n\nInput: ages = [16,16]\nOutput: 2\nExplanation: 2 people friend request each other.\n\n\nExample 2:\n\n\nInput: ages = [16,17,18]\nOutput: 2\nExplanation: Friend requests are made 17 -> 16, 18 -> 17.\n\n\nExample 3:\n\n\nInput: ages = [20,30,100,110,120]\nOutput: 3\nExplanation: Friend requests are made 110 -> 100, 120 -> 110, 120 -> 100.\n\n\n \nConstraints:\n\n\n\tn == ages.length\n\t1 <= n <= 2 * 104\n\t1 <= ages[i] <= 120\n\n",
+  "description": "There are n persons on a social media website. You are given an integer array ages where ages[i] is the age of the ith person.\n\nA Person x will not send a friend request to a person y (x != y) if any of the following conditions is true:\n\n\n\tage[y] <= 0.5 * age[x] + 7\n\tage[y] > age[x]\n\tage[y] > 100 && age[x] < 100\n\n\nOtherwise, x will send a friend request to y.\n\nNote that if x sends a request to y, y will not necessarily send a request to x. Also, a person will not send a friend request to themself.\n\nReturn the total number of friend requests made.",
+  "example": "Input: ages = [16,16]\nOutput: 2\nExplanation: 2 people friend request each other.",
+  "constraints_text": "n == ages.length\n\t1 <= n <= 2 * 104\n\t1 <= ages[i] <= 120",
+  "templates": {
+    "c": "int numFriendRequests(int* ages, int agesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numFriendRequests(vector<int>& ages) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numFriendRequests(int[] ages) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} ages\n * @return {number}\n */\nvar numFriendRequests = function(ages) {\n    \n};",
+    "python": "class Solution(object):\n    def numFriendRequests(self, ages):\n        \"\"\"\n        :type ages: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the frequency of each age present in the input array to optimize subsequent calculations.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "ages",
+        "ages-i"
+      ],
+      "constraints": [
+        "1-ages-i-120"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible age pairs (age_x, age_y), apply the friend request rules, and sum the total requests using age frequencies.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "age-y-0-5-age-x-7",
+        "age-y-age-x",
+        "age-y-100-age-x-100",
+        "total-number-of-friend-requests"
+      ],
+      "constraints": [
+        "x-y",
+        "1-ages-i-120"
+      ]
+    }
+  ]
+}

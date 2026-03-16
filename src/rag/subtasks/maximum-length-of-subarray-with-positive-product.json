@@ -1,0 +1,39 @@
+{
+  "slug": "maximum-length-of-subarray-with-positive-product",
+  "link": "https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/",
+  "difficulty": "Medium",
+  "index": "1291",
+  "description_full": "Given an array of integers nums, find the maximum length of a subarray where the product of all its elements is positive.\n\nA subarray of an array is a consecutive sequence of zero or more values taken out of that array.\n\nReturn the maximum length of a subarray with positive product.\n\n \nExample 1:\n\n\nInput: nums = [1,-2,-3,4]\nOutput: 4\nExplanation: The array nums already has a positive product of 24.\n\n\nExample 2:\n\n\nInput: nums = [0,1,-2,-3,-4]\nOutput: 3\nExplanation: The longest subarray with positive product is [1,-2,-3] which has a product of 6.\nNotice that we cannot include 0 in the subarray since that'll make the product 0 which is not positive.\n\nExample 3:\n\n\nInput: nums = [-1,-2,-3,0,1]\nOutput: 2\nExplanation: The longest subarray with positive product is [-1,-2] or [-2,-3].\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t-109 <= nums[i] <= 109\n\n",
+  "description": "Given an array of integers nums, find the maximum length of a subarray where the product of all its elements is positive.\n\nA subarray of an array is a consecutive sequence of zero or more values taken out of that array.\n\nReturn the maximum length of a subarray with positive product.",
+  "example": "Input: nums = [1,-2,-3,4]\nOutput: 4\nExplanation: The array nums already has a positive product of 24.",
+  "constraints_text": "1 <= nums.length <= 105\n\t-109 <= nums[i] <= 109",
+  "templates": {
+    "c": "int getMaxLen(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int getMaxLen(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getMaxLen(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar getMaxLen = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def getMaxLen(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array, dynamically tracking the lengths of current positive and negative product subarrays to find the overall maximum positive product subarray length.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "simulation"
+      ],
+      "cues": [
+        "maximum-length",
+        "positive-product",
+        "subarray"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "109-nums-i-109"
+      ]
+    }
+  ]
+}

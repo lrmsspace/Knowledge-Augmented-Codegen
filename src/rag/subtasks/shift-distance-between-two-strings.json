@@ -1,0 +1,55 @@
+{
+  "slug": "shift-distance-between-two-strings",
+  "link": "https://leetcode.com/problems/shift-distance-between-two-strings/",
+  "difficulty": "Medium",
+  "index": "2581",
+  "description_full": "You are given two strings s and t of the same length, and two integer arrays nextCost and previousCost.\n\nIn one operation, you can pick any index i of s, and perform either one of the following actions:\n\n\n\tShift s[i] to the next letter in the alphabet. If s[i] == 'z', you should replace it with 'a'. This operation costs nextCost[j] where j is the index of s[i] in the alphabet.\n\tShift s[i] to the previous letter in the alphabet. If s[i] == 'a', you should replace it with 'z'. This operation costs previousCost[j] where j is the index of s[i] in the alphabet.\n\n\nThe shift distance is the minimum total cost of operations required to transform s into t.\n\nReturn the shift distance from s to t.\n\n \nExample 1:\n\n\nInput: s = \"abab\", t = \"baba\", nextCost = [100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], previousCost = [1,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n\nOutput: 2\n\nExplanation:\n\n\n\tWe choose index i = 0 and shift s[0] 25 times to the previous character for a total cost of 1.\n\tWe choose index i = 1 and shift s[1] 25 times to the next character for a total cost of 0.\n\tWe choose index i = 2 and shift s[2] 25 times to the previous character for a total cost of 1.\n\tWe choose index i = 3 and shift s[3] 25 times to the next character for a total cost of 0.\n\n\n\nExample 2:\n\n\nInput: s = \"leet\", t = \"code\", nextCost = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], previousCost = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]\n\nOutput: 31\n\nExplanation:\n\n\n\tWe choose index i = 0 and shift s[0] 9 times to the previous character for a total cost of 9.\n\tWe choose index i = 1 and shift s[1] 10 times to the next character for a total cost of 10.\n\tWe choose index i = 2 and shift s[2] 1 time to the previous character for a total cost of 1.\n\tWe choose index i = 3 and shift s[3] 11 times to the next character for a total cost of 11.\n\n\n\n \nConstraints:\n\n\n\t1 <= s.length == t.length <= 105\n\ts and t consist only of lowercase English letters.\n\tnextCost.length == previousCost.length == 26\n\t0 <= nextCost[i], previousCost[i] <= 109\n\n",
+  "description": "You are given two strings s and t of the same length, and two integer arrays nextCost and previousCost.\n\nIn one operation, you can pick any index i of s, and perform either one of the following actions:\n\n\n\tShift s[i] to the next letter in the alphabet. If s[i] == 'z', you should replace it with 'a'. This operation costs nextCost[j] where j is the index of s[i] in the alphabet.\n\tShift s[i] to the previous letter in the alphabet. If s[i] == 'a', you should replace it with 'z'. This operation costs previousCost[j] where j is the index of s[i] in the alphabet.\n\n\nThe shift distance is the minimum total cost of operations required to transform s into t.\n\nReturn the shift distance from s to t.",
+  "example": "Input: s = \"abab\", t = \"baba\", nextCost = [100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], previousCost = [1,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n\nOutput: 2\n\nExplanation:\n\n\n\tWe choose index i = 0 and shift s[0] 25 times to the previous character for a total cost of 1.\n\tWe choose index i = 1 and shift s[1] 25 times to the next character for a total cost of 0.\n\tWe choose index i = 2 and shift s[2] 25 times to the previous character for a total cost of 1.\n\tWe choose index i = 3 and shift s[3] 25 times to the next character for a total cost of 0.",
+  "constraints_text": "1 <= s.length == t.length <= 105\n\ts and t consist only of lowercase English letters.\n\tnextCost.length == previousCost.length == 26\n\t0 <= nextCost[i], previousCost[i] <= 109",
+  "templates": {
+    "c": "long long shiftDistance(char* s, char* t, int* nextCost, int nextCostSize, int* previousCost, int previousCostSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long shiftDistance(string s, string t, vector<int>& nextCost, vector<int>& previousCost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long shiftDistance(String s, String t, int[] nextCost, int[] previousCost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number[]} nextCost\n * @param {number[]} previousCost\n * @return {number}\n */\nvar shiftDistance = function(s, t, nextCost, previousCost) {\n    \n};",
+    "python": "class Solution(object):\n    def shiftDistance(self, s, t, nextCost, previousCost):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type nextCost: List[int]\n        :type previousCost: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute the cost to transform any character 'a'-'z' to any other character 'a'-'z' by only shifting forward, and by only shifting backward.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "shift-s-i-to-the-next-letter",
+        "shift-s-i-to-the-previous-letter"
+      ],
+      "constraints": [
+        "nextcost-and-previouscost-arrays-of-length-26"
+      ]
+    },
+    {
+      "intent": "Calculate the total minimum shift distance by summing the minimum costs for each character pair s[i] to t[i].",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "shift-distance",
+        "minimum-total-cost"
+      ],
+      "constraints": [
+        "s-and-t-of-same-length"
+      ]
+    }
+  ]
+}

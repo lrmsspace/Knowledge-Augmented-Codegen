@@ -1,0 +1,42 @@
+{
+  "slug": "number-of-wonderful-substrings",
+  "link": "https://leetcode.com/problems/number-of-wonderful-substrings/",
+  "difficulty": "Medium",
+  "index": "1422",
+  "description_full": "A wonderful string is a string where at most one letter appears an odd number of times.\r\n\r\n\r\n\tFor example, \"ccjjc\" and \"abab\" are wonderful, but \"ab\" is not.\r\n\r\n\r\nGiven a string word that consists of the first ten lowercase English letters ('a' through 'j'), return the number of wonderful non-empty substrings in word. If the same substring appears multiple times in word, then count each occurrence separately.\r\n\r\nA substring is a contiguous sequence of characters in a string.\r\n\r\n \r\nExample 1:\r\n\r\n\r\nInput: word = \"aba\"\r\nOutput: 4\r\nExplanation: The four wonderful substrings are underlined below:\r\n- \"aba\" -> \"a\"\r\n- \"aba\" -> \"b\"\r\n- \"aba\" -> \"a\"\r\n- \"aba\" -> \"aba\"\r\n\r\n\r\nExample 2:\r\n\r\n\r\nInput: word = \"aabb\"\r\nOutput: 9\r\nExplanation: The nine wonderful substrings are underlined below:\r\n- \"aabb\" -> \"a\"\r\n- \"aabb\" -> \"aa\"\r\n- \"aabb\" -> \"aab\"\r\n- \"aabb\" -> \"aabb\"\r\n- \"aabb\" -> \"a\"\r\n- \"aabb\" -> \"abb\"\r\n- \"aabb\" -> \"b\"\r\n- \"aabb\" -> \"bb\"\r\n- \"aabb\" -> \"b\"\r\n\r\n\r\nExample 3:\r\n\r\n\r\nInput: word = \"he\"\r\nOutput: 2\r\nExplanation: The two wonderful substrings are underlined below:\r\n- \"he\" -> \"h\"\r\n- \"he\" -> \"e\"\r\n\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\t1 <= word.length <= 105\r\n\tword consists of lowercase English letters from 'a' to 'j'.\r\n",
+  "description": "A wonderful string is a string where at most one letter appears an odd number of times.\r\n\r\n\r\n\tFor example, \"ccjjc\" and \"abab\" are wonderful, but \"ab\" is not.\r\n\r\n\r\nGiven a string word that consists of the first ten lowercase English letters ('a' through 'j'), return the number of wonderful non-empty substrings in word. If the same substring appears multiple times in word, then count each occurrence separately.\r\n\r\nA substring is a contiguous sequence of characters in a string.",
+  "example": "Input: word = \"aba\"\r\nOutput: 4\r\nExplanation: The four wonderful substrings are underlined below:\r\n- \"aba\" -> \"a\"\r\n- \"aba\" -> \"b\"\r\n- \"aba\" -> \"a\"\r\n- \"aba\" -> \"aba\"",
+  "constraints_text": "1 <= word.length <= 105\r\n\tword consists of lowercase English letters from 'a' to 'j'.",
+  "templates": {
+    "c": "long long wonderfulSubstrings(char * word){\r\n\r\n}",
+    "cpp": "class Solution {\r\npublic:\r\n    long long wonderfulSubstrings(string word) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public long wonderfulSubstrings(String word) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {string} word\r\n * @return {number}\r\n */\r\nvar wonderfulSubstrings = function(word) {\r\n    \r\n};",
+    "python": "class Solution(object):\r\n    def wonderfulSubstrings(self, word):\r\n        \"\"\"\r\n        :type word: str\r\n        :rtype: int\r\n        \"\"\""
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, maintaining a running XOR mask of character parities, and count wonderful substrings by querying a frequency map of previously seen masks.",
+      "structures": [
+        "string",
+        "number",
+        "array"
+      ],
+      "actions": [
+        "prefix-xor",
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "wonderful-string",
+        "non-empty-substrings",
+        "first-ten-lowercase-english-letters",
+        "count-each-occurrence-separately"
+      ],
+      "constraints": [
+        "word-length-105",
+        "letters-a-through-j"
+      ]
+    }
+  ]
+}

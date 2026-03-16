@@ -1,0 +1,72 @@
+{
+  "slug": "verifying-an-alien-dictionary",
+  "link": "https://leetcode.com/problems/verifying-an-alien-dictionary/",
+  "difficulty": "Easy",
+  "index": "209",
+  "description_full": "In an alien language, surprisingly, they also use English lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.\n\nGiven a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographically in this alien language.\n\n \nExample 1:\n\n\nInput: words = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"\nOutput: true\nExplanation: As 'h' comes before 'l' in this language, then the sequence is sorted.\n\n\nExample 2:\n\n\nInput: words = [\"word\",\"world\",\"row\"], order = \"worldabcefghijkmnpqstuvxyz\"\nOutput: false\nExplanation: As 'd' comes after 'l' in this language, then words[0] > words[1], hence the sequence is unsorted.\n\n\nExample 3:\n\n\nInput: words = [\"apple\",\"app\"], order = \"abcdefghijklmnopqrstuvwxyz\"\nOutput: false\nExplanation: The first three characters \"app\" match, and the second string is shorter (in size.) According to lexicographical rules \"apple\" > \"app\", because 'l' > '∅', where '∅' is defined as the blank character which is less than any other character (More info).\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 100\n\t1 <= words[i].length <= 20\n\torder.length == 26\n\tAll characters in words[i] and order are English lowercase letters.\n\n",
+  "description": "In an alien language, surprisingly, they also use English lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.\n\nGiven a sequence of words written in the alien language, and the order of the alphabet, return true if and only if the given words are sorted lexicographically in this alien language.",
+  "example": "Input: words = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"\nOutput: true\nExplanation: As 'h' comes before 'l' in this language, then the sequence is sorted.",
+  "constraints_text": "1 <= words.length <= 100\n\t1 <= words[i].length <= 20\n\torder.length == 26\n\tAll characters in words[i] and order are English lowercase letters.",
+  "templates": {
+    "c": "bool isAlienSorted(char** words, int wordsSize, char* order) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isAlienSorted(vector<string>& words, string order) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isAlienSorted(String[] words, String order) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} order\n * @return {boolean}\n */\nvar isAlienSorted = function(words, order) {\n    \n};",
+    "python": "class Solution(object):\n    def isAlienSorted(self, words, order):\n        \"\"\"\n        :type words: List[str]\n        :type order: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Create a mapping from each alien character to its numerical rank based on the provided order string.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "order-of-the-alphabet",
+        "permutation"
+      ],
+      "constraints": [
+        "order-length-26",
+        "all-characters-in-order-are-english-lowercase-letters"
+      ]
+    },
+    {
+      "intent": "Implement a custom comparison function to determine if word1 comes before word2 lexicographically using alien ranks.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "lexicographically",
+        "shorter-string-is-less"
+      ],
+      "constraints": [
+        "1-words-i-length-20"
+      ]
+    },
+    {
+      "intent": "Iterate through adjacent pairs of words in the input list and verify their order using the custom comparison.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "sequence-of-words",
+        "return-true-if-and-only-if-the-given-words-are-sorted"
+      ],
+      "constraints": [
+        "1-words-length-100"
+      ]
+    }
+  ]
+}

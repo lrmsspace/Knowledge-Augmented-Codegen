@@ -1,0 +1,40 @@
+{
+  "slug": "lexicographically-smallest-string-after-adjacent-removals",
+  "link": "https://leetcode.com/problems/lexicographically-smallest-string-after-adjacent-removals/",
+  "difficulty": "Hard",
+  "index": "2834",
+  "description_full": "You are given a string s consisting of lowercase English letters.\n\nYou can perform the following operation any number of times (including zero):\n\n\n\tRemove any pair of adjacent characters in the string that are consecutive in the alphabet, in either order (e.g., 'a' and 'b', or 'b' and 'a').\n\tShift the remaining characters to the left to fill the gap.\n\n\nReturn the lexicographically smallest string that can be obtained after performing the operations optimally.\n\nNote: Consider the alphabet as circular, thus 'a' and 'z' are consecutive.\n\n \nExample 1:\n\n\nInput: s = \"abc\"\n\nOutput: \"a\"\n\nExplanation:\n\n\n\tRemove \"bc\" from the string, leaving \"a\" as the remaining string.\n\tNo further operations are possible. Thus, the lexicographically smallest string after all possible removals is \"a\".\n\n\n\nExample 2:\n\n\nInput: s = \"bcda\"\n\nOutput: \"\"\n\nExplanation:\n\n\n\t​​​​​​​Remove \"cd\" from the string, leaving \"ba\" as the remaining string.\n\tRemove \"ba\" from the string, leaving \"\" as the remaining string.\n\tNo further operations are possible. Thus, the lexicographically smallest string after all possible removals is \"\".\n\n\n\nExample 3:\n\n\nInput: s = \"zdce\"\n\nOutput: \"zdce\"\n\nExplanation:\n\n\n\tRemove \"dc\" from the string, leaving \"ze\" as the remaining string.\n\tNo further operations are possible on \"ze\".\n\tHowever, since \"zdce\" is lexicographically smaller than \"ze\", the smallest string after all possible removals is \"zdce\".\n\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 250\n\ts consists only of lowercase English letters.\n\n",
+  "description": "You are given a string s consisting of lowercase English letters.\n\nYou can perform the following operation any number of times (including zero):\n\n\n\tRemove any pair of adjacent characters in the string that are consecutive in the alphabet, in either order (e.g., 'a' and 'b', or 'b' and 'a').\n\tShift the remaining characters to the left to fill the gap.\n\n\nReturn the lexicographically smallest string that can be obtained after performing the operations optimally.\n\nNote: Consider the alphabet as circular, thus 'a' and 'z' are consecutive.",
+  "example": "Input: s = \"abc\"\n\nOutput: \"a\"\n\nExplanation:\n\n\n\tRemove \"bc\" from the string, leaving \"a\" as the remaining string.\n\tNo further operations are possible. Thus, the lexicographically smallest string after all possible removals is \"a\".",
+  "constraints_text": "1 <= s.length <= 250\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "char* lexicographicallySmallestString(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string lexicographicallySmallestString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String lexicographicallySmallestString(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar lexicographicallySmallestString = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def lexicographicallySmallestString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Process the input string using a stack to iteratively remove adjacent consecutive character pairs, building the lexicographically smallest reduced string.",
+      "structures": [
+        "stack",
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "remove-any-pair-of-adjacent-characters",
+        "consecutive-in-the-alphabet",
+        "shift-the-remaining-characters",
+        "lexicographically-smallest-string"
+      ],
+      "constraints": [
+        "lowercase-english-letters",
+        "alphabet-as-circular-a-and-z-are-consecutive"
+      ]
+    }
+  ]
+}

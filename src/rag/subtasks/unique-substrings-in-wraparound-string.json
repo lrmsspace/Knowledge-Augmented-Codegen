@@ -1,0 +1,71 @@
+{
+  "slug": "unique-substrings-in-wraparound-string",
+  "link": "https://leetcode.com/problems/unique-substrings-in-wraparound-string/",
+  "difficulty": "Medium",
+  "index": "828",
+  "description_full": "We define the string base to be the infinite wraparound string of \"abcdefghijklmnopqrstuvwxyz\", so base will look like this:\n\n\n\t\"...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd....\".\n\n\nGiven a string s, return the number of unique non-empty substrings of s are present in base.\n\n \nExample 1:\n\n\nInput: s = \"a\"\nOutput: 1\nExplanation: Only the substring \"a\" of s is in base.\n\n\nExample 2:\n\n\nInput: s = \"cac\"\nOutput: 2\nExplanation: There are two substrings (\"a\", \"c\") of s in base.\n\n\nExample 3:\n\n\nInput: s = \"zab\"\nOutput: 6\nExplanation: There are six substrings (\"z\", \"a\", \"b\", \"za\", \"ab\", and \"zab\") of s in base.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\n",
+  "description": "We define the string base to be the infinite wraparound string of \"abcdefghijklmnopqrstuvwxyz\", so base will look like this:\n\n\n\t\"...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd....\".\n\n\nGiven a string s, return the number of unique non-empty substrings of s are present in base.",
+  "example": "Input: s = \"a\"\nOutput: 1\nExplanation: Only the substring \"a\" of s is in base.",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "int findSubstringInWraproundString(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findSubstringInWraproundString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findSubstringInWraproundString(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar findSubstringInWraproundString = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def findSubstringInWraproundString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize an array to track the maximum length of a valid substring ending with each character.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "unique-non-empty-substrings",
+        "base"
+      ],
+      "constraints": [
+        "lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Iterate through the input string, calculate consecutive character lengths, and update the maximum length for each character.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "dp-1d",
+        "greedy"
+      ],
+      "cues": [
+        "wraparound-string",
+        "consecutive-characters",
+        "s-consists-of-lowercase-english-letters"
+      ],
+      "constraints": [
+        "1-s-length-105"
+      ]
+    },
+    {
+      "intent": "Sum all stored maximum lengths to obtain the total count of unique valid substrings.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-number-of-unique"
+      ],
+      "constraints": []
+    }
+  ]
+}

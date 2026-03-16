@@ -1,0 +1,57 @@
+{
+  "slug": "count-subtrees-with-max-distance-between-cities",
+  "link": "https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities/",
+  "difficulty": "Hard",
+  "index": "2040",
+  "description_full": "There are n cities numbered from 1 to n. You are given an array edges of size n-1, where edges[i] = [ui, vi] represents a bidirectional edge between cities ui and vi. There exists a unique path between each pair of cities. In other words, the cities form a tree.\r\n\r\nA subtree is a subset of cities where every city is reachable from every other city in the subset, where the path between each pair passes through only the cities from the subset. Two subtrees are different if there is a city in one subtree that is not present in the other.\r\n\r\nFor each d from 1 to n-1, find the number of subtrees in which the maximum distance between any two cities in the subtree is equal to d.\r\n\r\nReturn an array of size n-1 where the dth element (1-indexed) is the number of subtrees in which the maximum distance between any two cities is equal to d.\r\n\r\nNotice that the distance between the two cities is the number of edges in the path between them.\r\n\r\n \r\nExample 1:\r\n\r\n\r\n\r\n\r\nInput: n = 4, edges = [[1,2],[2,3],[2,4]]\r\nOutput: [3,4,0]\r\nExplanation:\r\nThe subtrees with subsets {1,2}, {2,3} and {2,4} have a max distance of 1.\r\nThe subtrees with subsets {1,2,3}, {1,2,4}, {2,3,4} and {1,2,3,4} have a max distance of 2.\r\nNo subtree has two nodes where the max distance between them is 3.\r\n\r\n\r\nExample 2:\r\n\r\n\r\nInput: n = 2, edges = [[1,2]]\r\nOutput: [1]\r\n\r\n\r\nExample 3:\r\n\r\n\r\nInput: n = 3, edges = [[1,2],[2,3]]\r\nOutput: [2,1]\r\n\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\t2 <= n <= 15\r\n\tedges.length == n-1\r\n\tedges[i].length == 2\r\n\t1 <= ui, vi <= n\r\n\tAll pairs (ui, vi) are distinct.\r\n",
+  "description": "There are n cities numbered from 1 to n. You are given an array edges of size n-1, where edges[i] = [ui, vi] represents a bidirectional edge between cities ui and vi. There exists a unique path between each pair of cities. In other words, the cities form a tree.\r\n\r\nA subtree is a subset of cities where every city is reachable from every other city in the subset, where the path between each pair passes through only the cities from the subset. Two subtrees are different if there is a city in one subtree that is not present in the other.\r\n\r\nFor each d from 1 to n-1, find the number of subtrees in which the maximum distance between any two cities in the subtree is equal to d.\r\n\r\nReturn an array of size n-1 where the dth element (1-indexed) is the number of subtrees in which the maximum distance between any two cities is equal to d.\r\n\r\nNotice that the distance between the two cities is the number of edges in the path between them.",
+  "example": "Input: n = 4, edges = [[1,2],[2,3],[2,4]]\r\nOutput: [3,4,0]\r\nExplanation:\r\nThe subtrees with subsets {1,2}, {2,3} and {2,4} have a max distance of 1.\r\nThe subtrees with subsets {1,2,3}, {1,2,4}, {2,3,4} and {1,2,3,4} have a max distance of 2.\r\nNo subtree has two nodes where the max distance between them is 3.",
+  "constraints_text": "2 <= n <= 15\r\n\tedges.length == n-1\r\n\tedges[i].length == 2\r\n\t1 <= ui, vi <= n\r\n\tAll pairs (ui, vi) are distinct.",
+  "templates": {
+    "c": "\n\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countSubgraphsForEachDiameter(int n, int** edges, int edgesSize, int* edgesColSize, int* returnSize){\n\n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> countSubgraphsForEachDiameter(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countSubgraphsForEachDiameter(int n, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {number[]}\n */\nvar countSubgraphsForEachDiameter = function(n, edges) {\n    \n};",
+    "python": "class Solution(object):\n    def countSubgraphsForEachDiameter(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate all node subsets, validate connectivity, and compute the diameter for each valid subtree.",
+      "structures": [
+        "graph",
+        "bitset",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "bfs"
+      ],
+      "cues": [
+        "n-cities",
+        "subtree-is-a-subset-of-cities",
+        "maximum-distance-between-any-two-cities",
+        "n-15"
+      ],
+      "constraints": [
+        "2-n-15",
+        "edges-form-a-tree"
+      ]
+    },
+    {
+      "intent": "Aggregate the counts of subtrees based on their calculated maximum distances.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "for-each-d-from-1-to-n-1-find-the-number-of-subtrees",
+        "return-an-array-of-size-n-1"
+      ],
+      "constraints": [
+        "d-from-1-to-n-1"
+      ]
+    }
+  ]
+}

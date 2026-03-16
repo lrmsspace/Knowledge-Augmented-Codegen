@@ -1,0 +1,36 @@
+{
+  "slug": "maximum-length-of-repeated-subarray",
+  "link": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/",
+  "difficulty": "Medium",
+  "index": "925",
+  "description_full": "Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.\n\n \nExample 1:\n\n\nInput: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]\nOutput: 3\nExplanation: The repeated subarray with maximum length is [3,2,1].\n\n\nExample 2:\n\n\nInput: nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]\nOutput: 5\nExplanation: The repeated subarray with maximum length is [0,0,0,0,0].\n\n\n \nConstraints:\n\n\n\t1 <= nums1.length, nums2.length <= 1000\n\t0 <= nums1[i], nums2[i] <= 100\n\n",
+  "description": "Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.",
+  "example": "Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]\nOutput: 3\nExplanation: The repeated subarray with maximum length is [3,2,1].",
+  "constraints_text": "1 <= nums1.length, nums2.length <= 1000\n\t0 <= nums1[i], nums2[i] <= 100",
+  "templates": {
+    "c": "int findLength(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findLength(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLength(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar findLength = function(nums1, nums2) {\n    \n};",
+    "python": "class Solution(object):\n    def findLength(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the maximum length of a common subarray between nums1 and nums2 using dynamic programming.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "maximum-length",
+        "subarray",
+        "appears-in-both-arrays"
+      ],
+      "constraints": [
+        "1-nums1-length-nums2-length-1000"
+      ]
+    }
+  ]
+}

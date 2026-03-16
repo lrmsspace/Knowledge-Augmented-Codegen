@@ -1,0 +1,38 @@
+{
+  "slug": "non-decreasing-subsequences",
+  "link": "https://leetcode.com/problems/non-decreasing-subsequences/",
+  "difficulty": "Medium",
+  "index": "838",
+  "description_full": "Given an integer array nums, return all the different possible non-decreasing subsequences of the given array with at least two elements. You may return the answer in any order.\n\n \nExample 1:\n\n\nInput: nums = [4,6,7,7]\nOutput: [[4,6],[4,6,7],[4,6,7,7],[4,7],[4,7,7],[6,7],[6,7,7],[7,7]]\n\n\nExample 2:\n\n\nInput: nums = [4,4,3,2,1]\nOutput: [[4,4]]\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 15\n\t-100 <= nums[i] <= 100\n\n",
+  "description": "Given an integer array nums, return all the different possible non-decreasing subsequences of the given array with at least two elements. You may return the answer in any order.",
+  "example": "Input: nums = [4,6,7,7]\nOutput: [[4,6],[4,6,7],[4,6,7,7],[4,7],[4,7,7],[6,7],[6,7,7],[7,7]]",
+  "constraints_text": "1 <= nums.length <= 15\n\t-100 <= nums[i] <= 100",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** findSubsequences(int* nums, int numsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> findSubsequences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> findSubsequences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar findSubsequences = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findSubsequences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a backtracking algorithm to generate all unique non-decreasing subsequences of at least two elements.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion",
+        "enumeration"
+      ],
+      "cues": [
+        "non-decreasing-subsequences",
+        "at-least-two-elements",
+        "all-the-different-possible"
+      ],
+      "constraints": [
+        "1-nums-length-15"
+      ]
+    }
+  ]
+}

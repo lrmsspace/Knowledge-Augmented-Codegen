@@ -1,0 +1,59 @@
+{
+  "slug": "number-of-increasing-paths-in-a-grid",
+  "link": "https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/",
+  "difficulty": "Hard",
+  "index": "2179",
+  "description_full": "You are given an m x n integer matrix grid, where you can move from a cell to any adjacent cell in all 4 directions.\n\nReturn the number of strictly increasing paths in the grid such that you can start from any cell and end at any cell. Since the answer may be very large, return it modulo 109 + 7.\n\nTwo paths are considered different if they do not have exactly the same sequence of visited cells.\n\n \nExample 1:\n\n\nInput: grid = [[1,1],[3,4]]\nOutput: 8\nExplanation: The strictly increasing paths are:\n- Paths with length 1: [1], [1], [3], [4].\n- Paths with length 2: [1 -> 3], [1 -> 4], [3 -> 4].\n- Paths with length 3: [1 -> 3 -> 4].\nThe total number of paths is 4 + 3 + 1 = 8.\n\n\nExample 2:\n\n\nInput: grid = [[1],[2]]\nOutput: 3\nExplanation: The strictly increasing paths are:\n- Paths with length 1: [1], [2].\n- Paths with length 2: [1 -> 2].\nThe total number of paths is 2 + 1 = 3.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 1000\n\t1 <= m * n <= 105\n\t1 <= grid[i][j] <= 105\n\n",
+  "description": "You are given an m x n integer matrix grid, where you can move from a cell to any adjacent cell in all 4 directions.\n\nReturn the number of strictly increasing paths in the grid such that you can start from any cell and end at any cell. Since the answer may be very large, return it modulo 109 + 7.\n\nTwo paths are considered different if they do not have exactly the same sequence of visited cells.",
+  "example": "Input: grid = [[1,1],[3,4]]\nOutput: 8\nExplanation: The strictly increasing paths are:\n- Paths with length 1: [1], [1], [3], [4].\n- Paths with length 2: [1 -> 3], [1 -> 4], [3 -> 4].\n- Paths with length 3: [1 -> 3 -> 4].\nThe total number of paths is 4 + 3 + 1 = 8.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 1000\n\t1 <= m * n <= 105\n\t1 <= grid[i][j] <= 105",
+  "templates": {
+    "c": "int countPaths(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countPaths(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPaths(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar countPaths = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def countPaths(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Prepare cells for processing by enumerating and sorting them by value, then initialize the DP table.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "dp-2d",
+        "merge-sort"
+      ],
+      "cues": [
+        "m-x-n-integer-matrix",
+        "strictly-increasing-paths"
+      ],
+      "constraints": [
+        "1-m-n-10-5",
+        "1-grid-i-j-10-5"
+      ]
+    },
+    {
+      "intent": "Iterate through sorted cells, calculate increasing paths ending at each cell using DP, and sum all path counts modulo 10^9 + 7.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "move-to-any-adjacent-cell",
+        "strictly-increasing-paths",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

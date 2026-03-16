@@ -1,0 +1,58 @@
+{
+  "slug": "alphabet-board-path",
+  "link": "https://leetcode.com/problems/alphabet-board-path/",
+  "difficulty": "Medium",
+  "index": "1125",
+  "description_full": "On an alphabet board, we start at position (0, 0), corresponding to character board[0][0].\r\n\r\nHere, board = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxy\", \"z\"], as shown in the diagram below.\r\n\r\n\r\n\r\nWe may make the following moves:\r\n\r\n\r\n\t'U' moves our position up one row, if the position exists on the board;\r\n\t'D' moves our position down one row, if the position exists on the board;\r\n\t'L' moves our position left one column, if the position exists on the board;\r\n\t'R' moves our position right one column, if the position exists on the board;\r\n\t'!' adds the character board[r][c] at our current position (r, c) to the answer.\r\n\r\n\r\n(Here, the only positions that exist on the board are positions with letters on them.)\r\n\r\nReturn a sequence of moves that makes our answer equal to target in the minimum number of moves.  You may return any path that does so.\r\n\r\n \r\nExample 1:\r\nInput: target = \"leet\"\r\nOutput: \"DDR!UURRR!!DDD!\"\r\nExample 2:\r\nInput: target = \"code\"\r\nOutput: \"RR!DDRR!UUL!R!\"\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\t1 <= target.length <= 100\r\n\ttarget consists only of English lowercase letters.\r\n",
+  "description": "On an alphabet board, we start at position (0, 0), corresponding to character board[0][0].\r\n\r\nHere, board = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxy\", \"z\"], as shown in the diagram below.\r\n\r\n\r\n\r\nWe may make the following moves:\r\n\r\n\r\n\t'U' moves our position up one row, if the position exists on the board;\r\n\t'D' moves our position down one row, if the position exists on the board;\r\n\t'L' moves our position left one column, if the position exists on the board;\r\n\t'R' moves our position right one column, if the position exists on the board;\r\n\t'!' adds the character board[r][c] at our current position (r, c) to the answer.\r\n\r\n\r\n(Here, the only positions that exist on the board are positions with letters on them.)\r\n\r\nReturn a sequence of moves that makes our answer equal to target in the minimum number of moves.  You may return any path that does so.",
+  "example": "Input: target = \"leet\"\r\nOutput: \"DDR!UURRR!!DDD!\"",
+  "constraints_text": "1 <= target.length <= 100\r\n\ttarget consists only of English lowercase letters.",
+  "templates": {
+    "c": "\n\nchar * alphabetBoardPath(char * target){\n\n}",
+    "cpp": "class Solution {\npublic:\n    string alphabetBoardPath(string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String alphabetBoardPath(String target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} target\n * @return {string}\n */\nvar alphabetBoardPath = function(target) {\n    \n};",
+    "python": "class Solution(object):\n    def alphabetBoardPath(self, target):\n        \"\"\"\n        :type target: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Create a lookup table mapping each character to its (row, column) coordinates on the alphabet board.",
+      "structures": [
+        "array",
+        "string",
+        "number",
+        "ds"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "board-abcde",
+        "character-board-r-c"
+      ],
+      "constraints": [
+        "target-consists-only-of-english-lowercase-letters"
+      ]
+    },
+    {
+      "intent": "Iterate through the target string, generating the minimal move sequence for each character, accounting for 'z' special movement rules.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "return-a-sequence-of-moves",
+        "minimum-number-of-moves",
+        "z",
+        "u-d-l-r"
+      ],
+      "constraints": [
+        "1-target-length-100"
+      ]
+    }
+  ]
+}

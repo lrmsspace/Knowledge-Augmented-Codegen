@@ -1,0 +1,56 @@
+{
+  "slug": "zero-array-transformation-iv",
+  "link": "https://leetcode.com/problems/zero-array-transformation-iv/",
+  "difficulty": "Medium",
+  "index": "2624",
+  "description_full": "You are given an integer array nums of length n and a 2D array queries, where queries[i] = [li, ri, vali].\n\nEach queries[i] represents the following action on nums:\n\n\n\tSelect a subset of indices in the range [li, ri] from nums.\n\tDecrement the value at each selected index by exactly vali.\n\n\nA Zero Array is an array with all its elements equal to 0.\n\nReturn the minimum possible non-negative value of k, such that after processing the first k queries in sequence, nums becomes a Zero Array. If no such k exists, return -1.\n\n \nExample 1:\n\n\nInput: nums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\n\nOutput: 2\n\nExplanation:\n\n\n\tFor query 0 (l = 0, r = 2, val = 1):\n\n\t\n\t\tDecrement the values at indices [0, 2] by 1.\n\t\tThe array will become [1, 0, 1].\n\t\n\t\n\tFor query 1 (l = 0, r = 2, val = 1):\n\t\n\t\tDecrement the values at indices [0, 2] by 1.\n\t\tThe array will become [0, 0, 0], which is a Zero Array. Therefore, the minimum value of k is 2.\n\t\n\t\n\n\n\nExample 2:\n\n\nInput: nums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]\n\nOutput: -1\n\nExplanation:\n\nIt is impossible to make nums a Zero Array even after all the queries.\n\n\nExample 3:\n\n\nInput: nums = [1,2,3,2,1], queries = [[0,1,1],[1,2,1],[2,3,2],[3,4,1],[4,4,1]]\n\nOutput: 4\n\nExplanation:\n\n\n\tFor query 0 (l = 0, r = 1, val = 1):\n\n\t\n\t\tDecrement the values at indices [0, 1] by 1.\n\t\tThe array will become [0, 1, 3, 2, 1].\n\t\n\t\n\tFor query 1 (l = 1, r = 2, val = 1):\n\t\n\t\tDecrement the values at indices [1, 2] by 1.\n\t\tThe array will become [0, 0, 2, 2, 1].\n\t\n\t\n\tFor query 2 (l = 2, r = 3, val = 2):\n\t\n\t\tDecrement the values at indices [2, 3] by 2.\n\t\tThe array will become [0, 0, 0, 0, 1].\n\t\n\t\n\tFor query 3 (l = 3, r = 4, val = 1):\n\t\n\t\tDecrement the value at index 4 by 1.\n\t\tThe array will become [0, 0, 0, 0, 0]. Therefore, the minimum value of k is 4.\n\t\n\t\n\n\n\nExample 4:\n\n\nInput: nums = [1,2,3,2,6], queries = [[0,1,1],[0,2,1],[1,4,2],[4,4,4],[3,4,1],[4,4,5]]\n\nOutput: 4\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 10\n\t0 <= nums[i] <= 1000\n\t1 <= queries.length <= 1000\n\tqueries[i] = [li, ri, vali]\n\t0 <= li <= ri < nums.length\n\t1 <= vali <= 10\n\n",
+  "description": "You are given an integer array nums of length n and a 2D array queries, where queries[i] = [li, ri, vali].\n\nEach queries[i] represents the following action on nums:\n\n\n\tSelect a subset of indices in the range [li, ri] from nums.\n\tDecrement the value at each selected index by exactly vali.\n\n\nA Zero Array is an array with all its elements equal to 0.\n\nReturn the minimum possible non-negative value of k, such that after processing the first k queries in sequence, nums becomes a Zero Array. If no such k exists, return -1.",
+  "example": "Input: nums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\n\nOutput: 2\n\nExplanation:\n\n\n\tFor query 0 (l = 0, r = 2, val = 1):\n\n\t\n\t\tDecrement the values at indices [0, 2] by 1.\n\t\tThe array will become [1, 0, 1].\n\t\n\t\n\tFor query 1 (l = 0, r = 2, val = 1):\n\t\n\t\tDecrement the values at indices [0, 2] by 1.\n\t\tThe array will become [0, 0, 0], which is a Zero Array. Therefore, the minimum value of k is 2.",
+  "constraints_text": "1 <= nums.length <= 10\n\t0 <= nums[i] <= 1000\n\t1 <= queries.length <= 1000\n\tqueries[i] = [li, ri, vali]\n\t0 <= li <= ri < nums.length\n\t1 <= vali <= 10",
+  "templates": {
+    "c": "int minZeroArray(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minZeroArray(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minZeroArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number}\n */\nvar minZeroArray = function(nums, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def minZeroArray(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the minimum number of queries (k) required to make the array a Zero Array using binary search.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "minimum-possible-non-negative-value-of-k"
+      ],
+      "constraints": [
+        "k-is-between-0-and-queries-length"
+      ]
+    },
+    {
+      "intent": "Implement a check function to determine if the array can become a Zero Array after processing the first k queries.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "greedy",
+        "segment-tree"
+      ],
+      "cues": [
+        "after-processing-the-first-k-queries-in-sequence",
+        "select-a-subset-of-indices",
+        "decrement-by-exactly-vali"
+      ],
+      "constraints": [
+        "n-up-to-10-5",
+        "q-up-to-10-5",
+        "values-up-to-10-9"
+      ]
+    }
+  ]
+}

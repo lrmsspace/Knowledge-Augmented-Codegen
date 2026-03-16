@@ -1,0 +1,68 @@
+{
+  "slug": "minimize-xor",
+  "link": "https://leetcode.com/problems/minimize-xor/",
+  "difficulty": "Medium",
+  "index": "1618",
+  "description_full": "Given two positive integers num1 and num2, find the positive integer x such that:\n\n\n\tx has the same number of set bits as num2, and\n\tThe value x XOR num1 is minimal.\n\n\nNote that XOR is the bitwise XOR operation.\n\nReturn the integer x. The test cases are generated such that x is uniquely determined.\n\nThe number of set bits of an integer is the number of 1's in its binary representation.\n\n \nExample 1:\n\n\nInput: num1 = 3, num2 = 5\nOutput: 3\nExplanation:\nThe binary representations of num1 and num2 are 0011 and 0101, respectively.\nThe integer 3 has the same number of set bits as num2, and the value 3 XOR 3 = 0 is minimal.\n\n\nExample 2:\n\n\nInput: num1 = 1, num2 = 12\nOutput: 3\nExplanation:\nThe binary representations of num1 and num2 are 0001 and 1100, respectively.\nThe integer 3 has the same number of set bits as num2, and the value 3 XOR 1 = 2 is minimal.\n\n\n \nConstraints:\n\n\n\t1 <= num1, num2 <= 109\n\n",
+  "description": "Given two positive integers num1 and num2, find the positive integer x such that:\n\n\n\tx has the same number of set bits as num2, and\n\tThe value x XOR num1 is minimal.\n\n\nNote that XOR is the bitwise XOR operation.\n\nReturn the integer x. The test cases are generated such that x is uniquely determined.\n\nThe number of set bits of an integer is the number of 1's in its binary representation.",
+  "example": "Input: num1 = 3, num2 = 5\nOutput: 3\nExplanation:\nThe binary representations of num1 and num2 are 0011 and 0101, respectively.\nThe integer 3 has the same number of set bits as num2, and the value 3 XOR 3 = 0 is minimal.",
+  "constraints_text": "1 <= num1, num2 <= 109",
+  "templates": {
+    "c": "int minimizeXor(int num1, int num2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimizeXor(int num1, int num2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimizeXor(int num1, int num2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num1\n * @param {number} num2\n * @return {number}\n */\nvar minimizeXor = function(num1, num2) {\n    \n};",
+    "python": "class Solution(object):\n    def minimizeXor(self, num1, num2):\n        \"\"\"\n        :type num1: int\n        :type num2: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the number of set bits in num2 to determine the target count for x.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "same-number-of-set-bits-as-num2"
+      ],
+      "constraints": [
+        "1-num2-10-9"
+      ]
+    },
+    {
+      "intent": "Initialize x by setting bits that are also set in num1, starting from MSB, until the target count is met or num1's set bits are exhausted.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "x-xor-num1-is-minimal",
+        "positive-integer-x"
+      ],
+      "constraints": [
+        "1-num1-10-9"
+      ]
+    },
+    {
+      "intent": "If x still requires more set bits, assign them to the lowest available bit positions where num1 has a zero, to minimize the XOR sum.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "x-xor-num1-is-minimal",
+        "positive-integer-x"
+      ],
+      "constraints": [
+        "remaining-set-bits-0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit",
+  "link": "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
+  "difficulty": "Medium",
+  "index": "1241",
+  "description_full": "Given an array of integers nums and an integer limit, return the size of the longest non-empty subarray such that the absolute difference between any two elements of this subarray is less than or equal to limit.\n\n \nExample 1:\n\n\nInput: nums = [8,2,4,7], limit = 4\nOutput: 2 \nExplanation: All subarrays are: \n[8] with maximum absolute diff |8-8| = 0 <= 4.\n[8,2] with maximum absolute diff |8-2| = 6 > 4. \n[8,2,4] with maximum absolute diff |8-2| = 6 > 4.\n[8,2,4,7] with maximum absolute diff |8-2| = 6 > 4.\n[2] with maximum absolute diff |2-2| = 0 <= 4.\n[2,4] with maximum absolute diff |2-4| = 2 <= 4.\n[2,4,7] with maximum absolute diff |2-7| = 5 > 4.\n[4] with maximum absolute diff |4-4| = 0 <= 4.\n[4,7] with maximum absolute diff |4-7| = 3 <= 4.\n[7] with maximum absolute diff |7-7| = 0 <= 4. \nTherefore, the size of the longest subarray is 2.\n\n\nExample 2:\n\n\nInput: nums = [10,1,2,4,7,2], limit = 5\nOutput: 4 \nExplanation: The subarray [2,4,7,2] is the longest since the maximum absolute diff is |2-7| = 5 <= 5.\n\n\nExample 3:\n\n\nInput: nums = [4,2,2,2,4,4,2,2], limit = 0\nOutput: 3\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\t0 <= limit <= 109\n\n",
+  "description": "Given an array of integers nums and an integer limit, return the size of the longest non-empty subarray such that the absolute difference between any two elements of this subarray is less than or equal to limit.",
+  "example": "Input: nums = [8,2,4,7], limit = 4\nOutput: 2 \nExplanation: All subarrays are: \n[8] with maximum absolute diff |8-8| = 0 <= 4.\n[8,2] with maximum absolute diff |8-2| = 6 > 4. \n[8,2,4] with maximum absolute diff |8-2| = 6 > 4.\n[8,2,4,7] with maximum absolute diff |8-2| = 6 > 4.\n[2] with maximum absolute diff |2-2| = 0 <= 4.\n[2,4] with maximum absolute diff |2-4| = 2 <= 4.\n[2,4,7] with maximum absolute diff |2-7| = 5 > 4.\n[4] with maximum absolute diff |4-4| = 0 <= 4.\n[4,7] with maximum absolute diff |4-7| = 3 <= 4.\n[7] with maximum absolute diff |7-7| = 0 <= 4. \nTherefore, the size of the longest subarray is 2.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\t0 <= limit <= 109",
+  "templates": {
+    "c": "int longestSubarray(int* nums, int numsSize, int limit) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestSubarray(vector<int>& nums, int limit) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSubarray(int[] nums, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} limit\n * @return {number}\n */\nvar longestSubarray = function(nums, limit) {\n    \n};",
+    "python": "class Solution(object):\n    def longestSubarray(self, nums, limit):\n        \"\"\"\n        :type nums: List[int]\n        :type limit: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the longest subarray where the difference between its maximum and minimum elements is within the limit using a sliding window.",
+      "structures": [
+        "array",
+        "deque"
+      ],
+      "actions": [
+        "sliding-window",
+        "monotonic-queue"
+      ],
+      "cues": [
+        "longest-non-empty-subarray",
+        "absolute-difference",
+        "limit"
+      ],
+      "constraints": [
+        "1-nums-length-105"
+      ]
+    }
+  ]
+}

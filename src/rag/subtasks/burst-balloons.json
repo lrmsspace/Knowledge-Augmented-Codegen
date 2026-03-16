@@ -1,0 +1,53 @@
+{
+  "slug": "burst-balloons",
+  "link": "https://leetcode.com/problems/burst-balloons/",
+  "difficulty": "Hard",
+  "index": "1815",
+  "description_full": "You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.\n\nIf you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.\n\nReturn the maximum coins you can collect by bursting the balloons wisely.\n\n \nExample 1:\n\n\nInput: nums = [3,1,5,8]\nOutput: 167\nExplanation:\nnums = [3,1,5,8] --> [3,5,8] --> [3,8] --> [8] --> []\ncoins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167\n\nExample 2:\n\n\nInput: nums = [1,5]\nOutput: 10\n\n\n \nConstraints:\n\n\n\tn == nums.length\n\t1 <= n <= 300\n\t0 <= nums[i] <= 100\n\n",
+  "description": "You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.\n\nIf you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.\n\nReturn the maximum coins you can collect by bursting the balloons wisely.",
+  "example": "Input: nums = [3,1,5,8]\nOutput: 167\nExplanation:\nnums = [3,1,5,8] --> [3,5,8] --> [3,8] --> [8] --> []\ncoins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167",
+  "constraints_text": "n == nums.length\n\t1 <= n <= 300\n\t0 <= nums[i] <= 100",
+  "templates": {
+    "c": "int maxCoins(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxCoins(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxCoins(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxCoins = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maxCoins(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Pad the input array with virtual balloons of value 1 at both ends to simplify boundary conditions for calculations.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "i-1-or-i-1-goes-out-of-bounds",
+        "treat-it-as-if-there-is-a-balloon-with-a-1"
+      ],
+      "constraints": [
+        "n-nums-length"
+      ]
+    },
+    {
+      "intent": "Compute the maximum coins by applying interval dynamic programming, considering each balloon 'k' as the last one burst within an interval (i, j).",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "maximum-coins",
+        "burst-all-the-balloons-wisely"
+      ],
+      "constraints": [
+        "1-n-300"
+      ]
+    }
+  ]
+}

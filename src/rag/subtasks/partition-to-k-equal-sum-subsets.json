@@ -1,0 +1,55 @@
+{
+  "slug": "partition-to-k-equal-sum-subsets",
+  "link": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/",
+  "difficulty": "Medium",
+  "index": "919",
+  "description_full": "Given an integer array nums and an integer k, return true if it is possible to divide this array into k non-empty subsets whose sums are all equal.\n\n \nExample 1:\n\n\nInput: nums = [4,3,2,3,5,2,1], k = 4\nOutput: true\nExplanation: It is possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3,4], k = 3\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= k <= nums.length <= 16\n\t1 <= nums[i] <= 104\n\tThe frequency of each element is in the range [1, 4].\n\n",
+  "description": "Given an integer array nums and an integer k, return true if it is possible to divide this array into k non-empty subsets whose sums are all equal.",
+  "example": "Input: nums = [4,3,2,3,5,2,1], k = 4\nOutput: true\nExplanation: It is possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.",
+  "constraints_text": "1 <= k <= nums.length <= 16\n\t1 <= nums[i] <= 104\n\tThe frequency of each element is in the range [1, 4].",
+  "templates": {
+    "c": "bool canPartitionKSubsets(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canPartitionKSubsets(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canPartitionKSubsets(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar canPartitionKSubsets = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def canPartitionKSubsets(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform initial checks and calculate the target sum for each subset.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "greedy"
+      ],
+      "cues": [
+        "equal-sums",
+        "non-empty-subsets"
+      ],
+      "constraints": [
+        "1-k-nums-length-16",
+        "1-nums-i-104"
+      ]
+    },
+    {
+      "intent": "Use bitmask DP to find if k subsets with the target sum can be formed.",
+      "structures": [
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "divide-array-into-k-subsets",
+        "equal-sums"
+      ],
+      "constraints": [
+        "nums-length-16"
+      ]
+    }
+  ]
+}

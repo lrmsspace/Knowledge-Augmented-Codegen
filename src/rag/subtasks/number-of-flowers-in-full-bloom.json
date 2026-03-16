@@ -1,0 +1,71 @@
+{
+  "slug": "number-of-flowers-in-full-bloom",
+  "link": "https://leetcode.com/problems/number-of-flowers-in-full-bloom/",
+  "difficulty": "Hard",
+  "index": "2162",
+  "description_full": "You are given a 0-indexed 2D integer array flowers, where flowers[i] = [starti, endi] means the ith flower will be in full bloom from starti to endi (inclusive). You are also given a 0-indexed integer array people of size n, where people[i] is the time that the ith person will arrive to see the flowers.\n\nReturn an integer array answer of size n, where answer[i] is the number of flowers that are in full bloom when the ith person arrives.\n\n \nExample 1:\n\n\nInput: flowers = [[1,6],[3,7],[9,12],[4,13]], people = [2,3,7,11]\nOutput: [1,2,2,2]\nExplanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.\nFor each person, we return the number of flowers in full bloom during their arrival.\n\n\nExample 2:\n\n\nInput: flowers = [[1,10],[3,3]], people = [3,3,2]\nOutput: [2,2,1]\nExplanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.\nFor each person, we return the number of flowers in full bloom during their arrival.\n\n\n \nConstraints:\n\n\n\t1 <= flowers.length <= 5 * 104\n\tflowers[i].length == 2\n\t1 <= starti <= endi <= 109\n\t1 <= people.length <= 5 * 104\n\t1 <= people[i] <= 109\n\n",
+  "description": "You are given a 0-indexed 2D integer array flowers, where flowers[i] = [starti, endi] means the ith flower will be in full bloom from starti to endi (inclusive). You are also given a 0-indexed integer array people of size n, where people[i] is the time that the ith person will arrive to see the flowers.\n\nReturn an integer array answer of size n, where answer[i] is the number of flowers that are in full bloom when the ith person arrives.",
+  "example": "Input: flowers = [[1,6],[3,7],[9,12],[4,13]], people = [2,3,7,11]\nOutput: [1,2,2,2]\nExplanation: The figure above shows the times when the flowers are in full bloom and when the people arrive.\nFor each person, we return the number of flowers in full bloom during their arrival.",
+  "constraints_text": "1 <= flowers.length <= 5 * 104\n\tflowers[i].length == 2\n\t1 <= starti <= endi <= 109\n\t1 <= people.length <= 5 * 104\n\t1 <= people[i] <= 109",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* fullBloomFlowers(int** flowers, int flowersSize, int* flowersColSize, int* people, int peopleSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> fullBloomFlowers(vector<vector<int>>& flowers, vector<int>& people) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] fullBloomFlowers(int[][] flowers, int[] people) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} flowers\n * @param {number[]} people\n * @return {number[]}\n */\nvar fullBloomFlowers = function(flowers, people) {\n    \n};",
+    "python": "class Solution(object):\n    def fullBloomFlowers(self, flowers, people):\n        \"\"\"\n        :type flowers: List[List[int]]\n        :type people: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Create sorted arrays of flower start times and (end_time + 1) for efficient querying.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "flowers-i-starti-endi"
+      ],
+      "constraints": [
+        "flowers-length-5-104",
+        "1-starti-endi-109"
+      ]
+    },
+    {
+      "intent": "For each person's arrival time, use binary search on sorted start and end arrays to count active flowers.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "binary-search",
+        "enumeration"
+      ],
+      "cues": [
+        "people-i",
+        "number-of-flowers-that-are-in-full-bloom"
+      ],
+      "constraints": [
+        "people-length-5-104",
+        "1-people-i-109"
+      ]
+    },
+    {
+      "intent": "Store the calculated bloom counts for each person in the final result array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-an-integer-array-answer-of-size-n",
+        "answer-i"
+      ],
+      "constraints": [
+        "people-length-5-104"
+      ]
+    }
+  ]
+}

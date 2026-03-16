@@ -1,0 +1,54 @@
+{
+  "slug": "check-if-any-element-has-prime-frequency",
+  "link": "https://leetcode.com/problems/check-if-any-element-has-prime-frequency/",
+  "difficulty": "Easy",
+  "index": "2393",
+  "description_full": "You are given an integer array nums.\n\nReturn true if the frequency of any element of the array is prime, otherwise, return false.\n\nThe frequency of an element x is the number of times it occurs in the array.\n\nA prime number is a natural number greater than 1 with only two factors, 1 and itself.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3,4,5,4]\n\nOutput: true\n\nExplanation:\n\n4 has a frequency of two, which is a prime number.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3,4,5]\n\nOutput: false\n\nExplanation:\n\nAll elements have a frequency of one.\n\n\nExample 3:\n\n\nInput: nums = [2,2,2,4,4]\n\nOutput: true\n\nExplanation:\n\nBoth 2 and 4 have a prime frequency.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t0 <= nums[i] <= 100\n\n",
+  "description": "You are given an integer array nums.\n\nReturn true if the frequency of any element of the array is prime, otherwise, return false.\n\nThe frequency of an element x is the number of times it occurs in the array.\n\nA prime number is a natural number greater than 1 with only two factors, 1 and itself.",
+  "example": "Input: nums = [1,2,3,4,5,4]\n\nOutput: true\n\nExplanation:\n\n4 has a frequency of two, which is a prime number.",
+  "constraints_text": "1 <= nums.length <= 100\n\t0 <= nums[i] <= 100",
+  "templates": {
+    "c": "bool checkPrimeFrequency(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkPrimeFrequency(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkPrimeFrequency(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar checkPrimeFrequency = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def checkPrimeFrequency(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the frequency of each unique number in the input array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "frequency-of-any-element",
+        "number-of-times-it-occurs"
+      ],
+      "constraints": [
+        "1-nums-length-100",
+        "0-nums-i-100"
+      ]
+    },
+    {
+      "intent": "Iterate through the calculated frequencies and check if any of them is a prime number.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "sieve"
+      ],
+      "cues": [
+        "frequency-is-prime",
+        "prime-number"
+      ],
+      "constraints": [
+        "max-frequency-is-nums-length-100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "restore-the-array",
+  "link": "https://leetcode.com/problems/restore-the-array/",
+  "difficulty": "Hard",
+  "index": "2000",
+  "description_full": "A program was supposed to print an array of integers. The program forgot to print whitespaces and the array is printed as a string of digits s and all we know is that all integers in the array were in the range [1, k] and there are no leading zeros in the array.\n\nGiven the string s and the integer k, return the number of the possible arrays that can be printed as s using the mentioned program. Since the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: s = \"1000\", k = 10000\nOutput: 1\nExplanation: The only possible array is [1000]\n\n\nExample 2:\n\n\nInput: s = \"1000\", k = 10\nOutput: 0\nExplanation: There cannot be an array that was printed this way and has all integer >= 1 and <= 10.\n\n\nExample 3:\n\n\nInput: s = \"1317\", k = 2000\nOutput: 8\nExplanation: Possible arrays are [1317],[131,7],[13,17],[1,317],[13,1,7],[1,31,7],[1,3,17],[1,3,1,7]\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of only digits and does not contain leading zeros.\n\t1 <= k <= 109\n\n",
+  "description": "A program was supposed to print an array of integers. The program forgot to print whitespaces and the array is printed as a string of digits s and all we know is that all integers in the array were in the range [1, k] and there are no leading zeros in the array.\n\nGiven the string s and the integer k, return the number of the possible arrays that can be printed as s using the mentioned program. Since the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: s = \"1000\", k = 10000\nOutput: 1\nExplanation: The only possible array is [1000]",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of only digits and does not contain leading zeros.\n\t1 <= k <= 109",
+  "templates": {
+    "c": "int numberOfArrays(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfArrays(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfArrays(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar numberOfArrays = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfArrays(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize DP array and set base case for the empty suffix.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "number-of-possible-arrays",
+        "return-it-modulo"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Iterate through the string, form valid numbers from substrings, check leading zeros and range [1, k], and accumulate ways using DP.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "string-s",
+        "integers-in-the-range-1-k",
+        "no-leading-zeros",
+        "return-it-modulo"
+      ],
+      "constraints": [
+        "1-s-length-10-5",
+        "1-k-10-9",
+        "s-consists-of-only-digits",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

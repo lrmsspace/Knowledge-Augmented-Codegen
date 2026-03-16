@@ -1,0 +1,54 @@
+{
+  "slug": "count-submatrices-with-top-left-element-and-sum-less-than-k",
+  "link": "https://leetcode.com/problems/count-submatrices-with-top-left-element-and-sum-less-than-k/",
+  "difficulty": "Medium",
+  "index": "2478",
+  "description_full": "You are given a 0-indexed integer matrix grid and an integer k.\n\nReturn the number of submatrices that contain the top-left element of the grid, and have a sum less than or equal to k.\n\n \nExample 1:\n\n\nInput: grid = [[7,6,3],[6,6,1]], k = 18\nOutput: 4\nExplanation: There are only 4 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 18.\n\nExample 2:\n\n\nInput: grid = [[7,2,9],[1,5,0],[2,6,6]], k = 20\nOutput: 6\nExplanation: There are only 6 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 20.\n\n\n \nConstraints:\n\n\n\tm == grid.length \n\tn == grid[i].length\n\t1 <= n, m <= 1000 \n\t0 <= grid[i][j] <= 1000\n\t1 <= k <= 109\n\n",
+  "description": "You are given a 0-indexed integer matrix grid and an integer k.\n\nReturn the number of submatrices that contain the top-left element of the grid, and have a sum less than or equal to k.",
+  "example": "Input: grid = [[7,6,3],[6,6,1]], k = 18\nOutput: 4\nExplanation: There are only 4 submatrices, shown in the image above, that contain the top-left element of grid, and have a sum less than or equal to 18.",
+  "constraints_text": "m == grid.length \n\tn == grid[i].length\n\t1 <= n, m <= 1000 \n\t0 <= grid[i][j] <= 1000\n\t1 <= k <= 109",
+  "templates": {
+    "c": "int countSubmatrices(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countSubmatrices(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubmatrices(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar countSubmatrices = function(grid, k) {\n    \n};",
+    "python": "class Solution(object):\n    def countSubmatrices(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute 2D prefix sums to efficiently query the sum of any submatrix starting at (0,0).",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-less-than-or-equal-to-k",
+        "submatrices-that-contain-the-top-left-element"
+      ],
+      "constraints": [
+        "1-n-m-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible bottom-right corners and count submatrices whose precomputed sum is less than or equal to k.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "number-of-submatrices",
+        "contain-the-top-left-element",
+        "sum-less-than-or-equal-to-k"
+      ],
+      "constraints": [
+        "1-k-109"
+      ]
+    }
+  ]
+}

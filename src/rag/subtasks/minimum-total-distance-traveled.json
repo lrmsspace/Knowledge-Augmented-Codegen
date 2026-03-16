@@ -1,0 +1,56 @@
+{
+  "slug": "minimum-total-distance-traveled",
+  "link": "https://leetcode.com/problems/minimum-total-distance-traveled/",
+  "difficulty": "Hard",
+  "index": "2206",
+  "description_full": "There are some robots and factories on the X-axis. You are given an integer array robot where robot[i] is the position of the ith robot. You are also given a 2D integer array factory where factory[j] = [positionj, limitj] indicates that positionj is the position of the jth factory and that the jth factory can repair at most limitj robots.\n\nThe positions of each robot are unique. The positions of each factory are also unique. Note that a robot can be in the same position as a factory initially.\n\nAll the robots are initially broken; they keep moving in one direction. The direction could be the negative or the positive direction of the X-axis. When a robot reaches a factory that did not reach its limit, the factory repairs the robot, and it stops moving.\n\nAt any moment, you can set the initial direction of moving for some robot. Your target is to minimize the total distance traveled by all the robots.\n\nReturn the minimum total distance traveled by all the robots. The test cases are generated such that all the robots can be repaired.\n\nNote that\n\n\n\tAll robots move at the same speed.\n\tIf two robots move in the same direction, they will never collide.\n\tIf two robots move in opposite directions and they meet at some point, they do not collide. They cross each other.\n\tIf a robot passes by a factory that reached its limits, it crosses it as if it does not exist.\n\tIf the robot moved from a position x to a position y, the distance it moved is |y - x|.\n\n\n \nExample 1:\n\n\nInput: robot = [0,4,6], factory = [[2,2],[6,2]]\nOutput: 4\nExplanation: As shown in the figure:\n- The first robot at position 0 moves in the positive direction. It will be repaired at the first factory.\n- The second robot at position 4 moves in the negative direction. It will be repaired at the first factory.\n- The third robot at position 6 will be repaired at the second factory. It does not need to move.\nThe limit of the first factory is 2, and it fixed 2 robots.\nThe limit of the second factory is 2, and it fixed 1 robot.\nThe total distance is |2 - 0| + |2 - 4| + |6 - 6| = 4. It can be shown that we cannot achieve a better total distance than 4.\n\n\nExample 2:\n\n\nInput: robot = [1,-1], factory = [[-2,1],[2,1]]\nOutput: 2\nExplanation: As shown in the figure:\n- The first robot at position 1 moves in the positive direction. It will be repaired at the second factory.\n- The second robot at position -1 moves in the negative direction. It will be repaired at the first factory.\nThe limit of the first factory is 1, and it fixed 1 robot.\nThe limit of the second factory is 1, and it fixed 1 robot.\nThe total distance is |2 - 1| + |(-2) - (-1)| = 2. It can be shown that we cannot achieve a better total distance than 2.\n\n\n \nConstraints:\n\n\n\t1 <= robot.length, factory.length <= 100\n\tfactory[j].length == 2\n\t-109 <= robot[i], positionj <= 109\n\t0 <= limitj <= robot.length\n\tThe input will be generated such that it is always possible to repair every robot.\n\n",
+  "description": "There are some robots and factories on the X-axis. You are given an integer array robot where robot[i] is the position of the ith robot. You are also given a 2D integer array factory where factory[j] = [positionj, limitj] indicates that positionj is the position of the jth factory and that the jth factory can repair at most limitj robots.\n\nThe positions of each robot are unique. The positions of each factory are also unique. Note that a robot can be in the same position as a factory initially.\n\nAll the robots are initially broken; they keep moving in one direction. The direction could be the negative or the positive direction of the X-axis. When a robot reaches a factory that did not reach its limit, the factory repairs the robot, and it stops moving.\n\nAt any moment, you can set the initial direction of moving for some robot. Your target is to minimize the total distance traveled by all the robots.\n\nReturn the minimum total distance traveled by all the robots. The test cases are generated such that all the robots can be repaired.\n\nNote that\n\n\n\tAll robots move at the same speed.\n\tIf two robots move in the same direction, they will never collide.\n\tIf two robots move in opposite directions and they meet at some point, they do not collide. They cross each other.\n\tIf a robot passes by a factory that reached its limits, it crosses it as if it does not exist.\n\tIf the robot moved from a position x to a position y, the distance it moved is |y - x|.",
+  "example": "Input: robot = [0,4,6], factory = [[2,2],[6,2]]\nOutput: 4\nExplanation: As shown in the figure:\n- The first robot at position 0 moves in the positive direction. It will be repaired at the first factory.\n- The second robot at position 4 moves in the negative direction. It will be repaired at the first factory.\n- The third robot at position 6 will be repaired at the second factory. It does not need to move.\nThe limit of the first factory is 2, and it fixed 2 robots.\nThe limit of the second factory is 2, and it fixed 1 robot.\nThe total distance is |2 - 0| + |2 - 4| + |6 - 6| = 4. It can be shown that we cannot achieve a better total distance than 4.",
+  "constraints_text": "1 <= robot.length, factory.length <= 100\n\tfactory[j].length == 2\n\t-109 <= robot[i], positionj <= 109\n\t0 <= limitj <= robot.length\n\tThe input will be generated such that it is always possible to repair every robot.",
+  "templates": {
+    "c": "long long minimumTotalDistance(int* robot, int robotSize, int** factory, int factorySize, int* factoryColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minimumTotalDistance(vector<int>& robot, vector<vector<int>>& factory) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumTotalDistance(List<Integer> robot, int[][] factory) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} robot\n * @param {number[][]} factory\n * @return {number}\n */\nvar minimumTotalDistance = function(robot, factory) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumTotalDistance(self, robot, factory):\n        \"\"\"\n        :type robot: List[int]\n        :type factory: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Prepare sorted lists of robot positions and individual factory repair slots for optimal matching.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "merge-sort",
+        "enumeration"
+      ],
+      "cues": [
+        "robot-positions",
+        "factory-positions",
+        "limitj"
+      ],
+      "constraints": [
+        "all-robots-repaired"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum total distance by greedily matching sorted robots to sorted factory slots.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimize-total-distance",
+        "total-distance-traveled"
+      ],
+      "constraints": [
+        "all-robots-repaired"
+      ]
+    }
+  ]
+}

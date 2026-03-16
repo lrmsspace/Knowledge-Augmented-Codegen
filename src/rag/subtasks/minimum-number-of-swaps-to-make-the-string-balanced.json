@@ -1,0 +1,40 @@
+{
+  "slug": "minimum-number-of-swaps-to-make-the-string-balanced",
+  "link": "https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/",
+  "difficulty": "Medium",
+  "index": "1440",
+  "description_full": "You are given a 0-indexed string s of even length n. The string consists of exactly n / 2 opening brackets '[' and n / 2 closing brackets ']'.\n\nA string is called balanced if and only if:\n\n\n\tIt is the empty string, or\n\tIt can be written as AB, where both A and B are balanced strings, or\n\tIt can be written as [C], where C is a balanced string.\n\n\nYou may swap the brackets at any two indices any number of times.\n\nReturn the minimum number of swaps to make s balanced.\n\n \nExample 1:\n\n\nInput: s = \"][][\"\nOutput: 1\nExplanation: You can make the string balanced by swapping index 0 with index 3.\nThe resulting string is \"[[]]\".\n\n\nExample 2:\n\n\nInput: s = \"]]][[[\"\nOutput: 2\nExplanation: You can do the following to make the string balanced:\n- Swap index 0 with index 4. s = \"[]][][\".\n- Swap index 1 with index 5. s = \"[[][]]\".\nThe resulting string is \"[[][]]\".\n\n\nExample 3:\n\n\nInput: s = \"[]\"\nOutput: 0\nExplanation: The string is already balanced.\n\n\n \nConstraints:\n\n\n\tn == s.length\n\t2 <= n <= 106\n\tn is even.\n\ts[i] is either '[' or ']'.\n\tThe number of opening brackets '[' equals n / 2, and the number of closing brackets ']' equals n / 2.\n\n",
+  "description": "You are given a 0-indexed string s of even length n. The string consists of exactly n / 2 opening brackets '[' and n / 2 closing brackets ']'.\n\nA string is called balanced if and only if:\n\n\n\tIt is the empty string, or\n\tIt can be written as AB, where both A and B are balanced strings, or\n\tIt can be written as [C], where C is a balanced string.\n\n\nYou may swap the brackets at any two indices any number of times.\n\nReturn the minimum number of swaps to make s balanced.",
+  "example": "Input: s = \"][][\"\nOutput: 1\nExplanation: You can make the string balanced by swapping index 0 with index 3.\nThe resulting string is \"[[]]\".",
+  "constraints_text": "n == s.length\n\t2 <= n <= 106\n\tn is even.\n\ts[i] is either '[' or ']'.\n\tThe number of opening brackets '[' equals n / 2, and the number of closing brackets ']' equals n / 2.",
+  "templates": {
+    "c": "int minSwaps(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minSwaps(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minSwaps = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minSwaps(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, tracking bracket balance to count closing brackets that cause an imbalance, then calculate minimum swaps.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "minimum-number-of-swaps",
+        "balanced-string",
+        "n-2-opening-brackets",
+        "n-2-closing-brackets"
+      ],
+      "constraints": [
+        "n-10-6",
+        "n-is-even"
+      ]
+    }
+  ]
+}

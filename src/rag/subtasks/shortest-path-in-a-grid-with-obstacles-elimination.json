@@ -1,0 +1,40 @@
+{
+  "slug": "shortest-path-in-a-grid-with-obstacles-elimination",
+  "link": "https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/",
+  "difficulty": "Hard",
+  "index": "1974",
+  "description_full": "You are given an m x n integer matrix grid where each cell is either 0 (empty) or 1 (obstacle). You can move up, down, left, or right from and to an empty cell in one step.\n\nReturn the minimum number of steps to walk from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1) given that you can eliminate at most k obstacles. If it is not possible to find such walk return -1.\n\n \nExample 1:\n\n\nInput: grid = [[0,0,0],[1,1,0],[0,0,0],[0,1,1],[0,0,0]], k = 1\nOutput: 6\nExplanation: \nThe shortest path without eliminating any obstacle is 10.\nThe shortest path with one obstacle elimination at position (3,2) is 6. Such path is (0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (4,2).\n\n\nExample 2:\n\n\nInput: grid = [[0,1,1],[1,1,1],[1,0,0]], k = 1\nOutput: -1\nExplanation: We need to eliminate at least two obstacles to find such a walk.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 40\n\t1 <= k <= m * n\n\tgrid[i][j] is either 0 or 1.\n\tgrid[0][0] == grid[m - 1][n - 1] == 0\n\n",
+  "description": "You are given an m x n integer matrix grid where each cell is either 0 (empty) or 1 (obstacle). You can move up, down, left, or right from and to an empty cell in one step.\n\nReturn the minimum number of steps to walk from the upper left corner (0, 0) to the lower right corner (m - 1, n - 1) given that you can eliminate at most k obstacles. If it is not possible to find such walk return -1.",
+  "example": "Input: grid = [[0,0,0],[1,1,0],[0,0,0],[0,1,1],[0,0,0]], k = 1\nOutput: 6\nExplanation: \nThe shortest path without eliminating any obstacle is 10.\nThe shortest path with one obstacle elimination at position (3,2) is 6. Such path is (0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (4,2).",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 40\n\t1 <= k <= m * n\n\tgrid[i][j] is either 0 or 1.\n\tgrid[0][0] == grid[m - 1][n - 1] == 0",
+  "templates": {
+    "c": "int shortestPath(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int shortestPath(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestPath(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar shortestPath = function(grid, k) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestPath(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a Breadth-First Search on the grid, tracking the number of remaining obstacle eliminations to find the shortest path.",
+      "structures": [
+        "matrix",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "minimum-number-of-steps",
+        "walk-from-0-0-to-m-1-n-1",
+        "eliminate-at-most-k-obstacles",
+        "return-1-if-not-possible"
+      ],
+      "constraints": [
+        "m-n-40",
+        "k-m-n"
+      ]
+    }
+  ]
+}

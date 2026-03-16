@@ -1,0 +1,70 @@
+{
+  "slug": "minimum-division-operations-to-make-array-non-decreasing",
+  "link": "https://leetcode.com/problems/minimum-division-operations-to-make-array-non-decreasing/",
+  "difficulty": "Medium",
+  "index": "2570",
+  "description_full": "You are given an integer array nums.\n\nAny positive divisor of a natural number x that is strictly less than x is called a proper divisor of x. For example, 2 is a proper divisor of 4, while 6 is not a proper divisor of 6.\n\nYou are allowed to perform an operation any number of times on nums, where in each operation you select any one element from nums and divide it by its greatest proper divisor.\n\nReturn the minimum number of operations required to make the array non-decreasing.\n\nIf it is not possible to make the array non-decreasing using any number of operations, return -1.\n\n \nExample 1:\n\n\nInput: nums = [25,7]\n\nOutput: 1\n\nExplanation:\n\nUsing a single operation, 25 gets divided by 5 and nums becomes [5, 7].\n\n\nExample 2:\n\n\nInput: nums = [7,7,6]\n\nOutput: -1\n\n\nExample 3:\n\n\nInput: nums = [1,1,1,1]\n\nOutput: 0\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 106\n\n",
+  "description": "You are given an integer array nums.\n\nAny positive divisor of a natural number x that is strictly less than x is called a proper divisor of x. For example, 2 is a proper divisor of 4, while 6 is not a proper divisor of 6.\n\nYou are allowed to perform an operation any number of times on nums, where in each operation you select any one element from nums and divide it by its greatest proper divisor.\n\nReturn the minimum number of operations required to make the array non-decreasing.\n\nIf it is not possible to make the array non-decreasing using any number of operations, return -1.",
+  "example": "Input: nums = [25,7]\n\nOutput: 1\n\nExplanation:\n\nUsing a single operation, 25 gets divided by 5 and nums becomes [5, 7].",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 106",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute the smallest prime factor for all numbers up to 10^6.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sieve"
+      ],
+      "cues": [
+        "greatest-proper-divisor"
+      ],
+      "constraints": [
+        "nums-i-10-6"
+      ]
+    },
+    {
+      "intent": "For each number up to 10^6, generate all possible values it can be reduced to and the operations required.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "divide-it-by-its-greatest-proper-divisor",
+        "any-number-of-times"
+      ],
+      "constraints": [
+        "nums-i-10-6"
+      ]
+    },
+    {
+      "intent": "Iterate through the input array from right to left, greedily selecting the largest valid reduced value for each element.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "make-the-array-non-decreasing"
+      ],
+      "constraints": [
+        "1-nums-length-10-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "matrix-block-sum",
+  "link": "https://leetcode.com/problems/matrix-block-sum/",
+  "difficulty": "Medium",
+  "index": "1188",
+  "description_full": "Given a m x n matrix mat and an integer k, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for:\n\n\n\ti - k <= r <= i + k,\n\tj - k <= c <= j + k, and\n\t(r, c) is a valid position in the matrix.\n\n\n \nExample 1:\n\n\nInput: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 1\nOutput: [[12,21,16],[27,45,33],[24,39,28]]\n\n\nExample 2:\n\n\nInput: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 2\nOutput: [[45,45,45],[45,45,45],[45,45,45]]\n\n\n \nConstraints:\n\n\n\tm == mat.length\n\tn == mat[i].length\n\t1 <= m, n, k <= 100\n\t1 <= mat[i][j] <= 100\n\n",
+  "description": "Given a m x n matrix mat and an integer k, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for:\n\n\n\ti - k <= r <= i + k,\n\tj - k <= c <= j + k, and\n\t(r, c) is a valid position in the matrix.",
+  "example": "Input: mat = [[1,2,3],[4,5,6],[7,8,9]], k = 1\nOutput: [[12,21,16],[27,45,33],[24,39,28]]",
+  "constraints_text": "m == mat.length\n\tn == mat[i].length\n\t1 <= m, n, k <= 100\n\t1 <= mat[i][j] <= 100",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** matrixBlockSum(int** mat, int matSize, int* matColSize, int k, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] matrixBlockSum(int[][] mat, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} k\n * @return {number[][]}\n */\nvar matrixBlockSum = function(mat, k) {\n    \n};",
+    "python": "class Solution(object):\n    def matrixBlockSum(self, mat, k):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute a 2D prefix sum array to enable efficient O(1) sum queries for any rectangular region.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-of-all-elements-mat-r-c"
+      ],
+      "constraints": [
+        "m-n-100"
+      ]
+    },
+    {
+      "intent": "Iterate through each cell of the answer matrix and calculate its value using the precomputed prefix sums.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-a-matrix-answer",
+        "i-k-r-i-k",
+        "j-k-c-j-k",
+        "valid-position"
+      ],
+      "constraints": [
+        "m-n-k-100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "minimum-incompatibility",
+  "link": "https://leetcode.com/problems/minimum-incompatibility/",
+  "difficulty": "Hard",
+  "index": "2052",
+  "description_full": "You are given an integer array nums​​​ and an integer k. You are asked to distribute this array into k subsets of equal size such that there are no two equal elements in the same subset.\n\nA subset's incompatibility is the difference between the maximum and minimum elements in that array.\n\nReturn the minimum possible sum of incompatibilities of the k subsets after distributing the array optimally, or return -1 if it is not possible.\n\nA subset is a group integers that appear in the array with no particular order.\n\n \nExample 1:\n\n\nInput: nums = [1,2,1,4], k = 2\nOutput: 4\nExplanation: The optimal distribution of subsets is [1,2] and [1,4].\nThe incompatibility is (2-1) + (4-1) = 4.\nNote that [1,1] and [2,4] would result in a smaller sum, but the first subset contains 2 equal elements.\n\nExample 2:\n\n\nInput: nums = [6,3,8,1,3,1,2,2], k = 4\nOutput: 6\nExplanation: The optimal distribution of subsets is [1,2], [2,3], [6,8], and [1,3].\nThe incompatibility is (2-1) + (3-2) + (8-6) + (3-1) = 6.\n\n\nExample 3:\n\n\nInput: nums = [5,3,3,6,3,3], k = 3\nOutput: -1\nExplanation: It is impossible to distribute nums into 3 subsets where no two elements are equal in the same subset.\n\n\n \nConstraints:\n\n\n\t1 <= k <= nums.length <= 16\n\tnums.length is divisible by k\n\t1 <= nums[i] <= nums.length\n\n",
+  "description": "You are given an integer array nums​​​ and an integer k. You are asked to distribute this array into k subsets of equal size such that there are no two equal elements in the same subset.\n\nA subset's incompatibility is the difference between the maximum and minimum elements in that array.\n\nReturn the minimum possible sum of incompatibilities of the k subsets after distributing the array optimally, or return -1 if it is not possible.\n\nA subset is a group integers that appear in the array with no particular order.",
+  "example": "Input: nums = [1,2,1,4], k = 2\nOutput: 4\nExplanation: The optimal distribution of subsets is [1,2] and [1,4].\nThe incompatibility is (2-1) + (4-1) = 4.\nNote that [1,1] and [2,4] would result in a smaller sum, but the first subset contains 2 equal elements.",
+  "constraints_text": "1 <= k <= nums.length <= 16\n\tnums.length is divisible by k\n\t1 <= nums[i] <= nums.length",
+  "templates": {
+    "c": "int minimumIncompatibility(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumIncompatibility(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumIncompatibility(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minimumIncompatibility = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumIncompatibility(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform initial data preparation, check for trivial impossible cases, and initialize the dynamic programming table.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "nums-length-is-divisible-by-k",
+        "return-1-if-it-is-not-possible"
+      ],
+      "constraints": [
+        "1-k-nums-length-16"
+      ]
+    },
+    {
+      "intent": "Precompute the incompatibility cost for all possible valid subsets of the required size.",
+      "structures": [
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "subset-s-incompatibility-is-the-difference-between-the-maximum-and-minimum-elements",
+        "no-two-equal-elements-in-the-same-subset"
+      ],
+      "constraints": [
+        "subset-size-nums-length-k"
+      ]
+    },
+    {
+      "intent": "Apply bitmask dynamic programming to find the minimum total incompatibility by iteratively forming subsets.",
+      "structures": [
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "dp-1d",
+        "bitmask-dp",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-possible-sum",
+        "distribute-this-array-into-k-subsets",
+        "nums-length-16"
+      ],
+      "constraints": [
+        "nums-length-16"
+      ]
+    }
+  ]
+}

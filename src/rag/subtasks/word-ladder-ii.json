@@ -1,0 +1,63 @@
+{
+  "slug": "word-ladder-ii",
+  "link": "https://leetcode.com/problems/word-ladder-ii/",
+  "difficulty": "Hard",
+  "index": "1791",
+  "description_full": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:\n\n\n\tEvery adjacent pair of words differs by a single letter.\n\tEvery si for 1 <= i <= k is in wordList. Note that beginWord does not need to be in wordList.\n\tsk == endWord\n\n\nGiven two words, beginWord and endWord, and a dictionary wordList, return all the shortest transformation sequences from beginWord to endWord, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words [beginWord, s1, s2, ..., sk].\n\n \nExample 1:\n\n\nInput: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: [[\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],[\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]]\nExplanation: There are 2 shortest transformation sequences:\n\"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> \"cog\"\n\"hit\" -> \"hot\" -> \"lot\" -> \"log\" -> \"cog\"\n\n\nExample 2:\n\n\nInput: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\nOutput: []\nExplanation: The endWord \"cog\" is not in wordList, therefore there is no valid transformation sequence.\n\n\n \nConstraints:\n\n\n\t1 <= beginWord.length <= 5\n\tendWord.length == beginWord.length\n\t1 <= wordList.length <= 500\n\twordList[i].length == beginWord.length\n\tbeginWord, endWord, and wordList[i] consist of lowercase English letters.\n\tbeginWord != endWord\n\tAll the words in wordList are unique.\n\tThe sum of all shortest transformation sequences does not exceed 105.\n\n",
+  "description": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:\n\n\n\tEvery adjacent pair of words differs by a single letter.\n\tEvery si for 1 <= i <= k is in wordList. Note that beginWord does not need to be in wordList.\n\tsk == endWord\n\n\nGiven two words, beginWord and endWord, and a dictionary wordList, return all the shortest transformation sequences from beginWord to endWord, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words [beginWord, s1, s2, ..., sk].",
+  "example": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: [[\"hit\",\"hot\",\"dot\",\"dog\",\"cog\"],[\"hit\",\"hot\",\"lot\",\"log\",\"cog\"]]\nExplanation: There are 2 shortest transformation sequences:\n\"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> \"cog\"\n\"hit\" -> \"hot\" -> \"lot\" -> \"log\" -> \"cog\"",
+  "constraints_text": "1 <= beginWord.length <= 5\n\tendWord.length == beginWord.length\n\t1 <= wordList.length <= 500\n\twordList[i].length == beginWord.length\n\tbeginWord, endWord, and wordList[i] consist of lowercase English letters.\n\tbeginWord != endWord\n\tAll the words in wordList are unique.\n\tThe sum of all shortest transformation sequences does not exceed 105.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nchar*** findLadders(char* beginWord, char* endWord, char** wordList, int wordListSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} beginWord\n * @param {string} endWord\n * @param {string[]} wordList\n * @return {string[][]}\n */\nvar findLadders = function(beginWord, endWord, wordList) {\n    \n};",
+    "python": "class Solution(object):\n    def findLadders(self, beginWord, endWord, wordList):\n        \"\"\"\n        :type beginWord: str\n        :type endWord: str\n        :type wordList: List[str]\n        :rtype: List[List[str]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute shortest distances from beginWord to all reachable words using BFS and efficient word lookup.",
+      "structures": [
+        "queue",
+        "string",
+        "number",
+        "array",
+        "graph"
+      ],
+      "actions": [
+        "bfs",
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "shortest-transformation-sequences",
+        "differs-by-a-single-letter",
+        "wordlist"
+      ],
+      "constraints": [
+        "beginword-length-5",
+        "wordlist-length-500"
+      ]
+    },
+    {
+      "intent": "Reconstruct all shortest paths from beginWord to endWord using DFS/backtracking based on computed distances.",
+      "structures": [
+        "string",
+        "array",
+        "number",
+        "graph"
+      ],
+      "actions": [
+        "backtracking",
+        "dfs"
+      ],
+      "cues": [
+        "return-all-the-shortest-transformation-sequences",
+        "sk-endword"
+      ],
+      "constraints": [
+        "sum-of-all-shortest-transformation-sequences-does-not-exceed-105"
+      ]
+    }
+  ]
+}

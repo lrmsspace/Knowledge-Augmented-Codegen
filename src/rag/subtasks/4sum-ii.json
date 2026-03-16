@@ -1,0 +1,56 @@
+{
+  "slug": "4sum-ii",
+  "link": "https://leetcode.com/problems/4sum-ii/",
+  "difficulty": "Medium",
+  "index": "823",
+  "description_full": "Given four integer arrays nums1, nums2, nums3, and nums4 all of length n, return the number of tuples (i, j, k, l) such that:\n\n\n\t0 <= i, j, k, l < n\n\tnums1[i] + nums2[j] + nums3[k] + nums4[l] == 0\n\n\n \nExample 1:\n\n\nInput: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]\nOutput: 2\nExplanation:\nThe two tuples are:\n1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0\n2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0\n\n\nExample 2:\n\n\nInput: nums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]\nOutput: 1\n\n\n \nConstraints:\n\n\n\tn == nums1.length\n\tn == nums2.length\n\tn == nums3.length\n\tn == nums4.length\n\t1 <= n <= 200\n\t-228 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 228\n\n",
+  "description": "Given four integer arrays nums1, nums2, nums3, and nums4 all of length n, return the number of tuples (i, j, k, l) such that:\n\n\n\t0 <= i, j, k, l < n\n\tnums1[i] + nums2[j] + nums3[k] + nums4[l] == 0",
+  "example": "Input: nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]\nOutput: 2\nExplanation:\nThe two tuples are:\n1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0\n2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0",
+  "constraints_text": "n == nums1.length\n\tn == nums2.length\n\tn == nums3.length\n\tn == nums4.length\n\t1 <= n <= 200\n\t-228 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 228",
+  "templates": {
+    "c": "int fourSumCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nums3, int nums3Size, int* nums4, int nums4Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number[]} nums3\n * @param {number[]} nums4\n * @return {number}\n */\nvar fourSumCount = function(nums1, nums2, nums3, nums4) {\n    \n};",
+    "python": "class Solution(object):\n    def fourSumCount(self, nums1, nums2, nums3, nums4):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type nums3: List[int]\n        :type nums4: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute and store the frequencies of all possible sums of elements from nums1 and nums2.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "nums1-i-nums2-j",
+        "all-possible-sums"
+      ],
+      "constraints": [
+        "n-200"
+      ]
+    },
+    {
+      "intent": "Iterate through sums of elements from nums3 and nums4, counting matches with negative sums from the first pair.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "hashing"
+      ],
+      "cues": [
+        "nums3-k-nums4-l-0",
+        "count-tuples"
+      ],
+      "constraints": [
+        "n-200"
+      ]
+    }
+  ]
+}

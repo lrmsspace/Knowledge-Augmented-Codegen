@@ -1,0 +1,59 @@
+{
+  "slug": "check-if-every-row-and-column-contains-all-numbers",
+  "link": "https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers/",
+  "difficulty": "Easy",
+  "index": "457",
+  "description_full": "An n x n matrix is valid if every row and every column contains all the integers from 1 to n (inclusive).\n\nGiven an n x n integer matrix matrix, return true if the matrix is valid. Otherwise, return false.\n\n \nExample 1:\n\n\nInput: matrix = [[1,2,3],[3,1,2],[2,3,1]]\nOutput: true\nExplanation: In this case, n = 3, and every row and column contains the numbers 1, 2, and 3.\nHence, we return true.\n\n\nExample 2:\n\n\nInput: matrix = [[1,1,1],[1,2,3],[1,2,3]]\nOutput: false\nExplanation: In this case, n = 3, but the first row and the first column do not contain the numbers 2 or 3.\nHence, we return false.\n\n\n \nConstraints:\n\n\n\tn == matrix.length == matrix[i].length\n\t1 <= n <= 100\n\t1 <= matrix[i][j] <= n\n\n",
+  "description": "An n x n matrix is valid if every row and every column contains all the integers from 1 to n (inclusive).\n\nGiven an n x n integer matrix matrix, return true if the matrix is valid. Otherwise, return false.",
+  "example": "Input: matrix = [[1,2,3],[3,1,2],[2,3,1]]\nOutput: true\nExplanation: In this case, n = 3, and every row and column contains the numbers 1, 2, and 3.\nHence, we return true.",
+  "constraints_text": "n == matrix.length == matrix[i].length\n\t1 <= n <= 100\n\t1 <= matrix[i][j] <= n",
+  "templates": {
+    "c": "bool checkValid(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkValid(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkValid(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {boolean}\n */\nvar checkValid = function(matrix) {\n    \n};",
+    "python": "class Solution(object):\n    def checkValid(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Verify each row contains all integers from 1 to n exactly once.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "every-row",
+        "all-integers-from-1-to-n"
+      ],
+      "constraints": [
+        "n-matrix-length",
+        "1-n-100",
+        "1-matrix-i-j-n"
+      ]
+    },
+    {
+      "intent": "Verify each column contains all integers from 1 to n exactly once.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "every-column",
+        "all-integers-from-1-to-n"
+      ],
+      "constraints": [
+        "n-matrix-length",
+        "1-n-100",
+        "1-matrix-i-j-n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "find-three-consecutive-integers-that-sum-to-a-given-number",
+  "link": "https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/",
+  "difficulty": "Medium",
+  "index": "1520",
+  "description_full": "Given an integer num, return three consecutive integers (as a sorted array) that sum to num. If num cannot be expressed as the sum of three consecutive integers, return an empty array.\n\n \nExample 1:\n\n\nInput: num = 33\nOutput: [10,11,12]\nExplanation: 33 can be expressed as 10 + 11 + 12 = 33.\n10, 11, 12 are 3 consecutive integers, so we return [10, 11, 12].\n\n\nExample 2:\n\n\nInput: num = 4\nOutput: []\nExplanation: There is no way to express 4 as the sum of 3 consecutive integers.\n\n\n \nConstraints:\n\n\n\t0 <= num <= 1015\n\n",
+  "description": "Given an integer num, return three consecutive integers (as a sorted array) that sum to num. If num cannot be expressed as the sum of three consecutive integers, return an empty array.",
+  "example": "Input: num = 33\nOutput: [10,11,12]\nExplanation: 33 can be expressed as 10 + 11 + 12 = 33.\n10, 11, 12 are 3 consecutive integers, so we return [10, 11, 12].",
+  "constraints_text": "0 <= num <= 1015",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* sumOfThree(long long num, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<long long> sumOfThree(long long num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] sumOfThree(long num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number[]}\n */\nvar sumOfThree = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def sumOfThree(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if num can be expressed as the sum of three consecutive integers and construct the result array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "three-consecutive-integers",
+        "sum-to-num",
+        "empty-array"
+      ],
+      "constraints": [
+        "0-num-10-15"
+      ]
+    }
+  ]
+}

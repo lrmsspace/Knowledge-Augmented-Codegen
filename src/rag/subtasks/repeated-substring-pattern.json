@@ -1,0 +1,53 @@
+{
+  "slug": "repeated-substring-pattern",
+  "link": "https://leetcode.com/problems/repeated-substring-pattern/",
+  "difficulty": "Easy",
+  "index": "95",
+  "description_full": "Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.\n\n \nExample 1:\n\n\nInput: s = \"abab\"\nOutput: true\nExplanation: It is the substring \"ab\" twice.\n\n\nExample 2:\n\n\nInput: s = \"aba\"\nOutput: false\n\n\nExample 3:\n\n\nInput: s = \"abcabcabcabc\"\nOutput: true\nExplanation: It is the substring \"abc\" four times or the substring \"abcabc\" twice.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists of lowercase English letters.\n\n",
+  "description": "Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.",
+  "example": "Input: s = \"abab\"\nOutput: true\nExplanation: It is the substring \"ab\" twice.",
+  "constraints_text": "1 <= s.length <= 104\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "bool repeatedSubstringPattern(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool repeatedSubstringPattern(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean repeatedSubstringPattern(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar repeatedSubstringPattern = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def repeatedSubstringPattern(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the KMP longest proper prefix suffix (LPS) array for the given string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "kmp"
+      ],
+      "cues": [
+        "substring-of-it",
+        "multiple-copies"
+      ],
+      "constraints": [
+        "1-s-length-104"
+      ]
+    },
+    {
+      "intent": "Determine if the string can be formed by repeating a substring using the computed LPS value.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "counting"
+      ],
+      "cues": [
+        "check-if-it-can-be-constructed",
+        "appending-multiple-copies"
+      ],
+      "constraints": [
+        "s-consists-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

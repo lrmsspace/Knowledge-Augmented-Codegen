@@ -1,0 +1,62 @@
+{
+  "slug": "maximum-performance-of-a-team",
+  "link": "https://leetcode.com/problems/maximum-performance-of-a-team/",
+  "difficulty": "Hard",
+  "index": "1993",
+  "description_full": "You are given two integers n and k and two integer arrays speed and efficiency both of length n. There are n engineers numbered from 1 to n. speed[i] and efficiency[i] represent the speed and efficiency of the ith engineer respectively.\n\nChoose at most k different engineers out of the n engineers to form a team with the maximum performance.\n\nThe performance of a team is the sum of its engineers' speeds multiplied by the minimum efficiency among its engineers.\n\nReturn the maximum performance of this team. Since the answer can be a huge number, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 2\nOutput: 60\nExplanation: \nWe have the maximum performance of the team by selecting engineer 2 (with speed=10 and efficiency=4) and engineer 5 (with speed=5 and efficiency=7). That is, performance = (10 + 5) * min(4, 7) = 60.\n\n\nExample 2:\n\n\nInput: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 3\nOutput: 68\nExplanation:\nThis is the same example as the first but k = 3. We can select engineer 1, engineer 2 and engineer 5 to get the maximum performance of the team. That is, performance = (2 + 10 + 5) * min(5, 4, 7) = 68.\n\n\nExample 3:\n\n\nInput: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 4\nOutput: 72\n\n\n \nConstraints:\n\n\n\t1 <= k <= n <= 105\n\tspeed.length == n\n\tefficiency.length == n\n\t1 <= speed[i] <= 105\n\t1 <= efficiency[i] <= 108\n\n",
+  "description": "You are given two integers n and k and two integer arrays speed and efficiency both of length n. There are n engineers numbered from 1 to n. speed[i] and efficiency[i] represent the speed and efficiency of the ith engineer respectively.\n\nChoose at most k different engineers out of the n engineers to form a team with the maximum performance.\n\nThe performance of a team is the sum of its engineers' speeds multiplied by the minimum efficiency among its engineers.\n\nReturn the maximum performance of this team. Since the answer can be a huge number, return it modulo 109 + 7.",
+  "example": "Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 2\nOutput: 60\nExplanation: \nWe have the maximum performance of the team by selecting engineer 2 (with speed=10 and efficiency=4) and engineer 5 (with speed=5 and efficiency=7). That is, performance = (10 + 5) * min(4, 7) = 60.",
+  "constraints_text": "1 <= k <= n <= 105\n\tspeed.length == n\n\tefficiency.length == n\n\t1 <= speed[i] <= 105\n\t1 <= efficiency[i] <= 108",
+  "templates": {
+    "c": "int maxPerformance(int n, int* speed, int speedSize, int* efficiency, int efficiencySize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxPerformance(int n, vector<int>& speed, vector<int>& efficiency, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPerformance(int n, int[] speed, int[] efficiency, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} speed\n * @param {number[]} efficiency\n * @param {number} k\n * @return {number}\n */\nvar maxPerformance = function(n, speed, efficiency, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxPerformance(self, n, speed, efficiency, k):\n        \"\"\"\n        :type n: int\n        :type speed: List[int]\n        :type efficiency: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Pair engineer speed and efficiency, then sort all engineers by efficiency in descending order.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "n-engineers",
+        "speed-and-efficiency",
+        "maximum-performance"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    },
+    {
+      "intent": "Iterate through sorted engineers, maintain a min-heap of k speeds, update current speed sum, and calculate maximum performance.",
+      "structures": [
+        "heap",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "heap-select",
+        "simulation"
+      ],
+      "cues": [
+        "choose-at-most-k",
+        "sum-of-its-engineers-speeds",
+        "minimum-efficiency",
+        "maximum-performance",
+        "return-it-modulo-10-9-7"
+      ],
+      "constraints": [
+        "1-k-n-10-5",
+        "speed-i-10-5",
+        "efficiency-i-10-8"
+      ]
+    }
+  ]
+}

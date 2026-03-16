@@ -1,0 +1,37 @@
+{
+  "slug": "reverse-only-letters",
+  "link": "https://leetcode.com/problems/reverse-only-letters/",
+  "difficulty": "Easy",
+  "index": "200",
+  "description_full": "Given a string s, reverse the string according to the following rules:\n\n\n\tAll the characters that are not English letters remain in the same position.\n\tAll the English letters (lowercase or uppercase) should be reversed.\n\n\nReturn s after reversing it.\n\n \nExample 1:\nInput: s = \"ab-cd\"\nOutput: \"dc-ba\"\nExample 2:\nInput: s = \"a-bC-dEf-ghIj\"\nOutput: \"j-Ih-gfE-dCba\"\nExample 3:\nInput: s = \"Test1ng-Leet=code-Q!\"\nOutput: \"Qedo1ct-eeLg=ntse-T!\"\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists of characters with ASCII values in the range [33, 122].\n\ts does not contain '\\\"' or '\\\\'.\n\n",
+  "description": "Given a string s, reverse the string according to the following rules:\n\n\n\tAll the characters that are not English letters remain in the same position.\n\tAll the English letters (lowercase or uppercase) should be reversed.\n\n\nReturn s after reversing it.",
+  "example": "Input: s = \"ab-cd\"\nOutput: \"dc-ba\"",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists of characters with ASCII values in the range [33, 122].\n\ts does not contain '\\\"' or '\\\\'.",
+  "templates": {
+    "c": "char* reverseOnlyLetters(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string reverseOnlyLetters(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reverseOnlyLetters(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar reverseOnlyLetters = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def reverseOnlyLetters(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Reverse only the English letters in the string, preserving the positions of all other characters.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers"
+      ],
+      "cues": [
+        "reverse-the-string",
+        "not-english-letters-remain",
+        "english-letters-should-be-reversed"
+      ],
+      "constraints": [
+        "1-s-length-100",
+        "ascii-values-in-range-33-122"
+      ]
+    }
+  ]
+}

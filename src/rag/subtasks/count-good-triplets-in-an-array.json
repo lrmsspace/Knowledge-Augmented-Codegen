@@ -1,0 +1,88 @@
+{
+  "slug": "count-good-triplets-in-an-array",
+  "link": "https://leetcode.com/problems/count-good-triplets-in-an-array/",
+  "difficulty": "Hard",
+  "index": "2148",
+  "description_full": "You are given two 0-indexed arrays nums1 and nums2 of length n, both of which are permutations of [0, 1, ..., n - 1].\n\nA good triplet is a set of 3 distinct values which are present in increasing order by position both in nums1 and nums2. In other words, if we consider pos1v as the index of the value v in nums1 and pos2v as the index of the value v in nums2, then a good triplet will be a set (x, y, z) where 0 <= x, y, z <= n - 1, such that pos1x < pos1y < pos1z and pos2x < pos2y < pos2z.\n\nReturn the total number of good triplets.\n\n \nExample 1:\n\n\nInput: nums1 = [2,0,1,3], nums2 = [0,1,2,3]\nOutput: 1\nExplanation: \nThere are 4 triplets (x,y,z) such that pos1x < pos1y < pos1z. They are (2,0,1), (2,0,3), (2,1,3), and (0,1,3). \nOut of those triplets, only the triplet (0,1,3) satisfies pos2x < pos2y < pos2z. Hence, there is only 1 good triplet.\n\n\nExample 2:\n\n\nInput: nums1 = [4,0,1,3,2], nums2 = [4,1,0,2,3]\nOutput: 4\nExplanation: The 4 good triplets are (4,0,3), (4,0,2), (4,1,3), and (4,1,2).\n\n\n \nConstraints:\n\n\n\tn == nums1.length == nums2.length\n\t3 <= n <= 105\n\t0 <= nums1[i], nums2[i] <= n - 1\n\tnums1 and nums2 are permutations of [0, 1, ..., n - 1].\n\n",
+  "description": "You are given two 0-indexed arrays nums1 and nums2 of length n, both of which are permutations of [0, 1, ..., n - 1].\n\nA good triplet is a set of 3 distinct values which are present in increasing order by position both in nums1 and nums2. In other words, if we consider pos1v as the index of the value v in nums1 and pos2v as the index of the value v in nums2, then a good triplet will be a set (x, y, z) where 0 <= x, y, z <= n - 1, such that pos1x < pos1y < pos1z and pos2x < pos2y < pos2z.\n\nReturn the total number of good triplets.",
+  "example": "Input: nums1 = [2,0,1,3], nums2 = [0,1,2,3]\nOutput: 1\nExplanation: \nThere are 4 triplets (x,y,z) such that pos1x < pos1y < pos1z. They are (2,0,1), (2,0,3), (2,1,3), and (0,1,3). \nOut of those triplets, only the triplet (0,1,3) satisfies pos2x < pos2y < pos2z. Hence, there is only 1 good triplet.",
+  "constraints_text": "n == nums1.length == nums2.length\n\t3 <= n <= 105\n\t0 <= nums1[i], nums2[i] <= n - 1\n\tnums1 and nums2 are permutations of [0, 1, ..., n - 1].",
+  "templates": {
+    "c": "long long goodTriplets(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long goodTriplets(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long goodTriplets(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar goodTriplets = function(nums1, nums2) {\n    \n};",
+    "python": "class Solution(object):\n    def goodTriplets(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Transform input arrays into a single array representing relative order.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "pos1v",
+        "pos2v",
+        "permutations"
+      ],
+      "constraints": [
+        "n-105"
+      ]
+    },
+    {
+      "intent": "Calculate count of smaller elements to the left for each position.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "bit-fenwick",
+        "counting"
+      ],
+      "cues": [
+        "pos1x-pos1y",
+        "pos2x-pos2y"
+      ],
+      "constraints": [
+        "n-105"
+      ]
+    },
+    {
+      "intent": "Calculate count of larger elements to the right for each position.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "bit-fenwick",
+        "counting"
+      ],
+      "cues": [
+        "pos1y-pos1z",
+        "pos2y-pos2z"
+      ],
+      "constraints": [
+        "n-105"
+      ]
+    },
+    {
+      "intent": "Aggregate left and right counts to find total good triplets.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "total-number-of-good-triplets"
+      ],
+      "constraints": [
+        "n-105"
+      ]
+    }
+  ]
+}

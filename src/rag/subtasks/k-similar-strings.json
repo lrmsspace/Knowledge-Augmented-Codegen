@@ -1,0 +1,59 @@
+{
+  "slug": "k-similar-strings",
+  "link": "https://leetcode.com/problems/k-similar-strings/",
+  "difficulty": "Hard",
+  "index": "1903",
+  "description_full": "Strings s1 and s2 are k-similar (for some non-negative integer k) if we can swap the positions of two letters in s1 exactly k times so that the resulting string equals s2.\n\nGiven two anagrams s1 and s2, return the smallest k for which s1 and s2 are k-similar.\n\n \nExample 1:\n\n\nInput: s1 = \"ab\", s2 = \"ba\"\nOutput: 1\nExplanation: The two string are 1-similar because we can use one swap to change s1 to s2: \"ab\" --> \"ba\".\n\n\nExample 2:\n\n\nInput: s1 = \"abc\", s2 = \"bca\"\nOutput: 2\nExplanation: The two strings are 2-similar because we can use two swaps to change s1 to s2: \"abc\" --> \"bac\" --> \"bca\".\n\n\n \nConstraints:\n\n\n\t1 <= s1.length <= 20\n\ts2.length == s1.length\n\ts1 and s2 contain only lowercase letters from the set {'a', 'b', 'c', 'd', 'e', 'f'}.\n\ts2 is an anagram of s1.\n\n",
+  "description": "Strings s1 and s2 are k-similar (for some non-negative integer k) if we can swap the positions of two letters in s1 exactly k times so that the resulting string equals s2.\n\nGiven two anagrams s1 and s2, return the smallest k for which s1 and s2 are k-similar.",
+  "example": "Input: s1 = \"ab\", s2 = \"ba\"\nOutput: 1\nExplanation: The two string are 1-similar because we can use one swap to change s1 to s2: \"ab\" --> \"ba\".",
+  "constraints_text": "1 <= s1.length <= 20\n\ts2.length == s1.length\n\ts1 and s2 contain only lowercase letters from the set {'a', 'b', 'c', 'd', 'e', 'f'}.\n\ts2 is an anagram of s1.",
+  "templates": {
+    "c": "int kSimilarity(char* s1, char* s2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int kSimilarity(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int kSimilarity(String s1, String s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {number}\n */\nvar kSimilarity = function(s1, s2) {\n    \n};",
+    "python": "class Solution(object):\n    def kSimilarity(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize the BFS queue and a hash-based set to track visited string states and their minimum swap counts.",
+      "structures": [
+        "queue",
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "bfs",
+        "hashing"
+      ],
+      "cues": [
+        "smallest-k",
+        "s1",
+        "s2"
+      ],
+      "constraints": [
+        "s1-length-20"
+      ]
+    },
+    {
+      "intent": "Iteratively generate new string states by performing single swaps, prioritizing swaps that fix the first differing character.",
+      "structures": [
+        "string",
+        "queue"
+      ],
+      "actions": [
+        "bfs",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "swap-positions",
+        "equals-s2",
+        "anagrams"
+      ],
+      "constraints": [
+        "s1-length-20"
+      ]
+    }
+  ]
+}

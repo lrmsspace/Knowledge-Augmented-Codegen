@@ -1,0 +1,58 @@
+{
+  "slug": "choose-k-elements-with-maximum-sum",
+  "link": "https://leetcode.com/problems/choose-k-elements-with-maximum-sum/",
+  "difficulty": "Medium",
+  "index": "2621",
+  "description_full": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k.\n\nFor each index i from 0 to n - 1, perform the following:\n\n\n\tFind all indices j where nums1[j] is less than nums1[i].\n\tChoose at most k values of nums2[j] at these indices to maximize the total sum.\n\n\nReturn an array answer of size n, where answer[i] represents the result for the corresponding index i.\n\n \nExample 1:\n\n\nInput: nums1 = [4,2,1,5,3], nums2 = [10,20,30,40,50], k = 2\n\nOutput: [80,30,0,80,50]\n\nExplanation:\n\n\n\tFor i = 0: Select the 2 largest values from nums2 at indices [1, 2, 4] where nums1[j] < nums1[0], resulting in 50 + 30 = 80.\n\tFor i = 1: Select the 2 largest values from nums2 at index [2] where nums1[j] < nums1[1], resulting in 30.\n\tFor i = 2: No indices satisfy nums1[j] < nums1[2], resulting in 0.\n\tFor i = 3: Select the 2 largest values from nums2 at indices [0, 1, 2, 4] where nums1[j] < nums1[3], resulting in 50 + 30 = 80.\n\tFor i = 4: Select the 2 largest values from nums2 at indices [1, 2] where nums1[j] < nums1[4], resulting in 30 + 20 = 50.\n\n\n\nExample 2:\n\n\nInput: nums1 = [2,2,2,2], nums2 = [3,1,2,3], k = 1\n\nOutput: [0,0,0,0]\n\nExplanation:\n\nSince all elements in nums1 are equal, no indices satisfy the condition nums1[j] < nums1[i] for any i, resulting in 0 for all positions.\n\n\n \nConstraints:\n\n\n\tn == nums1.length == nums2.length\n\t1 <= n <= 105\n\t1 <= nums1[i], nums2[i] <= 106\n\t1 <= k <= n\n\n",
+  "description": "You are given two integer arrays, nums1 and nums2, both of length n, along with a positive integer k.\n\nFor each index i from 0 to n - 1, perform the following:\n\n\n\tFind all indices j where nums1[j] is less than nums1[i].\n\tChoose at most k values of nums2[j] at these indices to maximize the total sum.\n\n\nReturn an array answer of size n, where answer[i] represents the result for the corresponding index i.",
+  "example": "Input: nums1 = [4,2,1,5,3], nums2 = [10,20,30,40,50], k = 2\n\nOutput: [80,30,0,80,50]\n\nExplanation:\n\n\n\tFor i = 0: Select the 2 largest values from nums2 at indices [1, 2, 4] where nums1[j] < nums1[0], resulting in 50 + 30 = 80.\n\tFor i = 1: Select the 2 largest values from nums2 at index [2] where nums1[j] < nums1[1], resulting in 30.\n\tFor i = 2: No indices satisfy nums1[j] < nums1[2], resulting in 0.\n\tFor i = 3: Select the 2 largest values from nums2 at indices [0, 1, 2, 4] where nums1[j] < nums1[3], resulting in 50 + 30 = 80.\n\tFor i = 4: Select the 2 largest values from nums2 at indices [1, 2] where nums1[j] < nums1[4], resulting in 30 + 20 = 50.",
+  "constraints_text": "n == nums1.length == nums2.length\n\t1 <= n <= 105\n\t1 <= nums1[i], nums2[i] <= 106\n\t1 <= k <= n",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* findMaxSum(int* nums1, int nums1Size, int* nums2, int nums2Size, int k, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<long long> findMaxSum(vector<int>& nums1, vector<int>& nums2, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] findMaxSum(int[] nums1, int[] nums2, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number} k\n * @return {number[]}\n */\nvar findMaxSum = function(nums1, nums2, k) {\n    \n};",
+    "python": "class Solution(object):\n    def findMaxSum(self, nums1, nums2, k):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Combine nums1, nums2, and original indices into tuples, then sort these tuples based on nums1 values.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "merge-sort"
+      ],
+      "cues": [
+        "for-each-index-i",
+        "nums1-j-is-less-than-nums1-i"
+      ],
+      "constraints": [
+        "n-nums1-length-nums2-length"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted data, using a min-heap to maintain the k largest nums2 values and their sum for each relevant nums1 threshold.",
+      "structures": [
+        "array",
+        "heap"
+      ],
+      "actions": [
+        "sweep-line",
+        "greedy",
+        "heap-select"
+      ],
+      "cues": [
+        "choose-at-most-k-values",
+        "maximize-the-total-sum",
+        "return-an-array-answer"
+      ],
+      "constraints": [
+        "1-k-n",
+        "1-n-105"
+      ]
+    }
+  ]
+}

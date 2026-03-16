@@ -1,0 +1,38 @@
+{
+  "slug": "vowels-of-all-substrings",
+  "link": "https://leetcode.com/problems/vowels-of-all-substrings/",
+  "difficulty": "Medium",
+  "index": "1477",
+  "description_full": "Given a string word, return the sum of the number of vowels ('a', 'e', 'i', 'o', and 'u') in every substring of word.\n\nA substring is a contiguous (non-empty) sequence of characters within a string.\n\nNote: Due to the large constraints, the answer may not fit in a signed 32-bit integer. Please be careful during the calculations.\n\n \nExample 1:\n\n\nInput: word = \"aba\"\nOutput: 6\nExplanation: \nAll possible substrings are: \"a\", \"ab\", \"aba\", \"b\", \"ba\", and \"a\".\n- \"b\" has 0 vowels in it\n- \"a\", \"ab\", \"ba\", and \"a\" have 1 vowel each\n- \"aba\" has 2 vowels in it\nHence, the total sum of vowels = 0 + 1 + 1 + 1 + 1 + 2 = 6. \n\n\nExample 2:\n\n\nInput: word = \"abc\"\nOutput: 3\nExplanation: \nAll possible substrings are: \"a\", \"ab\", \"abc\", \"b\", \"bc\", and \"c\".\n- \"a\", \"ab\", and \"abc\" have 1 vowel each\n- \"b\", \"bc\", and \"c\" have 0 vowels each\nHence, the total sum of vowels = 1 + 1 + 1 + 0 + 0 + 0 = 3.\n\n\nExample 3:\n\n\nInput: word = \"ltcd\"\nOutput: 0\nExplanation: There are no vowels in any substring of \"ltcd\".\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 105\n\tword consists of lowercase English letters.\n\n",
+  "description": "Given a string word, return the sum of the number of vowels ('a', 'e', 'i', 'o', and 'u') in every substring of word.\n\nA substring is a contiguous (non-empty) sequence of characters within a string.\n\nNote: Due to the large constraints, the answer may not fit in a signed 32-bit integer. Please be careful during the calculations.",
+  "example": "Input: word = \"aba\"\nOutput: 6\nExplanation: \nAll possible substrings are: \"a\", \"ab\", \"aba\", \"b\", \"ba\", and \"a\".\n- \"b\" has 0 vowels in it\n- \"a\", \"ab\", \"ba\", and \"a\" have 1 vowel each\n- \"aba\" has 2 vowels in it\nHence, the total sum of vowels = 0 + 1 + 1 + 1 + 1 + 2 = 6.",
+  "constraints_text": "1 <= word.length <= 105\n\tword consists of lowercase English letters.",
+  "templates": {
+    "c": "long long countVowels(char* word) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long countVowels(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countVowels(String word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar countVowels = function(word) {\n    \n};",
+    "python": "class Solution(object):\n    def countVowels(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total sum of vowel occurrences across all substrings by summing each vowel's individual contribution.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "sum-of-the-number-of-vowels-in-every-substring",
+        "vowels-a-e-i-o-and-u"
+      ],
+      "constraints": [
+        "answer-may-not-fit-in-a-signed-32-bit-integer",
+        "1-word-length-105"
+      ]
+    }
+  ]
+}

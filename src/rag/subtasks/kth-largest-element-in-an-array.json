@@ -1,0 +1,37 @@
+{
+  "slug": "kth-largest-element-in-an-array",
+  "link": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+  "difficulty": "Medium",
+  "index": "730",
+  "description_full": "Given an integer array nums and an integer k, return the kth largest element in the array.\n\nNote that it is the kth largest element in the sorted order, not the kth distinct element.\n\nCan you solve it without sorting?\n\n \nExample 1:\nInput: nums = [3,2,1,5,6,4], k = 2\nOutput: 5\nExample 2:\nInput: nums = [3,2,3,1,2,4,5,5,6], k = 4\nOutput: 4\n\n \nConstraints:\n\n\n\t1 <= k <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n",
+  "description": "Given an integer array nums and an integer k, return the kth largest element in the array.\n\nNote that it is the kth largest element in the sorted order, not the kth distinct element.\n\nCan you solve it without sorting?",
+  "example": "Input: nums = [3,2,1,5,6,4], k = 2\nOutput: 5",
+  "constraints_text": "1 <= k <= nums.length <= 105\n\t-104 <= nums[i] <= 104",
+  "templates": {
+    "c": "int findKthLargest(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findKthLargest(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findKthLargest(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar findKthLargest = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def findKthLargest(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the element that would be at index `nums.length - k` if the array were sorted, using a partition-based selection algorithm.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "quickselect",
+        "divide-and-conquer"
+      ],
+      "cues": [
+        "kth-largest",
+        "without-sorting"
+      ],
+      "constraints": [
+        "1-k-nums-length-105"
+      ]
+    }
+  ]
+}

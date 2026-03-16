@@ -1,0 +1,67 @@
+{
+  "slug": "minimum-index-sum-of-two-lists",
+  "link": "https://leetcode.com/problems/minimum-index-sum-of-two-lists/",
+  "difficulty": "Easy",
+  "index": "133",
+  "description_full": "Given two arrays of strings list1 and list2, find the common strings with the least index sum.\n\nA common string is a string that appeared in both list1 and list2.\n\nA common string with the least index sum is a common string such that if it appeared at list1[i] and list2[j] then i + j should be the minimum value among all the other common strings.\n\nReturn all the common strings with the least index sum. Return the answer in any order.\n\n \nExample 1:\n\n\nInput: list1 = [\"Shogun\",\"Tapioca Express\",\"Burger King\",\"KFC\"], list2 = [\"Piatti\",\"The Grill at Torrey Pines\",\"Hungry Hunter Steakhouse\",\"Shogun\"]\nOutput: [\"Shogun\"]\nExplanation: The only common string is \"Shogun\".\n\n\nExample 2:\n\n\nInput: list1 = [\"Shogun\",\"Tapioca Express\",\"Burger King\",\"KFC\"], list2 = [\"KFC\",\"Shogun\",\"Burger King\"]\nOutput: [\"Shogun\"]\nExplanation: The common string with the least index sum is \"Shogun\" with index sum = (0 + 1) = 1.\n\n\nExample 3:\n\n\nInput: list1 = [\"happy\",\"sad\",\"good\"], list2 = [\"sad\",\"happy\",\"good\"]\nOutput: [\"sad\",\"happy\"]\nExplanation: There are three common strings:\n\"happy\" with index sum = (0 + 1) = 1.\n\"sad\" with index sum = (1 + 0) = 1.\n\"good\" with index sum = (2 + 2) = 4.\nThe strings with the least index sum are \"sad\" and \"happy\".\n\n\n \nConstraints:\n\n\n\t1 <= list1.length, list2.length <= 1000\n\t1 <= list1[i].length, list2[i].length <= 30\n\tlist1[i] and list2[i] consist of spaces ' ' and English letters.\n\tAll the strings of list1 are unique.\n\tAll the strings of list2 are unique.\n\tThere is at least a common string between list1 and list2.\n\n",
+  "description": "Given two arrays of strings list1 and list2, find the common strings with the least index sum.\n\nA common string is a string that appeared in both list1 and list2.\n\nA common string with the least index sum is a common string such that if it appeared at list1[i] and list2[j] then i + j should be the minimum value among all the other common strings.\n\nReturn all the common strings with the least index sum. Return the answer in any order.",
+  "example": "Input: list1 = [\"Shogun\",\"Tapioca Express\",\"Burger King\",\"KFC\"], list2 = [\"Piatti\",\"The Grill at Torrey Pines\",\"Hungry Hunter Steakhouse\",\"Shogun\"]\nOutput: [\"Shogun\"]\nExplanation: The only common string is \"Shogun\".",
+  "constraints_text": "1 <= list1.length, list2.length <= 1000\n\t1 <= list1[i].length, list2[i].length <= 30\n\tlist1[i] and list2[i] consist of spaces ' ' and English letters.\n\tAll the strings of list1 are unique.\n\tAll the strings of list2 are unique.\n\tThere is at least a common string between list1 and list2.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findRestaurant(char** list1, int list1Size, char** list2, int list2Size, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findRestaurant(vector<string>& list1, vector<string>& list2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] findRestaurant(String[] list1, String[] list2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} list1\n * @param {string[]} list2\n * @return {string[]}\n */\nvar findRestaurant = function(list1, list2) {\n    \n};",
+    "python": "class Solution(object):\n    def findRestaurant(self, list1, list2):\n        \"\"\"\n        :type list1: List[str]\n        :type list2: List[str]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Create a hash map to store each string from list1 and its corresponding index for efficient lookup.",
+      "structures": [
+        "array",
+        "string",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "list1-i",
+        "index"
+      ],
+      "constraints": [
+        "list1-length-1000",
+        "all-the-strings-of-list1-are-unique"
+      ]
+    },
+    {
+      "intent": "Iterate through list2, find common strings using the map, calculate their index sums, track the minimum sum, and collect all strings that achieve this minimum sum.",
+      "structures": [
+        "array",
+        "string",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "list2-j",
+        "common-strings",
+        "least-index-sum",
+        "minimum-value",
+        "return-all"
+      ],
+      "constraints": [
+        "list2-length-1000",
+        "there-is-at-least-a-common-string",
+        "return-the-answer-in-any-order"
+      ]
+    }
+  ]
+}

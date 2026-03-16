@@ -1,0 +1,71 @@
+{
+  "slug": "maximize-value-of-function-in-a-ball-passing-game",
+  "link": "https://leetcode.com/problems/maximize-value-of-function-in-a-ball-passing-game/",
+  "difficulty": "Hard",
+  "index": "2667",
+  "description_full": "You are given an integer array receiver of length n and an integer k. n players are playing a ball-passing game.\n\nYou choose the starting player, i. The game proceeds as follows: player i passes the ball to player receiver[i], who then passes it to receiver[receiver[i]], and so on, for k passes in total. The game's score is the sum of the indices of the players who touched the ball, including repetitions, i.e. i + receiver[i] + receiver[receiver[i]] + ... + receiver(k)[i].\n\nReturn the maximum possible score.\n\nNotes:\n\n\n\treceiver may contain duplicates.\n\treceiver[i] may be equal to i.\n\n\n \nExample 1:\n\n\nInput: receiver = [2,0,1], k = 4\n\nOutput: 6\n\nExplanation:\n\nStarting with player i = 2 the initial score is 2:\n\n\n\t\n\t\t\n\t\t\tPass\n\t\t\tSender Index\n\t\t\tReceiver Index\n\t\t\tScore\n\t\t\n\t\t\n\t\t\t1\n\t\t\t2\n\t\t\t1\n\t\t\t3\n\t\t\n\t\t\n\t\t\t2\n\t\t\t1\n\t\t\t0\n\t\t\t3\n\t\t\n\t\t\n\t\t\t3\n\t\t\t0\n\t\t\t2\n\t\t\t5\n\t\t\n\t\t\n\t\t\t4\n\t\t\t2\n\t\t\t1\n\t\t\t6\n\t\t\n\t\n\n\n\nExample 2:\n\n\nInput: receiver = [1,1,1,2,3], k = 3\n\nOutput: 10\n\nExplanation:\n\nStarting with player i = 4 the initial score is 4:\n\n\n\t\n\t\t\n\t\t\tPass\n\t\t\tSender Index\n\t\t\tReceiver Index\n\t\t\tScore\n\t\t\n\t\t\n\t\t\t1\n\t\t\t4\n\t\t\t3\n\t\t\t7\n\t\t\n\t\t\n\t\t\t2\n\t\t\t3\n\t\t\t2\n\t\t\t9\n\t\t\n\t\t\n\t\t\t3\n\t\t\t2\n\t\t\t1\n\t\t\t10\n\t\t\n\t\n\n\n\n \nConstraints:\n\n\n\t1 <= receiver.length == n <= 105\n\t0 <= receiver[i] <= n - 1\n\t1 <= k <= 1010\n\n",
+  "description": "You are given an integer array receiver of length n and an integer k. n players are playing a ball-passing game.\n\nYou choose the starting player, i. The game proceeds as follows: player i passes the ball to player receiver[i], who then passes it to receiver[receiver[i]], and so on, for k passes in total. The game's score is the sum of the indices of the players who touched the ball, including repetitions, i.e. i + receiver[i] + receiver[receiver[i]] + ... + receiver(k)[i].\n\nReturn the maximum possible score.\n\nNotes:\n\n\n\treceiver may contain duplicates.\n\treceiver[i] may be equal to i.",
+  "example": "Input: receiver = [2,0,1], k = 4\n\nOutput: 6\n\nExplanation:\n\nStarting with player i = 2 the initial score is 2:\n\n\n\t\n\t\t\n\t\t\tPass\n\t\t\tSender Index\n\t\t\tReceiver Index\n\t\t\tScore\n\t\t\n\t\t\n\t\t\t1\n\t\t\t2\n\t\t\t1\n\t\t\t3\n\t\t\n\t\t\n\t\t\t2\n\t\t\t1\n\t\t\t0\n\t\t\t3\n\t\t\n\t\t\n\t\t\t3\n\t\t\t0\n\t\t\t2\n\t\t\t5\n\t\t\n\t\t\n\t\t\t4\n\t\t\t2\n\t\t\t1\n\t\t\t6",
+  "constraints_text": "1 <= receiver.length == n <= 105\n\t0 <= receiver[i] <= n - 1\n\t1 <= k <= 1010",
+  "templates": {
+    "c": "long long getMaxFunctionValue(int* receiver, int receiverSize, long long k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long getMaxFunctionValue(vector<int>& receiver, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long getMaxFunctionValue(List<Integer> receiver, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} receiver\n * @param {number} k\n * @return {number}\n */\nvar getMaxFunctionValue = function(receiver, k) {\n    \n};",
+    "python": "class Solution(object):\n    def getMaxFunctionValue(self, receiver, k):\n        \"\"\"\n        :type receiver: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute `2^j`-th next player and sum of indices for all players using binary lifting.",
+      "structures": [
+        "array",
+        "matrix"
+      ],
+      "actions": [
+        "binary-lifting",
+        "dp-2d"
+      ],
+      "cues": [
+        "k-passes",
+        "receiver-receiver-i"
+      ],
+      "constraints": [
+        "k-10-10"
+      ]
+    },
+    {
+      "intent": "Calculate the total score for a specific starting player and `k` passes using precomputed jumps.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "binary-lifting",
+        "enumeration"
+      ],
+      "cues": [
+        "sum-of-indices",
+        "k-passes"
+      ],
+      "constraints": [
+        "k-10-10"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible starting players to find the overall maximum score.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-possible-score",
+        "choose-the-starting-player"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    }
+  ]
+}

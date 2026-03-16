@@ -1,0 +1,59 @@
+{
+  "slug": "candy",
+  "link": "https://leetcode.com/problems/candy/",
+  "difficulty": "Hard",
+  "index": "1794",
+  "description_full": "There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.\n\nYou are giving candies to these children subjected to the following requirements:\n\n\n\tEach child must have at least one candy.\n\tChildren with a higher rating get more candies than their neighbors.\n\n\nReturn the minimum number of candies you need to have to distribute the candies to the children.\n\n \nExample 1:\n\n\nInput: ratings = [1,0,2]\nOutput: 5\nExplanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.\n\n\nExample 2:\n\n\nInput: ratings = [1,2,2]\nOutput: 4\nExplanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.\nThe third child gets 1 candy because it satisfies the above two conditions.\n\n\n \nConstraints:\n\n\n\tn == ratings.length\n\t1 <= n <= 2 * 104\n\t0 <= ratings[i] <= 2 * 104\n\n",
+  "description": "There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.\n\nYou are giving candies to these children subjected to the following requirements:\n\n\n\tEach child must have at least one candy.\n\tChildren with a higher rating get more candies than their neighbors.\n\n\nReturn the minimum number of candies you need to have to distribute the candies to the children.",
+  "example": "Input: ratings = [1,0,2]\nOutput: 5\nExplanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.",
+  "constraints_text": "n == ratings.length\n\t1 <= n <= 2 * 104\n\t0 <= ratings[i] <= 2 * 104",
+  "templates": {
+    "c": "int candy(int* ratings, int ratingsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int candy(vector<int>& ratings) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int candy(int[] ratings) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} ratings\n * @return {number}\n */\nvar candy = function(ratings) {\n    \n};",
+    "python": "class Solution(object):\n    def candy(self, ratings):\n        \"\"\"\n        :type ratings: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize candies to 1 for all children and then adjust based on left-to-right neighbor ratings.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration",
+        "dp-1d"
+      ],
+      "cues": [
+        "at-least-one-candy",
+        "higher-rating",
+        "left-neighbor"
+      ],
+      "constraints": [
+        "n-ratings-length",
+        "1-n-2-104"
+      ]
+    },
+    {
+      "intent": "Adjust candies based on right-to-left neighbor ratings and calculate the minimum total candies.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration",
+        "dp-1d"
+      ],
+      "cues": [
+        "higher-rating",
+        "right-neighbor",
+        "minimum-number-of-candies"
+      ],
+      "constraints": [
+        "n-ratings-length",
+        "1-n-2-104"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "ugly-number-ii",
+  "link": "https://leetcode.com/problems/ugly-number-ii/",
+  "difficulty": "Medium",
+  "index": "744",
+  "description_full": "An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n\nGiven an integer n, return the nth ugly number.\n\n \nExample 1:\n\n\nInput: n = 10\nOutput: 12\nExplanation: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] is the sequence of the first 10 ugly numbers.\n\n\nExample 2:\n\n\nInput: n = 1\nOutput: 1\nExplanation: 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 1690\n\n",
+  "description": "An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.\n\nGiven an integer n, return the nth ugly number.",
+  "example": "Input: n = 10\nOutput: 12\nExplanation: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] is the sequence of the first 10 ugly numbers.",
+  "constraints_text": "1 <= n <= 1690",
+  "templates": {
+    "c": "int nthUglyNumber(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int nthUglyNumber(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nthUglyNumber(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthUglyNumber = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def nthUglyNumber(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate the sequence of ugly numbers up to the nth one using a dynamic programming approach.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "nth-ugly-number",
+        "prime-factors-are-limited-to-2-3-and-5"
+      ],
+      "constraints": [
+        "1-n-1690"
+      ]
+    }
+  ]
+}

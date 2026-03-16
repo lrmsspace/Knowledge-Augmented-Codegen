@@ -1,0 +1,60 @@
+{
+  "slug": "top-k-frequent-words",
+  "link": "https://leetcode.com/problems/top-k-frequent-words/",
+  "difficulty": "Medium",
+  "index": "917",
+  "description_full": "Given an array of strings words and an integer k, return the k most frequent strings.\n\nReturn the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order.\n\n \nExample 1:\n\n\nInput: words = [\"i\",\"love\",\"leetcode\",\"i\",\"love\",\"coding\"], k = 2\nOutput: [\"i\",\"love\"]\nExplanation: \"i\" and \"love\" are the two most frequent words.\nNote that \"i\" comes before \"love\" due to a lower alphabetical order.\n\n\nExample 2:\n\n\nInput: words = [\"the\",\"day\",\"is\",\"sunny\",\"the\",\"the\",\"the\",\"sunny\",\"is\",\"is\"], k = 4\nOutput: [\"the\",\"is\",\"sunny\",\"day\"]\nExplanation: \"the\", \"is\", \"sunny\" and \"day\" are the four most frequent words, with the number of occurrence being 4, 3, 2 and 1 respectively.\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 500\n\t1 <= words[i].length <= 10\n\twords[i] consists of lowercase English letters.\n\tk is in the range [1, The number of unique words[i]]\n\n\n \nFollow-up: Could you solve it in O(n log(k)) time and O(n) extra space?\n",
+  "description": "Given an array of strings words and an integer k, return the k most frequent strings.\n\nReturn the answer sorted by the frequency from highest to lowest. Sort the words with the same frequency by their lexicographical order.",
+  "example": "Input: words = [\"i\",\"love\",\"leetcode\",\"i\",\"love\",\"coding\"], k = 2\nOutput: [\"i\",\"love\"]\nExplanation: \"i\" and \"love\" are the two most frequent words.\nNote that \"i\" comes before \"love\" due to a lower alphabetical order.",
+  "constraints_text": "1 <= words.length <= 500\n\t1 <= words[i].length <= 10\n\twords[i] consists of lowercase English letters.\n\tk is in the range [1, The number of unique words[i]]\n\n\n \nFollow-up: Could you solve it in O(n log(k)) time and O(n) extra space?",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** topKFrequent(char** words, int wordsSize, int k, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> topKFrequent(vector<string>& words, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> topKFrequent(String[] words, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number} k\n * @return {string[]}\n */\nvar topKFrequent = function(words, k) {\n    \n};",
+    "python": "class Solution(object):\n    def topKFrequent(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each unique word in the input array.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "most-frequent-strings"
+      ],
+      "constraints": [
+        "words-length-500",
+        "words-i-length-10"
+      ]
+    },
+    {
+      "intent": "Select the k most frequent words using a min-heap and then sort them by frequency (desc) and lexicographical order (asc).",
+      "structures": [
+        "heap",
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "heap-select",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "k-most-frequent",
+        "sorted-by-frequency",
+        "lexicographical-order",
+        "o-n-log-k-time"
+      ],
+      "constraints": [
+        "k-is-in-range-1-the-number-of-unique-words-i"
+      ]
+    }
+  ]
+}

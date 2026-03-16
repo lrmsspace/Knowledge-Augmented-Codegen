@@ -1,0 +1,37 @@
+{
+  "slug": "minimum-insertion-steps-to-make-a-string-palindrome",
+  "link": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/",
+  "difficulty": "Hard",
+  "index": "1978",
+  "description_full": "Given a string s. In one step you can insert any character at any index of the string.\n\nReturn the minimum number of steps to make s palindrome.\n\nA Palindrome String is one that reads the same backward as well as forward.\n\n \nExample 1:\n\n\nInput: s = \"zzazz\"\nOutput: 0\nExplanation: The string \"zzazz\" is already palindrome we do not need any insertions.\n\n\nExample 2:\n\n\nInput: s = \"mbadm\"\nOutput: 2\nExplanation: String can be \"mbdadbm\" or \"mdbabdm\".\n\n\nExample 3:\n\n\nInput: s = \"leetcode\"\nOutput: 5\nExplanation: Inserting 5 characters the string becomes \"leetcodocteel\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 500\n\ts consists of lowercase English letters.\n\n",
+  "description": "Given a string s. In one step you can insert any character at any index of the string.\n\nReturn the minimum number of steps to make s palindrome.\n\nA Palindrome String is one that reads the same backward as well as forward.",
+  "example": "Input: s = \"zzazz\"\nOutput: 0\nExplanation: The string \"zzazz\" is already palindrome we do not need any insertions.",
+  "constraints_text": "1 <= s.length <= 500\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "int minInsertions(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minInsertions(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minInsertions(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minInsertions = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minInsertions(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the length of the Longest Common Subsequence (LCS) between the input string and its reverse.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-steps",
+        "make-s-palindrome"
+      ],
+      "constraints": [
+        "s-length-500"
+      ]
+    }
+  ]
+}

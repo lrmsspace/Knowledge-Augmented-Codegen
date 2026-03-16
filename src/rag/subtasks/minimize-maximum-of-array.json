@@ -1,0 +1,39 @@
+{
+  "slug": "minimize-maximum-of-array",
+  "link": "https://leetcode.com/problems/minimize-maximum-of-array/",
+  "difficulty": "Medium",
+  "index": "1622",
+  "description_full": "You are given a 0-indexed array nums comprising of n non-negative integers.\n\nIn one operation, you must:\n\n\n\tChoose an integer i such that 1 <= i < n and nums[i] > 0.\n\tDecrease nums[i] by 1.\n\tIncrease nums[i - 1] by 1.\n\n\nReturn the minimum possible value of the maximum integer of nums after performing any number of operations.\n\n \nExample 1:\n\n\nInput: nums = [3,7,1,6]\nOutput: 5\nExplanation:\nOne set of optimal operations is as follows:\n1. Choose i = 1, and nums becomes [4,6,1,6].\n2. Choose i = 3, and nums becomes [4,6,2,5].\n3. Choose i = 1, and nums becomes [5,5,2,5].\nThe maximum integer of nums is 5. It can be shown that the maximum number cannot be less than 5.\nTherefore, we return 5.\n\n\nExample 2:\n\n\nInput: nums = [10,1]\nOutput: 10\nExplanation:\nIt is optimal to leave nums as is, and since 10 is the maximum value, we return 10.\n\n\n \nConstraints:\n\n\n\tn == nums.length\n\t2 <= n <= 105\n\t0 <= nums[i] <= 109\n\n",
+  "description": "You are given a 0-indexed array nums comprising of n non-negative integers.\n\nIn one operation, you must:\n\n\n\tChoose an integer i such that 1 <= i < n and nums[i] > 0.\n\tDecrease nums[i] by 1.\n\tIncrease nums[i - 1] by 1.\n\n\nReturn the minimum possible value of the maximum integer of nums after performing any number of operations.",
+  "example": "Input: nums = [3,7,1,6]\nOutput: 5\nExplanation:\nOne set of optimal operations is as follows:\n1. Choose i = 1, and nums becomes [4,6,1,6].\n2. Choose i = 3, and nums becomes [4,6,2,5].\n3. Choose i = 1, and nums becomes [5,5,2,5].\nThe maximum integer of nums is 5. It can be shown that the maximum number cannot be less than 5.\nTherefore, we return 5.",
+  "constraints_text": "n == nums.length\n\t2 <= n <= 105\n\t0 <= nums[i] <= 109",
+  "templates": {
+    "c": "int minimizeArrayValue(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimizeArrayValue(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimizeArrayValue(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimizeArrayValue = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minimizeArrayValue(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum required average across all prefixes to determine the minimum possible maximum value achievable by leftward transfers.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-possible-value-of-the-maximum-integer",
+        "decrease-nums-i-by-1-increase-nums-i-1-by-1"
+      ],
+      "constraints": [
+        "n-10-5",
+        "nums-i-10-9"
+      ]
+    }
+  ]
+}

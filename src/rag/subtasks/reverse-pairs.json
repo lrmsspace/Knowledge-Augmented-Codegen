@@ -1,0 +1,53 @@
+{
+  "slug": "reverse-pairs",
+  "link": "https://leetcode.com/problems/reverse-pairs/",
+  "difficulty": "Hard",
+  "index": "1844",
+  "description_full": "Given an integer array nums, return the number of reverse pairs in the array.\n\nA reverse pair is a pair (i, j) where:\n\n\n\t0 <= i < j < nums.length and\n\tnums[i] > 2 * nums[j].\n\n\n \nExample 1:\n\n\nInput: nums = [1,3,2,3,1]\nOutput: 2\nExplanation: The reverse pairs are:\n(1, 4) --> nums[1] = 3, nums[4] = 1, 3 > 2 * 1\n(3, 4) --> nums[3] = 3, nums[4] = 1, 3 > 2 * 1\n\n\nExample 2:\n\n\nInput: nums = [2,4,3,5,1]\nOutput: 3\nExplanation: The reverse pairs are:\n(1, 4) --> nums[1] = 4, nums[4] = 1, 4 > 2 * 1\n(2, 4) --> nums[2] = 3, nums[4] = 1, 3 > 2 * 1\n(3, 4) --> nums[3] = 5, nums[4] = 1, 5 > 2 * 1\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 5 * 104\n\t-231 <= nums[i] <= 231 - 1\n\n",
+  "description": "Given an integer array nums, return the number of reverse pairs in the array.\n\nA reverse pair is a pair (i, j) where:\n\n\n\t0 <= i < j < nums.length and\n\tnums[i] > 2 * nums[j].",
+  "example": "Input: nums = [1,3,2,3,1]\nOutput: 2\nExplanation: The reverse pairs are:\n(1, 4) --> nums[1] = 3, nums[4] = 1, 3 > 2 * 1\n(3, 4) --> nums[3] = 3, nums[4] = 1, 3 > 2 * 1",
+  "constraints_text": "1 <= nums.length <= 5 * 104\n\t-231 <= nums[i] <= 231 - 1",
+  "templates": {
+    "c": "int reversePairs(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int reversePairs(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int reversePairs(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar reversePairs = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def reversePairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement the recursive merge sort algorithm to divide and conquer the array segments.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "recursion",
+        "merge-sort"
+      ],
+      "cues": [
+        "0-i-j-nums-length",
+        "nums-length"
+      ],
+      "constraints": [
+        "1-nums-length-5-104"
+      ]
+    },
+    {
+      "intent": "Count reverse pairs (nums[i] > 2 * nums[j]) across sorted halves during the merge step using a two-pointer approach.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "two-pointers",
+        "merge-sort"
+      ],
+      "cues": [
+        "nums-i-2-nums-j",
+        "reverse-pair"
+      ],
+      "constraints": [
+        "231-nums-i-231-1"
+      ]
+    }
+  ]
+}

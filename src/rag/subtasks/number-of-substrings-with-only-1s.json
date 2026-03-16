@@ -1,0 +1,39 @@
+{
+  "slug": "number-of-substrings-with-only-1s",
+  "link": "https://leetcode.com/problems/number-of-substrings-with-only-1s/",
+  "difficulty": "Medium",
+  "index": "1271",
+  "description_full": "Given a binary string s, return the number of substrings with all characters 1's. Since the answer may be too large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: s = \"0110111\"\nOutput: 9\nExplanation: There are 9 substring in total with only 1's characters.\n\"1\" -> 5 times.\n\"11\" -> 3 times.\n\"111\" -> 1 time.\n\nExample 2:\n\n\nInput: s = \"101\"\nOutput: 2\nExplanation: Substring \"1\" is shown 2 times in s.\n\n\nExample 3:\n\n\nInput: s = \"111111\"\nOutput: 21\nExplanation: Each substring contains only 1's characters.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts[i] is either '0' or '1'.\n\n",
+  "description": "Given a binary string s, return the number of substrings with all characters 1's. Since the answer may be too large, return it modulo 109 + 7.",
+  "example": "Input: s = \"0110111\"\nOutput: 9\nExplanation: There are 9 substring in total with only 1's characters.\n\"1\" -> 5 times.\n\"11\" -> 3 times.\n\"111\" -> 1 time.",
+  "constraints_text": "1 <= s.length <= 105\n\ts[i] is either '0' or '1'.",
+  "templates": {
+    "c": "int numSub(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numSub(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSub(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numSub = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def numSub(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the binary string, count consecutive '1's, and accumulate the sum of substrings formed by each block, applying modulo arithmetic.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "binary-string",
+        "substrings-with-all-characters-1-s",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "1-s-length-105",
+        "s-i-is-either-0-or-1"
+      ]
+    }
+  ]
+}

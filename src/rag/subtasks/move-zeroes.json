@@ -1,0 +1,55 @@
+{
+  "slug": "move-zeroes",
+  "link": "https://leetcode.com/problems/move-zeroes/",
+  "difficulty": "Easy",
+  "index": "67",
+  "description_full": "Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.\n\n \nExample 1:\nInput: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]\nExample 2:\nInput: nums = [0]\nOutput: [0]\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n\n \nFollow up: Could you minimize the total number of operations done?",
+  "description": "Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.\n\nNote that you must do this in-place without making a copy of the array.",
+  "example": "Input: nums = [0,1,0,3,12]\nOutput: [1,3,12,0,0]",
+  "constraints_text": "1 <= nums.length <= 104\n\t-231 <= nums[i] <= 231 - 1\n\n\n \nFollow up: Could you minimize the total number of operations done?",
+  "templates": {
+    "c": "void moveZeroes(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    void moveZeroes(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void moveZeroes(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {void} Do not return anything, modify nums in-place instead.\n */\nvar moveZeroes = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def moveZeroes(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: None Do not return anything, modify nums in-place instead.\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array, moving all non-zero elements to the front while preserving their relative order using a write pointer.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "move-all-0-s-to-the-end",
+        "maintaining-the-relative-order-of-the-non-zero-elements",
+        "in-place"
+      ],
+      "constraints": [
+        "in-place",
+        "no-copy",
+        "1-nums-length-104"
+      ]
+    },
+    {
+      "intent": "After placing all non-zero elements, fill the remaining positions in the array from the current write pointer's position to the end with zeros.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "move-all-0-s-to-the-end"
+      ],
+      "constraints": [
+        "in-place"
+      ]
+    }
+  ]
+}

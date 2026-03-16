@@ -1,0 +1,60 @@
+{
+  "slug": "find-words-that-can-be-formed-by-characters",
+  "link": "https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/",
+  "difficulty": "Easy",
+  "index": "247",
+  "description_full": "You are given an array of strings words and a string chars.\n\nA string is good if it can be formed by characters from chars (each character can only be used once for each word in words).\n\nReturn the sum of lengths of all good strings in words.\n\n \nExample 1:\n\n\nInput: words = [\"cat\",\"bt\",\"hat\",\"tree\"], chars = \"atach\"\nOutput: 6\nExplanation: The strings that can be formed are \"cat\" and \"hat\" so the answer is 3 + 3 = 6.\n\n\nExample 2:\n\n\nInput: words = [\"hello\",\"world\",\"leetcode\"], chars = \"welldonehoneyr\"\nOutput: 10\nExplanation: The strings that can be formed are \"hello\" and \"world\" so the answer is 5 + 5 = 10.\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 1000\n\t1 <= words[i].length, chars.length <= 100\n\twords[i] and chars consist of lowercase English letters.\n\n",
+  "description": "You are given an array of strings words and a string chars.\n\nA string is good if it can be formed by characters from chars (each character can only be used once for each word in words).\n\nReturn the sum of lengths of all good strings in words.",
+  "example": "Input: words = [\"cat\",\"bt\",\"hat\",\"tree\"], chars = \"atach\"\nOutput: 6\nExplanation: The strings that can be formed are \"cat\" and \"hat\" so the answer is 3 + 3 = 6.",
+  "constraints_text": "1 <= words.length <= 1000\n\t1 <= words[i].length, chars.length <= 100\n\twords[i] and chars consist of lowercase English letters.",
+  "templates": {
+    "c": "int countCharacters(char** words, int wordsSize, char* chars) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countCharacters(vector<string>& words, string chars) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCharacters(String[] words, String chars) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} chars\n * @return {number}\n */\nvar countCharacters = function(words, chars) {\n    \n};",
+    "python": "class Solution(object):\n    def countCharacters(self, words, chars):\n        \"\"\"\n        :type words: List[str]\n        :type chars: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the frequency of each character available in the 'chars' string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "string-chars",
+        "each-character-can-only-be-used-once"
+      ],
+      "constraints": [
+        "chars-consist-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Iterate through each word, check if it can be formed using available characters, and sum lengths of good words.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "array-of-strings-words",
+        "string-is-good-if-it-can-be-formed",
+        "sum-of-lengths"
+      ],
+      "constraints": [
+        "words-length-1000",
+        "words-i-length-100",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

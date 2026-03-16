@@ -1,0 +1,58 @@
+{
+  "slug": "make-the-xor-of-all-segments-equal-to-zero",
+  "link": "https://leetcode.com/problems/make-the-xor-of-all-segments-equal-to-zero/",
+  "difficulty": "Hard",
+  "index": "2073",
+  "description_full": "You are given an array nums​​​ and an integer k​​​​​. The XOR of a segment [left, right] where left <= right is the XOR of all the elements with indices between left and right, inclusive: nums[left] XOR nums[left+1] XOR ... XOR nums[right].\n\nReturn the minimum number of elements to change in the array such that the XOR of all segments of size k​​​​​​ is equal to zero.\n\n \nExample 1:\n\n\nInput: nums = [1,2,0,3,0], k = 1\nOutput: 3\nExplanation: Modify the array from [1,2,0,3,0] to from [0,0,0,0,0].\n\n\nExample 2:\n\n\nInput: nums = [3,4,5,2,1,7,3,4,7], k = 3\nOutput: 3\nExplanation: Modify the array from [3,4,5,2,1,7,3,4,7] to [3,4,7,3,4,7,3,4,7].\n\n\nExample 3:\n\n\nInput: nums = [1,2,4,1,2,5,1,2,6], k = 3\nOutput: 3\nExplanation: Modify the array from [1,2,4,1,2,5,1,2,6] to [1,2,3,1,2,3,1,2,3].\n\n \nConstraints:\n\n\n\t1 <= k <= nums.length <= 2000\n\t​​​​​​0 <= nums[i] < 210\n\n",
+  "description": "You are given an array nums​​​ and an integer k​​​​​. The XOR of a segment [left, right] where left <= right is the XOR of all the elements with indices between left and right, inclusive: nums[left] XOR nums[left+1] XOR ... XOR nums[right].\n\nReturn the minimum number of elements to change in the array such that the XOR of all segments of size k​​​​​​ is equal to zero.",
+  "example": "Input: nums = [1,2,0,3,0], k = 1\nOutput: 3\nExplanation: Modify the array from [1,2,0,3,0] to from [0,0,0,0,0].",
+  "constraints_text": "1 <= k <= nums.length <= 2000\n\t​​​​​​0 <= nums[i] < 210",
+  "templates": {
+    "c": "int minChanges(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minChanges(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minChanges(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minChanges = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minChanges(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess frequencies and total counts for elements in each periodic column",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "nums-i",
+        "k",
+        "xor-of-all-segments-of-size-k-is-equal-to-zero-implies-nums-i-nums-i-k"
+      ],
+      "constraints": [
+        "1-k-nums-length-2000",
+        "0-nums-i-2-10"
+      ]
+    },
+    {
+      "intent": "Apply dynamic programming to find the minimum changes to achieve a final XOR sum of zero across all chosen column values",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-elements-to-change",
+        "xor-of-all-segments-of-size-k-is-equal-to-zero-final-xor-sum-of-x-j-s-is-0"
+      ],
+      "constraints": [
+        "1-k-nums-length-2000",
+        "0-nums-i-2-10-max-xor-sum-1023"
+      ]
+    }
+  ]
+}

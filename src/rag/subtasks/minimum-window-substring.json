@@ -1,0 +1,57 @@
+{
+  "slug": "minimum-window-substring",
+  "link": "https://leetcode.com/problems/minimum-window-substring/",
+  "difficulty": "Hard",
+  "index": "1784",
+  "description_full": "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string \"\".\n\nThe testcases will be generated such that the answer is unique.\n\n \nExample 1:\n\n\nInput: s = \"ADOBECODEBANC\", t = \"ABC\"\nOutput: \"BANC\"\nExplanation: The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.\n\n\nExample 2:\n\n\nInput: s = \"a\", t = \"a\"\nOutput: \"a\"\nExplanation: The entire string s is the minimum window.\n\n\nExample 3:\n\n\nInput: s = \"a\", t = \"aa\"\nOutput: \"\"\nExplanation: Both 'a's from t must be included in the window.\nSince the largest window of s only has one 'a', return empty string.\n\n\n \nConstraints:\n\n\n\tm == s.length\n\tn == t.length\n\t1 <= m, n <= 105\n\ts and t consist of uppercase and lowercase English letters.\n\n\n \nFollow up: Could you find an algorithm that runs in O(m + n) time?\n",
+  "description": "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string \"\".\n\nThe testcases will be generated such that the answer is unique.",
+  "example": "Input: s = \"ADOBECODEBANC\", t = \"ABC\"\nOutput: \"BANC\"\nExplanation: The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.",
+  "constraints_text": "m == s.length\n\tn == t.length\n\t1 <= m, n <= 105\n\ts and t consist of uppercase and lowercase English letters.\n\n\n \nFollow up: Could you find an algorithm that runs in O(m + n) time?",
+  "templates": {
+    "c": "char* minWindow(char* s, char* t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string minWindow(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minWindow(String s, String t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {string}\n */\nvar minWindow = function(s, t) {\n    \n};",
+    "python": "class Solution(object):\n    def minWindow(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count character frequencies for all required characters in the target string t.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "every-character-in-t-including-duplicates"
+      ],
+      "constraints": [
+        "n-105",
+        "s-and-t-consist-of-uppercase-and-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Implement a two-pointer sliding window to expand, check validity, and shrink, tracking the minimum valid substring in s.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "min-window"
+      ],
+      "cues": [
+        "minimum-window-substring",
+        "every-character-in-t-including-duplicates"
+      ],
+      "constraints": [
+        "m-n-105",
+        "o-m-n-time"
+      ]
+    }
+  ]
+}

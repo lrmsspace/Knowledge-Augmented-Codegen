@@ -1,0 +1,40 @@
+{
+  "slug": "erect-the-fence",
+  "link": "https://leetcode.com/problems/erect-the-fence/",
+  "difficulty": "Hard",
+  "index": "1851",
+  "description_full": "You are given an array trees where trees[i] = [xi, yi] represents the location of a tree in the garden.\n\nFence the entire garden using the minimum length of rope, as it is expensive. The garden is well-fenced only if all the trees are enclosed.\n\nReturn the coordinates of trees that are exactly located on the fence perimeter. You may return the answer in any order.\n\n \nExample 1:\n\n\nInput: trees = [[1,1],[2,2],[2,0],[2,4],[3,3],[4,2]]\nOutput: [[1,1],[2,0],[4,2],[3,3],[2,4]]\nExplanation: All the trees will be on the perimeter of the fence except the tree at [2, 2], which will be inside the fence.\n\n\nExample 2:\n\n\nInput: trees = [[1,2],[2,2],[4,2]]\nOutput: [[4,2],[2,2],[1,2]]\nExplanation: The fence forms a line that passes through all the trees.\n\n\n \nConstraints:\n\n\n\t1 <= trees.length <= 3000\n\ttrees[i].length == 2\n\t0 <= xi, yi <= 100\n\tAll the given positions are unique.\n\n",
+  "description": "You are given an array trees where trees[i] = [xi, yi] represents the location of a tree in the garden.\n\nFence the entire garden using the minimum length of rope, as it is expensive. The garden is well-fenced only if all the trees are enclosed.\n\nReturn the coordinates of trees that are exactly located on the fence perimeter. You may return the answer in any order.",
+  "example": "Input: trees = [[1,1],[2,2],[2,0],[2,4],[3,3],[4,2]]\nOutput: [[1,1],[2,0],[4,2],[3,3],[2,4]]\nExplanation: All the trees will be on the perimeter of the fence except the tree at [2, 2], which will be inside the fence.",
+  "constraints_text": "1 <= trees.length <= 3000\n\ttrees[i].length == 2\n\t0 <= xi, yi <= 100\n\tAll the given positions are unique.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** outerTrees(int** trees, int treesSize, int* treesColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> outerTrees(vector<vector<int>>& trees) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] outerTrees(int[][] trees) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} trees\n * @return {number[][]}\n */\nvar outerTrees = function(trees) {\n    \n};",
+    "python": "class Solution(object):\n    def outerTrees(self, trees):\n        \"\"\"\n        :type trees: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the convex hull of the given tree coordinates to find the fence perimeter points.",
+      "structures": [
+        "array",
+        "geometry",
+        "stack"
+      ],
+      "actions": [
+        "enumeration",
+        "monotonic-stack"
+      ],
+      "cues": [
+        "minimum-length-of-rope",
+        "all-trees-are-enclosed",
+        "on-the-fence-perimeter"
+      ],
+      "constraints": [
+        "1-trees-length-3000",
+        "0-xi-yi-100"
+      ]
+    }
+  ]
+}

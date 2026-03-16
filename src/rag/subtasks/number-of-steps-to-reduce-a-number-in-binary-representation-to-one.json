@@ -1,0 +1,40 @@
+{
+  "slug": "number-of-steps-to-reduce-a-number-in-binary-representation-to-one",
+  "link": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/",
+  "difficulty": "Medium",
+  "index": "1229",
+  "description_full": "Given the binary representation of an integer as a string s, return the number of steps to reduce it to 1 under the following rules:\n\n\n\t\n\tIf the current number is even, you have to divide it by 2.\n\t\n\t\n\tIf the current number is odd, you have to add 1 to it.\n\t\n\n\nIt is guaranteed that you can always reach one for all test cases.\n\n \nExample 1:\n\n\nInput: s = \"1101\"\nOutput: 6\nExplanation: \"1101\" corressponds to number 13 in their decimal representation.\nStep 1) 13 is odd, add 1 and obtain 14. \nStep 2) 14 is even, divide by 2 and obtain 7.\nStep 3) 7 is odd, add 1 and obtain 8.\nStep 4) 8 is even, divide by 2 and obtain 4.  \nStep 5) 4 is even, divide by 2 and obtain 2. \nStep 6) 2 is even, divide by 2 and obtain 1.  \n\n\nExample 2:\n\n\nInput: s = \"10\"\nOutput: 1\nExplanation: \"10\" corresponds to number 2 in their decimal representation.\nStep 1) 2 is even, divide by 2 and obtain 1.  \n\n\nExample 3:\n\n\nInput: s = \"1\"\nOutput: 0\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 500\n\ts consists of characters '0' or '1'\n\ts[0] == '1'\n\n",
+  "description": "Given the binary representation of an integer as a string s, return the number of steps to reduce it to 1 under the following rules:\n\n\n\t\n\tIf the current number is even, you have to divide it by 2.\n\t\n\t\n\tIf the current number is odd, you have to add 1 to it.\n\t\n\n\nIt is guaranteed that you can always reach one for all test cases.",
+  "example": "Input: s = \"1101\"\nOutput: 6\nExplanation: \"1101\" corressponds to number 13 in their decimal representation.\nStep 1) 13 is odd, add 1 and obtain 14. \nStep 2) 14 is even, divide by 2 and obtain 7.\nStep 3) 7 is odd, add 1 and obtain 8.\nStep 4) 8 is even, divide by 2 and obtain 4.  \nStep 5) 4 is even, divide by 2 and obtain 2. \nStep 6) 2 is even, divide by 2 and obtain 1.",
+  "constraints_text": "1 <= s.length <= 500\n\ts consists of characters '0' or '1'\n\ts[0] == '1'",
+  "templates": {
+    "c": "int numSteps(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numSteps(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSteps(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar numSteps = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def numSteps(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate the process of reducing the binary string to '1' by applying division by 2 for even numbers and addition of 1 for odd numbers, counting each step.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "binary-representation",
+        "reduce-to-1",
+        "number-of-steps",
+        "even-odd-rules"
+      ],
+      "constraints": [
+        "1-s-length-500",
+        "s-0-1"
+      ]
+    }
+  ]
+}

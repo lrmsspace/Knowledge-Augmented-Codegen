@@ -1,0 +1,58 @@
+{
+  "slug": "maximum-number-of-moves-to-kill-all-pawns",
+  "link": "https://leetcode.com/problems/maximum-number-of-moves-to-kill-all-pawns/",
+  "difficulty": "Hard",
+  "index": "2757",
+  "description_full": "There is a 50 x 50 chessboard with one knight and some pawns on it. You are given two integers kx and ky where (kx, ky) denotes the position of the knight, and a 2D array positions where positions[i] = [xi, yi] denotes the position of the pawns on the chessboard.\n\nAlice and Bob play a turn-based game, where Alice goes first. In each player's turn:\n\n\n\tThe player selects a pawn that still exists on the board and captures it with the knight in the fewest possible moves. Note that the player can select any pawn, it might not be one that can be captured in the least number of moves.\n\tIn the process of capturing the selected pawn, the knight may pass other pawns without capturing them. Only the selected pawn can be captured in this turn.\n\n\nAlice is trying to maximize the sum of the number of moves made by both players until there are no more pawns on the board, whereas Bob tries to minimize them.\n\nReturn the maximum total number of moves made during the game that Alice can achieve, assuming both players play optimally.\n\nNote that in one move, a chess knight has eight possible positions it can move to, as illustrated below. Each move is two cells in a cardinal direction, then one cell in an orthogonal direction.\n\n\n\n \nExample 1:\n\n\nInput: kx = 1, ky = 1, positions = [[0,0]]\n\nOutput: 4\n\nExplanation:\n\n\n\nThe knight takes 4 moves to reach the pawn at (0, 0).\n\n\nExample 2:\n\n\nInput: kx = 0, ky = 2, positions = [[1,1],[2,2],[3,3]]\n\nOutput: 8\n\nExplanation:\n\n\n\n\n\tAlice picks the pawn at (2, 2) and captures it in two moves: (0, 2) -> (1, 4) -> (2, 2).\n\tBob picks the pawn at (3, 3) and captures it in two moves: (2, 2) -> (4, 1) -> (3, 3).\n\tAlice picks the pawn at (1, 1) and captures it in four moves: (3, 3) -> (4, 1) -> (2, 2) -> (0, 3) -> (1, 1).\n\n\n\nExample 3:\n\n\nInput: kx = 0, ky = 0, positions = [[1,2],[2,4]]\n\nOutput: 3\n\nExplanation:\n\n\n\tAlice picks the pawn at (2, 4) and captures it in two moves: (0, 0) -> (1, 2) -> (2, 4). Note that the pawn at (1, 2) is not captured.\n\tBob picks the pawn at (1, 2) and captures it in one move: (2, 4) -> (1, 2).\n\n\n\n \nConstraints:\n\n\n\t0 <= kx, ky <= 49\n\t1 <= positions.length <= 15\n\tpositions[i].length == 2\n\t0 <= positions[i][0], positions[i][1] <= 49\n\tAll positions[i] are unique.\n\tThe input is generated such that positions[i] != [kx, ky] for all 0 <= i < positions.length.\n\n",
+  "description": "There is a 50 x 50 chessboard with one knight and some pawns on it. You are given two integers kx and ky where (kx, ky) denotes the position of the knight, and a 2D array positions where positions[i] = [xi, yi] denotes the position of the pawns on the chessboard.\n\nAlice and Bob play a turn-based game, where Alice goes first. In each player's turn:\n\n\n\tThe player selects a pawn that still exists on the board and captures it with the knight in the fewest possible moves. Note that the player can select any pawn, it might not be one that can be captured in the least number of moves.\n\tIn the process of capturing the selected pawn, the knight may pass other pawns without capturing them. Only the selected pawn can be captured in this turn.\n\n\nAlice is trying to maximize the sum of the number of moves made by both players until there are no more pawns on the board, whereas Bob tries to minimize them.\n\nReturn the maximum total number of moves made during the game that Alice can achieve, assuming both players play optimally.\n\nNote that in one move, a chess knight has eight possible positions it can move to, as illustrated below. Each move is two cells in a cardinal direction, then one cell in an orthogonal direction.",
+  "example": "Input: kx = 1, ky = 1, positions = [[0,0]]\n\nOutput: 4\n\nExplanation:\n\n\n\nThe knight takes 4 moves to reach the pawn at (0, 0).",
+  "constraints_text": "0 <= kx, ky <= 49\n\t1 <= positions.length <= 15\n\tpositions[i].length == 2\n\t0 <= positions[i][0], positions[i][1] <= 49\n\tAll positions[i] are unique.\n\tThe input is generated such that positions[i] != [kx, ky] for all 0 <= i < positions.length.",
+  "templates": {
+    "c": "int maxMoves(int kx, int ky, int** positions, int positionsSize, int* positionsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxMoves(int kx, int ky, vector<vector<int>>& positions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxMoves(int kx, int ky, int[][] positions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} kx\n * @param {number} ky\n * @param {number[][]} positions\n * @return {number}\n */\nvar maxMoves = function(kx, ky, positions) {\n    \n};",
+    "python": "class Solution(object):\n    def maxMoves(self, kx, ky, positions):\n        \"\"\"\n        :type kx: int\n        :type ky: int\n        :type positions: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute knight shortest path distances between the initial knight position and all pawns, and between all pairs of pawns.",
+      "structures": [
+        "matrix",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "fewest-possible-moves",
+        "knight"
+      ],
+      "constraints": [
+        "50-x-50-chessboard"
+      ]
+    },
+    {
+      "intent": "Implement minimax game logic with memoization (bitmask DP) to determine the maximum total moves Alice can achieve.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "recursion",
+        "game-theory",
+        "dp-2d"
+      ],
+      "cues": [
+        "alice-maximizes",
+        "bob-minimizes",
+        "turn-based-game",
+        "total-number-of-moves"
+      ],
+      "constraints": [
+        "number-of-pawns-allows-bitmask-dp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "count-ways-to-build-good-strings",
+  "link": "https://leetcode.com/problems/count-ways-to-build-good-strings/",
+  "difficulty": "Medium",
+  "index": "1632",
+  "description_full": "Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:\n\n\n\tAppend the character '0' zero times.\n\tAppend the character '1' one times.\n\n\nThis can be performed any number of times.\n\nA good string is a string constructed by the above process having a length between low and high (inclusive).\n\nReturn the number of different good strings that can be constructed satisfying these properties. Since the answer can be large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: low = 3, high = 3, zero = 1, one = 1\nOutput: 8\nExplanation: \nOne possible valid good string is \"011\". \nIt can be constructed as follows: \"\" -> \"0\" -> \"01\" -> \"011\". \nAll binary strings from \"000\" to \"111\" are good strings in this example.\n\n\nExample 2:\n\n\nInput: low = 2, high = 3, zero = 1, one = 2\nOutput: 5\nExplanation: The good strings are \"00\", \"11\", \"000\", \"110\", and \"011\".\n\n\n \nConstraints:\n\n\n\t1 <= low <= high <= 105\n\t1 <= zero, one <= low\n\n",
+  "description": "Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:\n\n\n\tAppend the character '0' zero times.\n\tAppend the character '1' one times.\n\n\nThis can be performed any number of times.\n\nA good string is a string constructed by the above process having a length between low and high (inclusive).\n\nReturn the number of different good strings that can be constructed satisfying these properties. Since the answer can be large, return it modulo 109 + 7.",
+  "example": "Input: low = 3, high = 3, zero = 1, one = 1\nOutput: 8\nExplanation: \nOne possible valid good string is \"011\". \nIt can be constructed as follows: \"\" -> \"0\" -> \"01\" -> \"011\". \nAll binary strings from \"000\" to \"111\" are good strings in this example.",
+  "constraints_text": "1 <= low <= high <= 105\n\t1 <= zero, one <= low",
+  "templates": {
+    "c": "int countGoodStrings(int low, int high, int zero, int one) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countGoodStrings(int low, int high, int zero, int one) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countGoodStrings(int low, int high, int zero, int one) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} low\n * @param {number} high\n * @param {number} zero\n * @param {number} one\n * @return {number}\n */\nvar countGoodStrings = function(low, high, zero, one) {\n    \n};",
+    "python": "class Solution(object):\n    def countGoodStrings(self, low, high, zero, one):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :type zero: int\n        :type one: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the number of ways to form strings of each possible length up to 'high' using dynamic programming.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "simulation"
+      ],
+      "cues": [
+        "construct-a-string",
+        "append-0-zero-times",
+        "append-1-one-times",
+        "any-number-of-times"
+      ],
+      "constraints": [
+        "high-10-5",
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Sum the counts of strings for lengths within the specified range [low, high] to find the total number of good strings.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "length-between-low-and-high-inclusive",
+        "return-the-number-of-different-good-strings"
+      ],
+      "constraints": [
+        "low-length-high",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

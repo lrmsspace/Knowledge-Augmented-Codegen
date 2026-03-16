@@ -1,0 +1,38 @@
+{
+  "slug": "account-balance-after-rounded-purchase",
+  "link": "https://leetcode.com/problems/account-balance-after-rounded-purchase/",
+  "difficulty": "Easy",
+  "index": "607",
+  "description_full": "Initially, you have a bank account balance of 100 dollars.\n\nYou are given an integer purchaseAmount representing the amount you will spend on a purchase in dollars, in other words, its price.\n\nWhen making the purchase, first the purchaseAmount is rounded to the nearest multiple of 10. Let us call this value roundedAmount. Then, roundedAmount dollars are removed from your bank account.\n\nReturn an integer denoting your final bank account balance after this purchase.\n\nNotes:\n\n\n\t0 is considered to be a multiple of 10 in this problem.\n\tWhen rounding, 5 is rounded upward (5 is rounded to 10, 15 is rounded to 20, 25 to 30, and so on).\n\n\n \nExample 1:\n\n\nInput: purchaseAmount = 9\n\nOutput: 90\n\nExplanation:\n\nThe nearest multiple of 10 to 9 is 10. So your account balance becomes 100 - 10 = 90.\n\n\nExample 2:\n\n\nInput: purchaseAmount = 15\n\nOutput: 80\n\nExplanation:\n\nThe nearest multiple of 10 to 15 is 20. So your account balance becomes 100 - 20 = 80.\n\n\nExample 3:\n\n\nInput: purchaseAmount = 10\n\nOutput: 90\n\nExplanation:\n\n10 is a multiple of 10 itself. So your account balance becomes 100 - 10 = 90.\n\n\n \nConstraints:\n\n\n\t0 <= purchaseAmount <= 100\n\n",
+  "description": "Initially, you have a bank account balance of 100 dollars.\n\nYou are given an integer purchaseAmount representing the amount you will spend on a purchase in dollars, in other words, its price.\n\nWhen making the purchase, first the purchaseAmount is rounded to the nearest multiple of 10. Let us call this value roundedAmount. Then, roundedAmount dollars are removed from your bank account.\n\nReturn an integer denoting your final bank account balance after this purchase.\n\nNotes:\n\n\n\t0 is considered to be a multiple of 10 in this problem.\n\tWhen rounding, 5 is rounded upward (5 is rounded to 10, 15 is rounded to 20, 25 to 30, and so on).",
+  "example": "Input: purchaseAmount = 9\n\nOutput: 90\n\nExplanation:\n\nThe nearest multiple of 10 to 9 is 10. So your account balance becomes 100 - 10 = 90.",
+  "constraints_text": "0 <= purchaseAmount <= 100",
+  "templates": {
+    "c": "int accountBalanceAfterPurchase(int purchaseAmount) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int accountBalanceAfterPurchase(int purchaseAmount) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int accountBalanceAfterPurchase(int purchaseAmount) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} purchaseAmount\n * @return {number}\n */\nvar accountBalanceAfterPurchase = function(purchaseAmount) {\n    \n};",
+    "python": "class Solution(object):\n    def accountBalanceAfterPurchase(self, purchaseAmount):\n        \"\"\"\n        :type purchaseAmount: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the final bank account balance by first rounding the purchase amount to the nearest multiple of 10 (rounding 5 upward) and then subtracting it from the initial balance.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "bank-account-balance-of-100",
+        "purchaseamount",
+        "rounded-to-the-nearest-multiple-of-10",
+        "5-is-rounded-upward",
+        "return-final-bank-account-balance"
+      ],
+      "constraints": [
+        "0-purchaseamount-100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "minimum-number-of-operations-to-make-all-array-elements-equal-to-1",
+  "link": "https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/",
+  "difficulty": "Medium",
+  "index": "1712",
+  "description_full": "You are given a 0-indexed array nums consisiting of positive integers. You can do the following operation on the array any number of times:\n\n\n\tSelect an index i such that 0 <= i < n - 1 and replace either of nums[i] or nums[i+1] with their gcd value.\n\n\nReturn the minimum number of operations to make all elements of nums equal to 1. If it is impossible, return -1.\n\nThe gcd of two integers is the greatest common divisor of the two integers.\n\n \nExample 1:\n\n\nInput: nums = [2,6,3,4]\nOutput: 4\nExplanation: We can do the following operations:\n- Choose index i = 2 and replace nums[2] with gcd(3,4) = 1. Now we have nums = [2,6,1,4].\n- Choose index i = 1 and replace nums[1] with gcd(6,1) = 1. Now we have nums = [2,1,1,4].\n- Choose index i = 0 and replace nums[0] with gcd(2,1) = 1. Now we have nums = [1,1,1,4].\n- Choose index i = 2 and replace nums[3] with gcd(1,4) = 1. Now we have nums = [1,1,1,1].\n\n\nExample 2:\n\n\nInput: nums = [2,10,6,14]\nOutput: -1\nExplanation: It can be shown that it is impossible to make all the elements equal to 1.\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 50\n\t1 <= nums[i] <= 106\n\n",
+  "description": "You are given a 0-indexed array nums consisiting of positive integers. You can do the following operation on the array any number of times:\n\n\n\tSelect an index i such that 0 <= i < n - 1 and replace either of nums[i] or nums[i+1] with their gcd value.\n\n\nReturn the minimum number of operations to make all elements of nums equal to 1. If it is impossible, return -1.\n\nThe gcd of two integers is the greatest common divisor of the two integers.",
+  "example": "Input: nums = [2,6,3,4]\nOutput: 4\nExplanation: We can do the following operations:\n- Choose index i = 2 and replace nums[2] with gcd(3,4) = 1. Now we have nums = [2,6,1,4].\n- Choose index i = 1 and replace nums[1] with gcd(6,1) = 1. Now we have nums = [2,1,1,4].\n- Choose index i = 0 and replace nums[0] with gcd(2,1) = 1. Now we have nums = [1,1,1,4].\n- Choose index i = 2 and replace nums[3] with gcd(1,4) = 1. Now we have nums = [1,1,1,1].",
+  "constraints_text": "2 <= nums.length <= 50\n\t1 <= nums[i] <= 106",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Check if the array's overall GCD is 1, count existing ones, and handle impossible or base cases.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "gcd",
+        "counting"
+      ],
+      "cues": [
+        "impossible",
+        "all-elements-equal-to-1",
+        "positive-integers"
+      ],
+      "constraints": [
+        "nums-length-50",
+        "nums-i-10-6"
+      ]
+    },
+    {
+      "intent": "If no '1's exist, find the shortest subarray whose elements' GCD is 1 to determine minimum operations to create a '1'.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "gcd"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "replace-with-their-gcd-value"
+      ],
+      "constraints": [
+        "nums-length-50",
+        "nums-i-10-6"
+      ]
+    },
+    {
+      "intent": "Calculate the total minimum operations by combining the cost to create a '1' with the cost to propagate it.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-operations"
+      ],
+      "constraints": [
+        "nums-length-50"
+      ]
+    }
+  ]
+}

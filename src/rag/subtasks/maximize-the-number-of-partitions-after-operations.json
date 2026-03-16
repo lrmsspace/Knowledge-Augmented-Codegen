@@ -1,0 +1,61 @@
+{
+  "slug": "maximize-the-number-of-partitions-after-operations",
+  "link": "https://leetcode.com/problems/maximize-the-number-of-partitions-after-operations/",
+  "difficulty": "Hard",
+  "index": "2697",
+  "description_full": "You are given a string s and an integer k.\n\nFirst, you are allowed to change at most one index in s to another lowercase English letter.\n\nAfter that, do the following partitioning operation until s is empty:\n\n\n\tChoose the longest prefix of s containing at most k distinct characters.\n\tDelete the prefix from s and increase the number of partitions by one. The remaining characters (if any) in s maintain their initial order.\n\n\nReturn an integer denoting the maximum number of resulting partitions after the operations by optimally choosing at most one index to change.\n\n \nExample 1:\n\n\nInput: s = \"accca\", k = 2\n\nOutput: 3\n\nExplanation:\n\nThe optimal way is to change s[2] to something other than a and c, for example, b. then it becomes \"acbca\".\n\nThen we perform the operations:\n\n\n\tThe longest prefix containing at most 2 distinct characters is \"ac\", we remove it and s becomes \"bca\".\n\tNow The longest prefix containing at most 2 distinct characters is \"bc\", so we remove it and s becomes \"a\".\n\tFinally, we remove \"a\" and s becomes empty, so the procedure ends.\n\n\nDoing the operations, the string is divided into 3 partitions, so the answer is 3.\n\n\nExample 2:\n\n\nInput: s = \"aabaab\", k = 3\n\nOutput: 1\n\nExplanation:\n\nInitially s contains 2 distinct characters, so whichever character we change, it will contain at most 3 distinct characters, so the longest prefix with at most 3 distinct characters would always be all of it, therefore the answer is 1.\n\n\nExample 3:\n\n\nInput: s = \"xxyz\", k = 1\n\nOutput: 4\n\nExplanation:\n\nThe optimal way is to change s[0] or s[1] to something other than characters in s, for example, to change s[0] to w.\n\nThen s becomes \"wxyz\", which consists of 4 distinct characters, so as k is 1, it will divide into 4 partitions.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists only of lowercase English letters.\n\t1 <= k <= 26\n\n",
+  "description": "You are given a string s and an integer k.\n\nFirst, you are allowed to change at most one index in s to another lowercase English letter.\n\nAfter that, do the following partitioning operation until s is empty:\n\n\n\tChoose the longest prefix of s containing at most k distinct characters.\n\tDelete the prefix from s and increase the number of partitions by one. The remaining characters (if any) in s maintain their initial order.\n\n\nReturn an integer denoting the maximum number of resulting partitions after the operations by optimally choosing at most one index to change.",
+  "example": "Input: s = \"accca\", k = 2\n\nOutput: 3\n\nExplanation:\n\nThe optimal way is to change s[2] to something other than a and c, for example, b. then it becomes \"acbca\".\n\nThen we perform the operations:\n\n\n\tThe longest prefix containing at most 2 distinct characters is \"ac\", we remove it and s becomes \"bca\".\n\tNow The longest prefix containing at most 2 distinct characters is \"bc\", so we remove it and s becomes \"a\".\n\tFinally, we remove \"a\" and s becomes empty, so the procedure ends.\n\n\nDoing the operations, the string is divided into 3 partitions, so the answer is 3.",
+  "constraints_text": "1 <= s.length <= 104\n\ts consists only of lowercase English letters.\n\t1 <= k <= 26",
+  "templates": {
+    "c": "int maxPartitionsAfterOperations(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxPartitionsAfterOperations(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPartitionsAfterOperations(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxPartitionsAfterOperations = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxPartitionsAfterOperations(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the number of partitions for a given string by repeatedly finding the longest prefix with at most K distinct characters.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "longest-prefix",
+        "at-most-k-distinct-characters",
+        "delete-prefix"
+      ],
+      "constraints": [
+        "at-most-k-distinct-characters"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible strings (original and one-character modifications), apply the partitioning logic, and find the maximum partition count.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "at-most-one-index",
+        "maximum-number-of-resulting-partitions",
+        "optimally-choosing"
+      ],
+      "constraints": [
+        "at-most-one-index",
+        "maximum"
+      ]
+    }
+  ]
+}

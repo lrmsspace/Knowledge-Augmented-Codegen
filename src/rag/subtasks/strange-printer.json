@@ -1,0 +1,56 @@
+{
+  "slug": "strange-printer",
+  "link": "https://leetcode.com/problems/strange-printer/",
+  "difficulty": "Hard",
+  "index": "1859",
+  "description_full": "There is a strange printer with the following two special properties:\n\n\n\tThe printer can only print a sequence of the same character each time.\n\tAt each turn, the printer can print new characters starting from and ending at any place and will cover the original existing characters.\n\n\nGiven a string s, return the minimum number of turns the printer needed to print it.\n\n \nExample 1:\n\n\nInput: s = \"aaabbb\"\nOutput: 2\nExplanation: Print \"aaa\" first and then print \"bbb\".\n\n\nExample 2:\n\n\nInput: s = \"aba\"\nOutput: 2\nExplanation: Print \"aaa\" first and then print \"b\" from the second place of the string, which will cover the existing character 'a'.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists of lowercase English letters.\n\n",
+  "description": "There is a strange printer with the following two special properties:\n\n\n\tThe printer can only print a sequence of the same character each time.\n\tAt each turn, the printer can print new characters starting from and ending at any place and will cover the original existing characters.\n\n\nGiven a string s, return the minimum number of turns the printer needed to print it.",
+  "example": "Input: s = \"aaabbb\"\nOutput: 2\nExplanation: Print \"aaa\" first and then print \"bbb\".",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "int strangePrinter(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int strangePrinter(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int strangePrinter(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar strangePrinter = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def strangePrinter(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a 2D DP table to store the minimum turns needed for all possible substrings.",
+      "structures": [
+        "matrix",
+        "string"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-turns",
+        "string-s"
+      ],
+      "constraints": [
+        "1-s-length-100"
+      ]
+    },
+    {
+      "intent": "Compute the minimum turns for all substrings using an interval dynamic programming approach.",
+      "structures": [
+        "matrix",
+        "string"
+      ],
+      "actions": [
+        "dp-2d",
+        "interval-dp"
+      ],
+      "cues": [
+        "minimum-number-of-turns",
+        "print-new-characters-starting-from-and-ending-at-any-place-and-will-cover-the-original-existing-characters",
+        "sequence-of-the-same-character"
+      ],
+      "constraints": [
+        "s-length-100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "minimum-number-of-vertices-to-reach-all-nodes",
+  "link": "https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/",
+  "difficulty": "Medium",
+  "index": "1286",
+  "description_full": "Given a directed acyclic graph, with n vertices numbered from 0 to n-1, and an array edges where edges[i] = [fromi, toi] represents a directed edge from node fromi to node toi.\n\nFind the smallest set of vertices from which all nodes in the graph are reachable. It's guaranteed that a unique solution exists.\n\nNotice that you can return the vertices in any order.\n\n \nExample 1:\n\n\n\n\nInput: n = 6, edges = [[0,1],[0,2],[2,5],[3,4],[4,2]]\nOutput: [0,3]\nExplanation: It's not possible to reach all the nodes from a single vertex. From 0 we can reach [0,1,2,5]. From 3 we can reach [3,4,2,5]. So we output [0,3].\n\nExample 2:\n\n\n\n\nInput: n = 5, edges = [[0,1],[2,1],[3,1],[1,4],[2,4]]\nOutput: [0,2,3]\nExplanation: Notice that vertices 0, 3 and 2 are not reachable from any other node, so we must include them. Also any of these vertices can reach nodes 1 and 4.\n\n\n \nConstraints:\n\n\n\t2 <= n <= 10^5\n\t1 <= edges.length <= min(10^5, n * (n - 1) / 2)\n\tedges[i].length == 2\n\t0 <= fromi, toi < n\n\tAll pairs (fromi, toi) are distinct.\n\n",
+  "description": "Given a directed acyclic graph, with n vertices numbered from 0 to n-1, and an array edges where edges[i] = [fromi, toi] represents a directed edge from node fromi to node toi.\n\nFind the smallest set of vertices from which all nodes in the graph are reachable. It's guaranteed that a unique solution exists.\n\nNotice that you can return the vertices in any order.",
+  "example": "Input: n = 6, edges = [[0,1],[0,2],[2,5],[3,4],[4,2]]\nOutput: [0,3]\nExplanation: It's not possible to reach all the nodes from a single vertex. From 0 we can reach [0,1,2,5]. From 3 we can reach [3,4,2,5]. So we output [0,3].",
+  "constraints_text": "2 <= n <= 10^5\n\t1 <= edges.length <= min(10^5, n * (n - 1) / 2)\n\tedges[i].length == 2\n\t0 <= fromi, toi < n\n\tAll pairs (fromi, toi) are distinct.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findSmallestSetOfVertices(int n, int** edges, int edgesSize, int* edgesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> findSmallestSetOfVertices(int n, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findSmallestSetOfVertices(int n, List<List<Integer>> edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @return {number[]}\n */\nvar findSmallestSetOfVertices = function(n, edges) {\n    \n};",
+    "python": "class Solution(object):\n    def findSmallestSetOfVertices(self, n, edges):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify all nodes with an in-degree of zero, as these are the only nodes that must be explicitly included to reach themselves and their descendants.",
+      "structures": [
+        "array",
+        "graph"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-set",
+        "all-nodes-reachable",
+        "directed-acyclic-graph"
+      ],
+      "constraints": [
+        "2-n-10-5",
+        "unique-solution-exists"
+      ]
+    }
+  ]
+}

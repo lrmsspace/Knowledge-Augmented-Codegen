@@ -1,0 +1,39 @@
+{
+  "slug": "day-of-the-week",
+  "link": "https://leetcode.com/problems/day-of-the-week/",
+  "difficulty": "Easy",
+  "index": "252",
+  "description_full": "Given a date, return the corresponding day of the week for that date.\n\nThe input is given as three integers representing the day, month and year respectively.\n\nReturn the answer as one of the following values {\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"}.\n\n \nExample 1:\n\n\nInput: day = 31, month = 8, year = 2019\nOutput: \"Saturday\"\n\n\nExample 2:\n\n\nInput: day = 18, month = 7, year = 1999\nOutput: \"Sunday\"\n\n\nExample 3:\n\n\nInput: day = 15, month = 8, year = 1993\nOutput: \"Sunday\"\n\n\n \nConstraints:\n\n\n\tThe given dates are valid dates between the years 1971 and 2100.\n\n",
+  "description": "Given a date, return the corresponding day of the week for that date.\n\nThe input is given as three integers representing the day, month and year respectively.\n\nReturn the answer as one of the following values {\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"}.",
+  "example": "Input: day = 31, month = 8, year = 2019\nOutput: \"Saturday\"",
+  "constraints_text": "The given dates are valid dates between the years 1971 and 2100.",
+  "templates": {
+    "c": "char* dayOfTheWeek(int day, int month, int year) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string dayOfTheWeek(int day, int month, int year) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String dayOfTheWeek(int day, int month, int year) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} day\n * @param {number} month\n * @param {number} year\n * @return {string}\n */\nvar dayOfTheWeek = function(day, month, year) {\n    \n};",
+    "python": "class Solution(object):\n    def dayOfTheWeek(self, day, month, year):\n        \"\"\"\n        :type day: int\n        :type month: int\n        :type year: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the day of the week for a given date and map the result to its string representation.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "day-month-year",
+        "day-of-the-week",
+        "return-the-answer-as-one-of-the-following-values"
+      ],
+      "constraints": [
+        "1971-and-2100",
+        "valid-dates"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "minimum-time-to-remove-all-cars-containing-illegal-goods",
+  "link": "https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/",
+  "difficulty": "Hard",
+  "index": "2146",
+  "description_full": "You are given a 0-indexed binary string s which represents a sequence of train cars. s[i] = '0' denotes that the ith car does not contain illegal goods and s[i] = '1' denotes that the ith car does contain illegal goods.\n\nAs the train conductor, you would like to get rid of all the cars containing illegal goods. You can do any of the following three operations any number of times:\n\n\n\tRemove a train car from the left end (i.e., remove s[0]) which takes 1 unit of time.\n\tRemove a train car from the right end (i.e., remove s[s.length - 1]) which takes 1 unit of time.\n\tRemove a train car from anywhere in the sequence which takes 2 units of time.\n\n\nReturn the minimum time to remove all the cars containing illegal goods.\n\nNote that an empty sequence of cars is considered to have no cars containing illegal goods.\n\n \nExample 1:\n\n\nInput: s = \"1100101\"\nOutput: 5\nExplanation: \nOne way to remove all the cars containing illegal goods from the sequence is to\n- remove a car from the left end 2 times. Time taken is 2 * 1 = 2.\n- remove a car from the right end. Time taken is 1.\n- remove the car containing illegal goods found in the middle. Time taken is 2.\nThis obtains a total time of 2 + 1 + 2 = 5. \n\nAn alternative way is to\n- remove a car from the left end 2 times. Time taken is 2 * 1 = 2.\n- remove a car from the right end 3 times. Time taken is 3 * 1 = 3.\nThis also obtains a total time of 2 + 3 = 5.\n\n5 is the minimum time taken to remove all the cars containing illegal goods. \nThere are no other ways to remove them with less time.\n\n\nExample 2:\n\n\nInput: s = \"0010\"\nOutput: 2\nExplanation:\nOne way to remove all the cars containing illegal goods from the sequence is to\n- remove a car from the left end 3 times. Time taken is 3 * 1 = 3.\nThis obtains a total time of 3.\n\nAnother way to remove all the cars containing illegal goods from the sequence is to\n- remove the car containing illegal goods found in the middle. Time taken is 2.\nThis obtains a total time of 2.\n\nAnother way to remove all the cars containing illegal goods from the sequence is to \n- remove a car from the right end 2 times. Time taken is 2 * 1 = 2. \nThis obtains a total time of 2.\n\n2 is the minimum time taken to remove all the cars containing illegal goods. \nThere are no other ways to remove them with less time.\n\n \nConstraints:\n\n\n\t1 <= s.length <= 2 * 105\n\ts[i] is either '0' or '1'.\n\n",
+  "description": "You are given a 0-indexed binary string s which represents a sequence of train cars. s[i] = '0' denotes that the ith car does not contain illegal goods and s[i] = '1' denotes that the ith car does contain illegal goods.\n\nAs the train conductor, you would like to get rid of all the cars containing illegal goods. You can do any of the following three operations any number of times:\n\n\n\tRemove a train car from the left end (i.e., remove s[0]) which takes 1 unit of time.\n\tRemove a train car from the right end (i.e., remove s[s.length - 1]) which takes 1 unit of time.\n\tRemove a train car from anywhere in the sequence which takes 2 units of time.\n\n\nReturn the minimum time to remove all the cars containing illegal goods.\n\nNote that an empty sequence of cars is considered to have no cars containing illegal goods.",
+  "example": "Input: s = \"1100101\"\nOutput: 5\nExplanation: \nOne way to remove all the cars containing illegal goods from the sequence is to\n- remove a car from the left end 2 times. Time taken is 2 * 1 = 2.\n- remove a car from the right end. Time taken is 1.\n- remove the car containing illegal goods found in the middle. Time taken is 2.\nThis obtains a total time of 2 + 1 + 2 = 5. \n\nAn alternative way is to\n- remove a car from the left end 2 times. Time taken is 2 * 1 = 2.\n- remove a car from the right end 3 times. Time taken is 3 * 1 = 3.\nThis also obtains a total time of 2 + 3 = 5.\n\n5 is the minimum time taken to remove all the cars containing illegal goods. \nThere are no other ways to remove them with less time.",
+  "constraints_text": "1 <= s.length <= 2 * 105\n\ts[i] is either '0' or '1'.",
+  "templates": {
+    "c": "int minimumTime(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumTime(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumTime(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumTime = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumTime(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute prefix sums of '1's to efficiently query the count of illegal goods in any substring.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "prefix-sum",
+        "enumeration"
+      ],
+      "cues": [
+        "binary-string",
+        "s-i-1-denotes-illegal-goods"
+      ],
+      "constraints": [
+        "s-length-up-to-10-5"
+      ]
+    },
+    {
+      "intent": "Precompute suffix minimums of a derived cost function (2 * prefix_ones[k] - k) to optimize right-side removal costs.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-time",
+        "remove-from-right-end",
+        "remove-anywhere"
+      ],
+      "constraints": [
+        "s-length-up-to-10-5"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible prefix removal lengths, combining with precomputed suffix minimums to find the overall minimum total cost.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-time",
+        "remove-from-left-end",
+        "remove-anywhere"
+      ],
+      "constraints": [
+        "s-length-up-to-10-5"
+      ]
+    }
+  ]
+}

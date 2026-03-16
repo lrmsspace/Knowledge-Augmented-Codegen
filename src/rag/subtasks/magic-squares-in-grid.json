@@ -1,0 +1,54 @@
+{
+  "slug": "magic-squares-in-grid",
+  "link": "https://leetcode.com/problems/magic-squares-in-grid/",
+  "difficulty": "Medium",
+  "index": "980",
+  "description_full": "A 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers from 1 to 9 such that each row, column, and both diagonals all have the same sum.\n\nGiven a row x col grid of integers, how many 3 x 3 magic square subgrids are there?\n\nNote: while a magic square can only contain numbers from 1 to 9, grid may contain numbers up to 15.\n\n \nExample 1:\n\n\nInput: grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]\nOutput: 1\nExplanation: \nThe following subgrid is a 3 x 3 magic square:\n\nwhile this one is not:\n\nIn total, there is only one magic square inside the given grid.\n\n\nExample 2:\n\n\nInput: grid = [[8]]\nOutput: 0\n\n\n \nConstraints:\n\n\n\trow == grid.length\n\tcol == grid[i].length\n\t1 <= row, col <= 10\n\t0 <= grid[i][j] <= 15\n\n",
+  "description": "A 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers from 1 to 9 such that each row, column, and both diagonals all have the same sum.\n\nGiven a row x col grid of integers, how many 3 x 3 magic square subgrids are there?\n\nNote: while a magic square can only contain numbers from 1 to 9, grid may contain numbers up to 15.",
+  "example": "Input: grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]\nOutput: 1\nExplanation: \nThe following subgrid is a 3 x 3 magic square:\n\nwhile this one is not:\n\nIn total, there is only one magic square inside the given grid.",
+  "constraints_text": "row == grid.length\n\tcol == grid[i].length\n\t1 <= row, col <= 10\n\t0 <= grid[i][j] <= 15",
+  "templates": {
+    "c": "int numMagicSquaresInside(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numMagicSquaresInside(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numMagicSquaresInside(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar numMagicSquaresInside = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def numMagicSquaresInside(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all possible 3x3 subgrids within the given grid.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "3-x-3-magic-square-subgrids"
+      ],
+      "constraints": [
+        "1-row-col-10"
+      ]
+    },
+    {
+      "intent": "Validate if a given 3x3 subgrid is a magic square by checking number range, distinctness, and sum properties.",
+      "structures": [
+        "matrix",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "distinct-numbers-from-1-to-9",
+        "each-row-column-and-both-diagonals-all-have-the-same-sum"
+      ],
+      "constraints": [
+        "numbers-from-1-to-9",
+        "sum-is-15"
+      ]
+    }
+  ]
+}

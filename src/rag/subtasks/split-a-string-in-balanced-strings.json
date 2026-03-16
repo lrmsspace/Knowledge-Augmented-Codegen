@@ -1,0 +1,41 @@
+{
+  "slug": "split-a-string-in-balanced-strings",
+  "link": "https://leetcode.com/problems/split-a-string-in-balanced-strings/",
+  "difficulty": "Easy",
+  "index": "258",
+  "description_full": "Balanced strings are those that have an equal quantity of 'L' and 'R' characters.\n\nGiven a balanced string s, split it into some number of substrings such that:\n\n\n\tEach substring is balanced.\n\n\nReturn the maximum number of balanced strings you can obtain.\n\n \nExample 1:\n\n\nInput: s = \"RLRRLLRLRL\"\nOutput: 4\nExplanation: s can be split into \"RL\", \"RRLL\", \"RL\", \"RL\", each substring contains same number of 'L' and 'R'.\n\n\nExample 2:\n\n\nInput: s = \"RLRRRLLRLL\"\nOutput: 2\nExplanation: s can be split into \"RL\", \"RRRLLRLL\", each substring contains same number of 'L' and 'R'.\nNote that s cannot be split into \"RL\", \"RR\", \"RL\", \"LR\", \"LL\", because the 2nd and 5th substrings are not balanced.\n\nExample 3:\n\n\nInput: s = \"LLLLRRRR\"\nOutput: 1\nExplanation: s can be split into \"LLLLRRRR\".\n\n\n \nConstraints:\n\n\n\t2 <= s.length <= 1000\n\ts[i] is either 'L' or 'R'.\n\ts is a balanced string.\n\n",
+  "description": "Balanced strings are those that have an equal quantity of 'L' and 'R' characters.\n\nGiven a balanced string s, split it into some number of substrings such that:\n\n\n\tEach substring is balanced.\n\n\nReturn the maximum number of balanced strings you can obtain.",
+  "example": "Input: s = \"RLRRLLRLRL\"\nOutput: 4\nExplanation: s can be split into \"RL\", \"RRLL\", \"RL\", \"RL\", each substring contains same number of 'L' and 'R'.",
+  "constraints_text": "2 <= s.length <= 1000\n\ts[i] is either 'L' or 'R'.\n\ts is a balanced string.",
+  "templates": {
+    "c": "int balancedStringSplit(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int balancedStringSplit(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int balancedStringSplit(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar balancedStringSplit = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def balancedStringSplit(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, maintain a balance count of 'L' and 'R' characters, and increment a counter each time a balanced substring is found.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "balanced-string",
+        "split-it-into-some-number-of-substrings",
+        "each-substring-is-balanced",
+        "maximum-number"
+      ],
+      "constraints": [
+        "2-s-length-1000",
+        "s-i-is-either-l-or-r",
+        "s-is-a-balanced-string"
+      ]
+    }
+  ]
+}

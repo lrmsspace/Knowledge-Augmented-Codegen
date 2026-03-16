@@ -1,0 +1,54 @@
+{
+  "slug": "k-th-nearest-obstacle-queries",
+  "link": "https://leetcode.com/problems/k-th-nearest-obstacle-queries/",
+  "difficulty": "Medium",
+  "index": "2550",
+  "description_full": "There is an infinite 2D plane.\n\nYou are given a positive integer k. You are also given a 2D array queries, which contains the following queries:\n\n\n\tqueries[i] = [x, y]: Build an obstacle at coordinate (x, y) in the plane. It is guaranteed that there is no obstacle at this coordinate when this query is made.\n\n\nAfter each query, you need to find the distance of the kth nearest obstacle from the origin.\n\nReturn an integer array results where results[i] denotes the kth nearest obstacle after query i, or results[i] == -1 if there are less than k obstacles.\n\nNote that initially there are no obstacles anywhere.\n\nThe distance of an obstacle at coordinate (x, y) from the origin is given by |x| + |y|.\n\n \nExample 1:\n\n\nInput: queries = [[1,2],[3,4],[2,3],[-3,0]], k = 2\n\nOutput: [-1,7,5,3]\n\nExplanation:\n\n\n\tInitially, there are 0 obstacles.\n\tAfter queries[0], there are less than 2 obstacles.\n\tAfter queries[1], there are obstacles at distances 3 and 7.\n\tAfter queries[2], there are obstacles at distances 3, 5, and 7.\n\tAfter queries[3], there are obstacles at distances 3, 3, 5, and 7.\n\n\n\nExample 2:\n\n\nInput: queries = [[5,5],[4,4],[3,3]], k = 1\n\nOutput: [10,8,6]\n\nExplanation:\n\n\n\tAfter queries[0], there is an obstacle at distance 10.\n\tAfter queries[1], there are obstacles at distances 8 and 10.\n\tAfter queries[2], there are obstacles at distances 6, 8, and 10.\n\n\n\n \nConstraints:\n\n\n\t1 <= queries.length <= 2 * 105\n\tAll queries[i] are unique.\n\t-109 <= queries[i][0], queries[i][1] <= 109\n\t1 <= k <= 105\n\n",
+  "description": "There is an infinite 2D plane.\n\nYou are given a positive integer k. You are also given a 2D array queries, which contains the following queries:\n\n\n\tqueries[i] = [x, y]: Build an obstacle at coordinate (x, y) in the plane. It is guaranteed that there is no obstacle at this coordinate when this query is made.\n\n\nAfter each query, you need to find the distance of the kth nearest obstacle from the origin.\n\nReturn an integer array results where results[i] denotes the kth nearest obstacle after query i, or results[i] == -1 if there are less than k obstacles.\n\nNote that initially there are no obstacles anywhere.\n\nThe distance of an obstacle at coordinate (x, y) from the origin is given by |x| + |y|.",
+  "example": "Input: queries = [[1,2],[3,4],[2,3],[-3,0]], k = 2\n\nOutput: [-1,7,5,3]\n\nExplanation:\n\n\n\tInitially, there are 0 obstacles.\n\tAfter queries[0], there are less than 2 obstacles.\n\tAfter queries[1], there are obstacles at distances 3 and 7.\n\tAfter queries[2], there are obstacles at distances 3, 5, and 7.\n\tAfter queries[3], there are obstacles at distances 3, 3, 5, and 7.",
+  "constraints_text": "1 <= queries.length <= 2 * 105\n\tAll queries[i] are unique.\n\t-109 <= queries[i][0], queries[i][1] <= 109\n\t1 <= k <= 105",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* resultsArray(int** queries, int queriesSize, int* queriesColSize, int k, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> resultsArray(vector<vector<int>>& queries, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] resultsArray(int[][] queries, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @param {number} k\n * @return {number[]}\n */\nvar resultsArray = function(queries, k) {\n    \n};",
+    "python": "class Solution(object):\n    def resultsArray(self, queries, k):\n        \"\"\"\n        :type queries: List[List[int]]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate Manhattan distance for each new obstacle from the origin.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "queries-i-x-y",
+        "x-y"
+      ],
+      "constraints": [
+        "109-queries-i-0-queries-i-1-109"
+      ]
+    },
+    {
+      "intent": "Manage a max-heap of size k to store the k smallest distances and retrieve the kth smallest after each addition.",
+      "structures": [
+        "heap"
+      ],
+      "actions": [
+        "heap-select",
+        "simulation"
+      ],
+      "cues": [
+        "kth-nearest-obstacle",
+        "after-each-query",
+        "less-than-k-obstacles"
+      ],
+      "constraints": [
+        "queries-length-2-105",
+        "1-k-105"
+      ]
+    }
+  ]
+}

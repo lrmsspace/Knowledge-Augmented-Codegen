@@ -1,0 +1,70 @@
+{
+  "slug": "count-k-subsequences-of-a-string-with-maximum-beauty",
+  "link": "https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty/",
+  "difficulty": "Hard",
+  "index": "2668",
+  "description_full": "You are given a string s and an integer k.\n\nA k-subsequence is a subsequence of s, having length k, and all its characters are unique, i.e., every character occurs once.\n\nLet f(c) denote the number of times the character c occurs in s.\n\nThe beauty of a k-subsequence is the sum of f(c) for every character c in the k-subsequence.\n\nFor example, consider s = \"abbbdd\" and k = 2:\n\n\n\tf('a') = 1, f('b') = 3, f('d') = 2\n\tSome k-subsequences of s are:\n\t\n\t\t\"abbbdd\" -> \"ab\" having a beauty of f('a') + f('b') = 4\n\t\t\"abbbdd\" -> \"ad\" having a beauty of f('a') + f('d') = 3\n\t\t\"abbbdd\" -> \"bd\" having a beauty of f('b') + f('d') = 5\n\t\n\t\n\n\nReturn an integer denoting the number of k-subsequences whose beauty is the maximum among all k-subsequences. Since the answer may be too large, return it modulo 109 + 7.\n\nA subsequence of a string is a new string formed from the original string by deleting some (possibly none) of the characters without disturbing the relative positions of the remaining characters.\n\nNotes\n\n\n\tf(c) is the number of times a character c occurs in s, not a k-subsequence.\n\tTwo k-subsequences are considered different if one is formed by an index that is not present in the other. So, two k-subsequences may form the same string.\n\n\n \nExample 1:\n\n\nInput: s = \"bcca\", k = 2\nOutput: 4\nExplanation: From s we have f('a') = 1, f('b') = 1, and f('c') = 2.\nThe k-subsequences of s are: \nbcca having a beauty of f('b') + f('c') = 3 \nbcca having a beauty of f('b') + f('c') = 3 \nbcca having a beauty of f('b') + f('a') = 2 \nbcca having a beauty of f('c') + f('a') = 3\nbcca having a beauty of f('c') + f('a') = 3 \nThere are 4 k-subsequences that have the maximum beauty, 3. \nHence, the answer is 4. \n\n\nExample 2:\n\n\nInput: s = \"abbcd\", k = 4\nOutput: 2\nExplanation: From s we have f('a') = 1, f('b') = 2, f('c') = 1, and f('d') = 1. \nThe k-subsequences of s are: \nabbcd having a beauty of f('a') + f('b') + f('c') + f('d') = 5\nabbcd having a beauty of f('a') + f('b') + f('c') + f('d') = 5 \nThere are 2 k-subsequences that have the maximum beauty, 5. \nHence, the answer is 2. \n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 2 * 105\n\t1 <= k <= s.length\n\ts consists only of lowercase English letters.\n\n",
+  "description": "You are given a string s and an integer k.\n\nA k-subsequence is a subsequence of s, having length k, and all its characters are unique, i.e., every character occurs once.\n\nLet f(c) denote the number of times the character c occurs in s.\n\nThe beauty of a k-subsequence is the sum of f(c) for every character c in the k-subsequence.\n\nFor example, consider s = \"abbbdd\" and k = 2:\n\n\n\tf('a') = 1, f('b') = 3, f('d') = 2\n\tSome k-subsequences of s are:\n\t\n\t\t\"abbbdd\" -> \"ab\" having a beauty of f('a') + f('b') = 4\n\t\t\"abbbdd\" -> \"ad\" having a beauty of f('a') + f('d') = 3\n\t\t\"abbbdd\" -> \"bd\" having a beauty of f('b') + f('d') = 5\n\t\n\t\n\n\nReturn an integer denoting the number of k-subsequences whose beauty is the maximum among all k-subsequences. Since the answer may be too large, return it modulo 109 + 7.\n\nA subsequence of a string is a new string formed from the original string by deleting some (possibly none) of the characters without disturbing the relative positions of the remaining characters.\n\nNotes\n\n\n\tf(c) is the number of times a character c occurs in s, not a k-subsequence.\n\tTwo k-subsequences are considered different if one is formed by an index that is not present in the other. So, two k-subsequences may form the same string.",
+  "example": "Input: s = \"bcca\", k = 2\nOutput: 4\nExplanation: From s we have f('a') = 1, f('b') = 1, and f('c') = 2.\nThe k-subsequences of s are: \nbcca having a beauty of f('b') + f('c') = 3 \nbcca having a beauty of f('b') + f('c') = 3 \nbcca having a beauty of f('b') + f('a') = 2 \nbcca having a beauty of f('c') + f('a') = 3\nbcca having a beauty of f('c') + f('a') = 3 \nThere are 4 k-subsequences that have the maximum beauty, 3. \nHence, the answer is 4.",
+  "constraints_text": "1 <= s.length <= 2 * 105\n\t1 <= k <= s.length\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int countKSubsequencesWithMaxBeauty(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countKSubsequencesWithMaxBeauty(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countKSubsequencesWithMaxBeauty(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar countKSubsequencesWithMaxBeauty = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def countKSubsequencesWithMaxBeauty(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the frequency of each unique character in the input string s.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "f-c-denotes-the-number-of-times-the-character-c-occurs-in-s"
+      ],
+      "constraints": [
+        "s-consists-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Determine the maximum possible beauty sum and the characteristics of character frequencies that achieve it.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "maximum-among-all-k-subsequences",
+        "beauty-is-the-sum-of-f-c"
+      ],
+      "constraints": [
+        "k-subsequence-has-length-k-and-unique-characters"
+      ]
+    },
+    {
+      "intent": "Calculate the total number of k-subsequences that achieve the maximum beauty, applying modulo arithmetic.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "mod-exp"
+      ],
+      "cues": [
+        "number-of-k-subsequences-whose-beauty-is-the-maximum",
+        "return-it-modulo-10-9-7"
+      ],
+      "constraints": [
+        "answer-may-be-too-large",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

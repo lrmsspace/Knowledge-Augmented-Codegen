@@ -1,0 +1,40 @@
+{
+  "slug": "partitioning-into-minimum-number-of-deci-binary-numbers",
+  "link": "https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/",
+  "difficulty": "Medium",
+  "index": "1335",
+  "description_full": "A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros. For example, 101 and 1100 are deci-binary, while 112 and 3001 are not.\n\nGiven a string n that represents a positive decimal integer, return the minimum number of positive deci-binary numbers needed so that they sum up to n.\n\n \nExample 1:\n\n\nInput: n = \"32\"\nOutput: 3\nExplanation: 10 + 11 + 11 = 32\n\n\nExample 2:\n\n\nInput: n = \"82734\"\nOutput: 8\n\n\nExample 3:\n\n\nInput: n = \"27346209830709182346\"\nOutput: 9\n\n\n \nConstraints:\n\n\n\t1 <= n.length <= 105\n\tn consists of only digits.\n\tn does not contain any leading zeros and represents a positive integer.\n\n",
+  "description": "A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros. For example, 101 and 1100 are deci-binary, while 112 and 3001 are not.\n\nGiven a string n that represents a positive decimal integer, return the minimum number of positive deci-binary numbers needed so that they sum up to n.",
+  "example": "Input: n = \"32\"\nOutput: 3\nExplanation: 10 + 11 + 11 = 32",
+  "constraints_text": "1 <= n.length <= 105\n\tn consists of only digits.\n\tn does not contain any leading zeros and represents a positive integer.",
+  "templates": {
+    "c": "int minPartitions(char* n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minPartitions(string n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minPartitions(String n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} n\n * @return {number}\n */\nvar minPartitions = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def minPartitions(self, n):\n        \"\"\"\n        :type n: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the largest digit in the input string 'n' to determine the minimum count of deci-binary numbers.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number",
+        "deci-binary",
+        "sum-up-to-n"
+      ],
+      "constraints": [
+        "1-n-length-105",
+        "n-consists-of-only-digits",
+        "n-does-not-contain-any-leading-zeros"
+      ]
+    }
+  ]
+}

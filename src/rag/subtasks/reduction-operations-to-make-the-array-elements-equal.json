@@ -1,0 +1,57 @@
+{
+  "slug": "reduction-operations-to-make-the-array-elements-equal",
+  "link": "https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/",
+  "difficulty": "Medium",
+  "index": "1408",
+  "description_full": "Given an integer array nums, your goal is to make all elements in nums equal. To complete one operation, follow these steps:\n\n\n\tFind the largest value in nums. Let its index be i (0-indexed) and its value be largest. If there are multiple elements with the largest value, pick the smallest i.\n\tFind the next largest value in nums strictly smaller than largest. Let its value be nextLargest.\n\tReduce nums[i] to nextLargest.\n\n\nReturn the number of operations to make all elements in nums equal.\n\n \nExample 1:\n\n\nInput: nums = [5,1,3]\nOutput: 3\nExplanation: It takes 3 operations to make all elements in nums equal:\n1. largest = 5 at index 0. nextLargest = 3. Reduce nums[0] to 3. nums = [3,1,3].\n2. largest = 3 at index 0. nextLargest = 1. Reduce nums[0] to 1. nums = [1,1,3].\n3. largest = 3 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1].\n\n\nExample 2:\n\n\nInput: nums = [1,1,1]\nOutput: 0\nExplanation: All elements in nums are already equal.\n\n\nExample 3:\n\n\nInput: nums = [1,1,2,2,3]\nOutput: 4\nExplanation: It takes 4 operations to make all elements in nums equal:\n1. largest = 3 at index 4. nextLargest = 2. Reduce nums[4] to 2. nums = [1,1,2,2,2].\n2. largest = 2 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1,2,2].\n3. largest = 2 at index 3. nextLargest = 1. Reduce nums[3] to 1. nums = [1,1,1,1,2].\n4. largest = 2 at index 4. nextLargest = 1. Reduce nums[4] to 1. nums = [1,1,1,1,1].\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 5 * 104\n\t1 <= nums[i] <= 5 * 104\n\n",
+  "description": "Given an integer array nums, your goal is to make all elements in nums equal. To complete one operation, follow these steps:\n\n\n\tFind the largest value in nums. Let its index be i (0-indexed) and its value be largest. If there are multiple elements with the largest value, pick the smallest i.\n\tFind the next largest value in nums strictly smaller than largest. Let its value be nextLargest.\n\tReduce nums[i] to nextLargest.\n\n\nReturn the number of operations to make all elements in nums equal.",
+  "example": "Input: nums = [5,1,3]\nOutput: 3\nExplanation: It takes 3 operations to make all elements in nums equal:\n1. largest = 5 at index 0. nextLargest = 3. Reduce nums[0] to 3. nums = [3,1,3].\n2. largest = 3 at index 0. nextLargest = 1. Reduce nums[0] to 1. nums = [1,1,3].\n3. largest = 3 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1].",
+  "constraints_text": "1 <= nums.length <= 5 * 104\n\t1 <= nums[i] <= 5 * 104",
+  "templates": {
+    "c": "int reductionOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int reductionOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int reductionOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar reductionOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def reductionOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count occurrences of each number and identify all unique values present in the input array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "integer-array-nums",
+        "make-all-elements-equal"
+      ],
+      "constraints": [
+        "1-nums-length-5-104",
+        "1-nums-i-5-104"
+      ]
+    },
+    {
+      "intent": "Calculate the total number of operations by summing (rank - 1) * count for each distinct value.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-number-of-operations",
+        "reduce-nums-i-to-nextlargest"
+      ],
+      "constraints": [
+        "1-nums-length-5-104",
+        "1-nums-i-5-104"
+      ]
+    }
+  ]
+}

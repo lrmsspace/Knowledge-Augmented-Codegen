@@ -1,0 +1,55 @@
+{
+  "slug": "minimum-number-of-coins-for-fruits",
+  "link": "https://leetcode.com/problems/minimum-number-of-coins-for-fruits/",
+  "difficulty": "Medium",
+  "index": "2437",
+  "description_full": "You are given an 0-indexed integer array prices where prices[i] denotes the number of coins needed to purchase the (i + 1)th fruit.\n\nThe fruit market has the following reward for each fruit:\n\n\n\tIf you purchase the (i + 1)th fruit at prices[i] coins, you can get any number of the next i fruits for free.\n\n\nNote that even if you can take fruit j for free, you can still purchase it for prices[j - 1] coins to receive its reward.\n\nReturn the minimum number of coins needed to acquire all the fruits.\n\n \nExample 1:\n\n\nInput: prices = [3,1,2]\n\nOutput: 4\n\nExplanation:\n\n\n\tPurchase the 1st fruit with prices[0] = 3 coins, you are allowed to take the 2nd fruit for free.\n\tPurchase the 2nd fruit with prices[1] = 1 coin, you are allowed to take the 3rd fruit for free.\n\tTake the 3rd fruit for free.\n\n\nNote that even though you could take the 2nd fruit for free as a reward of buying 1st fruit, you purchase it to receive its reward, which is more optimal.\n\n\nExample 2:\n\n\nInput: prices = [1,10,1,1]\n\nOutput: 2\n\nExplanation:\n\n\n\tPurchase the 1st fruit with prices[0] = 1 coin, you are allowed to take the 2nd fruit for free.\n\tTake the 2nd fruit for free.\n\tPurchase the 3rd fruit for prices[2] = 1 coin, you are allowed to take the 4th fruit for free.\n\tTake the 4th fruit for free.\n\n\n\nExample 3:\n\n\nInput: prices = [26,18,6,12,49,7,45,45]\n\nOutput: 39\n\nExplanation:\n\n\n\tPurchase the 1st fruit with prices[0] = 26 coin, you are allowed to take the 2nd fruit for free.\n\tTake the 2nd fruit for free.\n\tPurchase the 3rd fruit for prices[2] = 6 coin, you are allowed to take the 4th, 5th and 6th (the next three) fruits for free.\n\tTake the 4th fruit for free.\n\tTake the 5th fruit for free.\n\tPurchase the 6th fruit with prices[5] = 7 coin, you are allowed to take the 8th and 9th fruit for free.\n\tTake the 7th fruit for free.\n\tTake the 8th fruit for free.\n\n\nNote that even though you could take the 6th fruit for free as a reward of buying 3rd fruit, you purchase it to receive its reward, which is more optimal.\n\n\n \nConstraints:\n\n\n\t1 <= prices.length <= 1000\n\t1 <= prices[i] <= 105\n\n",
+  "description": "You are given an 0-indexed integer array prices where prices[i] denotes the number of coins needed to purchase the (i + 1)th fruit.\n\nThe fruit market has the following reward for each fruit:\n\n\n\tIf you purchase the (i + 1)th fruit at prices[i] coins, you can get any number of the next i fruits for free.\n\n\nNote that even if you can take fruit j for free, you can still purchase it for prices[j - 1] coins to receive its reward.\n\nReturn the minimum number of coins needed to acquire all the fruits.",
+  "example": "Input: prices = [3,1,2]\n\nOutput: 4\n\nExplanation:\n\n\n\tPurchase the 1st fruit with prices[0] = 3 coins, you are allowed to take the 2nd fruit for free.\n\tPurchase the 2nd fruit with prices[1] = 1 coin, you are allowed to take the 3rd fruit for free.\n\tTake the 3rd fruit for free.\n\n\nNote that even though you could take the 2nd fruit for free as a reward of buying 1st fruit, you purchase it to receive its reward, which is more optimal.",
+  "constraints_text": "1 <= prices.length <= 1000\n\t1 <= prices[i] <= 105",
+  "templates": {
+    "c": "int minimumCoins(int* prices, int pricesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumCoins(vector<int>& prices) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumCoins(int[] prices) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} prices\n * @return {number}\n */\nvar minimumCoins = function(prices) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumCoins(self, prices):\n        \"\"\"\n        :type prices: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Prepare data structures for dynamic programming, including a segment tree to efficiently query minimum costs over ranges.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-coins",
+        "acquire-all-fruits"
+      ],
+      "constraints": [
+        "n-up-to-10-5",
+        "0-indexed"
+      ]
+    },
+    {
+      "intent": "Iterate backwards to calculate the minimum cost for each fruit, leveraging the segment tree for range minimum queries and updating it with new DP values.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "segment-tree"
+      ],
+      "cues": [
+        "purchase-the-i-1-th-fruit",
+        "get-any-number-of-the-next-i-fruits-for-free"
+      ],
+      "constraints": [
+        "n-up-to-10-5",
+        "0-indexed"
+      ]
+    }
+  ]
+}

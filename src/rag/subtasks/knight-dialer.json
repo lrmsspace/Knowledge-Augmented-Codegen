@@ -1,0 +1,57 @@
+{
+  "slug": "knight-dialer",
+  "link": "https://leetcode.com/problems/knight-dialer/",
+  "difficulty": "Medium",
+  "index": "1031",
+  "description_full": "The chess knight has a unique movement, it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an L). The possible movements of chess knight are shown in this diagram:\n\nA chess knight can move as indicated in the chess diagram below:\n\nWe have a chess knight and a phone pad as shown below, the knight can only stand on a numeric cell (i.e. blue cell).\n\nGiven an integer n, return how many distinct phone numbers of length n we can dial.\n\nYou are allowed to place the knight on any numeric cell initially and then you should perform n - 1 jumps to dial a number of length n. All jumps should be valid knight jumps.\n\nAs the answer may be very large, return the answer modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: n = 1\nOutput: 10\nExplanation: We need to dial a number of length 1, so placing the knight over any numeric cell of the 10 cells is sufficient.\n\n\nExample 2:\n\n\nInput: n = 2\nOutput: 20\nExplanation: All the valid number we can dial are [04, 06, 16, 18, 27, 29, 34, 38, 40, 43, 49, 60, 61, 67, 72, 76, 81, 83, 92, 94]\n\n\nExample 3:\n\n\nInput: n = 3131\nOutput: 136006598\nExplanation: Please take care of the mod.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 5000\n\n",
+  "description": "The chess knight has a unique movement, it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an L). The possible movements of chess knight are shown in this diagram:\n\nA chess knight can move as indicated in the chess diagram below:\n\nWe have a chess knight and a phone pad as shown below, the knight can only stand on a numeric cell (i.e. blue cell).\n\nGiven an integer n, return how many distinct phone numbers of length n we can dial.\n\nYou are allowed to place the knight on any numeric cell initially and then you should perform n - 1 jumps to dial a number of length n. All jumps should be valid knight jumps.\n\nAs the answer may be very large, return the answer modulo 109 + 7.",
+  "example": "Input: n = 1\nOutput: 10\nExplanation: We need to dial a number of length 1, so placing the knight over any numeric cell of the 10 cells is sufficient.",
+  "constraints_text": "1 <= n <= 5000",
+  "templates": {
+    "c": "int knightDialer(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int knightDialer(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int knightDialer(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar knightDialer = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def knightDialer(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Map valid knight moves from each numeric cell on the phone pad to create an adjacency list of possible transitions.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "knight-has-a-unique-movement",
+        "possible-movements",
+        "numeric-cell"
+      ],
+      "constraints": [
+        "knight-can-only-stand-on-a-numeric-cell"
+      ]
+    },
+    {
+      "intent": "Calculate the total number of distinct phone numbers of length n using dynamic programming, summing results modulo 10^9 + 7.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "prefix-sum"
+      ],
+      "cues": [
+        "how-many-distinct-phone-numbers-of-length-n",
+        "n-1-jumps"
+      ],
+      "constraints": [
+        "1-n-5000",
+        "return-the-answer-modulo-10-9-7"
+      ]
+    }
+  ]
+}

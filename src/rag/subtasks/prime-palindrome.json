@@ -1,0 +1,56 @@
+{
+  "slug": "prime-palindrome",
+  "link": "https://leetcode.com/problems/prime-palindrome/",
+  "difficulty": "Medium",
+  "index": "996",
+  "description_full": "Given an integer n, return the smallest prime palindrome greater than or equal to n.\n\nAn integer is prime if it has exactly two divisors: 1 and itself. Note that 1 is not a prime number.\n\n\n\tFor example, 2, 3, 5, 7, 11, and 13 are all primes.\n\n\nAn integer is a palindrome if it reads the same from left to right as it does from right to left.\n\n\n\tFor example, 101 and 12321 are palindromes.\n\n\nThe test cases are generated so that the answer always exists and is in the range [2, 2 * 108].\n\n \nExample 1:\nInput: n = 6\nOutput: 7\nExample 2:\nInput: n = 8\nOutput: 11\nExample 3:\nInput: n = 13\nOutput: 101\n\n \nConstraints:\n\n\n\t1 <= n <= 108\n\n",
+  "description": "Given an integer n, return the smallest prime palindrome greater than or equal to n.\n\nAn integer is prime if it has exactly two divisors: 1 and itself. Note that 1 is not a prime number.\n\n\n\tFor example, 2, 3, 5, 7, 11, and 13 are all primes.\n\n\nAn integer is a palindrome if it reads the same from left to right as it does from right to left.\n\n\n\tFor example, 101 and 12321 are palindromes.\n\n\nThe test cases are generated so that the answer always exists and is in the range [2, 2 * 108].",
+  "example": "Input: n = 6\nOutput: 7",
+  "constraints_text": "1 <= n <= 108",
+  "templates": {
+    "c": "int primePalindrome(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int primePalindrome(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int primePalindrome(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar primePalindrome = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def primePalindrome(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement an efficient function to determine if a given integer is a prime number.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "prime",
+        "divisors"
+      ],
+      "constraints": [
+        "n-up-to-2-10-8"
+      ]
+    },
+    {
+      "intent": "Generate palindromes in increasing order, handling special cases for small numbers and even-length palindromes, then check primality to find the smallest one greater than or equal to n.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-prime-palindrome",
+        "greater-than-or-equal-to-n",
+        "palindrome"
+      ],
+      "constraints": [
+        "1-n-10-8",
+        "answer-in-2-2-10-8"
+      ]
+    }
+  ]
+}

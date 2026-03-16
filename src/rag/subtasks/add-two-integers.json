@@ -1,0 +1,35 @@
+{
+  "slug": "add-two-integers",
+  "link": "https://leetcode.com/problems/add-two-integers/",
+  "difficulty": "Easy",
+  "index": "477",
+  "description_full": "Given two integers num1 and num2, return the sum of the two integers.\n \nExample 1:\n\n\nInput: num1 = 12, num2 = 5\nOutput: 17\nExplanation: num1 is 12, num2 is 5, and their sum is 12 + 5 = 17, so 17 is returned.\n\n\nExample 2:\n\n\nInput: num1 = -10, num2 = 4\nOutput: -6\nExplanation: num1 + num2 = -6, so -6 is returned.\n\n\n \nConstraints:\n\n\n\t-100 <= num1, num2 <= 100\n\n",
+  "description": "Given two integers num1 and num2, return the sum of the two integers.",
+  "example": "Input: num1 = 12, num2 = 5\nOutput: 17\nExplanation: num1 is 12, num2 is 5, and their sum is 12 + 5 = 17, so 17 is returned.",
+  "constraints_text": "-100 <= num1, num2 <= 100",
+  "templates": {
+    "c": "int sum(int num1, int num2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int sum(int num1, int num2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sum(int num1, int num2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num1\n * @param {number} num2\n * @return {number}\n */\nvar sum = function(num1, num2) {\n    \n};",
+    "python": "class Solution(object):\n    def sum(self, num1, num2):\n        \"\"\"\n        :type num1: int\n        :type num2: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the sum of the two given integers, num1 and num2.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "sum-of-the-two-integers",
+        "return-the-sum"
+      ],
+      "constraints": [
+        "100-num1-num2-100"
+      ]
+    }
+  ]
+}

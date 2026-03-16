@@ -1,0 +1,42 @@
+# Source: https://leetcode.com/problems/mirror-reflection/   |   Difficulty: Medium
+#
+# Problem Description:
+# There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered 0, 1, and 2.
+#
+# The square room has walls of length p and a laser ray from the southwest corner first meets the east wall at a distance q from the 0th receptor.
+#
+# Given the two integers p and q, return the number of the receptor that the ray meets first.
+#
+# The test cases are guaranteed so that the ray will meet a receptor eventually.
+#
+# Example:
+# Input: p = 2, q = 1
+# Output: 2
+# Explanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.
+#
+# Constraints:
+# 1 <= q <= p <= 1000
+#
+
+class Solution(object):
+    def mirrorReflection(self, p, q):
+        """
+        :type p: int
+        :type q: int
+        :rtype: int
+        """
+        def gcd(a, b):
+            if b == 0:
+                return a
+            return gcd(b, a % b)
+
+        lcm = (p * q) // gcd(p, q)
+        m = lcm // p
+        n = lcm // q
+
+        if m % 2 == 0 and n % 2 == 1:
+            return 0
+        elif m % 2 == 1 and n % 2 == 1:
+            return 1
+        elif m % 2 == 1 and n % 2 == 0:
+            return 2

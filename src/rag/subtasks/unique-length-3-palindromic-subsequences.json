@@ -1,0 +1,58 @@
+{
+  "slug": "unique-length-3-palindromic-subsequences",
+  "link": "https://leetcode.com/problems/unique-length-3-palindromic-subsequences/",
+  "difficulty": "Medium",
+  "index": "1427",
+  "description_full": "Given a string s, return the number of unique palindromes of length three that are a subsequence of s.\n\nNote that even if there are multiple ways to obtain the same subsequence, it is still only counted once.\n\nA palindrome is a string that reads the same forwards and backwards.\n\nA subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.\n\n\n\tFor example, \"ace\" is a subsequence of \"abcde\".\n\n\n \nExample 1:\n\n\nInput: s = \"aabca\"\nOutput: 3\nExplanation: The 3 palindromic subsequences of length 3 are:\n- \"aba\" (subsequence of \"aabca\")\n- \"aaa\" (subsequence of \"aabca\")\n- \"aca\" (subsequence of \"aabca\")\n\n\nExample 2:\n\n\nInput: s = \"adc\"\nOutput: 0\nExplanation: There are no palindromic subsequences of length 3 in \"adc\".\n\n\nExample 3:\n\n\nInput: s = \"bbcbaba\"\nOutput: 4\nExplanation: The 4 palindromic subsequences of length 3 are:\n- \"bbb\" (subsequence of \"bbcbaba\")\n- \"bcb\" (subsequence of \"bbcbaba\")\n- \"bab\" (subsequence of \"bbcbaba\")\n- \"aba\" (subsequence of \"bbcbaba\")\n\n\n \nConstraints:\n\n\n\t3 <= s.length <= 105\n\ts consists of only lowercase English letters.\n\n",
+  "description": "Given a string s, return the number of unique palindromes of length three that are a subsequence of s.\n\nNote that even if there are multiple ways to obtain the same subsequence, it is still only counted once.\n\nA palindrome is a string that reads the same forwards and backwards.\n\nA subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.\n\n\n\tFor example, \"ace\" is a subsequence of \"abcde\".",
+  "example": "Input: s = \"aabca\"\nOutput: 3\nExplanation: The 3 palindromic subsequences of length 3 are:\n- \"aba\" (subsequence of \"aabca\")\n- \"aaa\" (subsequence of \"aabca\")\n- \"aca\" (subsequence of \"aabca\")",
+  "constraints_text": "3 <= s.length <= 105\n\ts consists of only lowercase English letters.",
+  "templates": {
+    "c": "int countPalindromicSubsequence(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countPalindromicSubsequence(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPalindromicSubsequence(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countPalindromicSubsequence = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def countPalindromicSubsequence(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the first and last index for each character 'a' through 'z' in the input string.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "first-occurrence",
+        "last-occurrence"
+      ],
+      "constraints": [
+        "s-consists-of-only-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "For each character c1, find all unique characters c2 that appear between its first and last occurrences, and sum these counts.",
+      "structures": [
+        "string",
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "unique-palindromes",
+        "length-three",
+        "subsequence"
+      ],
+      "constraints": [
+        "3-s-length-105",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

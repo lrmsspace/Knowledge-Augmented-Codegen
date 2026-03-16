@@ -1,0 +1,42 @@
+{
+  "slug": "next-greater-element-iii",
+  "link": "https://leetcode.com/problems/next-greater-element-iii/",
+  "difficulty": "Medium",
+  "index": "867",
+  "description_full": "Given a positive integer n, find the smallest integer which has exactly the same digits existing in the integer n and is greater in value than n. If no such positive integer exists, return -1.\n\nNote that the returned integer should fit in 32-bit integer, if there is a valid answer but it does not fit in 32-bit integer, return -1.\n\n \nExample 1:\nInput: n = 12\nOutput: 21\nExample 2:\nInput: n = 21\nOutput: -1\n\n \nConstraints:\n\n\n\t1 <= n <= 231 - 1\n\n",
+  "description": "Given a positive integer n, find the smallest integer which has exactly the same digits existing in the integer n and is greater in value than n. If no such positive integer exists, return -1.\n\nNote that the returned integer should fit in 32-bit integer, if there is a valid answer but it does not fit in 32-bit integer, return -1.",
+  "example": "Input: n = 12\nOutput: 21",
+  "constraints_text": "1 <= n <= 231 - 1",
+  "templates": {
+    "c": "int nextGreaterElement(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int nextGreaterElement(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int nextGreaterElement(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar nextGreaterElement = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def nextGreaterElement(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate the next lexicographically greater permutation of digits from n, then convert and validate it against 32-bit integer limits.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "same-digits",
+        "greater-in-value",
+        "smallest-integer",
+        "fit-in-32-bit-integer"
+      ],
+      "constraints": [
+        "1-n-2-31-1",
+        "returned-integer-should-fit-in-32-bit-integer"
+      ]
+    }
+  ]
+}

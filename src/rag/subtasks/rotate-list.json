@@ -1,0 +1,54 @@
+{
+  "slug": "rotate-list",
+  "link": "https://leetcode.com/problems/rotate-list/",
+  "difficulty": "Medium",
+  "index": "646",
+  "description_full": "Given the head of a linked list, rotate the list to the right by k places.\n\n \nExample 1:\n\n\nInput: head = [1,2,3,4,5], k = 2\nOutput: [4,5,1,2,3]\n\n\nExample 2:\n\n\nInput: head = [0,1,2], k = 4\nOutput: [2,0,1]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the list is in the range [0, 500].\n\t-100 <= Node.val <= 100\n\t0 <= k <= 2 * 109\n\n",
+  "description": "Given the head of a linked list, rotate the list to the right by k places.",
+  "example": "Input: head = [1,2,3,4,5], k = 2\nOutput: [4,5,1,2,3]",
+  "constraints_text": "The number of nodes in the list is in the range [0, 500].\n\t-100 <= Node.val <= 100\n\t0 <= k <= 2 * 109",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* rotateRight(struct ListNode* head, int k) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* rotateRight(ListNode* head, int k) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode rotateRight(ListNode head, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} k\n * @return {ListNode}\n */\nvar rotateRight = function(head, k) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def rotateRight(self, head, k):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :type k: int\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Traverse the linked list to determine its total length and compute the actual number of rotations needed.",
+      "structures": [
+        "linked-list",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "rotate-by-k-places",
+        "k-can-be-large"
+      ],
+      "constraints": [
+        "0-k-2-10-9",
+        "nodes-in-range-0-500"
+      ]
+    },
+    {
+      "intent": "Connect the original tail to the head, then traverse to find the new tail and head, breaking the cycle to form the rotated list.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "rotate-the-list",
+        "right-by-k-places"
+      ],
+      "constraints": [
+        "head-of-a-linked-list"
+      ]
+    }
+  ]
+}

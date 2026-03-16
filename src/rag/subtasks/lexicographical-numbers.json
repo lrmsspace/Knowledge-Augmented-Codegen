@@ -1,0 +1,39 @@
+{
+  "slug": "lexicographical-numbers",
+  "link": "https://leetcode.com/problems/lexicographical-numbers/",
+  "difficulty": "Medium",
+  "index": "786",
+  "description_full": "Given an integer n, return all the numbers in the range [1, n] sorted in lexicographical order.\n\nYou must write an algorithm that runs in O(n) time and uses O(1) extra space. \n\n \nExample 1:\nInput: n = 13\nOutput: [1,10,11,12,13,2,3,4,5,6,7,8,9]\nExample 2:\nInput: n = 2\nOutput: [1,2]\n\n \nConstraints:\n\n\n\t1 <= n <= 5 * 104\n\n",
+  "description": "Given an integer n, return all the numbers in the range [1, n] sorted in lexicographical order.\n\nYou must write an algorithm that runs in O(n) time and uses O(1) extra space.",
+  "example": "Input: n = 13\nOutput: [1,10,11,12,13,2,3,4,5,6,7,8,9]",
+  "constraints_text": "1 <= n <= 5 * 104",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* lexicalOrder(int n, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> lexicalOrder(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> lexicalOrder(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar lexicalOrder = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def lexicalOrder(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all numbers from 1 to N in lexicographical order using an iterative depth-first search approach.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "lexicographical-order",
+        "o-n-time",
+        "o-1-extra-space"
+      ],
+      "constraints": [
+        "1-n-5-10-4"
+      ]
+    }
+  ]
+}

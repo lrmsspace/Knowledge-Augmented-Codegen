@@ -1,0 +1,40 @@
+{
+  "slug": "minimum-operations-to-make-the-integer-zero",
+  "link": "https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/",
+  "difficulty": "Medium",
+  "index": 1745,
+  "description_full": "You are given two integers num1 and num2.\n\nIn one operation, you can choose integer i in the range [0, 60] and subtract 2i + num2 from num1.\n\nReturn the integer denoting the minimum number of operations needed to make num1 equal to 0.\n\nIf it is impossible to make num1 equal to 0, return -1.\n\n \nExample 1:\n\n\nInput: num1 = 3, num2 = -2\nOutput: 3\nExplanation: We can make 3 equal to 0 with the following operations:\n- We choose i = 2 and subtract 22 + (-2) from 3, 3 - (4 + (-2)) = 1.\n- We choose i = 2 and subtract 22 + (-2) from 1, 1 - (4 + (-2)) = -1.\n- We choose i = 0 and subtract 20 + (-2) from -1, (-1) - (1 + (-2)) = 0.\nIt can be proven, that 3 is the minimum number of operations that we need to perform.\n\n\nExample 2:\n\n\nInput: num1 = 5, num2 = 7\nOutput: -1\nExplanation: It can be proven, that it is impossible to make 5 equal to 0 with the given operation.\n\n\n \nConstraints:\n\n\n 1 <= num1 <= 109\n -109 <= num2 <= 109\n",
+  "description": "You are given two integers num1 and num2.\n\nIn one operation, you can choose integer i in the range [0, 60] and subtract 2i + num2 from num1.\n\nReturn the integer denoting the minimum number of operations needed to make num1 equal to 0.\n\nIf it is impossible to make num1 equal to 0, return -1.",
+  "example": "Input: num1 = 3, num2 = -2\nOutput: 3\nExplanation: We can make 3 equal to 0 with the following operations:\n- We choose i = 2 and subtract 22 + (-2) from 3, 3 - (4 + (-2)) = 1.\n- We choose i = 2 and subtract 22 + (-2) from 1, 1 - (4 + (-2)) = -1.\n- We choose i = 0 and subtract 20 + (-2) from -1, (-1) - (1 + (-2)) = 0.\nIt can be proven, that 3 is the minimum number of operations that we need to perform.",
+  "constraints_text": "1 <= num1 <= 109\n -109 <= num2 <= 109",
+  "templates": {
+    "c": "int makeTheIntegerZero(int num1, int num2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int makeTheIntegerZero(int num1, int num2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int makeTheIntegerZero(int num1, int num2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num1\n * @param {number} num2\n * @return {number}\n */\nvar makeTheIntegerZero = function(num1, num2) {\n    \n};",
+    "python": "class Solution(object):\n    def makeTheIntegerZero(self, num1, num2):\n        \"\"\"\n        :type num1: int\n        :type num2: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate on the number of operations (k) and calculate the target difference X.",
+      "structures": ["interval"],
+      "actions": ["greedy"],
+      "cues": ["minimum operations", "k >= 1"],
+      "constraints": ["X = num1 - k * num2 > 0"]
+    },
+    {
+      "intent": "Verify the minimum required number of powers of two (popcount check).",
+      "structures": ["string"],
+      "actions": ["greedy"],
+      "cues": ["binary representation", "powers of two sum"],
+      "constraints": ["popcount(X) <= k"]
+    },
+    {
+      "intent": "Verify the maximum possible number of powers of two (value check) to confirm exact representation.",
+      "structures": ["set"],
+      "actions": ["binary-search"],
+      "cues": ["find minimum k", "return -1"],
+      "constraints": ["k <= X"]
+    }
+  ]
+}

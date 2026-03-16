@@ -1,0 +1,35 @@
+// Source: https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/   |   Difficulty: Easy
+//
+// Problem Description:
+// Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
+//
+// There may be duplicates in the original array.
+//
+// Note: An array A rotated by x positions results in an array B of the same length such that B[i] == A[(i+x) % A.length] for every valid index i.
+//
+// Example:
+// Input: nums = [3,4,5,1,2]
+// Output: true
+// Explanation: [1,2,3,4,5] is the original sorted array.
+// You can rotate the array by x = 2 positions to begin on the element of value 3: [3,4,5,1,2].
+//
+// Constraints:
+// 1 <= nums.length <= 100
+// 	1 <= nums[i] <= 100
+//
+
+bool check(int* nums, int numsSize) {
+    int count = 0;
+    for (int i = 1; i < numsSize; i++) {
+        if (nums[i] < nums[i - 1]) {
+            count++;
+        }
+    }
+    if (count == 0) {
+        return true;
+    }
+    if (count > 1) {
+        return false;
+    }
+    return nums[0] >= nums[numsSize - 1];       
+}

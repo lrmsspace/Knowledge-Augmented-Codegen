@@ -1,0 +1,53 @@
+{
+  "slug": "count-of-smaller-numbers-after-self",
+  "link": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+  "difficulty": "Hard",
+  "index": "1816",
+  "description_full": "Given an integer array nums, return an integer array counts where counts[i] is the number of smaller elements to the right of nums[i].\n\n \nExample 1:\n\n\nInput: nums = [5,2,6,1]\nOutput: [2,1,1,0]\nExplanation:\nTo the right of 5 there are 2 smaller elements (2 and 1).\nTo the right of 2 there is only 1 smaller element (1).\nTo the right of 6 there is 1 smaller element (1).\nTo the right of 1 there is 0 smaller element.\n\n\nExample 2:\n\n\nInput: nums = [-1]\nOutput: [0]\n\n\nExample 3:\n\n\nInput: nums = [-1,-1]\nOutput: [0,0]\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104\n\n",
+  "description": "Given an integer array nums, return an integer array counts where counts[i] is the number of smaller elements to the right of nums[i].",
+  "example": "Input: nums = [5,2,6,1]\nOutput: [2,1,1,0]\nExplanation:\nTo the right of 5 there are 2 smaller elements (2 and 1).\nTo the right of 2 there is only 1 smaller element (1).\nTo the right of 6 there is 1 smaller element (1).\nTo the right of 1 there is 0 smaller element.",
+  "constraints_text": "1 <= nums.length <= 105\n\t-104 <= nums[i] <= 104",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countSmaller(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> countSmaller(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> countSmaller(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar countSmaller = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def countSmaller(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Map the distinct values in the input array to a contiguous 0-indexed range to prepare for data structure usage.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "coordinate-compress"
+      ],
+      "cues": [
+        "nums-i-range",
+        "distinct-values"
+      ],
+      "constraints": [
+        "104-nums-i-104"
+      ]
+    },
+    {
+      "intent": "Iterate through the array from right to left, using a Fenwick Tree to count smaller elements and update frequencies.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "bit-fenwick"
+      ],
+      "cues": [
+        "smaller-elements-to-the-right",
+        "counts-i"
+      ],
+      "constraints": [
+        "1-nums-length-105"
+      ]
+    }
+  ]
+}

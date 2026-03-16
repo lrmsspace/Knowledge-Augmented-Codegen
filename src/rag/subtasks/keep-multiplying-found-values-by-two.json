@@ -1,0 +1,54 @@
+{
+  "slug": "keep-multiplying-found-values-by-two",
+  "link": "https://leetcode.com/problems/keep-multiplying-found-values-by-two/",
+  "difficulty": "Easy",
+  "index": "461",
+  "description_full": "You are given an array of integers nums. You are also given an integer original which is the first number that needs to be searched for in nums.\n\nYou then do the following steps:\n\n\n\tIf original is found in nums, multiply it by two (i.e., set original = 2 * original).\n\tOtherwise, stop the process.\n\tRepeat this process with the new number as long as you keep finding the number.\n\n\nReturn the final value of original.\n\n \nExample 1:\n\n\nInput: nums = [5,3,6,1,12], original = 3\nOutput: 24\nExplanation: \n- 3 is found in nums. 3 is multiplied by 2 to obtain 6.\n- 6 is found in nums. 6 is multiplied by 2 to obtain 12.\n- 12 is found in nums. 12 is multiplied by 2 to obtain 24.\n- 24 is not found in nums. Thus, 24 is returned.\n\n\nExample 2:\n\n\nInput: nums = [2,7,9], original = 4\nOutput: 4\nExplanation:\n- 4 is not found in nums. Thus, 4 is returned.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t1 <= nums[i], original <= 1000\n\n",
+  "description": "You are given an array of integers nums. You are also given an integer original which is the first number that needs to be searched for in nums.\n\nYou then do the following steps:\n\n\n\tIf original is found in nums, multiply it by two (i.e., set original = 2 * original).\n\tOtherwise, stop the process.\n\tRepeat this process with the new number as long as you keep finding the number.\n\n\nReturn the final value of original.",
+  "example": "Input: nums = [5,3,6,1,12], original = 3\nOutput: 24\nExplanation: \n- 3 is found in nums. 3 is multiplied by 2 to obtain 6.\n- 6 is found in nums. 6 is multiplied by 2 to obtain 12.\n- 12 is found in nums. 12 is multiplied by 2 to obtain 24.\n- 24 is not found in nums. Thus, 24 is returned.",
+  "constraints_text": "1 <= nums.length <= 1000\n\t1 <= nums[i], original <= 1000",
+  "templates": {
+    "c": "int findFinalValue(int* nums, int numsSize, int original) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findFinalValue(vector<int>& nums, int original) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findFinalValue(int[] nums, int original) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} original\n * @return {number}\n */\nvar findFinalValue = function(nums, original) {\n    \n};",
+    "python": "class Solution(object):\n    def findFinalValue(self, nums, original):\n        \"\"\"\n        :type nums: List[int]\n        :type original: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess the input array into a hash set for efficient O(1) average time complexity existence checks.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "hashing",
+        "enumeration"
+      ],
+      "cues": [
+        "if-original-is-found-in-nums"
+      ],
+      "constraints": [
+        "1-nums-length-1000",
+        "1-nums-i-1000"
+      ]
+    },
+    {
+      "intent": "Repeatedly check for the current 'original' value in the hash set and double it until it is no longer found.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "repeat-this-process",
+        "multiply-it-by-two",
+        "stop-the-process",
+        "return-the-final-value"
+      ],
+      "constraints": [
+        "1-original-1000"
+      ]
+    }
+  ]
+}

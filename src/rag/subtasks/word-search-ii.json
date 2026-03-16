@@ -1,0 +1,57 @@
+{
+  "slug": "word-search-ii",
+  "link": "https://leetcode.com/problems/word-search-ii/",
+  "difficulty": "Hard",
+  "index": "1802",
+  "description_full": "Given an m x n board of characters and a list of strings words, return all words on the board.\n\nEach word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.\n\n \nExample 1:\n\n\nInput: board = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]\nOutput: [\"eat\",\"oath\"]\n\n\nExample 2:\n\n\nInput: board = [[\"a\",\"b\"],[\"c\",\"d\"]], words = [\"abcb\"]\nOutput: []\n\n\n \nConstraints:\n\n\n\tm == board.length\n\tn == board[i].length\n\t1 <= m, n <= 12\n\tboard[i][j] is a lowercase English letter.\n\t1 <= words.length <= 3 * 104\n\t1 <= words[i].length <= 10\n\twords[i] consists of lowercase English letters.\n\tAll the strings of words are unique.\n\n",
+  "description": "Given an m x n board of characters and a list of strings words, return all words on the board.\n\nEach word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.",
+  "example": "Input: board = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]\nOutput: [\"eat\",\"oath\"]",
+  "constraints_text": "m == board.length\n\tn == board[i].length\n\t1 <= m, n <= 12\n\tboard[i][j] is a lowercase English letter.\n\t1 <= words.length <= 3 * 104\n\t1 <= words[i].length <= 10\n\twords[i] consists of lowercase English letters.\n\tAll the strings of words are unique.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findWords(char** board, int boardSize, int* boardColSize, char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findWords(char[][] board, String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @param {string[]} words\n * @return {string[]}\n */\nvar findWords = function(board, words) {\n    \n};",
+    "python": "class Solution(object):\n    def findWords(self, board, words):\n        \"\"\"\n        :type board: List[List[str]]\n        :type words: List[str]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a Trie from the given list of words to enable efficient prefix-based searching.",
+      "structures": [
+        "trie",
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "list-of-strings-words"
+      ],
+      "constraints": [
+        "words-length-3-104",
+        "words-i-length-10"
+      ]
+    },
+    {
+      "intent": "Perform a depth-first search from each cell on the board, traversing the Trie to find all matching words.",
+      "structures": [
+        "matrix",
+        "trie",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "backtracking"
+      ],
+      "cues": [
+        "sequentially-adjacent-cells",
+        "same-letter-cell-may-not-be-used-more-than-once",
+        "return-all-words"
+      ],
+      "constraints": [
+        "m-n-12",
+        "board-i-j-is-a-lowercase-english-letter"
+      ]
+    }
+  ]
+}

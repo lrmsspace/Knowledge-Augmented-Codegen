@@ -1,0 +1,72 @@
+{
+  "slug": "maximum-number-of-non-overlapping-palindrome-substrings",
+  "link": "https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/",
+  "difficulty": "Hard",
+  "index": "2208",
+  "description_full": "You are given a string s and a positive integer k.\n\nSelect a set of non-overlapping substrings from the string s that satisfy the following conditions:\n\n\n\tThe length of each substring is at least k.\n\tEach substring is a palindrome.\n\n\nReturn the maximum number of substrings in an optimal selection.\n\nA substring is a contiguous sequence of characters within a string.\n\n \nExample 1:\n\n\nInput: s = \"abaccdbbd\", k = 3\nOutput: 2\nExplanation: We can select the substrings underlined in s = \"abaccdbbd\". Both \"aba\" and \"dbbd\" are palindromes and have a length of at least k = 3.\nIt can be shown that we cannot find a selection with more than two valid substrings.\n\n\nExample 2:\n\n\nInput: s = \"adbcda\", k = 2\nOutput: 0\nExplanation: There is no palindrome substring of length at least 2 in the string.\n\n\n \nConstraints:\n\n\n\t1 <= k <= s.length <= 2000\n\ts consists of lowercase English letters.\n\n",
+  "description": "You are given a string s and a positive integer k.\n\nSelect a set of non-overlapping substrings from the string s that satisfy the following conditions:\n\n\n\tThe length of each substring is at least k.\n\tEach substring is a palindrome.\n\n\nReturn the maximum number of substrings in an optimal selection.\n\nA substring is a contiguous sequence of characters within a string.",
+  "example": "Input: s = \"abaccdbbd\", k = 3\nOutput: 2\nExplanation: We can select the substrings underlined in s = \"abaccdbbd\". Both \"aba\" and \"dbbd\" are palindromes and have a length of at least k = 3.\nIt can be shown that we cannot find a selection with more than two valid substrings.",
+  "constraints_text": "1 <= k <= s.length <= 2000\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "int maxPalindromes(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxPalindromes(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxPalindromes(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxPalindromes = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxPalindromes(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute all palindrome substrings within the given string.",
+      "structures": [
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "palindrome",
+        "substring"
+      ],
+      "constraints": [
+        "s-length-2000"
+      ]
+    },
+    {
+      "intent": "Filter precomputed palindromes to collect only those with length at least k, storing them as intervals.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "length-at-least-k"
+      ],
+      "constraints": [
+        "k-s-length"
+      ]
+    },
+    {
+      "intent": "Select the maximum number of non-overlapping intervals from the collected valid palindrome substrings.",
+      "structures": [
+        "array",
+        "interval"
+      ],
+      "actions": [
+        "greedy",
+        "interval-scheduling"
+      ],
+      "cues": [
+        "maximum-number",
+        "non-overlapping"
+      ],
+      "constraints": [
+        "s-length-2000"
+      ]
+    }
+  ]
+}

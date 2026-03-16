@@ -1,0 +1,55 @@
+{
+  "slug": "minimum-operations-to-make-a-uni-value-grid",
+  "link": "https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/",
+  "difficulty": "Medium",
+  "index": "1465",
+  "description_full": "You are given a 2D integer grid of size m x n and an integer x. In one operation, you can add x to or subtract x from any element in the grid.\n\nA uni-value grid is a grid where all the elements of it are equal.\n\nReturn the minimum number of operations to make the grid uni-value. If it is not possible, return -1.\n\n \nExample 1:\n\n\nInput: grid = [[2,4],[6,8]], x = 2\nOutput: 4\nExplanation: We can make every element equal to 4 by doing the following: \n- Add x to 2 once.\n- Subtract x from 6 once.\n- Subtract x from 8 twice.\nA total of 4 operations were used.\n\n\nExample 2:\n\n\nInput: grid = [[1,5],[2,3]], x = 1\nOutput: 5\nExplanation: We can make every element equal to 3.\n\n\nExample 3:\n\n\nInput: grid = [[1,2],[3,4]], x = 2\nOutput: -1\nExplanation: It is impossible to make every element equal.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 105\n\t1 <= m * n <= 105\n\t1 <= x, grid[i][j] <= 104\n\n",
+  "description": "You are given a 2D integer grid of size m x n and an integer x. In one operation, you can add x to or subtract x from any element in the grid.\n\nA uni-value grid is a grid where all the elements of it are equal.\n\nReturn the minimum number of operations to make the grid uni-value. If it is not possible, return -1.",
+  "example": "Input: grid = [[2,4],[6,8]], x = 2\nOutput: 4\nExplanation: We can make every element equal to 4 by doing the following: \n- Add x to 2 once.\n- Subtract x from 6 once.\n- Subtract x from 8 twice.\nA total of 4 operations were used.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 105\n\t1 <= m * n <= 105\n\t1 <= x, grid[i][j] <= 104",
+  "templates": {
+    "c": "int minOperations(int** grid, int gridSize, int* gridColSize, int x) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<vector<int>>& grid, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[][] grid, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} x\n * @return {number}\n */\nvar minOperations = function(grid, x) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, grid, x):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type x: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Flatten the 2D grid into a 1D array and verify all elements have the same remainder modulo x; return -1 if inconsistent.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "uni-value",
+        "not-possible-return-1"
+      ],
+      "constraints": [
+        "all-elements-congruent-mod-x",
+        "m-n-10-5"
+      ]
+    },
+    {
+      "intent": "Sort the flattened array, select the median as the target value, and calculate the total operations to transform each element.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-operations"
+      ],
+      "constraints": [
+        "m-n-10-5"
+      ]
+    }
+  ]
+}

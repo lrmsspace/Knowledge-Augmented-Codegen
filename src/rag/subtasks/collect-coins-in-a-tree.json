@@ -1,0 +1,74 @@
+{
+  "slug": "collect-coins-in-a-tree",
+  "link": "https://leetcode.com/problems/collect-coins-in-a-tree/",
+  "difficulty": "Hard",
+  "index": 2235,
+  "description_full": "There exists an undirected and unrooted tree with n nodes indexed from 0 to n - 1. You are given an integer n and a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree. You are also given an array coins of size n where coins[i] can be either 0 or 1, where 1 indicates the presence of a coin in the vertex i.\n\nInitially, you choose to start at any vertex in the tree. Then, you can perform the following operations any number of times: \n\n\n Collect all the coins that are at a distance of at most 2 from the current vertex, or\n Move to any adjacent vertex in the tree.\n\n\nFind the minimum number of edges you need to go through to collect all the coins and go back to the initial vertex.\n\nNote that if you pass an edge several times, you need to count it into the answer several times.\n\n \nExample 1:\n\n\nInput: coins = [1,0,0,0,0,1], edges = [[0,1],[1,2],[2,3],[3,4],[4,5]]\nOutput: 2\nExplanation: Start at vertex 2, collect the coin at vertex 0, move to vertex 3, collect the coin at vertex 5 then move back to vertex 2.\n\n\nExample 2:\n\n\nInput: coins = [0,0,0,1,1,0,0,1], edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[5,6],[5,7]]\nOutput: 2\nExplanation: Start at vertex 0, collect the coins at vertices 4 and 3, move to vertex 2,  collect the coin at vertex 7, then move back to vertex 0.\n\n\n \nConstraints:\n\n\n n == coins.length\n 1 <= n <= 3 * 104\n 0 <= coins[i] <= 1\n edges.length == n - 1\n edges[i].length == 2\n 0 <= ai, bi < n\n ai != bi\n edges represents a valid tree.\n\n",
+  "description": "There exists an undirected and unrooted tree with n nodes indexed from 0 to n - 1. You are given an integer n and a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree. You are also given an array coins of size n where coins[i] can be either 0 or 1, where 1 indicates the presence of a coin in the vertex i.\n\nInitially, you choose to start at any vertex in the tree. Then, you can perform the following operations any number of times: \n\n\n Collect all the coins that are at a distance of at most 2 from the current vertex, or\n Move to any adjacent vertex in the tree.\n\n\nFind the minimum number of edges you need to go through to collect all the coins and go back to the initial vertex.\n\nNote that if you pass an edge several times, you need to count it into the answer several times.",
+  "example": "Input: coins = [1,0,0,0,0,1], edges = [[0,1],[1,2],[2,3],[3,4],[4,5]]\nOutput: 2\nExplanation: Start at vertex 2, collect the coin at vertex 0, move to vertex 3, collect the coin at vertex 5 then move back to vertex 2.",
+  "constraints_text": "n == coins.length\n 1 <= n <= 3 * 104\n 0 <= coins[i] <= 1\n edges.length == n - 1\n edges[i].length == 2\n 0 <= ai, bi < n\n ai != bi\n edges represents a valid tree.",
+  "templates": {
+    "c": "int collectTheCoins(int* coins, int coinsSize, int** edges, int edgesSize, int* edgesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int collectTheCoins(vector<int>& coins, vector<vector<int>>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int collectTheCoins(int[] coins, int[][] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} coins\n * @param {number[][]} edges\n * @return {number}\n */\nvar collectTheCoins = function(coins, edges) {\n    \n};",
+    "python": "class Solution(object):\n    def collectTheCoins(self, coins, edges):\n        \"\"\"\n        :type coins: List[int]\n        :type edges: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify all coin nodes and their 'collection range' (nodes within distance 2).",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "n",
+        "edges",
+        "coins",
+        "distance 2"
+      ],
+      "constraints": [
+        "collect all coins"
+      ]
+    },
+    {
+      "intent": "Construct a new 'coin-only' graph where nodes are coin nodes, with weighted edges representing the minimum moves between coin collection zones.",
+      "structures": [
+        "graph",
+        "matrix"
+      ],
+      "actions": [
+        "bfs",
+        "dp-2d"
+      ],
+      "cues": [
+        "minimum number of edges",
+        "initial vertex"
+      ],
+      "constraints": [
+        "return to initial vertex"
+      ]
+    },
+    {
+      "intent": "Find the minimum cost cycle/path that visits all coin nodes and returns to the start, using Traveling Salesperson Problem (TSP) DP.",
+      "structures": [
+        "graph",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "all coins",
+        "minimum edges",
+        "cycle"
+      ],
+      "constraints": [
+        "TSP on coin nodes"
+      ]
+    }
+  ]
+}

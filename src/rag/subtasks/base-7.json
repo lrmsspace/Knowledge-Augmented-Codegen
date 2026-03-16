@@ -1,0 +1,36 @@
+{
+  "slug": "base-7",
+  "link": "https://leetcode.com/problems/base-7/",
+  "difficulty": "Easy",
+  "index": "106",
+  "description_full": "Given an integer num, return a string of its base 7 representation.\n\n \nExample 1:\nInput: num = 100\nOutput: \"202\"\nExample 2:\nInput: num = -7\nOutput: \"-10\"\n\n \nConstraints:\n\n\n\t-107 <= num <= 107\n\n",
+  "description": "Given an integer num, return a string of its base 7 representation.",
+  "example": "Input: num = 100\nOutput: \"202\"",
+  "constraints_text": "-107 <= num <= 107",
+  "templates": {
+    "c": "char* convertToBase7(int num) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string convertToBase7(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String convertToBase7(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {string}\n */\nvar convertToBase7 = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def convertToBase7(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Convert an integer to its base 7 string representation, handling sign and zero.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "integer-num",
+        "base-7-representation"
+      ],
+      "constraints": [
+        "107-num-107"
+      ]
+    }
+  ]
+}

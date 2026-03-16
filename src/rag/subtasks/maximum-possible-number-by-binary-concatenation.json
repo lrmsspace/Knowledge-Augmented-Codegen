@@ -1,0 +1,40 @@
+{
+  "slug": "maximum-possible-number-by-binary-concatenation",
+  "link": "https://leetcode.com/problems/maximum-possible-number-by-binary-concatenation/",
+  "difficulty": "Medium",
+  "index": "2563",
+  "description_full": "You are given an array of integers nums of size 3.\n\nReturn the maximum possible number whose binary representation can be formed by concatenating the binary representation of all elements in nums in some order.\n\nNote that the binary representation of any number does not contain leading zeros.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3]\n\nOutput: 30\n\nExplanation:\n\nConcatenate the numbers in the order [3, 1, 2] to get the result \"11110\", which is the binary representation of 30.\n\n\nExample 2:\n\n\nInput: nums = [2,8,16]\n\nOutput: 1296\n\nExplanation:\n\nConcatenate the numbers in the order [2, 8, 16] to get the result \"10100010000\", which is the binary representation of 1296.\n\n\n \nConstraints:\n\n\n\tnums.length == 3\n\t1 <= nums[i] <= 127\n\n",
+  "description": "You are given an array of integers nums of size 3.\n\nReturn the maximum possible number whose binary representation can be formed by concatenating the binary representation of all elements in nums in some order.\n\nNote that the binary representation of any number does not contain leading zeros.",
+  "example": "Input: nums = [1,2,3]\n\nOutput: 30\n\nExplanation:\n\nConcatenate the numbers in the order [3, 1, 2] to get the result \"11110\", which is the binary representation of 30.",
+  "constraints_text": "nums.length == 3\n\t1 <= nums[i] <= 127",
+  "templates": {
+    "c": "int maxGoodNumber(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxGoodNumber(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxGoodNumber(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxGoodNumber = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maxGoodNumber(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the maximum decimal value by permuting and concatenating binary representations of the input numbers.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "backtracking",
+        "simulation"
+      ],
+      "cues": [
+        "maximum-possible-number",
+        "concatenating-the-binary-representation",
+        "some-order"
+      ],
+      "constraints": [
+        "nums-length-3",
+        "1-nums-i-127"
+      ]
+    }
+  ]
+}

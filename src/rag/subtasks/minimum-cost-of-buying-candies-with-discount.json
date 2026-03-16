@@ -1,0 +1,38 @@
+{
+  "slug": "minimum-cost-of-buying-candies-with-discount",
+  "link": "https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/",
+  "difficulty": "Easy",
+  "index": "459",
+  "description_full": "A shop is selling candies at a discount. For every two candies sold, the shop gives a third candy for free.\n\nThe customer can choose any candy to take away for free as long as the cost of the chosen candy is less than or equal to the minimum cost of the two candies bought.\n\n\n\tFor example, if there are 4 candies with costs 1, 2, 3, and 4, and the customer buys candies with costs 2 and 3, they can take the candy with cost 1 for free, but not the candy with cost 4.\n\n\nGiven a 0-indexed integer array cost, where cost[i] denotes the cost of the ith candy, return the minimum cost of buying all the candies.\n\n \nExample 1:\n\n\nInput: cost = [1,2,3]\nOutput: 5\nExplanation: We buy the candies with costs 2 and 3, and take the candy with cost 1 for free.\nThe total cost of buying all candies is 2 + 3 = 5. This is the only way we can buy the candies.\nNote that we cannot buy candies with costs 1 and 3, and then take the candy with cost 2 for free.\nThe cost of the free candy has to be less than or equal to the minimum cost of the purchased candies.\n\n\nExample 2:\n\n\nInput: cost = [6,5,7,9,2,2]\nOutput: 23\nExplanation: The way in which we can get the minimum cost is described below:\n- Buy candies with costs 9 and 7\n- Take the candy with cost 6 for free\n- We buy candies with costs 5 and 2\n- Take the last remaining candy with cost 2 for free\nHence, the minimum cost to buy all candies is 9 + 7 + 5 + 2 = 23.\n\n\nExample 3:\n\n\nInput: cost = [5,5]\nOutput: 10\nExplanation: Since there are only 2 candies, we buy both of them. There is not a third candy we can take for free.\nHence, the minimum cost to buy all candies is 5 + 5 = 10.\n\n\n \nConstraints:\n\n\n\t1 <= cost.length <= 100\n\t1 <= cost[i] <= 100\n\n",
+  "description": "A shop is selling candies at a discount. For every two candies sold, the shop gives a third candy for free.\n\nThe customer can choose any candy to take away for free as long as the cost of the chosen candy is less than or equal to the minimum cost of the two candies bought.\n\n\n\tFor example, if there are 4 candies with costs 1, 2, 3, and 4, and the customer buys candies with costs 2 and 3, they can take the candy with cost 1 for free, but not the candy with cost 4.\n\n\nGiven a 0-indexed integer array cost, where cost[i] denotes the cost of the ith candy, return the minimum cost of buying all the candies.",
+  "example": "Input: cost = [1,2,3]\nOutput: 5\nExplanation: We buy the candies with costs 2 and 3, and take the candy with cost 1 for free.\nThe total cost of buying all candies is 2 + 3 = 5. This is the only way we can buy the candies.\nNote that we cannot buy candies with costs 1 and 3, and then take the candy with cost 2 for free.\nThe cost of the free candy has to be less than or equal to the minimum cost of the purchased candies.",
+  "constraints_text": "1 <= cost.length <= 100\n\t1 <= cost[i] <= 100",
+  "templates": {
+    "c": "int minimumCost(int* cost, int costSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumCost(vector<int>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumCost(int[] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} cost\n * @return {number}\n */\nvar minimumCost = function(cost) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumCost(self, cost):\n        \"\"\"\n        :type cost: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Minimize total candy cost by applying a greedy buy-two-get-one-free discount strategy.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-cost",
+        "every-two-candies-sold-shop-gives-a-third-candy-for-free",
+        "cost-of-chosen-candy-is-less-than-or-equal-to-the-minimum-cost-of-the-two-candies-bought"
+      ],
+      "constraints": [
+        "1-cost-length-100",
+        "1-cost-i-100"
+      ]
+    }
+  ]
+}

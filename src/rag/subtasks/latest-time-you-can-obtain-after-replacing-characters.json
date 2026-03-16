@@ -1,0 +1,40 @@
+{
+  "slug": "latest-time-you-can-obtain-after-replacing-characters",
+  "link": "https://leetcode.com/problems/latest-time-you-can-obtain-after-replacing-characters/",
+  "difficulty": "Easy",
+  "index": "2315",
+  "description_full": "You are given a string s representing a 12-hour format time where some of the digits (possibly none) are replaced with a \"?\".\n\n12-hour times are formatted as \"HH:MM\", where HH is between 00 and 11, and MM is between 00 and 59. The earliest 12-hour time is 00:00, and the latest is 11:59.\n\nYou have to replace all the \"?\" characters in s with digits such that the time we obtain by the resulting string is a valid 12-hour format time and is the latest possible.\n\nReturn the resulting string.\n\n \nExample 1:\n\n\nInput: s = \"1?:?4\"\n\nOutput: \"11:54\"\n\nExplanation: The latest 12-hour format time we can achieve by replacing \"?\" characters is \"11:54\".\n\n\nExample 2:\n\n\nInput: s = \"0?:5?\"\n\nOutput: \"09:59\"\n\nExplanation: The latest 12-hour format time we can achieve by replacing \"?\" characters is \"09:59\".\n\n\n \nConstraints:\n\n\n\ts.length == 5\n\ts[2] is equal to the character \":\".\n\tAll characters except s[2] are digits or \"?\" characters.\n\tThe input is generated such that there is at least one time between \"00:00\" and \"11:59\" that you can obtain after replacing the \"?\" characters.\n\n",
+  "description": "You are given a string s representing a 12-hour format time where some of the digits (possibly none) are replaced with a \"?\".\n\n12-hour times are formatted as \"HH:MM\", where HH is between 00 and 11, and MM is between 00 and 59. The earliest 12-hour time is 00:00, and the latest is 11:59.\n\nYou have to replace all the \"?\" characters in s with digits such that the time we obtain by the resulting string is a valid 12-hour format time and is the latest possible.\n\nReturn the resulting string.",
+  "example": "Input: s = \"1?:?4\"\n\nOutput: \"11:54\"\n\nExplanation: The latest 12-hour format time we can achieve by replacing \"?\" characters is \"11:54\".",
+  "constraints_text": "s.length == 5\n\ts[2] is equal to the character \":\".\n\tAll characters except s[2] are digits or \"?\" characters.\n\tThe input is generated such that there is at least one time between \"00:00\" and \"11:59\" that you can obtain after replacing the \"?\" characters.",
+  "templates": {
+    "c": "char* findLatestTime(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string findLatestTime(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findLatestTime(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar findLatestTime = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def findLatestTime(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Greedily replace '?' characters in the time string to form the latest valid 12-hour format by prioritizing higher-order digits.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "latest-possible",
+        "replace-all",
+        "12-hour-format"
+      ],
+      "constraints": [
+        "s-length-5",
+        "s-2",
+        "hh-between-00-and-11",
+        "mm-between-00-and-59"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "swap-adjacent-in-lr-string",
+  "link": "https://leetcode.com/problems/swap-adjacent-in-lr-string/",
+  "difficulty": "Medium",
+  "index": "945",
+  "description_full": "In a string composed of 'L', 'R', and 'X' characters, like \"RXXLRXRXL\", a move consists of either replacing one occurrence of \"XL\" with \"LX\", or replacing one occurrence of \"RX\" with \"XR\". Given the starting string start and the ending string result, return True if and only if there exists a sequence of moves to transform start to result.\n\n \nExample 1:\n\n\nInput: start = \"RXXLRXRXL\", result = \"XRLXXRRLX\"\nOutput: true\nExplanation: We can transform start to result following these steps:\nRXXLRXRXL ->\nXRXLRXRXL ->\nXRLXRXRXL ->\nXRLXXRRXL ->\nXRLXXRRLX\n\n\nExample 2:\n\n\nInput: start = \"X\", result = \"L\"\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= start.length <= 104\n\tstart.length == result.length\n\tBoth start and result will only consist of characters in 'L', 'R', and 'X'.\n\n",
+  "description": "In a string composed of 'L', 'R', and 'X' characters, like \"RXXLRXRXL\", a move consists of either replacing one occurrence of \"XL\" with \"LX\", or replacing one occurrence of \"RX\" with \"XR\". Given the starting string start and the ending string result, return True if and only if there exists a sequence of moves to transform start to result.",
+  "example": "Input: start = \"RXXLRXRXL\", result = \"XRLXXRRLX\"\nOutput: true\nExplanation: We can transform start to result following these steps:\nRXXLRXRXL ->\nXRXLRXRXL ->\nXRLXRXRXL ->\nXRLXXRRXL ->\nXRLXXRRLX",
+  "constraints_text": "1 <= start.length <= 104\n\tstart.length == result.length\n\tBoth start and result will only consist of characters in 'L', 'R', and 'X'.",
+  "templates": {
+    "c": "bool canTransform(char* start, char* result) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canTransform(string start, string result) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canTransform(String start, String result) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} start\n * @param {string} result\n * @return {boolean}\n */\nvar canTransform = function(start, result) {\n    \n};",
+    "python": "class Solution(object):\n    def canTransform(self, start, result):\n        \"\"\"\n        :type start: str\n        :type result: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if 'start' string can be transformed into 'result' string by comparing non-'X' characters and validating their relative movement constraints.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "transform-start-to-result",
+        "xl-with-lx",
+        "rx-with-xr",
+        "l-r-x-characters"
+      ],
+      "constraints": [
+        "1-start-length-104",
+        "start-length-result-length",
+        "only-l-r-x"
+      ]
+    }
+  ]
+}

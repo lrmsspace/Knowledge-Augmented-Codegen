@@ -1,0 +1,40 @@
+{
+  "slug": "remove-boxes",
+  "link": "https://leetcode.com/problems/remove-boxes/",
+  "difficulty": "Hard",
+  "index": "1848",
+  "description_full": "You are given several boxes with different colors represented by different positive numbers.\n\nYou may experience several rounds to remove boxes until there is no box left. Each time you can choose some continuous boxes with the same color (i.e., composed of k boxes, k >= 1), remove them and get k * k points.\n\nReturn the maximum points you can get.\n\n \nExample 1:\n\n\nInput: boxes = [1,3,2,2,2,3,4,3,1]\nOutput: 23\nExplanation:\n[1, 3, 2, 2, 2, 3, 4, 3, 1] \n----> [1, 3, 3, 4, 3, 1] (3*3=9 points) \n----> [1, 3, 3, 3, 1] (1*1=1 points) \n----> [1, 1] (3*3=9 points) \n----> [] (2*2=4 points)\n\n\nExample 2:\n\n\nInput: boxes = [1,1,1]\nOutput: 9\n\n\nExample 3:\n\n\nInput: boxes = [1]\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= boxes.length <= 100\n\t1 <= boxes[i] <= 100\n\n",
+  "description": "You are given several boxes with different colors represented by different positive numbers.\n\nYou may experience several rounds to remove boxes until there is no box left. Each time you can choose some continuous boxes with the same color (i.e., composed of k boxes, k >= 1), remove them and get k * k points.\n\nReturn the maximum points you can get.",
+  "example": "Input: boxes = [1,3,2,2,2,3,4,3,1]\nOutput: 23\nExplanation:\n[1, 3, 2, 2, 2, 3, 4, 3, 1] \n----> [1, 3, 3, 4, 3, 1] (3*3=9 points) \n----> [1, 3, 3, 3, 1] (1*1=1 points) \n----> [1, 1] (3*3=9 points) \n----> [] (2*2=4 points)",
+  "constraints_text": "1 <= boxes.length <= 100\n\t1 <= boxes[i] <= 100",
+  "templates": {
+    "c": "int removeBoxes(int* boxes, int boxesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int removeBoxes(vector<int>& boxes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int removeBoxes(int[] boxes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} boxes\n * @return {number}\n */\nvar removeBoxes = function(boxes) {\n    \n};",
+    "python": "class Solution(object):\n    def removeBoxes(self, boxes):\n        \"\"\"\n        :type boxes: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a 3D interval dynamic programming solution with memoization to find the maximum points by considering removal options.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "interval-dp",
+        "recursion",
+        "enumeration"
+      ],
+      "cues": [
+        "maximum-points",
+        "remove-boxes",
+        "k-k-points",
+        "continuous-boxes",
+        "same-color"
+      ],
+      "constraints": [
+        "1-boxes-length-100"
+      ]
+    }
+  ]
+}

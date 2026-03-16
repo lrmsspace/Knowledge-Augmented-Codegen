@@ -1,0 +1,56 @@
+{
+  "slug": "remove-letter-to-equalize-frequency",
+  "link": "https://leetcode.com/problems/remove-letter-to-equalize-frequency/",
+  "difficulty": "Easy",
+  "index": "516",
+  "description_full": "You are given a 0-indexed string word, consisting of lowercase English letters. You need to select one index and remove the letter at that index from word so that the frequency of every letter present in word is equal.\n\nReturn true if it is possible to remove one letter so that the frequency of all letters in word are equal, and false otherwise.\n\nNote:\n\n\n\tThe frequency of a letter x is the number of times it occurs in the string.\n\tYou must remove exactly one letter and cannot choose to do nothing.\n\n\n \nExample 1:\n\n\nInput: word = \"abcc\"\nOutput: true\nExplanation: Select index 3 and delete it: word becomes \"abc\" and each character has a frequency of 1.\n\n\nExample 2:\n\n\nInput: word = \"aazz\"\nOutput: false\nExplanation: We must delete a character, so either the frequency of \"a\" is 1 and the frequency of \"z\" is 2, or vice versa. It is impossible to make all present letters have equal frequency.\n\n\n \nConstraints:\n\n\n\t2 <= word.length <= 100\n\tword consists of lowercase English letters only.\n\n",
+  "description": "You are given a 0-indexed string word, consisting of lowercase English letters. You need to select one index and remove the letter at that index from word so that the frequency of every letter present in word is equal.\n\nReturn true if it is possible to remove one letter so that the frequency of all letters in word are equal, and false otherwise.\n\nNote:\n\n\n\tThe frequency of a letter x is the number of times it occurs in the string.\n\tYou must remove exactly one letter and cannot choose to do nothing.",
+  "example": "Input: word = \"abcc\"\nOutput: true\nExplanation: Select index 3 and delete it: word becomes \"abc\" and each character has a frequency of 1.",
+  "constraints_text": "2 <= word.length <= 100\n\tword consists of lowercase English letters only.",
+  "templates": {
+    "c": "bool equalFrequency(char* word) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool equalFrequency(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean equalFrequency(String word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {boolean}\n */\nvar equalFrequency = function(word) {\n    \n};",
+    "python": "class Solution(object):\n    def equalFrequency(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the initial frequency of each lowercase English letter in the input string.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "frequency-of-every-letter",
+        "lowercase-english-letters"
+      ],
+      "constraints": [
+        "2-word-length-100"
+      ]
+    },
+    {
+      "intent": "Iterate through each character, simulate its removal, and check if all remaining present letters have equal frequencies.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "select-one-index-and-remove",
+        "frequency-of-every-letter-present-in-word-is-equal"
+      ],
+      "constraints": [
+        "must-remove-exactly-one-letter"
+      ]
+    }
+  ]
+}

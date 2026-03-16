@@ -1,0 +1,39 @@
+{
+  "slug": "check-if-string-is-a-prefix-of-array",
+  "link": "https://leetcode.com/problems/check-if-string-is-a-prefix-of-array/",
+  "difficulty": "Easy",
+  "index": "420",
+  "description_full": "Given a string s and an array of strings words, determine whether s is a prefix string of words.\n\nA string s is a prefix string of words if s can be made by concatenating the first k strings in words for some positive k no larger than words.length.\n\nReturn true if s is a prefix string of words, or false otherwise.\n\n \nExample 1:\n\n\nInput: s = \"iloveleetcode\", words = [\"i\",\"love\",\"leetcode\",\"apples\"]\nOutput: true\nExplanation:\ns can be made by concatenating \"i\", \"love\", and \"leetcode\" together.\n\n\nExample 2:\n\n\nInput: s = \"iloveleetcode\", words = [\"apples\",\"i\",\"love\",\"leetcode\"]\nOutput: false\nExplanation:\nIt is impossible to make s using a prefix of arr.\n\n \nConstraints:\n\n\n\t1 <= words.length <= 100\n\t1 <= words[i].length <= 20\n\t1 <= s.length <= 1000\n\twords[i] and s consist of only lowercase English letters.\n\n",
+  "description": "Given a string s and an array of strings words, determine whether s is a prefix string of words.\n\nA string s is a prefix string of words if s can be made by concatenating the first k strings in words for some positive k no larger than words.length.\n\nReturn true if s is a prefix string of words, or false otherwise.",
+  "example": "Input: s = \"iloveleetcode\", words = [\"i\",\"love\",\"leetcode\",\"apples\"]\nOutput: true\nExplanation:\ns can be made by concatenating \"i\", \"love\", and \"leetcode\" together.",
+  "constraints_text": "1 <= words.length <= 100\n\t1 <= words[i].length <= 20\n\t1 <= s.length <= 1000\n\twords[i] and s consist of only lowercase English letters.",
+  "templates": {
+    "c": "bool isPrefixString(char* s, char** words, int wordsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isPrefixString(string s, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isPrefixString(String s, String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} words\n * @return {boolean}\n */\nvar isPrefixString = function(s, words) {\n    \n};",
+    "python": "class Solution(object):\n    def isPrefixString(self, s, words):\n        \"\"\"\n        :type s: str\n        :type words: List[str]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the 'words' array, concatenate elements sequentially, and check if the cumulative string matches 's'.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "prefix-string-of-words",
+        "concatenating-the-first-k-strings"
+      ],
+      "constraints": [
+        "1-words-length-100",
+        "1-words-i-length-20",
+        "1-s-length-1000"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "zuma-game",
+  "link": "https://leetcode.com/problems/zuma-game/",
+  "difficulty": "Hard",
+  "index": "1843",
+  "description_full": "You are playing a variation of the game Zuma.\n\nIn this variation of Zuma, there is a single row of colored balls on a board, where each ball can be colored red 'R', yellow 'Y', blue 'B', green 'G', or white 'W'. You also have several colored balls in your hand.\n\nYour goal is to clear all of the balls from the board. On each turn:\n\n\n\tPick any ball from your hand and insert it in between two balls in the row or on either end of the row.\n\tIf there is a group of three or more consecutive balls of the same color, remove the group of balls from the board.\n\t\n\t\tIf this removal causes more groups of three or more of the same color to form, then continue removing each group until there are none left.\n\t\n\t\n\tIf there are no more balls on the board, then you win the game.\n\tRepeat this process until you either win or do not have any more balls in your hand.\n\n\nGiven a string board, representing the row of balls on the board, and a string hand, representing the balls in your hand, return the minimum number of balls you have to insert to clear all the balls from the board. If you cannot clear all the balls from the board using the balls in your hand, return -1.\n\n \nExample 1:\n\n\nInput: board = \"WRRBBW\", hand = \"RB\"\nOutput: -1\nExplanation: It is impossible to clear all the balls. The best you can do is:\n- Insert 'R' so the board becomes WRRRBBW. WRRRBBW -> WBBW.\n- Insert 'B' so the board becomes WBBBW. WBBBW -> WW.\nThere are still balls remaining on the board, and you are out of balls to insert.\n\nExample 2:\n\n\nInput: board = \"WWRRBBWW\", hand = \"WRBRW\"\nOutput: 2\nExplanation: To make the board empty:\n- Insert 'R' so the board becomes WWRRRBBWW. WWRRRBBWW -> WWBBWW.\n- Insert 'B' so the board becomes WWBBBWW. WWBBBWW -> WWWW -> empty.\n2 balls from your hand were needed to clear the board.\n\n\nExample 3:\n\n\nInput: board = \"G\", hand = \"GGGGG\"\nOutput: 2\nExplanation: To make the board empty:\n- Insert 'G' so the board becomes GG.\n- Insert 'G' so the board becomes GGG. GGG -> empty.\n2 balls from your hand were needed to clear the board.\n\n\n \nConstraints:\n\n\n\t1 <= board.length <= 16\n\t1 <= hand.length <= 5\n\tboard and hand consist of the characters 'R', 'Y', 'B', 'G', and 'W'.\n\tThe initial row of balls on the board will not have any groups of three or more consecutive balls of the same color.\n\n",
+  "description": "You are playing a variation of the game Zuma.\n\nIn this variation of Zuma, there is a single row of colored balls on a board, where each ball can be colored red 'R', yellow 'Y', blue 'B', green 'G', or white 'W'. You also have several colored balls in your hand.\n\nYour goal is to clear all of the balls from the board. On each turn:\n\n\n\tPick any ball from your hand and insert it in between two balls in the row or on either end of the row.\n\tIf there is a group of three or more consecutive balls of the same color, remove the group of balls from the board.\n\t\n\t\tIf this removal causes more groups of three or more of the same color to form, then continue removing each group until there are none left.\n\t\n\t\n\tIf there are no more balls on the board, then you win the game.\n\tRepeat this process until you either win or do not have any more balls in your hand.\n\n\nGiven a string board, representing the row of balls on the board, and a string hand, representing the balls in your hand, return the minimum number of balls you have to insert to clear all the balls from the board. If you cannot clear all the balls from the board using the balls in your hand, return -1.",
+  "example": "Input: board = \"WRRBBW\", hand = \"RB\"\nOutput: -1\nExplanation: It is impossible to clear all the balls. The best you can do is:\n- Insert 'R' so the board becomes WRRRBBW. WRRRBBW -> WBBW.\n- Insert 'B' so the board becomes WBBBW. WBBBW -> WW.\nThere are still balls remaining on the board, and you are out of balls to insert.",
+  "constraints_text": "1 <= board.length <= 16\n\t1 <= hand.length <= 5\n\tboard and hand consist of the characters 'R', 'Y', 'B', 'G', and 'W'.\n\tThe initial row of balls on the board will not have any groups of three or more consecutive balls of the same color.",
+  "templates": {
+    "c": "int findMinStep(char* board, char* hand) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findMinStep(string board, string hand) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMinStep(String board, String hand) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} board\n * @param {string} hand\n * @return {number}\n */\nvar findMinStep = function(board, hand) {\n    \n};",
+    "python": "class Solution(object):\n    def findMinStep(self, board, hand):\n        \"\"\"\n        :type board: str\n        :type hand: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement the core game mechanic of repeatedly removing groups of three or more identical balls from the board.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "remove-group-of-three-or-more",
+        "continue-removing-each-group"
+      ],
+      "constraints": [
+        "three-or-more-consecutive-balls"
+      ]
+    },
+    {
+      "intent": "Find the minimum number of hand balls to insert to clear the board using a breadth-first search.",
+      "structures": [
+        "string",
+        "array",
+        "queue",
+        "ds"
+      ],
+      "actions": [
+        "bfs",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-balls",
+        "clear-all-balls",
+        "insert-ball"
+      ],
+      "constraints": [
+        "board-length-up-to-16",
+        "hand-length-up-to-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "largest-number-after-digit-swaps-by-parity",
+  "link": "https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/",
+  "difficulty": "Easy",
+  "index": "476",
+  "description_full": "You are given a positive integer num. You may swap any two digits of num that have the same parity (i.e. both odd digits or both even digits).\n\nReturn the largest possible value of num after any number of swaps.\n\n \nExample 1:\n\n\nInput: num = 1234\nOutput: 3412\nExplanation: Swap the digit 3 with the digit 1, this results in the number 3214.\nSwap the digit 2 with the digit 4, this results in the number 3412.\nNote that there may be other sequences of swaps but it can be shown that 3412 is the largest possible number.\nAlso note that we may not swap the digit 4 with the digit 1 since they are of different parities.\n\n\nExample 2:\n\n\nInput: num = 65875\nOutput: 87655\nExplanation: Swap the digit 8 with the digit 6, this results in the number 85675.\nSwap the first digit 5 with the digit 7, this results in the number 87655.\nNote that there may be other sequences of swaps but it can be shown that 87655 is the largest possible number.\n\n\n \nConstraints:\n\n\n\t1 <= num <= 109\n\n",
+  "description": "You are given a positive integer num. You may swap any two digits of num that have the same parity (i.e. both odd digits or both even digits).\n\nReturn the largest possible value of num after any number of swaps.",
+  "example": "Input: num = 1234\nOutput: 3412\nExplanation: Swap the digit 3 with the digit 1, this results in the number 3214.\nSwap the digit 2 with the digit 4, this results in the number 3412.\nNote that there may be other sequences of swaps but it can be shown that 3412 is the largest possible number.\nAlso note that we may not swap the digit 4 with the digit 1 since they are of different parities.",
+  "constraints_text": "1 <= num <= 109",
+  "templates": {
+    "c": "int largestInteger(int num) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int largestInteger(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestInteger(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar largestInteger = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def largestInteger(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Separate digits from the input number into two lists based on their parity (odd or even), then sort each list in descending order.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "swap-any-two-digits",
+        "same-parity",
+        "largest-possible-value"
+      ],
+      "constraints": [
+        "1-num-10-9"
+      ]
+    },
+    {
+      "intent": "Reconstruct the largest possible number by iterating through the original digit positions and placing the next largest available digit of the corresponding parity.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "return-the-largest-possible-value-of-num"
+      ],
+      "constraints": [
+        "1-num-10-9"
+      ]
+    }
+  ]
+}

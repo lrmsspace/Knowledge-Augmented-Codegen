@@ -1,0 +1,52 @@
+{
+  "slug": "palindrome-partitioning-iv",
+  "link": "https://leetcode.com/problems/palindrome-partitioning-iv/",
+  "difficulty": "Hard",
+  "index": "2064",
+  "description_full": "Given a string s, return true if it is possible to split the string s into three non-empty palindromic substrings. Otherwise, return false.​​​​​\n\nA string is said to be palindrome if it the same string when reversed.\n\n \nExample 1:\n\n\nInput: s = \"abcbdd\"\nOutput: true\nExplanation: \"abcbdd\" = \"a\" + \"bcb\" + \"dd\", and all three substrings are palindromes.\n\n\nExample 2:\n\n\nInput: s = \"bcbddxy\"\nOutput: false\nExplanation: s cannot be split into 3 palindromes.\n\n\n \nConstraints:\n\n\n\t3 <= s.length <= 2000\n\ts​​​​​​ consists only of lowercase English letters.\n\n",
+  "description": "Given a string s, return true if it is possible to split the string s into three non-empty palindromic substrings. Otherwise, return false.​​​​​\n\nA string is said to be palindrome if it the same string when reversed.",
+  "example": "Input: s = \"abcbdd\"\nOutput: true\nExplanation: \"abcbdd\" = \"a\" + \"bcb\" + \"dd\", and all three substrings are palindromes.",
+  "constraints_text": "3 <= s.length <= 2000\n\ts​​​​​​ consists only of lowercase English letters.",
+  "templates": {
+    "c": "bool checkPartitioning(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkPartitioning(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkPartitioning(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkPartitioning = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def checkPartitioning(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute all substring palindrome checks for efficient lookup.",
+      "structures": [
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "palindromic-substrings"
+      ],
+      "constraints": [
+        "s-length-2000"
+      ]
+    },
+    {
+      "intent": "Iterate all valid split points to find if three non-empty palindromic substrings exist.",
+      "structures": [
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "split-string-s-into-three-non-empty-palindromic-substrings"
+      ],
+      "constraints": [
+        "3-s-length"
+      ]
+    }
+  ]
+}

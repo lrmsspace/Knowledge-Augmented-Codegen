@@ -1,0 +1,58 @@
+{
+  "slug": "increasing-decreasing-string",
+  "link": "https://leetcode.com/problems/increasing-decreasing-string/",
+  "difficulty": "Easy",
+  "index": "286",
+  "description_full": "You are given a string s. Reorder the string using the following algorithm:\n\n\n\tRemove the smallest character from s and append it to the result.\n\tRemove the smallest character from s that is greater than the last appended character, and append it to the result.\n\tRepeat step 2 until no more characters can be removed.\n\tRemove the largest character from s and append it to the result.\n\tRemove the largest character from s that is smaller than the last appended character, and append it to the result.\n\tRepeat step 5 until no more characters can be removed.\n\tRepeat steps 1 through 6 until all characters from s have been removed.\n\n\nIf the smallest or largest character appears more than once, you may choose any occurrence to append to the result.\n\nReturn the resulting string after reordering s using this algorithm.\n\n \nExample 1:\n\n\nInput: s = \"aaaabbbbcccc\"\nOutput: \"abccbaabccba\"\nExplanation: After steps 1, 2 and 3 of the first iteration, result = \"abc\"\nAfter steps 4, 5 and 6 of the first iteration, result = \"abccba\"\nFirst iteration is done. Now s = \"aabbcc\" and we go back to step 1\nAfter steps 1, 2 and 3 of the second iteration, result = \"abccbaabc\"\nAfter steps 4, 5 and 6 of the second iteration, result = \"abccbaabccba\"\n\n\nExample 2:\n\n\nInput: s = \"rat\"\nOutput: \"art\"\nExplanation: The word \"rat\" becomes \"art\" after re-ordering it with the mentioned algorithm.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 500\n\ts consists of only lowercase English letters.\n\n",
+  "description": "You are given a string s. Reorder the string using the following algorithm:\n\n\n\tRemove the smallest character from s and append it to the result.\n\tRemove the smallest character from s that is greater than the last appended character, and append it to the result.\n\tRepeat step 2 until no more characters can be removed.\n\tRemove the largest character from s and append it to the result.\n\tRemove the largest character from s that is smaller than the last appended character, and append it to the result.\n\tRepeat step 5 until no more characters can be removed.\n\tRepeat steps 1 through 6 until all characters from s have been removed.\n\n\nIf the smallest or largest character appears more than once, you may choose any occurrence to append to the result.\n\nReturn the resulting string after reordering s using this algorithm.",
+  "example": "Input: s = \"aaaabbbbcccc\"\nOutput: \"abccbaabccba\"\nExplanation: After steps 1, 2 and 3 of the first iteration, result = \"abc\"\nAfter steps 4, 5 and 6 of the first iteration, result = \"abccba\"\nFirst iteration is done. Now s = \"aabbcc\" and we go back to step 1\nAfter steps 1, 2 and 3 of the second iteration, result = \"abccbaabc\"\nAfter steps 4, 5 and 6 of the second iteration, result = \"abccbaabccba\"",
+  "constraints_text": "1 <= s.length <= 500\n\ts consists of only lowercase English letters.",
+  "templates": {
+    "c": "char* sortString(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string sortString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String sortString(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar sortString = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def sortString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count character frequencies from the input string to manage available characters efficiently.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "string-s",
+        "smallest-or-largest-character-appears-more-than-once"
+      ],
+      "constraints": [
+        "string-s"
+      ]
+    },
+    {
+      "intent": "Simulate the reordering algorithm by iteratively appending characters in alternating ascending and descending passes until all characters are removed.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "reorder-the-string",
+        "remove-smallest-largest",
+        "append-to-result",
+        "repeat-steps"
+      ],
+      "constraints": [
+        "until-all-characters-from-s-have-been-removed"
+      ]
+    }
+  ]
+}

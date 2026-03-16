@@ -1,0 +1,75 @@
+{
+  "slug": "minimum-cost-to-merge-stones",
+  "link": "https://leetcode.com/problems/minimum-cost-to-merge-stones/",
+  "difficulty": "Hard",
+  "index": "1939",
+  "description_full": "There are n piles of stones arranged in a row. The ith pile has stones[i] stones.\n\nA move consists of merging exactly k consecutive piles into one pile, and the cost of this move is equal to the total number of stones in these k piles.\n\nReturn the minimum cost to merge all piles of stones into one pile. If it is impossible, return -1.\n\n \nExample 1:\n\n\nInput: stones = [3,2,4,1], k = 2\nOutput: 20\nExplanation: We start with [3, 2, 4, 1].\nWe merge [3, 2] for a cost of 5, and we are left with [5, 4, 1].\nWe merge [4, 1] for a cost of 5, and we are left with [5, 5].\nWe merge [5, 5] for a cost of 10, and we are left with [10].\nThe total cost was 20, and this is the minimum possible.\n\n\nExample 2:\n\n\nInput: stones = [3,2,4,1], k = 3\nOutput: -1\nExplanation: After any merge operation, there are 2 piles left, and we can't merge anymore.  So the task is impossible.\n\n\nExample 3:\n\n\nInput: stones = [3,5,1,2,6], k = 3\nOutput: 25\nExplanation: We start with [3, 5, 1, 2, 6].\nWe merge [5, 1, 2] for a cost of 8, and we are left with [3, 8, 6].\nWe merge [3, 8, 6] for a cost of 17, and we are left with [17].\nThe total cost was 25, and this is the minimum possible.\n\n\n \nConstraints:\n\n\n\tn == stones.length\n\t1 <= n <= 30\n\t1 <= stones[i] <= 100\n\t2 <= k <= 30\n\n",
+  "description": "There are n piles of stones arranged in a row. The ith pile has stones[i] stones.\n\nA move consists of merging exactly k consecutive piles into one pile, and the cost of this move is equal to the total number of stones in these k piles.\n\nReturn the minimum cost to merge all piles of stones into one pile. If it is impossible, return -1.",
+  "example": "Input: stones = [3,2,4,1], k = 2\nOutput: 20\nExplanation: We start with [3, 2, 4, 1].\nWe merge [3, 2] for a cost of 5, and we are left with [5, 4, 1].\nWe merge [4, 1] for a cost of 5, and we are left with [5, 5].\nWe merge [5, 5] for a cost of 10, and we are left with [10].\nThe total cost was 20, and this is the minimum possible.",
+  "constraints_text": "n == stones.length\n\t1 <= n <= 30\n\t1 <= stones[i] <= 100\n\t2 <= k <= 30",
+  "templates": {
+    "c": "int mergeStones(int* stones, int stonesSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int mergeStones(vector<int>& stones, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int mergeStones(int[] stones, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @param {number} k\n * @return {number}\n */\nvar mergeStones = function(stones, k) {\n    \n};",
+    "python": "class Solution(object):\n    def mergeStones(self, stones, k):\n        \"\"\"\n        :type stones: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute prefix sums and check initial impossibility condition.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "simulation"
+      ],
+      "cues": [
+        "impossible",
+        "total-number-of-stones"
+      ],
+      "constraints": [
+        "n-1-k-1-0"
+      ]
+    },
+    {
+      "intent": "Initialize and populate the 3D DP table for merging intervals into 'p' piles (where p > 1).",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "interval-dp",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-cost",
+        "merge-exactly-k-consecutive-piles"
+      ],
+      "constraints": [
+        "1-p-k",
+        "len-from-2-to-n",
+        "i-from-0-to-n-len"
+      ]
+    },
+    {
+      "intent": "Calculate the final merge cost for intervals into one pile and retrieve the overall minimum.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "interval-dp",
+        "enumeration"
+      ],
+      "cues": [
+        "merge-all-piles-into-one-pile",
+        "return-1"
+      ],
+      "constraints": [
+        "dp-i-j-1-dp-i-j-k-sum-stones-i-j-if-len-1-k-1-0"
+      ]
+    }
+  ]
+}

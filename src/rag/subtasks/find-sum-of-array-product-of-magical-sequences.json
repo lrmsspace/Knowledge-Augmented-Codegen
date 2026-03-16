@@ -1,0 +1,41 @@
+{
+  "slug": "find-sum-of-array-product-of-magical-sequences",
+  "link": "https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/",
+  "difficulty": "Hard",
+  "index": "2827",
+  "description_full": "You are given two integers, m and k, and an integer array nums.\nA sequence of integers seq is called magical if:\n\n\n\tseq has a size of m.\n\t0 <= seq[i] < nums.length\n\tThe binary representation of 2seq[0] + 2seq[1] + ... + 2seq[m - 1] has k set bits.\n\n\nThe array product of this sequence is defined as prod(seq) = (nums[seq[0]] * nums[seq[1]] * ... * nums[seq[m - 1]]).\n\nReturn the sum of the array products for all valid magical sequences.\n\nSince the answer may be large, return it modulo 109 + 7.\n\nA set bit refers to a bit in the binary representation of a number that has a value of 1.\n\n \nExample 1:\n\n\nInput: m = 5, k = 5, nums = [1,10,100,10000,1000000]\n\nOutput: 991600007\n\nExplanation:\n\nAll permutations of [0, 1, 2, 3, 4] are magical sequences, each with an array product of 1013.\n\n\nExample 2:\n\n\nInput: m = 2, k = 2, nums = [5,4,3,2,1]\n\nOutput: 170\n\nExplanation:\n\nThe magical sequences are [0, 1], [0, 2], [0, 3], [0, 4], [1, 0], [1, 2], [1, 3], [1, 4], [2, 0], [2, 1], [2, 3], [2, 4], [3, 0], [3, 1], [3, 2], [3, 4], [4, 0], [4, 1], [4, 2], and [4, 3].\n\n\nExample 3:\n\n\nInput: m = 1, k = 1, nums = [28]\n\nOutput: 28\n\nExplanation:\n\nThe only magical sequence is [0].\n\n\n \nConstraints:\n\n\n\t1 <= k <= m <= 30\n\t1 <= nums.length <= 50\n\t1 <= nums[i] <= 108\n\n",
+  "description": "You are given two integers, m and k, and an integer array nums.\nA sequence of integers seq is called magical if:\n\n\n\tseq has a size of m.\n\t0 <= seq[i] < nums.length\n\tThe binary representation of 2seq[0] + 2seq[1] + ... + 2seq[m - 1] has k set bits.\n\n\nThe array product of this sequence is defined as prod(seq) = (nums[seq[0]] * nums[seq[1]] * ... * nums[seq[m - 1]]).\n\nReturn the sum of the array products for all valid magical sequences.\n\nSince the answer may be large, return it modulo 109 + 7.\n\nA set bit refers to a bit in the binary representation of a number that has a value of 1.",
+  "example": "Input: m = 5, k = 5, nums = [1,10,100,10000,1000000]\n\nOutput: 991600007\n\nExplanation:\n\nAll permutations of [0, 1, 2, 3, 4] are magical sequences, each with an array product of 1013.",
+  "constraints_text": "1 <= k <= m <= 30\n\t1 <= nums.length <= 50\n\t1 <= nums[i] <= 108",
+  "templates": {
+    "c": "int magicalSum(int m, int k, int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int magicalSum(int m, int k, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int magicalSum(int m, int k, int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} k\n * @param {number[]} nums\n * @return {number}\n */\nvar magicalSum = function(m, k, nums) {\n    \n};",
+    "python": "class Solution(object):\n    def magicalSum(self, m, k, nums):\n        \"\"\"\n        :type m: int\n        :type k: int\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the sum of products for all magical sequences using dynamic programming, tracking remaining elements, carry, and set bits.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "digit-dp",
+        "mod-exp"
+      ],
+      "cues": [
+        "sum-of-array-products",
+        "magical-sequence",
+        "k-set-bits",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "m-50",
+        "k-50",
+        "nums-length-50"
+      ]
+    }
+  ]
+}

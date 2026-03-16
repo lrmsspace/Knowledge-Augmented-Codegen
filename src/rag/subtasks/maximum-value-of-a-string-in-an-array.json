@@ -1,0 +1,43 @@
+{
+  "slug": "maximum-value-of-a-string-in-an-array",
+  "link": "https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/",
+  "difficulty": "Easy",
+  "index": "531",
+  "description_full": "The value of an alphanumeric string can be defined as:\n\n\n\tThe numeric representation of the string in base 10, if it comprises of digits only.\n\tThe length of the string, otherwise.\n\n\nGiven an array strs of alphanumeric strings, return the maximum value of any string in strs.\n\n \nExample 1:\n\n\nInput: strs = [\"alic3\",\"bob\",\"3\",\"4\",\"00000\"]\nOutput: 5\nExplanation: \n- \"alic3\" consists of both letters and digits, so its value is its length, i.e. 5.\n- \"bob\" consists only of letters, so its value is also its length, i.e. 3.\n- \"3\" consists only of digits, so its value is its numeric equivalent, i.e. 3.\n- \"4\" also consists only of digits, so its value is 4.\n- \"00000\" consists only of digits, so its value is 0.\nHence, the maximum value is 5, of \"alic3\".\n\n\nExample 2:\n\n\nInput: strs = [\"1\",\"01\",\"001\",\"0001\"]\nOutput: 1\nExplanation: \nEach string in the array has value 1. Hence, we return 1.\n\n\n \nConstraints:\n\n\n\t1 <= strs.length <= 100\n\t1 <= strs[i].length <= 9\n\tstrs[i] consists of only lowercase English letters and digits.\n\n",
+  "description": "The value of an alphanumeric string can be defined as:\n\n\n\tThe numeric representation of the string in base 10, if it comprises of digits only.\n\tThe length of the string, otherwise.\n\n\nGiven an array strs of alphanumeric strings, return the maximum value of any string in strs.",
+  "example": "Input: strs = [\"alic3\",\"bob\",\"3\",\"4\",\"00000\"]\nOutput: 5\nExplanation: \n- \"alic3\" consists of both letters and digits, so its value is its length, i.e. 5.\n- \"bob\" consists only of letters, so its value is also its length, i.e. 3.\n- \"3\" consists only of digits, so its value is its numeric equivalent, i.e. 3.\n- \"4\" also consists only of digits, so its value is 4.\n- \"00000\" consists only of digits, so its value is 0.\nHence, the maximum value is 5, of \"alic3\".",
+  "constraints_text": "1 <= strs.length <= 100\n\t1 <= strs[i].length <= 9\n\tstrs[i] consists of only lowercase English letters and digits.",
+  "templates": {
+    "c": "int maximumValue(char** strs, int strsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumValue(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumValue(String[] strs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {number}\n */\nvar maximumValue = function(strs) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumValue(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through each string in the input array, determine if it contains only digits or also letters, calculate its value based on the given rules, and keep track of the maximum value encountered.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-value",
+        "alphanumeric-string",
+        "digits-only",
+        "length-of-string"
+      ],
+      "constraints": [
+        "1-strs-length-100",
+        "1-strs-i-length-9",
+        "strs-i-consists-of-only-lowercase-english-letters-and-digits"
+      ]
+    }
+  ]
+}

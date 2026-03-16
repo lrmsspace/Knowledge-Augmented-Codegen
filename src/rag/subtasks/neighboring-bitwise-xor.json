@@ -1,0 +1,39 @@
+{
+  "slug": "neighboring-bitwise-xor",
+  "link": "https://leetcode.com/problems/neighboring-bitwise-xor/",
+  "difficulty": "Medium",
+  "index": "1722",
+  "description_full": "A 0-indexed array derived with length n is derived by computing the bitwise XOR (⊕) of adjacent values in a binary array original of length n.\n\nSpecifically, for each index i in the range [0, n - 1]:\n\n\n\tIf i = n - 1, then derived[i] = original[i] ⊕ original[0].\n\tOtherwise, derived[i] = original[i] ⊕ original[i + 1].\n\n\nGiven an array derived, your task is to determine whether there exists a valid binary array original that could have formed derived.\n\nReturn true if such an array exists or false otherwise.\n\n\n\tA binary array is an array containing only 0's and 1's\n\n\n \nExample 1:\n\n\nInput: derived = [1,1,0]\nOutput: true\nExplanation: A valid original array that gives derived is [0,1,0].\nderived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1 \nderived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1\nderived[2] = original[2] ⊕ original[0] = 0 ⊕ 0 = 0\n\n\nExample 2:\n\n\nInput: derived = [1,1]\nOutput: true\nExplanation: A valid original array that gives derived is [0,1].\nderived[0] = original[0] ⊕ original[1] = 1\nderived[1] = original[1] ⊕ original[0] = 1\n\n\nExample 3:\n\n\nInput: derived = [1,0]\nOutput: false\nExplanation: There is no valid original array that gives derived.\n\n\n \nConstraints:\n\n\n\tn == derived.length\n\t1 <= n <= 105\n\tThe values in derived are either 0's or 1's\n\n",
+  "description": "A 0-indexed array derived with length n is derived by computing the bitwise XOR (⊕) of adjacent values in a binary array original of length n.\n\nSpecifically, for each index i in the range [0, n - 1]:\n\n\n\tIf i = n - 1, then derived[i] = original[i] ⊕ original[0].\n\tOtherwise, derived[i] = original[i] ⊕ original[i + 1].\n\n\nGiven an array derived, your task is to determine whether there exists a valid binary array original that could have formed derived.\n\nReturn true if such an array exists or false otherwise.\n\n\n\tA binary array is an array containing only 0's and 1's",
+  "example": "Input: derived = [1,1,0]\nOutput: true\nExplanation: A valid original array that gives derived is [0,1,0].\nderived[0] = original[0] ⊕ original[1] = 0 ⊕ 1 = 1 \nderived[1] = original[1] ⊕ original[2] = 1 ⊕ 0 = 1\nderived[2] = original[2] ⊕ original[0] = 0 ⊕ 0 = 0",
+  "constraints_text": "n == derived.length\n\t1 <= n <= 105\n\tThe values in derived are either 0's or 1's",
+  "templates": {
+    "c": "bool doesValidArrayExist(int* derived, int derivedSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool doesValidArrayExist(vector<int>& derived) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean doesValidArrayExist(int[] derived) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} derived\n * @return {boolean}\n */\nvar doesValidArrayExist = function(derived) {\n    \n};",
+    "python": "class Solution(object):\n    def doesValidArrayExist(self, derived):\n        \"\"\"\n        :type derived: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the bitwise XOR sum of all elements in the derived array and return true if the sum is zero, false otherwise.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-xor"
+      ],
+      "cues": [
+        "bitwise-xor",
+        "binary-array",
+        "exists-valid-original"
+      ],
+      "constraints": [
+        "n-10-5",
+        "derived-values-0-1"
+      ]
+    }
+  ]
+}

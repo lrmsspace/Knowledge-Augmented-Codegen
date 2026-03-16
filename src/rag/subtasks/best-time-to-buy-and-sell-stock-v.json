@@ -1,0 +1,92 @@
+{
+  "slug": "best-time-to-buy-and-sell-stock-v",
+  "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-v/",
+  "difficulty": "Medium",
+  "index": "2654",
+  "description_full": "You are given an integer array prices where prices[i] is the price of a stock in dollars on the ith day, and an integer k.\n\nYou are allowed to make at most k transactions, where each transaction can be either of the following:\n\n\n\t\n\tNormal transaction: Buy on day i, then sell on a later day j where i < j. You profit prices[j] - prices[i].\n\t\n\t\n\tShort selling transaction: Sell on day i, then buy back on a later day j where i < j. You profit prices[i] - prices[j].\n\t\n\n\nNote that you must complete each transaction before starting another. Additionally, you can't buy or sell on the same day you are selling or buying back as part of a previous transaction.\n\nReturn the maximum total profit you can earn by making at most k transactions.\n\n \nExample 1:\n\n\nInput: prices = [1,7,9,8,2], k = 2\n\nOutput: 14\n\nExplanation:\nWe can make $14 of profit through 2 transactions:\n\n\n\tA normal transaction: buy the stock on day 0 for $1 then sell it on day 2 for $9.\n\tA short selling transaction: sell the stock on day 3 for $8 then buy back on day 4 for $2.\n\n\n\nExample 2:\n\n\nInput: prices = [12,16,19,19,8,1,19,13,9], k = 3\n\nOutput: 36\n\nExplanation:\nWe can make $36 of profit through 3 transactions:\n\n\n\tA normal transaction: buy the stock on day 0 for $12 then sell it on day 2 for $19.\n\tA short selling transaction: sell the stock on day 3 for $19 then buy back on day 4 for $8.\n\tA normal transaction: buy the stock on day 5 for $1 then sell it on day 6 for $19.\n\n\n\n \nConstraints:\n\n\n\t2 <= prices.length <= 103\n\t1 <= prices[i] <= 109\n\t1 <= k <= prices.length / 2\n\n",
+  "description": "You are given an integer array prices where prices[i] is the price of a stock in dollars on the ith day, and an integer k.\n\nYou are allowed to make at most k transactions, where each transaction can be either of the following:\n\n\n\t\n\tNormal transaction: Buy on day i, then sell on a later day j where i < j. You profit prices[j] - prices[i].\n\t\n\t\n\tShort selling transaction: Sell on day i, then buy back on a later day j where i < j. You profit prices[i] - prices[j].\n\t\n\n\nNote that you must complete each transaction before starting another. Additionally, you can't buy or sell on the same day you are selling or buying back as part of a previous transaction.\n\nReturn the maximum total profit you can earn by making at most k transactions.",
+  "example": "Input: prices = [1,7,9,8,2], k = 2\n\nOutput: 14\n\nExplanation:\nWe can make $14 of profit through 2 transactions:\n\n\n\tA normal transaction: buy the stock on day 0 for $1 then sell it on day 2 for $9.\n\tA short selling transaction: sell the stock on day 3 for $8 then buy back on day 4 for $2.",
+  "constraints_text": "2 <= prices.length <= 103\n\t1 <= prices[i] <= 109\n\t1 <= k <= prices.length / 2",
+  "templates": {
+    "c": "long long maximumProfit(int* prices, int pricesSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long maximumProfit(vector<int>& prices, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumProfit(int[] prices, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} prices\n * @param {number} k\n * @return {number}\n */\nvar maximumProfit = function(prices, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumProfit(self, prices, k):\n        \"\"\"\n        :type prices: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Handle the special case where k is large enough to allow unlimited transactions.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "at-most-k-transactions",
+        "k-n-2"
+      ],
+      "constraints": [
+        "k",
+        "c",
+        "a",
+        "n",
+        "b",
+        "e",
+        "v"
+      ]
+    },
+    {
+      "intent": "Initialize dynamic programming states to track maximum profit for each transaction count and holding status.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "at-most-k-transactions",
+        "max-total-profit"
+      ],
+      "constraints": [
+        "k",
+        "t",
+        "r",
+        "a",
+        "n",
+        "s",
+        "a",
+        "c",
+        "t"
+      ]
+    },
+    {
+      "intent": "Iterate through prices, updating DP states for buying, selling, short-selling, and buying back for each transaction count.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "prices-i",
+        "profit",
+        "complete-each-transaction"
+      ],
+      "constraints": [
+        "a",
+        "t",
+        "m",
+        "o",
+        "s",
+        "t",
+        "k"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "count-servers-that-communicate",
+  "link": "https://leetcode.com/problems/count-servers-that-communicate/",
+  "difficulty": "Medium",
+  "index": "1170",
+  "description_full": "You are given a map of a server center, represented as a m * n integer matrix grid, where 1 means that on that cell there is a server and 0 means that it is no server. Two servers are said to communicate if they are on the same row or on the same column.\n\nReturn the number of servers that communicate with any other server.\n\n \nExample 1:\n\n\n\n\nInput: grid = [[1,0],[0,1]]\nOutput: 0\nExplanation: No servers can communicate with others.\n\nExample 2:\n\n\n\n\nInput: grid = [[1,0],[1,1]]\nOutput: 3\nExplanation: All three servers can communicate with at least one other server.\n\n\nExample 3:\n\n\n\n\nInput: grid = [[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]]\nOutput: 4\nExplanation: The two servers in the first row can communicate with each other. The two servers in the third column can communicate with each other. The server at right bottom corner can't communicate with any other server.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m <= 250\n\t1 <= n <= 250\n\tgrid[i][j] == 0 or 1\n\n",
+  "description": "You are given a map of a server center, represented as a m * n integer matrix grid, where 1 means that on that cell there is a server and 0 means that it is no server. Two servers are said to communicate if they are on the same row or on the same column.\n\nReturn the number of servers that communicate with any other server.",
+  "example": "Input: grid = [[1,0],[0,1]]\nOutput: 0\nExplanation: No servers can communicate with others.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m <= 250\n\t1 <= n <= 250\n\tgrid[i][j] == 0 or 1",
+  "templates": {
+    "c": "int countServers(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countServers(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countServers(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar countServers = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def countServers(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute the count of servers for each row and each column in the grid.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "m-n-integer-matrix-grid",
+        "same-row-or-on-the-same-column"
+      ],
+      "constraints": [
+        "1-m-250",
+        "1-n-250"
+      ]
+    },
+    {
+      "intent": "Iterate through the grid, identify servers, and count those that communicate with at least one other server.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "return-the-number-of-servers-that-communicate",
+        "grid-i-j-1"
+      ],
+      "constraints": [
+        "grid-i-j-0-or-1"
+      ]
+    }
+  ]
+}

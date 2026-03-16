@@ -1,0 +1,55 @@
+{
+  "slug": "valid-palindrome-ii",
+  "link": "https://leetcode.com/problems/valid-palindrome-ii/",
+  "difficulty": "Easy",
+  "index": "151",
+  "description_full": "Given a string s, return true if the s can be palindrome after deleting at most one character from it.\n\n \nExample 1:\n\n\nInput: s = \"aba\"\nOutput: true\n\n\nExample 2:\n\n\nInput: s = \"abca\"\nOutput: true\nExplanation: You could delete the character 'c'.\n\n\nExample 3:\n\n\nInput: s = \"abc\"\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\n",
+  "description": "Given a string s, return true if the s can be palindrome after deleting at most one character from it.",
+  "example": "Input: s = \"aba\"\nOutput: true",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "bool validPalindrome(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool validPalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validPalindrome(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar validPalindrome = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def validPalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string with two pointers, handling mismatches by initiating checks for potential single-character deletions.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "string-s",
+        "at-most-one-character"
+      ],
+      "constraints": [
+        "1-s-length-105"
+      ]
+    },
+    {
+      "intent": "Create a helper function to verify if a given substring is a palindrome using a two-pointer approach.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "palindrome",
+        "substring"
+      ],
+      "constraints": [
+        "s-consists-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "bag-of-tokens",
+  "link": "https://leetcode.com/problems/bag-of-tokens/",
+  "difficulty": "Medium",
+  "index": "1037",
+  "description_full": "You start with an initial power of power, an initial score of 0, and a bag of tokens given as an integer array tokens, where each tokens[i] denotes the value of tokeni.\n\nYour goal is to maximize the total score by strategically playing these tokens. In one move, you can play an unplayed token in one of the two ways (but not both for the same token):\n\n\n\tFace-up: If your current power is at least tokens[i], you may play tokeni, losing tokens[i] power and gaining 1 score.\n\tFace-down: If your current score is at least 1, you may play tokeni, gaining tokens[i] power and losing 1 score.\n\n\nReturn the maximum possible score you can achieve after playing any number of tokens.\n\n \nExample 1:\n\n\nInput: tokens = [100], power = 50\n\nOutput: 0\n\nExplanation: Since your score is 0 initially, you cannot play the token face-down. You also cannot play it face-up since your power (50) is less than tokens[0] (100).\n\n\nExample 2:\n\n\nInput: tokens = [200,100], power = 150\n\nOutput: 1\n\nExplanation: Play token1 (100) face-up, reducing your power to 50 and increasing your score to 1.\n\nThere is no need to play token0, since you cannot play it face-up to add to your score. The maximum score achievable is 1.\n\n\nExample 3:\n\n\nInput: tokens = [100,200,300,400], power = 200\n\nOutput: 2\n\nExplanation: Play the tokens in this order to get a score of 2:\n\n\n\tPlay token0 (100) face-up, reducing power to 100 and increasing score to 1.\n\tPlay token3 (400) face-down, increasing power to 500 and reducing score to 0.\n\tPlay token1 (200) face-up, reducing power to 300 and increasing score to 1.\n\tPlay token2 (300) face-up, reducing power to 0 and increasing score to 2.\n\n\nThe maximum score achievable is 2.\n\n\n \nConstraints:\n\n\n\t0 <= tokens.length <= 1000\n\t0 <= tokens[i], power < 104\n\n",
+  "description": "You start with an initial power of power, an initial score of 0, and a bag of tokens given as an integer array tokens, where each tokens[i] denotes the value of tokeni.\n\nYour goal is to maximize the total score by strategically playing these tokens. In one move, you can play an unplayed token in one of the two ways (but not both for the same token):\n\n\n\tFace-up: If your current power is at least tokens[i], you may play tokeni, losing tokens[i] power and gaining 1 score.\n\tFace-down: If your current score is at least 1, you may play tokeni, gaining tokens[i] power and losing 1 score.\n\n\nReturn the maximum possible score you can achieve after playing any number of tokens.",
+  "example": "Input: tokens = [100], power = 50\n\nOutput: 0\n\nExplanation: Since your score is 0 initially, you cannot play the token face-down. You also cannot play it face-up since your power (50) is less than tokens[0] (100).",
+  "constraints_text": "0 <= tokens.length <= 1000\n\t0 <= tokens[i], power < 104",
+  "templates": {
+    "c": "int bagOfTokensScore(int* tokens, int tokensSize, int power) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int bagOfTokensScore(vector<int>& tokens, int power) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int bagOfTokensScore(int[] tokens, int power) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} tokens\n * @param {number} power\n * @return {number}\n */\nvar bagOfTokensScore = function(tokens, power) {\n    \n};",
+    "python": "class Solution(object):\n    def bagOfTokensScore(self, tokens, power):\n        \"\"\"\n        :type tokens: List[int]\n        :type power: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the tokens array to enable efficient selection of smallest/largest values.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "maximize-total-score",
+        "strategically-playing"
+      ],
+      "constraints": [
+        "0-tokens-length-1000"
+      ]
+    },
+    {
+      "intent": "Apply a two-pointer greedy strategy to iterate through tokens and maximize the score.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "face-up",
+        "face-down",
+        "maximize-total-score"
+      ],
+      "constraints": [
+        "0-tokens-length-1000",
+        "0-tokens-i-power-104"
+      ]
+    }
+  ]
+}

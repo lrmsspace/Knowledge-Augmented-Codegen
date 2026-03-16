@@ -1,0 +1,53 @@
+{
+  "slug": "number-of-enclaves",
+  "link": "https://leetcode.com/problems/number-of-enclaves/",
+  "difficulty": "Medium",
+  "index": "1079",
+  "description_full": "You are given an m x n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.\n\nA move consists of walking from one land cell to another adjacent (4-directionally) land cell or walking off the boundary of the grid.\n\nReturn the number of land cells in grid for which we cannot walk off the boundary of the grid in any number of moves.\n\n \nExample 1:\n\n\nInput: grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]\nOutput: 3\nExplanation: There are three 1s that are enclosed by 0s, and one 1 that is not enclosed because its on the boundary.\n\n\nExample 2:\n\n\nInput: grid = [[0,1,1,0],[0,0,1,0],[0,0,1,0],[0,0,0,0]]\nOutput: 0\nExplanation: All 1s are either on the boundary or can reach the boundary.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 500\n\tgrid[i][j] is either 0 or 1.\n\n",
+  "description": "You are given an m x n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.\n\nA move consists of walking from one land cell to another adjacent (4-directionally) land cell or walking off the boundary of the grid.\n\nReturn the number of land cells in grid for which we cannot walk off the boundary of the grid in any number of moves.",
+  "example": "Input: grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]\nOutput: 3\nExplanation: There are three 1s that are enclosed by 0s, and one 1 that is not enclosed because its on the boundary.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 500\n\tgrid[i][j] is either 0 or 1.",
+  "templates": {
+    "c": "int numEnclaves(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numEnclaves(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numEnclaves(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar numEnclaves = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def numEnclaves(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a multi-source BFS from all boundary land cells to mark all reachable land cells.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "walk-off-the-boundary",
+        "adjacent-4-directionally",
+        "boundary-of-the-grid"
+      ],
+      "constraints": [
+        "1-m-n-500"
+      ]
+    },
+    {
+      "intent": "Iterate through the grid to count the land cells that were not marked as reachable from the boundary.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-number-of-land-cells",
+        "cannot-walk-off-the-boundary"
+      ],
+      "constraints": [
+        "grid-i-j-is-either-0-or-1"
+      ]
+    }
+  ]
+}

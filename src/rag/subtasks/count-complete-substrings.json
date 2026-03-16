@@ -1,0 +1,59 @@
+{
+  "slug": "count-complete-substrings",
+  "link": "https://leetcode.com/problems/count-complete-substrings/",
+  "difficulty": "Hard",
+  "index": "2687",
+  "description_full": "You are given a string word and an integer k.\n\nA substring s of word is complete if:\n\n\n\tEach character in s occurs exactly k times.\n\tThe difference between two adjacent characters is at most 2. That is, for any two adjacent characters c1 and c2 in s, the absolute difference in their positions in the alphabet is at most 2.\n\n\nReturn the number of complete substrings of word.\n\nA substring is a non-empty contiguous sequence of characters in a string.\n\n \nExample 1:\n\n\nInput: word = \"igigee\", k = 2\nOutput: 3\nExplanation: The complete substrings where each character appears exactly twice and the difference between adjacent characters is at most 2 are: igigee, igigee, igigee.\n\n\nExample 2:\n\n\nInput: word = \"aaabbbccc\", k = 3\nOutput: 6\nExplanation: The complete substrings where each character appears exactly three times and the difference between adjacent characters is at most 2 are: aaabbbccc, aaabbbccc, aaabbbccc, aaabbbccc, aaabbbccc, aaabbbccc.\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 105\n\tword consists only of lowercase English letters.\n\t1 <= k <= word.length\n\n",
+  "description": "You are given a string word and an integer k.\n\nA substring s of word is complete if:\n\n\n\tEach character in s occurs exactly k times.\n\tThe difference between two adjacent characters is at most 2. That is, for any two adjacent characters c1 and c2 in s, the absolute difference in their positions in the alphabet is at most 2.\n\n\nReturn the number of complete substrings of word.\n\nA substring is a non-empty contiguous sequence of characters in a string.",
+  "example": "Input: word = \"igigee\", k = 2\nOutput: 3\nExplanation: The complete substrings where each character appears exactly twice and the difference between adjacent characters is at most 2 are: igigee, igigee, igigee.",
+  "constraints_text": "1 <= word.length <= 105\n\tword consists only of lowercase English letters.\n\t1 <= k <= word.length",
+  "templates": {
+    "c": "int countCompleteSubstrings(char* word, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countCompleteSubstrings(string word, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countCompleteSubstrings(String word, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} k\n * @return {number}\n */\nvar countCompleteSubstrings = function(word, k) {\n    \n};",
+    "python": "class Solution(object):\n    def countCompleteSubstrings(self, word, k):\n        \"\"\"\n        :type word: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Partition the input string into contiguous segments where all adjacent characters satisfy the alphabet difference constraint.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "adjacent-characters",
+        "difference-at-most-2"
+      ],
+      "constraints": [
+        "word-length-105"
+      ]
+    },
+    {
+      "intent": "For each segment, count substrings where all characters appear exactly k times and the length is a multiple of k.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "each-character-in-s-occurs-exactly-k-times",
+        "substring",
+        "return-the-number"
+      ],
+      "constraints": [
+        "1-k-word-length",
+        "word-consists-only-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "letter-tile-possibilities",
+  "link": "https://leetcode.com/problems/letter-tile-possibilities/",
+  "difficulty": "Medium",
+  "index": "1105",
+  "description_full": "You have n  tiles, where each tile has one letter tiles[i] printed on it.\n\nReturn the number of possible non-empty sequences of letters you can make using the letters printed on those tiles.\n\n \nExample 1:\n\n\nInput: tiles = \"AAB\"\nOutput: 8\nExplanation: The possible sequences are \"A\", \"B\", \"AA\", \"AB\", \"BA\", \"AAB\", \"ABA\", \"BAA\".\n\n\nExample 2:\n\n\nInput: tiles = \"AAABBC\"\nOutput: 188\n\n\nExample 3:\n\n\nInput: tiles = \"V\"\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= tiles.length <= 7\n\ttiles consists of uppercase English letters.\n\n",
+  "description": "You have n  tiles, where each tile has one letter tiles[i] printed on it.\n\nReturn the number of possible non-empty sequences of letters you can make using the letters printed on those tiles.",
+  "example": "Input: tiles = \"AAB\"\nOutput: 8\nExplanation: The possible sequences are \"A\", \"B\", \"AA\", \"AB\", \"BA\", \"AAB\", \"ABA\", \"BAA\".",
+  "constraints_text": "1 <= tiles.length <= 7\n\ttiles consists of uppercase English letters.",
+  "templates": {
+    "c": "int numTilePossibilities(char* tiles) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numTilePossibilities(string tiles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numTilePossibilities(String tiles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} tiles\n * @return {number}\n */\nvar numTilePossibilities = function(tiles) {\n    \n};",
+    "python": "class Solution(object):\n    def numTilePossibilities(self, tiles):\n        \"\"\"\n        :type tiles: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively generate all unique non-empty sequences by selecting characters from the available tiles and count the total number of such sequences.",
+      "structures": [
+        "array",
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion",
+        "counting"
+      ],
+      "cues": [
+        "non-empty-sequences",
+        "number-of-possible",
+        "using-the-letters"
+      ],
+      "constraints": [
+        "1-tiles-length-7",
+        "tiles-consists-of-uppercase-english-letters"
+      ]
+    }
+  ]
+}

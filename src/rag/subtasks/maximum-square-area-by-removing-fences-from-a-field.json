@@ -1,0 +1,72 @@
+{
+  "slug": "maximum-square-area-by-removing-fences-from-a-field",
+  "link": "https://leetcode.com/problems/maximum-square-area-by-removing-fences-from-a-field/",
+  "difficulty": "Medium",
+  "index": "2448",
+  "description_full": "There is a large (m - 1) x (n - 1) rectangular field with corners at (1, 1) and (m, n) containing some horizontal and vertical fences given in arrays hFences and vFences respectively.\n\nHorizontal fences are from the coordinates (hFences[i], 1) to (hFences[i], n) and vertical fences are from the coordinates (1, vFences[i]) to (m, vFences[i]).\n\nReturn the maximum area of a square field that can be formed by removing some fences (possibly none) or -1 if it is impossible to make a square field.\n\nSince the answer may be large, return it modulo 109 + 7.\n\nNote: The field is surrounded by two horizontal fences from the coordinates (1, 1) to (1, n) and (m, 1) to (m, n) and two vertical fences from the coordinates (1, 1) to (m, 1) and (1, n) to (m, n). These fences cannot be removed.\n\n \nExample 1:\n\n\n\n\nInput: m = 4, n = 3, hFences = [2,3], vFences = [2]\nOutput: 4\nExplanation: Removing the horizontal fence at 2 and the vertical fence at 2 will give a square field of area 4.\n\n\nExample 2:\n\n\n\n\nInput: m = 6, n = 7, hFences = [2], vFences = [4]\nOutput: -1\nExplanation: It can be proved that there is no way to create a square field by removing fences.\n\n\n \nConstraints:\n\n\n\t3 <= m, n <= 109\n\t1 <= hFences.length, vFences.length <= 600\n\t1 < hFences[i] < m\n\t1 < vFences[i] < n\n\thFences and vFences are unique.\n\n",
+  "description": "There is a large (m - 1) x (n - 1) rectangular field with corners at (1, 1) and (m, n) containing some horizontal and vertical fences given in arrays hFences and vFences respectively.\n\nHorizontal fences are from the coordinates (hFences[i], 1) to (hFences[i], n) and vertical fences are from the coordinates (1, vFences[i]) to (m, vFences[i]).\n\nReturn the maximum area of a square field that can be formed by removing some fences (possibly none) or -1 if it is impossible to make a square field.\n\nSince the answer may be large, return it modulo 109 + 7.\n\nNote: The field is surrounded by two horizontal fences from the coordinates (1, 1) to (1, n) and (m, 1) to (m, n) and two vertical fences from the coordinates (1, 1) to (m, 1) and (1, n) to (m, n). These fences cannot be removed.",
+  "example": "Input: m = 4, n = 3, hFences = [2,3], vFences = [2]\nOutput: 4\nExplanation: Removing the horizontal fence at 2 and the vertical fence at 2 will give a square field of area 4.",
+  "constraints_text": "3 <= m, n <= 109\n\t1 <= hFences.length, vFences.length <= 600\n\t1 < hFences[i] < m\n\t1 < vFences[i] < n\n\thFences and vFences are unique.",
+  "templates": {
+    "c": "int maximizeSquareArea(int m, int n, int* hFences, int hFencesSize, int* vFences, int vFencesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximizeSquareArea(int m, int n, vector<int>& hFences, vector<int>& vFences) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximizeSquareArea(int m, int n, int[] hFences, int[] vFences) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number[]} hFences\n * @param {number[]} vFences\n * @return {number}\n */\nvar maximizeSquareArea = function(m, n, hFences, vFences) {\n    \n};",
+    "python": "class Solution(object):\n    def maximizeSquareArea(self, m, n, hFences, vFences):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type hFences: List[int]\n        :type vFences: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all possible horizontal and vertical side lengths from fence coordinates.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "hfences",
+        "vfences",
+        "m",
+        "n",
+        "remove-some-fences"
+      ],
+      "constraints": [
+        "3-m-n-10-9",
+        "hfences-length-vfences-length-600"
+      ]
+    },
+    {
+      "intent": "Determine the largest common side length present in both horizontal and vertical distance sets.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-area-of-a-square",
+        "common-side-length"
+      ],
+      "constraints": [
+        "return-1-if-impossible"
+      ]
+    },
+    {
+      "intent": "Calculate the maximum square area and apply modulo operation.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "mod-exp"
+      ],
+      "cues": [
+        "return-it-modulo-10-9-7"
+      ],
+      "constraints": [
+        "answer-may-be-large"
+      ]
+    }
+  ]
+}

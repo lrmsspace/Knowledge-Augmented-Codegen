@@ -1,0 +1,57 @@
+{
+  "slug": "find-subtree-sizes-after-changes",
+  "link": "https://leetcode.com/problems/find-subtree-sizes-after-changes/",
+  "difficulty": "Medium",
+  "index": "2571",
+  "description_full": "You are given a tree rooted at node 0 that consists of n nodes numbered from 0 to n - 1. The tree is represented by an array parent of size n, where parent[i] is the parent of node i. Since node 0 is the root, parent[0] == -1.\n\nYou are also given a string s of length n, where s[i] is the character assigned to node i.\n\nWe make the following changes on the tree one time simultaneously for all nodes x from 1 to n - 1:\n\n\n\tFind the closest node y to node x such that y is an ancestor of x, and s[x] == s[y].\n\tIf node y does not exist, do nothing.\n\tOtherwise, remove the edge between x and its current parent and make node y the new parent of x by adding an edge between them.\n\n\nReturn an array answer of size n where answer[i] is the size of the subtree rooted at node i in the final tree.\n\n \nExample 1:\n\n\nInput: parent = [-1,0,0,1,1,1], s = \"abaabc\"\n\nOutput: [6,3,1,1,1,1]\n\nExplanation:\n\nThe parent of node 3 will change from node 1 to node 0.\n\n\nExample 2:\n\n\nInput: parent = [-1,0,4,0,1], s = \"abbba\"\n\nOutput: [5,2,1,1,1]\n\nExplanation:\n\nThe following changes will happen at the same time:\n\n\n\tThe parent of node 4 will change from node 1 to node 0.\n\tThe parent of node 2 will change from node 4 to node 1.\n\n\n\n \nConstraints:\n\n\n\tn == parent.length == s.length\n\t1 <= n <= 105\n\t0 <= parent[i] <= n - 1 for all i >= 1.\n\tparent[0] == -1\n\tparent represents a valid tree.\n\ts consists only of lowercase English letters.\n\n",
+  "description": "You are given a tree rooted at node 0 that consists of n nodes numbered from 0 to n - 1. The tree is represented by an array parent of size n, where parent[i] is the parent of node i. Since node 0 is the root, parent[0] == -1.\n\nYou are also given a string s of length n, where s[i] is the character assigned to node i.\n\nWe make the following changes on the tree one time simultaneously for all nodes x from 1 to n - 1:\n\n\n\tFind the closest node y to node x such that y is an ancestor of x, and s[x] == s[y].\n\tIf node y does not exist, do nothing.\n\tOtherwise, remove the edge between x and its current parent and make node y the new parent of x by adding an edge between them.\n\n\nReturn an array answer of size n where answer[i] is the size of the subtree rooted at node i in the final tree.",
+  "example": "Input: parent = [-1,0,0,1,1,1], s = \"abaabc\"\n\nOutput: [6,3,1,1,1,1]\n\nExplanation:\n\nThe parent of node 3 will change from node 1 to node 0.",
+  "constraints_text": "n == parent.length == s.length\n\t1 <= n <= 105\n\t0 <= parent[i] <= n - 1 for all i >= 1.\n\tparent[0] == -1\n\tparent represents a valid tree.\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findSubtreeSizes(int* parent, int parentSize, char* s, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> findSubtreeSizes(vector<int>& parent, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findSubtreeSizes(int[] parent, String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} parent\n * @param {string} s\n * @return {number[]}\n */\nvar findSubtreeSizes = function(parent, s) {\n    \n};",
+    "python": "class Solution(object):\n    def findSubtreeSizes(self, parent, s):\n        \"\"\"\n        :type parent: List[int]\n        :type s: str\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Traverse the original tree to find the closest ancestor with the same character for each node, establishing new parent pointers.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "closest-node-y-to-node-x-such-that-y-is-an-ancestor-of-x-and-s-x-s-y",
+        "simultaneously-for-all-nodes"
+      ],
+      "constraints": [
+        "n-10-5",
+        "parent-represents-a-valid-tree",
+        "s-consists-only-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Construct the final tree structure based on the determined new parents and compute the size of each node's subtree.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "remove-the-edge-between-x-and-its-current-parent-and-make-node-y-the-new-parent-of-x",
+        "return-an-array-answer-of-size-n-where-answer-i-is-the-size-of-the-subtree-rooted-at-node-i-in-the-final-tree"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "find-longest-awesome-substring",
+  "link": "https://leetcode.com/problems/find-longest-awesome-substring/",
+  "difficulty": "Hard",
+  "index": "2025",
+  "description_full": "You are given a string s. An awesome substring is a non-empty substring of s such that we can make any number of swaps in order to make it a palindrome.\n\nReturn the length of the maximum length awesome substring of s.\n\n \nExample 1:\n\n\nInput: s = \"3242415\"\nOutput: 5\nExplanation: \"24241\" is the longest awesome substring, we can form the palindrome \"24142\" with some swaps.\n\n\nExample 2:\n\n\nInput: s = \"12345678\"\nOutput: 1\n\n\nExample 3:\n\n\nInput: s = \"213123\"\nOutput: 6\nExplanation: \"213123\" is the longest awesome substring, we can form the palindrome \"231132\" with some swaps.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists only of digits.\n\n",
+  "description": "You are given a string s. An awesome substring is a non-empty substring of s such that we can make any number of swaps in order to make it a palindrome.\n\nReturn the length of the maximum length awesome substring of s.",
+  "example": "Input: s = \"3242415\"\nOutput: 5\nExplanation: \"24241\" is the longest awesome substring, we can form the palindrome \"24142\" with some swaps.",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists only of digits.",
+  "templates": {
+    "c": "int longestAwesome(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestAwesome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestAwesome(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar longestAwesome = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def longestAwesome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute prefix parity masks for all prefixes and use a lookup table to find the longest substring that can be rearranged into a palindrome.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "prefix-xor",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "awesome-substring",
+        "rearrange-to-palindrome",
+        "maximum-length",
+        "digits"
+      ],
+      "constraints": [
+        "1-s-length-10-5",
+        "s-consists-only-of-digits"
+      ]
+    }
+  ]
+}

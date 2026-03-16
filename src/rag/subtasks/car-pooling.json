@@ -1,0 +1,55 @@
+{
+  "slug": "car-pooling",
+  "link": "https://leetcode.com/problems/car-pooling/",
+  "difficulty": "Medium",
+  "index": "1111",
+  "description_full": "There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).\n\nYou are given the integer capacity and an array trips where trips[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.\n\nReturn true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.\n\n \nExample 1:\n\n\nInput: trips = [[2,1,5],[3,3,7]], capacity = 4\nOutput: false\n\n\nExample 2:\n\n\nInput: trips = [[2,1,5],[3,3,7]], capacity = 5\nOutput: true\n\n\n \nConstraints:\n\n\n\t1 <= trips.length <= 1000\n\ttrips[i].length == 3\n\t1 <= numPassengersi <= 100\n\t0 <= fromi < toi <= 1000\n\t1 <= capacity <= 105\n\n",
+  "description": "There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).\n\nYou are given the integer capacity and an array trips where trips[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.\n\nReturn true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.",
+  "example": "Input: trips = [[2,1,5],[3,3,7]], capacity = 4\nOutput: false",
+  "constraints_text": "1 <= trips.length <= 1000\n\ttrips[i].length == 3\n\t1 <= numPassengersi <= 100\n\t0 <= fromi < toi <= 1000\n\t1 <= capacity <= 105",
+  "templates": {
+    "c": "bool carPooling(int** trips, int tripsSize, int* tripsColSize, int capacity) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool carPooling(vector<vector<int>>& trips, int capacity) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean carPooling(int[][] trips, int capacity) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} trips\n * @param {number} capacity\n * @return {boolean}\n */\nvar carPooling = function(trips, capacity) {\n    \n};",
+    "python": "class Solution(object):\n    def carPooling(self, trips, capacity):\n        \"\"\"\n        :type trips: List[List[int]]\n        :type capacity: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Populate an array with net passenger changes (pickups and dropoffs) at each kilometer mark.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "difference-array",
+        "enumeration"
+      ],
+      "cues": [
+        "trips-i-numpassengersi-fromi-toi",
+        "locations"
+      ],
+      "constraints": [
+        "0-fromi-toi-1000"
+      ]
+    },
+    {
+      "intent": "Simulate the car's journey by iterating through locations, accumulating passengers, and checking capacity.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "simulation"
+      ],
+      "cues": [
+        "capacity-empty-seats",
+        "vehicle-only-drives-east",
+        "return-true-if-it-is-possible"
+      ],
+      "constraints": [
+        "1-capacity-105"
+      ]
+    }
+  ]
+}

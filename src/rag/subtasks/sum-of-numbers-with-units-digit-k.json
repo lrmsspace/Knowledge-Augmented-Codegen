@@ -1,0 +1,40 @@
+{
+  "slug": "sum-of-numbers-with-units-digit-k",
+  "link": "https://leetcode.com/problems/sum-of-numbers-with-units-digit-k/",
+  "difficulty": "Medium",
+  "index": "1571",
+  "description_full": "Given two integers num and k, consider a set of positive integers with the following properties:\n\n\n\tThe units digit of each integer is k.\n\tThe sum of the integers is num.\n\n\nReturn the minimum possible size of such a set, or -1 if no such set exists.\n\nNote:\n\n\n\tThe set can contain multiple instances of the same integer, and the sum of an empty set is considered 0.\n\tThe units digit of a number is the rightmost digit of the number.\n\n\n \nExample 1:\n\n\nInput: num = 58, k = 9\nOutput: 2\nExplanation:\nOne valid set is [9,49], as the sum is 58 and each integer has a units digit of 9.\nAnother valid set is [19,39].\nIt can be shown that 2 is the minimum possible size of a valid set.\n\n\nExample 2:\n\n\nInput: num = 37, k = 2\nOutput: -1\nExplanation: It is not possible to obtain a sum of 37 using only integers that have a units digit of 2.\n\n\nExample 3:\n\n\nInput: num = 0, k = 7\nOutput: 0\nExplanation: The sum of an empty set is considered 0.\n\n\n \nConstraints:\n\n\n\t0 <= num <= 3000\n\t0 <= k <= 9\n\n",
+  "description": "Given two integers num and k, consider a set of positive integers with the following properties:\n\n\n\tThe units digit of each integer is k.\n\tThe sum of the integers is num.\n\n\nReturn the minimum possible size of such a set, or -1 if no such set exists.\n\nNote:\n\n\n\tThe set can contain multiple instances of the same integer, and the sum of an empty set is considered 0.\n\tThe units digit of a number is the rightmost digit of the number.",
+  "example": "Input: num = 58, k = 9\nOutput: 2\nExplanation:\nOne valid set is [9,49], as the sum is 58 and each integer has a units digit of 9.\nAnother valid set is [19,39].\nIt can be shown that 2 is the minimum possible size of a valid set.",
+  "constraints_text": "0 <= num <= 3000\n\t0 <= k <= 9",
+  "templates": {
+    "c": "int minimumNumbers(int num, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumNumbers(int num, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumNumbers(int num, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @param {number} k\n * @return {number}\n */\nvar minimumNumbers = function(num, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumNumbers(self, num, k):\n        \"\"\"\n        :type num: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through possible set sizes to find the minimum count 'm' that allows 'num' to be formed by 'm' positive integers, each ending in 'k'.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-possible-size",
+        "sum-of-the-integers-is-num",
+        "units-digit-of-each-integer-is-k",
+        "positive-integers",
+        "empty-set-is-0"
+      ],
+      "constraints": [
+        "0-num-3000",
+        "0-k-9"
+      ]
+    }
+  ]
+}

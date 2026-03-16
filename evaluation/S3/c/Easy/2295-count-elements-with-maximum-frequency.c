@@ -1,0 +1,68 @@
+// Source: https://leetcode.com/problems/count-elements-with-maximum-frequency/   |   Difficulty: Easy
+//
+// Problem Description:
+// You are given an array nums consisting of positive integers.
+//
+// Return the total frequencies of elements in nums such that those elements all have the maximum frequency.
+//
+// The frequency of an element is the number of occurrences of that element in the array.
+//
+// Example:
+// Input: nums = [1,2,2,3,1,4]
+// Output: 4
+// Explanation: The elements 1 and 2 have a frequency of 2 which is the maximum frequency in the array.
+// So the number of elements in the array with maximum frequency is 4.
+//
+// Constraints:
+// 1 <= nums.length <= 100
+// 	1 <= nums[i] <= 100
+//
+// Helpful references (internal KB):
+// - Number of divisors / sum of divisors (number, counting, enumeration)
+//   • When to use: Use this approach when you need to calculate the total count or sum of all positive divisors for a given integer, typically by leveraging its prime factorization.
+//   • Idea: The number of divisors d(n) and sum of divisors sigma(n) are arithmetic functions derived from the prime factorization of an integer n. Both can be computed efficiently by first finding prime factors and their exponents, resulting in an O(sqrt(N)) or O(log N) complexity with precomputed primes.
+//   • Invariants: The current count of divisors is the product of (exponent + 1) for all prime factors found so far.; The current sum of divisors is the product of (1 + p + ... + p^e) for all prime factors found so far.
+//   • Tips: Precompute primes using a sieve for efficiency when dealing with multiple queries or large numbers.; For sum of divisors, the formula is sigma(n) = product((1 + p_i + ... + p_i^e_i)) for each prime factor p_i^e_i.
+//   • Pitfalls: Forgetting to handle n=1 correctly, which has one divisor.; Integer overflow when calculating sums or products of large powers, especially for sum of divisors.
+// - Number of divisors / sum of divisors (number, counting, enumeration)
+//   • When to use: Use this when you need to efficiently calculate the total count or sum of all positive divisors for a given integer. It is applicable in number theory problems or combinatorial tasks involving factors.
+//   • Idea: This method computes the number of divisors and sum of divisors of an integer n by first finding its prime factorization. The core idea leverages properties of multiplicative functions, with a typical complexity of O(sqrt(n)) for factorization.
+//   • Invariants: During prime factorization, temp_n always holds the remaining unfactored part of the original number.; The current_prime_factor iterates through potential prime divisors in increasing order.
+//   • Tips: First find the prime factorization n = p1^a1 * p2^a2 * ... * pk^ak.; Number of divisors d(n) = (a1+1)(a2+1)...(ak+1).
+//   • Pitfalls: Forgetting to handle the special case of n=1 (1 divisor, sum 1).; Incorrectly calculating powers or sums, especially for large exponents.
+// - The Inclusion-Exclusion Principle (string, counting)
+//   • When to use: Use when you need to determine the frequency of characters or substrings within a string. It is essential for tasks like anagram detection or checking character distribution.
+//   • Idea: This technique involves iterating through a string to tally the occurrences of its constituent elements, typically characters or words. It generally operates in O(N) time complexity, where N is the string's length.
+//   • Invariants: The count for each character reflects its total occurrences processed so far.; All characters encountered up to the current position have been tallied.
+//   • Tips: Use a hash map (dictionary) for arbitrary character sets.; Use an array for fixed-size character sets (e.g., ASCII, lowercase English).
+//   • Pitfalls: Forgetting to handle case sensitivity or ignore non-alphanumeric characters.; Incorrectly handling Unicode characters with fixed-size arrays.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Use the C standard library only; no external packages.
+// - Do not change input/output formats or return value semantics.
+// - Conformance: ISO C (C89/C99/C11). Do NOT use GNU C extensions (nested functions, statement expressions, typeof, __auto_type, etc.). Avoid VLAs and non-standard builtins.
+// - If you introduce any helper functions, include their full implementations in this file; no hidden helpers.
+
+int maxFrequencyElements(int* nums, int numsSize) {
+    int frequency[101] = {0}; // Since nums[i] is between 1 and 100
+    int max_freq = 0;
+
+    // Count the frequency of each element
+    for (int i = 0; i < numsSize; i++) {
+        frequency[nums[i]]++;
+        if (frequency[nums[i]] > max_freq) {
+            max_freq = frequency[nums[i]];
+        }
+    }
+
+    // Count how many elements have the maximum frequency
+    int count = 0;
+    for (int i = 1; i <= 100; i++) {
+        if (frequency[i] == max_freq) {
+            count += frequency[i];
+        }
+    }
+
+    return count;       
+}

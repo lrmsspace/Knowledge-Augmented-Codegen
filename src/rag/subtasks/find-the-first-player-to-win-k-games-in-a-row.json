@@ -1,0 +1,58 @@
+{
+  "slug": "find-the-first-player-to-win-k-games-in-a-row",
+  "link": "https://leetcode.com/problems/find-the-first-player-to-win-k-games-in-a-row/",
+  "difficulty": "Medium",
+  "index": "2517",
+  "description_full": "A competition consists of n players numbered from 0 to n - 1.\n\nYou are given an integer array skills of size n and a positive integer k, where skills[i] is the skill level of player i. All integers in skills are unique.\n\nAll players are standing in a queue in order from player 0 to player n - 1.\n\nThe competition process is as follows:\n\n\n\tThe first two players in the queue play a game, and the player with the higher skill level wins.\n\tAfter the game, the winner stays at the beginning of the queue, and the loser goes to the end of it.\n\n\nThe winner of the competition is the first player who wins k games in a row.\n\nReturn the initial index of the winning player.\n\n \nExample 1:\n\n\nInput: skills = [4,2,6,3,9], k = 2\n\nOutput: 2\n\nExplanation:\n\nInitially, the queue of players is [0,1,2,3,4]. The following process happens:\n\n\n\tPlayers 0 and 1 play a game, since the skill of player 0 is higher than that of player 1, player 0 wins. The resulting queue is [0,2,3,4,1].\n\tPlayers 0 and 2 play a game, since the skill of player 2 is higher than that of player 0, player 2 wins. The resulting queue is [2,3,4,1,0].\n\tPlayers 2 and 3 play a game, since the skill of player 2 is higher than that of player 3, player 2 wins. The resulting queue is [2,4,1,0,3].\n\n\nPlayer 2 won k = 2 games in a row, so the winner is player 2.\n\n\nExample 2:\n\n\nInput: skills = [2,5,4], k = 3\n\nOutput: 1\n\nExplanation:\n\nInitially, the queue of players is [0,1,2]. The following process happens:\n\n\n\tPlayers 0 and 1 play a game, since the skill of player 1 is higher than that of player 0, player 1 wins. The resulting queue is [1,2,0].\n\tPlayers 1 and 2 play a game, since the skill of player 1 is higher than that of player 2, player 1 wins. The resulting queue is [1,0,2].\n\tPlayers 1 and 0 play a game, since the skill of player 1 is higher than that of player 0, player 1 wins. The resulting queue is [1,2,0].\n\n\nPlayer 1 won k = 3 games in a row, so the winner is player 1.\n\n\n \nConstraints:\n\n\n\tn == skills.length\n\t2 <= n <= 105\n\t1 <= k <= 109\n\t1 <= skills[i] <= 106\n\tAll integers in skills are unique.\n\n",
+  "description": "A competition consists of n players numbered from 0 to n - 1.\n\nYou are given an integer array skills of size n and a positive integer k, where skills[i] is the skill level of player i. All integers in skills are unique.\n\nAll players are standing in a queue in order from player 0 to player n - 1.\n\nThe competition process is as follows:\n\n\n\tThe first two players in the queue play a game, and the player with the higher skill level wins.\n\tAfter the game, the winner stays at the beginning of the queue, and the loser goes to the end of it.\n\n\nThe winner of the competition is the first player who wins k games in a row.\n\nReturn the initial index of the winning player.",
+  "example": "Input: skills = [4,2,6,3,9], k = 2\n\nOutput: 2\n\nExplanation:\n\nInitially, the queue of players is [0,1,2,3,4]. The following process happens:\n\n\n\tPlayers 0 and 1 play a game, since the skill of player 0 is higher than that of player 1, player 0 wins. The resulting queue is [0,2,3,4,1].\n\tPlayers 0 and 2 play a game, since the skill of player 2 is higher than that of player 0, player 2 wins. The resulting queue is [2,3,4,1,0].\n\tPlayers 2 and 3 play a game, since the skill of player 2 is higher than that of player 3, player 2 wins. The resulting queue is [2,4,1,0,3].\n\n\nPlayer 2 won k = 2 games in a row, so the winner is player 2.",
+  "constraints_text": "n == skills.length\n\t2 <= n <= 105\n\t1 <= k <= 109\n\t1 <= skills[i] <= 106\n\tAll integers in skills are unique.",
+  "templates": {
+    "c": "int findWinningPlayer(int* skills, int skillsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findWinningPlayer(vector<int>& skills, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findWinningPlayer(int[] skills, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} skills\n * @param {number} k\n * @return {number}\n */\nvar findWinningPlayer = function(skills, k) {\n    \n};",
+    "python": "class Solution(object):\n    def findWinningPlayer(self, skills, k):\n        \"\"\"\n        :type skills: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the player with the highest skill level.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "skills-array",
+        "all-skills-unique"
+      ],
+      "constraints": [
+        "n-players",
+        "k-positive"
+      ]
+    },
+    {
+      "intent": "Simulate the competition process to find the first player to win k consecutive games.",
+      "structures": [
+        "deque",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "competition-process",
+        "winner-stays",
+        "loser-goes-to-end",
+        "k-games-in-a-row"
+      ],
+      "constraints": [
+        "skills-unique",
+        "k-positive"
+      ]
+    }
+  ]
+}

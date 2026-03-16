@@ -1,0 +1,40 @@
+{
+  "slug": "count-asterisks",
+  "link": "https://leetcode.com/problems/count-asterisks/",
+  "difficulty": "Easy",
+  "index": "494",
+  "description_full": "You are given a string s, where every two consecutive vertical bars '|' are grouped into a pair. In other words, the 1st and 2nd '|' make a pair, the 3rd and 4th '|' make a pair, and so forth.\n\nReturn the number of '*' in s, excluding the '*' between each pair of '|'.\n\nNote that each '|' will belong to exactly one pair.\n\n \nExample 1:\n\n\nInput: s = \"l|*e*et|c**o|*de|\"\nOutput: 2\nExplanation: The considered characters are underlined: \"l|*e*et|c**o|*de|\".\nThe characters between the first and second '|' are excluded from the answer.\nAlso, the characters between the third and fourth '|' are excluded from the answer.\nThere are 2 asterisks considered. Therefore, we return 2.\n\nExample 2:\n\n\nInput: s = \"iamprogrammer\"\nOutput: 0\nExplanation: In this example, there are no asterisks in s. Therefore, we return 0.\n\n\nExample 3:\n\n\nInput: s = \"yo|uar|e**|b|e***au|tifu|l\"\nOutput: 5\nExplanation: The considered characters are underlined: \"yo|uar|e**|b|e***au|tifu|l\". There are 5 asterisks considered. Therefore, we return 5.\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts consists of lowercase English letters, vertical bars '|', and asterisks '*'.\n\ts contains an even number of vertical bars '|'.\n\n",
+  "description": "You are given a string s, where every two consecutive vertical bars '|' are grouped into a pair. In other words, the 1st and 2nd '|' make a pair, the 3rd and 4th '|' make a pair, and so forth.\n\nReturn the number of '*' in s, excluding the '*' between each pair of '|'.\n\nNote that each '|' will belong to exactly one pair.",
+  "example": "Input: s = \"l|*e*et|c**o|*de|\"\nOutput: 2\nExplanation: The considered characters are underlined: \"l|*e*et|c**o|*de|\".\nThe characters between the first and second '|' are excluded from the answer.\nAlso, the characters between the third and fourth '|' are excluded from the answer.\nThere are 2 asterisks considered. Therefore, we return 2.",
+  "constraints_text": "1 <= s.length <= 1000\n\ts consists of lowercase English letters, vertical bars '|', and asterisks '*'.\n\ts contains an even number of vertical bars '|'.",
+  "templates": {
+    "c": "int countAsterisks(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countAsterisks(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countAsterisks(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countAsterisks = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def countAsterisks(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, maintaining a state to count asterisks that are not enclosed by vertical bar pairs.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "count",
+        "excluding-between-each-pair-of",
+        "1st-and-2nd-make-a-pair"
+      ],
+      "constraints": [
+        "1-s-length-1000",
+        "s-consists-of-lowercase-english-letters-vertical-bars-and-asterisks",
+        "s-contains-an-even-number-of-vertical-bars"
+      ]
+    }
+  ]
+}

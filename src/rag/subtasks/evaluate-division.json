@@ -1,0 +1,61 @@
+{
+  "slug": "evaluate-division",
+  "link": "https://leetcode.com/problems/evaluate-division/",
+  "difficulty": "Medium",
+  "index": "795",
+  "description_full": "You are given an array of variable pairs equations and an array of real numbers values, where equations[i] = [Ai, Bi] and values[i] represent the equation Ai / Bi = values[i]. Each Ai or Bi is a string that represents a single variable.\n\nYou are also given some queries, where queries[j] = [Cj, Dj] represents the jth query where you must find the answer for Cj / Dj = ?.\n\nReturn the answers to all queries. If a single answer cannot be determined, return -1.0.\n\nNote: The input is always valid. You may assume that evaluating the queries will not result in division by zero and that there is no contradiction.\n\nNote: The variables that do not occur in the list of equations are undefined, so the answer cannot be determined for them.\n\n \nExample 1:\n\n\nInput: equations = [[\"a\",\"b\"],[\"b\",\"c\"]], values = [2.0,3.0], queries = [[\"a\",\"c\"],[\"b\",\"a\"],[\"a\",\"e\"],[\"a\",\"a\"],[\"x\",\"x\"]]\nOutput: [6.00000,0.50000,-1.00000,1.00000,-1.00000]\nExplanation: \nGiven: a / b = 2.0, b / c = 3.0\nqueries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ? \nreturn: [6.0, 0.5, -1.0, 1.0, -1.0 ]\nnote: x is undefined => -1.0\n\nExample 2:\n\n\nInput: equations = [[\"a\",\"b\"],[\"b\",\"c\"],[\"bc\",\"cd\"]], values = [1.5,2.5,5.0], queries = [[\"a\",\"c\"],[\"c\",\"b\"],[\"bc\",\"cd\"],[\"cd\",\"bc\"]]\nOutput: [3.75000,0.40000,5.00000,0.20000]\n\n\nExample 3:\n\n\nInput: equations = [[\"a\",\"b\"]], values = [0.5], queries = [[\"a\",\"b\"],[\"b\",\"a\"],[\"a\",\"c\"],[\"x\",\"y\"]]\nOutput: [0.50000,2.00000,-1.00000,-1.00000]\n\n\n \nConstraints:\n\n\n\t1 <= equations.length <= 20\n\tequations[i].length == 2\n\t1 <= Ai.length, Bi.length <= 5\n\tvalues.length == equations.length\n\t0.0 < values[i] <= 20.0\n\t1 <= queries.length <= 20\n\tqueries[i].length == 2\n\t1 <= Cj.length, Dj.length <= 5\n\tAi, Bi, Cj, Dj consist of lower case English letters and digits.\n\n",
+  "description": "You are given an array of variable pairs equations and an array of real numbers values, where equations[i] = [Ai, Bi] and values[i] represent the equation Ai / Bi = values[i]. Each Ai or Bi is a string that represents a single variable.\n\nYou are also given some queries, where queries[j] = [Cj, Dj] represents the jth query where you must find the answer for Cj / Dj = ?.\n\nReturn the answers to all queries. If a single answer cannot be determined, return -1.0.\n\nNote: The input is always valid. You may assume that evaluating the queries will not result in division by zero and that there is no contradiction.\n\nNote: The variables that do not occur in the list of equations are undefined, so the answer cannot be determined for them.",
+  "example": "Input: equations = [[\"a\",\"b\"],[\"b\",\"c\"]], values = [2.0,3.0], queries = [[\"a\",\"c\"],[\"b\",\"a\"],[\"a\",\"e\"],[\"a\",\"a\"],[\"x\",\"x\"]]\nOutput: [6.00000,0.50000,-1.00000,1.00000,-1.00000]\nExplanation: \nGiven: a / b = 2.0, b / c = 3.0\nqueries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ? \nreturn: [6.0, 0.5, -1.0, 1.0, -1.0 ]\nnote: x is undefined => -1.0",
+  "constraints_text": "1 <= equations.length <= 20\n\tequations[i].length == 2\n\t1 <= Ai.length, Bi.length <= 5\n\tvalues.length == equations.length\n\t0.0 < values[i] <= 20.0\n\t1 <= queries.length <= 20\n\tqueries[i].length == 2\n\t1 <= Cj.length, Dj.length <= 5\n\tAi, Bi, Cj, Dj consist of lower case English letters and digits.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\ndouble* calcEquation(char*** equations, int equationsSize, int* equationsColSize, double* values, int valuesSize, char*** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} equations\n * @param {number[]} values\n * @param {string[][]} queries\n * @return {number[]}\n */\nvar calcEquation = function(equations, values, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def calcEquation(self, equations, values, queries):\n        \"\"\"\n        :type equations: List[List[str]]\n        :type values: List[float]\n        :type queries: List[List[str]]\n        :rtype: List[float]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Build a weighted directed graph representing variable division relationships.",
+      "structures": [
+        "graph",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "equations",
+        "values",
+        "ai-bi-values-i"
+      ],
+      "constraints": [
+        "1-equations-length-20",
+        "0-0-values-i-20-0"
+      ]
+    },
+    {
+      "intent": "Process each query by traversing the graph to find the product along the path.",
+      "structures": [
+        "graph",
+        "number",
+        "queue"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "queries",
+        "cj-dj",
+        "return-answers",
+        "cannot-be-determined-return-1-0"
+      ],
+      "constraints": [
+        "1-queries-length-20",
+        "variables-that-do-not-occur-in-the-list-of-equations-are-undefined"
+      ]
+    }
+  ]
+}

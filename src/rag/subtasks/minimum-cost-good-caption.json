@@ -1,0 +1,75 @@
+{
+  "slug": "minimum-cost-good-caption",
+  "link": "https://leetcode.com/problems/minimum-cost-good-caption/",
+  "difficulty": "Hard",
+  "index": "2796",
+  "description_full": "You are given a string caption of length n. A good caption is a string where every character appears in groups of at least 3 consecutive occurrences.\n\nFor example:\n\n\n\t\"aaabbb\" and \"aaaaccc\" are good captions.\n\t\"aabbb\" and \"ccccd\" are not good captions.\n\n\nYou can perform the following operation any number of times:\n\nChoose an index i (where 0 <= i < n) and change the character at that index to either:\n\n\n\tThe character immediately before it in the alphabet (if caption[i] != 'a').\n\tThe character immediately after it in the alphabet (if caption[i] != 'z').\n\n\nYour task is to convert the given caption into a good caption using the minimum number of operations, and return it. If there are multiple possible good captions, return the lexicographically smallest one among them. If it is impossible to create a good caption, return an empty string \"\".\n\n \nExample 1:\n\n\nInput: caption = \"cdcd\"\n\nOutput: \"cccc\"\n\nExplanation:\n\nIt can be shown that the given caption cannot be transformed into a good caption with fewer than 2 operations. The possible good captions that can be created using exactly 2 operations are:\n\n\n\t\"dddd\": Change caption[0] and caption[2] to their next character 'd'.\n\t\"cccc\": Change caption[1] and caption[3] to their previous character 'c'.\n\n\nSince \"cccc\" is lexicographically smaller than \"dddd\", return \"cccc\".\n\n\nExample 2:\n\n\nInput: caption = \"aca\"\n\nOutput: \"aaa\"\n\nExplanation:\n\nIt can be proven that the given caption requires at least 2 operations to be transformed into a good caption. The only good caption that can be obtained with exactly 2 operations is as follows:\n\n\n\tOperation 1: Change caption[1] to 'b'. caption = \"aba\".\n\tOperation 2: Change caption[1] to 'a'. caption = \"aaa\".\n\n\nThus, return \"aaa\".\n\n\nExample 3:\n\n\nInput: caption = \"bc\"\n\nOutput: \"\"\n\nExplanation:\n\nIt can be shown that the given caption cannot be converted to a good caption by using any number of operations.\n\n\n \nConstraints:\n\n\n\t1 <= caption.length <= 5 * 104\n\tcaption consists only of lowercase English letters.\n\n",
+  "description": "You are given a string caption of length n. A good caption is a string where every character appears in groups of at least 3 consecutive occurrences.\n\nFor example:\n\n\n\t\"aaabbb\" and \"aaaaccc\" are good captions.\n\t\"aabbb\" and \"ccccd\" are not good captions.\n\n\nYou can perform the following operation any number of times:\n\nChoose an index i (where 0 <= i < n) and change the character at that index to either:\n\n\n\tThe character immediately before it in the alphabet (if caption[i] != 'a').\n\tThe character immediately after it in the alphabet (if caption[i] != 'z').\n\n\nYour task is to convert the given caption into a good caption using the minimum number of operations, and return it. If there are multiple possible good captions, return the lexicographically smallest one among them. If it is impossible to create a good caption, return an empty string \"\".",
+  "example": "Input: caption = \"cdcd\"\n\nOutput: \"cccc\"\n\nExplanation:\n\nIt can be shown that the given caption cannot be transformed into a good caption with fewer than 2 operations. The possible good captions that can be created using exactly 2 operations are:\n\n\n\t\"dddd\": Change caption[0] and caption[2] to their next character 'd'.\n\t\"cccc\": Change caption[1] and caption[3] to their previous character 'c'.\n\n\nSince \"cccc\" is lexicographically smaller than \"dddd\", return \"cccc\".",
+  "constraints_text": "1 <= caption.length <= 5 * 104\n\tcaption consists only of lowercase English letters.",
+  "templates": {
+    "c": "char* minCostGoodCaption(char* caption) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string minCostGoodCaption(string caption) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minCostGoodCaption(String caption) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} caption\n * @return {string}\n */\nvar minCostGoodCaption = function(caption) {\n    \n};",
+    "python": "class Solution(object):\n    def minCostGoodCaption(self, caption):\n        \"\"\"\n        :type caption: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize the dynamic programming table and define state transitions for minimum cost and lexicographical smallest path.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "lexicographically-smallest",
+        "groups-of-at-least-3"
+      ],
+      "constraints": [
+        "n-up-to-5000",
+        "0-i-n"
+      ]
+    },
+    {
+      "intent": "Populate the DP table by iterating through the input string and applying defined transitions.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "convert-the-given-caption",
+        "minimum-operations"
+      ],
+      "constraints": [
+        "n-up-to-5000"
+      ]
+    },
+    {
+      "intent": "Reconstruct the optimal caption by backtracking through the DP table, or return an empty string if no solution exists.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "backtracking",
+        "enumeration"
+      ],
+      "cues": [
+        "return-it",
+        "empty-string-if-impossible"
+      ],
+      "constraints": [
+        "n-up-to-5000"
+      ]
+    }
+  ]
+}

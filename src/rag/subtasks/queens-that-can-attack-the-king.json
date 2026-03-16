@@ -1,0 +1,57 @@
+{
+  "slug": "queens-that-can-attack-the-king",
+  "link": "https://leetcode.com/problems/queens-that-can-attack-the-king/",
+  "difficulty": "Medium",
+  "index": "1155",
+  "description_full": "On a 0-indexed 8 x 8 chessboard, there can be multiple black queens and one white king.\n\nYou are given a 2D integer array queens where queens[i] = [xQueeni, yQueeni] represents the position of the ith black queen on the chessboard. You are also given an integer array king of length 2 where king = [xKing, yKing] represents the position of the white king.\n\nReturn the coordinates of the black queens that can directly attack the king. You may return the answer in any order.\n\n \nExample 1:\n\n\nInput: queens = [[0,1],[1,0],[4,0],[0,4],[3,3],[2,4]], king = [0,0]\nOutput: [[0,1],[1,0],[3,3]]\nExplanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).\n\n\nExample 2:\n\n\nInput: queens = [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]], king = [3,3]\nOutput: [[2,2],[3,4],[4,4]]\nExplanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).\n\n\n \nConstraints:\n\n\n\t1 <= queens.length < 64\n\tqueens[i].length == king.length == 2\n\t0 <= xQueeni, yQueeni, xKing, yKing < 8\n\tAll the given positions are unique.\n\n",
+  "description": "On a 0-indexed 8 x 8 chessboard, there can be multiple black queens and one white king.\n\nYou are given a 2D integer array queens where queens[i] = [xQueeni, yQueeni] represents the position of the ith black queen on the chessboard. You are also given an integer array king of length 2 where king = [xKing, yKing] represents the position of the white king.\n\nReturn the coordinates of the black queens that can directly attack the king. You may return the answer in any order.",
+  "example": "Input: queens = [[0,1],[1,0],[4,0],[0,4],[3,3],[2,4]], king = [0,0]\nOutput: [[0,1],[1,0],[3,3]]\nExplanation: The diagram above shows the three queens that can directly attack the king and the three queens that cannot attack the king (i.e., marked with red dashes).",
+  "constraints_text": "1 <= queens.length < 64\n\tqueens[i].length == king.length == 2\n\t0 <= xQueeni, yQueeni, xKing, yKing < 8\n\tAll the given positions are unique.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** queensAttacktheKing(int** queens, int queensSize, int* queensColSize, int* king, int kingSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> queensAttacktheKing(vector<vector<int>>& queens, vector<int>& king) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queens\n * @param {number[]} king\n * @return {number[][]}\n */\nvar queensAttacktheKing = function(queens, king) {\n    \n};",
+    "python": "class Solution(object):\n    def queensAttacktheKing(self, queens, king):\n        \"\"\"\n        :type queens: List[List[int]]\n        :type king: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Populate a 2D board representation to quickly check for queen presence.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "queens-i-xqueeni-yqueeni"
+      ],
+      "constraints": [
+        "8-x-8-chessboard",
+        "0-xqueeni-yqueeni-8"
+      ]
+    },
+    {
+      "intent": "Iterate through 8 directions from the king, finding the first queen in each path.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "king-xking-yking",
+        "directly-attack"
+      ],
+      "constraints": [
+        "8-x-8-chessboard",
+        "0-xking-yking-8"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "cyclically-rotating-a-grid",
+  "link": "https://leetcode.com/problems/cyclically-rotating-a-grid/",
+  "difficulty": "Medium",
+  "index": "1421",
+  "description_full": "You are given an m x n integer matrix grid​​​, where m and n are both even integers, and an integer k.\r\n\r\nThe matrix is composed of several layers, which is shown in the below image, where each color is its own layer:\r\n\r\n\r\n\r\nA cyclic rotation of the matrix is done by cyclically rotating each layer in the matrix. To cyclically rotate a layer once, each element in the layer will take the place of the adjacent element in the counter-clockwise direction. An example rotation is shown below:\r\n\r\nReturn the matrix after applying k cyclic rotations to it.\r\n\r\n \r\nExample 1:\r\n\r\n\r\nInput: grid = [[40,10],[30,20]], k = 1\r\nOutput: [[10,20],[40,30]]\r\nExplanation: The figures above represent the grid at every state.\r\n\r\n\r\nExample 2:\r\n  \r\n\r\n\r\nInput: grid = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]], k = 2\r\nOutput: [[3,4,8,12],[2,11,10,16],[1,7,6,15],[5,9,13,14]]\r\nExplanation: The figures above represent the grid at every state.\r\n\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\tm == grid.length\r\n\tn == grid[i].length\r\n\t2 <= m, n <= 50\r\n\tBoth m and n are even integers.\r\n\t1 <= grid[i][j] <= 5000\r\n\t1 <= k <= 109\r\n",
+  "description": "You are given an m x n integer matrix grid​​​, where m and n are both even integers, and an integer k.\r\n\r\nThe matrix is composed of several layers, which is shown in the below image, where each color is its own layer:\r\n\r\n\r\n\r\nA cyclic rotation of the matrix is done by cyclically rotating each layer in the matrix. To cyclically rotate a layer once, each element in the layer will take the place of the adjacent element in the counter-clockwise direction. An example rotation is shown below:\r\n\r\nReturn the matrix after applying k cyclic rotations to it.",
+  "example": "Input: grid = [[40,10],[30,20]], k = 1\r\nOutput: [[10,20],[40,30]]\r\nExplanation: The figures above represent the grid at every state.",
+  "constraints_text": "m == grid.length\r\n\tn == grid[i].length\r\n\t2 <= m, n <= 50\r\n\tBoth m and n are even integers.\r\n\t1 <= grid[i][j] <= 5000\r\n\t1 <= k <= 109",
+  "templates": {
+    "c": "/**\r\n * Return an array of arrays of size *returnSize.\r\n * The sizes of the arrays are returned as *returnColumnSizes array.\r\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\r\n */\r\nint** rotateGrid(int** grid, int gridSize, int* gridColSize, int k, int* returnSize, int** returnColumnSizes){\r\n\r\n}",
+    "cpp": "class Solution {\r\npublic:\r\n    vector<vector<int>> rotateGrid(vector<vector<int>>& grid, int k) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public int[][] rotateGrid(int[][] grid, int k) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number[][]} grid\r\n * @param {number} k\r\n * @return {number[][]}\r\n */\r\nvar rotateGrid = function(grid, k) {\r\n    \r\n};",
+    "python": "class Solution(object):\r\n    def rotateGrid(self, grid, k):\r\n        \"\"\"\r\n        :type grid: List[List[int]]\r\n        :type k: int\r\n        :rtype: List[List[int]]\r\n        \"\"\""
+  },
+  "subtasks": [
+    {
+      "intent": "Traverse each concentric layer of the matrix in counter-clockwise order and store its elements sequentially in a temporary list.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "several-layers",
+        "counter-clockwise-direction"
+      ],
+      "constraints": [
+        "m-n-are-even-integers"
+      ]
+    },
+    {
+      "intent": "For each temporary list of layer elements, calculate the effective number of counter-clockwise rotations (k modulo list size) and apply the shift.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "k-cyclic-rotations",
+        "cyclically-rotate-each-layer"
+      ],
+      "constraints": [
+        "1-k-10-9"
+      ]
+    },
+    {
+      "intent": "Traverse each concentric layer of the matrix again in counter-clockwise order and fill it with the elements from its corresponding rotated temporary list.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-matrix-after-applying-k-cyclic-rotations"
+      ],
+      "constraints": [
+        "m-n-are-even-integers"
+      ]
+    }
+  ]
+}

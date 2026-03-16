@@ -1,0 +1,55 @@
+{
+  "slug": "super-pow",
+  "link": "https://leetcode.com/problems/super-pow/",
+  "difficulty": "Medium",
+  "index": "776",
+  "description_full": "Your task is to calculate ab mod 1337 where a is a positive integer and b is an extremely large positive integer given in the form of an array.\n\n \nExample 1:\n\n\nInput: a = 2, b = [3]\nOutput: 8\n\n\nExample 2:\n\n\nInput: a = 2, b = [1,0]\nOutput: 1024\n\n\nExample 3:\n\n\nInput: a = 1, b = [4,3,3,8,5,2]\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= a <= 231 - 1\n\t1 <= b.length <= 2000\n\t0 <= b[i] <= 9\n\tb does not contain leading zeros.\n\n",
+  "description": "Your task is to calculate ab mod 1337 where a is a positive integer and b is an extremely large positive integer given in the form of an array.",
+  "example": "Input: a = 2, b = [3]\nOutput: 8",
+  "constraints_text": "1 <= a <= 231 - 1\n\t1 <= b.length <= 2000\n\t0 <= b[i] <= 9\n\tb does not contain leading zeros.",
+  "templates": {
+    "c": "int superPow(int a, int* b, int bSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int superPow(int a, vector<int>& b) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int superPow(int a, int[] b) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} a\n * @param {number[]} b\n * @return {number}\n */\nvar superPow = function(a, b) {\n    \n};",
+    "python": "class Solution(object):\n    def superPow(self, a, b):\n        \"\"\"\n        :type a: int\n        :type b: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a modular exponentiation helper function to calculate (base^exponent) % modulus efficiently.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "mod-exp"
+      ],
+      "cues": [
+        "ab-mod-1337",
+        "a-is-a-positive-integer"
+      ],
+      "constraints": [
+        "1-a-2-31-1",
+        "0-b-i-9"
+      ]
+    },
+    {
+      "intent": "Iterate through the digits of the large exponent 'b' to compute a^b mod 1337 using the modular exponentiation helper.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "mod-exp"
+      ],
+      "cues": [
+        "b-is-an-extremely-large-positive-integer-given-in-the-form-of-an-array",
+        "calculate-ab-mod-1337"
+      ],
+      "constraints": [
+        "1-b-length-2000",
+        "b-does-not-contain-leading-zeros"
+      ]
+    }
+  ]
+}

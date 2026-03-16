@@ -1,0 +1,58 @@
+{
+  "slug": "max-pair-sum-in-an-array",
+  "link": "https://leetcode.com/problems/max-pair-sum-in-an-array/",
+  "difficulty": "Easy",
+  "index": "609",
+  "description_full": "You are given an integer array nums. You have to find the maximum sum of a pair of numbers from nums such that the largest digit in both numbers is equal.\n\nFor example, 2373 is made up of three distinct digits: 2, 3, and 7, where 7 is the largest among them.\n\nReturn the maximum sum or -1 if no such pair exists.\n\n \nExample 1:\n\n\nInput: nums = [112,131,411]\n\nOutput: -1\n\nExplanation:\n\nEach numbers largest digit in order is [2,3,4].\n\n\nExample 2:\n\n\nInput: nums = [2536,1613,3366,162]\n\nOutput: 5902\n\nExplanation:\n\nAll the numbers have 6 as their largest digit, so the answer is 2536 + 3366 = 5902.\n\n\nExample 3:\n\n\nInput: nums = [51,71,17,24,42]\n\nOutput: 88\n\nExplanation:\n\nEach number's largest digit in order is [5,7,7,4,4].\n\nSo we have only two possible pairs, 71 + 17 = 88 and 24 + 42 = 66.\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 100\n\t1 <= nums[i] <= 104\n\n",
+  "description": "You are given an integer array nums. You have to find the maximum sum of a pair of numbers from nums such that the largest digit in both numbers is equal.\n\nFor example, 2373 is made up of three distinct digits: 2, 3, and 7, where 7 is the largest among them.\n\nReturn the maximum sum or -1 if no such pair exists.",
+  "example": "Input: nums = [112,131,411]\n\nOutput: -1\n\nExplanation:\n\nEach numbers largest digit in order is [2,3,4].",
+  "constraints_text": "2 <= nums.length <= 100\n\t1 <= nums[i] <= 104",
+  "templates": {
+    "c": "int maxSum(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxSum(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSum(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxSum = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Process each number to find its largest digit and maintain the two largest numbers for each unique largest digit.",
+      "structures": [
+        "array",
+        "number",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "largest-digit-in-both-numbers-is-equal",
+        "integer-array-nums"
+      ],
+      "constraints": [
+        "2-nums-length-100",
+        "1-nums-i-104"
+      ]
+    },
+    {
+      "intent": "Iterate through the collected groups of numbers and determine the maximum sum from valid pairs.",
+      "structures": [
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-sum",
+        "return-1-if-no-such-pair-exists"
+      ],
+      "constraints": [
+        "nums-length-100"
+      ]
+    }
+  ]
+}

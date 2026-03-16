@@ -1,0 +1,54 @@
+{
+  "slug": "minimum-positive-sum-subarray",
+  "link": "https://leetcode.com/problems/minimum-positive-sum-subarray/",
+  "difficulty": "Easy",
+  "index": "2357",
+  "description_full": "You are given an integer array nums and two integers l and r. Your task is to find the minimum sum of a subarray whose size is between l and r (inclusive) and whose sum is greater than 0.\n\nReturn the minimum sum of such a subarray. If no such subarray exists, return -1.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: nums = [3, -2, 1, 4], l = 2, r = 3\n\nOutput: 1\n\nExplanation:\n\nThe subarrays of length between l = 2 and r = 3 where the sum is greater than 0 are:\n\n\n\t[3, -2] with a sum of 1\n\t[1, 4] with a sum of 5\n\t[3, -2, 1] with a sum of 2\n\t[-2, 1, 4] with a sum of 3\n\n\nOut of these, the subarray [3, -2] has a sum of 1, which is the smallest positive sum. Hence, the answer is 1.\n\n\nExample 2:\n\n\nInput: nums = [-2, 2, -3, 1], l = 2, r = 3\n\nOutput: -1\n\nExplanation:\n\nThere is no subarray of length between l and r that has a sum greater than 0. So, the answer is -1.\n\n\nExample 3:\n\n\nInput: nums = [1, 2, 3, 4], l = 2, r = 4\n\nOutput: 3\n\nExplanation:\n\nThe subarray [1, 2] has a length of 2 and the minimum sum greater than 0. So, the answer is 3.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t1 <= l <= r <= nums.length\n\t-1000 <= nums[i] <= 1000\n\n",
+  "description": "You are given an integer array nums and two integers l and r. Your task is to find the minimum sum of a subarray whose size is between l and r (inclusive) and whose sum is greater than 0.\n\nReturn the minimum sum of such a subarray. If no such subarray exists, return -1.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [3, -2, 1, 4], l = 2, r = 3\n\nOutput: 1\n\nExplanation:\n\nThe subarrays of length between l = 2 and r = 3 where the sum is greater than 0 are:\n\n\n\t[3, -2] with a sum of 1\n\t[1, 4] with a sum of 5\n\t[3, -2, 1] with a sum of 2\n\t[-2, 1, 4] with a sum of 3\n\n\nOut of these, the subarray [3, -2] has a sum of 1, which is the smallest positive sum. Hence, the answer is 1.",
+  "constraints_text": "1 <= nums.length <= 100\n\t1 <= l <= r <= nums.length\n\t-1000 <= nums[i] <= 1000",
+  "templates": {
+    "c": "int minimumSumSubarray(int* nums, int numsSize, int l, int r) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumSumSubarray(vector<int>& nums, int l, int r) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSumSubarray(List<Integer> nums, int l, int r) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} l\n * @param {number} r\n * @return {number}\n */\nvar minimumSumSubarray = function(nums, l, r) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumSumSubarray(self, nums, l, r):\n        \"\"\"\n        :type nums: List[int]\n        :type l: int\n        :type r: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute prefix sums for efficient O(1) subarray sum calculation.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "subarray-sum"
+      ],
+      "constraints": []
+    },
+    {
+      "intent": "Iterate through possible subarray end points, maintain a sliding window of relevant prefix sums, and find the minimum positive difference.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "sliding-window",
+        "ordered-set"
+      ],
+      "cues": [
+        "minimum-sum",
+        "subarray-size-between-l-and-r",
+        "sum-greater-than-0",
+        "return-1"
+      ],
+      "constraints": [
+        "l-length-r",
+        "sum-0"
+      ]
+    }
+  ]
+}

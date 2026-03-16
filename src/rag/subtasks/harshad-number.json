@@ -1,0 +1,38 @@
+{
+  "slug": "harshad-number",
+  "link": "https://leetcode.com/problems/harshad-number/",
+  "difficulty": "Easy",
+  "index": "2312",
+  "description_full": "An integer divisible by the sum of its digits is said to be a Harshad number. You are given an integer x. Return the sum of the digits of x if x is a Harshad number, otherwise, return -1.\n\n \nExample 1:\n\n\nInput: x = 18\n\nOutput: 9\n\nExplanation:\n\nThe sum of digits of x is 9. 18 is divisible by 9. So 18 is a Harshad number and the answer is 9.\n\n\nExample 2:\n\n\nInput: x = 23\n\nOutput: -1\n\nExplanation:\n\nThe sum of digits of x is 5. 23 is not divisible by 5. So 23 is not a Harshad number and the answer is -1.\n\n\n \nConstraints:\n\n\n\t1 <= x <= 100\n\n",
+  "description": "An integer divisible by the sum of its digits is said to be a Harshad number. You are given an integer x. Return the sum of the digits of x if x is a Harshad number, otherwise, return -1.",
+  "example": "Input: x = 18\n\nOutput: 9\n\nExplanation:\n\nThe sum of digits of x is 9. 18 is divisible by 9. So 18 is a Harshad number and the answer is 9.",
+  "constraints_text": "1 <= x <= 100",
+  "templates": {
+    "c": "int sumOfTheDigitsOfHarshadNumber(int x) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int sumOfTheDigitsOfHarshadNumber(int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfTheDigitsOfHarshadNumber(int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} x\n * @return {number}\n */\nvar sumOfTheDigitsOfHarshadNumber = function(x) {\n    \n};",
+    "python": "class Solution(object):\n    def sumOfTheDigitsOfHarshadNumber(self, x):\n        \"\"\"\n        :type x: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the sum of digits for x, then check if x is divisible by this sum to determine if it's a Harshad number, returning the sum or -1.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "sum-of-its-digits",
+        "divisible-by",
+        "return-the-sum",
+        "return-1"
+      ],
+      "constraints": [
+        "1-x-100"
+      ]
+    }
+  ]
+}

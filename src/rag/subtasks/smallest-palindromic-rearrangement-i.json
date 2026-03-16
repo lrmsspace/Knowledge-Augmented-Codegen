@@ -1,0 +1,69 @@
+{
+  "slug": "smallest-palindromic-rearrangement-i",
+  "link": "https://leetcode.com/problems/smallest-palindromic-rearrangement-i/",
+  "difficulty": "Medium",
+  "index": "2631",
+  "description_full": "You are given a palindromic string s.\n\nReturn the lexicographically smallest palindromic permutation of s.\n\n \nExample 1:\n\n\nInput: s = \"z\"\n\nOutput: \"z\"\n\nExplanation:\n\nA string of only one character is already the lexicographically smallest palindrome.\n\n\nExample 2:\n\n\nInput: s = \"babab\"\n\nOutput: \"abbba\"\n\nExplanation:\n\nRearranging \"babab\" → \"abbba\" gives the smallest lexicographic palindrome.\n\n\nExample 3:\n\n\nInput: s = \"daccad\"\n\nOutput: \"acddca\"\n\nExplanation:\n\nRearranging \"daccad\" → \"acddca\" gives the smallest lexicographic palindrome.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\ts is guaranteed to be palindromic.\n\n",
+  "description": "You are given a palindromic string s.\n\nReturn the lexicographically smallest palindromic permutation of s.",
+  "example": "Input: s = \"z\"\n\nOutput: \"z\"\n\nExplanation:\n\nA string of only one character is already the lexicographically smallest palindrome.",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\ts is guaranteed to be palindromic.",
+  "templates": {
+    "c": "char* smallestPalindrome(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string smallestPalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestPalindrome(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar smallestPalindrome = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def smallestPalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each character in the input string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "palindromic-permutation"
+      ],
+      "constraints": [
+        "s-length-105",
+        "lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Construct the lexicographically smallest first half of the palindrome and identify the single middle character.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "lexicographically-smallest",
+        "palindromic-permutation"
+      ],
+      "constraints": [
+        "lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Assemble the complete palindromic string by combining the first half, middle character, and reversed first half.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "return-the-lexicographically-smallest-palindromic-permutation"
+      ],
+      "constraints": [
+        "s-length-105"
+      ]
+    }
+  ]
+}

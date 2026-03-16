@@ -1,0 +1,55 @@
+// Source: https://leetcode.com/problems/maximum-frequency-of-an-element-after-performing-operations-ii/   |   Difficulty: Hard
+//
+// Problem Description:
+// You are given an integer array nums and two integers k and numOperations.
+//
+// You must perform an operation numOperations times on nums, where in each operation you:
+//
+//
+//  Select an index i that was not selected in any previous operations.
+//  Add an integer in the range [-k, k] to nums[i].
+//
+//
+// Return the maximum possible frequency of any element in nums after performing the operations.
+//
+// Example:
+// Input: nums = [1,4,5], k = 1, numOperations = 2
+//
+// Output: 2
+//
+// Explanation:
+//
+// We can achieve a maximum frequency of two by:
+//
+//
+//  Adding 0 to nums[1], after which nums becomes [1, 4, 5].
+//  Adding -1 to nums[2], after which nums becomes [1, 4, 4].
+//
+// Constraints:
+// 1 <= nums.length <= 105
+//  1 <= nums[i] <= 109
+//  0 <= k <= 109
+//  0 <= numOperations <= nums.length
+//
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @param {number} numOperations
+ * @return {number}
+ */
+var maxFrequency = function(nums, k, numOperations) {
+    nums.sort((a, b) => a - b);
+    let left = 0;
+    let total = 0;
+    let maxFreq = 1;
+    for (let right = 0; right < nums.length; right++) {
+        total += nums[right];
+        while ((right - left + 1) * nums[right] - total > numOperations * k) {
+            total -= nums[left];
+            left++;
+        }
+        maxFreq = Math.max(maxFreq, right - left + 1);
+    }
+    return maxFreq;
+};

@@ -1,0 +1,39 @@
+{
+  "slug": "lexicographically-smallest-string-after-operations-with-constraint",
+  "link": "https://leetcode.com/problems/lexicographically-smallest-string-after-operations-with-constraint/",
+  "difficulty": "Medium",
+  "index": "2492",
+  "description_full": "You are given a string s and an integer k.\n\nDefine a function distance(s1, s2) between two strings s1 and s2 of the same length n as:\n\n\n\tThe sum of the minimum distance between s1[i] and s2[i] when the characters from 'a' to 'z' are placed in a cyclic order, for all i in the range [0, n - 1].\n\n\nFor example, distance(\"ab\", \"cd\") == 4, and distance(\"a\", \"z\") == 1.\n\nYou can change any letter of s to any other lowercase English letter, any number of times.\n\nReturn a string denoting the lexicographically smallest string t you can get after some changes, such that distance(s, t) <= k.\n\n \nExample 1:\n\n\nInput: s = \"zbbz\", k = 3\n\nOutput: \"aaaz\"\n\nExplanation:\n\nChange s to \"aaaz\". The distance between \"zbbz\" and \"aaaz\" is equal to k = 3.\n\n\nExample 2:\n\n\nInput: s = \"xaxcd\", k = 4\n\nOutput: \"aawcd\"\n\nExplanation:\n\nThe distance between \"xaxcd\" and \"aawcd\" is equal to k = 4.\n\n\nExample 3:\n\n\nInput: s = \"lol\", k = 0\n\nOutput: \"lol\"\n\nExplanation:\n\nIt's impossible to change any character as k = 0.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\t0 <= k <= 2000\n\ts consists only of lowercase English letters.\n\n",
+  "description": "You are given a string s and an integer k.\n\nDefine a function distance(s1, s2) between two strings s1 and s2 of the same length n as:\n\n\n\tThe sum of the minimum distance between s1[i] and s2[i] when the characters from 'a' to 'z' are placed in a cyclic order, for all i in the range [0, n - 1].\n\n\nFor example, distance(\"ab\", \"cd\") == 4, and distance(\"a\", \"z\") == 1.\n\nYou can change any letter of s to any other lowercase English letter, any number of times.\n\nReturn a string denoting the lexicographically smallest string t you can get after some changes, such that distance(s, t) <= k.",
+  "example": "Input: s = \"zbbz\", k = 3\n\nOutput: \"aaaz\"\n\nExplanation:\n\nChange s to \"aaaz\". The distance between \"zbbz\" and \"aaaz\" is equal to k = 3.",
+  "constraints_text": "1 <= s.length <= 100\n\t0 <= k <= 2000\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "char* getSmallestString(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string getSmallestString(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getSmallestString(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar getSmallestString = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def getSmallestString(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate the lexicographically smallest string t by iterating through s and applying optimal character changes using k.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "lexicographically-smallest-string",
+        "distance-s-t-k",
+        "cyclic-order"
+      ],
+      "constraints": [
+        "lowercase-english-letter",
+        "k-non-negative"
+      ]
+    }
+  ]
+}

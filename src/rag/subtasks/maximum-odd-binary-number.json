@@ -1,0 +1,38 @@
+{
+  "slug": "maximum-odd-binary-number",
+  "link": "https://leetcode.com/problems/maximum-odd-binary-number/",
+  "difficulty": "Easy",
+  "index": "2270",
+  "description_full": "You are given a binary string s that contains at least one '1'.\n\nYou have to rearrange the bits in such a way that the resulting binary number is the maximum odd binary number that can be created from this combination.\n\nReturn a string representing the maximum odd binary number that can be created from the given combination.\n\nNote that the resulting string can have leading zeros.\n\n \nExample 1:\n\n\nInput: s = \"010\"\nOutput: \"001\"\nExplanation: Because there is just one '1', it must be in the last position. So the answer is \"001\".\n\n\nExample 2:\n\n\nInput: s = \"0101\"\nOutput: \"1001\"\nExplanation: One of the '1's must be in the last position. The maximum number that can be made with the remaining digits is \"100\". So the answer is \"1001\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists only of '0' and '1'.\n\ts contains at least one '1'.\n\n",
+  "description": "You are given a binary string s that contains at least one '1'.\n\nYou have to rearrange the bits in such a way that the resulting binary number is the maximum odd binary number that can be created from this combination.\n\nReturn a string representing the maximum odd binary number that can be created from the given combination.\n\nNote that the resulting string can have leading zeros.",
+  "example": "Input: s = \"010\"\nOutput: \"001\"\nExplanation: Because there is just one '1', it must be in the last position. So the answer is \"001\".",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists only of '0' and '1'.\n\ts contains at least one '1'.",
+  "templates": {
+    "c": "char* maximumOddBinaryNumber(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string maximumOddBinaryNumber(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String maximumOddBinaryNumber(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar maximumOddBinaryNumber = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumOddBinaryNumber(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count '1's and '0's in the input string, then construct the maximum odd binary number.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-odd-binary-number",
+        "rearrange-bits"
+      ],
+      "constraints": [
+        "s-contains-at-least-one-1",
+        "s-length-100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "perfect-squares",
+  "link": "https://leetcode.com/problems/perfect-squares/",
+  "difficulty": "Medium",
+  "index": "747",
+  "description_full": "Given an integer n, return the least number of perfect square numbers that sum to n.\n\nA perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.\n\n \nExample 1:\n\n\nInput: n = 12\nOutput: 3\nExplanation: 12 = 4 + 4 + 4.\n\n\nExample 2:\n\n\nInput: n = 13\nOutput: 2\nExplanation: 13 = 4 + 9.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 104\n\n",
+  "description": "Given an integer n, return the least number of perfect square numbers that sum to n.\n\nA perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.",
+  "example": "Input: n = 12\nOutput: 3\nExplanation: 12 = 4 + 4 + 4.",
+  "constraints_text": "1 <= n <= 104",
+  "templates": {
+    "c": "int numSquares(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numSquares(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSquares(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar numSquares = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def numSquares(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum count of perfect squares summing to `n` using a breadth-first search.",
+      "structures": [
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs",
+        "enumeration"
+      ],
+      "cues": [
+        "least-number",
+        "perfect-square-numbers",
+        "sum-to-n"
+      ],
+      "constraints": [
+        "1-n-10-4"
+      ]
+    }
+  ]
+}

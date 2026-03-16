@@ -1,0 +1,40 @@
+{
+  "slug": "shortest-path-visiting-all-nodes",
+  "link": "https://leetcode.com/problems/shortest-path-visiting-all-nodes/",
+  "difficulty": "Hard",
+  "index": "1901",
+  "description_full": "You have an undirected, connected graph of n nodes labeled from 0 to n - 1. You are given an array graph where graph[i] is a list of all the nodes connected with node i by an edge.\n\nReturn the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.\n\n \nExample 1:\n\n\nInput: graph = [[1,2,3],[0],[0],[0]]\nOutput: 4\nExplanation: One possible path is [1,0,2,0,3]\n\n\nExample 2:\n\n\nInput: graph = [[1],[0,2,4],[1,3,4],[2],[1,2]]\nOutput: 4\nExplanation: One possible path is [0,1,4,2,3]\n\n\n \nConstraints:\n\n\n\tn == graph.length\n\t1 <= n <= 12\n\t0 <= graph[i].length < n\n\tgraph[i] does not contain i.\n\tIf graph[a] contains b, then graph[b] contains a.\n\tThe input graph is always connected.\n\n",
+  "description": "You have an undirected, connected graph of n nodes labeled from 0 to n - 1. You are given an array graph where graph[i] is a list of all the nodes connected with node i by an edge.\n\nReturn the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.",
+  "example": "Input: graph = [[1,2,3],[0],[0],[0]]\nOutput: 4\nExplanation: One possible path is [1,0,2,0,3]",
+  "constraints_text": "n == graph.length\n\t1 <= n <= 12\n\t0 <= graph[i].length < n\n\tgraph[i] does not contain i.\n\tIf graph[a] contains b, then graph[b] contains a.\n\tThe input graph is always connected.",
+  "templates": {
+    "c": "int shortestPathLength(int** graph, int graphSize, int* graphColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int shortestPathLength(vector<vector<int>>& graph) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestPathLength(int[][] graph) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} graph\n * @return {number}\n */\nvar shortestPathLength = function(graph) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestPathLength(self, graph):\n        \"\"\"\n        :type graph: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the shortest path length to visit all nodes by performing a Breadth-First Search on states defined by current node and visited nodes mask.",
+      "structures": [
+        "graph",
+        "queue",
+        "bitset"
+      ],
+      "actions": [
+        "bfs",
+        "bitmask-dp"
+      ],
+      "cues": [
+        "shortest-path",
+        "visits-every-node",
+        "start-and-stop-at-any-node"
+      ],
+      "constraints": [
+        "n-12",
+        "undirected-connected"
+      ]
+    }
+  ]
+}

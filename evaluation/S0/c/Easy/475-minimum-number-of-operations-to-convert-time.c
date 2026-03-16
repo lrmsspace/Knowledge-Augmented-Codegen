@@ -1,0 +1,47 @@
+// Source: https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/   |   Difficulty: Easy
+//
+// Problem Description:
+// You are given two strings current and correct representing two 24-hour times.
+//
+// 24-hour times are formatted as "HH:MM", where HH is between 00 and 23, and MM is between 00 and 59. The earliest 24-hour time is 00:00, and the latest is 23:59.
+//
+// In one operation you can increase the time current by 1, 5, 15, or 60 minutes. You can perform this operation any number of times.
+//
+// Return the minimum number of operations needed to convert current to correct.
+//
+// Example:
+// Input: current = "02:30", correct = "04:35"
+// Output: 3
+// Explanation:
+// We can convert current to correct in 3 operations as follows:
+// - Add 60 minutes to current. current becomes "03:30".
+// - Add 60 minutes to current. current becomes "04:30".
+// - Add 5 minutes to current. current becomes "04:35".
+// It can be proven that it is not possible to convert current to correct in fewer than 3 operations.
+//
+// Constraints:
+// current and correct are in the format "HH:MM"
+// 	current <= correct
+//
+
+int convertTime(char* current, char* correct) {
+    int currH = (current[0] - '0') * 10 + (current[1] - '0');
+    int currM = (current[3] - '0') * 10 + (current[4] - '0');
+    int corrH = (correct[0] - '0') * 10 + (correct[1] - '0');
+    int corrM = (correct[3] - '0') * 10 + (correct[4] - '0');
+    
+    int totalCurrMins = currH * 60 + currM;
+    int totalCorrMins = corrH * 60 + corrM;
+    
+    int diff = totalCorrMins - totalCurrMins;
+    int operations = 0;
+    
+    int increments[] = {60, 15, 5, 1};
+    
+    for (int i = 0; i < 4; i++) {
+        operations += diff / increments[i];
+        diff %= increments[i];
+    }
+    
+    return operations;      
+}

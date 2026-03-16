@@ -1,0 +1,38 @@
+{
+  "slug": "make-array-zero-by-subtracting-equal-amounts",
+  "link": "https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/",
+  "difficulty": "Easy",
+  "index": "503",
+  "description_full": "You are given a non-negative integer array nums. In one operation, you must:\n\n\n\tChoose a positive integer x such that x is less than or equal to the smallest non-zero element in nums.\n\tSubtract x from every positive element in nums.\n\n\nReturn the minimum number of operations to make every element in nums equal to 0.\n\n \nExample 1:\n\n\nInput: nums = [1,5,0,3,5]\nOutput: 3\nExplanation:\nIn the first operation, choose x = 1. Now, nums = [0,4,0,2,4].\nIn the second operation, choose x = 2. Now, nums = [0,2,0,0,2].\nIn the third operation, choose x = 2. Now, nums = [0,0,0,0,0].\n\n\nExample 2:\n\n\nInput: nums = [0]\nOutput: 0\nExplanation: Each element in nums is already 0 so no operations are needed.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t0 <= nums[i] <= 100\n\n",
+  "description": "You are given a non-negative integer array nums. In one operation, you must:\n\n\n\tChoose a positive integer x such that x is less than or equal to the smallest non-zero element in nums.\n\tSubtract x from every positive element in nums.\n\n\nReturn the minimum number of operations to make every element in nums equal to 0.",
+  "example": "Input: nums = [1,5,0,3,5]\nOutput: 3\nExplanation:\nIn the first operation, choose x = 1. Now, nums = [0,4,0,2,4].\nIn the second operation, choose x = 2. Now, nums = [0,2,0,0,2].\nIn the third operation, choose x = 2. Now, nums = [0,0,0,0,0].",
+  "constraints_text": "1 <= nums.length <= 100\n\t0 <= nums[i] <= 100",
+  "templates": {
+    "c": "int minimumOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the number of distinct positive integers in the input array, as this directly corresponds to the minimum operations.",
+      "structures": [
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "smallest-non-zero-element",
+        "minimum-number-of-operations"
+      ],
+      "constraints": [
+        "nums-length-100",
+        "nums-i-100"
+      ]
+    }
+  ]
+}

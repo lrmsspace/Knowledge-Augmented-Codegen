@@ -1,0 +1,37 @@
+{
+  "slug": "count-collisions-of-monkeys-on-a-polygon",
+  "link": "https://leetcode.com/problems/count-collisions-of-monkeys-on-a-polygon/",
+  "difficulty": "Medium",
+  "index": "1666",
+  "description_full": "There is a regular convex polygon with n vertices. The vertices are labeled from 0 to n - 1 in a clockwise direction, and each vertex has exactly one monkey. The following figure shows a convex polygon of 6 vertices.\n\nSimultaneously, each monkey moves to a neighboring vertex. A collision happens if at least two monkeys reside on the same vertex after the movement or intersect on an edge.\n\nReturn the number of ways the monkeys can move so that at least one collision happens. Since the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: n = 3\n\nOutput: 6\n\nExplanation:\n\nThere are 8 total possible movements.\nTwo ways such that they collide at some point are:\n\n\n\tMonkey 1 moves in a clockwise direction; monkey 2 moves in an anticlockwise direction; monkey 3 moves in a clockwise direction. Monkeys 1 and 2 collide.\n\tMonkey 1 moves in an anticlockwise direction; monkey 2 moves in an anticlockwise direction; monkey 3 moves in a clockwise direction. Monkeys 1 and 3 collide.\n\n\n\nExample 2:\n\n\nInput: n = 4\n\nOutput: 14\n\n\n \nConstraints:\n\n\n\t3 <= n <= 109\n\n",
+  "description": "There is a regular convex polygon with n vertices. The vertices are labeled from 0 to n - 1 in a clockwise direction, and each vertex has exactly one monkey. The following figure shows a convex polygon of 6 vertices.\n\nSimultaneously, each monkey moves to a neighboring vertex. A collision happens if at least two monkeys reside on the same vertex after the movement or intersect on an edge.\n\nReturn the number of ways the monkeys can move so that at least one collision happens. Since the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: n = 3\n\nOutput: 6\n\nExplanation:\n\nThere are 8 total possible movements.\nTwo ways such that they collide at some point are:\n\n\n\tMonkey 1 moves in a clockwise direction; monkey 2 moves in an anticlockwise direction; monkey 3 moves in a clockwise direction. Monkeys 1 and 2 collide.\n\tMonkey 1 moves in an anticlockwise direction; monkey 2 moves in an anticlockwise direction; monkey 3 moves in a clockwise direction. Monkeys 1 and 3 collide.",
+  "constraints_text": "3 <= n <= 109",
+  "templates": {
+    "c": "int monkeyMove(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int monkeyMove(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int monkeyMove(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar monkeyMove = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def monkeyMove(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the number of movement configurations resulting in at least one collision, modulo 10^9 + 7.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "mod-exp"
+      ],
+      "cues": [
+        "at-least-one-collision",
+        "modulo-10-9-7",
+        "n-vertices",
+        "neighboring-vertex"
+      ],
+      "constraints": [
+        "3-n-10-9"
+      ]
+    }
+  ]
+}

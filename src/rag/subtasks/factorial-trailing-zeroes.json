@@ -1,0 +1,36 @@
+{
+  "slug": "factorial-trailing-zeroes",
+  "link": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+  "difficulty": "Medium",
+  "index": "707",
+  "description_full": "Given an integer n, return the number of trailing zeroes in n!.\n\nNote that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1.\n\n \nExample 1:\n\n\nInput: n = 3\nOutput: 0\nExplanation: 3! = 6, no trailing zero.\n\n\nExample 2:\n\n\nInput: n = 5\nOutput: 1\nExplanation: 5! = 120, one trailing zero.\n\n\nExample 3:\n\n\nInput: n = 0\nOutput: 0\n\n\n \nConstraints:\n\n\n\t0 <= n <= 104\n\n\n \nFollow up: Could you write a solution that works in logarithmic time complexity?\n",
+  "description": "Given an integer n, return the number of trailing zeroes in n!.\n\nNote that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1.",
+  "example": "Input: n = 3\nOutput: 0\nExplanation: 3! = 6, no trailing zero.",
+  "constraints_text": "0 <= n <= 104\n\n\n \nFollow up: Could you write a solution that works in logarithmic time complexity?",
+  "templates": {
+    "c": "int trailingZeroes(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int trailingZeroes(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int trailingZeroes(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar trailingZeroes = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def trailingZeroes(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the number of trailing zeroes in n! by iteratively summing n divided by increasing powers of 5.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "trailing-zeroes",
+        "n"
+      ],
+      "constraints": [
+        "0-n-10-4",
+        "logarithmic-time"
+      ]
+    }
+  ]
+}

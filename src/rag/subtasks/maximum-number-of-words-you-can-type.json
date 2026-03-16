@@ -1,0 +1,41 @@
+{
+  "slug": "maximum-number-of-words-you-can-type",
+  "link": "https://leetcode.com/problems/maximum-number-of-words-you-can-type/",
+  "difficulty": "Easy",
+  "index": "415",
+  "description_full": "There is a malfunctioning keyboard where some letter keys do not work. All other keys on the keyboard work properly.\n\nGiven a string text of words separated by a single space (no leading or trailing spaces) and a string brokenLetters of all distinct letter keys that are broken, return the number of words in text you can fully type using this keyboard.\n\n \nExample 1:\n\n\nInput: text = \"hello world\", brokenLetters = \"ad\"\nOutput: 1\nExplanation: We cannot type \"world\" because the 'd' key is broken.\n\n\nExample 2:\n\n\nInput: text = \"leet code\", brokenLetters = \"lt\"\nOutput: 1\nExplanation: We cannot type \"leet\" because the 'l' and 't' keys are broken.\n\n\nExample 3:\n\n\nInput: text = \"leet code\", brokenLetters = \"e\"\nOutput: 0\nExplanation: We cannot type either word because the 'e' key is broken.\n\n\n \nConstraints:\n\n\n\t1 <= text.length <= 104\n\t0 <= brokenLetters.length <= 26\n\ttext consists of words separated by a single space without any leading or trailing spaces.\n\tEach word only consists of lowercase English letters.\n\tbrokenLetters consists of distinct lowercase English letters.\n\n",
+  "description": "There is a malfunctioning keyboard where some letter keys do not work. All other keys on the keyboard work properly.\n\nGiven a string text of words separated by a single space (no leading or trailing spaces) and a string brokenLetters of all distinct letter keys that are broken, return the number of words in text you can fully type using this keyboard.",
+  "example": "Input: text = \"hello world\", brokenLetters = \"ad\"\nOutput: 1\nExplanation: We cannot type \"world\" because the 'd' key is broken.",
+  "constraints_text": "1 <= text.length <= 104\n\t0 <= brokenLetters.length <= 26\n\ttext consists of words separated by a single space without any leading or trailing spaces.\n\tEach word only consists of lowercase English letters.\n\tbrokenLetters consists of distinct lowercase English letters.",
+  "templates": {
+    "c": "int canBeTypedWords(char* text, char* brokenLetters) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int canBeTypedWords(string text, string brokenLetters) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int canBeTypedWords(String text, String brokenLetters) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @param {string} brokenLetters\n * @return {number}\n */\nvar canBeTypedWords = function(text, brokenLetters) {\n    \n};",
+    "python": "class Solution(object):\n    def canBeTypedWords(self, text, brokenLetters):\n        \"\"\"\n        :type text: str\n        :type brokenLetters: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Process broken letters for quick lookup, then iterate through words, checking each character against the broken set to count fully typable words.",
+      "structures": [
+        "string",
+        "bitset"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "brokenletters",
+        "words-separated-by-a-single-space",
+        "fully-type",
+        "number-of-words"
+      ],
+      "constraints": [
+        "text-length-104",
+        "brokenletters-length-26",
+        "distinct-lowercase-english-letters"
+      ]
+    }
+  ]
+}

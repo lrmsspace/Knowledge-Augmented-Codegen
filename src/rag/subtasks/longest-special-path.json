@@ -1,0 +1,65 @@
+{
+  "slug": "longest-special-path",
+  "link": "https://leetcode.com/problems/longest-special-path/",
+  "difficulty": "Hard",
+  "index": "2792",
+  "description_full": "You are given an undirected tree rooted at node 0 with n nodes numbered from 0 to n - 1, represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, lengthi] indicates an edge between nodes ui and vi with length lengthi. You are also given an integer array nums, where nums[i] represents the value at node i.\n\nA special path is defined as a downward path from an ancestor node to a descendant node such that all the values of the nodes in that path are unique.\n\nNote that a path may start and end at the same node.\n\nReturn an array result of size 2, where result[0] is the length of the longest special path, and result[1] is the minimum number of nodes in all possible longest special paths.\n\n \nExample 1:\n\n\nInput: edges = [[0,1,2],[1,2,3],[1,3,5],[1,4,4],[2,5,6]], nums = [2,1,2,1,3,1]\n\nOutput: [6,2]\n\nExplanation:\n\nIn the image below, nodes are colored by their corresponding values in nums\n\n\n\nThe longest special paths are 2 -> 5 and 0 -> 1 -> 4, both having a length of 6. The minimum number of nodes across all longest special paths is 2.\n\n\nExample 2:\n\n\nInput: edges = [[1,0,8]], nums = [2,2]\n\nOutput: [0,1]\n\nExplanation:\n\n\n\nThe longest special paths are 0 and 1, both having a length of 0. The minimum number of nodes across all longest special paths is 1.\n\n\n \nConstraints:\n\n\n\t2 <= n <= 5 * 104\n\tedges.length == n - 1\n\tedges[i].length == 3\n\t0 <= ui, vi < n\n\t1 <= lengthi <= 103\n\tnums.length == n\n\t0 <= nums[i] <= 5 * 104\n\tThe input is generated such that edges represents a valid tree.\n\n",
+  "description": "You are given an undirected tree rooted at node 0 with n nodes numbered from 0 to n - 1, represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, lengthi] indicates an edge between nodes ui and vi with length lengthi. You are also given an integer array nums, where nums[i] represents the value at node i.\n\nA special path is defined as a downward path from an ancestor node to a descendant node such that all the values of the nodes in that path are unique.\n\nNote that a path may start and end at the same node.\n\nReturn an array result of size 2, where result[0] is the length of the longest special path, and result[1] is the minimum number of nodes in all possible longest special paths.",
+  "example": "Input: edges = [[0,1,2],[1,2,3],[1,3,5],[1,4,4],[2,5,6]], nums = [2,1,2,1,3,1]\n\nOutput: [6,2]\n\nExplanation:\n\nIn the image below, nodes are colored by their corresponding values in nums\n\n\n\nThe longest special paths are 2 -> 5 and 0 -> 1 -> 4, both having a length of 6. The minimum number of nodes across all longest special paths is 2.",
+  "constraints_text": "2 <= n <= 5 * 104\n\tedges.length == n - 1\n\tedges[i].length == 3\n\t0 <= ui, vi < n\n\t1 <= lengthi <= 103\n\tnums.length == n\n\t0 <= nums[i] <= 5 * 104\n\tThe input is generated such that edges represents a valid tree.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* longestSpecialPath(int** edges, int edgesSize, int* edgesColSize, int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> longestSpecialPath(vector<vector<int>>& edges, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] longestSpecialPath(int[][] edges, int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[]} nums\n * @return {number[]}\n */\nvar longestSpecialPath = function(edges, nums) {\n    \n};",
+    "python": "class Solution(object):\n    def longestSpecialPath(self, edges, nums):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Build adjacency list and determine parent-child relationships for the rooted tree.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "undirected-tree-rooted-at-node-0",
+        "edges"
+      ],
+      "constraints": [
+        "n-nodes",
+        "0-to-n-1"
+      ]
+    },
+    {
+      "intent": "Perform DFS from each node to find all unique-value downward paths, tracking max length and min nodes.",
+      "structures": [
+        "graph",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "recursion",
+        "backtracking",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "special-path",
+        "downward-path",
+        "ancestor-node-to-a-descendant-node",
+        "all-values-unique",
+        "longest-special-path",
+        "minimum-number-of-nodes"
+      ],
+      "constraints": [
+        "path-may-start-and-end-at-the-same-node",
+        "return-array-result-of-size-2"
+      ]
+    }
+  ]
+}

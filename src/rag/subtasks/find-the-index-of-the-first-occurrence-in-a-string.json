@@ -1,0 +1,38 @@
+{
+  "slug": "find-the-index-of-the-first-occurrence-in-a-string",
+  "link": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+  "difficulty": "Easy",
+  "index": "9",
+  "description_full": "Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.\n\n \nExample 1:\n\n\nInput: haystack = \"sadbutsad\", needle = \"sad\"\nOutput: 0\nExplanation: \"sad\" occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n\n\nExample 2:\n\n\nInput: haystack = \"leetcode\", needle = \"leeto\"\nOutput: -1\nExplanation: \"leeto\" did not occur in \"leetcode\", so we return -1.\n\n\n \nConstraints:\n\n\n\t1 <= haystack.length, needle.length <= 104\n\thaystack and needle consist of only lowercase English characters.\n\n",
+  "description": "Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.",
+  "example": "Input: haystack = \"sadbutsad\", needle = \"sad\"\nOutput: 0\nExplanation: \"sad\" occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.",
+  "constraints_text": "1 <= haystack.length, needle.length <= 104\n\thaystack and needle consist of only lowercase English characters.",
+  "templates": {
+    "c": "int strStr(char* haystack, char* needle) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int strStr(string haystack, string needle) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int strStr(String haystack, String needle) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} haystack\n * @param {string} needle\n * @return {number}\n */\nvar strStr = function(haystack, needle) {\n    \n};",
+    "python": "class Solution(object):\n    def strStr(self, haystack, needle):\n        \"\"\"\n        :type haystack: str\n        :type needle: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement the KMP algorithm to find the first occurrence of needle in haystack.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "kmp"
+      ],
+      "cues": [
+        "first-occurrence",
+        "index",
+        "needle-in-haystack"
+      ],
+      "constraints": [
+        "1-haystack-length-needle-length-104",
+        "lowercase-english-characters"
+      ]
+    }
+  ]
+}

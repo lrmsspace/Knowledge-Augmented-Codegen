@@ -1,0 +1,53 @@
+{
+  "slug": "longest-increasing-subsequence-ii",
+  "link": "https://leetcode.com/problems/longest-increasing-subsequence-ii/",
+  "difficulty": "Hard",
+  "index": "2193",
+  "description_full": "You are given an integer array nums and an integer k.\n\nFind the longest subsequence of nums that meets the following requirements:\n\n\n\tThe subsequence is strictly increasing and\n\tThe difference between adjacent elements in the subsequence is at most k.\n\n\nReturn the length of the longest subsequence that meets the requirements.\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\n\n \nExample 1:\n\n\nInput: nums = [4,2,1,4,3,4,5,8,15], k = 3\nOutput: 5\nExplanation:\nThe longest subsequence that meets the requirements is [1,3,4,5,8].\nThe subsequence has a length of 5, so we return 5.\nNote that the subsequence [1,3,4,5,8,15] does not meet the requirements because 15 - 8 = 7 is larger than 3.\n\n\nExample 2:\n\n\nInput: nums = [7,4,5,1,8,12,4,7], k = 5\nOutput: 4\nExplanation:\nThe longest subsequence that meets the requirements is [4,5,8,12].\nThe subsequence has a length of 4, so we return 4.\n\n\nExample 3:\n\n\nInput: nums = [1,5], k = 1\nOutput: 1\nExplanation:\nThe longest subsequence that meets the requirements is [1].\nThe subsequence has a length of 1, so we return 1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i], k <= 105\n\n",
+  "description": "You are given an integer array nums and an integer k.\n\nFind the longest subsequence of nums that meets the following requirements:\n\n\n\tThe subsequence is strictly increasing and\n\tThe difference between adjacent elements in the subsequence is at most k.\n\n\nReturn the length of the longest subsequence that meets the requirements.\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.",
+  "example": "Input: nums = [4,2,1,4,3,4,5,8,15], k = 3\nOutput: 5\nExplanation:\nThe longest subsequence that meets the requirements is [1,3,4,5,8].\nThe subsequence has a length of 5, so we return 5.\nNote that the subsequence [1,3,4,5,8,15] does not meet the requirements because 15 - 8 = 7 is larger than 3.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i], k <= 105",
+  "templates": {
+    "c": "int lengthOfLIS(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lengthOfLIS(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar lengthOfLIS = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def lengthOfLIS(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through nums, using a segment tree to compute and store the maximum length of valid subsequences ending at each value.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "segment-tree",
+        "enumeration"
+      ],
+      "cues": [
+        "longest-subsequence",
+        "strictly-increasing",
+        "difference-at-most-k",
+        "nums-i-k-10-5"
+      ],
+      "constraints": [
+        "1-nums-length-10-5",
+        "1-nums-i-k-10-5"
+      ]
+    },
+    {
+      "intent": "Return the maximum length found across all computed subsequences.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "return-the-length"
+      ],
+      "constraints": []
+    }
+  ]
+}

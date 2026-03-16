@@ -1,0 +1,58 @@
+{
+  "slug": "minimum-speed-to-arrive-on-time",
+  "link": "https://leetcode.com/problems/minimum-speed-to-arrive-on-time/",
+  "difficulty": "Medium",
+  "index": "1401",
+  "description_full": "You are given a floating-point number hour, representing the amount of time you have to reach the office. To commute to the office, you must take n trains in sequential order. You are also given an integer array dist of length n, where dist[i] describes the distance (in kilometers) of the ith train ride.\n\nEach train can only depart at an integer hour, so you may need to wait in between each train ride.\n\n\n\tFor example, if the 1st train ride takes 1.5 hours, you must wait for an additional 0.5 hours before you can depart on the 2nd train ride at the 2 hour mark.\n\n\nReturn the minimum positive integer speed (in kilometers per hour) that all the trains must travel at for you to reach the office on time, or -1 if it is impossible to be on time.\n\nTests are generated such that the answer will not exceed 107 and hour will have at most two digits after the decimal point.\n\n \nExample 1:\n\n\nInput: dist = [1,3,2], hour = 6\nOutput: 1\nExplanation: At speed 1:\n- The first train ride takes 1/1 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 1 hour mark. The second train takes 3/1 = 3 hours.\n- Since we are already at an integer hour, we depart immediately at the 4 hour mark. The third train takes 2/1 = 2 hours.\n- You will arrive at exactly the 6 hour mark.\n\n\nExample 2:\n\n\nInput: dist = [1,3,2], hour = 2.7\nOutput: 3\nExplanation: At speed 3:\n- The first train ride takes 1/3 = 0.33333 hours.\n- Since we are not at an integer hour, we wait until the 1 hour mark to depart. The second train ride takes 3/3 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 2 hour mark. The third train takes 2/3 = 0.66667 hours.\n- You will arrive at the 2.66667 hour mark.\n\n\nExample 3:\n\n\nInput: dist = [1,3,2], hour = 1.9\nOutput: -1\nExplanation: It is impossible because the earliest the third train can depart is at the 2 hour mark.\n\n\n \nConstraints:\n\n\n\tn == dist.length\n\t1 <= n <= 105\n\t1 <= dist[i] <= 105\n\t1 <= hour <= 109\n\tThere will be at most two digits after the decimal point in hour.\n\n",
+  "description": "You are given a floating-point number hour, representing the amount of time you have to reach the office. To commute to the office, you must take n trains in sequential order. You are also given an integer array dist of length n, where dist[i] describes the distance (in kilometers) of the ith train ride.\n\nEach train can only depart at an integer hour, so you may need to wait in between each train ride.\n\n\n\tFor example, if the 1st train ride takes 1.5 hours, you must wait for an additional 0.5 hours before you can depart on the 2nd train ride at the 2 hour mark.\n\n\nReturn the minimum positive integer speed (in kilometers per hour) that all the trains must travel at for you to reach the office on time, or -1 if it is impossible to be on time.\n\nTests are generated such that the answer will not exceed 107 and hour will have at most two digits after the decimal point.",
+  "example": "Input: dist = [1,3,2], hour = 6\nOutput: 1\nExplanation: At speed 1:\n- The first train ride takes 1/1 = 1 hour.\n- Since we are already at an integer hour, we depart immediately at the 1 hour mark. The second train takes 3/1 = 3 hours.\n- Since we are already at an integer hour, we depart immediately at the 4 hour mark. The third train takes 2/1 = 2 hours.\n- You will arrive at exactly the 6 hour mark.",
+  "constraints_text": "n == dist.length\n\t1 <= n <= 105\n\t1 <= dist[i] <= 105\n\t1 <= hour <= 109\n\tThere will be at most two digits after the decimal point in hour.",
+  "templates": {
+    "c": "int minSpeedOnTime(int* dist, int distSize, double hour) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minSpeedOnTime(vector<int>& dist, double hour) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSpeedOnTime(int[] dist, double hour) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} dist\n * @param {number} hour\n * @return {number}\n */\nvar minSpeedOnTime = function(dist, hour) {\n    \n};",
+    "python": "class Solution(object):\n    def minSpeedOnTime(self, dist, hour):\n        \"\"\"\n        :type dist: List[int]\n        :type hour: float\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total time required to complete all train rides for a given speed, including waiting times.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "dist-i-describes-the-distance",
+        "depart-at-an-integer-hour",
+        "n-trains-in-sequential-order"
+      ],
+      "constraints": [
+        "each-train-can-only-depart-at-an-integer-hour",
+        "the-last-train-ride-does-not-incur-waiting-time"
+      ]
+    },
+    {
+      "intent": "Find the minimum positive integer speed that allows arrival within the given hour limit using binary search.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "minimum-positive-integer-speed",
+        "hour",
+        "answer-will-not-exceed-10-7"
+      ],
+      "constraints": [
+        "positive-integer-speed",
+        "answer-will-not-exceed-10-7",
+        "return-1-if-it-is-impossible-to-be-on-time"
+      ]
+    }
+  ]
+}

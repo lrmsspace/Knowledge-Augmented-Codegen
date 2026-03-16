@@ -1,0 +1,57 @@
+{
+  "slug": "count-largest-group",
+  "link": "https://leetcode.com/problems/count-largest-group/",
+  "difficulty": "Easy",
+  "index": "294",
+  "description_full": "You are given an integer n.\n\nWe need to group the numbers from 1 to n according to the sum of its digits. For example, the numbers 14 and 5 belong to the same group, whereas 13 and 3 belong to different groups.\n\nReturn the number of groups that have the largest size, i.e. the maximum number of elements.\n\n \nExample 1:\n\n\nInput: n = 13\nOutput: 4\nExplanation: There are 9 groups in total, they are grouped according sum of its digits of numbers from 1 to 13:\n[1,10], [2,11], [3,12], [4,13], [5], [6], [7], [8], [9].\nThere are 4 groups with largest size.\n\n\nExample 2:\n\n\nInput: n = 2\nOutput: 2\nExplanation: There are 2 groups [1], [2] of size 1.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 104\n\n",
+  "description": "You are given an integer n.\n\nWe need to group the numbers from 1 to n according to the sum of its digits. For example, the numbers 14 and 5 belong to the same group, whereas 13 and 3 belong to different groups.\n\nReturn the number of groups that have the largest size, i.e. the maximum number of elements.",
+  "example": "Input: n = 13\nOutput: 4\nExplanation: There are 9 groups in total, they are grouped according sum of its digits of numbers from 1 to 13:\n[1,10], [2,11], [3,12], [4,13], [5], [6], [7], [8], [9].\nThere are 4 groups with largest size.",
+  "constraints_text": "1 <= n <= 104",
+  "templates": {
+    "c": "int countLargestGroup(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countLargestGroup(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countLargestGroup(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countLargestGroup = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def countLargestGroup(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate from 1 to n, calculate the sum of digits for each number, and store the frequency of each sum.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "group-the-numbers",
+        "sum-of-its-digits"
+      ],
+      "constraints": [
+        "1-n-104"
+      ]
+    },
+    {
+      "intent": "Determine the maximum frequency observed among all sum-of-digit groups and count how many groups have this maximum frequency.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy",
+        "counting"
+      ],
+      "cues": [
+        "largest-size",
+        "maximum-number-of-elements",
+        "return-the-number-of-groups"
+      ],
+      "constraints": [
+        "1-n-104"
+      ]
+    }
+  ]
+}

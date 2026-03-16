@@ -1,0 +1,77 @@
+{
+  "slug": "maximize-grid-happiness",
+  "link": "https://leetcode.com/problems/maximize-grid-happiness/",
+  "difficulty": "Hard",
+  "index": "2048",
+  "description_full": "You are given four integers, m, n, introvertsCount, and extrovertsCount. You have an m x n grid, and there are two types of people: introverts and extroverts. There are introvertsCount introverts and extrovertsCount extroverts.\n\nYou should decide how many people you want to live in the grid and assign each of them one grid cell. Note that you do not have to have all the people living in the grid.\n\nThe happiness of each person is calculated as follows:\n\n\n\tIntroverts start with 120 happiness and lose 30 happiness for each neighbor (introvert or extrovert).\n\tExtroverts start with 40 happiness and gain 20 happiness for each neighbor (introvert or extrovert).\n\n\nNeighbors live in the directly adjacent cells north, east, south, and west of a person's cell.\n\nThe grid happiness is the sum of each person's happiness. Return the maximum possible grid happiness.\n\n \nExample 1:\n\n\nInput: m = 2, n = 3, introvertsCount = 1, extrovertsCount = 2\nOutput: 240\nExplanation: Assume the grid is 1-indexed with coordinates (row, column).\nWe can put the introvert in cell (1,1) and put the extroverts in cells (1,3) and (2,3).\n- Introvert at (1,1) happiness: 120 (starting happiness) - (0 * 30) (0 neighbors) = 120\n- Extrovert at (1,3) happiness: 40 (starting happiness) + (1 * 20) (1 neighbor) = 60\n- Extrovert at (2,3) happiness: 40 (starting happiness) + (1 * 20) (1 neighbor) = 60\nThe grid happiness is 120 + 60 + 60 = 240.\nThe above figure shows the grid in this example with each person's happiness. The introvert stays in the light green cell while the extroverts live on the light purple cells.\n\n\nExample 2:\n\n\nInput: m = 3, n = 1, introvertsCount = 2, extrovertsCount = 1\nOutput: 260\nExplanation: Place the two introverts in (1,1) and (3,1) and the extrovert at (2,1).\n- Introvert at (1,1) happiness: 120 (starting happiness) - (1 * 30) (1 neighbor) = 90\n- Extrovert at (2,1) happiness: 40 (starting happiness) + (2 * 20) (2 neighbors) = 80\n- Introvert at (3,1) happiness: 120 (starting happiness) - (1 * 30) (1 neighbor) = 90\nThe grid happiness is 90 + 80 + 90 = 260.\n\n\nExample 3:\n\n\nInput: m = 2, n = 2, introvertsCount = 4, extrovertsCount = 0\nOutput: 240\n\n\n \nConstraints:\n\n\n\t1 <= m, n <= 5\n\t0 <= introvertsCount, extrovertsCount <= min(m * n, 6)\n\n",
+  "description": "You are given four integers, m, n, introvertsCount, and extrovertsCount. You have an m x n grid, and there are two types of people: introverts and extroverts. There are introvertsCount introverts and extrovertsCount extroverts.\n\nYou should decide how many people you want to live in the grid and assign each of them one grid cell. Note that you do not have to have all the people living in the grid.\n\nThe happiness of each person is calculated as follows:\n\n\n\tIntroverts start with 120 happiness and lose 30 happiness for each neighbor (introvert or extrovert).\n\tExtroverts start with 40 happiness and gain 20 happiness for each neighbor (introvert or extrovert).\n\n\nNeighbors live in the directly adjacent cells north, east, south, and west of a person's cell.\n\nThe grid happiness is the sum of each person's happiness. Return the maximum possible grid happiness.",
+  "example": "Input: m = 2, n = 3, introvertsCount = 1, extrovertsCount = 2\nOutput: 240\nExplanation: Assume the grid is 1-indexed with coordinates (row, column).\nWe can put the introvert in cell (1,1) and put the extroverts in cells (1,3) and (2,3).\n- Introvert at (1,1) happiness: 120 (starting happiness) - (0 * 30) (0 neighbors) = 120\n- Extrovert at (1,3) happiness: 40 (starting happiness) + (1 * 20) (1 neighbor) = 60\n- Extrovert at (2,3) happiness: 40 (starting happiness) + (1 * 20) (1 neighbor) = 60\nThe grid happiness is 120 + 60 + 60 = 240.\nThe above figure shows the grid in this example with each person's happiness. The introvert stays in the light green cell while the extroverts live on the light purple cells.",
+  "constraints_text": "1 <= m, n <= 5\n\t0 <= introvertsCount, extrovertsCount <= min(m * n, 6)",
+  "templates": {
+    "c": "int getMaxGridHappiness(int m, int n, int introvertsCount, int extrovertsCount) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int getMaxGridHappiness(int m, int n, int introvertsCount, int extrovertsCount) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getMaxGridHappiness(int m, int n, int introvertsCount, int extrovertsCount) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number} introvertsCount\n * @param {number} extrovertsCount\n * @return {number}\n */\nvar getMaxGridHappiness = function(m, n, introvertsCount, extrovertsCount) {\n    \n};",
+    "python": "class Solution(object):\n    def getMaxGridHappiness(self, m, n, introvertsCount, extrovertsCount):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type introvertsCount: int\n        :type extrovertsCount: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Establish the core dynamic programming state and its initial conditions for grid traversal.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "recursion"
+      ],
+      "cues": [
+        "maximum-possible-grid-happiness",
+        "m-x-n-grid",
+        "introvertscount",
+        "extrovertscount"
+      ],
+      "constraints": [
+        "m-n-5",
+        "introvertscount-extrovertscount-6"
+      ]
+    },
+    {
+      "intent": "Implement the state transition logic, calculating happiness contributions for current row placements based on neighbors.",
+      "structures": [
+        "number",
+        "bitset"
+      ],
+      "actions": [
+        "bitmask-dp",
+        "enumeration",
+        "dp-2d"
+      ],
+      "cues": [
+        "happiness-calculated-as-follows",
+        "neighbors",
+        "directly-adjacent-cells"
+      ],
+      "constraints": [
+        "m-n-5",
+        "introvertscount-extrovertscount-6"
+      ]
+    },
+    {
+      "intent": "Apply memoization to store and retrieve computed DP states, returning the final maximum happiness.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "recursion"
+      ],
+      "cues": [
+        "return-the-maximum-possible-grid-happiness"
+      ],
+      "constraints": [
+        "m-n-5",
+        "introvertscount-extrovertscount-6"
+      ]
+    }
+  ]
+}

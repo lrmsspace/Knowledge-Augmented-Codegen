@@ -1,0 +1,41 @@
+{
+  "slug": "unique-paths",
+  "link": "https://leetcode.com/problems/unique-paths/",
+  "difficulty": "Medium",
+  "index": "647",
+  "description_full": "There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.\n\nGiven the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.\n\nThe test cases are generated so that the answer will be less than or equal to 2 * 109.\n\n \nExample 1:\n\n\nInput: m = 3, n = 7\nOutput: 28\n\n\nExample 2:\n\n\nInput: m = 3, n = 2\nOutput: 3\nExplanation: From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:\n1. Right -> Down -> Down\n2. Down -> Down -> Right\n3. Down -> Right -> Down\n\n\n \nConstraints:\n\n\n\t1 <= m, n <= 100\n\n",
+  "description": "There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.\n\nGiven the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.\n\nThe test cases are generated so that the answer will be less than or equal to 2 * 109.",
+  "example": "Input: m = 3, n = 7\nOutput: 28",
+  "constraints_text": "1 <= m, n <= 100",
+  "templates": {
+    "c": "int uniquePaths(int m, int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int uniquePaths(int m, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int uniquePaths(int m, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar uniquePaths = function(m, n) {\n    \n};",
+    "python": "class Solution(object):\n    def uniquePaths(self, m, n):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the number of unique paths on an m x n grid by summing paths from adjacent cells using dynamic programming.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "simulation"
+      ],
+      "cues": [
+        "m-x-n-grid",
+        "top-left-corner",
+        "bottom-right-corner",
+        "move-either-down-or-right",
+        "number-of-possible-unique-paths"
+      ],
+      "constraints": [
+        "1-m-n-100",
+        "answer-2-10-9"
+      ]
+    }
+  ]
+}

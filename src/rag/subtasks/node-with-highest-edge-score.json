@@ -1,0 +1,79 @@
+{
+  "slug": "node-with-highest-edge-score",
+  "link": "https://leetcode.com/problems/node-with-highest-edge-score/",
+  "difficulty": "Medium",
+  "index": "1595",
+  "description_full": "You are given a directed graph with n nodes labeled from 0 to n - 1, where each node has exactly one outgoing edge.\n\nThe graph is represented by a given 0-indexed integer array edges of length n, where edges[i] indicates that there is a directed edge from node i to node edges[i].\n\nThe edge score of a node i is defined as the sum of the labels of all the nodes that have an edge pointing to i.\n\nReturn the node with the highest edge score. If multiple nodes have the same edge score, return the node with the smallest index.\n\n \nExample 1:\n\n\nInput: edges = [1,0,0,0,0,7,7,5]\nOutput: 7\nExplanation:\n- The nodes 1, 2, 3 and 4 have an edge pointing to node 0. The edge score of node 0 is 1 + 2 + 3 + 4 = 10.\n- The node 0 has an edge pointing to node 1. The edge score of node 1 is 0.\n- The node 7 has an edge pointing to node 5. The edge score of node 5 is 7.\n- The nodes 5 and 6 have an edge pointing to node 7. The edge score of node 7 is 5 + 6 = 11.\nNode 7 has the highest edge score so return 7.\n\n\nExample 2:\n\n\nInput: edges = [2,0,0,2]\nOutput: 0\nExplanation:\n- The nodes 1 and 2 have an edge pointing to node 0. The edge score of node 0 is 1 + 2 = 3.\n- The nodes 0 and 3 have an edge pointing to node 2. The edge score of node 2 is 0 + 3 = 3.\nNodes 0 and 2 both have an edge score of 3. Since node 0 has a smaller index, we return 0.\n\n\n \nConstraints:\n\n\n\tn == edges.length\n\t2 <= n <= 105\n\t0 <= edges[i] < n\n\tedges[i] != i\n\n",
+  "description": "You are given a directed graph with n nodes labeled from 0 to n - 1, where each node has exactly one outgoing edge.\n\nThe graph is represented by a given 0-indexed integer array edges of length n, where edges[i] indicates that there is a directed edge from node i to node edges[i].\n\nThe edge score of a node i is defined as the sum of the labels of all the nodes that have an edge pointing to i.\n\nReturn the node with the highest edge score. If multiple nodes have the same edge score, return the node with the smallest index.",
+  "example": "Input: edges = [1,0,0,0,0,7,7,5]\nOutput: 7\nExplanation:\n- The nodes 1, 2, 3 and 4 have an edge pointing to node 0. The edge score of node 0 is 1 + 2 + 3 + 4 = 10.\n- The node 0 has an edge pointing to node 1. The edge score of node 1 is 0.\n- The node 7 has an edge pointing to node 5. The edge score of node 5 is 7.\n- The nodes 5 and 6 have an edge pointing to node 7. The edge score of node 7 is 5 + 6 = 11.\nNode 7 has the highest edge score so return 7.",
+  "constraints_text": "n == edges.length\n\t2 <= n <= 105\n\t0 <= edges[i] < n\n\tedges[i] != i",
+  "templates": {
+    "c": "int edgeScore(int* edges, int edgesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int edgeScore(vector<int>& edges) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int edgeScore(int[] edges) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} edges\n * @return {number}\n */\nvar edgeScore = function(edges) {\n    \n};",
+    "python": "class Solution(object):\n    def edgeScore(self, edges):\n        \"\"\"\n        :type edges: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the edge score for each node by summing the labels of all nodes that point to it.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "e",
+        "d",
+        "g",
+        "e",
+        "s",
+        "c",
+        "o",
+        "r",
+        "e"
+      ],
+      "constraints": [
+        "n",
+        "",
+        "",
+        "e",
+        "d",
+        "g",
+        "e",
+        "s"
+      ]
+    },
+    {
+      "intent": "Find the node with the highest calculated edge score, prioritizing the smallest index in case of ties.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "r",
+        "e",
+        "t",
+        "u",
+        "r",
+        "n",
+        "t",
+        "h",
+        "e"
+      ],
+      "constraints": [
+        "2",
+        "",
+        "",
+        "n",
+        "",
+        ""
+      ]
+    }
+  ]
+}

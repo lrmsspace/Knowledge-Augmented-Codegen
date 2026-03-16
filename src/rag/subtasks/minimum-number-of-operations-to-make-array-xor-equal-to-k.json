@@ -1,0 +1,55 @@
+{
+  "slug": "minimum-number-of-operations-to-make-array-xor-equal-to-k",
+  "link": "https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/",
+  "difficulty": "Medium",
+  "index": "2452",
+  "description_full": "You are given a 0-indexed integer array nums and a positive integer k.\n\nYou can apply the following operation on the array any number of times:\n\n\n\tChoose any element of the array and flip a bit in its binary representation. Flipping a bit means changing a 0 to 1 or vice versa.\n\n\nReturn the minimum number of operations required to make the bitwise XOR of all elements of the final array equal to k.\n\nNote that you can flip leading zero bits in the binary representation of elements. For example, for the number (101)2 you can flip the fourth bit and obtain (1101)2.\n\n \nExample 1:\n\n\nInput: nums = [2,1,3,4], k = 1\nOutput: 2\nExplanation: We can do the following operations:\n- Choose element 2 which is 3 == (011)2, we flip the first bit and we obtain (010)2 == 2. nums becomes [2,1,2,4].\n- Choose element 0 which is 2 == (010)2, we flip the third bit and we obtain (110)2 = 6. nums becomes [6,1,2,4].\nThe XOR of elements of the final array is (6 XOR 1 XOR 2 XOR 4) == 1 == k.\nIt can be shown that we cannot make the XOR equal to k in less than 2 operations.\n\n\nExample 2:\n\n\nInput: nums = [2,0,2,0], k = 0\nOutput: 0\nExplanation: The XOR of elements of the array is (2 XOR 0 XOR 2 XOR 0) == 0 == k. So no operation is needed.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= nums[i] <= 106\n\t0 <= k <= 106\n\n",
+  "description": "You are given a 0-indexed integer array nums and a positive integer k.\n\nYou can apply the following operation on the array any number of times:\n\n\n\tChoose any element of the array and flip a bit in its binary representation. Flipping a bit means changing a 0 to 1 or vice versa.\n\n\nReturn the minimum number of operations required to make the bitwise XOR of all elements of the final array equal to k.\n\nNote that you can flip leading zero bits in the binary representation of elements. For example, for the number (101)2 you can flip the fourth bit and obtain (1101)2.",
+  "example": "Input: nums = [2,1,3,4], k = 1\nOutput: 2\nExplanation: We can do the following operations:\n- Choose element 2 which is 3 == (011)2, we flip the first bit and we obtain (010)2 == 2. nums becomes [2,1,2,4].\n- Choose element 0 which is 2 == (010)2, we flip the third bit and we obtain (110)2 = 6. nums becomes [6,1,2,4].\nThe XOR of elements of the final array is (6 XOR 1 XOR 2 XOR 4) == 1 == k.\nIt can be shown that we cannot make the XOR equal to k in less than 2 operations.",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= nums[i] <= 106\n\t0 <= k <= 106",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minOperations = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total bitwise XOR sum of all elements in the input array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "nums",
+        "bitwise-xor"
+      ],
+      "constraints": [
+        "nums-length-10-5",
+        "nums-i-10-6"
+      ]
+    },
+    {
+      "intent": "Count the number of set bits in the XOR difference between the total XOR sum and k.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "minimum-operations",
+        "flip-a-bit",
+        "equal-to-k"
+      ],
+      "constraints": [
+        "nums-i-10-6",
+        "k-10-6"
+      ]
+    }
+  ]
+}

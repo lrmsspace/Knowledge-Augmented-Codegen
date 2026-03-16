@@ -1,0 +1,54 @@
+{
+  "slug": "maximum-number-of-groups-entering-a-competition",
+  "link": "https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition/",
+  "difficulty": "Medium",
+  "index": "1588",
+  "description_full": "You are given a positive integer array grades which represents the grades of students in a university. You would like to enter all these students into a competition in ordered non-empty groups, such that the ordering meets the following conditions:\n\n\n\tThe sum of the grades of students in the ith group is less than the sum of the grades of students in the (i + 1)th group, for all groups (except the last).\n\tThe total number of students in the ith group is less than the total number of students in the (i + 1)th group, for all groups (except the last).\n\n\nReturn the maximum number of groups that can be formed.\n\n \nExample 1:\n\n\nInput: grades = [10,6,12,7,3,5]\nOutput: 3\nExplanation: The following is a possible way to form 3 groups of students:\n- 1st group has the students with grades = [12]. Sum of grades: 12. Student count: 1\n- 2nd group has the students with grades = [6,7]. Sum of grades: 6 + 7 = 13. Student count: 2\n- 3rd group has the students with grades = [10,3,5]. Sum of grades: 10 + 3 + 5 = 18. Student count: 3\nIt can be shown that it is not possible to form more than 3 groups.\n\n\nExample 2:\n\n\nInput: grades = [8,8]\nOutput: 1\nExplanation: We can only form 1 group, since forming 2 groups would lead to an equal number of students in both groups.\n\n\n \nConstraints:\n\n\n\t1 <= grades.length <= 105\n\t1 <= grades[i] <= 105\n\n",
+  "description": "You are given a positive integer array grades which represents the grades of students in a university. You would like to enter all these students into a competition in ordered non-empty groups, such that the ordering meets the following conditions:\n\n\n\tThe sum of the grades of students in the ith group is less than the sum of the grades of students in the (i + 1)th group, for all groups (except the last).\n\tThe total number of students in the ith group is less than the total number of students in the (i + 1)th group, for all groups (except the last).\n\n\nReturn the maximum number of groups that can be formed.",
+  "example": "Input: grades = [10,6,12,7,3,5]\nOutput: 3\nExplanation: The following is a possible way to form 3 groups of students:\n- 1st group has the students with grades = [12]. Sum of grades: 12. Student count: 1\n- 2nd group has the students with grades = [6,7]. Sum of grades: 6 + 7 = 13. Student count: 2\n- 3rd group has the students with grades = [10,3,5]. Sum of grades: 10 + 3 + 5 = 18. Student count: 3\nIt can be shown that it is not possible to form more than 3 groups.",
+  "constraints_text": "1 <= grades.length <= 105\n\t1 <= grades[i] <= 105",
+  "templates": {
+    "c": "int maximumGroups(int* grades, int gradesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumGroups(vector<int>& grades) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumGroups(int[] grades) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} grades\n * @return {number}\n */\nvar maximumGroups = function(grades) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumGroups(self, grades):\n        \"\"\"\n        :type grades: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the student grades in ascending order to facilitate a greedy approach for group formation.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "ordered-non-empty-groups",
+        "maximum-number-of-groups"
+      ],
+      "constraints": [
+        "1-grades-length-105"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted grades, accumulating current group's sum and count, and incrementing total groups when conditions are met.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "sum-of-grades-less-than",
+        "total-number-of-students-less-than",
+        "maximum-number-of-groups"
+      ],
+      "constraints": [
+        "1-grades-length-105"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "minimum-time-to-finish-the-race",
+  "link": "https://leetcode.com/problems/minimum-time-to-finish-the-race/",
+  "difficulty": "Hard",
+  "index": "2150",
+  "description_full": "You are given a 0-indexed 2D integer array tires where tires[i] = [fi, ri] indicates that the ith tire can finish its xth successive lap in fi * ri(x-1) seconds.\n\n\n\tFor example, if fi = 3 and ri = 2, then the tire would finish its 1st lap in 3 seconds, its 2nd lap in 3 * 2 = 6 seconds, its 3rd lap in 3 * 22 = 12 seconds, etc.\n\n\nYou are also given an integer changeTime and an integer numLaps.\n\nThe race consists of numLaps laps and you may start the race with any tire. You have an unlimited supply of each tire and after every lap, you may change to any given tire (including the current tire type) if you wait changeTime seconds.\n\nReturn the minimum time to finish the race.\n\n \nExample 1:\n\n\nInput: tires = [[2,3],[3,4]], changeTime = 5, numLaps = 4\nOutput: 21\nExplanation: \nLap 1: Start with tire 0 and finish the lap in 2 seconds.\nLap 2: Continue with tire 0 and finish the lap in 2 * 3 = 6 seconds.\nLap 3: Change tires to a new tire 0 for 5 seconds and then finish the lap in another 2 seconds.\nLap 4: Continue with tire 0 and finish the lap in 2 * 3 = 6 seconds.\nTotal time = 2 + 6 + 5 + 2 + 6 = 21 seconds.\nThe minimum time to complete the race is 21 seconds.\n\n\nExample 2:\n\n\nInput: tires = [[1,10],[2,2],[3,4]], changeTime = 6, numLaps = 5\nOutput: 25\nExplanation: \nLap 1: Start with tire 1 and finish the lap in 2 seconds.\nLap 2: Continue with tire 1 and finish the lap in 2 * 2 = 4 seconds.\nLap 3: Change tires to a new tire 1 for 6 seconds and then finish the lap in another 2 seconds.\nLap 4: Continue with tire 1 and finish the lap in 2 * 2 = 4 seconds.\nLap 5: Change tires to tire 0 for 6 seconds then finish the lap in another 1 second.\nTotal time = 2 + 4 + 6 + 2 + 4 + 6 + 1 = 25 seconds.\nThe minimum time to complete the race is 25 seconds. \n\n\n \nConstraints:\n\n\n\t1 <= tires.length <= 105\n\ttires[i].length == 2\n\t1 <= fi, changeTime <= 105\n\t2 <= ri <= 105\n\t1 <= numLaps <= 1000\n\n",
+  "description": "You are given a 0-indexed 2D integer array tires where tires[i] = [fi, ri] indicates that the ith tire can finish its xth successive lap in fi * ri(x-1) seconds.\n\n\n\tFor example, if fi = 3 and ri = 2, then the tire would finish its 1st lap in 3 seconds, its 2nd lap in 3 * 2 = 6 seconds, its 3rd lap in 3 * 22 = 12 seconds, etc.\n\n\nYou are also given an integer changeTime and an integer numLaps.\n\nThe race consists of numLaps laps and you may start the race with any tire. You have an unlimited supply of each tire and after every lap, you may change to any given tire (including the current tire type) if you wait changeTime seconds.\n\nReturn the minimum time to finish the race.",
+  "example": "Input: tires = [[2,3],[3,4]], changeTime = 5, numLaps = 4\nOutput: 21\nExplanation: \nLap 1: Start with tire 0 and finish the lap in 2 seconds.\nLap 2: Continue with tire 0 and finish the lap in 2 * 3 = 6 seconds.\nLap 3: Change tires to a new tire 0 for 5 seconds and then finish the lap in another 2 seconds.\nLap 4: Continue with tire 0 and finish the lap in 2 * 3 = 6 seconds.\nTotal time = 2 + 6 + 5 + 2 + 6 = 21 seconds.\nThe minimum time to complete the race is 21 seconds.",
+  "constraints_text": "1 <= tires.length <= 105\n\ttires[i].length == 2\n\t1 <= fi, changeTime <= 105\n\t2 <= ri <= 105\n\t1 <= numLaps <= 1000",
+  "templates": {
+    "c": "int minimumFinishTime(int** tires, int tiresSize, int* tiresColSize, int changeTime, int numLaps) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumFinishTime(vector<vector<int>>& tires, int changeTime, int numLaps) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumFinishTime(int[][] tires, int changeTime, int numLaps) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} tires\n * @param {number} changeTime\n * @param {number} numLaps\n * @return {number}\n */\nvar minimumFinishTime = function(tires, changeTime, numLaps) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumFinishTime(self, tires, changeTime, numLaps):\n        \"\"\"\n        :type tires: List[List[int]]\n        :type changeTime: int\n        :type numLaps: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute minimum total time for k consecutive laps with a single tire type, for k up to a small maximum.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "fi-ri-x-1",
+        "successive-lap",
+        "unlimited-supply"
+      ],
+      "constraints": [
+        "fi-ri-up-to-10-5",
+        "changetime-up-to-10-9",
+        "k-up-to-60"
+      ]
+    },
+    {
+      "intent": "Calculate minimum total time for i laps for all i from 1 to numLaps using dynamic programming.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-time",
+        "numlaps",
+        "after-every-lap-you-may-change"
+      ],
+      "constraints": [
+        "numlaps-up-to-10-5",
+        "changetime-up-to-10-9"
+      ]
+    }
+  ]
+}

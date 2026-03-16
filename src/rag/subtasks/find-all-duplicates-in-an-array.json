@@ -1,0 +1,41 @@
+{
+  "slug": "find-all-duplicates-in-an-array",
+  "link": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+  "difficulty": "Medium",
+  "index": "814",
+  "description_full": "Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears at most twice, return an array of all the integers that appears twice.\n\nYou must write an algorithm that runs in O(n) time and uses only constant auxiliary space, excluding the space needed to store the output\n\n \nExample 1:\nInput: nums = [4,3,2,7,8,2,3,1]\nOutput: [2,3]\nExample 2:\nInput: nums = [1,1,2]\nOutput: [1]\nExample 3:\nInput: nums = [1]\nOutput: []\n\n \nConstraints:\n\n\n\tn == nums.length\n\t1 <= n <= 105\n\t1 <= nums[i] <= n\n\tEach element in nums appears once or twice.\n\n",
+  "description": "Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears at most twice, return an array of all the integers that appears twice.\n\nYou must write an algorithm that runs in O(n) time and uses only constant auxiliary space, excluding the space needed to store the output",
+  "example": "Input: nums = [4,3,2,7,8,2,3,1]\nOutput: [2,3]",
+  "constraints_text": "n == nums.length\n\t1 <= n <= 105\n\t1 <= nums[i] <= n\n\tEach element in nums appears once or twice.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findDuplicates(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> findDuplicates(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findDuplicates(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar findDuplicates = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findDuplicates(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify and collect duplicate numbers by leveraging array indices and element signs for in-place marking.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "simulation"
+      ],
+      "cues": [
+        "appears-twice",
+        "range-1-n",
+        "o-n-time",
+        "o-1-auxiliary-space"
+      ],
+      "constraints": [
+        "1-nums-i-n",
+        "each-element-in-nums-appears-once-or-twice"
+      ]
+    }
+  ]
+}

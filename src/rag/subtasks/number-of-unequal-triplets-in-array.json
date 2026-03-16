@@ -1,0 +1,38 @@
+{
+  "slug": "number-of-unequal-triplets-in-array",
+  "link": "https://leetcode.com/problems/number-of-unequal-triplets-in-array/",
+  "difficulty": "Easy",
+  "index": "527",
+  "description_full": "You are given a 0-indexed array of positive integers nums. Find the number of triplets (i, j, k) that meet the following conditions:\n\n\n\t0 <= i < j < k < nums.length\n\tnums[i], nums[j], and nums[k] are pairwise distinct.\n\t\n\t\tIn other words, nums[i] != nums[j], nums[i] != nums[k], and nums[j] != nums[k].\n\t\n\t\n\n\nReturn the number of triplets that meet the conditions.\n\n \nExample 1:\n\n\nInput: nums = [4,4,2,4,3]\nOutput: 3\nExplanation: The following triplets meet the conditions:\n- (0, 2, 4) because 4 != 2 != 3\n- (1, 2, 4) because 4 != 2 != 3\n- (2, 3, 4) because 2 != 4 != 3\nSince there are 3 triplets, we return 3.\nNote that (2, 0, 4) is not a valid triplet because 2 > 0.\n\n\nExample 2:\n\n\nInput: nums = [1,1,1,1,1]\nOutput: 0\nExplanation: No triplets meet the conditions so we return 0.\n\n\n \nConstraints:\n\n\n\t3 <= nums.length <= 100\n\t1 <= nums[i] <= 1000\n\n",
+  "description": "You are given a 0-indexed array of positive integers nums. Find the number of triplets (i, j, k) that meet the following conditions:\n\n\n\t0 <= i < j < k < nums.length\n\tnums[i], nums[j], and nums[k] are pairwise distinct.\n\t\n\t\tIn other words, nums[i] != nums[j], nums[i] != nums[k], and nums[j] != nums[k].\n\t\n\t\n\n\nReturn the number of triplets that meet the conditions.",
+  "example": "Input: nums = [4,4,2,4,3]\nOutput: 3\nExplanation: The following triplets meet the conditions:\n- (0, 2, 4) because 4 != 2 != 3\n- (1, 2, 4) because 4 != 2 != 3\n- (2, 3, 4) because 2 != 4 != 3\nSince there are 3 triplets, we return 3.\nNote that (2, 0, 4) is not a valid triplet because 2 > 0.",
+  "constraints_text": "3 <= nums.length <= 100\n\t1 <= nums[i] <= 1000",
+  "templates": {
+    "c": "int unequalTriplets(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int unequalTriplets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int unequalTriplets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar unequalTriplets = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def unequalTriplets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Enumerate all valid index triplets (i, j, k) and count those where nums[i], nums[j], nums[k] are pairwise distinct.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "0-i-j-k-nums-length",
+        "pairwise-distinct"
+      ],
+      "constraints": [
+        "nums-length-100",
+        "nums-i-1000"
+      ]
+    }
+  ]
+}

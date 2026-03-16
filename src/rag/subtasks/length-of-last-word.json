@@ -1,0 +1,37 @@
+{
+  "slug": "length-of-last-word",
+  "link": "https://leetcode.com/problems/length-of-last-word/",
+  "difficulty": "Easy",
+  "index": "11",
+  "description_full": "Given a string s consisting of words and spaces, return the length of the last word in the string.\n\nA word is a maximal substring consisting of non-space characters only.\n\n \nExample 1:\n\n\nInput: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.\n\n\nExample 2:\n\n\nInput: s = \"   fly me   to   the moon  \"\nOutput: 4\nExplanation: The last word is \"moon\" with length 4.\n\n\nExample 3:\n\n\nInput: s = \"luffy is still joyboy\"\nOutput: 6\nExplanation: The last word is \"joyboy\" with length 6.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists of only English letters and spaces ' '.\n\tThere will be at least one word in s.\n\n",
+  "description": "Given a string s consisting of words and spaces, return the length of the last word in the string.\n\nA word is a maximal substring consisting of non-space characters only.",
+  "example": "Input: s = \"Hello World\"\nOutput: 5\nExplanation: The last word is \"World\" with length 5.",
+  "constraints_text": "1 <= s.length <= 104\n\ts consists of only English letters and spaces ' '.\n\tThere will be at least one word in s.",
+  "templates": {
+    "c": "int lengthOfLastWord(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int lengthOfLastWord(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int lengthOfLastWord(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar lengthOfLastWord = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def lengthOfLastWord(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the length of the final word in the string by iterating backwards, skipping trailing spaces and then counting non-space characters.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers"
+      ],
+      "cues": [
+        "last-word",
+        "length",
+        "non-space-characters"
+      ],
+      "constraints": [
+        "s-length-104",
+        "at-least-one-word"
+      ]
+    }
+  ]
+}

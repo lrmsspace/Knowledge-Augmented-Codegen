@@ -1,0 +1,39 @@
+{
+  "slug": "robot-return-to-origin",
+  "link": "https://leetcode.com/problems/robot-return-to-origin/",
+  "difficulty": "Easy",
+  "index": "147",
+  "description_full": "There is a robot starting at the position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.\n\nYou are given a string moves that represents the move sequence of the robot where moves[i] represents its ith move. Valid moves are 'R' (right), 'L' (left), 'U' (up), and 'D' (down).\n\nReturn true if the robot returns to the origin after it finishes all of its moves, or false otherwise.\n\nNote: The way that the robot is \"facing\" is irrelevant. 'R' will always make the robot move to the right once, 'L' will always make it move left, etc. Also, assume that the magnitude of the robot's movement is the same for each move.\n\n \nExample 1:\n\n\nInput: moves = \"UD\"\nOutput: true\nExplanation: The robot moves up once, and then down once. All moves have the same magnitude, so it ended up at the origin where it started. Therefore, we return true.\n\n\nExample 2:\n\n\nInput: moves = \"LL\"\nOutput: false\nExplanation: The robot moves left twice. It ends up two \"moves\" to the left of the origin. We return false because it is not at the origin at the end of its moves.\n\n\n \nConstraints:\n\n\n\t1 <= moves.length <= 2 * 104\n\tmoves only contains the characters 'U', 'D', 'L' and 'R'.\n\n",
+  "description": "There is a robot starting at the position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.\n\nYou are given a string moves that represents the move sequence of the robot where moves[i] represents its ith move. Valid moves are 'R' (right), 'L' (left), 'U' (up), and 'D' (down).\n\nReturn true if the robot returns to the origin after it finishes all of its moves, or false otherwise.\n\nNote: The way that the robot is \"facing\" is irrelevant. 'R' will always make the robot move to the right once, 'L' will always make it move left, etc. Also, assume that the magnitude of the robot's movement is the same for each move.",
+  "example": "Input: moves = \"UD\"\nOutput: true\nExplanation: The robot moves up once, and then down once. All moves have the same magnitude, so it ended up at the origin where it started. Therefore, we return true.",
+  "constraints_text": "1 <= moves.length <= 2 * 104\n\tmoves only contains the characters 'U', 'D', 'L' and 'R'.",
+  "templates": {
+    "c": "bool judgeCircle(char* moves) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool judgeCircle(string moves) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean judgeCircle(String moves) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} moves\n * @return {boolean}\n */\nvar judgeCircle = function(moves) {\n    \n};",
+    "python": "class Solution(object):\n    def judgeCircle(self, moves):\n        \"\"\"\n        :type moves: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate the robot's movement on a 2D plane by processing each move and tracking its current coordinates.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "sequence-of-its-moves",
+        "ends-up-at-0-0",
+        "valid-moves-are-r-l-u-d"
+      ],
+      "constraints": [
+        "1-moves-length-2-104",
+        "moves-only-contains-u-d-l-r"
+      ]
+    }
+  ]
+}

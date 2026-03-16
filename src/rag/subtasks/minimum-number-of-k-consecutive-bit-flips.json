@@ -1,0 +1,38 @@
+{
+  "slug": "minimum-number-of-k-consecutive-bit-flips",
+  "link": "https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/",
+  "difficulty": "Hard",
+  "index": "1937",
+  "description_full": "You are given a binary array nums and an integer k.\n\nA k-bit flip is choosing a subarray of length k from nums and simultaneously changing every 0 in the subarray to 1, and every 1 in the subarray to 0.\n\nReturn the minimum number of k-bit flips required so that there is no 0 in the array. If it is not possible, return -1.\n\nA subarray is a contiguous part of an array.\n\n \nExample 1:\n\n\nInput: nums = [0,1,0], k = 1\nOutput: 2\nExplanation: Flip nums[0], then flip nums[2].\n\n\nExample 2:\n\n\nInput: nums = [1,1,0], k = 2\nOutput: -1\nExplanation: No matter how we flip subarrays of size 2, we cannot make the array become [1,1,1].\n\n\nExample 3:\n\n\nInput: nums = [0,0,0,1,0,1,1,0], k = 3\nOutput: 3\nExplanation: \nFlip nums[0],nums[1],nums[2]: nums becomes [1,1,1,1,0,1,1,0]\nFlip nums[4],nums[5],nums[6]: nums becomes [1,1,1,1,1,0,0,0]\nFlip nums[5],nums[6],nums[7]: nums becomes [1,1,1,1,1,1,1,1]\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= k <= nums.length\n\n",
+  "description": "You are given a binary array nums and an integer k.\n\nA k-bit flip is choosing a subarray of length k from nums and simultaneously changing every 0 in the subarray to 1, and every 1 in the subarray to 0.\n\nReturn the minimum number of k-bit flips required so that there is no 0 in the array. If it is not possible, return -1.\n\nA subarray is a contiguous part of an array.",
+  "example": "Input: nums = [0,1,0], k = 1\nOutput: 2\nExplanation: Flip nums[0], then flip nums[2].",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= k <= nums.length",
+  "templates": {
+    "c": "int minKBitFlips(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minKBitFlips(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minKBitFlips(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minKBitFlips = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minKBitFlips(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Greedily apply k-bit flips to eliminate all zeros, tracking the effective state using a difference array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "difference-array"
+      ],
+      "cues": [
+        "minimum-number-of-k-bit-flips",
+        "no-0-in-the-array",
+        "k-bit-flip"
+      ],
+      "constraints": [
+        "1-nums-length-10-5",
+        "1-k-nums-length"
+      ]
+    }
+  ]
+}

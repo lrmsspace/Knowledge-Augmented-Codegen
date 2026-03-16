@@ -1,0 +1,54 @@
+{
+  "slug": "sum-of-digit-differences-of-all-pairs",
+  "link": "https://leetcode.com/problems/sum-of-digit-differences-of-all-pairs/",
+  "difficulty": "Medium",
+  "index": "2510",
+  "description_full": "You are given an array nums consisting of positive integers where all integers have the same number of digits.\n\nThe digit difference between two integers is the count of different digits that are in the same position in the two integers.\n\nReturn the sum of the digit differences between all pairs of integers in nums.\n\n \nExample 1:\n\n\nInput: nums = [13,23,12]\n\nOutput: 4\n\nExplanation:\nWe have the following:\n- The digit difference between 13 and 23 is 1.\n- The digit difference between 13 and 12 is 1.\n- The digit difference between 23 and 12 is 2.\nSo the total sum of digit differences between all pairs of integers is 1 + 1 + 2 = 4.\n\n\nExample 2:\n\n\nInput: nums = [10,10,10,10]\n\nOutput: 0\n\nExplanation:\nAll the integers in the array are the same. So the total sum of digit differences between all pairs of integers will be 0.\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 105\n\t1 <= nums[i] < 109\n\tAll integers in nums have the same number of digits.\n\n",
+  "description": "You are given an array nums consisting of positive integers where all integers have the same number of digits.\n\nThe digit difference between two integers is the count of different digits that are in the same position in the two integers.\n\nReturn the sum of the digit differences between all pairs of integers in nums.",
+  "example": "Input: nums = [13,23,12]\n\nOutput: 4\n\nExplanation:\nWe have the following:\n- The digit difference between 13 and 23 is 1.\n- The digit difference between 13 and 12 is 1.\n- The digit difference between 23 and 12 is 2.\nSo the total sum of digit differences between all pairs of integers is 1 + 1 + 2 = 4.",
+  "constraints_text": "2 <= nums.length <= 105\n\t1 <= nums[i] < 109\n\tAll integers in nums have the same number of digits.",
+  "templates": {
+    "c": "long long sumDigitDifferences(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long sumDigitDifferences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long sumDigitDifferences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumDigitDifferences = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def sumDigitDifferences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "For each digit position, extract and count the frequency of each digit (0-9) across all numbers in the input array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "same-number-of-digits",
+        "digit-difference",
+        "same-position"
+      ],
+      "constraints": [
+        "2-nums-length-105",
+        "1-nums-i-109"
+      ]
+    },
+    {
+      "intent": "Aggregate the total sum of digit differences by calculating contributions from each digit position's frequencies.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "sum-of-the-digit-differences-between-all-pairs"
+      ],
+      "constraints": [
+        "2-nums-length-105"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "validate-stack-sequences",
+  "link": "https://leetcode.com/problems/validate-stack-sequences/",
+  "difficulty": "Medium",
+  "index": "1035",
+  "description_full": "Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.\n\n \nExample 1:\n\n\nInput: pushed = [1,2,3,4,5], popped = [4,5,3,2,1]\nOutput: true\nExplanation: We might do the following sequence:\npush(1), push(2), push(3), push(4),\npop() -> 4,\npush(5),\npop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1\n\n\nExample 2:\n\n\nInput: pushed = [1,2,3,4,5], popped = [4,3,5,1,2]\nOutput: false\nExplanation: 1 cannot be popped before 2.\n\n\n \nConstraints:\n\n\n\t1 <= pushed.length <= 1000\n\t0 <= pushed[i] <= 1000\n\tAll the elements of pushed are unique.\n\tpopped.length == pushed.length\n\tpopped is a permutation of pushed.\n\n",
+  "description": "Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.",
+  "example": "Input: pushed = [1,2,3,4,5], popped = [4,5,3,2,1]\nOutput: true\nExplanation: We might do the following sequence:\npush(1), push(2), push(3), push(4),\npop() -> 4,\npush(5),\npop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1",
+  "constraints_text": "1 <= pushed.length <= 1000\n\t0 <= pushed[i] <= 1000\n\tAll the elements of pushed are unique.\n\tpopped.length == pushed.length\n\tpopped is a permutation of pushed.",
+  "templates": {
+    "c": "bool validateStackSequences(int* pushed, int pushedSize, int* popped, int poppedSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validateStackSequences(int[] pushed, int[] popped) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} pushed\n * @param {number[]} popped\n * @return {boolean}\n */\nvar validateStackSequences = function(pushed, popped) {\n    \n};",
+    "python": "class Solution(object):\n    def validateStackSequences(self, pushed, popped):\n        \"\"\"\n        :type pushed: List[int]\n        :type popped: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate stack operations using the pushed sequence and attempt to match the popped sequence.",
+      "structures": [
+        "stack",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "push-and-pop-operations",
+        "initially-empty-stack",
+        "return-true-if-this-could-have-been-the-result"
+      ],
+      "constraints": [
+        "pushed-length-1000",
+        "popped-length-pushed-length",
+        "popped-is-a-permutation-of-pushed",
+        "all-elements-of-pushed-are-unique"
+      ]
+    }
+  ]
+}

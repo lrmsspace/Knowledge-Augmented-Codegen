@@ -1,0 +1,38 @@
+{
+  "slug": "find-closest-number-to-zero",
+  "link": "https://leetcode.com/problems/find-closest-number-to-zero/",
+  "difficulty": "Easy",
+  "index": "479",
+  "description_full": "Given an integer array nums of size n, return the number with the value closest to 0 in nums. If there are multiple answers, return the number with the largest value.\n \nExample 1:\n\n\nInput: nums = [-4,-2,1,4,8]\nOutput: 1\nExplanation:\nThe distance from -4 to 0 is |-4| = 4.\nThe distance from -2 to 0 is |-2| = 2.\nThe distance from 1 to 0 is |1| = 1.\nThe distance from 4 to 0 is |4| = 4.\nThe distance from 8 to 0 is |8| = 8.\nThus, the closest number to 0 in the array is 1.\n\n\nExample 2:\n\n\nInput: nums = [2,-1,1]\nOutput: 1\nExplanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is returned.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 1000\n\t-105 <= nums[i] <= 105\n\n",
+  "description": "Given an integer array nums of size n, return the number with the value closest to 0 in nums. If there are multiple answers, return the number with the largest value.",
+  "example": "Input: nums = [-4,-2,1,4,8]\nOutput: 1\nExplanation:\nThe distance from -4 to 0 is |-4| = 4.\nThe distance from -2 to 0 is |-2| = 2.\nThe distance from 1 to 0 is |1| = 1.\nThe distance from 4 to 0 is |4| = 4.\nThe distance from 8 to 0 is |8| = 8.\nThus, the closest number to 0 in the array is 1.",
+  "constraints_text": "1 <= n <= 1000\n\t-105 <= nums[i] <= 105",
+  "templates": {
+    "c": "int findClosestNumber(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findClosestNumber(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findClosestNumber(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findClosestNumber = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findClosestNumber(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array to find the number closest to zero, prioritizing larger values in case of ties.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "closest-to-0",
+        "largest-value"
+      ],
+      "constraints": [
+        "1-n-1000",
+        "105-nums-i-105"
+      ]
+    }
+  ]
+}

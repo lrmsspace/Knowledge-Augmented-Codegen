@@ -1,0 +1,40 @@
+{
+  "slug": "maximum-average-subarray-i",
+  "link": "https://leetcode.com/problems/maximum-average-subarray-i/",
+  "difficulty": "Easy",
+  "index": "144",
+  "description_full": "You are given an integer array nums consisting of n elements, and an integer k.\n\nFind a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.\n\n \nExample 1:\n\n\nInput: nums = [1,12,-5,-6,50,3], k = 4\nOutput: 12.75000\nExplanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75\n\n\nExample 2:\n\n\nInput: nums = [5], k = 1\nOutput: 5.00000\n\n\n \nConstraints:\n\n\n\tn == nums.length\n\t1 <= k <= n <= 105\n\t-104 <= nums[i] <= 104\n\n",
+  "description": "You are given an integer array nums consisting of n elements, and an integer k.\n\nFind a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.",
+  "example": "Input: nums = [1,12,-5,-6,50,3], k = 4\nOutput: 12.75000\nExplanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75",
+  "constraints_text": "n == nums.length\n\t1 <= k <= n <= 105\n\t-104 <= nums[i] <= 104",
+  "templates": {
+    "c": "double findMaxAverage(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    double findMaxAverage(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double findMaxAverage(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar findMaxAverage = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def findMaxAverage(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: float\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the maximum sum of a contiguous subarray of length k using a sliding window, then calculate its average.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "max-window",
+        "prefix-sum"
+      ],
+      "cues": [
+        "contiguous-subarray",
+        "length-k",
+        "maximum-average"
+      ],
+      "constraints": [
+        "1-k-n-10-5",
+        "10-4-nums-i-10-4"
+      ]
+    }
+  ]
+}

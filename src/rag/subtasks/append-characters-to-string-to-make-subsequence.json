@@ -1,0 +1,38 @@
+{
+  "slug": "append-characters-to-string-to-make-subsequence",
+  "link": "https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/",
+  "difficulty": "Medium",
+  "index": "1640",
+  "description_full": "You are given two strings s and t consisting of only lowercase English letters.\n\nReturn the minimum number of characters that need to be appended to the end of s so that t becomes a subsequence of s.\n\nA subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.\n\n \nExample 1:\n\n\nInput: s = \"coaching\", t = \"coding\"\nOutput: 4\nExplanation: Append the characters \"ding\" to the end of s so that s = \"coachingding\".\nNow, t is a subsequence of s (\"coachingding\").\nIt can be shown that appending any 3 characters to the end of s will never make t a subsequence.\n\n\nExample 2:\n\n\nInput: s = \"abcde\", t = \"a\"\nOutput: 0\nExplanation: t is already a subsequence of s (\"abcde\").\n\n\nExample 3:\n\n\nInput: s = \"z\", t = \"abcde\"\nOutput: 5\nExplanation: Append the characters \"abcde\" to the end of s so that s = \"zabcde\".\nNow, t is a subsequence of s (\"zabcde\").\nIt can be shown that appending any 4 characters to the end of s will never make t a subsequence.\n\n\n \nConstraints:\n\n\n\t1 <= s.length, t.length <= 105\n\ts and t consist only of lowercase English letters.\n\n",
+  "description": "You are given two strings s and t consisting of only lowercase English letters.\n\nReturn the minimum number of characters that need to be appended to the end of s so that t becomes a subsequence of s.\n\nA subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.",
+  "example": "Input: s = \"coaching\", t = \"coding\"\nOutput: 4\nExplanation: Append the characters \"ding\" to the end of s so that s = \"coachingding\".\nNow, t is a subsequence of s (\"coachingding\").\nIt can be shown that appending any 3 characters to the end of s will never make t a subsequence.",
+  "constraints_text": "1 <= s.length, t.length <= 105\n\ts and t consist only of lowercase English letters.",
+  "templates": {
+    "c": "int appendCharacters(char* s, char* t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int appendCharacters(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int appendCharacters(String s, String t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar appendCharacters = function(s, t) {\n    \n};",
+    "python": "class Solution(object):\n    def appendCharacters(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the longest prefix of string 't' that can be formed as a subsequence using characters from string 's', then calculate the length of the remaining suffix of 't' that needs to be appended.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "subsequence",
+        "minimum-number-of-characters",
+        "appended-to-the-end-of-s"
+      ],
+      "constraints": [
+        "1-s-length-t-length-10-5",
+        "s-and-t-consist-only-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

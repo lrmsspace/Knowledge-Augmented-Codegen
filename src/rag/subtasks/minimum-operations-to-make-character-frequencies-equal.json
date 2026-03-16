@@ -1,0 +1,70 @@
+{
+  "slug": "minimum-operations-to-make-character-frequencies-equal",
+  "link": "https://leetcode.com/problems/minimum-operations-to-make-character-frequencies-equal/",
+  "difficulty": "Hard",
+  "index": 2784,
+  "description_full": "You are given a string s.\n\nA string t is called good if all characters of t occur the same number of times.\n\nYou can perform the following operations any number of times:\n\n\n Delete a character from s.\n Insert a character in s.\n Change a character in s to its next letter in the alphabet.\n\n\nNote that you cannot change 'z' to 'a' using the third operation.\n\nReturn the minimum number of operations required to make s good.\n\n \nExample 1:\n\n\nInput: s = \"acab\"\n\nOutput: 1\n\nExplanation:\n\nWe can make s good by deleting one occurrence of character 'a'.\n\n\nExample 2:\n\n\nInput: s = \"wddw\"\n\nOutput: 0\n\nExplanation:\n\nWe do not need to perform any operations since s is initially good.\n\n\nExample 3:\n\n\nInput: s = \"aaabc\"\n\nOutput: 2\n\nExplanation:\n\nWe can make s good by applying these operations:\n\n\n Change one occurrence of 'a' to 'b'\n Insert one occurrence of 'c' into s\n\n\n\n \nConstraints:\n\n\n 3 <= s.length <= 2 * 104\n s contains only lowercase English letters.\n\n",
+  "description": "You are given a string s.\n\nA string t is called good if all characters of t occur the same number of times.\n\nYou can perform the following operations any number of times:\n\n\n Delete a character from s.\n Insert a character in s.\n Change a character in s to its next letter in the alphabet.\n\n\nNote that you cannot change 'z' to 'a' using the third operation.\n\nReturn the minimum number of operations required to make s good.",
+  "example": "Input: s = \"acab\"\n\nOutput: 1\n\nExplanation:\n\nWe can make s good by deleting one occurrence of character 'a'.",
+  "constraints_text": "3 <= s.length <= 2 * 104\n s contains only lowercase English letters.",
+  "templates": {
+    "c": "int makeStringGood(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int makeStringGood(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int makeStringGood(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar makeStringGood = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def makeStringGood(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all possible final 'good' strings: 1) $1 \\le \text{final\\_count} \\le N$ for $N$ characters, 2) $1 \\le \text{final\\_char\\_set\\_size} \\le 26$.",
+      "structures": [
+        "string",
+        "array",
+        "hashmap"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "s",
+        "good string",
+        "minimum number of operations"
+      ],
+      "constraints": [
+        "final\\_count $\times$ final\\_set\\_size $\\le N$"
+      ]
+    },
+    {
+      "intent": "For a fixed final\\_count and final\\_char\\_set, calculate the cost to make the character counts equal and the cost to change/delete/insert characters.",
+      "structures": [
+        "hashmap"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "delete",
+        "insert",
+        "change"
+      ],
+      "constraints": [
+        "minimize cost per character"
+      ]
+    },
+    {
+      "intent": "For each character $c$ in $s$, calculate the minimum cost to make it match its required final count and position relative to the final set of characters.",
+      "structures": [
+        "hashmap"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "alphabet change cost"
+      ],
+      "constraints": [
+        "find minimum over all final 'good' strings"
+      ]
+    }
+  ]
+}

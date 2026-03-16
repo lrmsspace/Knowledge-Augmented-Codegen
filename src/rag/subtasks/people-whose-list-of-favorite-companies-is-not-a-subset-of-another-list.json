@@ -1,0 +1,40 @@
+{
+  "slug": "people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list",
+  "link": "https://leetcode.com/problems/people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list/",
+  "difficulty": "Medium",
+  "index": "1248",
+  "description_full": "Given the array favoriteCompanies where favoriteCompanies[i] is the list of favorites companies for the ith person (indexed from 0).\n\nReturn the indices of people whose list of favorite companies is not a subset of any other list of favorites companies. You must return the indices in increasing order.\n\n \nExample 1:\n\n\nInput: favoriteCompanies = [[\"leetcode\",\"google\",\"facebook\"],[\"google\",\"microsoft\"],[\"google\",\"facebook\"],[\"google\"],[\"amazon\"]]\nOutput: [0,1,4] \nExplanation: \nPerson with index=2 has favoriteCompanies[2]=[\"google\",\"facebook\"] which is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"] corresponding to the person with index 0. \nPerson with index=3 has favoriteCompanies[3]=[\"google\"] which is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"] and favoriteCompanies[1]=[\"google\",\"microsoft\"]. \nOther lists of favorite companies are not a subset of another list, therefore, the answer is [0,1,4].\n\n\nExample 2:\n\n\nInput: favoriteCompanies = [[\"leetcode\",\"google\",\"facebook\"],[\"leetcode\",\"amazon\"],[\"facebook\",\"google\"]]\nOutput: [0,1] \nExplanation: In this case favoriteCompanies[2]=[\"facebook\",\"google\"] is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"], therefore, the answer is [0,1].\n\n\nExample 3:\n\n\nInput: favoriteCompanies = [[\"leetcode\"],[\"google\"],[\"facebook\"],[\"amazon\"]]\nOutput: [0,1,2,3]\n\n\n \nConstraints:\n\n\n\t1 <= favoriteCompanies.length <= 100\n\t1 <= favoriteCompanies[i].length <= 500\n\t1 <= favoriteCompanies[i][j].length <= 20\n\tAll strings in favoriteCompanies[i] are distinct.\n\tAll lists of favorite companies are distinct, that is, If we sort alphabetically each list then favoriteCompanies[i] != favoriteCompanies[j].\n\tAll strings consist of lowercase English letters only.\n\n",
+  "description": "Given the array favoriteCompanies where favoriteCompanies[i] is the list of favorites companies for the ith person (indexed from 0).\n\nReturn the indices of people whose list of favorite companies is not a subset of any other list of favorites companies. You must return the indices in increasing order.",
+  "example": "Input: favoriteCompanies = [[\"leetcode\",\"google\",\"facebook\"],[\"google\",\"microsoft\"],[\"google\",\"facebook\"],[\"google\"],[\"amazon\"]]\nOutput: [0,1,4] \nExplanation: \nPerson with index=2 has favoriteCompanies[2]=[\"google\",\"facebook\"] which is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"] corresponding to the person with index 0. \nPerson with index=3 has favoriteCompanies[3]=[\"google\"] which is a subset of favoriteCompanies[0]=[\"leetcode\",\"google\",\"facebook\"] and favoriteCompanies[1]=[\"google\",\"microsoft\"]. \nOther lists of favorite companies are not a subset of another list, therefore, the answer is [0,1,4].",
+  "constraints_text": "1 <= favoriteCompanies.length <= 100\n\t1 <= favoriteCompanies[i].length <= 500\n\t1 <= favoriteCompanies[i][j].length <= 20\n\tAll strings in favoriteCompanies[i] are distinct.\n\tAll lists of favorite companies are distinct, that is, If we sort alphabetically each list then favoriteCompanies[i] != favoriteCompanies[j].\n\tAll strings consist of lowercase English letters only.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* peopleIndexes(char*** favoriteCompanies, int favoriteCompaniesSize, int* favoriteCompaniesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> peopleIndexes(vector<vector<string>>& favoriteCompanies) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> peopleIndexes(List<List<String>> favoriteCompanies) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} favoriteCompanies\n * @return {number[]}\n */\nvar peopleIndexes = function(favoriteCompanies) {\n    \n};",
+    "python": "class Solution(object):\n    def peopleIndexes(self, favoriteCompanies):\n        \"\"\"\n        :type favoriteCompanies: List[List[str]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify and collect indices of people whose favorite company lists are not subsets of any other list, ensuring the result is sorted.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "simulation"
+      ],
+      "cues": [
+        "list-of-favorite-companies",
+        "not-a-subset-of-any-other-list",
+        "return-the-indices-in-increasing-order"
+      ],
+      "constraints": [
+        "favoritecompanies-length-100",
+        "favoritecompanies-i-length-500"
+      ]
+    }
+  ]
+}

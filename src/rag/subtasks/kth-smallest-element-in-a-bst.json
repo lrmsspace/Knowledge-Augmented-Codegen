@@ -1,0 +1,39 @@
+{
+  "slug": "kth-smallest-element-in-a-bst",
+  "link": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+  "difficulty": "Medium",
+  "index": "736",
+  "description_full": "Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.\n\n \nExample 1:\n\n\nInput: root = [3,1,4,null,2], k = 1\nOutput: 1\n\n\nExample 2:\n\n\nInput: root = [5,3,6,2,4,null,null,1], k = 3\nOutput: 3\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is n.\n\t1 <= k <= n <= 104\n\t0 <= Node.val <= 104\n\n\n \nFollow up: If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?\n",
+  "description": "Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.",
+  "example": "Input: root = [3,1,4,null,2], k = 1\nOutput: 1",
+  "constraints_text": "The number of nodes in the tree is n.\n\t1 <= k <= n <= 104\n\t0 <= Node.val <= 104\n\n\n \nFollow up: If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nint kthSmallest(struct TreeNode* root, int k) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int kthSmallest(TreeNode* root, int k) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int kthSmallest(TreeNode root, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} k\n * @return {number}\n */\nvar kthSmallest = function(root, k) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def kthSmallest(self, root, k):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform an in-order traversal of the BST to find the kth smallest value by counting visited nodes.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "counting"
+      ],
+      "cues": [
+        "kth-smallest",
+        "binary-search-tree",
+        "1-indexed"
+      ],
+      "constraints": [
+        "1-k-n-104",
+        "0-node-val-104"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "check-if-there-is-a-valid-parentheses-string-path",
+  "link": "https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/",
+  "difficulty": "Hard",
+  "index": "2165",
+  "description_full": "A parentheses string is a non-empty string consisting only of '(' and ')'. It is valid if any of the following conditions is true:\n\n\n\tIt is ().\n\tIt can be written as AB (A concatenated with B), where A and B are valid parentheses strings.\n\tIt can be written as (A), where A is a valid parentheses string.\n\n\nYou are given an m x n matrix of parentheses grid. A valid parentheses string path in the grid is a path satisfying all of the following conditions:\n\n\n\tThe path starts from the upper left cell (0, 0).\n\tThe path ends at the bottom-right cell (m - 1, n - 1).\n\tThe path only ever moves down or right.\n\tThe resulting parentheses string formed by the path is valid.\n\n\nReturn true if there exists a valid parentheses string path in the grid. Otherwise, return false.\n\n \nExample 1:\n\n\nInput: grid = [[\"(\",\"(\",\"(\"],[\")\",\"(\",\")\"],[\"(\",\"(\",\")\"],[\"(\",\"(\",\")\"]]\nOutput: true\nExplanation: The above diagram shows two possible paths that form valid parentheses strings.\nThe first path shown results in the valid parentheses string \"()(())\".\nThe second path shown results in the valid parentheses string \"((()))\".\nNote that there may be other valid parentheses string paths.\n\n\nExample 2:\n\n\nInput: grid = [[\")\",\")\"],[\"(\",\"(\"]]\nOutput: false\nExplanation: The two possible paths form the parentheses strings \"))(\" and \")((\". Since neither of them are valid parentheses strings, we return false.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 100\n\tgrid[i][j] is either '(' or ')'.\n\n",
+  "description": "A parentheses string is a non-empty string consisting only of '(' and ')'. It is valid if any of the following conditions is true:\n\n\n\tIt is ().\n\tIt can be written as AB (A concatenated with B), where A and B are valid parentheses strings.\n\tIt can be written as (A), where A is a valid parentheses string.\n\n\nYou are given an m x n matrix of parentheses grid. A valid parentheses string path in the grid is a path satisfying all of the following conditions:\n\n\n\tThe path starts from the upper left cell (0, 0).\n\tThe path ends at the bottom-right cell (m - 1, n - 1).\n\tThe path only ever moves down or right.\n\tThe resulting parentheses string formed by the path is valid.\n\n\nReturn true if there exists a valid parentheses string path in the grid. Otherwise, return false.",
+  "example": "Input: grid = [[\"(\",\"(\",\"(\"],[\")\",\"(\",\")\"],[\"(\",\"(\",\")\"],[\"(\",\"(\",\")\"]]\nOutput: true\nExplanation: The above diagram shows two possible paths that form valid parentheses strings.\nThe first path shown results in the valid parentheses string \"()(())\".\nThe second path shown results in the valid parentheses string \"((()))\".\nNote that there may be other valid parentheses string paths.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 100\n\tgrid[i][j] is either '(' or ')'.",
+  "templates": {
+    "c": "bool hasValidPath(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool hasValidPath(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasValidPath(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {boolean}\n */\nvar hasValidPath = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def hasValidPath(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute reachability for all cells with varying parentheses balances to find if a valid path exists from (0,0) to (m-1, n-1).",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "simulation"
+      ],
+      "cues": [
+        "m-x-n-grid",
+        "path-starts-0-0",
+        "ends-m-1-n-1",
+        "down-or-right",
+        "valid-parentheses-string"
+      ],
+      "constraints": [
+        "path-length-m-n-1-must-be-even",
+        "balance-never-negative",
+        "final-balance-must-be-zero"
+      ]
+    }
+  ]
+}

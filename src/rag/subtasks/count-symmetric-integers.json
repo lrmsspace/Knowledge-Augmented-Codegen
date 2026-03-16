@@ -1,0 +1,41 @@
+{
+  "slug": "count-symmetric-integers",
+  "link": "https://leetcode.com/problems/count-symmetric-integers/",
+  "difficulty": "Easy",
+  "index": "2266",
+  "description_full": "You are given two positive integers low and high.\n\nAn integer x consisting of 2 * n digits is symmetric if the sum of the first n digits of x is equal to the sum of the last n digits of x. Numbers with an odd number of digits are never symmetric.\n\nReturn the number of symmetric integers in the range [low, high].\n\n \nExample 1:\n\n\nInput: low = 1, high = 100\nOutput: 9\nExplanation: There are 9 symmetric integers between 1 and 100: 11, 22, 33, 44, 55, 66, 77, 88, and 99.\n\n\nExample 2:\n\n\nInput: low = 1200, high = 1230\nOutput: 4\nExplanation: There are 4 symmetric integers between 1200 and 1230: 1203, 1212, 1221, and 1230.\n\n\n \nConstraints:\n\n\n\t1 <= low <= high <= 104\n\n",
+  "description": "You are given two positive integers low and high.\n\nAn integer x consisting of 2 * n digits is symmetric if the sum of the first n digits of x is equal to the sum of the last n digits of x. Numbers with an odd number of digits are never symmetric.\n\nReturn the number of symmetric integers in the range [low, high].",
+  "example": "Input: low = 1, high = 100\nOutput: 9\nExplanation: There are 9 symmetric integers between 1 and 100: 11, 22, 33, 44, 55, 66, 77, 88, and 99.",
+  "constraints_text": "1 <= low <= high <= 104",
+  "templates": {
+    "c": "int countSymmetricIntegers(int low, int high) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countSymmetricIntegers(int low, int high) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSymmetricIntegers(int low, int high) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} low\n * @param {number} high\n * @return {number}\n */\nvar countSymmetricIntegers = function(low, high) {\n    \n};",
+    "python": "class Solution(object):\n    def countSymmetricIntegers(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the range [low, high] and check each number for symmetry by comparing sums of its first and last half digits.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "low",
+        "high",
+        "symmetric",
+        "sum-of-first-n-digits",
+        "sum-of-last-n-digits"
+      ],
+      "constraints": [
+        "1-low-high-10-4",
+        "2-n-digits",
+        "odd-number-of-digits-never-symmetric"
+      ]
+    }
+  ]
+}

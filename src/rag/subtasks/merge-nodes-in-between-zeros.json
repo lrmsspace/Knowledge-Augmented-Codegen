@@ -1,0 +1,40 @@
+{
+  "slug": "merge-nodes-in-between-zeros",
+  "link": "https://leetcode.com/problems/merge-nodes-in-between-zeros/",
+  "difficulty": "Medium",
+  "index": "1522",
+  "description_full": "You are given the head of a linked list, which contains a series of integers separated by 0's. The beginning and end of the linked list will have Node.val == 0.\n\nFor every two consecutive 0's, merge all the nodes lying in between them into a single node whose value is the sum of all the merged nodes. The modified list should not contain any 0's.\n\nReturn the head of the modified linked list.\n\n \nExample 1:\n\n\nInput: head = [0,3,1,0,4,5,2,0]\nOutput: [4,11]\nExplanation: \nThe above figure represents the given linked list. The modified list contains\n- The sum of the nodes marked in green: 3 + 1 = 4.\n- The sum of the nodes marked in red: 4 + 5 + 2 = 11.\n\n\nExample 2:\n\n\nInput: head = [0,1,0,3,0,2,2,0]\nOutput: [1,3,4]\nExplanation: \nThe above figure represents the given linked list. The modified list contains\n- The sum of the nodes marked in green: 1 = 1.\n- The sum of the nodes marked in red: 3 = 3.\n- The sum of the nodes marked in yellow: 2 + 2 = 4.\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the list is in the range [3, 2 * 105].\n\t0 <= Node.val <= 1000\n\tThere are no two consecutive nodes with Node.val == 0.\n\tThe beginning and end of the linked list have Node.val == 0.\n\n",
+  "description": "You are given the head of a linked list, which contains a series of integers separated by 0's. The beginning and end of the linked list will have Node.val == 0.\n\nFor every two consecutive 0's, merge all the nodes lying in between them into a single node whose value is the sum of all the merged nodes. The modified list should not contain any 0's.\n\nReturn the head of the modified linked list.",
+  "example": "Input: head = [0,3,1,0,4,5,2,0]\nOutput: [4,11]\nExplanation: \nThe above figure represents the given linked list. The modified list contains\n- The sum of the nodes marked in green: 3 + 1 = 4.\n- The sum of the nodes marked in red: 4 + 5 + 2 = 11.",
+  "constraints_text": "The number of nodes in the list is in the range [3, 2 * 105].\n\t0 <= Node.val <= 1000\n\tThere are no two consecutive nodes with Node.val == 0.\n\tThe beginning and end of the linked list have Node.val == 0.",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* mergeNodes(struct ListNode* head) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* mergeNodes(ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode mergeNodes(ListNode head) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar mergeNodes = function(head) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def mergeNodes(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Traverse the linked list, sum node values between consecutive zeros, and construct a new linked list from these sums.",
+      "structures": [
+        "linked-list",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "series-of-integers-separated-by-0-s",
+        "merge-all-the-nodes-lying-in-between-them-into-a-single-node-whose-value-is-the-sum",
+        "modified-list-should-not-contain-any-0-s",
+        "return-the-head-of-the-modified-linked-list"
+      ],
+      "constraints": [
+        "beginning-and-end-of-the-linked-list-will-have-node-val-0",
+        "no-two-consecutive-nodes-with-node-val-0"
+      ]
+    }
+  ]
+}

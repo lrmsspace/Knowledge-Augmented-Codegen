@@ -1,0 +1,76 @@
+{
+  "slug": "smallest-palindromic-rearrangement-ii",
+  "link": "https://leetcode.com/problems/smallest-palindromic-rearrangement-ii/",
+  "difficulty": "Hard",
+  "index": "2820",
+  "description_full": "You are given a palindromic string s and an integer k.\n\nReturn the k-th lexicographically smallest palindromic permutation of s. If there are fewer than k distinct palindromic permutations, return an empty string.\n\nNote: Different rearrangements that yield the same palindromic string are considered identical and are counted once.\n\n \nExample 1:\n\n\nInput: s = \"abba\", k = 2\n\nOutput: \"baab\"\n\nExplanation:\n\n\n\tThe two distinct palindromic rearrangements of \"abba\" are \"abba\" and \"baab\".\n\tLexicographically, \"abba\" comes before \"baab\". Since k = 2, the output is \"baab\".\n\n\n\nExample 2:\n\n\nInput: s = \"aa\", k = 2\n\nOutput: \"\"\n\nExplanation:\n\n\n\tThere is only one palindromic rearrangement: \"aa\".\n\tThe output is an empty string since k = 2 exceeds the number of possible rearrangements.\n\n\n\nExample 3:\n\n\nInput: s = \"bacab\", k = 1\n\nOutput: \"abcba\"\n\nExplanation:\n\n\n\tThe two distinct palindromic rearrangements of \"bacab\" are \"abcba\" and \"bacab\".\n\tLexicographically, \"abcba\" comes before \"bacab\". Since k = 1, the output is \"abcba\".\n\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists of lowercase English letters.\n\ts is guaranteed to be palindromic.\n\t1 <= k <= 106\n\n",
+  "description": "You are given a palindromic string s and an integer k.\n\nReturn the k-th lexicographically smallest palindromic permutation of s. If there are fewer than k distinct palindromic permutations, return an empty string.\n\nNote: Different rearrangements that yield the same palindromic string are considered identical and are counted once.",
+  "example": "Input: s = \"abba\", k = 2\n\nOutput: \"baab\"\n\nExplanation:\n\n\n\tThe two distinct palindromic rearrangements of \"abba\" are \"abba\" and \"baab\".\n\tLexicographically, \"abba\" comes before \"baab\". Since k = 2, the output is \"baab\".",
+  "constraints_text": "1 <= s.length <= 104\n\ts consists of lowercase English letters.\n\ts is guaranteed to be palindromic.\n\t1 <= k <= 106",
+  "templates": {
+    "c": "char* smallestPalindrome(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string smallestPalindrome(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestPalindrome(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {string}\n */\nvar smallestPalindrome = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def smallestPalindrome(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count character frequencies and prepare for palindrome construction.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "palindromic-string",
+        "character-counts"
+      ],
+      "constraints": [
+        "s-length-104"
+      ]
+    },
+    {
+      "intent": "Calculate total distinct palindromic permutations and validate k.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "probability-statistics"
+      ],
+      "cues": [
+        "fewer-than-k-distinct",
+        "total-permutations"
+      ],
+      "constraints": [
+        "k-10-6"
+      ]
+    },
+    {
+      "intent": "Greedily construct the k-th lexicographically smallest palindrome.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "recursion",
+        "counting"
+      ],
+      "cues": [
+        "k-th-lexicographically-smallest",
+        "build-first-half"
+      ],
+      "constraints": [
+        "k-10-6",
+        "s-length-104"
+      ]
+    }
+  ]
+}

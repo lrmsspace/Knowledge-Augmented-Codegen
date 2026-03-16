@@ -1,0 +1,39 @@
+{
+  "slug": "merge-two-sorted-lists",
+  "link": "https://leetcode.com/problems/merge-two-sorted-lists/",
+  "difficulty": "Easy",
+  "index": "6",
+  "description_full": "You are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.\n\n \nExample 1:\n\n\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n\n\nExample 2:\n\n\nInput: list1 = [], list2 = []\nOutput: []\n\n\nExample 3:\n\n\nInput: list1 = [], list2 = [0]\nOutput: [0]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in both lists is in the range [0, 50].\n\t-100 <= Node.val <= 100\n\tBoth list1 and list2 are sorted in non-decreasing order.\n\n",
+  "description": "You are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.",
+  "example": "Input: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]",
+  "constraints_text": "The number of nodes in both lists is in the range [0, 50].\n\t-100 <= Node.val <= 100\n\tBoth list1 and list2 are sorted in non-decreasing order.",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} list1\n * @param {ListNode} list2\n * @return {ListNode}\n */\nvar mergeTwoLists = function(list1, list2) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def mergeTwoLists(self, list1, list2):\n        \"\"\"\n        :type list1: Optional[ListNode]\n        :type list2: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively merge two sorted linked lists by comparing current nodes and linking the smaller one to the merged result.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "recursion",
+        "greedy"
+      ],
+      "cues": [
+        "heads-of-two-sorted-linked-lists",
+        "merge-the-two-lists-into-one-sorted-list",
+        "splicing-together-the-nodes",
+        "return-the-head"
+      ],
+      "constraints": [
+        "number-of-nodes-in-both-lists-is-in-the-range-0-50",
+        "both-list1-and-list2-are-sorted-in-non-decreasing-order"
+      ]
+    }
+  ]
+}

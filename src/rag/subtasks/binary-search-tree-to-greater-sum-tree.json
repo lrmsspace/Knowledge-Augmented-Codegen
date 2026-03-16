@@ -1,0 +1,38 @@
+{
+  "slug": "binary-search-tree-to-greater-sum-tree",
+  "link": "https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/",
+  "difficulty": "Medium",
+  "index": "1089",
+  "description_full": "Given the root of a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST.\n\nAs a reminder, a binary search tree is a tree that satisfies these constraints:\n\n\n\tThe left subtree of a node contains only nodes with keys less than the node's key.\n\tThe right subtree of a node contains only nodes with keys greater than the node's key.\n\tBoth the left and right subtrees must also be binary search trees.\n\n\n \nExample 1:\n\n\nInput: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]\nOutput: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]\n\n\nExample 2:\n\n\nInput: root = [0,null,1]\nOutput: [1,null,1]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 100].\n\t0 <= Node.val <= 100\n\tAll the values in the tree are unique.\n\n\n \nNote: This question is the same as 538: https://leetcode.com/problems/convert-bst-to-greater-tree/\n",
+  "description": "Given the root of a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST.\n\nAs a reminder, a binary search tree is a tree that satisfies these constraints:\n\n\n\tThe left subtree of a node contains only nodes with keys less than the node's key.\n\tThe right subtree of a node contains only nodes with keys greater than the node's key.\n\tBoth the left and right subtrees must also be binary search trees.",
+  "example": "Input: root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]\nOutput: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 100].\n\t0 <= Node.val <= 100\n\tAll the values in the tree are unique.\n\n\n \nNote: This question is the same as 538: https://leetcode.com/problems/convert-bst-to-greater-tree/",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* bstToGst(struct TreeNode* root) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* bstToGst(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode bstToGst(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {TreeNode}\n */\nvar bstToGst = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def bstToGst(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: Optional[TreeNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a reverse in-order DFS traversal on the BST, accumulating a running sum of values and updating each node's value.",
+      "structures": [
+        "tree"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "greater-tree",
+        "sum-of-all-keys-greater",
+        "bst"
+      ],
+      "constraints": [
+        "1-to-100-nodes",
+        "unique-values"
+      ]
+    }
+  ]
+}

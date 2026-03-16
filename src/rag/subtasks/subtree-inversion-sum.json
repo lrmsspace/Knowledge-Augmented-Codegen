@@ -1,0 +1,56 @@
+{
+  "slug": "subtree-inversion-sum",
+  "link": "https://leetcode.com/problems/subtree-inversion-sum/",
+  "difficulty": "Hard",
+  "index": "2828",
+  "description_full": "You are given an undirected tree rooted at node 0, with n nodes numbered from 0 to n - 1. The tree is represented by a 2D integer array edges of length n - 1, where edges[i] = [ui, vi] indicates an edge between nodes ui and vi.\n\nYou are also given an integer array nums of length n, where nums[i] represents the value at node i, and an integer k.\n\nYou may perform inversion operations on a subset of nodes subject to the following rules:\n\n\n\t\n\tSubtree Inversion Operation:\n\n\t\n\t\t\n\t\tWhen you invert a node, every value in the subtree rooted at that node is multiplied by -1.\n\t\t\n\t\n\t\n\t\n\tDistance Constraint on Inversions:\n\n\t\n\t\t\n\t\tYou may only invert a node if it is \"sufficiently far\" from any other inverted node.\n\t\t\n\t\t\n\t\tSpecifically, if you invert two nodes a and b such that one is an ancestor of the other (i.e., if LCA(a, b) = a or LCA(a, b) = b), then the distance (the number of edges on the unique path between them) must be at least k.\n\t\t\n\t\n\t\n\n\nReturn the maximum possible sum of the tree's node values after applying inversion operations.\n\n \nExample 1:\n\n\nInput: edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]], nums = [4,-8,-6,3,7,-2,5], k = 2\n\nOutput: 27\n\nExplanation:\n\n\n\n\n\tApply inversion operations at nodes 0, 3, 4 and 6.\n\tThe final nums array is [-4, 8, 6, 3, 7, 2, 5], and the total sum is 27.\n\n\n\nExample 2:\n\n\nInput: edges = [[0,1],[1,2],[2,3],[3,4]], nums = [-1,3,-2,4,-5], k = 2\n\nOutput: 9\n\nExplanation:\n\n\n\n\n\tApply the inversion operation at node 4.\n\tThe final nums array becomes [-1, 3, -2, 4, 5], and the total sum is 9.\n\n\n\nExample 3:\n\n\nInput: edges = [[0,1],[0,2]], nums = [0,-1,-2], k = 3\n\nOutput: 3\n\nExplanation:\n\nApply inversion operations at nodes 1 and 2.\n\n\n \nConstraints:\n\n\n\t2 <= n <= 5 * 104\n\tedges.length == n - 1\n\tedges[i] = [ui, vi]\n\t0 <= ui, vi < n\n\tnums.length == n\n\t-5 * 104 <= nums[i] <= 5 * 104\n\t1 <= k <= 50\n\tThe input is generated such that edges represents a valid tree.\n\n",
+  "description": "You are given an undirected tree rooted at node 0, with n nodes numbered from 0 to n - 1. The tree is represented by a 2D integer array edges of length n - 1, where edges[i] = [ui, vi] indicates an edge between nodes ui and vi.\n\nYou are also given an integer array nums of length n, where nums[i] represents the value at node i, and an integer k.\n\nYou may perform inversion operations on a subset of nodes subject to the following rules:\n\n\n\t\n\tSubtree Inversion Operation:\n\n\t\n\t\t\n\t\tWhen you invert a node, every value in the subtree rooted at that node is multiplied by -1.\n\t\t\n\t\n\t\n\t\n\tDistance Constraint on Inversions:\n\n\t\n\t\t\n\t\tYou may only invert a node if it is \"sufficiently far\" from any other inverted node.\n\t\t\n\t\t\n\t\tSpecifically, if you invert two nodes a and b such that one is an ancestor of the other (i.e., if LCA(a, b) = a or LCA(a, b) = b), then the distance (the number of edges on the unique path between them) must be at least k.\n\t\t\n\t\n\t\n\n\nReturn the maximum possible sum of the tree's node values after applying inversion operations.",
+  "example": "Input: edges = [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]], nums = [4,-8,-6,3,7,-2,5], k = 2\n\nOutput: 27\n\nExplanation:\n\n\n\n\n\tApply inversion operations at nodes 0, 3, 4 and 6.\n\tThe final nums array is [-4, 8, 6, 3, 7, 2, 5], and the total sum is 27.",
+  "constraints_text": "2 <= n <= 5 * 104\n\tedges.length == n - 1\n\tedges[i] = [ui, vi]\n\t0 <= ui, vi < n\n\tnums.length == n\n\t-5 * 104 <= nums[i] <= 5 * 104\n\t1 <= k <= 50\n\tThe input is generated such that edges represents a valid tree.",
+  "templates": {
+    "c": "long long subtreeInversionSum(int** edges, int edgesSize, int* edgesColSize, int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long subtreeInversionSum(vector<vector<int>>& edges, vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long subtreeInversionSum(int[][] edges, int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar subtreeInversionSum = function(edges, nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def subtreeInversionSum(self, edges, nums, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Build the tree's adjacency list and initialize data structures for dynamic programming.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "undirected-tree",
+        "edges"
+      ],
+      "constraints": [
+        "rooted-at-node-0",
+        "n-nodes-0-to-n-1"
+      ]
+    },
+    {
+      "intent": "Compute the maximum possible sum of node values using tree dynamic programming with inversion constraints.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "tree-dp"
+      ],
+      "cues": [
+        "maximum-possible-sum",
+        "subtree-inversion-operation",
+        "distance-constraint-on-inversions"
+      ],
+      "constraints": [
+        "distance-must-be-at-least-k"
+      ]
+    }
+  ]
+}

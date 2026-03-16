@@ -1,0 +1,60 @@
+{
+  "slug": "high-access-employees",
+  "link": "https://leetcode.com/problems/high-access-employees/",
+  "difficulty": "Medium",
+  "index": "2432",
+  "description_full": "You are given a 2D 0-indexed array of strings, access_times, with size n. For each i where 0 <= i <= n - 1, access_times[i][0] represents the name of an employee, and access_times[i][1] represents the access time of that employee. All entries in access_times are within the same day.\n\nThe access time is represented as four digits using a 24-hour time format, for example, \"0800\" or \"2250\".\n\nAn employee is said to be high-access if he has accessed the system three or more times within a one-hour period.\n\nTimes with exactly one hour of difference are not considered part of the same one-hour period. For example, \"0815\" and \"0915\" are not part of the same one-hour period.\n\nAccess times at the start and end of the day are not counted within the same one-hour period. For example, \"0005\" and \"2350\" are not part of the same one-hour period.\n\nReturn a list that contains the names of high-access employees with any order you want.\n\n \nExample 1:\n\n\nInput: access_times = [[\"a\",\"0549\"],[\"b\",\"0457\"],[\"a\",\"0532\"],[\"a\",\"0621\"],[\"b\",\"0540\"]]\nOutput: [\"a\"]\nExplanation: \"a\" has three access times in the one-hour period of [05:32, 06:31] which are 05:32, 05:49, and 06:21.\nBut \"b\" does not have more than two access times at all.\nSo the answer is [\"a\"].\n\nExample 2:\n\n\nInput: access_times = [[\"d\",\"0002\"],[\"c\",\"0808\"],[\"c\",\"0829\"],[\"e\",\"0215\"],[\"d\",\"1508\"],[\"d\",\"1444\"],[\"d\",\"1410\"],[\"c\",\"0809\"]]\nOutput: [\"c\",\"d\"]\nExplanation: \"c\" has three access times in the one-hour period of [08:08, 09:07] which are 08:08, 08:09, and 08:29.\n\"d\" has also three access times in the one-hour period of [14:10, 15:09] which are 14:10, 14:44, and 15:08.\nHowever, \"e\" has just one access time, so it can not be in the answer and the final answer is [\"c\",\"d\"].\n\nExample 3:\n\n\nInput: access_times = [[\"cd\",\"1025\"],[\"ab\",\"1025\"],[\"cd\",\"1046\"],[\"cd\",\"1055\"],[\"ab\",\"1124\"],[\"ab\",\"1120\"]]\nOutput: [\"ab\",\"cd\"]\nExplanation: \"ab\" has three access times in the one-hour period of [10:25, 11:24] which are 10:25, 11:20, and 11:24.\n\"cd\" has also three access times in the one-hour period of [10:25, 11:24] which are 10:25, 10:46, and 10:55.\nSo the answer is [\"ab\",\"cd\"].\n\n \nConstraints:\n\n\n\t1 <= access_times.length <= 100\n\taccess_times[i].length == 2\n\t1 <= access_times[i][0].length <= 10\n\taccess_times[i][0] consists only of English small letters.\n\taccess_times[i][1].length == 4\n\taccess_times[i][1] is in 24-hour time format.\n\taccess_times[i][1] consists only of '0' to '9'.\n\n",
+  "description": "You are given a 2D 0-indexed array of strings, access_times, with size n. For each i where 0 <= i <= n - 1, access_times[i][0] represents the name of an employee, and access_times[i][1] represents the access time of that employee. All entries in access_times are within the same day.\n\nThe access time is represented as four digits using a 24-hour time format, for example, \"0800\" or \"2250\".\n\nAn employee is said to be high-access if he has accessed the system three or more times within a one-hour period.\n\nTimes with exactly one hour of difference are not considered part of the same one-hour period. For example, \"0815\" and \"0915\" are not part of the same one-hour period.\n\nAccess times at the start and end of the day are not counted within the same one-hour period. For example, \"0005\" and \"2350\" are not part of the same one-hour period.\n\nReturn a list that contains the names of high-access employees with any order you want.",
+  "example": "Input: access_times = [[\"a\",\"0549\"],[\"b\",\"0457\"],[\"a\",\"0532\"],[\"a\",\"0621\"],[\"b\",\"0540\"]]\nOutput: [\"a\"]\nExplanation: \"a\" has three access times in the one-hour period of [05:32, 06:31] which are 05:32, 05:49, and 06:21.\nBut \"b\" does not have more than two access times at all.\nSo the answer is [\"a\"].",
+  "constraints_text": "1 <= access_times.length <= 100\n\taccess_times[i].length == 2\n\t1 <= access_times[i][0].length <= 10\n\taccess_times[i][0] consists only of English small letters.\n\taccess_times[i][1].length == 4\n\taccess_times[i][1] is in 24-hour time format.\n\taccess_times[i][1] consists only of '0' to '9'.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findHighAccessEmployees(char*** access_times, int access_timesSize, int* access_timesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findHighAccessEmployees(vector<vector<string>>& access_times) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findHighAccessEmployees(List<List<String>> access_times) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} access_times\n * @return {string[]}\n */\nvar findHighAccessEmployees = function(access_times) {\n    \n};",
+    "python": "class Solution(object):\n    def findHighAccessEmployees(self, access_times):\n        \"\"\"\n        :type access_times: List[List[str]]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse access time strings into minutes from midnight and group them by employee, sorting each employee's access times.",
+      "structures": [
+        "array",
+        "string",
+        "number",
+        "ds"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "access-times-i-0",
+        "access-times-i-1",
+        "24-hour-time-format"
+      ],
+      "constraints": [
+        "all-entries-within-same-day"
+      ]
+    },
+    {
+      "intent": "For each employee, identify if they are high-access by checking for three or more access times within a 59-minute window.",
+      "structures": [
+        "array",
+        "number",
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "sliding-window",
+        "enumeration"
+      ],
+      "cues": [
+        "high-access-if-three-or-more-times-within-a-one-hour-period",
+        "times-with-exactly-one-hour-of-difference-are-not-considered"
+      ],
+      "constraints": [
+        "3-accesses",
+        "time-diff-60-minutes"
+      ]
+    }
+  ]
+}

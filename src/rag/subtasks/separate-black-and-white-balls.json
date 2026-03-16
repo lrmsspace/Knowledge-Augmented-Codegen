@@ -1,0 +1,39 @@
+{
+  "slug": "separate-black-and-white-balls",
+  "link": "https://leetcode.com/problems/separate-black-and-white-balls/",
+  "difficulty": "Medium",
+  "index": "2434",
+  "description_full": "There are n balls on a table, each ball has a color black or white.\n\nYou are given a 0-indexed binary string s of length n, where 1 and 0 represent black and white balls, respectively.\n\nIn each step, you can choose two adjacent balls and swap them.\n\nReturn the minimum number of steps to group all the black balls to the right and all the white balls to the left.\n\n \nExample 1:\n\n\nInput: s = \"101\"\nOutput: 1\nExplanation: We can group all the black balls to the right in the following way:\n- Swap s[0] and s[1], s = \"011\".\nInitially, 1s are not grouped together, requiring at least 1 step to group them to the right.\n\nExample 2:\n\n\nInput: s = \"100\"\nOutput: 2\nExplanation: We can group all the black balls to the right in the following way:\n- Swap s[0] and s[1], s = \"010\".\n- Swap s[1] and s[2], s = \"001\".\nIt can be proven that the minimum number of steps needed is 2.\n\n\nExample 3:\n\n\nInput: s = \"0111\"\nOutput: 0\nExplanation: All the black balls are already grouped to the right.\n\n\n \nConstraints:\n\n\n\t1 <= n == s.length <= 105\n\ts[i] is either '0' or '1'.\n\n",
+  "description": "There are n balls on a table, each ball has a color black or white.\n\nYou are given a 0-indexed binary string s of length n, where 1 and 0 represent black and white balls, respectively.\n\nIn each step, you can choose two adjacent balls and swap them.\n\nReturn the minimum number of steps to group all the black balls to the right and all the white balls to the left.",
+  "example": "Input: s = \"101\"\nOutput: 1\nExplanation: We can group all the black balls to the right in the following way:\n- Swap s[0] and s[1], s = \"011\".\nInitially, 1s are not grouped together, requiring at least 1 step to group them to the right.",
+  "constraints_text": "1 <= n == s.length <= 105\n\ts[i] is either '0' or '1'.",
+  "templates": {
+    "c": "long long minimumSteps(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minimumSteps(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumSteps(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumSteps = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumSteps(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum swaps required by iterating through the string and counting how many '1's appear before each '0'.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "minimum-number-of-steps",
+        "swap-adjacent-balls",
+        "group-all-black-balls-to-the-right-and-all-white-balls-to-the-left"
+      ],
+      "constraints": [
+        "1-n-s-length-105",
+        "s-i-is-either-0-or-1"
+      ]
+    }
+  ]
+}

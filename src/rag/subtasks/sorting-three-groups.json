@@ -1,0 +1,38 @@
+{
+  "slug": "sorting-three-groups",
+  "link": "https://leetcode.com/problems/sorting-three-groups/",
+  "difficulty": "Medium",
+  "index": "2395",
+  "description_full": "You are given an integer array nums. Each element in nums is 1, 2 or 3. In each operation, you can remove an element from nums. Return the minimum number of operations to make nums non-decreasing.\n\n \nExample 1:\n\n\nInput: nums = [2,1,3,2,1]\n\nOutput: 3\n\nExplanation:\n\nOne of the optimal solutions is to remove nums[0], nums[2] and nums[3].\n\n\nExample 2:\n\n\nInput: nums = [1,3,2,1,3,3]\n\nOutput: 2\n\nExplanation:\n\nOne of the optimal solutions is to remove nums[1] and nums[2].\n\n\nExample 3:\n\n\nInput: nums = [2,2,2,2,3,3]\n\nOutput: 0\n\nExplanation:\n\nnums is already non-decreasing.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t1 <= nums[i] <= 3\n\n\n \nFollow-up: Can you come up with an algorithm that runs in O(n) time complexity?",
+  "description": "You are given an integer array nums. Each element in nums is 1, 2 or 3. In each operation, you can remove an element from nums. Return the minimum number of operations to make nums non-decreasing.",
+  "example": "Input: nums = [2,1,3,2,1]\n\nOutput: 3\n\nExplanation:\n\nOne of the optimal solutions is to remove nums[0], nums[2] and nums[3].",
+  "constraints_text": "1 <= nums.length <= 100\n\t1 <= nums[i] <= 3\n\n\n \nFollow-up: Can you come up with an algorithm that runs in O(n) time complexity?",
+  "templates": {
+    "c": "int minimumOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(List<Integer> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum length of a non-decreasing subsequence composed of 1s, 2s, and 3s, then derive minimum operations.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "non-decreasing",
+        "elements-1-2-or-3"
+      ],
+      "constraints": [
+        "1-nums-length-100",
+        "1-nums-i-3"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "slug": "count-unguarded-cells-in-the-grid",
+  "link": "https://leetcode.com/problems/count-unguarded-cells-in-the-grid/",
+  "difficulty": "Medium",
+  "index": "1551",
+  "description_full": "You are given two integers m and n representing a 0-indexed m x n grid. You are also given two 2D integer arrays guards and walls where guards[i] = [rowi, coli] and walls[j] = [rowj, colj] represent the positions of the ith guard and jth wall respectively.\n\nA guard can see every cell in the four cardinal directions (north, east, south, or west) starting from their position unless obstructed by a wall or another guard. A cell is guarded if there is at least one guard that can see it.\n\nReturn the number of unoccupied cells that are not guarded.\n\n \nExample 1:\n\n\nInput: m = 4, n = 6, guards = [[0,0],[1,1],[2,3]], walls = [[0,1],[2,2],[1,4]]\nOutput: 7\nExplanation: The guarded and unguarded cells are shown in red and green respectively in the above diagram.\nThere are a total of 7 unguarded cells, so we return 7.\n\n\nExample 2:\n\n\nInput: m = 3, n = 3, guards = [[1,1]], walls = [[0,1],[1,0],[2,1],[1,2]]\nOutput: 4\nExplanation: The unguarded cells are shown in green in the above diagram.\nThere are a total of 4 unguarded cells, so we return 4.\n\n\n \nConstraints:\n\n\n\t1 <= m, n <= 105\n\t2 <= m * n <= 105\n\t1 <= guards.length, walls.length <= 5 * 104\n\t2 <= guards.length + walls.length <= m * n\n\tguards[i].length == walls[j].length == 2\n\t0 <= rowi, rowj < m\n\t0 <= coli, colj < n\n\tAll the positions in guards and walls are unique.\n\n",
+  "description": "You are given two integers m and n representing a 0-indexed m x n grid. You are also given two 2D integer arrays guards and walls where guards[i] = [rowi, coli] and walls[j] = [rowj, colj] represent the positions of the ith guard and jth wall respectively.\n\nA guard can see every cell in the four cardinal directions (north, east, south, or west) starting from their position unless obstructed by a wall or another guard. A cell is guarded if there is at least one guard that can see it.\n\nReturn the number of unoccupied cells that are not guarded.",
+  "example": "Input: m = 4, n = 6, guards = [[0,0],[1,1],[2,3]], walls = [[0,1],[2,2],[1,4]]\nOutput: 7\nExplanation: The guarded and unguarded cells are shown in red and green respectively in the above diagram.\nThere are a total of 7 unguarded cells, so we return 7.",
+  "constraints_text": "1 <= m, n <= 105\n\t2 <= m * n <= 105\n\t1 <= guards.length, walls.length <= 5 * 104\n\t2 <= guards.length + walls.length <= m * n\n\tguards[i].length == walls[j].length == 2\n\t0 <= rowi, rowj < m\n\t0 <= coli, colj < n\n\tAll the positions in guards and walls are unique.",
+  "templates": {
+    "c": "int countUnguarded(int m, int n, int** guards, int guardsSize, int* guardsColSize, int** walls, int wallsSize, int* wallsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countUnguarded(int m, int n, vector<vector<int>>& guards, vector<vector<int>>& walls) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countUnguarded(int m, int n, int[][] guards, int[][] walls) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @param {number[][]} guards\n * @param {number[][]} walls\n * @return {number}\n */\nvar countUnguarded = function(m, n, guards, walls) {\n    \n};",
+    "python": "class Solution(object):\n    def countUnguarded(self, m, n, guards, walls):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :type guards: List[List[int]]\n        :type walls: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize an m x n grid, marking positions of guards and walls.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "0-indexed-m-x-n-grid",
+        "guards",
+        "walls"
+      ],
+      "constraints": [
+        "m-n-105",
+        "all-positions-unique"
+      ]
+    },
+    {
+      "intent": "Perform four directional sweeps (left, right, up, down) to mark all cells visible to any guard.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "guard-can-see-every-cell-in-the-four-cardinal-directions",
+        "obstructed-by-a-wall-or-another-guard",
+        "cell-is-guarded"
+      ],
+      "constraints": [
+        "m-n-105"
+      ]
+    },
+    {
+      "intent": "Count the total number of unoccupied cells that are not marked as guarded.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "unoccupied-cells-that-are-not-guarded",
+        "return-the-number"
+      ],
+      "constraints": [
+        "m-n-105"
+      ]
+    }
+  ]
+}

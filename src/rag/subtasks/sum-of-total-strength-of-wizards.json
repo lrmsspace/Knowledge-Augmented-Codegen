@@ -1,0 +1,80 @@
+{
+  "slug": "sum-of-total-strength-of-wizards",
+  "link": "https://leetcode.com/problems/sum-of-total-strength-of-wizards/",
+  "difficulty": "Hard",
+  "index": "2168",
+  "description_full": "As the ruler of a kingdom, you have an army of wizards at your command.\n\nYou are given a 0-indexed integer array strength, where strength[i] denotes the strength of the ith wizard. For a contiguous group of wizards (i.e. the wizards' strengths form a subarray of strength), the total strength is defined as the product of the following two values:\n\n\n\tThe strength of the weakest wizard in the group.\n\tThe total of all the individual strengths of the wizards in the group.\n\n\nReturn the sum of the total strengths of all contiguous groups of wizards. Since the answer may be very large, return it modulo 109 + 7.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: strength = [1,3,1,2]\nOutput: 44\nExplanation: The following are all the contiguous groups of wizards:\n- [1] from [1,3,1,2] has a total strength of min([1]) * sum([1]) = 1 * 1 = 1\n- [3] from [1,3,1,2] has a total strength of min([3]) * sum([3]) = 3 * 3 = 9\n- [1] from [1,3,1,2] has a total strength of min([1]) * sum([1]) = 1 * 1 = 1\n- [2] from [1,3,1,2] has a total strength of min([2]) * sum([2]) = 2 * 2 = 4\n- [1,3] from [1,3,1,2] has a total strength of min([1,3]) * sum([1,3]) = 1 * 4 = 4\n- [3,1] from [1,3,1,2] has a total strength of min([3,1]) * sum([3,1]) = 1 * 4 = 4\n- [1,2] from [1,3,1,2] has a total strength of min([1,2]) * sum([1,2]) = 1 * 3 = 3\n- [1,3,1] from [1,3,1,2] has a total strength of min([1,3,1]) * sum([1,3,1]) = 1 * 5 = 5\n- [3,1,2] from [1,3,1,2] has a total strength of min([3,1,2]) * sum([3,1,2]) = 1 * 6 = 6\n- [1,3,1,2] from [1,3,1,2] has a total strength of min([1,3,1,2]) * sum([1,3,1,2]) = 1 * 7 = 7\nThe sum of all the total strengths is 1 + 9 + 1 + 4 + 4 + 4 + 3 + 5 + 6 + 7 = 44.\n\n\nExample 2:\n\n\nInput: strength = [5,4,6]\nOutput: 213\nExplanation: The following are all the contiguous groups of wizards: \n- [5] from [5,4,6] has a total strength of min([5]) * sum([5]) = 5 * 5 = 25\n- [4] from [5,4,6] has a total strength of min([4]) * sum([4]) = 4 * 4 = 16\n- [6] from [5,4,6] has a total strength of min([6]) * sum([6]) = 6 * 6 = 36\n- [5,4] from [5,4,6] has a total strength of min([5,4]) * sum([5,4]) = 4 * 9 = 36\n- [4,6] from [5,4,6] has a total strength of min([4,6]) * sum([4,6]) = 4 * 10 = 40\n- [5,4,6] from [5,4,6] has a total strength of min([5,4,6]) * sum([5,4,6]) = 4 * 15 = 60\nThe sum of all the total strengths is 25 + 16 + 36 + 36 + 40 + 60 = 213.\n\n\n \nConstraints:\n\n\n\t1 <= strength.length <= 105\n\t1 <= strength[i] <= 109\n\n",
+  "description": "As the ruler of a kingdom, you have an army of wizards at your command.\n\nYou are given a 0-indexed integer array strength, where strength[i] denotes the strength of the ith wizard. For a contiguous group of wizards (i.e. the wizards' strengths form a subarray of strength), the total strength is defined as the product of the following two values:\n\n\n\tThe strength of the weakest wizard in the group.\n\tThe total of all the individual strengths of the wizards in the group.\n\n\nReturn the sum of the total strengths of all contiguous groups of wizards. Since the answer may be very large, return it modulo 109 + 7.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: strength = [1,3,1,2]\nOutput: 44\nExplanation: The following are all the contiguous groups of wizards:\n- [1] from [1,3,1,2] has a total strength of min([1]) * sum([1]) = 1 * 1 = 1\n- [3] from [1,3,1,2] has a total strength of min([3]) * sum([3]) = 3 * 3 = 9\n- [1] from [1,3,1,2] has a total strength of min([1]) * sum([1]) = 1 * 1 = 1\n- [2] from [1,3,1,2] has a total strength of min([2]) * sum([2]) = 2 * 2 = 4\n- [1,3] from [1,3,1,2] has a total strength of min([1,3]) * sum([1,3]) = 1 * 4 = 4\n- [3,1] from [1,3,1,2] has a total strength of min([3,1]) * sum([3,1]) = 1 * 4 = 4\n- [1,2] from [1,3,1,2] has a total strength of min([1,2]) * sum([1,2]) = 1 * 3 = 3\n- [1,3,1] from [1,3,1,2] has a total strength of min([1,3,1]) * sum([1,3,1]) = 1 * 5 = 5\n- [3,1,2] from [1,3,1,2] has a total strength of min([3,1,2]) * sum([3,1,2]) = 1 * 6 = 6\n- [1,3,1,2] from [1,3,1,2] has a total strength of min([1,3,1,2]) * sum([1,3,1,2]) = 1 * 7 = 7\nThe sum of all the total strengths is 1 + 9 + 1 + 4 + 4 + 4 + 3 + 5 + 6 + 7 = 44.",
+  "constraints_text": "1 <= strength.length <= 105\n\t1 <= strength[i] <= 109",
+  "templates": {
+    "c": "int totalStrength(int* strength, int strengthSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int totalStrength(vector<int>& strength) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalStrength(int[] strength) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} strength\n * @return {number}\n */\nvar totalStrength = function(strength) {\n    \n};",
+    "python": "class Solution(object):\n    def totalStrength(self, strength):\n        \"\"\"\n        :type strength: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute prefix sums and prefix sums of prefix sums for efficient range sum queries.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "total-of-all-individual-strengths",
+        "sum-of-total-strengths",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "strength-array",
+        "modulo-arithmetic"
+      ]
+    },
+    {
+      "intent": "Determine the maximal range [L, R] for each strength[i] such that strength[i] is the minimum within that range.",
+      "structures": [
+        "array",
+        "stack"
+      ],
+      "actions": [
+        "monotonic-stack"
+      ],
+      "cues": [
+        "weakest-wizard-in-the-group",
+        "contiguous-group"
+      ],
+      "constraints": [
+        "strength-array",
+        "0-indexed"
+      ]
+    },
+    {
+      "intent": "Calculate the total strength for all valid contiguous groups and sum them up modulo 10^9 + 7.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-of-the-total-strengths-of-all-contiguous-groups",
+        "product-of-two-values",
+        "weakest-wizard",
+        "total-of-all-individual-strengths"
+      ],
+      "constraints": [
+        "strength-array",
+        "left-and-right-arrays",
+        "prefix-sum-arrays",
+        "modulo-arithmetic",
+        "answer-may-be-very-large"
+      ]
+    }
+  ]
+}

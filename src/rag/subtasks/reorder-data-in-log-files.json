@@ -1,0 +1,71 @@
+{
+  "slug": "reorder-data-in-log-files",
+  "link": "https://leetcode.com/problems/reorder-data-in-log-files/",
+  "difficulty": "Medium",
+  "index": "1032",
+  "description_full": "You are given an array of logs. Each log is a space-delimited string of words, where the first word is the identifier.\n\nThere are two types of logs:\n\n\n\tLetter-logs: All words (except the identifier) consist of lowercase English letters.\n\tDigit-logs: All words (except the identifier) consist of digits.\n\n\nReorder these logs so that:\n\n\n\tThe letter-logs come before all digit-logs.\n\tThe letter-logs are sorted lexicographically by their contents. If their contents are the same, then sort them lexicographically by their identifiers.\n\tThe digit-logs maintain their relative ordering.\n\n\nReturn the final order of the logs.\n\n \nExample 1:\n\n\nInput: logs = [\"dig1 8 1 5 1\",\"let1 art can\",\"dig2 3 6\",\"let2 own kit dig\",\"let3 art zero\"]\nOutput: [\"let1 art can\",\"let3 art zero\",\"let2 own kit dig\",\"dig1 8 1 5 1\",\"dig2 3 6\"]\nExplanation:\nThe letter-log contents are all different, so their ordering is \"art can\", \"art zero\", \"own kit dig\".\nThe digit-logs have a relative order of \"dig1 8 1 5 1\", \"dig2 3 6\".\n\n\nExample 2:\n\n\nInput: logs = [\"a1 9 2 3 1\",\"g1 act car\",\"zo4 4 7\",\"ab1 off key dog\",\"a8 act zoo\"]\nOutput: [\"g1 act car\",\"a8 act zoo\",\"ab1 off key dog\",\"a1 9 2 3 1\",\"zo4 4 7\"]\n\n\n \nConstraints:\n\n\n\t1 <= logs.length <= 100\n\t3 <= logs[i].length <= 100\n\tAll the tokens of logs[i] are separated by a single space.\n\tlogs[i] is guaranteed to have an identifier and at least one word after the identifier.\n\n",
+  "description": "You are given an array of logs. Each log is a space-delimited string of words, where the first word is the identifier.\n\nThere are two types of logs:\n\n\n\tLetter-logs: All words (except the identifier) consist of lowercase English letters.\n\tDigit-logs: All words (except the identifier) consist of digits.\n\n\nReorder these logs so that:\n\n\n\tThe letter-logs come before all digit-logs.\n\tThe letter-logs are sorted lexicographically by their contents. If their contents are the same, then sort them lexicographically by their identifiers.\n\tThe digit-logs maintain their relative ordering.\n\n\nReturn the final order of the logs.",
+  "example": "Input: logs = [\"dig1 8 1 5 1\",\"let1 art can\",\"dig2 3 6\",\"let2 own kit dig\",\"let3 art zero\"]\nOutput: [\"let1 art can\",\"let3 art zero\",\"let2 own kit dig\",\"dig1 8 1 5 1\",\"dig2 3 6\"]\nExplanation:\nThe letter-log contents are all different, so their ordering is \"art can\", \"art zero\", \"own kit dig\".\nThe digit-logs have a relative order of \"dig1 8 1 5 1\", \"dig2 3 6\".",
+  "constraints_text": "1 <= logs.length <= 100\n\t3 <= logs[i].length <= 100\n\tAll the tokens of logs[i] are separated by a single space.\n\tlogs[i] is guaranteed to have an identifier and at least one word after the identifier.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** reorderLogFiles(char** logs, int logsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> reorderLogFiles(vector<string>& logs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] reorderLogFiles(String[] logs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} logs\n * @return {string[]}\n */\nvar reorderLogFiles = function(logs) {\n    \n};",
+    "python": "class Solution(object):\n    def reorderLogFiles(self, logs):\n        \"\"\"\n        :type logs: List[str]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse each log, categorize it as a letter-log or digit-log, and store them separately.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "letter-logs",
+        "digit-logs",
+        "space-delimited",
+        "first-word-is-identifier"
+      ],
+      "constraints": [
+        "1-logs-length-100",
+        "3-logs-i-length-100"
+      ]
+    },
+    {
+      "intent": "Sort the collected letter-logs lexicographically by content, then by identifier if content is identical.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "sorted-lexicographically-by-their-contents",
+        "sort-them-lexicographically-by-their-identifiers"
+      ],
+      "constraints": []
+    },
+    {
+      "intent": "Combine the sorted letter-logs with the original digit-logs, placing letter-logs first.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "letter-logs-come-before-all-digit-logs",
+        "digit-logs-maintain-their-relative-ordering"
+      ],
+      "constraints": []
+    }
+  ]
+}

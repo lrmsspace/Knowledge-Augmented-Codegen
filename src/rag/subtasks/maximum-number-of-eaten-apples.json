@@ -1,0 +1,41 @@
+{
+  "slug": "maximum-number-of-eaten-apples",
+  "link": "https://leetcode.com/problems/maximum-number-of-eaten-apples/",
+  "difficulty": "Medium",
+  "index": "1341",
+  "description_full": "There is a special kind of apple tree that grows apples every day for n days. On the ith day, the tree grows apples[i] apples that will rot after days[i] days, that is on day i + days[i] the apples will be rotten and cannot be eaten. On some days, the apple tree does not grow any apples, which are denoted by apples[i] == 0 and days[i] == 0.\n\nYou decided to eat at most one apple a day (to keep the doctors away). Note that you can keep eating after the first n days.\n\nGiven two integer arrays days and apples of length n, return the maximum number of apples you can eat.\n\n \nExample 1:\n\n\nInput: apples = [1,2,3,5,2], days = [3,2,1,4,2]\nOutput: 7\nExplanation: You can eat 7 apples:\n- On the first day, you eat an apple that grew on the first day.\n- On the second day, you eat an apple that grew on the second day.\n- On the third day, you eat an apple that grew on the second day. After this day, the apples that grew on the third day rot.\n- On the fourth to the seventh days, you eat apples that grew on the fourth day.\n\n\nExample 2:\n\n\nInput: apples = [3,0,0,0,0,2], days = [3,0,0,0,0,2]\nOutput: 5\nExplanation: You can eat 5 apples:\n- On the first to the third day you eat apples that grew on the first day.\n- Do nothing on the fouth and fifth days.\n- On the sixth and seventh days you eat apples that grew on the sixth day.\n\n\n \nConstraints:\n\n\n\tn == apples.length == days.length\n\t1 <= n <= 2 * 104\n\t0 <= apples[i], days[i] <= 2 * 104\n\tdays[i] = 0 if and only if apples[i] = 0.\n\n",
+  "description": "There is a special kind of apple tree that grows apples every day for n days. On the ith day, the tree grows apples[i] apples that will rot after days[i] days, that is on day i + days[i] the apples will be rotten and cannot be eaten. On some days, the apple tree does not grow any apples, which are denoted by apples[i] == 0 and days[i] == 0.\n\nYou decided to eat at most one apple a day (to keep the doctors away). Note that you can keep eating after the first n days.\n\nGiven two integer arrays days and apples of length n, return the maximum number of apples you can eat.",
+  "example": "Input: apples = [1,2,3,5,2], days = [3,2,1,4,2]\nOutput: 7\nExplanation: You can eat 7 apples:\n- On the first day, you eat an apple that grew on the first day.\n- On the second day, you eat an apple that grew on the second day.\n- On the third day, you eat an apple that grew on the second day. After this day, the apples that grew on the third day rot.\n- On the fourth to the seventh days, you eat apples that grew on the fourth day.",
+  "constraints_text": "n == apples.length == days.length\n\t1 <= n <= 2 * 104\n\t0 <= apples[i], days[i] <= 2 * 104\n\tdays[i] = 0 if and only if apples[i] = 0.",
+  "templates": {
+    "c": "int eatenApples(int* apples, int applesSize, int* days, int daysSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int eatenApples(vector<int>& apples, vector<int>& days) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int eatenApples(int[] apples, int[] days) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} apples\n * @param {number[]} days\n * @return {number}\n */\nvar eatenApples = function(apples, days) {\n    \n};",
+    "python": "class Solution(object):\n    def eatenApples(self, apples, days):\n        \"\"\"\n        :type apples: List[int]\n        :type days: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Maximize apples eaten by simulating day-by-day, greedily consuming the soonest-rotting apple, and managing available apples with a min-heap.",
+      "structures": [
+        "heap",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "greedy",
+        "heap-select"
+      ],
+      "cues": [
+        "eat-at-most-one-apple-a-day",
+        "rot-after-days-i-days",
+        "maximum-number-of-apples",
+        "keep-eating-after-the-first-n-days"
+      ],
+      "constraints": [
+        "n-2-10-4",
+        "days-i-2-10-4"
+      ]
+    }
+  ]
+}

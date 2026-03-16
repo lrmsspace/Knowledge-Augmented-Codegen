@@ -1,0 +1,54 @@
+{
+  "slug": "maximum-value-at-a-given-index-in-a-bounded-array",
+  "link": "https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/",
+  "difficulty": "Medium",
+  "index": "1376",
+  "description_full": "You are given three positive integers: n, index, and maxSum. You want to construct an array nums (0-indexed) that satisfies the following conditions:\n\n\n\tnums.length == n\n\tnums[i] is a positive integer where 0 <= i < n.\n\tabs(nums[i] - nums[i+1]) <= 1 where 0 <= i < n-1.\n\tThe sum of all the elements of nums does not exceed maxSum.\n\tnums[index] is maximized.\n\n\nReturn nums[index] of the constructed array.\n\nNote that abs(x) equals x if x >= 0, and -x otherwise.\n\n \nExample 1:\n\n\nInput: n = 4, index = 2,  maxSum = 6\nOutput: 2\nExplanation: nums = [1,2,2,1] is one array that satisfies all the conditions.\nThere are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 is the maximum nums[2].\n\n\nExample 2:\n\n\nInput: n = 6, index = 1,  maxSum = 10\nOutput: 3\n\n\n \nConstraints:\n\n\n\t1 <= n <= maxSum <= 109\n\t0 <= index < n\n\n",
+  "description": "You are given three positive integers: n, index, and maxSum. You want to construct an array nums (0-indexed) that satisfies the following conditions:\n\n\n\tnums.length == n\n\tnums[i] is a positive integer where 0 <= i < n.\n\tabs(nums[i] - nums[i+1]) <= 1 where 0 <= i < n-1.\n\tThe sum of all the elements of nums does not exceed maxSum.\n\tnums[index] is maximized.\n\n\nReturn nums[index] of the constructed array.\n\nNote that abs(x) equals x if x >= 0, and -x otherwise.",
+  "example": "Input: n = 4, index = 2,  maxSum = 6\nOutput: 2\nExplanation: nums = [1,2,2,1] is one array that satisfies all the conditions.\nThere are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 is the maximum nums[2].",
+  "constraints_text": "1 <= n <= maxSum <= 109\n\t0 <= index < n",
+  "templates": {
+    "c": "int maxValue(int n, int index, int maxSum) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxValue(int n, int index, int maxSum) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxValue(int n, int index, int maxSum) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} index\n * @param {number} maxSum\n * @return {number}\n */\nvar maxValue = function(n, index, maxSum) {\n    \n};",
+    "python": "class Solution(object):\n    def maxValue(self, n, index, maxSum):\n        \"\"\"\n        :type n: int\n        :type index: int\n        :type maxSum: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform binary search to find the maximum possible value for nums[index] that satisfies the total sum constraint.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "nums-index-is-maximized",
+        "sum-of-all-elements-does-not-exceed-maxsum"
+      ],
+      "constraints": [
+        "1-n-maxsum-10-9",
+        "0-index-n"
+      ]
+    },
+    {
+      "intent": "Implement a helper function to calculate the minimum possible sum of the array for a given value of nums[index].",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "abs-nums-i-nums-i-1-1",
+        "nums-i-is-a-positive-integer"
+      ],
+      "constraints": [
+        "nums-i-1"
+      ]
+    }
+  ]
+}

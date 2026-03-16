@@ -1,0 +1,56 @@
+{
+  "slug": "longest-word-in-dictionary-through-deleting",
+  "link": "https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/",
+  "difficulty": "Medium",
+  "index": "851",
+  "description_full": "Given a string s and a string array dictionary, return the longest string in the dictionary that can be formed by deleting some of the given string characters. If there is more than one possible result, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.\n\n \nExample 1:\n\n\nInput: s = \"abpcplea\", dictionary = [\"ale\",\"apple\",\"monkey\",\"plea\"]\nOutput: \"apple\"\n\n\nExample 2:\n\n\nInput: s = \"abpcplea\", dictionary = [\"a\",\"b\",\"c\"]\nOutput: \"a\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\t1 <= dictionary.length <= 1000\n\t1 <= dictionary[i].length <= 1000\n\ts and dictionary[i] consist of lowercase English letters.\n\n",
+  "description": "Given a string s and a string array dictionary, return the longest string in the dictionary that can be formed by deleting some of the given string characters. If there is more than one possible result, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.",
+  "example": "Input: s = \"abpcplea\", dictionary = [\"ale\",\"apple\",\"monkey\",\"plea\"]\nOutput: \"apple\"",
+  "constraints_text": "1 <= s.length <= 1000\n\t1 <= dictionary.length <= 1000\n\t1 <= dictionary[i].length <= 1000\n\ts and dictionary[i] consist of lowercase English letters.",
+  "templates": {
+    "c": "char* findLongestWord(char* s, char** dictionary, int dictionarySize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string findLongestWord(string s, vector<string>& dictionary) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String findLongestWord(String s, List<String> dictionary) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} dictionary\n * @return {string}\n */\nvar findLongestWord = function(s, dictionary) {\n    \n};",
+    "python": "class Solution(object):\n    def findLongestWord(self, s, dictionary):\n        \"\"\"\n        :type s: str\n        :type dictionary: List[str]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a helper function to check if a word is a subsequence of another string.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "formed-by-deleting-some-of-the-given-string-characters"
+      ],
+      "constraints": [
+        "s-length-1000",
+        "dictionary-i-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through the dictionary, apply the subsequence check, and track the best result based on length and lexicographical order.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "longest-string",
+        "smallest-lexicographical-order",
+        "return-the-empty-string"
+      ],
+      "constraints": [
+        "dictionary-length-1000"
+      ]
+    }
+  ]
+}

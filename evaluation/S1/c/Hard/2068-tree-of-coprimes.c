@@ -1,0 +1,144 @@
+// Source: https://leetcode.com/problems/tree-of-coprimes/   |   Difficulty: Hard
+//
+// Problem Description:
+// There is a tree (i.e., a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. Each node has a value associated with it, and the root of the tree is node 0.
+//
+// To represent this tree, you are given an integer array nums and a 2D array edges. Each nums[i] represents the ith node's value, and each edges[j] = [uj, vj] represents an edge between nodes uj and vj in the tree.
+//
+// Two values x and y are coprime if gcd(x, y) == 1 where gcd(x, y) is the greatest common divisor of x and y.
+//
+// An ancestor of a node i is any other node on the shortest path from node i to the root. A node is not considered an ancestor of itself.
+//
+// Return an array ans of size n, where ans[i] is the closest ancestor to node i such that nums[i] and nums[ans[i]] are coprime, or -1 if there is no such ancestor.
+//
+// Example:
+// Input: nums = [2,3,3,2], edges = [[0,1],[1,2],[1,3]]
+// Output: [-1,0,0,1]
+// Explanation: In the above figure, each node's value is in parentheses.
+// - Node 0 has no coprime ancestors.
+// - Node 1 has only one ancestor, node 0. Their values are coprime (gcd(2,3) == 1).
+// - Node 2 has two ancestors, nodes 1 and 0. Node 1's value is not coprime (gcd(3,3) == 3), but node 0's
+//   value is (gcd(2,3) == 1), so node 0 is the closest valid ancestor.
+// - Node 3 has two ancestors, nodes 1 and 0. It is coprime with node 1 (gcd(3,2) == 1), so node 1 is its
+//   closest valid ancestor.
+//
+// Constraints:
+// nums.length == n
+// 	1 <= nums[i] <= 50
+// 	1 <= n <= 105
+// 	edges.length == n - 1
+// 	edges[j].length == 2
+// 	0 <= uj, vj < n
+// 	uj != vj
+//
+// Helpful references (internal KB):
+// - Lowest Common Ancestor (tree, array, dfs)
+//   • When to use: Use this algorithm to efficiently find the lowest common ancestor of two nodes in a tree. It is particularly effective for answering multiple LCA queries on a static tree after initial preprocessing.
+//   • Idea: This algorithm preprocesses a tree using a DFS to build an Euler tour and record node depths. It transforms Lowest Common Ancestor (LCA) queries into Range Minimum Queries (RMQ) on the Euler tour, enabling O(1) query time after O(N log N) preprocessing.
+//   • Invariants: During DFS, `euler` contains the sequence of visited nodes, and `height` stores each node's depth from the root.; The `first` array correctly maps each node to its initial index in the `euler` tour.
+//   • Tips: Perform a single DFS to compute node depths and construct the Euler tour along with first occurrences.; Utilize a Sparse Table or Segment Tree for O(1) or O(log N) Range Minimum Query after preprocessing.
+//   • Pitfalls: Incorrectly building the Euler tour, especially missing the 'return' visits to parent nodes.; Off-by-one errors when defining the range for the Range Minimum Query on the Euler tour.
+// - Lattice points inside non-lattice polygon (number, recursion, counting, gcd)
+//   • When to use: Use when counting pairs or elements satisfying divisibility or GCD conditions. Also applicable for summing functions over pairs using number theory properties.
+//   • Idea: This approach leverages number theoretic properties like GCD, LCM, and prime factorization to efficiently count elements or pairs satisfying specific criteria. It often involves iterating through divisors or multiples, achieving complexities like O(N log N) or O(sqrt N) per query.
+//   • Invariants: All numbers processed so far have their relevant number-theoretic properties (e.g., prime factors, divisors) correctly determined.; The current count or sum accurately reflects all valid combinations found up to the current iteration.
+//   • Tips: Precompute primes or divisors using a sieve for efficiency.; Utilize properties of GCD and LCM, such as gcd(a,b) * lcm(a,b) = a * b.
+//   • Pitfalls: Overcounting or undercounting when using inclusion-exclusion.; Integer overflow with large products or sums.
+// - Search for connected components in a graph (stack, graph, dfs, recursion)
+//   • When to use: Use when the goal is to identify distinct groups of interconnected nodes within a graph, or to find all nodes reachable from a specific starting point.
+//   • Idea: Depth-First Search (DFS) explores a graph by traversing as far as possible along each branch before backtracking. It efficiently finds connected components by visiting all reachable nodes from an unvisited starting point, typically with O(V+E) time complexity.
+//   • Invariants: All nodes in the current DFS path from the start node to the current node are on the recursion stack.; Any node marked as visited will not be re-processed by the current DFS call.
+//   • Tips: Maintain a 'visited' status for each node to prevent cycles and redundant work.; Iterate through all nodes and start DFS if a node is unvisited to find all components.
+//   • Pitfalls: Excessive recursion depth can lead to stack overflow errors for large graphs.; Forgetting to mark nodes as visited results in infinite loops in cyclic graphs.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Use the C standard library only; no external packages.
+// - Do not change input/output formats or return value semantics.
+// - Conformance: ISO C (C89/C99/C11). Do NOT use GNU C extensions (nested functions, statement expressions, typeof, __auto_type, etc.). Avoid VLAs and non-standard builtins.
+// - If you introduce any helper functions, include their full implementations in this file; no hidden helpers.
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* getCoprimes(int* nums, int numsSize, int** edges, int edgesSize, int* edgesColSize, int* returnSize) {
+    /* Precompute coprime pairs for values 1 to 50 */
+    bool coprime[51][51];
+    for (int i = 1; i <= 50; ++i) {
+        for (int j = 1; j <= 50; ++j) {
+            int a = i, b = j;
+            while (b != 0) {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            coprime[i][j] = (a == 1);
+        }
+    }
+
+    /* Build adjacency list */
+    int **adj = (int**)malloc(numsSize * sizeof(int*));
+    int *adjSizes = (int*)calloc(numsSize, sizeof(int));
+    for (int i = 0; i < numsSize; ++i) {
+        adj[i] = (int*)malloc(numsSize * sizeof(int)); // worst case
+    }
+    for (int i = 0; i < edgesSize; ++i) {
+        int u = edges[i][0], v = edges[i][1];
+        adj[u][adjSizes[u]++] = v;
+        adj[v][adjSizes[v]++] = u;
+    }
+
+    /* DFS to find closest coprime ancestor */
+    int *result = (int*)malloc(numsSize * sizeof(int));
+    for (int i = 0; i < numsSize; ++i) result[i] = -1;
+
+    int stack[numsSize];
+    int stackSize = 0;
+    int depth[numsSize];
+    memset(depth, -1, numsSize * sizeof(int));
+
+    void dfs(int node, int parent, int d, int lastSeen[51], int lastDepth[51]) {
+        depth[node] = d;
+
+        /* Find closest coprime ancestor */
+        int closestDepth = -1;
+        int closestAncestor = -1;
+        for (int val = 1; val <= 50; ++val) {
+            if (coprime[nums[node]][val] && lastSeen[val] != -1) {
+                if (lastDepth[val] > closestDepth) {
+                    closestDepth = lastDepth[val];
+                    closestAncestor = lastSeen[val];
+                }
+            }
+        }
+        result[node] = closestAncestor;
+
+        /* Update last seen for current node's value */
+        int prevLastSeen = lastSeen[nums[node]];
+        int prevLastDepth = lastDepth[nums[node]];
+        lastSeen[nums[node]] = node;
+        lastDepth[nums[node]] = d;
+        /* DFS to children */
+        for (int i = 0; i < adjSizes[node]; ++i) {  
+            int neighbor = adj[node][i];
+            if (neighbor != parent) {
+                dfs(neighbor, node, d + 1, lastSeen, lastDepth);
+            }
+        }
+        /* Backtrack last seen */
+        lastSeen[nums[node]] = prevLastSeen;
+        lastDepth[nums[node]] = prevLastDepth;
+    }
+    int lastSeen[51];
+    int lastDepth[51];
+    memset(lastSeen, -1, sizeof(lastSeen));
+    memset(lastDepth, -1, sizeof(lastDepth));
+    dfs(0, -1, 0, lastSeen, lastDepth);
+    /* Cleanup */
+    for (int i = 0; i < numsSize; ++i) {
+        free(adj[i]);
+    }
+    free(adj);
+    free(adjSizes);
+    return result;
+}

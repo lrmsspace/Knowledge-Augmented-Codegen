@@ -1,0 +1,73 @@
+{
+  "slug": "number-of-pairs-of-strings-with-concatenation-equal-to-target",
+  "link": "https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target/",
+  "difficulty": "Medium",
+  "index": "1461",
+  "description_full": "Given an array of digit strings nums and a digit string target, return the number of pairs of indices (i, j) (where i != j) such that the concatenation of nums[i] + nums[j] equals target.\n\n \nExample 1:\n\n\nInput: nums = [\"777\",\"7\",\"77\",\"77\"], target = \"7777\"\nOutput: 4\nExplanation: Valid pairs are:\n- (0, 1): \"777\" + \"7\"\n- (1, 0): \"7\" + \"777\"\n- (2, 3): \"77\" + \"77\"\n- (3, 2): \"77\" + \"77\"\n\n\nExample 2:\n\n\nInput: nums = [\"123\",\"4\",\"12\",\"34\"], target = \"1234\"\nOutput: 2\nExplanation: Valid pairs are:\n- (0, 1): \"123\" + \"4\"\n- (2, 3): \"12\" + \"34\"\n\n\nExample 3:\n\n\nInput: nums = [\"1\",\"1\",\"1\"], target = \"11\"\nOutput: 6\nExplanation: Valid pairs are:\n- (0, 1): \"1\" + \"1\"\n- (1, 0): \"1\" + \"1\"\n- (0, 2): \"1\" + \"1\"\n- (2, 0): \"1\" + \"1\"\n- (1, 2): \"1\" + \"1\"\n- (2, 1): \"1\" + \"1\"\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 100\n\t1 <= nums[i].length <= 100\n\t2 <= target.length <= 100\n\tnums[i] and target consist of digits.\n\tnums[i] and target do not have leading zeros.\n\n",
+  "description": "Given an array of digit strings nums and a digit string target, return the number of pairs of indices (i, j) (where i != j) such that the concatenation of nums[i] + nums[j] equals target.",
+  "example": "Input: nums = [\"777\",\"7\",\"77\",\"77\"], target = \"7777\"\nOutput: 4\nExplanation: Valid pairs are:\n- (0, 1): \"777\" + \"7\"\n- (1, 0): \"7\" + \"777\"\n- (2, 3): \"77\" + \"77\"\n- (3, 2): \"77\" + \"77\"",
+  "constraints_text": "2 <= nums.length <= 100\n\t1 <= nums[i].length <= 100\n\t2 <= target.length <= 100\n\tnums[i] and target consist of digits.\n\tnums[i] and target do not have leading zeros.",
+  "templates": {
+    "c": "int numOfPairs(char** nums, int numsSize, char* target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numOfPairs(vector<string>& nums, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numOfPairs(String[] nums, String target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} nums\n * @param {string} target\n * @return {number}\n */\nvar numOfPairs = function(nums, target) {\n    \n};",
+    "python": "class Solution(object):\n    def numOfPairs(self, nums, target):\n        \"\"\"\n        :type nums: List[str]\n        :type target: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Pre-process input strings to quickly find counts of each unique string for efficient lookups.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "number-of-pairs",
+        "nums"
+      ],
+      "constraints": [
+        "nums-length-100"
+      ]
+    },
+    {
+      "intent": "Iterate through each string in nums as a potential first part of the target, determining the required second part.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "nums-i-nums-j-equals-target",
+        "target"
+      ],
+      "constraints": [
+        "nums-i-length-100",
+        "target-length-100"
+      ]
+    },
+    {
+      "intent": "Use pre-computed frequencies to count valid second parts for each potential first part, ensuring distinct indices.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "i-j",
+        "number-of-pairs"
+      ],
+      "constraints": [
+        "i-j"
+      ]
+    }
+  ]
+}

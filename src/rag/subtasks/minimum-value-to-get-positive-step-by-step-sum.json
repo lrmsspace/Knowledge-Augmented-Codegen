@@ -1,0 +1,40 @@
+{
+  "slug": "minimum-value-to-get-positive-step-by-step-sum",
+  "link": "https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/",
+  "difficulty": "Easy",
+  "index": "298",
+  "description_full": "Given an array of integers nums, you start with an initial positive value startValue.\n\nIn each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).\n\nReturn the minimum positive value of startValue such that the step by step sum is never less than 1.\n\n \nExample 1:\n\n\nInput: nums = [-3,2,-3,4,2]\nOutput: 5\nExplanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.\nstep by step sum\nstartValue = 4 | startValue = 5 | nums\n  (4 -3 ) = 1  | (5 -3 ) = 2    |  -3\n  (1 +2 ) = 3  | (2 +2 ) = 4    |   2\n  (3 -3 ) = 0  | (4 -3 ) = 1    |  -3\n  (0 +4 ) = 4  | (1 +4 ) = 5    |   4\n  (4 +2 ) = 6  | (5 +2 ) = 7    |   2\n\n\nExample 2:\n\n\nInput: nums = [1,2]\nOutput: 1\nExplanation: Minimum start value should be positive. \n\n\nExample 3:\n\n\nInput: nums = [1,-2,-3]\nOutput: 5\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t-100 <= nums[i] <= 100\n\n",
+  "description": "Given an array of integers nums, you start with an initial positive value startValue.\n\nIn each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).\n\nReturn the minimum positive value of startValue such that the step by step sum is never less than 1.",
+  "example": "Input: nums = [-3,2,-3,4,2]\nOutput: 5\nExplanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.\nstep by step sum\nstartValue = 4 | startValue = 5 | nums\n  (4 -3 ) = 1  | (5 -3 ) = 2    |  -3\n  (1 +2 ) = 3  | (2 +2 ) = 4    |   2\n  (3 -3 ) = 0  | (4 -3 ) = 1    |  -3\n  (0 +4 ) = 4  | (1 +4 ) = 5    |   4\n  (4 +2 ) = 6  | (5 +2 ) = 7    |   2",
+  "constraints_text": "1 <= nums.length <= 100\n\t-100 <= nums[i] <= 100",
+  "templates": {
+    "c": "int minStartValue(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minStartValue(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minStartValue(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minStartValue = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minStartValue(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum positive startValue such that the cumulative sum with elements from nums never falls below 1.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-positive-value",
+        "step-by-step-sum",
+        "never-less-than-1"
+      ],
+      "constraints": [
+        "initial-positive-value-startvalue",
+        "1-nums-length-100",
+        "100-nums-i-100"
+      ]
+    }
+  ]
+}

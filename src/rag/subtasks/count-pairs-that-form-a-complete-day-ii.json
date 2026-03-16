@@ -1,0 +1,38 @@
+{
+  "slug": "count-pairs-that-form-a-complete-day-ii",
+  "link": "https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii/",
+  "difficulty": "Medium",
+  "index": "2521",
+  "description_full": "Given an integer array hours representing times in hours, return an integer denoting the number of pairs i, j where i < j and hours[i] + hours[j] forms a complete day.\n\nA complete day is defined as a time duration that is an exact multiple of 24 hours.\n\nFor example, 1 day is 24 hours, 2 days is 48 hours, 3 days is 72 hours, and so on.\n\n \nExample 1:\n\n\nInput: hours = [12,12,30,24,24]\n\nOutput: 2\n\nExplanation: The pairs of indices that form a complete day are (0, 1) and (3, 4).\n\n\nExample 2:\n\n\nInput: hours = [72,48,24,3]\n\nOutput: 3\n\nExplanation: The pairs of indices that form a complete day are (0, 1), (0, 2), and (1, 2).\n\n\n \nConstraints:\n\n\n\t1 <= hours.length <= 5 * 105\n\t1 <= hours[i] <= 109\n\n",
+  "description": "Given an integer array hours representing times in hours, return an integer denoting the number of pairs i, j where i < j and hours[i] + hours[j] forms a complete day.\n\nA complete day is defined as a time duration that is an exact multiple of 24 hours.\n\nFor example, 1 day is 24 hours, 2 days is 48 hours, 3 days is 72 hours, and so on.",
+  "example": "Input: hours = [12,12,30,24,24]\n\nOutput: 2\n\nExplanation: The pairs of indices that form a complete day are (0, 1) and (3, 4).",
+  "constraints_text": "1 <= hours.length <= 5 * 105\n\t1 <= hours[i] <= 109",
+  "templates": {
+    "c": "long long countCompleteDayPairs(int* hours, int hoursSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long countCompleteDayPairs(vector<int>& hours) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countCompleteDayPairs(int[] hours) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} hours\n * @return {number}\n */\nvar countCompleteDayPairs = function(hours) {\n    \n};",
+    "python": "class Solution(object):\n    def countCompleteDayPairs(self, hours):\n        \"\"\"\n        :type hours: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count pairs (i, j) with i < j such that (hours[i] + hours[j]) % 24 == 0 by tracking remainder frequencies.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "pairs-i-j-where-i-j",
+        "complete-day",
+        "multiple-of-24"
+      ],
+      "constraints": [
+        "hours-length-5-10-5",
+        "hours-i-10-9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+// Source: https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/   |   Difficulty: Hard
+//
+// Problem Description:
+// Given a string s of lowercase letters, you need to find the maximum number of non-empty substrings of s that meet the following conditions:
+//
+//
+// 	The substrings do not overlap, that is for any two substrings s[i..j] and s[x..y], either j < x or i > y is true.
+// 	A substring that contains a certain character c must also contain all occurrences of c.
+//
+//
+// Find the maximum number of substrings that meet the above conditions. If there are multiple solutions with the same number of substrings, return the one with minimum total length. It can be shown that there exists a unique solution of minimum total length.
+//
+// Notice that you can return the substrings in any order.
+//
+// Example:
+// Input: s = "adefaddaccc"
+// Output: ["e","f","ccc"]
+// Explanation: The following are all the possible substrings that meet the conditions:
+// [
+//   "adefaddaccc"
+//   "adefadda",
+//   "ef",
+//   "e",
+//   "f",
+//   "ccc",
+// ]
+// If we choose the first string, we cannot choose anything else and we'd get only 1. If we choose "adefadda", we are left with "ccc" which is the only one that doesn't overlap, thus obtaining 2 substrings. Notice also, that it's not optimal to choose "ef" since it can be split into two. Therefore, the optimal way is to choose ["e","f","ccc"] which gives us 3 substrings. No other solution of the same number of substrings exist.
+//
+// Constraints:
+// 1 <= s.length <= 105
+// 	s contains only lowercase English letters.
+//
+// Helpful references (internal KB):
+// - Optimal schedule of jobs given their deadlines and durations (array, heap, greedy)
+//   • When to use: Use when given a set of tasks with deadlines and durations, and the objective is to maximize the number of completed tasks without interruption.
+//   • Idea: This greedy algorithm aims to maximize the number of jobs completed by prioritizing tasks that finish earliest. It typically involves sorting and using a min-heap, achieving an O(N log N) time complexity.
+//   • Invariants: All jobs processed up to the current point have been considered for scheduling.; The set of jobs in the heap represents the jobs currently scheduled to meet their deadlines.
+//   • Tips: Sort jobs by their deadlines in ascending order.; Maintain a min-heap of durations for jobs currently scheduled.
+//   • Pitfalls: Confusing job count maximization with total duration or profit.; Failing to update the current time correctly after scheduling a job.
+// - Lyndon factorization (string, greedy, two-pointers)
+//   • When to use: Use this algorithm to decompose a string into a unique sequence of Lyndon words, which are lexicographically smallest among their cyclic shifts. It is also applicable for finding the smallest cyclic shift of a string.
+//   • Idea: The Duval algorithm greedily factorizes a string into a sequence of Lyndon words by maintaining three pointers to manage processed, pre-simple, and untouched parts. It achieves this in O(N) time complexity.
+//   • Invariants: The prefix s[0...i-1] always contains a valid Lyndon factorization.; The substring s[i...j-1] is always a pre-simple string.
+//   • Tips: Thoroughly understand the definitions of 'simple string' and 'pre-simple string' to correctly apply the comparison logic.; The three pointers (i, j, k) are crucial; 'i' marks the start of the current pre-simple string, 'j' the start of the untouched part, and 'k' for comparison within the pre-simple string.
+//   • Pitfalls: Incorrectly resetting the 'k' pointer when s[j] > s[k], which should point back to the beginning of the simple word within s2.; Misinterpreting the length of the simple string (j - k) when a factorization step occurs.
+// - Generating all K-combinations (array, enumeration, greedy)
+//   • When to use: Use this when you need to iterate through all possible subsets of a fixed size K from a larger set, especially when a specific order like lexicographical is required.
+//   • Idea: This algorithm systematically generates all unique combinations of K elements from a set of N elements. It typically proceeds in lexicographical order, allowing for efficient enumeration of all C(N, K) possibilities.
+//   • Invariants: The current combination C is always sorted: C[0] < C[1] < ... < C[K-1].; All elements C[i] are distinct and within the range [0, N-1] (assuming 0-indexed).
+//   • Tips: Start with the smallest lexicographical combination (e.g., {1, 2, ..., K}).; To find the next combination, locate the rightmost element that can be incremented.
+//   • Pitfalls: Incorrectly handling boundary conditions when incrementing elements.; Duplicating combinations if not careful with the increment logic.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Do not add custom input parsing or console I/O unless the template explicitly requires it; rely on parameters/return value only.
+// - Use standard ECMAScript features supported by LeetCode (Node.js runtime); no external packages.
+// - Be careful with number precision: JavaScript Number is double; use BigInt only when necessary and keep return type consistent with the problem requirements.
+// - If you introduce helper functions, define them in the same file and avoid relying on global mutable state across test cases.
+
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var maxNumOfSubstrings = function(s) {
+    const n = s.length;
+    const firstOccurrence = new Array(26).fill(n);
+    const lastOccurrence = new Array(26).fill(-1);
+
+    for (let i = 0; i < n; i += 1) {
+        const charCode = s.charCodeAt(i) - 97;
+        firstOccurrence[charCode] = Math.min(firstOccurrence[charCode], i);
+        lastOccurrence[charCode] = Math.max(lastOccurrence[charCode], i);
+    }
+
+    const validSubstrings = [];
+    for (let i = 0; i < 26; i += 1) {
+        if (firstOccurrence[i] > lastOccurrence[i]) {
+            continue;
+        }
+        let left = firstOccurrence[i];
+        let right = lastOccurrence[i];
+
+        for (let j = left; j <= right; j += 1) {
+            const charCode = s.charCodeAt(j) - 97;
+            if (firstOccurrence[charCode] < left || lastOccurrence[charCode] > right) {
+                left = Math.min(left, firstOccurrence[charCode]);
+                right = Math.max(right, lastOccurrence[charCode]);
+            }
+        }
+        validSubstrings.push([left, right]);
+    }
+
+    validSubstrings.sort((a, b) => a[1] - b[1]);
+
+    const result = [];
+    let prevEnd = -1;
+    for (const [start, end] of validSubstrings) {
+        if (start > prevEnd) {
+            result.push(s.substring(start, end + 1));
+            prevEnd = end;
+        }
+    }
+
+    return result;
+};

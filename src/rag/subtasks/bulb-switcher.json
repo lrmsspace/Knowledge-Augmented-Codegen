@@ -1,0 +1,35 @@
+{
+  "slug": "bulb-switcher",
+  "link": "https://leetcode.com/problems/bulb-switcher/",
+  "difficulty": "Medium",
+  "index": "761",
+  "description_full": "There are n bulbs that are initially off. You first turn on all the bulbs, then you turn off every second bulb.\n\nOn the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the ith round, you toggle every i bulb. For the nth round, you only toggle the last bulb.\n\nReturn the number of bulbs that are on after n rounds.\n\n \nExample 1:\n\n\nInput: n = 3\nOutput: 1\nExplanation: At first, the three bulbs are [off, off, off].\nAfter the first round, the three bulbs are [on, on, on].\nAfter the second round, the three bulbs are [on, off, on].\nAfter the third round, the three bulbs are [on, off, off]. \nSo you should return 1 because there is only one bulb is on.\n\nExample 2:\n\n\nInput: n = 0\nOutput: 0\n\n\nExample 3:\n\n\nInput: n = 1\nOutput: 1\n\n\n \nConstraints:\n\n\n\t0 <= n <= 109\n\n",
+  "description": "There are n bulbs that are initially off. You first turn on all the bulbs, then you turn off every second bulb.\n\nOn the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the ith round, you toggle every i bulb. For the nth round, you only toggle the last bulb.\n\nReturn the number of bulbs that are on after n rounds.",
+  "example": "Input: n = 3\nOutput: 1\nExplanation: At first, the three bulbs are [off, off, off].\nAfter the first round, the three bulbs are [on, on, on].\nAfter the second round, the three bulbs are [on, off, on].\nAfter the third round, the three bulbs are [on, off, off]. \nSo you should return 1 because there is only one bulb is on.",
+  "constraints_text": "0 <= n <= 109",
+  "templates": {
+    "c": "int bulbSwitch(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int bulbSwitch(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int bulbSwitch(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar bulbSwitch = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def bulbSwitch(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine how many bulbs are toggled an odd number of times, which corresponds to counting perfect squares up to N.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "toggle-every-i-bulb",
+        "n-rounds"
+      ],
+      "constraints": [
+        "0-n-10-9"
+      ]
+    }
+  ]
+}

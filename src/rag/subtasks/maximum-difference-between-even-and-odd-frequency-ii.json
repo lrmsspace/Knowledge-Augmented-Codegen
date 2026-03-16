@@ -1,0 +1,71 @@
+{
+  "slug": "maximum-difference-between-even-and-odd-frequency-ii",
+  "link": "https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-ii/",
+  "difficulty": "Hard",
+  "index": "2798",
+  "description_full": "You are given a string s and an integer k. Your task is to find the maximum difference between the frequency of two characters, freq[a] - freq[b], in a substring subs of s, such that:\n\n\n\tsubs has a size of at least k.\n\tCharacter a has an odd frequency in subs.\n\tCharacter b has a non-zero even frequency in subs.\n\n\nReturn the maximum difference.\n\nNote that subs can contain more than 2 distinct characters.\n\n \nExample 1:\n\n\nInput: s = \"12233\", k = 4\n\nOutput: -1\n\nExplanation:\n\nFor the substring \"12233\", the frequency of '1' is 1 and the frequency of '3' is 2. The difference is 1 - 2 = -1.\n\n\nExample 2:\n\n\nInput: s = \"1122211\", k = 3\n\nOutput: 1\n\nExplanation:\n\nFor the substring \"11222\", the frequency of '2' is 3 and the frequency of '1' is 2. The difference is 3 - 2 = 1.\n\n\nExample 3:\n\n\nInput: s = \"110\", k = 3\n\nOutput: -1\n\n\n \nConstraints:\n\n\n\t3 <= s.length <= 3 * 104\n\ts consists only of digits '0' to '4'.\n\tThe input is generated that at least one substring has a character with an even frequency and a character with an odd frequency.\n\t1 <= k <= s.length\n\n",
+  "description": "You are given a string s and an integer k. Your task is to find the maximum difference between the frequency of two characters, freq[a] - freq[b], in a substring subs of s, such that:\n\n\n\tsubs has a size of at least k.\n\tCharacter a has an odd frequency in subs.\n\tCharacter b has a non-zero even frequency in subs.\n\n\nReturn the maximum difference.\n\nNote that subs can contain more than 2 distinct characters.",
+  "example": "Input: s = \"12233\", k = 4\n\nOutput: -1\n\nExplanation:\n\nFor the substring \"12233\", the frequency of '1' is 1 and the frequency of '3' is 2. The difference is 1 - 2 = -1.",
+  "constraints_text": "3 <= s.length <= 3 * 104\n\ts consists only of digits '0' to '4'.\n\tThe input is generated that at least one substring has a character with an even frequency and a character with an odd frequency.\n\t1 <= k <= s.length",
+  "templates": {
+    "c": "int maxDifference(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxDifference(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDifference(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar maxDifference = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxDifference(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Maintain character frequencies for a sliding window of at least size k.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "sliding-window",
+        "counting"
+      ],
+      "cues": [
+        "substring-subs",
+        "size-of-at-least-k",
+        "frequency"
+      ],
+      "constraints": [
+        "s-length-3-10-4",
+        "s-consists-only-of-digits-0-to-4"
+      ]
+    },
+    {
+      "intent": "For each valid window, identify the maximum odd frequency and minimum non-zero even frequency.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "character-a-has-an-odd-frequency",
+        "character-b-has-a-non-zero-even-frequency"
+      ],
+      "constraints": [
+        "s-consists-only-of-digits-0-to-4"
+      ]
+    },
+    {
+      "intent": "Calculate the difference for identified frequencies and track the overall maximum.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "maximum-difference",
+        "return-the-maximum-difference"
+      ],
+      "constraints": [
+        "output-1"
+      ]
+    }
+  ]
+}

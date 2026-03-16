@@ -1,0 +1,70 @@
+{
+  "slug": "maximum-area-rectangle-with-point-constraints-i",
+  "link": "https://leetcode.com/problems/maximum-area-rectangle-with-point-constraints-i/",
+  "difficulty": "Medium",
+  "index": "2589",
+  "description_full": "You are given an array points where points[i] = [xi, yi] represents the coordinates of a point on an infinite plane.\n\nYour task is to find the maximum area of a rectangle that:\n\n\n\tCan be formed using four of these points as its corners.\n\tDoes not contain any other point inside or on its border.\n\tHas its edges parallel to the axes.\n\n\nReturn the maximum area that you can obtain or -1 if no such rectangle is possible.\n\n \nExample 1:\n\n\nInput: points = [[1,1],[1,3],[3,1],[3,3]]\n\nOutput: 4\n\nExplanation:\n\n\n\nWe can make a rectangle with these 4 points as corners and there is no other point that lies inside or on the border. Hence, the maximum possible area would be 4.\n\n\nExample 2:\n\n\nInput: points = [[1,1],[1,3],[3,1],[3,3],[2,2]]\n\nOutput: -1\n\nExplanation:\n\n\n\nThere is only one rectangle possible is with points [1,1], [1,3], [3,1] and [3,3] but [2,2] will always lie inside it. Hence, returning -1.\n\n\nExample 3:\n\n\nInput: points = [[1,1],[1,3],[3,1],[3,3],[1,2],[3,2]]\n\nOutput: 2\n\nExplanation:\n\n\n\nThe maximum area rectangle is formed by the points [1,3], [1,2], [3,2], [3,3], which has an area of 2. Additionally, the points [1,1], [1,2], [3,1], [3,2] also form a valid rectangle with the same area.\n\n\n \nConstraints:\n\n\n\t1 <= points.length <= 10\n\tpoints[i].length == 2\n\t0 <= xi, yi <= 100\n\tAll the given points are unique.\n\n",
+  "description": "You are given an array points where points[i] = [xi, yi] represents the coordinates of a point on an infinite plane.\n\nYour task is to find the maximum area of a rectangle that:\n\n\n\tCan be formed using four of these points as its corners.\n\tDoes not contain any other point inside or on its border.\n\tHas its edges parallel to the axes.\n\n\nReturn the maximum area that you can obtain or -1 if no such rectangle is possible.",
+  "example": "Input: points = [[1,1],[1,3],[3,1],[3,3]]\n\nOutput: 4\n\nExplanation:\n\n\n\nWe can make a rectangle with these 4 points as corners and there is no other point that lies inside or on the border. Hence, the maximum possible area would be 4.",
+  "constraints_text": "1 <= points.length <= 10\n\tpoints[i].length == 2\n\t0 <= xi, yi <= 100\n\tAll the given points are unique.",
+  "templates": {
+    "c": "int maxRectangleArea(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxRectangleArea(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRectangleArea(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar maxRectangleArea = function(points) {\n    \n};",
+    "python": "class Solution(object):\n    def maxRectangleArea(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify all valid sets of four points that form an axis-parallel rectangle.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "four-of-these-points-as-its-corners",
+        "edges-parallel-to-the-axes"
+      ],
+      "constraints": [
+        "points-length-10"
+      ]
+    },
+    {
+      "intent": "Check if any other point lies inside or on the border of a candidate rectangle.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "does-not-contain-any-other-point-inside-or-on-its-border"
+      ],
+      "constraints": [
+        "points-length-10"
+      ]
+    },
+    {
+      "intent": "Calculate the area of valid rectangles and find the maximum.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "maximum-area",
+        "return-the-maximum-area-or-1"
+      ],
+      "constraints": [
+        "0-xi-yi-100"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+// Source: https://leetcode.com/problems/largest-element-in-an-array-after-merge-operations/   |   Difficulty: Medium
+//
+// Problem Description:
+// You are given a 0-indexed array nums consisting of positive integers.
+//
+// You can do the following operation on the array any number of times:
+//
+//
+// 	Choose an index i such that 0 <= i < nums.length - 1 and nums[i] <= nums[i + 1]. Replace the element nums[i + 1] with nums[i] + nums[i + 1] and delete the element nums[i] from the array.
+//
+//
+// Return the value of the largest element that you can possibly obtain in the final array.
+//
+// Example:
+// Input: nums = [2,3,7,9,3]
+// Output: 21
+// Explanation: We can apply the following operations on the array:
+// - Choose i = 0. The resulting array will be nums = [5,7,9,3].
+// - Choose i = 1. The resulting array will be nums = [5,16,3].
+// - Choose i = 0. The resulting array will be nums = [21,3].
+// The largest element in the final array is 21. It can be shown that we cannot obtain a larger element.
+//
+// Constraints:
+// 1 <= nums.length <= 105
+// 	1 <= nums[i] <= 106
+//
+
+class Solution {
+    public long maxArrayValue(int[] nums) {
+        long maxVal = 0;
+        long currSum = 0;
+
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (nums[i] <= currSum) {
+                currSum += nums[i];
+            } else {
+                maxVal = Math.max(maxVal, currSum);
+                currSum = nums[i];
+            }
+        }
+
+        maxVal = Math.max(maxVal, currSum);
+        return maxVal;          
+    }
+}

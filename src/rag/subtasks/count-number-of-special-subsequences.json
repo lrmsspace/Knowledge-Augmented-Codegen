@@ -1,0 +1,38 @@
+{
+  "slug": "count-number-of-special-subsequences",
+  "link": "https://leetcode.com/problems/count-number-of-special-subsequences/",
+  "difficulty": "Hard",
+  "index": "2104",
+  "description_full": "A sequence is special if it consists of a positive number of 0s, followed by a positive number of 1s, then a positive number of 2s.\n\n\n\tFor example, [0,1,2] and [0,0,1,1,1,2] are special.\n\tIn contrast, [2,1,0], [1], and [0,1,2,0] are not special.\n\n\nGiven an array nums (consisting of only integers 0, 1, and 2), return the number of different subsequences that are special. Since the answer may be very large, return it modulo 109 + 7.\n\nA subsequence of an array is a sequence that can be derived from the array by deleting some or no elements without changing the order of the remaining elements. Two subsequences are different if the set of indices chosen are different.\n\n \nExample 1:\n\n\nInput: nums = [0,1,2,2]\nOutput: 3\nExplanation: The special subsequences are bolded [0,1,2,2], [0,1,2,2], and [0,1,2,2].\n\n\nExample 2:\n\n\nInput: nums = [2,2,0,0]\nOutput: 0\nExplanation: There are no special subsequences in [2,2,0,0].\n\n\nExample 3:\n\n\nInput: nums = [0,1,2,0,1,2]\nOutput: 7\nExplanation: The special subsequences are bolded:\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n- [0,1,2,0,1,2]\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= nums[i] <= 2\n\n",
+  "description": "A sequence is special if it consists of a positive number of 0s, followed by a positive number of 1s, then a positive number of 2s.\n\n\n\tFor example, [0,1,2] and [0,0,1,1,1,2] are special.\n\tIn contrast, [2,1,0], [1], and [0,1,2,0] are not special.\n\n\nGiven an array nums (consisting of only integers 0, 1, and 2), return the number of different subsequences that are special. Since the answer may be very large, return it modulo 109 + 7.\n\nA subsequence of an array is a sequence that can be derived from the array by deleting some or no elements without changing the order of the remaining elements. Two subsequences are different if the set of indices chosen are different.",
+  "example": "Input: nums = [0,1,2,2]\nOutput: 3\nExplanation: The special subsequences are bolded [0,1,2,2], [0,1,2,2], and [0,1,2,2].",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= nums[i] <= 2",
+  "templates": {
+    "c": "int countSpecialSubsequences(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countSpecialSubsequences(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSpecialSubsequences(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countSpecialSubsequences = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def countSpecialSubsequences(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the total count of special subsequences by iteratively updating counts for subsequences ending in 0, 01, and 012.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "special-subsequence",
+        "0s-1s-2s",
+        "different-subsequences"
+      ],
+      "constraints": [
+        "modulo-10-9-7",
+        "nums-length-10-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "equal-sum-grid-partition-i",
+  "link": "https://leetcode.com/problems/equal-sum-grid-partition-i/",
+  "difficulty": "Medium",
+  "index": "2643",
+  "description_full": "You are given an m x n matrix grid of positive integers. Your task is to determine if it is possible to make either one horizontal or one vertical cut on the grid such that:\n\n\n\tEach of the two resulting sections formed by the cut is non-empty.\n\tThe sum of the elements in both sections is equal.\n\n\nReturn true if such a partition exists; otherwise return false.\n\n \nExample 1:\n\n\nInput: grid = [[1,4],[2,3]]\n\nOutput: true\n\nExplanation:\n\n\n\nA horizontal cut between row 0 and row 1 results in two non-empty sections, each with a sum of 5. Thus, the answer is true.\n\n\nExample 2:\n\n\nInput: grid = [[1,3],[2,4]]\n\nOutput: false\n\nExplanation:\n\nNo horizontal or vertical cut results in two non-empty sections with equal sums. Thus, the answer is false.\n\n\n \nConstraints:\n\n\n\t1 <= m == grid.length <= 105\n\t1 <= n == grid[i].length <= 105\n\t2 <= m * n <= 105\n\t1 <= grid[i][j] <= 105\n\n",
+  "description": "You are given an m x n matrix grid of positive integers. Your task is to determine if it is possible to make either one horizontal or one vertical cut on the grid such that:\n\n\n\tEach of the two resulting sections formed by the cut is non-empty.\n\tThe sum of the elements in both sections is equal.\n\n\nReturn true if such a partition exists; otherwise return false.",
+  "example": "Input: grid = [[1,4],[2,3]]\n\nOutput: true\n\nExplanation:\n\n\n\nA horizontal cut between row 0 and row 1 results in two non-empty sections, each with a sum of 5. Thus, the answer is true.",
+  "constraints_text": "1 <= m == grid.length <= 105\n\t1 <= n == grid[i].length <= 105\n\t2 <= m * n <= 105\n\t1 <= grid[i][j] <= 105",
+  "templates": {
+    "c": "bool canPartitionGrid(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canPartitionGrid(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canPartitionGrid(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar canPartitionGrid = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def canPartitionGrid(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate total grid sum, determine target section sum, and check for a valid horizontal cut.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-of-elements",
+        "equal",
+        "horizontal-cut",
+        "non-empty-sections"
+      ],
+      "constraints": [
+        "1-m-105",
+        "2-m-n-105",
+        "positive-integers"
+      ]
+    },
+    {
+      "intent": "If no horizontal cut found, check for a valid vertical cut.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-of-elements",
+        "equal",
+        "vertical-cut",
+        "non-empty-sections"
+      ],
+      "constraints": [
+        "1-n-105",
+        "2-m-n-105",
+        "positive-integers"
+      ]
+    }
+  ]
+}

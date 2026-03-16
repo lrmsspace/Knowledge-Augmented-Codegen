@@ -1,0 +1,62 @@
+{
+  "slug": "maximum-points-after-collecting-coins-from-all-nodes",
+  "link": "https://leetcode.com/problems/maximum-points-after-collecting-coins-from-all-nodes/",
+  "difficulty": "Hard",
+  "index": "2680",
+  "description_full": "There exists an undirected tree rooted at node 0 with n nodes labeled from 0 to n - 1. You are given a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree. You are also given a 0-indexed array coins of size n where coins[i] indicates the number of coins in the vertex i, and an integer k.\n\nStarting from the root, you have to collect all the coins such that the coins at a node can only be collected if the coins of its ancestors have been already collected.\n\nCoins at nodei can be collected in one of the following ways:\n\n\n\tCollect all the coins, but you will get coins[i] - k points. If coins[i] - k is negative then you will lose abs(coins[i] - k) points.\n\tCollect all the coins, but you will get floor(coins[i] / 2) points. If this way is used, then for all the nodej present in the subtree of nodei, coins[j] will get reduced to floor(coins[j] / 2).\n\n\nReturn the maximum points you can get after collecting the coins from all the tree nodes.\n\n \nExample 1:\n\n\nInput: edges = [[0,1],[1,2],[2,3]], coins = [10,10,3,3], k = 5\nOutput: 11                        \nExplanation: \nCollect all the coins from node 0 using the first way. Total points = 10 - 5 = 5.\nCollect all the coins from node 1 using the first way. Total points = 5 + (10 - 5) = 10.\nCollect all the coins from node 2 using the second way so coins left at node 3 will be floor(3 / 2) = 1. Total points = 10 + floor(3 / 2) = 11.\nCollect all the coins from node 3 using the second way. Total points = 11 + floor(1 / 2) = 11.\nIt can be shown that the maximum points we can get after collecting coins from all the nodes is 11. \n\n\nExample 2:\n \n\n\nInput: edges = [[0,1],[0,2]], coins = [8,4,4], k = 0\nOutput: 16\nExplanation: \nCoins will be collected from all the nodes using the first way. Therefore, total points = (8 - 0) + (4 - 0) + (4 - 0) = 16.\n\n\n \nConstraints:\n\n\n\tn == coins.length\n\t2 <= n <= 105\n\t0 <= coins[i] <= 104\n\tedges.length == n - 1\n\t0 <= edges[i][0], edges[i][1] < n\n\t0 <= k <= 104\n\n",
+  "description": "There exists an undirected tree rooted at node 0 with n nodes labeled from 0 to n - 1. You are given a 2D integer array edges of length n - 1, where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree. You are also given a 0-indexed array coins of size n where coins[i] indicates the number of coins in the vertex i, and an integer k.\n\nStarting from the root, you have to collect all the coins such that the coins at a node can only be collected if the coins of its ancestors have been already collected.\n\nCoins at nodei can be collected in one of the following ways:\n\n\n\tCollect all the coins, but you will get coins[i] - k points. If coins[i] - k is negative then you will lose abs(coins[i] - k) points.\n\tCollect all the coins, but you will get floor(coins[i] / 2) points. If this way is used, then for all the nodej present in the subtree of nodei, coins[j] will get reduced to floor(coins[j] / 2).\n\n\nReturn the maximum points you can get after collecting the coins from all the tree nodes.",
+  "example": "Input: edges = [[0,1],[1,2],[2,3]], coins = [10,10,3,3], k = 5\nOutput: 11                        \nExplanation: \nCollect all the coins from node 0 using the first way. Total points = 10 - 5 = 5.\nCollect all the coins from node 1 using the first way. Total points = 5 + (10 - 5) = 10.\nCollect all the coins from node 2 using the second way so coins left at node 3 will be floor(3 / 2) = 1. Total points = 10 + floor(3 / 2) = 11.\nCollect all the coins from node 3 using the second way. Total points = 11 + floor(1 / 2) = 11.\nIt can be shown that the maximum points we can get after collecting coins from all the nodes is 11.",
+  "constraints_text": "n == coins.length\n\t2 <= n <= 105\n\t0 <= coins[i] <= 104\n\tedges.length == n - 1\n\t0 <= edges[i][0], edges[i][1] < n\n\t0 <= k <= 104",
+  "templates": {
+    "c": "int maximumPoints(int** edges, int edgesSize, int* edgesColSize, int* coins, int coinsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumPoints(vector<vector<int>>& edges, vector<int>& coins, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumPoints(int[][] edges, int[] coins, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[]} coins\n * @param {number} k\n * @return {number}\n */\nvar maximumPoints = function(edges, coins, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumPoints(self, edges, coins, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type coins: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct the tree's adjacency list from the given edges, rooted at node 0.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "enumeration"
+      ],
+      "cues": [
+        "undirected-tree",
+        "edges-array",
+        "rooted-at-node-0"
+      ],
+      "constraints": [
+        "n-nodes",
+        "n-1-edges"
+      ]
+    },
+    {
+      "intent": "Implement a tree dynamic programming solution to find the maximum points, considering the coin halving effect.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "tree-dp",
+        "recursion",
+        "dfs"
+      ],
+      "cues": [
+        "maximum-points",
+        "collect-all-coins",
+        "coins-reduced-to-floor-coins-j-2-for-subtree"
+      ],
+      "constraints": [
+        "n-up-to-10-5",
+        "coins-i-up-to-10-4",
+        "k-up-to-10-4",
+        "max-halving-count-is-small"
+      ]
+    }
+  ]
+}

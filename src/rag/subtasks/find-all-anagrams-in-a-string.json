@@ -1,0 +1,40 @@
+{
+  "slug": "find-all-anagrams-in-a-string",
+  "link": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+  "difficulty": "Medium",
+  "index": "813",
+  "description_full": "Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.\n\n \nExample 1:\n\n\nInput: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".\n\n\nExample 2:\n\n\nInput: s = \"abab\", p = \"ab\"\nOutput: [0,1,2]\nExplanation:\nThe substring with start index = 0 is \"ab\", which is an anagram of \"ab\".\nThe substring with start index = 1 is \"ba\", which is an anagram of \"ab\".\nThe substring with start index = 2 is \"ab\", which is an anagram of \"ab\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.\n\n",
+  "description": "Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.",
+  "example": "Input: s = \"cbaebabacd\", p = \"abc\"\nOutput: [0,6]\nExplanation:\nThe substring with start index = 0 is \"cba\", which is an anagram of \"abc\".\nThe substring with start index = 6 is \"bac\", which is an anagram of \"abc\".",
+  "constraints_text": "1 <= s.length, p.length <= 3 * 104\n\ts and p consist of lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findAnagrams(char* s, char* p, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> findAnagrams(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {number[]}\n */\nvar findAnagrams = function(s, p) {\n    \n};",
+    "python": "class Solution(object):\n    def findAnagrams(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find all start indices of substrings in 's' that are anagrams of 'p' by using a sliding window and comparing character frequency maps.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "sliding-window",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "start-indices",
+        "p-s-anagrams",
+        "return-an-array"
+      ],
+      "constraints": [
+        "1-s-length-p-length-3-104",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

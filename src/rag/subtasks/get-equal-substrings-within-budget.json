@@ -1,0 +1,57 @@
+{
+  "slug": "get-equal-substrings-within-budget",
+  "link": "https://leetcode.com/problems/get-equal-substrings-within-budget/",
+  "difficulty": "Medium",
+  "index": "1151",
+  "description_full": "You are given two strings s and t of the same length and an integer maxCost.\n\nYou want to change s to t. Changing the ith character of s to ith character of t costs |s[i] - t[i]| (i.e., the absolute difference between the ASCII values of the characters).\n\nReturn the maximum length of a substring of s that can be changed to be the same as the corresponding substring of t with a cost less than or equal to maxCost. If there is no substring from s that can be changed to its corresponding substring from t, return 0.\n\n \nExample 1:\n\n\nInput: s = \"abcd\", t = \"bcdf\", maxCost = 3\nOutput: 3\nExplanation: \"abc\" of s can change to \"bcd\".\nThat costs 3, so the maximum length is 3.\n\n\nExample 2:\n\n\nInput: s = \"abcd\", t = \"cdef\", maxCost = 3\nOutput: 1\nExplanation: Each character in s costs 2 to change to character in t,  so the maximum length is 1.\n\n\nExample 3:\n\n\nInput: s = \"abcd\", t = \"acde\", maxCost = 0\nOutput: 1\nExplanation: You cannot make any change, so the maximum length is 1.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\tt.length == s.length\n\t0 <= maxCost <= 106\n\ts and t consist of only lowercase English letters.\n\n",
+  "description": "You are given two strings s and t of the same length and an integer maxCost.\n\nYou want to change s to t. Changing the ith character of s to ith character of t costs |s[i] - t[i]| (i.e., the absolute difference between the ASCII values of the characters).\n\nReturn the maximum length of a substring of s that can be changed to be the same as the corresponding substring of t with a cost less than or equal to maxCost. If there is no substring from s that can be changed to its corresponding substring from t, return 0.",
+  "example": "Input: s = \"abcd\", t = \"bcdf\", maxCost = 3\nOutput: 3\nExplanation: \"abc\" of s can change to \"bcd\".\nThat costs 3, so the maximum length is 3.",
+  "constraints_text": "1 <= s.length <= 105\n\tt.length == s.length\n\t0 <= maxCost <= 106\n\ts and t consist of only lowercase English letters.",
+  "templates": {
+    "c": "int equalSubstring(char* s, char* t, int maxCost) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int equalSubstring(string s, string t, int maxCost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int equalSubstring(String s, String t, int maxCost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number} maxCost\n * @return {number}\n */\nvar equalSubstring = function(s, t, maxCost) {\n    \n};",
+    "python": "class Solution(object):\n    def equalSubstring(self, s, t, maxCost):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type maxCost: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the absolute character difference cost for each position between strings s and t.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "s-i-t-i"
+      ],
+      "constraints": [
+        "s-length-t-length"
+      ]
+    },
+    {
+      "intent": "Find the maximum length of a contiguous subarray of costs whose sum is less than or equal to maxCost.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-length",
+        "substring",
+        "cost-less-than-or-equal-to-maxcost"
+      ],
+      "constraints": [
+        "1-s-length-105",
+        "0-maxcost-106"
+      ]
+    }
+  ]
+}

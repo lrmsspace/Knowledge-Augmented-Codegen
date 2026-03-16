@@ -1,0 +1,61 @@
+{
+  "slug": "maximum-subsequence-score",
+  "link": "https://leetcode.com/problems/maximum-subsequence-score/",
+  "difficulty": "Medium",
+  "index": "1663",
+  "description_full": "You are given two 0-indexed integer arrays nums1 and nums2 of equal length n and a positive integer k. You must choose a subsequence of indices from nums1 of length k.\n\nFor chosen indices i0, i1, ..., ik - 1, your score is defined as:\n\n\n\tThe sum of the selected elements from nums1 multiplied with the minimum of the selected elements from nums2.\n\tIt can defined simply as: (nums1[i0] + nums1[i1] +...+ nums1[ik - 1]) * min(nums2[i0] , nums2[i1], ... ,nums2[ik - 1]).\n\n\nReturn the maximum possible score.\n\nA subsequence of indices of an array is a set that can be derived from the set {0, 1, ..., n-1} by deleting some or no elements.\n\n \nExample 1:\n\n\nInput: nums1 = [1,3,3,2], nums2 = [2,1,3,4], k = 3\nOutput: 12\nExplanation: \nThe four possible subsequence scores are:\n- We choose the indices 0, 1, and 2 with score = (1+3+3) * min(2,1,3) = 7.\n- We choose the indices 0, 1, and 3 with score = (1+3+2) * min(2,1,4) = 6. \n- We choose the indices 0, 2, and 3 with score = (1+3+2) * min(2,3,4) = 12. \n- We choose the indices 1, 2, and 3 with score = (3+3+2) * min(1,3,4) = 8.\nTherefore, we return the max score, which is 12.\n\n\nExample 2:\n\n\nInput: nums1 = [4,2,3,1,1], nums2 = [7,5,10,9,6], k = 1\nOutput: 30\nExplanation: \nChoosing index 2 is optimal: nums1[2] * nums2[2] = 3 * 10 = 30 is the maximum possible score.\n\n\n \nConstraints:\n\n\n\tn == nums1.length == nums2.length\n\t1 <= n <= 105\n\t0 <= nums1[i], nums2[j] <= 105\n\t1 <= k <= n\n\n",
+  "description": "You are given two 0-indexed integer arrays nums1 and nums2 of equal length n and a positive integer k. You must choose a subsequence of indices from nums1 of length k.\n\nFor chosen indices i0, i1, ..., ik - 1, your score is defined as:\n\n\n\tThe sum of the selected elements from nums1 multiplied with the minimum of the selected elements from nums2.\n\tIt can defined simply as: (nums1[i0] + nums1[i1] +...+ nums1[ik - 1]) * min(nums2[i0] , nums2[i1], ... ,nums2[ik - 1]).\n\n\nReturn the maximum possible score.\n\nA subsequence of indices of an array is a set that can be derived from the set {0, 1, ..., n-1} by deleting some or no elements.",
+  "example": "Input: nums1 = [1,3,3,2], nums2 = [2,1,3,4], k = 3\nOutput: 12\nExplanation: \nThe four possible subsequence scores are:\n- We choose the indices 0, 1, and 2 with score = (1+3+3) * min(2,1,3) = 7.\n- We choose the indices 0, 1, and 3 with score = (1+3+2) * min(2,1,4) = 6. \n- We choose the indices 0, 2, and 3 with score = (1+3+2) * min(2,3,4) = 12. \n- We choose the indices 1, 2, and 3 with score = (3+3+2) * min(1,3,4) = 8.\nTherefore, we return the max score, which is 12.",
+  "constraints_text": "n == nums1.length == nums2.length\n\t1 <= n <= 105\n\t0 <= nums1[i], nums2[j] <= 105\n\t1 <= k <= n",
+  "templates": {
+    "c": "long long maxScore(int* nums1, int nums1Size, int* nums2, int nums2Size, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long maxScore(vector<int>& nums1, vector<int>& nums2, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxScore(int[] nums1, int[] nums2, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number} k\n * @return {number}\n */\nvar maxScore = function(nums1, nums2, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxScore(self, nums1, nums2, k):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Combine elements from nums1 and nums2 into pairs and sort them in descending order based on nums2 values.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "merge-sort"
+      ],
+      "cues": [
+        "nums1",
+        "nums2",
+        "equal-length-n"
+      ],
+      "constraints": [
+        "n-nums1-length-nums2-length",
+        "1-n-105"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted pairs, maintain a min-heap of k largest nums1 values, and calculate the maximum possible score.",
+      "structures": [
+        "array",
+        "heap",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "heap-select",
+        "simulation"
+      ],
+      "cues": [
+        "maximum-possible-score",
+        "sum-of-selected-elements",
+        "minimum-of-selected-elements",
+        "length-k"
+      ],
+      "constraints": [
+        "1-k-n"
+      ]
+    }
+  ]
+}

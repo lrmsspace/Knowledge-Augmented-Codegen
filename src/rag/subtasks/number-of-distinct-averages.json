@@ -1,0 +1,56 @@
+{
+  "slug": "number-of-distinct-averages",
+  "link": "https://leetcode.com/problems/number-of-distinct-averages/",
+  "difficulty": "Easy",
+  "index": "525",
+  "description_full": "You are given a 0-indexed integer array nums of even length.\n\nAs long as nums is not empty, you must repetitively:\n\n\n\tFind the minimum number in nums and remove it.\n\tFind the maximum number in nums and remove it.\n\tCalculate the average of the two removed numbers.\n\n\nThe average of two numbers a and b is (a + b) / 2.\n\n\n\tFor example, the average of 2 and 3 is (2 + 3) / 2 = 2.5.\n\n\nReturn the number of distinct averages calculated using the above process.\n\nNote that when there is a tie for a minimum or maximum number, any can be removed.\n\n \nExample 1:\n\n\nInput: nums = [4,1,4,0,3,5]\nOutput: 2\nExplanation:\n1. Remove 0 and 5, and the average is (0 + 5) / 2 = 2.5. Now, nums = [4,1,4,3].\n2. Remove 1 and 4. The average is (1 + 4) / 2 = 2.5, and nums = [4,3].\n3. Remove 3 and 4, and the average is (3 + 4) / 2 = 3.5.\nSince there are 2 distinct numbers among 2.5, 2.5, and 3.5, we return 2.\n\n\nExample 2:\n\n\nInput: nums = [1,100]\nOutput: 1\nExplanation:\nThere is only one average to be calculated after removing 1 and 100, so we return 1.\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 100\n\tnums.length is even.\n\t0 <= nums[i] <= 100\n\n",
+  "description": "You are given a 0-indexed integer array nums of even length.\n\nAs long as nums is not empty, you must repetitively:\n\n\n\tFind the minimum number in nums and remove it.\n\tFind the maximum number in nums and remove it.\n\tCalculate the average of the two removed numbers.\n\n\nThe average of two numbers a and b is (a + b) / 2.\n\n\n\tFor example, the average of 2 and 3 is (2 + 3) / 2 = 2.5.\n\n\nReturn the number of distinct averages calculated using the above process.\n\nNote that when there is a tie for a minimum or maximum number, any can be removed.",
+  "example": "Input: nums = [4,1,4,0,3,5]\nOutput: 2\nExplanation:\n1. Remove 0 and 5, and the average is (0 + 5) / 2 = 2.5. Now, nums = [4,1,4,3].\n2. Remove 1 and 4. The average is (1 + 4) / 2 = 2.5, and nums = [4,3].\n3. Remove 3 and 4, and the average is (3 + 4) / 2 = 3.5.\nSince there are 2 distinct numbers among 2.5, 2.5, and 3.5, we return 2.",
+  "constraints_text": "2 <= nums.length <= 100\n\tnums.length is even.\n\t0 <= nums[i] <= 100",
+  "templates": {
+    "c": "int distinctAverages(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int distinctAverages(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int distinctAverages(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar distinctAverages = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def distinctAverages(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array to enable efficient min/max pairing.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "find-the-minimum-number",
+        "find-the-maximum-number"
+      ],
+      "constraints": [
+        "nums-length-is-even"
+      ]
+    },
+    {
+      "intent": "Iterate with two pointers, calculate averages, and count distinct results.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "repetitively",
+        "remove-it",
+        "calculate-the-average",
+        "distinct-averages"
+      ],
+      "constraints": [
+        "nums-length-is-even"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "find-the-lexicographically-largest-string-from-the-box-i",
+  "link": "https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/",
+  "difficulty": "Medium",
+  "index": "2596",
+  "description_full": "You are given a string word, and an integer numFriends.\n\nAlice is organizing a game for her numFriends friends. There are multiple rounds in the game, where in each round:\n\n\n\tword is split into numFriends non-empty strings, such that no previous round has had the exact same split.\n\tAll the split words are put into a box.\n\n\nFind the lexicographically largest string from the box after all the rounds are finished.\n\n \nExample 1:\n\n\nInput: word = \"dbca\", numFriends = 2\n\nOutput: \"dbc\"\n\nExplanation: \n\nAll possible splits are:\n\n\n\t\"d\" and \"bca\".\n\t\"db\" and \"ca\".\n\t\"dbc\" and \"a\".\n\n\n\nExample 2:\n\n\nInput: word = \"gggg\", numFriends = 4\n\nOutput: \"g\"\n\nExplanation: \n\nThe only possible split is: \"g\", \"g\", \"g\", and \"g\".\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 5 * 103\n\tword consists only of lowercase English letters.\n\t1 <= numFriends <= word.length\n\n",
+  "description": "You are given a string word, and an integer numFriends.\n\nAlice is organizing a game for her numFriends friends. There are multiple rounds in the game, where in each round:\n\n\n\tword is split into numFriends non-empty strings, such that no previous round has had the exact same split.\n\tAll the split words are put into a box.\n\n\nFind the lexicographically largest string from the box after all the rounds are finished.",
+  "example": "Input: word = \"dbca\", numFriends = 2\n\nOutput: \"dbc\"\n\nExplanation: \n\nAll possible splits are:\n\n\n\t\"d\" and \"bca\".\n\t\"db\" and \"ca\".\n\t\"dbc\" and \"a\".",
+  "constraints_text": "1 <= word.length <= 5 * 103\n\tword consists only of lowercase English letters.\n\t1 <= numFriends <= word.length",
+  "templates": {
+    "c": "char* answerString(char* word, int numFriends) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string answerString(string word, int numFriends) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String answerString(String word, int numFriends) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} numFriends\n * @return {string}\n */\nvar answerString = function(word, numFriends) {\n    \n};",
+    "python": "class Solution(object):\n    def answerString(self, word, numFriends):\n        \"\"\"\n        :type word: str\n        :type numFriends: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute data structures to enable efficient lexicographical comparison of any two substrings within the given word.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "suffix-array"
+      ],
+      "cues": [
+        "lexicographically-largest-string",
+        "word-length-5-103"
+      ],
+      "constraints": [
+        "word-length-5-103"
+      ]
+    },
+    {
+      "intent": "Systematically generate all possible substrings of 'word' and determine if each can be a valid part of a split into 'numFriends' non-empty strings.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "split-into-numfriends-non-empty-strings",
+        "all-possible-splits"
+      ],
+      "constraints": [
+        "1-numfriends-word-length"
+      ]
+    },
+    {
+      "intent": "Compare all valid candidate substrings using the precomputed structures and maintain the overall lexicographically largest string found.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "lexicographically-largest-string"
+      ],
+      "constraints": [
+        "word-length-5-103"
+      ]
+    }
+  ]
+}

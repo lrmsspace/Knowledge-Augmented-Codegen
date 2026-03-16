@@ -1,0 +1,38 @@
+{
+  "slug": "count-subarrays-of-length-three-with-a-condition",
+  "link": "https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition/",
+  "difficulty": "Easy",
+  "index": "2362",
+  "description_full": "Given an integer array nums, return the number of subarrays of length 3 such that the sum of the first and third numbers equals exactly half of the second number.\n\n \nExample 1:\n\n\nInput: nums = [1,2,1,4,1]\n\nOutput: 1\n\nExplanation:\n\nOnly the subarray [1,4,1] contains exactly 3 elements where the sum of the first and third numbers equals half the middle number.\n\n\nExample 2:\n\n\nInput: nums = [1,1,1]\n\nOutput: 0\n\nExplanation:\n\n[1,1,1] is the only subarray of length 3. However, its first and third numbers do not add to half the middle number.\n\n\n \nConstraints:\n\n\n\t3 <= nums.length <= 100\n\t-100 <= nums[i] <= 100\n\n",
+  "description": "Given an integer array nums, return the number of subarrays of length 3 such that the sum of the first and third numbers equals exactly half of the second number.",
+  "example": "Input: nums = [1,2,1,4,1]\n\nOutput: 1\n\nExplanation:\n\nOnly the subarray [1,4,1] contains exactly 3 elements where the sum of the first and third numbers equals half the middle number.",
+  "constraints_text": "3 <= nums.length <= 100\n\t-100 <= nums[i] <= 100",
+  "templates": {
+    "c": "int countSubarrays(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countSubarrays = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def countSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all possible subarrays of length 3 and count those where the sum of the first and third elements equals half the second.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "subarrays-of-length-3",
+        "sum-of-first-and-third-numbers-equals-exactly-half-of-the-second-number"
+      ],
+      "constraints": [
+        "3-nums-length-100",
+        "100-nums-i-100"
+      ]
+    }
+  ]
+}

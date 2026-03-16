@@ -1,0 +1,42 @@
+// Source: https://leetcode.com/problems/frequency-of-the-most-frequent-element/   |   Difficulty: Medium
+//
+// Problem Description:
+// The frequency of an element is the number of times it occurs in an array.
+//
+// You are given an integer array nums and an integer k. In one operation, you can choose an index of nums and increment the element at that index by 1.
+//
+// Return the maximum possible frequency of an element after performing at most k operations.
+//
+// Example:
+// Input: nums = [1,2,4], k = 5
+// Output: 3
+// Explanation: Increment the first element three times and the second element two times to make nums = [4,4,4].
+// 4 has a frequency of 3.
+//
+// Constraints:
+// 1 <= nums.length <= 105
+// 	1 <= nums[i] <= 105
+// 	1 <= k <= 105
+//
+
+class Solution {
+public:
+    int maxFrequency(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        long long total = 0;
+        int left = 0, result = 1;
+
+        for (int right = 1; right < nums.size(); ++right) {
+            total += (long long)(nums[right] - nums[right - 1]) * (right - left);
+
+            while (total > k) {
+                total -= nums[right] - nums[left];
+                left++;
+            }
+
+            result = max(result, right - left + 1);
+        }
+
+        return result;          
+    }
+};

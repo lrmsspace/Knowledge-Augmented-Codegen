@@ -1,0 +1,58 @@
+{
+  "slug": "check-if-grid-can-be-cut-into-sections",
+  "link": "https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections/",
+  "difficulty": "Medium",
+  "index": "2594",
+  "description_full": "You are given an integer n representing the dimensions of an n x n grid, with the origin at the bottom-left corner of the grid. You are also given a 2D array of coordinates rectangles, where rectangles[i] is in the form [startx, starty, endx, endy], representing a rectangle on the grid. Each rectangle is defined as follows:\n\n\n\t(startx, starty): The bottom-left corner of the rectangle.\n\t(endx, endy): The top-right corner of the rectangle.\n\n\nNote that the rectangles do not overlap. Your task is to determine if it is possible to make either two horizontal or two vertical cuts on the grid such that:\n\n\n\tEach of the three resulting sections formed by the cuts contains at least one rectangle.\n\tEvery rectangle belongs to exactly one section.\n\n\nReturn true if such cuts can be made; otherwise, return false.\n\n \nExample 1:\n\n\nInput: n = 5, rectangles = [[1,0,5,2],[0,2,2,4],[3,2,5,3],[0,4,4,5]]\n\nOutput: true\n\nExplanation:\n\n\n\nThe grid is shown in the diagram. We can make horizontal cuts at y = 2 and y = 4. Hence, output is true.\n\n\nExample 2:\n\n\nInput: n = 4, rectangles = [[0,0,1,1],[2,0,3,4],[0,2,2,3],[3,0,4,3]]\n\nOutput: true\n\nExplanation:\n\n\n\nWe can make vertical cuts at x = 2 and x = 3. Hence, output is true.\n\n\nExample 3:\n\n\nInput: n = 4, rectangles = [[0,2,2,4],[1,0,3,2],[2,2,3,4],[3,0,4,2],[3,2,4,4]]\n\nOutput: false\n\nExplanation:\n\nWe cannot make two horizontal or two vertical cuts that satisfy the conditions. Hence, output is false.\n\n\n \nConstraints:\n\n\n\t3 <= n <= 109\n\t3 <= rectangles.length <= 105\n\t0 <= rectangles[i][0] < rectangles[i][2] <= n\n\t0 <= rectangles[i][1] < rectangles[i][3] <= n\n\tNo two rectangles overlap.\n\n",
+  "description": "You are given an integer n representing the dimensions of an n x n grid, with the origin at the bottom-left corner of the grid. You are also given a 2D array of coordinates rectangles, where rectangles[i] is in the form [startx, starty, endx, endy], representing a rectangle on the grid. Each rectangle is defined as follows:\n\n\n\t(startx, starty): The bottom-left corner of the rectangle.\n\t(endx, endy): The top-right corner of the rectangle.\n\n\nNote that the rectangles do not overlap. Your task is to determine if it is possible to make either two horizontal or two vertical cuts on the grid such that:\n\n\n\tEach of the three resulting sections formed by the cuts contains at least one rectangle.\n\tEvery rectangle belongs to exactly one section.\n\n\nReturn true if such cuts can be made; otherwise, return false.",
+  "example": "Input: n = 5, rectangles = [[1,0,5,2],[0,2,2,4],[3,2,5,3],[0,4,4,5]]\n\nOutput: true\n\nExplanation:\n\n\n\nThe grid is shown in the diagram. We can make horizontal cuts at y = 2 and y = 4. Hence, output is true.",
+  "constraints_text": "3 <= n <= 109\n\t3 <= rectangles.length <= 105\n\t0 <= rectangles[i][0] < rectangles[i][2] <= n\n\t0 <= rectangles[i][1] < rectangles[i][3] <= n\n\tNo two rectangles overlap.",
+  "templates": {
+    "c": "bool checkValidCuts(int n, int** rectangles, int rectanglesSize, int* rectanglesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkValidCuts(int n, vector<vector<int>>& rectangles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkValidCuts(int n, int[][] rectangles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} rectangles\n * @return {boolean}\n */\nvar checkValidCuts = function(n, rectangles) {\n    \n};",
+    "python": "class Solution(object):\n    def checkValidCuts(self, n, rectangles):\n        \"\"\"\n        :type n: int\n        :type rectangles: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a sweep-line algorithm to check if two parallel cuts can divide a set of rectangles into three non-empty sections.",
+      "structures": [
+        "array",
+        "heap"
+      ],
+      "actions": [
+        "sweep-line",
+        "binary-search",
+        "greedy"
+      ],
+      "cues": [
+        "two-horizontal-or-two-vertical-cuts",
+        "three-resulting-sections",
+        "at-least-one-rectangle-per-section",
+        "every-rectangle-belongs-to-exactly-one-section"
+      ],
+      "constraints": [
+        "rectangles-do-not-overlap",
+        "n-up-to-10-9",
+        "rectangles-up-to-10-5"
+      ]
+    },
+    {
+      "intent": "Apply the parallel cut checking logic for both horizontal and vertical orientations of the grid.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "return-true-if-such-cuts-can-be-made",
+        "horizontal-or-vertical"
+      ],
+      "constraints": [
+        "n-x-n-grid"
+      ]
+    }
+  ]
+}

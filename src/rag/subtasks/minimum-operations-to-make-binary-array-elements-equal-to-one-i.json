@@ -1,0 +1,40 @@
+{
+  "slug": "minimum-operations-to-make-binary-array-elements-equal-to-one-i",
+  "link": "https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/",
+  "difficulty": "Medium",
+  "index": "2523",
+  "description_full": "You are given a binary array nums.\n\nYou can do the following operation on the array any number of times (possibly zero):\n\n\n\tChoose any 3 consecutive elements from the array and flip all of them.\n\n\nFlipping an element means changing its value from 0 to 1, and from 1 to 0.\n\nReturn the minimum number of operations required to make all elements in nums equal to 1. If it is impossible, return -1.\n\n \nExample 1:\n\n\nInput: nums = [0,1,1,1,0,0]\n\nOutput: 3\n\nExplanation:\nWe can do the following operations:\n\n\n\tChoose the elements at indices 0, 1 and 2. The resulting array is nums = [1,0,0,1,0,0].\n\tChoose the elements at indices 1, 2 and 3. The resulting array is nums = [1,1,1,0,0,0].\n\tChoose the elements at indices 3, 4 and 5. The resulting array is nums = [1,1,1,1,1,1].\n\n\n\nExample 2:\n\n\nInput: nums = [0,1,1,1]\n\nOutput: -1\n\nExplanation:\nIt is impossible to make all elements equal to 1.\n\n\n \nConstraints:\n\n\n\t3 <= nums.length <= 105\n\t0 <= nums[i] <= 1\n\n",
+  "description": "You are given a binary array nums.\n\nYou can do the following operation on the array any number of times (possibly zero):\n\n\n\tChoose any 3 consecutive elements from the array and flip all of them.\n\n\nFlipping an element means changing its value from 0 to 1, and from 1 to 0.\n\nReturn the minimum number of operations required to make all elements in nums equal to 1. If it is impossible, return -1.",
+  "example": "Input: nums = [0,1,1,1,0,0]\n\nOutput: 3\n\nExplanation:\nWe can do the following operations:\n\n\n\tChoose the elements at indices 0, 1 and 2. The resulting array is nums = [1,0,0,1,0,0].\n\tChoose the elements at indices 1, 2 and 3. The resulting array is nums = [1,1,1,0,0,0].\n\tChoose the elements at indices 3, 4 and 5. The resulting array is nums = [1,1,1,1,1,1].",
+  "constraints_text": "3 <= nums.length <= 105\n\t0 <= nums[i] <= 1",
+  "templates": {
+    "c": "int minOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Greedily apply flips to make the array all ones, tracking active operations with a sliding window, and return minimum operations or -1.",
+      "structures": [
+        "array",
+        "deque"
+      ],
+      "actions": [
+        "greedy",
+        "sliding-window",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-operations",
+        "flip-3-consecutive",
+        "make-all-elements-equal-to-1",
+        "impossible-return-1"
+      ],
+      "constraints": [
+        "3-nums-length"
+      ]
+    }
+  ]
+}

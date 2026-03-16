@@ -1,0 +1,58 @@
+{
+  "slug": "find-players-with-zero-or-one-losses",
+  "link": "https://leetcode.com/problems/find-players-with-zero-or-one-losses/",
+  "difficulty": "Medium",
+  "index": "1540",
+  "description_full": "You are given an integer array matches where matches[i] = [winneri, loseri] indicates that the player winneri defeated player loseri in a match.\n\nReturn a list answer of size 2 where:\n\n\n\tanswer[0] is a list of all players that have not lost any matches.\n\tanswer[1] is a list of all players that have lost exactly one match.\n\n\nThe values in the two lists should be returned in increasing order.\n\nNote:\n\n\n\tYou should only consider the players that have played at least one match.\n\tThe testcases will be generated such that no two matches will have the same outcome.\n\n\n \nExample 1:\n\n\nInput: matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]\nOutput: [[1,2,10],[4,5,7,8]]\nExplanation:\nPlayers 1, 2, and 10 have not lost any matches.\nPlayers 4, 5, 7, and 8 each have lost one match.\nPlayers 3, 6, and 9 each have lost two matches.\nThus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8].\n\n\nExample 2:\n\n\nInput: matches = [[2,3],[1,3],[5,4],[6,4]]\nOutput: [[1,2,5,6],[]]\nExplanation:\nPlayers 1, 2, 5, and 6 have not lost any matches.\nPlayers 3 and 4 each have lost two matches.\nThus, answer[0] = [1,2,5,6] and answer[1] = [].\n\n\n \nConstraints:\n\n\n\t1 <= matches.length <= 105\n\tmatches[i].length == 2\n\t1 <= winneri, loseri <= 105\n\twinneri != loseri\n\tAll matches[i] are unique.\n\n",
+  "description": "You are given an integer array matches where matches[i] = [winneri, loseri] indicates that the player winneri defeated player loseri in a match.\n\nReturn a list answer of size 2 where:\n\n\n\tanswer[0] is a list of all players that have not lost any matches.\n\tanswer[1] is a list of all players that have lost exactly one match.\n\n\nThe values in the two lists should be returned in increasing order.\n\nNote:\n\n\n\tYou should only consider the players that have played at least one match.\n\tThe testcases will be generated such that no two matches will have the same outcome.",
+  "example": "Input: matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]\nOutput: [[1,2,10],[4,5,7,8]]\nExplanation:\nPlayers 1, 2, and 10 have not lost any matches.\nPlayers 4, 5, 7, and 8 each have lost one match.\nPlayers 3, 6, and 9 each have lost two matches.\nThus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8].",
+  "constraints_text": "1 <= matches.length <= 105\n\tmatches[i].length == 2\n\t1 <= winneri, loseri <= 105\n\twinneri != loseri\n\tAll matches[i] are unique.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** findWinners(int** matches, int matchesSize, int* matchesColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> findWinners(vector<vector<int>>& matches) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> findWinners(int[][] matches) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matches\n * @return {number[][]}\n */\nvar findWinners = function(matches) {\n    \n};",
+    "python": "class Solution(object):\n    def findWinners(self, matches):\n        \"\"\"\n        :type matches: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Populate a map with loss counts for each player and collect all unique players who participated in any match.",
+      "structures": [
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "matches-i-winneri-loseri",
+        "lost-any-matches",
+        "lost-exactly-one-match",
+        "only-consider-the-players-that-have-played-at-least-one-match"
+      ],
+      "constraints": [
+        "1-winneri-loseri-105"
+      ]
+    },
+    {
+      "intent": "Filter players by their loss count (zero or one), sort the resulting lists, and assemble the final answer.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "merge-sort"
+      ],
+      "cues": [
+        "answer-0-is-a-list-of-all-players-that-have-not-lost-any-matches",
+        "answer-1-is-a-list-of-all-players-that-have-lost-exactly-one-match",
+        "returned-in-increasing-order"
+      ],
+      "constraints": [
+        "1-winneri-loseri-105"
+      ]
+    }
+  ]
+}

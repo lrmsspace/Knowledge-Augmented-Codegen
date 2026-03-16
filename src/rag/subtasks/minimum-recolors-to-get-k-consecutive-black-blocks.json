@@ -1,0 +1,39 @@
+{
+  "slug": "minimum-recolors-to-get-k-consecutive-black-blocks",
+  "link": "https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/",
+  "difficulty": "Easy",
+  "index": "507",
+  "description_full": "You are given a 0-indexed string blocks of length n, where blocks[i] is either 'W' or 'B', representing the color of the ith block. The characters 'W' and 'B' denote the colors white and black, respectively.\n\nYou are also given an integer k, which is the desired number of consecutive black blocks.\n\nIn one operation, you can recolor a white block such that it becomes a black block.\n\nReturn the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.\n\n \nExample 1:\n\n\nInput: blocks = \"WBBWWBBWBW\", k = 7\nOutput: 3\nExplanation:\nOne way to achieve 7 consecutive black blocks is to recolor the 0th, 3rd, and 4th blocks\nso that blocks = \"BBBBBBBWBW\". \nIt can be shown that there is no way to achieve 7 consecutive black blocks in less than 3 operations.\nTherefore, we return 3.\n\n\nExample 2:\n\n\nInput: blocks = \"WBWBBBW\", k = 2\nOutput: 0\nExplanation:\nNo changes need to be made, since 2 consecutive black blocks already exist.\nTherefore, we return 0.\n\n\n \nConstraints:\n\n\n\tn == blocks.length\n\t1 <= n <= 100\n\tblocks[i] is either 'W' or 'B'.\n\t1 <= k <= n\n\n",
+  "description": "You are given a 0-indexed string blocks of length n, where blocks[i] is either 'W' or 'B', representing the color of the ith block. The characters 'W' and 'B' denote the colors white and black, respectively.\n\nYou are also given an integer k, which is the desired number of consecutive black blocks.\n\nIn one operation, you can recolor a white block such that it becomes a black block.\n\nReturn the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.",
+  "example": "Input: blocks = \"WBBWWBBWBW\", k = 7\nOutput: 3\nExplanation:\nOne way to achieve 7 consecutive black blocks is to recolor the 0th, 3rd, and 4th blocks\nso that blocks = \"BBBBBBBWBW\". \nIt can be shown that there is no way to achieve 7 consecutive black blocks in less than 3 operations.\nTherefore, we return 3.",
+  "constraints_text": "n == blocks.length\n\t1 <= n <= 100\n\tblocks[i] is either 'W' or 'B'.\n\t1 <= k <= n",
+  "templates": {
+    "c": "int minimumRecolors(char* blocks, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumRecolors(string blocks, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumRecolors(String blocks, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} blocks\n * @param {number} k\n * @return {number}\n */\nvar minimumRecolors = function(blocks, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumRecolors(self, blocks, k):\n        \"\"\"\n        :type blocks: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the minimum number of 'W' blocks within any contiguous window of size k, representing operations needed.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "counting"
+      ],
+      "cues": [
+        "k-consecutive-black-blocks",
+        "minimum-number-of-operations",
+        "recolor-a-white-block"
+      ],
+      "constraints": [
+        "n-100",
+        "k-n"
+      ]
+    }
+  ]
+}

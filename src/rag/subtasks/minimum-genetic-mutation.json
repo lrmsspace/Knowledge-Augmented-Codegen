@@ -1,0 +1,59 @@
+{
+  "slug": "minimum-genetic-mutation",
+  "link": "https://leetcode.com/problems/minimum-genetic-mutation/",
+  "difficulty": "Medium",
+  "index": "809",
+  "description_full": "A gene string can be represented by an 8-character long string, with choices from 'A', 'C', 'G', and 'T'.\n\nSuppose we need to investigate a mutation from a gene string startGene to a gene string endGene where one mutation is defined as one single character changed in the gene string.\n\n\n\tFor example, \"AACCGGTT\" --> \"AACCGGTA\" is one mutation.\n\n\nThere is also a gene bank bank that records all the valid gene mutations. A gene must be in bank to make it a valid gene string.\n\nGiven the two gene strings startGene and endGene and the gene bank bank, return the minimum number of mutations needed to mutate from startGene to endGene. If there is no such a mutation, return -1.\n\nNote that the starting point is assumed to be valid, so it might not be included in the bank.\n\n \nExample 1:\n\n\nInput: startGene = \"AACCGGTT\", endGene = \"AACCGGTA\", bank = [\"AACCGGTA\"]\nOutput: 1\n\n\nExample 2:\n\n\nInput: startGene = \"AACCGGTT\", endGene = \"AAACGGTA\", bank = [\"AACCGGTA\",\"AACCGCTA\",\"AAACGGTA\"]\nOutput: 2\n\n\n \nConstraints:\n\n\n\t0 <= bank.length <= 10\n\tstartGene.length == endGene.length == bank[i].length == 8\n\tstartGene, endGene, and bank[i] consist of only the characters ['A', 'C', 'G', 'T'].\n\n",
+  "description": "A gene string can be represented by an 8-character long string, with choices from 'A', 'C', 'G', and 'T'.\n\nSuppose we need to investigate a mutation from a gene string startGene to a gene string endGene where one mutation is defined as one single character changed in the gene string.\n\n\n\tFor example, \"AACCGGTT\" --> \"AACCGGTA\" is one mutation.\n\n\nThere is also a gene bank bank that records all the valid gene mutations. A gene must be in bank to make it a valid gene string.\n\nGiven the two gene strings startGene and endGene and the gene bank bank, return the minimum number of mutations needed to mutate from startGene to endGene. If there is no such a mutation, return -1.\n\nNote that the starting point is assumed to be valid, so it might not be included in the bank.",
+  "example": "Input: startGene = \"AACCGGTT\", endGene = \"AACCGGTA\", bank = [\"AACCGGTA\"]\nOutput: 1",
+  "constraints_text": "0 <= bank.length <= 10\n\tstartGene.length == endGene.length == bank[i].length == 8\n\tstartGene, endGene, and bank[i] consist of only the characters ['A', 'C', 'G', 'T'].",
+  "templates": {
+    "c": "int minMutation(char* startGene, char* endGene, char** bank, int bankSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minMutation(string startGene, string endGene, vector<string>& bank) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMutation(String startGene, String endGene, String[] bank) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} startGene\n * @param {string} endGene\n * @param {string[]} bank\n * @return {number}\n */\nvar minMutation = function(startGene, endGene, bank) {\n    \n};",
+    "python": "class Solution(object):\n    def minMutation(self, startGene, endGene, bank):\n        \"\"\"\n        :type startGene: str\n        :type endGene: str\n        :type bank: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Populate a set of valid genes from the bank and perform an initial check for endGene's reachability.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "hashing",
+        "enumeration"
+      ],
+      "cues": [
+        "gene-bank-bank",
+        "valid-gene-mutations",
+        "endgene",
+        "return-1"
+      ],
+      "constraints": [
+        "a-gene-must-be-in-bank-to-make-it-a-valid-gene-string",
+        "startgene-is-assumed-to-be-valid"
+      ]
+    },
+    {
+      "intent": "Traverse the gene mutation graph using BFS to determine the shortest path length from startGene to endGene.",
+      "structures": [
+        "queue",
+        "string"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-number-of-mutations",
+        "startgene-to-endgene",
+        "one-single-character-changed"
+      ],
+      "constraints": [
+        "8-character-long-string",
+        "choices-from-a-c-g-t"
+      ]
+    }
+  ]
+}

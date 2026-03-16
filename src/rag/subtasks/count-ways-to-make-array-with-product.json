@@ -1,0 +1,58 @@
+{
+  "slug": "count-ways-to-make-array-with-product",
+  "link": "https://leetcode.com/problems/count-ways-to-make-array-with-product/",
+  "difficulty": "Hard",
+  "index": "2062",
+  "description_full": "You are given a 2D integer array, queries. For each queries[i], where queries[i] = [ni, ki], find the number of different ways you can place positive integers into an array of size ni such that the product of the integers is ki. As the number of ways may be too large, the answer to the ith query is the number of ways modulo 109 + 7.\n\nReturn an integer array answer where answer.length == queries.length, and answer[i] is the answer to the ith query.\n\n \nExample 1:\n\n\nInput: queries = [[2,6],[5,1],[73,660]]\nOutput: [4,1,50734910]\nExplanation: Each query is independent.\n[2,6]: There are 4 ways to fill an array of size 2 that multiply to 6: [1,6], [2,3], [3,2], [6,1].\n[5,1]: There is 1 way to fill an array of size 5 that multiply to 1: [1,1,1,1,1].\n[73,660]: There are 1050734917 ways to fill an array of size 73 that multiply to 660. 1050734917 modulo 109 + 7 = 50734910.\n\n\nExample 2:\n\n\nInput: queries = [[1,1],[2,2],[3,3],[4,4],[5,5]]\nOutput: [1,2,3,10,5]\n\n\n \nConstraints:\n\n\n\t1 <= queries.length <= 104 \n\t1 <= ni, ki <= 104\n\n",
+  "description": "You are given a 2D integer array, queries. For each queries[i], where queries[i] = [ni, ki], find the number of different ways you can place positive integers into an array of size ni such that the product of the integers is ki. As the number of ways may be too large, the answer to the ith query is the number of ways modulo 109 + 7.\n\nReturn an integer array answer where answer.length == queries.length, and answer[i] is the answer to the ith query.",
+  "example": "Input: queries = [[2,6],[5,1],[73,660]]\nOutput: [4,1,50734910]\nExplanation: Each query is independent.\n[2,6]: There are 4 ways to fill an array of size 2 that multiply to 6: [1,6], [2,3], [3,2], [6,1].\n[5,1]: There is 1 way to fill an array of size 5 that multiply to 1: [1,1,1,1,1].\n[73,660]: There are 1050734917 ways to fill an array of size 73 that multiply to 660. 1050734917 modulo 109 + 7 = 50734910.",
+  "constraints_text": "1 <= queries.length <= 104 \n\t1 <= ni, ki <= 104",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* waysToFillArray(int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> waysToFillArray(vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] waysToFillArray(int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar waysToFillArray = function(queries) {\n    \n};",
+    "python": "class Solution(object):\n    def waysToFillArray(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute primes up to sqrt(max_k) and factorize each query's product `k` into its prime powers.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sieve",
+        "enumeration"
+      ],
+      "cues": [
+        "product-of-the-integers-is-ki",
+        "positive-integers"
+      ],
+      "constraints": [
+        "ki-10-4"
+      ]
+    },
+    {
+      "intent": "For each query [n, k], calculate the product of combinations C(exponent + n - 1, n - 1) modulo 10^9 + 7 for each prime factor's exponent.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "mod-exp",
+        "simulation"
+      ],
+      "cues": [
+        "number-of-different-ways",
+        "modulo-10-9-7",
+        "return-an-integer-array-answer"
+      ],
+      "constraints": [
+        "ni-ki-10-4",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

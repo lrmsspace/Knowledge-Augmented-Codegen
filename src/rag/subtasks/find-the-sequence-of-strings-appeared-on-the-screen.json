@@ -1,0 +1,40 @@
+{
+  "slug": "find-the-sequence-of-strings-appeared-on-the-screen",
+  "link": "https://leetcode.com/problems/find-the-sequence-of-strings-appeared-on-the-screen/",
+  "difficulty": "Medium",
+  "index": "2568",
+  "description_full": "You are given a string target.\n\nAlice is going to type target on her computer using a special keyboard that has only two keys:\n\n\n\tKey 1 appends the character \"a\" to the string on the screen.\n\tKey 2 changes the last character of the string on the screen to its next character in the English alphabet. For example, \"c\" changes to \"d\" and \"z\" changes to \"a\".\n\n\nNote that initially there is an empty string \"\" on the screen, so she can only press key 1.\n\nReturn a list of all strings that appear on the screen as Alice types target, in the order they appear, using the minimum key presses.\n\n \nExample 1:\n\n\nInput: target = \"abc\"\n\nOutput: [\"a\",\"aa\",\"ab\",\"aba\",\"abb\",\"abc\"]\n\nExplanation:\n\nThe sequence of key presses done by Alice are:\n\n\n\tPress key 1, and the string on the screen becomes \"a\".\n\tPress key 1, and the string on the screen becomes \"aa\".\n\tPress key 2, and the string on the screen becomes \"ab\".\n\tPress key 1, and the string on the screen becomes \"aba\".\n\tPress key 2, and the string on the screen becomes \"abb\".\n\tPress key 2, and the string on the screen becomes \"abc\".\n\n\n\nExample 2:\n\n\nInput: target = \"he\"\n\nOutput: [\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"ha\",\"hb\",\"hc\",\"hd\",\"he\"]\n\n\n \nConstraints:\n\n\n\t1 <= target.length <= 400\n\ttarget consists only of lowercase English letters.\n\n",
+  "description": "You are given a string target.\n\nAlice is going to type target on her computer using a special keyboard that has only two keys:\n\n\n\tKey 1 appends the character \"a\" to the string on the screen.\n\tKey 2 changes the last character of the string on the screen to its next character in the English alphabet. For example, \"c\" changes to \"d\" and \"z\" changes to \"a\".\n\n\nNote that initially there is an empty string \"\" on the screen, so she can only press key 1.\n\nReturn a list of all strings that appear on the screen as Alice types target, in the order they appear, using the minimum key presses.",
+  "example": "Input: target = \"abc\"\n\nOutput: [\"a\",\"aa\",\"ab\",\"aba\",\"abb\",\"abc\"]\n\nExplanation:\n\nThe sequence of key presses done by Alice are:\n\n\n\tPress key 1, and the string on the screen becomes \"a\".\n\tPress key 1, and the string on the screen becomes \"aa\".\n\tPress key 2, and the string on the screen becomes \"ab\".\n\tPress key 1, and the string on the screen becomes \"aba\".\n\tPress key 2, and the string on the screen becomes \"abb\".\n\tPress key 2, and the string on the screen becomes \"abc\".",
+  "constraints_text": "1 <= target.length <= 400\n\ttarget consists only of lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** stringSequence(char* target, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> stringSequence(string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> stringSequence(String target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} target\n * @return {string[]}\n */\nvar stringSequence = function(target) {\n    \n};",
+    "python": "class Solution(object):\n    def stringSequence(self, target):\n        \"\"\"\n        :type target: str\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate Alice's optimal key presses to construct the target string, recording all intermediate strings generated.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "all-strings-that-appear",
+        "minimum-key-presses",
+        "key-1-appends-a",
+        "key-2-changes-last-character"
+      ],
+      "constraints": [
+        "1-target-length-400",
+        "target-consists-only-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

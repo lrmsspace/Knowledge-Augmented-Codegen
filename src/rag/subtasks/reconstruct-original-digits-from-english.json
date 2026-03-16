@@ -1,0 +1,70 @@
+{
+  "slug": "reconstruct-original-digits-from-english",
+  "link": "https://leetcode.com/problems/reconstruct-original-digits-from-english/",
+  "difficulty": "Medium",
+  "index": "804",
+  "description_full": "Given a string s containing an out-of-order English representation of digits 0-9, return the digits in ascending order.\n\n \nExample 1:\nInput: s = \"owoztneoer\"\nOutput: \"012\"\nExample 2:\nInput: s = \"fviefuro\"\nOutput: \"45\"\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts[i] is one of the characters [\"e\",\"g\",\"f\",\"i\",\"h\",\"o\",\"n\",\"s\",\"r\",\"u\",\"t\",\"w\",\"v\",\"x\",\"z\"].\n\ts is guaranteed to be valid.\n\n",
+  "description": "Given a string s containing an out-of-order English representation of digits 0-9, return the digits in ascending order.",
+  "example": "Input: s = \"owoztneoer\"\nOutput: \"012\"",
+  "constraints_text": "1 <= s.length <= 105\n\ts[i] is one of the characters [\"e\",\"g\",\"f\",\"i\",\"h\",\"o\",\"n\",\"s\",\"r\",\"u\",\"t\",\"w\",\"v\",\"x\",\"z\"].\n\ts is guaranteed to be valid.",
+  "templates": {
+    "c": "char* originalDigits(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string originalDigits(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String originalDigits(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar originalDigits = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def originalDigits(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count character frequencies in the input string to prepare for digit deduction.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "string-s",
+        "s-length"
+      ],
+      "constraints": [
+        "s-i-is-one-of-the-characters"
+      ]
+    },
+    {
+      "intent": "Calculate the count of each digit (0-9) using a greedy strategy based on unique character patterns.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "counting"
+      ],
+      "cues": [
+        "english-representation-of-digits-0-9"
+      ],
+      "constraints": [
+        "s-is-guaranteed-to-be-valid"
+      ]
+    },
+    {
+      "intent": "Assemble the final result string by concatenating digits in ascending order based on their calculated counts.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-digits-in-ascending-order"
+      ],
+      "constraints": [
+        "ascending-order"
+      ]
+    }
+  ]
+}

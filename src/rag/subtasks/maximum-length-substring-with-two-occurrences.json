@@ -1,0 +1,38 @@
+{
+  "slug": "maximum-length-substring-with-two-occurrences",
+  "link": "https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/",
+  "difficulty": "Easy",
+  "index": "2310",
+  "description_full": "Given a string s, return the maximum length of a substring such that it contains at most two occurrences of each character.\n \nExample 1:\n\n\nInput: s = \"bcbbbcba\"\n\nOutput: 4\n\nExplanation:\nThe following substring has a length of 4 and contains at most two occurrences of each character: \"bcbbbcba\".\n\nExample 2:\n\n\nInput: s = \"aaaa\"\n\nOutput: 2\n\nExplanation:\nThe following substring has a length of 2 and contains at most two occurrences of each character: \"aaaa\".\n\n \nConstraints:\n\n\n\t2 <= s.length <= 100\n\ts consists only of lowercase English letters.\n\n",
+  "description": "Given a string s, return the maximum length of a substring such that it contains at most two occurrences of each character.",
+  "example": "Input: s = \"bcbbbcba\"\n\nOutput: 4\n\nExplanation:\nThe following substring has a length of 4 and contains at most two occurrences of each character: \"bcbbbcba\".",
+  "constraints_text": "2 <= s.length <= 100\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int maximumLengthSubstring(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumLengthSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumLengthSubstring(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maximumLengthSubstring = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumLengthSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the maximum length of a substring satisfying the character frequency constraint using a sliding window approach.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers"
+      ],
+      "cues": [
+        "maximum-length-of-a-substring",
+        "at-most-two-occurrences"
+      ],
+      "constraints": [
+        "s-length-100",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

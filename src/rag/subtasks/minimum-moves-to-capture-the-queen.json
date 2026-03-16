@@ -1,0 +1,80 @@
+{
+  "slug": "minimum-moves-to-capture-the-queen",
+  "link": "https://leetcode.com/problems/minimum-moves-to-capture-the-queen/",
+  "difficulty": "Medium",
+  "index": "2454",
+  "description_full": "There is a 1-indexed 8 x 8 chessboard containing 3 pieces.\n\nYou are given 6 integers a, b, c, d, e, and f where:\n\n\n\t(a, b) denotes the position of the white rook.\n\t(c, d) denotes the position of the white bishop.\n\t(e, f) denotes the position of the black queen.\n\n\nGiven that you can only move the white pieces, return the minimum number of moves required to capture the black queen.\n\nNote that:\n\n\n\tRooks can move any number of squares either vertically or horizontally, but cannot jump over other pieces.\n\tBishops can move any number of squares diagonally, but cannot jump over other pieces.\n\tA rook or a bishop can capture the queen if it is located in a square that they can move to.\n\tThe queen does not move.\n\n\n \nExample 1:\n\n\nInput: a = 1, b = 1, c = 8, d = 8, e = 2, f = 3\nOutput: 2\nExplanation: We can capture the black queen in two moves by moving the white rook to (1, 3) then to (2, 3).\nIt is impossible to capture the black queen in less than two moves since it is not being attacked by any of the pieces at the beginning.\n\n\nExample 2:\n\n\nInput: a = 5, b = 3, c = 3, d = 4, e = 5, f = 2\nOutput: 1\nExplanation: We can capture the black queen in a single move by doing one of the following: \n- Move the white rook to (5, 2).\n- Move the white bishop to (5, 2).\n\n\n \nConstraints:\n\n\n\t1 <= a, b, c, d, e, f <= 8\n\tNo two pieces are on the same square.\n\n",
+  "description": "There is a 1-indexed 8 x 8 chessboard containing 3 pieces.\n\nYou are given 6 integers a, b, c, d, e, and f where:\n\n\n\t(a, b) denotes the position of the white rook.\n\t(c, d) denotes the position of the white bishop.\n\t(e, f) denotes the position of the black queen.\n\n\nGiven that you can only move the white pieces, return the minimum number of moves required to capture the black queen.\n\nNote that:\n\n\n\tRooks can move any number of squares either vertically or horizontally, but cannot jump over other pieces.\n\tBishops can move any number of squares diagonally, but cannot jump over other pieces.\n\tA rook or a bishop can capture the queen if it is located in a square that they can move to.\n\tThe queen does not move.",
+  "example": "Input: a = 1, b = 1, c = 8, d = 8, e = 2, f = 3\nOutput: 2\nExplanation: We can capture the black queen in two moves by moving the white rook to (1, 3) then to (2, 3).\nIt is impossible to capture the black queen in less than two moves since it is not being attacked by any of the pieces at the beginning.",
+  "constraints_text": "1 <= a, b, c, d, e, f <= 8\n\tNo two pieces are on the same square.",
+  "templates": {
+    "c": "int minMovesToCaptureTheQueen(int a, int b, int c, int d, int e, int f) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minMovesToCaptureTheQueen(int a, int b, int c, int d, int e, int f) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMovesToCaptureTheQueen(int a, int b, int c, int d, int e, int f) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} a\n * @param {number} b\n * @param {number} c\n * @param {number} d\n * @param {number} e\n * @param {number} f\n * @return {number}\n */\nvar minMovesToCaptureTheQueen = function(a, b, c, d, e, f) {\n    \n};",
+    "python": "class Solution(object):\n    def minMovesToCaptureTheQueen(self, a, b, c, d, e, f):\n        \"\"\"\n        :type a: int\n        :type b: int\n        :type c: int\n        :type d: int\n        :type e: int\n        :type f: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize BFS queue and visited set with the starting piece positions and zero moves.",
+      "structures": [
+        "queue",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-number-of-moves",
+        "initial-positions"
+      ],
+      "constraints": [
+        "1-indexed-8-x-8-chessboard",
+        "3-pieces"
+      ]
+    },
+    {
+      "intent": "Implement functions to determine valid moves for a rook or bishop and check if they can capture the queen, considering blocking pieces.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "rooks-can-move",
+        "bishops-can-move",
+        "cannot-jump-over-other-pieces",
+        "capture-the-black-queen"
+      ],
+      "constraints": [
+        "8-x-8-chessboard"
+      ]
+    },
+    {
+      "intent": "Execute BFS to explore all reachable states, generate next moves, and find the shortest path to a state where the queen is captured.",
+      "structures": [
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs",
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-moves",
+        "capture-the-black-queen",
+        "can-only-move-the-white-pieces"
+      ],
+      "constraints": [
+        "1-a-b-c-d-e-f-8",
+        "no-two-pieces-are-on-the-same-square"
+      ]
+    }
+  ]
+}

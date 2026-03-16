@@ -1,0 +1,55 @@
+{
+  "slug": "find-latest-group-of-size-m",
+  "link": "https://leetcode.com/problems/find-latest-group-of-size-m/",
+  "difficulty": "Medium",
+  "index": "1290",
+  "description_full": "Given an array arr that represents a permutation of numbers from 1 to n.\n\nYou have a binary string of size n that initially has all its bits set to zero. At each step i (assuming both the binary string and arr are 1-indexed) from 1 to n, the bit at position arr[i] is set to 1.\n\nYou are also given an integer m. Find the latest step at which there exists a group of ones of length m. A group of ones is a contiguous substring of 1's such that it cannot be extended in either direction.\n\nReturn the latest step at which there exists a group of ones of length exactly m. If no such group exists, return -1.\n\n \nExample 1:\n\n\nInput: arr = [3,5,1,2,4], m = 1\nOutput: 4\nExplanation: \nStep 1: \"00100\", groups: [\"1\"]\nStep 2: \"00101\", groups: [\"1\", \"1\"]\nStep 3: \"10101\", groups: [\"1\", \"1\", \"1\"]\nStep 4: \"11101\", groups: [\"111\", \"1\"]\nStep 5: \"11111\", groups: [\"11111\"]\nThe latest step at which there exists a group of size 1 is step 4.\n\n\nExample 2:\n\n\nInput: arr = [3,1,5,4,2], m = 2\nOutput: -1\nExplanation: \nStep 1: \"00100\", groups: [\"1\"]\nStep 2: \"10100\", groups: [\"1\", \"1\"]\nStep 3: \"10101\", groups: [\"1\", \"1\", \"1\"]\nStep 4: \"10111\", groups: [\"1\", \"111\"]\nStep 5: \"11111\", groups: [\"11111\"]\nNo group of size 2 exists during any step.\n\n\n \nConstraints:\n\n\n\tn == arr.length\n\t1 <= m <= n <= 105\n\t1 <= arr[i] <= n\n\tAll integers in arr are distinct.\n\n",
+  "description": "Given an array arr that represents a permutation of numbers from 1 to n.\n\nYou have a binary string of size n that initially has all its bits set to zero. At each step i (assuming both the binary string and arr are 1-indexed) from 1 to n, the bit at position arr[i] is set to 1.\n\nYou are also given an integer m. Find the latest step at which there exists a group of ones of length m. A group of ones is a contiguous substring of 1's such that it cannot be extended in either direction.\n\nReturn the latest step at which there exists a group of ones of length exactly m. If no such group exists, return -1.",
+  "example": "Input: arr = [3,5,1,2,4], m = 1\nOutput: 4\nExplanation: \nStep 1: \"00100\", groups: [\"1\"]\nStep 2: \"00101\", groups: [\"1\", \"1\"]\nStep 3: \"10101\", groups: [\"1\", \"1\", \"1\"]\nStep 4: \"11101\", groups: [\"111\", \"1\"]\nStep 5: \"11111\", groups: [\"11111\"]\nThe latest step at which there exists a group of size 1 is step 4.",
+  "constraints_text": "n == arr.length\n\t1 <= m <= n <= 105\n\t1 <= arr[i] <= n\n\tAll integers in arr are distinct.",
+  "templates": {
+    "c": "int findLatestStep(int* arr, int arrSize, int m) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findLatestStep(vector<int>& arr, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLatestStep(int[] arr, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} m\n * @return {number}\n */\nvar findLatestStep = function(arr, m) {\n    \n};",
+    "python": "class Solution(object):\n    def findLatestStep(self, arr, m):\n        \"\"\"\n        :type arr: List[int]\n        :type m: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate the bit-setting process and dynamically track contiguous groups of ones using Union-Find.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "union-find"
+      ],
+      "cues": [
+        "at-each-step-i",
+        "bit-at-position-arr-i-is-set-to-1",
+        "group-of-ones"
+      ],
+      "constraints": [
+        "permutation-of-1-to-n",
+        "binary-string-of-size-n"
+      ]
+    },
+    {
+      "intent": "Maintain counts of groups by their lengths and determine the latest step at which a group of length 'm' exists.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "group-of-ones-of-length-m",
+        "latest-step",
+        "return-1"
+      ],
+      "constraints": [
+        "length-m"
+      ]
+    }
+  ]
+}

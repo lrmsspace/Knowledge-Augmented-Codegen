@@ -1,0 +1,53 @@
+{
+  "slug": "surrounded-regions",
+  "link": "https://leetcode.com/problems/surrounded-regions/",
+  "difficulty": "Medium",
+  "index": "686",
+  "description_full": "You are given an m x n matrix board containing letters 'X' and 'O', capture regions that are surrounded:\n\n\n\tConnect: A cell is connected to adjacent cells horizontally or vertically.\n\tRegion: To form a region connect every 'O' cell.\n\tSurround: The region is surrounded with 'X' cells if you can connect the region with 'X' cells and none of the region cells are on the edge of the board.\n\n\nTo capture a surrounded region, replace all 'O's with 'X's in-place within the original board. You do not need to return anything.\n\n \nExample 1:\n\n\nInput: board = [[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"X\"],[\"X\",\"X\",\"O\",\"X\"],[\"X\",\"O\",\"X\",\"X\"]]\n\nOutput: [[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\"]]\n\nExplanation:\n\nIn the above diagram, the bottom region is not captured because it is on the edge of the board and cannot be surrounded.\n\n\nExample 2:\n\n\nInput: board = [[\"X\"]]\n\nOutput: [[\"X\"]]\n\n\n \nConstraints:\n\n\n\tm == board.length\n\tn == board[i].length\n\t1 <= m, n <= 200\n\tboard[i][j] is 'X' or 'O'.\n\n",
+  "description": "You are given an m x n matrix board containing letters 'X' and 'O', capture regions that are surrounded:\n\n\n\tConnect: A cell is connected to adjacent cells horizontally or vertically.\n\tRegion: To form a region connect every 'O' cell.\n\tSurround: The region is surrounded with 'X' cells if you can connect the region with 'X' cells and none of the region cells are on the edge of the board.\n\n\nTo capture a surrounded region, replace all 'O's with 'X's in-place within the original board. You do not need to return anything.",
+  "example": "Input: board = [[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"X\"],[\"X\",\"X\",\"O\",\"X\"],[\"X\",\"O\",\"X\",\"X\"]]\n\nOutput: [[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\"]]\n\nExplanation:\n\nIn the above diagram, the bottom region is not captured because it is on the edge of the board and cannot be surrounded.",
+  "constraints_text": "m == board.length\n\tn == board[i].length\n\t1 <= m, n <= 200\n\tboard[i][j] is 'X' or 'O'.",
+  "templates": {
+    "c": "void solve(char** board, int boardSize, int* boardColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    void solve(vector<vector<char>>& board) {\n        \n    }\n};",
+    "java": "class Solution {\n    public void solve(char[][] board) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} board\n * @return {void} Do not return anything, modify board in-place instead.\n */\nvar solve = function(board) {\n    \n};",
+    "python": "class Solution(object):\n    def solve(self, board):\n        \"\"\"\n        :type board: List[List[str]]\n        :rtype: None Do not return anything, modify board in-place instead.\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify and temporarily mark all 'O' cells connected to the board's boundary.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "none-of-the-region-cells-are-on-the-edge",
+        "connect"
+      ],
+      "constraints": [
+        "1-m-n-200"
+      ]
+    },
+    {
+      "intent": "Convert surrounded 'O's to 'X's and restore temporarily marked 'O's.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "replace-all-o-s-with-x-s-in-place"
+      ],
+      "constraints": [
+        "1-m-n-200"
+      ]
+    }
+  ]
+}

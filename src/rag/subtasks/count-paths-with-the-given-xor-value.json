@@ -1,0 +1,41 @@
+{
+  "slug": "count-paths-with-the-given-xor-value",
+  "link": "https://leetcode.com/problems/count-paths-with-the-given-xor-value/",
+  "difficulty": "Medium",
+  "index": "2593",
+  "description_full": "You are given a 2D integer array grid with size m x n. You are also given an integer k.\n\nYour task is to calculate the number of paths you can take from the top-left cell (0, 0) to the bottom-right cell (m - 1, n - 1) satisfying the following constraints:\n\n\n\tYou can either move to the right or down. Formally, from the cell (i, j) you may move to the cell (i, j + 1) or to the cell (i + 1, j) if the target cell exists.\n\tThe XOR of all the numbers on the path must be equal to k.\n\n\nReturn the total number of such paths.\n\nSince the answer can be very large, return the result modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: grid = [[2, 1, 5], [7, 10, 0], [12, 6, 4]], k = 11\n\nOutput: 3\n\nExplanation: \n\nThe 3 paths are:\n\n\n\t(0, 0) → (1, 0) → (2, 0) → (2, 1) → (2, 2)\n\t(0, 0) → (1, 0) → (1, 1) → (1, 2) → (2, 2)\n\t(0, 0) → (0, 1) → (1, 1) → (2, 1) → (2, 2)\n\n\n\nExample 2:\n\n\nInput: grid = [[1, 3, 3, 3], [0, 3, 3, 2], [3, 0, 1, 1]], k = 2\n\nOutput: 5\n\nExplanation:\n\nThe 5 paths are:\n\n\n\t(0, 0) → (1, 0) → (2, 0) → (2, 1) → (2, 2) → (2, 3)\n\t(0, 0) → (1, 0) → (1, 1) → (2, 1) → (2, 2) → (2, 3)\n\t(0, 0) → (1, 0) → (1, 1) → (1, 2) → (1, 3) → (2, 3)\n\t(0, 0) → (0, 1) → (1, 1) → (1, 2) → (2, 2) → (2, 3)\n\t(0, 0) → (0, 1) → (0, 2) → (1, 2) → (2, 2) → (2, 3)\n\n\n\nExample 3:\n\n\nInput: grid = [[1, 1, 1, 2], [3, 0, 3, 2], [3, 0, 2, 2]], k = 10\n\nOutput: 0\n\n\n \nConstraints:\n\n\n\t1 <= m == grid.length <= 300\n\t1 <= n == grid[r].length <= 300\n\t0 <= grid[r][c] < 16\n\t0 <= k < 16\n\n",
+  "description": "You are given a 2D integer array grid with size m x n. You are also given an integer k.\n\nYour task is to calculate the number of paths you can take from the top-left cell (0, 0) to the bottom-right cell (m - 1, n - 1) satisfying the following constraints:\n\n\n\tYou can either move to the right or down. Formally, from the cell (i, j) you may move to the cell (i, j + 1) or to the cell (i + 1, j) if the target cell exists.\n\tThe XOR of all the numbers on the path must be equal to k.\n\n\nReturn the total number of such paths.\n\nSince the answer can be very large, return the result modulo 109 + 7.",
+  "example": "Input: grid = [[2, 1, 5], [7, 10, 0], [12, 6, 4]], k = 11\n\nOutput: 3\n\nExplanation: \n\nThe 3 paths are:\n\n\n\t(0, 0) → (1, 0) → (2, 0) → (2, 1) → (2, 2)\n\t(0, 0) → (1, 0) → (1, 1) → (1, 2) → (2, 2)\n\t(0, 0) → (0, 1) → (1, 1) → (2, 1) → (2, 2)",
+  "constraints_text": "1 <= m == grid.length <= 300\n\t1 <= n == grid[r].length <= 300\n\t0 <= grid[r][c] < 16\n\t0 <= k < 16",
+  "templates": {
+    "c": "int countPathsWithXorValue(int** grid, int gridSize, int* gridColSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countPathsWithXorValue(vector<vector<int>>& grid, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countPathsWithXorValue(int[][] grid, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number} k\n * @return {number}\n */\nvar countPathsWithXorValue = function(grid, k) {\n    \n};",
+    "python": "class Solution(object):\n    def countPathsWithXorValue(self, grid, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the number of paths to each cell with a specific XOR sum.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "number-of-paths",
+        "move-to-the-right-or-down",
+        "xor-of-all-numbers-on-the-path"
+      ],
+      "constraints": [
+        "m-x-n-grid",
+        "xor-must-be-k",
+        "return-result-modulo-10-9-7",
+        "0-grid-r-c-16",
+        "0-k-16"
+      ]
+    }
+  ]
+}

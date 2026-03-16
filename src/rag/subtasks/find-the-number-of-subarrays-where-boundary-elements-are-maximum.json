@@ -1,0 +1,57 @@
+{
+  "slug": "find-the-number-of-subarrays-where-boundary-elements-are-maximum",
+  "link": "https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/",
+  "difficulty": "Hard",
+  "index": "2717",
+  "description_full": "You are given an array of positive integers nums.\n\nReturn the number of subarrays of nums, where the first and the last elements of the subarray are equal to the largest element in the subarray.\n\n \nExample 1:\n\n\nInput: nums = [1,4,3,3,2]\n\nOutput: 6\n\nExplanation:\n\nThere are 6 subarrays which have the first and the last elements equal to the largest element of the subarray:\n\n\n\tsubarray [1,4,3,3,2], with its largest element 1. The first element is 1 and the last element is also 1.\n\tsubarray [1,4,3,3,2], with its largest element 4. The first element is 4 and the last element is also 4.\n\tsubarray [1,4,3,3,2], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [1,4,3,3,2], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [1,4,3,3,2], with its largest element 2. The first element is 2 and the last element is also 2.\n\tsubarray [1,4,3,3,2], with its largest element 3. The first element is 3 and the last element is also 3.\n\n\nHence, we return 6.\n\n\nExample 2:\n\n\nInput: nums = [3,3,3]\n\nOutput: 6\n\nExplanation:\n\nThere are 6 subarrays which have the first and the last elements equal to the largest element of the subarray:\n\n\n\tsubarray [3,3,3], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [3,3,3], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [3,3,3], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [3,3,3], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [3,3,3], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [3,3,3], with its largest element 3. The first element is 3 and the last element is also 3.\n\n\nHence, we return 6.\n\n\nExample 3:\n\n\nInput: nums = [1]\n\nOutput: 1\n\nExplanation:\n\nThere is a single subarray of nums which is [1], with its largest element 1. The first element is 1 and the last element is also 1.\n\nHence, we return 1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\n",
+  "description": "You are given an array of positive integers nums.\n\nReturn the number of subarrays of nums, where the first and the last elements of the subarray are equal to the largest element in the subarray.",
+  "example": "Input: nums = [1,4,3,3,2]\n\nOutput: 6\n\nExplanation:\n\nThere are 6 subarrays which have the first and the last elements equal to the largest element of the subarray:\n\n\n\tsubarray [1,4,3,3,2], with its largest element 1. The first element is 1 and the last element is also 1.\n\tsubarray [1,4,3,3,2], with its largest element 4. The first element is 4 and the last element is also 4.\n\tsubarray [1,4,3,3,2], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [1,4,3,3,2], with its largest element 3. The first element is 3 and the last element is also 3.\n\tsubarray [1,4,3,3,2], with its largest element 2. The first element is 2 and the last element is also 2.\n\tsubarray [1,4,3,3,2], with its largest element 3. The first element is 3 and the last element is also 3.\n\n\nHence, we return 6.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109",
+  "templates": {
+    "c": "long long numberOfSubarrays(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long numberOfSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar numberOfSubarrays = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute `prev_greater` and `next_greater` indices, and build data structures for range maximum query and value-index lookups.",
+      "structures": [
+        "array",
+        "stack",
+        "ds"
+      ],
+      "actions": [
+        "monotonic-stack",
+        "segment-tree"
+      ],
+      "cues": [
+        "largest-element-in-subarray",
+        "first-and-last-elements-equal"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    },
+    {
+      "intent": "Implement a divide and conquer function to recursively count valid subarrays using precomputed range information.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "divide-and-conquer",
+        "recursion",
+        "binary-search"
+      ],
+      "cues": [
+        "number-of-subarrays",
+        "first-and-last-elements-equal-to-largest"
+      ],
+      "constraints": [
+        "n-10-5"
+      ]
+    }
+  ]
+}

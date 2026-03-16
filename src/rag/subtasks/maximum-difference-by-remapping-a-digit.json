@@ -1,0 +1,75 @@
+{
+  "slug": "maximum-difference-by-remapping-a-digit",
+  "link": "https://leetcode.com/problems/maximum-difference-by-remapping-a-digit/",
+  "difficulty": "Easy",
+  "index": "546",
+  "description_full": "You are given an integer num. You know that Bob will sneakily remap one of the 10 possible digits (0 to 9) to another digit.\n\nReturn the difference between the maximum and minimum values Bob can make by remapping exactly one digit in num.\n\nNotes:\n\n\n\tWhen Bob remaps a digit d1 to another digit d2, Bob replaces all occurrences of d1 in num with d2.\n\tBob can remap a digit to itself, in which case num does not change.\n\tBob can remap different digits for obtaining minimum and maximum values respectively.\n\tThe resulting number after remapping can contain leading zeroes.\n\n\n \nExample 1:\n\n\nInput: num = 11891\nOutput: 99009\nExplanation: \nTo achieve the maximum value, Bob can remap the digit 1 to the digit 9 to yield 99899.\nTo achieve the minimum value, Bob can remap the digit 1 to the digit 0, yielding 890.\nThe difference between these two numbers is 99009.\n\n\nExample 2:\n\n\nInput: num = 90\nOutput: 99\nExplanation:\nThe maximum value that can be returned by the function is 99 (if 0 is replaced by 9) and the minimum value that can be returned by the function is 0 (if 9 is replaced by 0).\nThus, we return 99.\n\n \nConstraints:\n\n\n\t1 <= num <= 108\n\n",
+  "description": "You are given an integer num. You know that Bob will sneakily remap one of the 10 possible digits (0 to 9) to another digit.\n\nReturn the difference between the maximum and minimum values Bob can make by remapping exactly one digit in num.\n\nNotes:\n\n\n\tWhen Bob remaps a digit d1 to another digit d2, Bob replaces all occurrences of d1 in num with d2.\n\tBob can remap a digit to itself, in which case num does not change.\n\tBob can remap different digits for obtaining minimum and maximum values respectively.\n\tThe resulting number after remapping can contain leading zeroes.",
+  "example": "Input: num = 11891\nOutput: 99009\nExplanation: \nTo achieve the maximum value, Bob can remap the digit 1 to the digit 9 to yield 99899.\nTo achieve the minimum value, Bob can remap the digit 1 to the digit 0, yielding 890.\nThe difference between these two numbers is 99009.",
+  "constraints_text": "1 <= num <= 108",
+  "templates": {
+    "c": "int minMaxDifference(int num) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minMaxDifference(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMaxDifference(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number}\n */\nvar minMaxDifference = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def minMaxDifference(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the maximum possible number by greedily remapping one digit to '9'.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "maximum-value",
+        "remap-one-digit",
+        "digit-9"
+      ],
+      "constraints": [
+        "1-num-10-8"
+      ]
+    },
+    {
+      "intent": "Determine the minimum possible number by greedily remapping one digit to '0'.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-value",
+        "remap-one-digit",
+        "digit-0",
+        "leading-zeroes"
+      ],
+      "constraints": [
+        "1-num-10-8"
+      ]
+    },
+    {
+      "intent": "Calculate the difference between the previously computed maximum and minimum remapped values.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "difference-between-maximum-and-minimum"
+      ],
+      "constraints": [
+        "1-num-10-8"
+      ]
+    }
+  ]
+}

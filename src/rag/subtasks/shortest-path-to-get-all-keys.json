@@ -1,0 +1,40 @@
+{
+  "slug": "shortest-path-to-get-all-keys",
+  "link": "https://leetcode.com/problems/shortest-path-to-get-all-keys/",
+  "difficulty": "Hard",
+  "index": "1906",
+  "description_full": "You are given an m x n grid grid where:\n\n\n\t'.' is an empty cell.\n\t'#' is a wall.\n\t'@' is the starting point.\n\tLowercase letters represent keys.\n\tUppercase letters represent locks.\n\n\nYou start at the starting point and one move consists of walking one space in one of the four cardinal directions. You cannot walk outside the grid, or walk into a wall.\n\nIf you walk over a key, you can pick it up and you cannot walk over a lock unless you have its corresponding key.\n\nFor some 1 <= k <= 6, there is exactly one lowercase and one uppercase letter of the first k letters of the English alphabet in the grid. This means that there is exactly one key for each lock, and one lock for each key; and also that the letters used to represent the keys and locks were chosen in the same order as the English alphabet.\n\nReturn the lowest number of moves to acquire all keys. If it is impossible, return -1.\n\n \nExample 1:\n\n\nInput: grid = [\"@.a..\",\"###.#\",\"b.A.B\"]\nOutput: 8\nExplanation: Note that the goal is to obtain all the keys not to open all the locks.\n\n\nExample 2:\n\n\nInput: grid = [\"@..aA\",\"..B#.\",\"....b\"]\nOutput: 6\n\n\nExample 3:\n\n\nInput: grid = [\"@Aa\"]\nOutput: -1\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 30\n\tgrid[i][j] is either an English letter, '.', '#', or '@'. \n\tThere is exactly one '@' in the grid.\n\tThe number of keys in the grid is in the range [1, 6].\n\tEach key in the grid is unique.\n\tEach key in the grid has a matching lock.\n\n",
+  "description": "You are given an m x n grid grid where:\n\n\n\t'.' is an empty cell.\n\t'#' is a wall.\n\t'@' is the starting point.\n\tLowercase letters represent keys.\n\tUppercase letters represent locks.\n\n\nYou start at the starting point and one move consists of walking one space in one of the four cardinal directions. You cannot walk outside the grid, or walk into a wall.\n\nIf you walk over a key, you can pick it up and you cannot walk over a lock unless you have its corresponding key.\n\nFor some 1 <= k <= 6, there is exactly one lowercase and one uppercase letter of the first k letters of the English alphabet in the grid. This means that there is exactly one key for each lock, and one lock for each key; and also that the letters used to represent the keys and locks were chosen in the same order as the English alphabet.\n\nReturn the lowest number of moves to acquire all keys. If it is impossible, return -1.",
+  "example": "Input: grid = [\"@.a..\",\"###.#\",\"b.A.B\"]\nOutput: 8\nExplanation: Note that the goal is to obtain all the keys not to open all the locks.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 30\n\tgrid[i][j] is either an English letter, '.', '#', or '@'. \n\tThere is exactly one '@' in the grid.\n\tThe number of keys in the grid is in the range [1, 6].\n\tEach key in the grid is unique.\n\tEach key in the grid has a matching lock.",
+  "templates": {
+    "c": "int shortestPathAllKeys(char** grid, int gridSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int shortestPathAllKeys(vector<string>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestPathAllKeys(String[] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} grid\n * @return {number}\n */\nvar shortestPathAllKeys = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestPathAllKeys(self, grid):\n        \"\"\"\n        :type grid: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a Breadth-First Search on the grid, where the state includes current position and collected keys (represented by a bitmask), to find the minimum moves to collect all keys.",
+      "structures": [
+        "matrix",
+        "queue",
+        "number"
+      ],
+      "actions": [
+        "bfs",
+        "bitmask-dp"
+      ],
+      "cues": [
+        "lowest-number-of-moves",
+        "acquire-all-keys",
+        "k-6"
+      ],
+      "constraints": [
+        "m-n-30",
+        "k-6"
+      ]
+    }
+  ]
+}
