@@ -15,6 +15,7 @@
 
 ```text
 Knowledge-Augmented-Codegen/
+├─ figures
 ├─ knowledge_base/         
 ├─ ProblemInfoCrawler/   
 ├─ evaluation/
@@ -29,7 +30,7 @@ Knowledge-Augmented-Codegen/
 ├─ README.md              
 └─ .gitignore
 
-- **Figure**: 项目相关图表。
+- **figures**: 项目相关图表。
 - **knowledge_base**: 知识库构建过程中产生的关键文件，包括原始知识来源、知识切分结果、结构化知识卡片、向量索引文件及其元数据等。
 - **ProblemInfoCrawler**: 自动收集 LeetCode 题目信息。
 - **evaluation**: 代码生成结果的评测。
