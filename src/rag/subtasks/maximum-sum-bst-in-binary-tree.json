@@ -1,0 +1,40 @@
+{
+  "slug": "maximum-sum-bst-in-binary-tree",
+  "link": "https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/",
+  "difficulty": "Hard",
+  "index": "1991",
+  "description_full": "Given a binary tree root, return the maximum sum of all keys of any sub-tree which is also a Binary Search Tree (BST).\n\nAssume a BST is defined as follows:\n\n\n\tThe left subtree of a node contains only nodes with keys less than the node's key.\n\tThe right subtree of a node contains only nodes with keys greater than the node's key.\n\tBoth the left and right subtrees must also be binary search trees.\n\n\n \nExample 1:\n\n\n\n\nInput: root = [1,4,3,2,4,2,5,null,null,null,null,null,null,4,6]\nOutput: 20\nExplanation: Maximum sum in a valid Binary search tree is obtained in root node with key equal to 3.\n\n\nExample 2:\n\n\n\n\nInput: root = [4,3,null,1,2]\nOutput: 2\nExplanation: Maximum sum in a valid Binary search tree is obtained in a single root node with key equal to 2.\n\n\nExample 3:\n\n\nInput: root = [-4,-2,-5]\nOutput: 0\nExplanation: All values are negatives. Return an empty BST.\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 4 * 104].\n\t-4 * 104 <= Node.val <= 4 * 104\n\n",
+  "description": "Given a binary tree root, return the maximum sum of all keys of any sub-tree which is also a Binary Search Tree (BST).\n\nAssume a BST is defined as follows:\n\n\n\tThe left subtree of a node contains only nodes with keys less than the node's key.\n\tThe right subtree of a node contains only nodes with keys greater than the node's key.\n\tBoth the left and right subtrees must also be binary search trees.",
+  "example": "Input: root = [1,4,3,2,4,2,5,null,null,null,null,null,null,4,6]\nOutput: 20\nExplanation: Maximum sum in a valid Binary search tree is obtained in root node with key equal to 3.",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 4 * 104].\n\t-4 * 104 <= Node.val <= 4 * 104",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nint maxSumBST(struct TreeNode* root) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int maxSumBST(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int maxSumBST(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar maxSumBST = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def maxSumBST(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a post-order DFS traversal to validate BST properties and compute sums for all subtrees, tracking the maximum valid BST sum.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "binary-tree-root",
+        "maximum-sum",
+        "sub-tree",
+        "binary-search-tree-bst"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-tree-is-in-the-range-1-4-104",
+        "4-104-node-val-4-104"
+      ]
+    }
+  ]
+}

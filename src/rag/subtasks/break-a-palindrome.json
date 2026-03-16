@@ -1,0 +1,72 @@
+{
+  "slug": "break-a-palindrome",
+  "link": "https://leetcode.com/problems/break-a-palindrome/",
+  "difficulty": "Medium",
+  "index": "1195",
+  "description_full": "Given a palindromic string of lowercase English letters palindrome, replace exactly one character with any lowercase English letter so that the resulting string is not a palindrome and that it is the lexicographically smallest one possible.\n\nReturn the resulting string. If there is no way to replace a character to make it not a palindrome, return an empty string.\n\nA string a is lexicographically smaller than a string b (of the same length) if in the first position where a and b differ, a has a character strictly smaller than the corresponding character in b. For example, \"abcc\" is lexicographically smaller than \"abcd\" because the first position they differ is at the fourth character, and 'c' is smaller than 'd'.\n\n \nExample 1:\n\n\nInput: palindrome = \"abccba\"\nOutput: \"aaccba\"\nExplanation: There are many ways to make \"abccba\" not a palindrome, such as \"zbccba\", \"aaccba\", and \"abacba\".\nOf all the ways, \"aaccba\" is the lexicographically smallest.\n\n\nExample 2:\n\n\nInput: palindrome = \"a\"\nOutput: \"\"\nExplanation: There is no way to replace a single character to make \"a\" not a palindrome, so return an empty string.\n\n\n \nConstraints:\n\n\n\t1 <= palindrome.length <= 1000\n\tpalindrome consists of only lowercase English letters.\n\n",
+  "description": "Given a palindromic string of lowercase English letters palindrome, replace exactly one character with any lowercase English letter so that the resulting string is not a palindrome and that it is the lexicographically smallest one possible.\n\nReturn the resulting string. If there is no way to replace a character to make it not a palindrome, return an empty string.\n\nA string a is lexicographically smaller than a string b (of the same length) if in the first position where a and b differ, a has a character strictly smaller than the corresponding character in b. For example, \"abcc\" is lexicographically smaller than \"abcd\" because the first position they differ is at the fourth character, and 'c' is smaller than 'd'.",
+  "example": "Input: palindrome = \"abccba\"\nOutput: \"aaccba\"\nExplanation: There are many ways to make \"abccba\" not a palindrome, such as \"zbccba\", \"aaccba\", and \"abacba\".\nOf all the ways, \"aaccba\" is the lexicographically smallest.",
+  "constraints_text": "1 <= palindrome.length <= 1000\n\tpalindrome consists of only lowercase English letters.",
+  "templates": {
+    "c": "char* breakPalindrome(char* palindrome) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string breakPalindrome(string palindrome) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String breakPalindrome(String palindrome) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} palindrome\n * @return {string}\n */\nvar breakPalindrome = function(palindrome) {\n    \n};",
+    "python": "class Solution(object):\n    def breakPalindrome(self, palindrome):\n        \"\"\"\n        :type palindrome: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Handle the base case where the input string has only one character, returning an empty string.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "length-1",
+        "empty-string"
+      ],
+      "constraints": [
+        "1-palindrome-length"
+      ]
+    },
+    {
+      "intent": "Iterate through the first half of the palindrome to find the first non-'a' character and replace it with 'a'.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "lexicographically-smallest",
+        "first-position",
+        "not-a-palindrome"
+      ],
+      "constraints": [
+        "replace-exactly-one-character",
+        "lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "If all characters in the first half are 'a', change the last character of the palindrome to 'b'.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "all-a-s-in-first-half",
+        "last-character",
+        "lexicographically-smallest"
+      ],
+      "constraints": [
+        "not-a-palindrome"
+      ]
+    }
+  ]
+}

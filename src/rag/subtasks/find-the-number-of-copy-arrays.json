@@ -1,0 +1,38 @@
+{
+  "slug": "find-the-number-of-copy-arrays",
+  "link": "https://leetcode.com/problems/find-the-number-of-copy-arrays/",
+  "difficulty": "Medium",
+  "index": "2617",
+  "description_full": "You are given an array original of length n and a 2D array bounds of length n x 2, where bounds[i] = [ui, vi].\n\nYou need to find the number of possible arrays copy of length n such that:\n\n\n\t(copy[i] - copy[i - 1]) == (original[i] - original[i - 1]) for 1 <= i <= n - 1.\n\tui <= copy[i] <= vi for 0 <= i <= n - 1.\n\n\nReturn the number of such arrays.\n\n \nExample 1:\n\n\nInput: original = [1,2,3,4], bounds = [[1,2],[2,3],[3,4],[4,5]]\n\nOutput: 2\n\nExplanation:\n\nThe possible arrays are:\n\n\n\t[1, 2, 3, 4]\n\t[2, 3, 4, 5]\n\n\n\nExample 2:\n\n\nInput: original = [1,2,3,4], bounds = [[1,10],[2,9],[3,8],[4,7]]\n\nOutput: 4\n\nExplanation:\n\nThe possible arrays are:\n\n\n\t[1, 2, 3, 4]\n\t[2, 3, 4, 5]\n\t[3, 4, 5, 6]\n\t[4, 5, 6, 7]\n\n\n\nExample 3:\n\n\nInput: original = [1,2,1,2], bounds = [[1,1],[2,3],[3,3],[2,3]]\n\nOutput: 0\n\nExplanation:\n\nNo array is possible.\n\n\n \nConstraints:\n\n\n\t2 <= n == original.length <= 105\n\t1 <= original[i] <= 109\n\tbounds.length == n\n\tbounds[i].length == 2\n\t1 <= bounds[i][0] <= bounds[i][1] <= 109\n\n",
+  "description": "You are given an array original of length n and a 2D array bounds of length n x 2, where bounds[i] = [ui, vi].\n\nYou need to find the number of possible arrays copy of length n such that:\n\n\n\t(copy[i] - copy[i - 1]) == (original[i] - original[i - 1]) for 1 <= i <= n - 1.\n\tui <= copy[i] <= vi for 0 <= i <= n - 1.\n\n\nReturn the number of such arrays.",
+  "example": "Input: original = [1,2,3,4], bounds = [[1,2],[2,3],[3,4],[4,5]]\n\nOutput: 2\n\nExplanation:\n\nThe possible arrays are:\n\n\n\t[1, 2, 3, 4]\n\t[2, 3, 4, 5]",
+  "constraints_text": "2 <= n == original.length <= 105\n\t1 <= original[i] <= 109\n\tbounds.length == n\n\tbounds[i].length == 2\n\t1 <= bounds[i][0] <= bounds[i][1] <= 109",
+  "templates": {
+    "c": "int countArrays(int* original, int originalSize, int** bounds, int boundsSize, int* boundsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countArrays(vector<int>& original, vector<vector<int>>& bounds) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countArrays(int[] original, int[][] bounds) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} original\n * @param {number[][]} bounds\n * @return {number}\n */\nvar countArrays = function(original, bounds) {\n    \n};",
+    "python": "class Solution(object):\n    def countArrays(self, original, bounds):\n        \"\"\"\n        :type original: List[int]\n        :type bounds: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the valid range for the constant difference 'k' by iterating through all elements and finding the intersection of individual bounds, then count integers in this range.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "copy-i-copy-i-1-original-i-original-i-1",
+        "ui-copy-i-vi"
+      ],
+      "constraints": [
+        "n-10-5",
+        "values-10-9"
+      ]
+    }
+  ]
+}

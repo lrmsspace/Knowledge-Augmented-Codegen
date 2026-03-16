@@ -1,0 +1,72 @@
+{
+  "slug": "sort-characters-by-frequency",
+  "link": "https://leetcode.com/problems/sort-characters-by-frequency/",
+  "difficulty": "Medium",
+  "index": "820",
+  "description_full": "Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.\n\nReturn the sorted string. If there are multiple answers, return any of them.\n\n \nExample 1:\n\n\nInput: s = \"tree\"\nOutput: \"eert\"\nExplanation: 'e' appears twice while 'r' and 't' both appear once.\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.\n\n\nExample 2:\n\n\nInput: s = \"cccaaa\"\nOutput: \"aaaccc\"\nExplanation: Both 'c' and 'a' appear three times, so both \"cccaaa\" and \"aaaccc\" are valid answers.\nNote that \"cacaca\" is incorrect, as the same characters must be together.\n\n\nExample 3:\n\n\nInput: s = \"Aabb\"\nOutput: \"bbAa\"\nExplanation: \"bbaA\" is also a valid answer, but \"Aabb\" is incorrect.\nNote that 'A' and 'a' are treated as two different characters.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 5 * 105\n\ts consists of uppercase and lowercase English letters and digits.\n\n",
+  "description": "Given a string s, sort it in decreasing order based on the frequency of the characters. The frequency of a character is the number of times it appears in the string.\n\nReturn the sorted string. If there are multiple answers, return any of them.",
+  "example": "Input: s = \"tree\"\nOutput: \"eert\"\nExplanation: 'e' appears twice while 'r' and 't' both appear once.\nSo 'e' must appear before both 'r' and 't'. Therefore \"eetr\" is also a valid answer.",
+  "constraints_text": "1 <= s.length <= 5 * 105\n\ts consists of uppercase and lowercase English letters and digits.",
+  "templates": {
+    "c": "char* frequencySort(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string frequencySort(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String frequencySort(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar frequencySort = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def frequencySort(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each character in the input string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "frequency-of-the-characters",
+        "number-of-times-it-appears"
+      ],
+      "constraints": [
+        "1-s-length-5-105",
+        "s-consists-of-uppercase-and-lowercase-english-letters-and-digits"
+      ]
+    },
+    {
+      "intent": "Sort characters based on their frequencies in decreasing order.",
+      "structures": [
+        "array",
+        "heap"
+      ],
+      "actions": [
+        "greedy",
+        "heap-select"
+      ],
+      "cues": [
+        "sort-it-in-decreasing-order-based-on-the-frequency"
+      ],
+      "constraints": [
+        "if-there-are-multiple-answers-return-any-of-them"
+      ]
+    },
+    {
+      "intent": "Construct the final string by repeating each character its frequency times.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-sorted-string",
+        "same-characters-must-be-together"
+      ],
+      "constraints": [
+        "1-s-length-5-105"
+      ]
+    }
+  ]
+}

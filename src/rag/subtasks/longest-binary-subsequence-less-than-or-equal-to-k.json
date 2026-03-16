@@ -1,0 +1,39 @@
+{
+  "slug": "longest-binary-subsequence-less-than-or-equal-to-k",
+  "link": "https://leetcode.com/problems/longest-binary-subsequence-less-than-or-equal-to-k/",
+  "difficulty": "Medium",
+  "index": "1572",
+  "description_full": "You are given a binary string s and a positive integer k.\n\nReturn the length of the longest subsequence of s that makes up a binary number less than or equal to k.\n\nNote:\n\n\n\tThe subsequence can contain leading zeroes.\n\tThe empty string is considered to be equal to 0.\n\tA subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.\n\n\n \nExample 1:\n\n\nInput: s = \"1001010\", k = 5\nOutput: 5\nExplanation: The longest subsequence of s that makes up a binary number less than or equal to 5 is \"00010\", as this number is equal to 2 in decimal.\nNote that \"00100\" and \"00101\" are also possible, which are equal to 4 and 5 in decimal, respectively.\nThe length of this subsequence is 5, so 5 is returned.\n\n\nExample 2:\n\n\nInput: s = \"00101001\", k = 1\nOutput: 6\nExplanation: \"000001\" is the longest subsequence of s that makes up a binary number less than or equal to 1, as this number is equal to 1 in decimal.\nThe length of this subsequence is 6, so 6 is returned.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts[i] is either '0' or '1'.\n\t1 <= k <= 109\n\n",
+  "description": "You are given a binary string s and a positive integer k.\n\nReturn the length of the longest subsequence of s that makes up a binary number less than or equal to k.\n\nNote:\n\n\n\tThe subsequence can contain leading zeroes.\n\tThe empty string is considered to be equal to 0.\n\tA subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.",
+  "example": "Input: s = \"1001010\", k = 5\nOutput: 5\nExplanation: The longest subsequence of s that makes up a binary number less than or equal to 5 is \"00010\", as this number is equal to 2 in decimal.\nNote that \"00100\" and \"00101\" are also possible, which are equal to 4 and 5 in decimal, respectively.\nThe length of this subsequence is 5, so 5 is returned.",
+  "constraints_text": "1 <= s.length <= 1000\n\ts[i] is either '0' or '1'.\n\t1 <= k <= 109",
+  "templates": {
+    "c": "int longestSubsequence(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestSubsequence(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSubsequence(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar longestSubsequence = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def longestSubsequence(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Greedily construct the longest subsequence by including all '0's and selecting '1's from right to left to keep the binary value within k.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "longest-subsequence",
+        "binary-number-less-than-or-equal-to-k",
+        "leading-zeroes"
+      ],
+      "constraints": [
+        "s-length-1000",
+        "k-10-9"
+      ]
+    }
+  ]
+}

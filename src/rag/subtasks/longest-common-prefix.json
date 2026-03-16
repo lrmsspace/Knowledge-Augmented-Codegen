@@ -1,0 +1,39 @@
+{
+  "slug": "longest-common-prefix",
+  "link": "https://leetcode.com/problems/longest-common-prefix/",
+  "difficulty": "Easy",
+  "index": "4",
+  "description_full": "Write a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string \"\".\n\n \nExample 1:\n\n\nInput: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"\n\n\nExample 2:\n\n\nInput: strs = [\"dog\",\"racecar\",\"car\"]\nOutput: \"\"\nExplanation: There is no common prefix among the input strings.\n\n\n \nConstraints:\n\n\n\t1 <= strs.length <= 200\n\t0 <= strs[i].length <= 200\n\tstrs[i] consists of only lowercase English letters if it is non-empty.\n\n",
+  "description": "Write a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string \"\".",
+  "example": "Input: strs = [\"flower\",\"flow\",\"flight\"]\nOutput: \"fl\"",
+  "constraints_text": "1 <= strs.length <= 200\n\t0 <= strs[i].length <= 200\n\tstrs[i] consists of only lowercase English letters if it is non-empty.",
+  "templates": {
+    "c": "char* longestCommonPrefix(char** strs, int strsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string longestCommonPrefix(vector<string>& strs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestCommonPrefix(String[] strs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} strs\n * @return {string}\n */\nvar longestCommonPrefix = function(strs) {\n    \n};",
+    "python": "class Solution(object):\n    def longestCommonPrefix(self, strs):\n        \"\"\"\n        :type strs: List[str]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the longest common prefix by comparing characters at each position across all strings.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "longest-common-prefix",
+        "array-of-strings"
+      ],
+      "constraints": [
+        "1-strs-length-200",
+        "0-strs-i-length-200",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

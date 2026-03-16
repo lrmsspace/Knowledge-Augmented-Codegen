@@ -1,0 +1,40 @@
+{
+  "slug": "can-place-flowers",
+  "link": "https://leetcode.com/problems/can-place-flowers/",
+  "difficulty": "Easy",
+  "index": "134",
+  "description_full": "You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.\n\nGiven an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.\n\n \nExample 1:\nInput: flowerbed = [1,0,0,0,1], n = 1\nOutput: true\nExample 2:\nInput: flowerbed = [1,0,0,0,1], n = 2\nOutput: false\n\n \nConstraints:\n\n\n\t1 <= flowerbed.length <= 2 * 104\n\tflowerbed[i] is 0 or 1.\n\tThere are no two adjacent flowers in flowerbed.\n\t0 <= n <= flowerbed.length\n\n",
+  "description": "You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.\n\nGiven an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.",
+  "example": "Input: flowerbed = [1,0,0,0,1], n = 1\nOutput: true",
+  "constraints_text": "1 <= flowerbed.length <= 2 * 104\n\tflowerbed[i] is 0 or 1.\n\tThere are no two adjacent flowers in flowerbed.\n\t0 <= n <= flowerbed.length",
+  "templates": {
+    "c": "bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canPlaceFlowers(vector<int>& flowerbed, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canPlaceFlowers(int[] flowerbed, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} flowerbed\n * @param {number} n\n * @return {boolean}\n */\nvar canPlaceFlowers = function(flowerbed, n) {\n    \n};",
+    "python": "class Solution(object):\n    def canPlaceFlowers(self, flowerbed, n):\n        \"\"\"\n        :type flowerbed: List[int]\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the flowerbed, identify valid planting spots based on adjacency rules, and count the maximum number of new flowers that can be planted greedily.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "flowerbed",
+        "0s-and-1s",
+        "no-adjacent-flowers",
+        "n-new-flowers"
+      ],
+      "constraints": [
+        "flowerbed-length-2-10-4",
+        "0-n-flowerbed-length"
+      ]
+    }
+  ]
+}

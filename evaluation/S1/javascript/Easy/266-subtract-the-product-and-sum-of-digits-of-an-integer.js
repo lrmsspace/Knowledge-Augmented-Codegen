@@ -1,0 +1,58 @@
+// Source: https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/   |   Difficulty: Easy
+//
+// Problem Description:
+// Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+//
+// Example:
+// Input: n = 234
+// Output: 15 
+// Explanation: 
+// Product of digits = 2 * 3 * 4 = 24 
+// Sum of digits = 2 + 3 + 4 = 9 
+// Result = 24 - 9 = 15
+//
+// Constraints:
+// 1 <= n <= 10^5
+//
+// Helpful references (internal KB):
+// - Digit DP (array, number, digit-dp, recursion)
+//   • When to use: Used for counting numbers or summing properties of numbers within a given range [A, B] that satisfy certain digit-based conditions.
+//   • Idea: Digit DP is a dynamic programming technique to count numbers or calculate sums of properties for numbers in a given range [A, B] by building them digit by digit. It typically operates in O(D * S) time, where D is the number of digits and S is the maximum sum/property value.
+//   • Invariants: The `tight` parameter correctly reflects if the current digit choice is restricted by the original number's digit at the current position.; The `sum` parameter accurately accumulates the sum of digits chosen for the prefix constructed so far.
+//   • Tips: Convert the upper bound number into a digit array for easier processing.; Define the DP state to include current index, tight constraint, and any relevant accumulated property (e.g., sum, count).
+//   • Pitfalls: Incorrectly handling the `tight` constraint, leading to overcounting or undercounting.; Forgetting to memoize or using an insufficient DP table size for state parameters.
+// - Non-negative Integers without Consecutive Ones (number, enumeration, simulation)
+//   • When to use: Use when counting numbers up to a given limit that satisfy a specific bit pattern constraint, particularly when the limit is small enough for direct iteration and checking.
+//   • Idea: This approach iterates through every non-negative integer from 0 up to the given limit num. For each integer, it simulates checking its binary representation to determine if it contains any two consecutive '1's.
+//   • Invariants: count stores the number of integers k (where 0 <= k < i) that do not have consecutive ones.; All integers j such that 0 <= j < i have been processed.
+//   • Tips: Use bitwise operations like (i & (i >> 1)) to efficiently detect consecutive ones.; Remember to include 0 in the count as it satisfies the condition (no consecutive ones).
+//   • Pitfalls: Performance degradation for large num due to linear scan and per-number bit check.; Incorrectly handling the upper bound of the iteration (e.g., i < num instead of i <= num).
+// - Bit manipulation (number, simulation)
+//   • When to use: Use when operations on individual bits of an integer are required, for optimizing arithmetic with powers of two, or for efficient management of boolean flags.
+//   • Idea: Bit manipulation involves directly operating on the binary representation of numbers using bitwise operators and shifts. These operations typically have O(1) time complexity as they are hardware-level instructions.
+//   • Invariants: The total number of bits representing the integer remains constant for fixed-width types.; Applying `n & (1 << k)` isolates the k-th bit, setting all other bits to zero.
+//   • Tips: Use `&` with `(1 << k)` to check if the k-th bit is set.; Use `|` with `(1 << k)` to set the k-th bit.
+//   • Pitfalls: Be aware of integer overflow when performing large left shifts.; Understand the difference between arithmetic and logical right shifts, especially for signed numbers.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Do not add custom input parsing or console I/O unless the template explicitly requires it; rely on parameters/return value only.
+// - Use standard ECMAScript features supported by LeetCode (Node.js runtime); no external packages.
+// - Be careful with number precision: JavaScript Number is double; use BigInt only when necessary and keep return type consistent with the problem requirements.
+// - If you introduce helper functions, define them in the same file and avoid relying on global mutable state across test cases.
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function(n) {
+    let product = 1;
+    let sum = 0;
+    while (n > 0) {
+        const digit = n % 10;
+        product *= digit;
+        sum += digit;
+        n = Math.floor(n / 10);
+    }
+    return product - sum;
+};

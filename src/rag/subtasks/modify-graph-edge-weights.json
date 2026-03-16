@@ -1,0 +1,59 @@
+{
+  "slug": "modify-graph-edge-weights",
+  "link": "https://leetcode.com/problems/modify-graph-edge-weights/",
+  "difficulty": "Hard",
+  "index": "2246",
+  "description_full": "You are given an undirected weighted connected graph containing n nodes labeled from 0 to n - 1, and an integer array edges where edges[i] = [ai, bi, wi] indicates that there is an edge between nodes ai and bi with weight wi.\n\nSome edges have a weight of -1 (wi = -1), while others have a positive weight (wi > 0).\n\nYour task is to modify all edges with a weight of -1 by assigning them positive integer values in the range [1, 2 * 109] so that the shortest distance between the nodes source and destination becomes equal to an integer target. If there are multiple modifications that make the shortest distance between source and destination equal to target, any of them will be considered correct.\n\nReturn an array containing all edges (even unmodified ones) in any order if it is possible to make the shortest distance from source to destination equal to target, or an empty array if it's impossible.\n\nNote: You are not allowed to modify the weights of edges with initial positive weights.\n\n \nExample 1:\n\n\n\n\nInput: n = 5, edges = [[4,1,-1],[2,0,-1],[0,3,-1],[4,3,-1]], source = 0, destination = 1, target = 5\nOutput: [[4,1,1],[2,0,1],[0,3,3],[4,3,1]]\nExplanation: The graph above shows a possible modification to the edges, making the distance from 0 to 1 equal to 5.\n\n\nExample 2:\n\n\n\n\nInput: n = 3, edges = [[0,1,-1],[0,2,5]], source = 0, destination = 2, target = 6\nOutput: []\nExplanation: The graph above contains the initial edges. It is not possible to make the distance from 0 to 2 equal to 6 by modifying the edge with weight -1. So, an empty array is returned.\n\n\nExample 3:\n\n\n\n\nInput: n = 4, edges = [[1,0,4],[1,2,3],[2,3,5],[0,3,-1]], source = 0, destination = 2, target = 6\nOutput: [[1,0,4],[1,2,3],[2,3,5],[0,3,1]]\nExplanation: The graph above shows a modified graph having the shortest distance from 0 to 2 as 6.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 100\n\t1 <= edges.length <= n * (n - 1) / 2\n\tedges[i].length == 3\n\t0 <= ai, bi < n\n\twi = -1 or 1 <= wi <= 107\n\tai != bi\n\t0 <= source, destination < n\n\tsource != destination\n\t1 <= target <= 109\n\tThe graph is connected, and there are no self-loops or repeated edges\n\n",
+  "description": "You are given an undirected weighted connected graph containing n nodes labeled from 0 to n - 1, and an integer array edges where edges[i] = [ai, bi, wi] indicates that there is an edge between nodes ai and bi with weight wi.\n\nSome edges have a weight of -1 (wi = -1), while others have a positive weight (wi > 0).\n\nYour task is to modify all edges with a weight of -1 by assigning them positive integer values in the range [1, 2 * 109] so that the shortest distance between the nodes source and destination becomes equal to an integer target. If there are multiple modifications that make the shortest distance between source and destination equal to target, any of them will be considered correct.\n\nReturn an array containing all edges (even unmodified ones) in any order if it is possible to make the shortest distance from source to destination equal to target, or an empty array if it's impossible.\n\nNote: You are not allowed to modify the weights of edges with initial positive weights.",
+  "example": "Input: n = 5, edges = [[4,1,-1],[2,0,-1],[0,3,-1],[4,3,-1]], source = 0, destination = 1, target = 5\nOutput: [[4,1,1],[2,0,1],[0,3,3],[4,3,1]]\nExplanation: The graph above shows a possible modification to the edges, making the distance from 0 to 1 equal to 5.",
+  "constraints_text": "1 <= n <= 100\n\t1 <= edges.length <= n * (n - 1) / 2\n\tedges[i].length == 3\n\t0 <= ai, bi < n\n\twi = -1 or 1 <= wi <= 107\n\tai != bi\n\t0 <= source, destination < n\n\tsource != destination\n\t1 <= target <= 109\n\tThe graph is connected, and there are no self-loops or repeated edges",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** modifiedGraphEdges(int n, int** edges, int edgesSize, int* edgesColSize, int source, int destination, int target, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> modifiedGraphEdges(int n, vector<vector<int>>& edges, int source, int destination, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] modifiedGraphEdges(int n, int[][] edges, int source, int destination, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} source\n * @param {number} destination\n * @param {number} target\n * @return {number[][]}\n */\nvar modifiedGraphEdges = function(n, edges, source, destination, target) {\n    \n};",
+    "python": "class Solution(object):\n    def modifiedGraphEdges(self, n, edges, source, destination, target):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type source: int\n        :type destination: int\n        :type target: int\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute shortest paths from source to all nodes, tracking the minimum distance for each count of unknown edges used.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "dijkstra"
+      ],
+      "cues": [
+        "shortest-distance",
+        "modify-all-edges-with-1",
+        "target"
+      ],
+      "constraints": [
+        "n-nodes",
+        "wi-1-or-wi-0",
+        "target-integer"
+      ]
+    },
+    {
+      "intent": "Reconstruct the optimal path and assign weights to the unknown edges to achieve the target distance.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "backtracking",
+        "greedy"
+      ],
+      "cues": [
+        "return-an-array-containing-all-edges",
+        "assign-them-positive-integer-values",
+        "range-1-2-10-9"
+      ],
+      "constraints": [
+        "1-assigned-weight-2-10-9",
+        "shortest-distance-target"
+      ]
+    }
+  ]
+}

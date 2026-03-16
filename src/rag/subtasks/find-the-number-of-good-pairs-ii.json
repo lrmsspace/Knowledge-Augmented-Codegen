@@ -1,0 +1,79 @@
+{
+  "slug": "find-the-number-of-good-pairs-ii",
+  "link": "https://leetcode.com/problems/find-the-number-of-good-pairs-ii/",
+  "difficulty": "Medium",
+  "index": "2514",
+  "description_full": "You are given 2 integer arrays nums1 and nums2 of lengths n and m respectively. You are also given a positive integer k.\n\nA pair (i, j) is called good if nums1[i] is divisible by nums2[j] * k (0 <= i <= n - 1, 0 <= j <= m - 1).\n\nReturn the total number of good pairs.\n\n \nExample 1:\n\n\nInput: nums1 = [1,3,4], nums2 = [1,3,4], k = 1\n\nOutput: 5\n\nExplanation:\nThe 5 good pairs are (0, 0), (1, 0), (1, 1), (2, 0), and (2, 2).\n\nExample 2:\n\n\nInput: nums1 = [1,2,4,12], nums2 = [2,4], k = 3\n\nOutput: 2\n\nExplanation:\n\nThe 2 good pairs are (3, 0) and (3, 1).\n\n\n \nConstraints:\n\n\n\t1 <= n, m <= 105\n\t1 <= nums1[i], nums2[j] <= 106\n\t1 <= k <= 103\n\n",
+  "description": "You are given 2 integer arrays nums1 and nums2 of lengths n and m respectively. You are also given a positive integer k.\n\nA pair (i, j) is called good if nums1[i] is divisible by nums2[j] * k (0 <= i <= n - 1, 0 <= j <= m - 1).\n\nReturn the total number of good pairs.",
+  "example": "Input: nums1 = [1,3,4], nums2 = [1,3,4], k = 1\n\nOutput: 5\n\nExplanation:\nThe 5 good pairs are (0, 0), (1, 0), (1, 1), (2, 0), and (2, 2).",
+  "constraints_text": "1 <= n, m <= 105\n\t1 <= nums1[i], nums2[j] <= 106\n\t1 <= k <= 103",
+  "templates": {
+    "c": "long long numberOfPairs(int* nums1, int nums1Size, int* nums2, int nums2Size, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long numberOfPairs(vector<int>& nums1, vector<int>& nums2, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfPairs(int[] nums1, int[] nums2, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @param {number} k\n * @return {number}\n */\nvar numberOfPairs = function(nums1, nums2, k) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfPairs(self, nums1, nums2, k):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute frequencies of elements in nums2 for efficient lookup during pair counting.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "nums2",
+        "frequency",
+        "lookup"
+      ],
+      "constraints": [
+        "m-10-5",
+        "nums2-j-10-6"
+      ]
+    },
+    {
+      "intent": "Iterate through nums1, filter elements divisible by k, and calculate the target quotient for divisor search.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "nums1-i",
+        "divisible-by-k",
+        "target-quotient"
+      ],
+      "constraints": [
+        "n-10-5",
+        "k-1"
+      ]
+    },
+    {
+      "intent": "For each valid target quotient, find its divisors and sum their precomputed frequencies from nums2 to get total good pairs.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "divisors",
+        "nums2-counts",
+        "total-good-pairs"
+      ],
+      "constraints": [
+        "nums1-i-k-10-6",
+        "max-divisors-count"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "maximum-weighted-k-edge-path",
+  "link": "https://leetcode.com/problems/maximum-weighted-k-edge-path/",
+  "difficulty": "Medium",
+  "index": "2642",
+  "description_full": "You are given an integer n and a Directed Acyclic Graph (DAG) with n nodes labeled from 0 to n - 1. This is represented by a 2D array edges, where edges[i] = [ui, vi, wi] indicates a directed edge from node ui to vi with weight wi.\n\nYou are also given two integers, k and t.\n\nYour task is to determine the maximum possible sum of edge weights for any path in the graph such that:\n\n\n\tThe path contains exactly k edges.\n\tThe total sum of edge weights in the path is strictly less than t.\n\n\nReturn the maximum possible sum of weights for such a path. If no such path exists, return -1.\n\n \nExample 1:\n\n\nInput: n = 3, edges = [[0,1,1],[1,2,2]], k = 2, t = 4\n\nOutput: 3\n\nExplanation:\n\n\n\n\n\tThe only path with k = 2 edges is 0 -> 1 -> 2 with weight 1 + 2 = 3 < t.\n\tThus, the maximum possible sum of weights less than t is 3.\n\n\n\nExample 2:\n\n\nInput: n = 3, edges = [[0,1,2],[0,2,3]], k = 1, t = 3\n\nOutput: 2\n\nExplanation:\n\n\n\n\n\tThere are two paths with k = 1 edge:\n\n\t\n\t\t0 -> 1 with weight 2 < t.\n\t\t0 -> 2 with weight 3 = t, which is not strictly less than t.\n\t\n\t\n\tThus, the maximum possible sum of weights less than t is 2.\n\n\n\nExample 3:\n\n\nInput: n = 3, edges = [[0,1,6],[1,2,8]], k = 1, t = 6\n\nOutput: -1\n\nExplanation:\n\n\n\n\n\tThere are two paths with k = 1 edge:\n\t\n\t\t0 -> 1 with weight 6 = t, which is not strictly less than t.\n\t\t1 -> 2 with weight 8 > t, which is not strictly less than t.\n\t\n\t\n\tSince there is no path with sum of weights strictly less than t, the answer is -1.\n\n\n\n \nConstraints:\n\n\n\t1 <= n <= 300\n\t0 <= edges.length <= 300\n\tedges[i] = [ui, vi, wi]\n\t0 <= ui, vi < n\n\tui != vi\n\t1 <= wi <= 10\n\t0 <= k <= 300\n\t1 <= t <= 600\n\tThe input graph is guaranteed to be a DAG.\n\tThere are no duplicate edges.\n\n",
+  "description": "You are given an integer n and a Directed Acyclic Graph (DAG) with n nodes labeled from 0 to n - 1. This is represented by a 2D array edges, where edges[i] = [ui, vi, wi] indicates a directed edge from node ui to vi with weight wi.\n\nYou are also given two integers, k and t.\n\nYour task is to determine the maximum possible sum of edge weights for any path in the graph such that:\n\n\n\tThe path contains exactly k edges.\n\tThe total sum of edge weights in the path is strictly less than t.\n\n\nReturn the maximum possible sum of weights for such a path. If no such path exists, return -1.",
+  "example": "Input: n = 3, edges = [[0,1,1],[1,2,2]], k = 2, t = 4\n\nOutput: 3\n\nExplanation:\n\n\n\n\n\tThe only path with k = 2 edges is 0 -> 1 -> 2 with weight 1 + 2 = 3 < t.\n\tThus, the maximum possible sum of weights less than t is 3.",
+  "constraints_text": "1 <= n <= 300\n\t0 <= edges.length <= 300\n\tedges[i] = [ui, vi, wi]\n\t0 <= ui, vi < n\n\tui != vi\n\t1 <= wi <= 10\n\t0 <= k <= 300\n\t1 <= t <= 600\n\tThe input graph is guaranteed to be a DAG.\n\tThere are no duplicate edges.",
+  "templates": {
+    "c": "int maxWeight(int n, int** edges, int edgesSize, int* edgesColSize, int k, int t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxWeight(int n, vector<vector<int>>& edges, int k, int t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxWeight(int n, int[][] edges, int k, int t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} k\n * @param {number} t\n * @return {number}\n */\nvar maxWeight = function(n, edges, k, t) {\n    \n};",
+    "python": "class Solution(object):\n    def maxWeight(self, n, edges, k, t):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type k: int\n        :type t: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize graph adjacency list and a 2D DP table to store maximum path sums for specific edge counts.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "n-nodes",
+        "edges-array"
+      ],
+      "constraints": [
+        "1",
+        "",
+        "",
+        "n",
+        "",
+        ""
+      ]
+    },
+    {
+      "intent": "Compute maximum path sums for all nodes using exactly 'i' edges, for 'i' from 0 to k.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "exactly-k-edges",
+        "maximum-possible-sum"
+      ],
+      "constraints": [
+        "1",
+        "",
+        "",
+        "k",
+        "",
+        ""
+      ]
+    },
+    {
+      "intent": "Find the overall maximum path sum among paths with 'k' edges that are strictly less than 't'.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "strictly-less-than-t",
+        "return-1-if-no-such-path"
+      ],
+      "constraints": [
+        "1",
+        "",
+        "",
+        "t",
+        "",
+        ""
+      ]
+    }
+  ]
+}

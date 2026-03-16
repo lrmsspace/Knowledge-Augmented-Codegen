@@ -1,0 +1,42 @@
+{
+  "slug": "new-21-game",
+  "link": "https://leetcode.com/problems/new-21-game/",
+  "difficulty": "Medium",
+  "index": "978",
+  "description_full": "Alice plays the following game, loosely based on the card game \"21\".\n\nAlice starts with 0 points and draws numbers while she has less than k points. During each draw, she gains an integer number of points randomly from the range [1, maxPts], where maxPts is an integer. Each draw is independent and the outcomes have equal probabilities.\n\nAlice stops drawing numbers when she gets k or more points.\n\nReturn the probability that Alice has n or fewer points.\n\nAnswers within 10-5 of the actual answer are considered accepted.\n\n \nExample 1:\n\n\nInput: n = 10, k = 1, maxPts = 10\nOutput: 1.00000\nExplanation: Alice gets a single card, then stops.\n\n\nExample 2:\n\n\nInput: n = 6, k = 1, maxPts = 10\nOutput: 0.60000\nExplanation: Alice gets a single card, then stops.\nIn 6 out of 10 possibilities, she is at or below 6 points.\n\n\nExample 3:\n\n\nInput: n = 21, k = 17, maxPts = 10\nOutput: 0.73278\n\n\n \nConstraints:\n\n\n\t0 <= k <= n <= 104\n\t1 <= maxPts <= 104\n\n",
+  "description": "Alice plays the following game, loosely based on the card game \"21\".\n\nAlice starts with 0 points and draws numbers while she has less than k points. During each draw, she gains an integer number of points randomly from the range [1, maxPts], where maxPts is an integer. Each draw is independent and the outcomes have equal probabilities.\n\nAlice stops drawing numbers when she gets k or more points.\n\nReturn the probability that Alice has n or fewer points.\n\nAnswers within 10-5 of the actual answer are considered accepted.",
+  "example": "Input: n = 10, k = 1, maxPts = 10\nOutput: 1.00000\nExplanation: Alice gets a single card, then stops.",
+  "constraints_text": "0 <= k <= n <= 104\n\t1 <= maxPts <= 104",
+  "templates": {
+    "c": "double new21Game(int n, int k, int maxPts) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    double new21Game(int n, int k, int maxPts) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double new21Game(int n, int k, int maxPts) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @param {number} maxPts\n * @return {number}\n */\nvar new21Game = function(n, k, maxPts) {\n    \n};",
+    "python": "class Solution(object):\n    def new21Game(self, n, k, maxPts):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :type maxPts: int\n        :rtype: float\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the probability Alice stops with n or fewer points using dynamic programming.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "sliding-window",
+        "probability-statistics"
+      ],
+      "cues": [
+        "alice-starts-with-0-points",
+        "draws-numbers-while-she-has-less-than-k-points",
+        "gains-an-integer-number-of-points-randomly-from-the-range-1-maxpts",
+        "stops-drawing-numbers-when-she-gets-k-or-more-points",
+        "return-the-probability-that-alice-has-n-or-fewer-points"
+      ],
+      "constraints": [
+        "0-k-n-104",
+        "1-maxpts-104"
+      ]
+    }
+  ]
+}

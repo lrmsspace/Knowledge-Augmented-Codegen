@@ -1,0 +1,73 @@
+{
+  "slug": "push-dominoes",
+  "link": "https://leetcode.com/problems/push-dominoes/",
+  "difficulty": "Medium",
+  "index": "979",
+  "description_full": "There are n dominoes in a line, and we place each domino vertically upright. In the beginning, we simultaneously push some of the dominoes either to the left or to the right.\n\nAfter each second, each domino that is falling to the left pushes the adjacent domino on the left. Similarly, the dominoes falling to the right push their adjacent dominoes standing on the right.\n\nWhen a vertical domino has dominoes falling on it from both sides, it stays still due to the balance of the forces.\n\nFor the purposes of this question, we will consider that a falling domino expends no additional force to a falling or already fallen domino.\n\nYou are given a string dominoes representing the initial state where:\n\n\n\tdominoes[i] = 'L', if the ith domino has been pushed to the left,\n\tdominoes[i] = 'R', if the ith domino has been pushed to the right, and\n\tdominoes[i] = '.', if the ith domino has not been pushed.\n\n\nReturn a string representing the final state.\n\n \nExample 1:\n\n\nInput: dominoes = \"RR.L\"\nOutput: \"RR.L\"\nExplanation: The first domino expends no additional force on the second domino.\n\n\nExample 2:\n\n\nInput: dominoes = \".L.R...LR..L..\"\nOutput: \"LL.RR.LLRRLL..\"\n\n\n \nConstraints:\n\n\n\tn == dominoes.length\n\t1 <= n <= 105\n\tdominoes[i] is either 'L', 'R', or '.'.\n\n",
+  "description": "There are n dominoes in a line, and we place each domino vertically upright. In the beginning, we simultaneously push some of the dominoes either to the left or to the right.\n\nAfter each second, each domino that is falling to the left pushes the adjacent domino on the left. Similarly, the dominoes falling to the right push their adjacent dominoes standing on the right.\n\nWhen a vertical domino has dominoes falling on it from both sides, it stays still due to the balance of the forces.\n\nFor the purposes of this question, we will consider that a falling domino expends no additional force to a falling or already fallen domino.\n\nYou are given a string dominoes representing the initial state where:\n\n\n\tdominoes[i] = 'L', if the ith domino has been pushed to the left,\n\tdominoes[i] = 'R', if the ith domino has been pushed to the right, and\n\tdominoes[i] = '.', if the ith domino has not been pushed.\n\n\nReturn a string representing the final state.",
+  "example": "Input: dominoes = \"RR.L\"\nOutput: \"RR.L\"\nExplanation: The first domino expends no additional force on the second domino.",
+  "constraints_text": "n == dominoes.length\n\t1 <= n <= 105\n\tdominoes[i] is either 'L', 'R', or '.'.",
+  "templates": {
+    "c": "char* pushDominoes(char* dominoes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string pushDominoes(string dominoes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String pushDominoes(String dominoes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} dominoes\n * @return {string}\n */\nvar pushDominoes = function(dominoes) {\n    \n};",
+    "python": "class Solution(object):\n    def pushDominoes(self, dominoes):\n        \"\"\"\n        :type dominoes: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the time it takes for each domino to fall right, considering only forces from 'R' dominoes to their left.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "falling-to-the-right-pushes",
+        "adjacent-domino-on-the-right"
+      ],
+      "constraints": [
+        "1-n-105"
+      ]
+    },
+    {
+      "intent": "Calculate the time it takes for each domino to fall left, considering only forces from 'L' dominoes to their right.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "falling-to-the-left-pushes",
+        "adjacent-domino-on-the-left"
+      ],
+      "constraints": [
+        "1-n-105"
+      ]
+    },
+    {
+      "intent": "Determine the final state of each '.' domino by comparing the calculated left and right propagation times.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "balance-of-the-forces",
+        "return-a-string-representing-the-final-state"
+      ],
+      "constraints": [
+        "dominoes-i-is-either-l-r-or"
+      ]
+    }
+  ]
+}

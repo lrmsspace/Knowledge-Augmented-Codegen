@@ -1,0 +1,55 @@
+{
+  "slug": "maximum-deletions-on-a-string",
+  "link": "https://leetcode.com/problems/maximum-deletions-on-a-string/",
+  "difficulty": "Hard",
+  "index": "2198",
+  "description_full": "You are given a string s consisting of only lowercase English letters. In one operation, you can:\n\n\n\tDelete the entire string s, or\n\tDelete the first i letters of s if the first i letters of s are equal to the following i letters in s, for any i in the range 1 <= i <= s.length / 2.\n\n\nFor example, if s = \"ababc\", then in one operation, you could delete the first two letters of s to get \"abc\", since the first two letters of s and the following two letters of s are both equal to \"ab\".\n\nReturn the maximum number of operations needed to delete all of s.\n\n \nExample 1:\n\n\nInput: s = \"abcabcdabc\"\nOutput: 2\nExplanation:\n- Delete the first 3 letters (\"abc\") since the next 3 letters are equal. Now, s = \"abcdabc\".\n- Delete all the letters.\nWe used 2 operations so return 2. It can be proven that 2 is the maximum number of operations needed.\nNote that in the second operation we cannot delete \"abc\" again because the next occurrence of \"abc\" does not happen in the next 3 letters.\n\n\nExample 2:\n\n\nInput: s = \"aaabaab\"\nOutput: 4\nExplanation:\n- Delete the first letter (\"a\") since the next letter is equal. Now, s = \"aabaab\".\n- Delete the first 3 letters (\"aab\") since the next 3 letters are equal. Now, s = \"aab\".\n- Delete the first letter (\"a\") since the next letter is equal. Now, s = \"ab\".\n- Delete all the letters.\nWe used 4 operations so return 4. It can be proven that 4 is the maximum number of operations needed.\n\n\nExample 3:\n\n\nInput: s = \"aaaaa\"\nOutput: 5\nExplanation: In each operation, we can delete the first letter of s.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 4000\n\ts consists only of lowercase English letters.\n\n",
+  "description": "You are given a string s consisting of only lowercase English letters. In one operation, you can:\n\n\n\tDelete the entire string s, or\n\tDelete the first i letters of s if the first i letters of s are equal to the following i letters in s, for any i in the range 1 <= i <= s.length / 2.\n\n\nFor example, if s = \"ababc\", then in one operation, you could delete the first two letters of s to get \"abc\", since the first two letters of s and the following two letters of s are both equal to \"ab\".\n\nReturn the maximum number of operations needed to delete all of s.",
+  "example": "Input: s = \"abcabcdabc\"\nOutput: 2\nExplanation:\n- Delete the first 3 letters (\"abc\") since the next 3 letters are equal. Now, s = \"abcdabc\".\n- Delete all the letters.\nWe used 2 operations so return 2. It can be proven that 2 is the maximum number of operations needed.\nNote that in the second operation we cannot delete \"abc\" again because the next occurrence of \"abc\" does not happen in the next 3 letters.",
+  "constraints_text": "1 <= s.length <= 4000\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int deleteString(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int deleteString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int deleteString(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar deleteString = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def deleteString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute polynomial hashes for all prefixes to enable O(1) substring equality checks.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "hashing"
+      ],
+      "cues": [
+        "first-i-letters-equal-to-the-following-i-letters"
+      ],
+      "constraints": [
+        "1-s-length-4000"
+      ]
+    },
+    {
+      "intent": "Use dynamic programming to find the maximum operations to delete each suffix of the string.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "maximum-number-of-operations",
+        "delete-the-first-i-letters",
+        "delete-entire-string"
+      ],
+      "constraints": [
+        "1-s-length-4000"
+      ]
+    }
+  ]
+}

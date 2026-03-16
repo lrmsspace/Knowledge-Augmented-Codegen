@@ -1,0 +1,40 @@
+{
+  "slug": "check-if-two-chessboard-squares-have-the-same-color",
+  "link": "https://leetcode.com/problems/check-if-two-chessboard-squares-have-the-same-color/",
+  "difficulty": "Easy",
+  "index": "2343",
+  "description_full": "You are given two strings, coordinate1 and coordinate2, representing the coordinates of a square on an 8 x 8 chessboard.\n\nBelow is the chessboard for reference.\n\n\n\nReturn true if these two squares have the same color and false otherwise.\n\nThe coordinate will always represent a valid chessboard square. The coordinate will always have the letter first (indicating its column), and the number second (indicating its row).\n\n \nExample 1:\n\n\nInput: coordinate1 = \"a1\", coordinate2 = \"c3\"\n\nOutput: true\n\nExplanation:\n\nBoth squares are black.\n\n\nExample 2:\n\n\nInput: coordinate1 = \"a1\", coordinate2 = \"h3\"\n\nOutput: false\n\nExplanation:\n\nSquare \"a1\" is black and \"h3\" is white.\n\n\n \nConstraints:\n\n\n\tcoordinate1.length == coordinate2.length == 2\n\t'a' <= coordinate1[0], coordinate2[0] <= 'h'\n\t'1' <= coordinate1[1], coordinate2[1] <= '8'\n\n",
+  "description": "You are given two strings, coordinate1 and coordinate2, representing the coordinates of a square on an 8 x 8 chessboard.\n\nBelow is the chessboard for reference.\n\n\n\nReturn true if these two squares have the same color and false otherwise.\n\nThe coordinate will always represent a valid chessboard square. The coordinate will always have the letter first (indicating its column), and the number second (indicating its row).",
+  "example": "Input: coordinate1 = \"a1\", coordinate2 = \"c3\"\n\nOutput: true\n\nExplanation:\n\nBoth squares are black.",
+  "constraints_text": "coordinate1.length == coordinate2.length == 2\n\t'a' <= coordinate1[0], coordinate2[0] <= 'h'\n\t'1' <= coordinate1[1], coordinate2[1] <= '8'",
+  "templates": {
+    "c": "bool checkTwoChessboards(char* coordinate1, char* coordinate2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkTwoChessboards(string coordinate1, string coordinate2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkTwoChessboards(String coordinate1, String coordinate2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} coordinate1\n * @param {string} coordinate2\n * @return {boolean}\n */\nvar checkTwoChessboards = function(coordinate1, coordinate2) {\n    \n};",
+    "python": "class Solution(object):\n    def checkTwoChessboards(self, coordinate1, coordinate2):\n        \"\"\"\n        :type coordinate1: str\n        :type coordinate2: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the color parity (even/odd sum of indices) for both input chessboard coordinates.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "coordinate1",
+        "coordinate2",
+        "same-color"
+      ],
+      "constraints": [
+        "coordinate1-length-coordinate2-length-2",
+        "a-char-h",
+        "1-digit-8"
+      ]
+    }
+  ]
+}

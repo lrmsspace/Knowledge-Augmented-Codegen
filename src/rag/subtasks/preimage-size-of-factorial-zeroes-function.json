@@ -1,0 +1,55 @@
+{
+  "slug": "preimage-size-of-factorial-zeroes-function",
+  "link": "https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/",
+  "difficulty": "Hard",
+  "index": "1887",
+  "description_full": "Let f(x) be the number of zeroes at the end of x!. Recall that x! = 1 * 2 * 3 * ... * x and by convention, 0! = 1.\n\n\n\tFor example, f(3) = 0 because 3! = 6 has no zeroes at the end, while f(11) = 2 because 11! = 39916800 has two zeroes at the end.\n\n\nGiven an integer k, return the number of non-negative integers x have the property that f(x) = k.\n\n \nExample 1:\n\n\nInput: k = 0\nOutput: 5\nExplanation: 0!, 1!, 2!, 3!, and 4! end with k = 0 zeroes.\n\n\nExample 2:\n\n\nInput: k = 5\nOutput: 0\nExplanation: There is no x such that x! ends in k = 5 zeroes.\n\n\nExample 3:\n\n\nInput: k = 3\nOutput: 5\n\n\n \nConstraints:\n\n\n\t0 <= k <= 109\n\n",
+  "description": "Let f(x) be the number of zeroes at the end of x!. Recall that x! = 1 * 2 * 3 * ... * x and by convention, 0! = 1.\n\n\n\tFor example, f(3) = 0 because 3! = 6 has no zeroes at the end, while f(11) = 2 because 11! = 39916800 has two zeroes at the end.\n\n\nGiven an integer k, return the number of non-negative integers x have the property that f(x) = k.",
+  "example": "Input: k = 0\nOutput: 5\nExplanation: 0!, 1!, 2!, 3!, and 4! end with k = 0 zeroes.",
+  "constraints_text": "0 <= k <= 109",
+  "templates": {
+    "c": "int preimageSizeFZF(int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int preimageSizeFZF(int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int preimageSizeFZF(int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @return {number}\n */\nvar preimageSizeFZF = function(k) {\n    \n};",
+    "python": "class Solution(object):\n    def preimageSizeFZF(self, k):\n        \"\"\"\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the number of trailing zeroes for a given factorial x! using Legendre's formula.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "f-x-zeroes-at-end-of-x",
+        "x-1-2-x"
+      ],
+      "constraints": [
+        "x-can-be-very-large-up-to-5-10-9"
+      ]
+    },
+    {
+      "intent": "Use binary search to find the smallest x such that f(x) >= k, then determine the final count based on f(x) == k.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer",
+        "simulation"
+      ],
+      "cues": [
+        "given-integer-k",
+        "return-number-of-non-negative-integers-x",
+        "f-x-k",
+        "f-x-is-non-decreasing"
+      ],
+      "constraints": [
+        "0-k-10-9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "maximum-product-of-word-lengths",
+  "link": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+  "difficulty": "Medium",
+  "index": "760",
+  "description_full": "Given a string array words, return the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. If no such two words exist, return 0.\n\n \nExample 1:\n\n\nInput: words = [\"abcw\",\"baz\",\"foo\",\"bar\",\"xtfn\",\"abcdef\"]\nOutput: 16\nExplanation: The two words can be \"abcw\", \"xtfn\".\n\n\nExample 2:\n\n\nInput: words = [\"a\",\"ab\",\"abc\",\"d\",\"cd\",\"bcd\",\"abcd\"]\nOutput: 4\nExplanation: The two words can be \"ab\", \"cd\".\n\n\nExample 3:\n\n\nInput: words = [\"a\",\"aa\",\"aaa\",\"aaaa\"]\nOutput: 0\nExplanation: No such pair of words.\n\n\n \nConstraints:\n\n\n\t2 <= words.length <= 1000\n\t1 <= words[i].length <= 1000\n\twords[i] consists only of lowercase English letters.\n\n",
+  "description": "Given a string array words, return the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. If no such two words exist, return 0.",
+  "example": "Input: words = [\"abcw\",\"baz\",\"foo\",\"bar\",\"xtfn\",\"abcdef\"]\nOutput: 16\nExplanation: The two words can be \"abcw\", \"xtfn\".",
+  "constraints_text": "2 <= words.length <= 1000\n\t1 <= words[i].length <= 1000\n\twords[i] consists only of lowercase English letters.",
+  "templates": {
+    "c": "int maxProduct(char** words, int wordsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxProduct(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxProduct(String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar maxProduct = function(words) {\n    \n};",
+    "python": "class Solution(object):\n    def maxProduct(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute bitmasks and lengths for each word to enable efficient character set comparison.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "bitmask-dp"
+      ],
+      "cues": [
+        "length-word-i",
+        "lowercase-english-letters"
+      ],
+      "constraints": [
+        "1-words-i-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through all pairs of words, check for disjoint character sets using bitmasks, and find the maximum product of lengths.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-value",
+        "do-not-share-common-letters",
+        "return-0"
+      ],
+      "constraints": [
+        "2-words-length-1000"
+      ]
+    }
+  ]
+}

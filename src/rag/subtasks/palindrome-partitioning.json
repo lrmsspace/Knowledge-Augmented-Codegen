@@ -1,0 +1,54 @@
+{
+  "slug": "palindrome-partitioning",
+  "link": "https://leetcode.com/problems/palindrome-partitioning/",
+  "difficulty": "Medium",
+  "index": "687",
+  "description_full": "Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.\n\n \nExample 1:\nInput: s = \"aab\"\nOutput: [[\"a\",\"a\",\"b\"],[\"aa\",\"b\"]]\nExample 2:\nInput: s = \"a\"\nOutput: [[\"a\"]]\n\n \nConstraints:\n\n\n\t1 <= s.length <= 16\n\ts contains only lowercase English letters.\n\n",
+  "description": "Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.",
+  "example": "Input: s = \"aab\"\nOutput: [[\"a\",\"a\",\"b\"],[\"aa\",\"b\"]]",
+  "constraints_text": "1 <= s.length <= 16\n\ts contains only lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nchar*** partition(char* s, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<string>> partition(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<String>> partition(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string[][]}\n */\nvar partition = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def partition(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[List[str]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute all palindromic substrings for efficient lookup during partition generation.",
+      "structures": [
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "every-substring-of-the-partition-is-a-palindrome"
+      ],
+      "constraints": [
+        "1-s-length-16"
+      ]
+    },
+    {
+      "intent": "Generate all possible partitions of the string using a recursive backtracking approach.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "partition-s",
+        "return-all-possible-palindrome-partitioning"
+      ],
+      "constraints": [
+        "1-s-length-16"
+      ]
+    }
+  ]
+}

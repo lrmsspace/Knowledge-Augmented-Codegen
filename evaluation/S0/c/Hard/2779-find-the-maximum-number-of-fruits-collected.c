@@ -1,0 +1,96 @@
+// Source: https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/   |   Difficulty: Hard
+//
+// Problem Description:
+// There is a game dungeon comprised of n x n rooms arranged in a grid.
+//
+// You are given a 2D array fruits of size n x n, where fruits[i][j] represents the number of fruits in the room (i, j). Three children will play in the game dungeon, with initial positions at the corner rooms (0, 0), (0, n - 1), and (n - 1, 0).
+//
+// The children will make exactly n - 1 moves according to the following rules to reach the room (n - 1, n - 1):
+//
+//
+// 	The child starting from (0, 0) must move from their current room (i, j) to one of the rooms (i + 1, j + 1), (i + 1, j), and (i, j + 1) if the target room exists.
+// 	The child starting from (0, n - 1) must move from their current room (i, j) to one of the rooms (i + 1, j - 1), (i + 1, j), and (i + 1, j + 1) if the target room exists.
+// 	The child starting from (n - 1, 0) must move from their current room (i, j) to one of the rooms (i - 1, j + 1), (i, j + 1), and (i + 1, j + 1) if the target room exists.
+//
+//
+// When a child enters a room, they will collect all the fruits there. If two or more children enter the same room, only one child will collect the fruits, and the room will be emptied after they leave.
+//
+// Return the maximum number of fruits the children can collect from the dungeon.
+//
+// Example:
+// Input: fruits = [[1,2,3,4],[5,6,8,7],[9,10,11,12],[13,14,15,16]]
+//
+// Output: 100
+//
+// Explanation:
+//
+//
+//
+// In this example:
+//
+//
+// 	The 1st child (green) moves on the path (0,0) -> (1,1) -> (2,2) -> (3, 3).
+// 	The 2nd child (red) moves on the path (0,3) -> (1,2) -> (2,3) -> (3, 3).
+// 	The 3rd child (blue) moves on the path (3,0) -> (3,1) -> (3,2) -> (3, 3).
+//
+//
+// In total they collect 1 + 6 + 11 + 16 + 4 + 8 + 12 + 13 + 14 + 15 = 100 fruits.
+//
+// Constraints:
+// 2 <= n == fruits.length == fruits[i].length <= 1000
+// 	0 <= fruits[i][j] <= 1000
+//
+
+int maxCollectedFruits(int** fruits, int fruitsSize, int* fruitsColSize) {
+    int n = fruitsSize;
+    int ***dp = (int***)malloc(n * sizeof(int**));
+    for (int i = 0; i < n; i++) {
+        dp[i] = (int**)malloc(n * sizeof(int*));
+        for (int j = 0; j < n; j++) {
+            dp[i][j] = (int*)malloc(n * sizeof(int));
+            memset(dp[i][j], -1, n * sizeof(int));
+        }
+    }
+    dp[0][0][n - 1] = fruits[0][0] + fruits[0][n - 1];
+
+    for (int step = 1; step < n; step++) {
+        for (int x1 = 0; x1 <= step; x1++) {
+            int y1 = step - x1;
+            if (y1 >= n) continue;
+            for (int x2 = 0; x2 <= step; x2++) {
+                int y2 = n - 1 - (step - x2);
+                if (y2 < 0 || y2 >= n) continue;
+
+                int maxFruits = -1;
+                for (int dx1 = 0; dx1 <= 1; dx1++) {
+                    for (int dx2 = 0; dx2 <= 1; dx2++) {
+                        int prevX1 = x1 - dx1;
+                        int prevY1 = y1 - (1 - dx1);
+                        int prevX2 = x2 - dx2;
+                        int prevY2 = y2 + (1 - dx2);
+                        if (prevX1 < 0 || prevY1 < 0 || prevX2 < 0 || prevY2 < 0 || prevY1 >= n || prevY2 >= n) continue;
+                        if (dp[step - 1][prevX1][prevX2] == -1) continue;
+                        int currentFruits = dp[step - 1][prevX1][prevX2];
+                        currentFruits += fruits[x1][y1];
+                        if (x2 != x1 || y2 != y1) {
+                            currentFruits += fruits[x2][y2];
+                        }
+                        if (currentFruits > maxFruits) {
+                            maxFruits = currentFruits;
+                        }
+                    }
+                }
+                dp[step][x1][x2] = maxFruits;
+            }
+        }
+    }
+    int result = dp[n - 1][n - 1][n - 1];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            free(dp[i][j]);
+        }
+        free(dp[i]);
+    }
+    free(dp);
+    return result;
+}

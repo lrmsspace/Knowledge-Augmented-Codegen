@@ -1,0 +1,58 @@
+{
+  "slug": "bus-routes",
+  "link": "https://leetcode.com/problems/bus-routes/",
+  "difficulty": "Hard",
+  "index": "1893",
+  "description_full": "You are given an array routes representing bus routes where routes[i] is a bus route that the ith bus repeats forever.\n\n\n\tFor example, if routes[0] = [1, 5, 7], this means that the 0th bus travels in the sequence 1 -> 5 -> 7 -> 1 -> 5 -> 7 -> 1 -> ... forever.\n\n\nYou will start at the bus stop source (You are not on any bus initially), and you want to go to the bus stop target. You can travel between bus stops by buses only.\n\nReturn the least number of buses you must take to travel from source to target. Return -1 if it is not possible.\n\n \nExample 1:\n\n\nInput: routes = [[1,2,7],[3,6,7]], source = 1, target = 6\nOutput: 2\nExplanation: The best strategy is take the first bus to the bus stop 7, then take the second bus to the bus stop 6.\n\n\nExample 2:\n\n\nInput: routes = [[7,12],[4,5,15],[6],[15,19],[9,12,13]], source = 15, target = 12\nOutput: -1\n\n\n \n\n \nConstraints:\n\n\n\t1 <= routes.length <= 500.\n\t1 <= routes[i].length <= 105\n\tAll the values of routes[i] are unique.\n\tsum(routes[i].length) <= 105\n\t0 <= routes[i][j] < 106\n\t0 <= source, target < 106\n\n",
+  "description": "You are given an array routes representing bus routes where routes[i] is a bus route that the ith bus repeats forever.\n\n\n\tFor example, if routes[0] = [1, 5, 7], this means that the 0th bus travels in the sequence 1 -> 5 -> 7 -> 1 -> 5 -> 7 -> 1 -> ... forever.\n\n\nYou will start at the bus stop source (You are not on any bus initially), and you want to go to the bus stop target. You can travel between bus stops by buses only.\n\nReturn the least number of buses you must take to travel from source to target. Return -1 if it is not possible.",
+  "example": "Input: routes = [[1,2,7],[3,6,7]], source = 1, target = 6\nOutput: 2\nExplanation: The best strategy is take the first bus to the bus stop 7, then take the second bus to the bus stop 6.",
+  "constraints_text": "1 <= routes.length <= 500.\n\t1 <= routes[i].length <= 105\n\tAll the values of routes[i] are unique.\n\tsum(routes[i].length) <= 105\n\t0 <= routes[i][j] < 106\n\t0 <= source, target < 106",
+  "templates": {
+    "c": "int numBusesToDestination(int** routes, int routesSize, int* routesColSize, int source, int target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numBusesToDestination(vector<vector<int>>& routes, int source, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numBusesToDestination(int[][] routes, int source, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} routes\n * @param {number} source\n * @param {number} target\n * @return {number}\n */\nvar numBusesToDestination = function(routes, source, target) {\n    \n};",
+    "python": "class Solution(object):\n    def numBusesToDestination(self, routes, source, target):\n        \"\"\"\n        :type routes: List[List[int]]\n        :type source: int\n        :type target: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess routes to build a graph where nodes are bus routes and edges connect routes sharing common stops.",
+      "structures": [
+        "array",
+        "ds",
+        "graph"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "routes",
+        "bus-adj",
+        "stop-to-buses"
+      ],
+      "constraints": [
+        "sum-routes-i-length-105",
+        "0-routes-i-j-106"
+      ]
+    },
+    {
+      "intent": "Perform a Breadth-First Search (BFS) on the bus route graph to find the minimum number of buses required to travel from source to target.",
+      "structures": [
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "least-number-of-buses",
+        "source",
+        "target"
+      ],
+      "constraints": [
+        "1-routes-length-500"
+      ]
+    }
+  ]
+}

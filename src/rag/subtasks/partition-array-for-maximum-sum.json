@@ -1,0 +1,40 @@
+{
+  "slug": "partition-array-for-maximum-sum",
+  "link": "https://leetcode.com/problems/partition-array-for-maximum-sum/",
+  "difficulty": "Medium",
+  "index": "1094",
+  "description_full": "Given an integer array arr, partition the array into (contiguous) subarrays of length at most k. After partitioning, each subarray has their values changed to become the maximum value of that subarray.\n\nReturn the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a 32-bit integer.\n\n \nExample 1:\n\n\nInput: arr = [1,15,7,9,2,5,10], k = 3\nOutput: 84\nExplanation: arr becomes [15,15,15,9,10,10,10]\n\n\nExample 2:\n\n\nInput: arr = [1,4,1,5,7,3,6,1,9,9,3], k = 4\nOutput: 83\n\n\nExample 3:\n\n\nInput: arr = [1], k = 1\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 500\n\t0 <= arr[i] <= 109\n\t1 <= k <= arr.length\n\n",
+  "description": "Given an integer array arr, partition the array into (contiguous) subarrays of length at most k. After partitioning, each subarray has their values changed to become the maximum value of that subarray.\n\nReturn the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a 32-bit integer.",
+  "example": "Input: arr = [1,15,7,9,2,5,10], k = 3\nOutput: 84\nExplanation: arr becomes [15,15,15,9,10,10,10]",
+  "constraints_text": "1 <= arr.length <= 500\n\t0 <= arr[i] <= 109\n\t1 <= k <= arr.length",
+  "templates": {
+    "c": "int maxSumAfterPartitioning(int* arr, int arrSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxSumAfterPartitioning(vector<int>& arr, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSumAfterPartitioning(int[] arr, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} k\n * @return {number}\n */\nvar maxSumAfterPartitioning = function(arr, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSumAfterPartitioning(self, arr, k):\n        \"\"\"\n        :type arr: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum possible sum after partitioning the array into contiguous subarrays of length at most k, replacing elements with subarray maximums.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "partition-the-array",
+        "contiguous-subarrays",
+        "length-at-most-k",
+        "maximum-value-of-that-subarray",
+        "largest-sum"
+      ],
+      "constraints": [
+        "arr-length-500",
+        "k-arr-length"
+      ]
+    }
+  ]
+}

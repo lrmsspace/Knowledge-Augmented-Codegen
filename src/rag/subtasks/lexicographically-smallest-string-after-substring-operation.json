@@ -1,0 +1,56 @@
+{
+  "slug": "lexicographically-smallest-string-after-substring-operation",
+  "link": "https://leetcode.com/problems/lexicographically-smallest-string-after-substring-operation/",
+  "difficulty": "Medium",
+  "index": "1738",
+  "description_full": "Given a string s consisting of lowercase English letters. Perform the following operation:\n\n\n\tSelect any non-empty substring then replace every letter of the substring with the preceding letter of the English alphabet. For example, 'b' is converted to 'a', and 'a' is converted to 'z'.\n\n\nReturn the lexicographically smallest string after performing the operation.\n\n \nExample 1:\n\n\nInput: s = \"cbabc\"\n\nOutput: \"baabc\"\n\nExplanation:\n\nPerform the operation on the substring starting at index 0, and ending at index 1 inclusive.\n\n\nExample 2:\n\n\nInput: s = \"aa\"\n\nOutput: \"az\"\n\nExplanation:\n\nPerform the operation on the last letter.\n\n\nExample 3:\n\n\nInput: s = \"acbbc\"\n\nOutput: \"abaab\"\n\nExplanation:\n\nPerform the operation on the substring starting at index 1, and ending at index 4 inclusive.\n\n\nExample 4:\n\n\nInput: s = \"leetcode\"\n\nOutput: \"kddsbncd\"\n\nExplanation:\n\nPerform the operation on the entire string.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 3 * 105\n\ts consists of lowercase English letters\n\n",
+  "description": "Given a string s consisting of lowercase English letters. Perform the following operation:\n\n\n\tSelect any non-empty substring then replace every letter of the substring with the preceding letter of the English alphabet. For example, 'b' is converted to 'a', and 'a' is converted to 'z'.\n\n\nReturn the lexicographically smallest string after performing the operation.",
+  "example": "Input: s = \"cbabc\"\n\nOutput: \"baabc\"\n\nExplanation:\n\nPerform the operation on the substring starting at index 0, and ending at index 1 inclusive.",
+  "constraints_text": "1 <= s.length <= 3 * 105\n\ts consists of lowercase English letters",
+  "templates": {
+    "c": "char* smallestString(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string smallestString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String smallestString(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar smallestString = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def smallestString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the starting and ending indices of the optimal substring to modify for lexicographical minimality.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "lexicographically-smallest",
+        "select-any-non-empty-substring"
+      ],
+      "constraints": [
+        "1-s-length",
+        "lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Apply the character transformation (preceding letter, 'a' to 'z') to the identified substring.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "replace-every-letter-with-preceding",
+        "a-converted-to-z"
+      ],
+      "constraints": [
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

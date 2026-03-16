@@ -1,0 +1,38 @@
+{
+  "slug": "existence-of-a-substring-in-a-string-and-its-reverse",
+  "link": "https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse/",
+  "difficulty": "Easy",
+  "index": "2309",
+  "description_full": "Given a string s, find any substring of length 2 which is also present in the reverse of s.\n\nReturn true if such a substring exists, and false otherwise.\n\n \nExample 1:\n\n\nInput: s = \"leetcode\"\n\nOutput: true\n\nExplanation: Substring \"ee\" is of length 2 which is also present in reverse(s) == \"edocteel\".\n\n\nExample 2:\n\n\nInput: s = \"abcba\"\n\nOutput: true\n\nExplanation: All of the substrings of length 2 \"ab\", \"bc\", \"cb\", \"ba\" are also present in reverse(s) == \"abcba\".\n\n\nExample 3:\n\n\nInput: s = \"abcd\"\n\nOutput: false\n\nExplanation: There is no substring of length 2 in s, which is also present in the reverse of s.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists only of lowercase English letters.\n\n",
+  "description": "Given a string s, find any substring of length 2 which is also present in the reverse of s.\n\nReturn true if such a substring exists, and false otherwise.",
+  "example": "Input: s = \"leetcode\"\n\nOutput: true\n\nExplanation: Substring \"ee\" is of length 2 which is also present in reverse(s) == \"edocteel\".",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "bool isSubstringPresent(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isSubstringPresent(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isSubstringPresent(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar isSubstringPresent = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def isSubstringPresent(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all 2-character substrings of the input string and check if any exist in its reversed version.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "sliding-window",
+        "simulation"
+      ],
+      "cues": [
+        "substring-of-length-2",
+        "reverse-of-s",
+        "present-in"
+      ],
+      "constraints": [
+        "s-length-100",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

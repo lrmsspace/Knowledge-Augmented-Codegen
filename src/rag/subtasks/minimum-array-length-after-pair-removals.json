@@ -1,0 +1,40 @@
+{
+  "slug": "minimum-array-length-after-pair-removals",
+  "link": "https://leetcode.com/problems/minimum-array-length-after-pair-removals/",
+  "difficulty": "Medium",
+  "index": "2406",
+  "description_full": "Given an integer array num sorted in non-decreasing order.\n\nYou can perform the following operation any number of times:\n\n\n\tChoose two indices, i and j, where nums[i] < nums[j].\n\tThen, remove the elements at indices i and j from nums. The remaining elements retain their original order, and the array is re-indexed.\n\n\nReturn the minimum length of nums after applying the operation zero or more times.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3,4]\n\nOutput: 0\n\nExplanation:\n\n\n\n\nExample 2:\n\n\nInput: nums = [1,1,2,2,3,3]\n\nOutput: 0\n\nExplanation:\n\n\n\n\nExample 3:\n\n\nInput: nums = [1000000000,1000000000]\n\nOutput: 2\n\nExplanation:\n\nSince both numbers are equal, they cannot be removed.\n\n\nExample 4:\n\n\nInput: nums = [2,3,4,4,4]\n\nOutput: 1\n\nExplanation:\n\n\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\tnums is sorted in non-decreasing order.\n\n",
+  "description": "Given an integer array num sorted in non-decreasing order.\n\nYou can perform the following operation any number of times:\n\n\n\tChoose two indices, i and j, where nums[i] < nums[j].\n\tThen, remove the elements at indices i and j from nums. The remaining elements retain their original order, and the array is re-indexed.\n\n\nReturn the minimum length of nums after applying the operation zero or more times.",
+  "example": "Input: nums = [1,2,3,4]\n\nOutput: 0\n\nExplanation:",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\tnums is sorted in non-decreasing order.",
+  "templates": {
+    "c": "int minLengthAfterRemovals(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minLengthAfterRemovals(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minLengthAfterRemovals(List<Integer> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minLengthAfterRemovals = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minLengthAfterRemovals(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate with two pointers from both ends of the sorted array to find and count pairs (nums[i], nums[j]) where nums[i] < nums[j] for removal.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "sorted-in-non-decreasing-order",
+        "remove-elements",
+        "minimum-length"
+      ],
+      "constraints": [
+        "nums-i-nums-j",
+        "1-nums-length-105"
+      ]
+    }
+  ]
+}

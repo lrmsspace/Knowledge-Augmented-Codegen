@@ -1,0 +1,38 @@
+{
+  "slug": "longest-palindromic-substring",
+  "link": "https://leetcode.com/problems/longest-palindromic-substring/",
+  "difficulty": "Medium",
+  "index": "612",
+  "description_full": "Given a string s, return the longest palindromic substring in s.\n\n \nExample 1:\n\n\nInput: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.\n\n\nExample 2:\n\n\nInput: s = \"cbbd\"\nOutput: \"bb\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts consist of only digits and English letters.\n\n",
+  "description": "Given a string s, return the longest palindromic substring in s.",
+  "example": "Input: s = \"babad\"\nOutput: \"bab\"\nExplanation: \"aba\" is also a valid answer.",
+  "constraints_text": "1 <= s.length <= 1000\n\ts consist of only digits and English letters.",
+  "templates": {
+    "c": "char* longestPalindrome(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string longestPalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestPalindrome(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar longestPalindrome = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def longestPalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all possible centers (single character or pair) and expand outwards to find the longest palindromic substring.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "longest-palindromic-substring",
+        "expand-from-center"
+      ],
+      "constraints": [
+        "1-s-length-1000"
+      ]
+    }
+  ]
+}

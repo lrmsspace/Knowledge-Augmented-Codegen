@@ -1,0 +1,69 @@
+{
+  "slug": "left-and-right-sum-differences",
+  "link": "https://leetcode.com/problems/left-and-right-sum-differences/",
+  "difficulty": "Easy",
+  "index": "548",
+  "description_full": "You are given a 0-indexed integer array nums of size n.\n\nDefine two arrays leftSum and rightSum where:\n\n\n\tleftSum[i] is the sum of elements to the left of the index i in the array nums. If there is no such element, leftSum[i] = 0.\n\trightSum[i] is the sum of elements to the right of the index i in the array nums. If there is no such element, rightSum[i] = 0.\n\n\nReturn an integer array answer of size n where answer[i] = |leftSum[i] - rightSum[i]|.\n\n \nExample 1:\n\n\nInput: nums = [10,4,8,3]\nOutput: [15,1,11,22]\nExplanation: The array leftSum is [0,10,14,22] and the array rightSum is [15,11,3,0].\nThe array answer is [|0 - 15|,|10 - 11|,|14 - 3|,|22 - 0|] = [15,1,11,22].\n\n\nExample 2:\n\n\nInput: nums = [1]\nOutput: [0]\nExplanation: The array leftSum is [0] and the array rightSum is [0].\nThe array answer is [|0 - 0|] = [0].\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t1 <= nums[i] <= 105\n\n",
+  "description": "You are given a 0-indexed integer array nums of size n.\n\nDefine two arrays leftSum and rightSum where:\n\n\n\tleftSum[i] is the sum of elements to the left of the index i in the array nums. If there is no such element, leftSum[i] = 0.\n\trightSum[i] is the sum of elements to the right of the index i in the array nums. If there is no such element, rightSum[i] = 0.\n\n\nReturn an integer array answer of size n where answer[i] = |leftSum[i] - rightSum[i]|.",
+  "example": "Input: nums = [10,4,8,3]\nOutput: [15,1,11,22]\nExplanation: The array leftSum is [0,10,14,22] and the array rightSum is [15,11,3,0].\nThe array answer is [|0 - 15|,|10 - 11|,|14 - 3|,|22 - 0|] = [15,1,11,22].",
+  "constraints_text": "1 <= nums.length <= 1000\n\t1 <= nums[i] <= 105",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* leftRightDifference(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> leftRightDifference(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] leftRightDifference(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar leftRightDifference = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def leftRightDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the left sum for each index by accumulating elements from the beginning of the array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "leftsum-i-is-the-sum-of-elements-to-the-left",
+        "leftsum-i-0"
+      ],
+      "constraints": [
+        "nums-length-1000"
+      ]
+    },
+    {
+      "intent": "Calculate the total sum of all elements in the input array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "total-sum"
+      ],
+      "constraints": [
+        "nums-length-1000"
+      ]
+    },
+    {
+      "intent": "Calculate the final answer array by computing the absolute difference between left sum and derived right sum for each index.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "answer-i-leftsum-i-rightsum-i",
+        "rightsum-i-totalsum-leftsum-i-nums-i"
+      ],
+      "constraints": [
+        "nums-length-1000"
+      ]
+    }
+  ]
+}

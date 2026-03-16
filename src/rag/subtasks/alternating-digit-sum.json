@@ -1,0 +1,39 @@
+{
+  "slug": "alternating-digit-sum",
+  "link": "https://leetcode.com/problems/alternating-digit-sum/",
+  "difficulty": "Easy",
+  "index": "541",
+  "description_full": "You are given a positive integer n. Each digit of n has a sign according to the following rules:\n\n\n\tThe most significant digit is assigned a positive sign.\n\tEach other digit has an opposite sign to its adjacent digits.\n\n\nReturn the sum of all digits with their corresponding sign.\n\n \nExample 1:\n\n\nInput: n = 521\nOutput: 4\nExplanation: (+5) + (-2) + (+1) = 4.\n\n\nExample 2:\n\n\nInput: n = 111\nOutput: 1\nExplanation: (+1) + (-1) + (+1) = 1.\n\n\nExample 3:\n\n\nInput: n = 886996\nOutput: 0\nExplanation: (+8) + (-8) + (+6) + (-9) + (+9) + (-6) = 0.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 109\n\n\n \n.spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; \n}\n.spoiler {overflow:hidden;}\n.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}\n.spoilerbutton[value=\"Show Message\"] + .spoiler > div {margin-top:-500%;}\n.spoilerbutton[value=\"Hide Message\"] + .spoiler {padding:5px;}\n\n",
+  "description": "You are given a positive integer n. Each digit of n has a sign according to the following rules:\n\n\n\tThe most significant digit is assigned a positive sign.\n\tEach other digit has an opposite sign to its adjacent digits.\n\n\nReturn the sum of all digits with their corresponding sign.",
+  "example": "Input: n = 521\nOutput: 4\nExplanation: (+5) + (-2) + (+1) = 4.",
+  "constraints_text": "1 <= n <= 109\n\n\n \n.spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; \n}\n.spoiler {overflow:hidden;}\n.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}\n.spoilerbutton[value=\"Show Message\"] + .spoiler > div {margin-top:-500%;}\n.spoilerbutton[value=\"Hide Message\"] + .spoiler {padding:5px;}",
+  "templates": {
+    "c": "int alternateDigitSum(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int alternateDigitSum(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int alternateDigitSum(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar alternateDigitSum = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def alternateDigitSum(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the sum of digits of n, applying alternating signs starting with positive for the most significant digit.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "sum-of-all-digits",
+        "corresponding-sign",
+        "most-significant-digit-positive",
+        "opposite-sign-to-adjacent"
+      ],
+      "constraints": [
+        "1-n-10-9"
+      ]
+    }
+  ]
+}

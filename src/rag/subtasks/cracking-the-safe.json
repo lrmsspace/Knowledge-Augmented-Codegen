@@ -1,0 +1,57 @@
+{
+  "slug": "cracking-the-safe",
+  "link": "https://leetcode.com/problems/cracking-the-safe/",
+  "difficulty": "Hard",
+  "index": "1877",
+  "description_full": "There is a safe protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k - 1].\n\nThe safe has a peculiar way of checking the password. When you enter in a sequence, it checks the most recent n digits that were entered each time you type a digit.\n\n\n\tFor example, the correct password is \"345\" and you enter in \"012345\":\n\n\t\n\t\tAfter typing 0, the most recent 3 digits is \"0\", which is incorrect.\n\t\tAfter typing 1, the most recent 3 digits is \"01\", which is incorrect.\n\t\tAfter typing 2, the most recent 3 digits is \"012\", which is incorrect.\n\t\tAfter typing 3, the most recent 3 digits is \"123\", which is incorrect.\n\t\tAfter typing 4, the most recent 3 digits is \"234\", which is incorrect.\n\t\tAfter typing 5, the most recent 3 digits is \"345\", which is correct and the safe unlocks.\n\t\n\t\n\n\nReturn any string of minimum length that will unlock the safe at some point of entering it.\n\n \nExample 1:\n\n\nInput: n = 1, k = 2\nOutput: \"10\"\nExplanation: The password is a single digit, so enter each digit. \"01\" would also unlock the safe.\n\n\nExample 2:\n\n\nInput: n = 2, k = 2\nOutput: \"01100\"\nExplanation: For each possible password:\n- \"00\" is typed in starting from the 4th digit.\n- \"01\" is typed in starting from the 1st digit.\n- \"10\" is typed in starting from the 3rd digit.\n- \"11\" is typed in starting from the 2nd digit.\nThus \"01100\" will unlock the safe. \"10011\", and \"11001\" would also unlock the safe.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 4\n\t1 <= k <= 10\n\t1 <= kn <= 4096\n\n",
+  "description": "There is a safe protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k - 1].\n\nThe safe has a peculiar way of checking the password. When you enter in a sequence, it checks the most recent n digits that were entered each time you type a digit.\n\n\n\tFor example, the correct password is \"345\" and you enter in \"012345\":\n\n\t\n\t\tAfter typing 0, the most recent 3 digits is \"0\", which is incorrect.\n\t\tAfter typing 1, the most recent 3 digits is \"01\", which is incorrect.\n\t\tAfter typing 2, the most recent 3 digits is \"012\", which is incorrect.\n\t\tAfter typing 3, the most recent 3 digits is \"123\", which is incorrect.\n\t\tAfter typing 4, the most recent 3 digits is \"234\", which is incorrect.\n\t\tAfter typing 5, the most recent 3 digits is \"345\", which is correct and the safe unlocks.\n\t\n\t\n\n\nReturn any string of minimum length that will unlock the safe at some point of entering it.",
+  "example": "Input: n = 1, k = 2\nOutput: \"10\"\nExplanation: The password is a single digit, so enter each digit. \"01\" would also unlock the safe.",
+  "constraints_text": "1 <= n <= 4\n\t1 <= k <= 10\n\t1 <= kn <= 4096",
+  "templates": {
+    "c": "char* crackSafe(int n, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string crackSafe(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String crackSafe(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {string}\n */\nvar crackSafe = function(n, k) {\n    \n};",
+    "python": "class Solution(object):\n    def crackSafe(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize data structures and the starting state for generating the De Bruijn sequence.",
+      "structures": [
+        "string",
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "minimum-length",
+        "sequence-of-n-digits"
+      ],
+      "constraints": [
+        "1-n-4",
+        "1-k-10"
+      ]
+    },
+    {
+      "intent": "Perform a Depth-First Search to find an Eulerian path in the implicit De Bruijn graph, constructing the sequence.",
+      "structures": [
+        "string",
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "backtracking"
+      ],
+      "cues": [
+        "unlock-the-safe",
+        "return-any-string"
+      ],
+      "constraints": [
+        "kn-4096"
+      ]
+    }
+  ]
+}

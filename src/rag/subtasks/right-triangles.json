@@ -1,0 +1,56 @@
+{
+  "slug": "right-triangles",
+  "link": "https://leetcode.com/problems/right-triangles/",
+  "difficulty": "Medium",
+  "index": "2499",
+  "description_full": "You are given a 2D boolean matrix grid.\n\nA collection of 3 elements of grid is a right triangle if one of its elements is in the same row with another element and in the same column with the third element. The 3 elements may not be next to each other.\n\nReturn an integer that is the number of right triangles that can be made with 3 elements of grid such that all of them have a value of 1.\n\n \nExample 1:\n\n\n\n\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\n\n\n\n\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\n\n\n\n\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\n\n\n\n\nInput: grid = [[0,1,0],[0,1,1],[0,1,0]]\n\nOutput: 2\n\nExplanation:\n\nThere are two right triangles with elements of the value 1. Notice that the blue ones do not form a right triangle because the 3 elements are in the same column.\n\n\nExample 2:\n\n\n\n\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t0\n\t\t\n\t\n\n\n\n\nInput: grid = [[1,0,0,0],[0,1,0,1],[1,0,0,0]]\n\nOutput: 0\n\nExplanation:\n\nThere are no right triangles with elements of the value 1.  Notice that the blue ones do not form a right triangle.\n\n\nExample 3:\n\n\n\n\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\n\t\n\n\n\n\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\n\t\n\n\n\n\nInput: grid = [[1,0,1],[1,0,0],[1,0,0]]\n\nOutput: 2\n\nExplanation:\n\nThere are two right triangles with elements of the value 1.\n\n\n \nConstraints:\n\n\n\t1 <= grid.length <= 1000\n\t1 <= grid[i].length <= 1000\n\t0 <= grid[i][j] <= 1\n\n",
+  "description": "You are given a 2D boolean matrix grid.\n\nA collection of 3 elements of grid is a right triangle if one of its elements is in the same row with another element and in the same column with the third element. The 3 elements may not be next to each other.\n\nReturn an integer that is the number of right triangles that can be made with 3 elements of grid such that all of them have a value of 1.",
+  "example": "0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\n\n\n\n\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\n\n\n\n\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t0\n\t\t\t1\n\t\t\t0\n\t\t\n\t\n\n\n\n\nInput: grid = [[0,1,0],[0,1,1],[0,1,0]]\n\nOutput: 2\n\nExplanation:\n\nThere are two right triangles with elements of the value 1. Notice that the blue ones do not form a right triangle because the 3 elements are in the same column.",
+  "constraints_text": "1 <= grid.length <= 1000\n\t1 <= grid[i].length <= 1000\n\t0 <= grid[i][j] <= 1",
+  "templates": {
+    "c": "long long numberOfRightTriangles(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long numberOfRightTriangles(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long numberOfRightTriangles(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar numberOfRightTriangles = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfRightTriangles(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute the count of '1's for each row and each column in the grid.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "same-row",
+        "same-column"
+      ],
+      "constraints": [
+        "1-grid-length-1000",
+        "1-grid-i-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through the grid, and for each cell containing '1', calculate and sum the number of right triangles it forms as the vertex.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "number-of-right-triangles",
+        "all-of-them-have-a-value-of-1"
+      ],
+      "constraints": [
+        "0-grid-i-j-1"
+      ]
+    }
+  ]
+}

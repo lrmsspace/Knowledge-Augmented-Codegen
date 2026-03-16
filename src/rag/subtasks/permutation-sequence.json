@@ -1,0 +1,40 @@
+{
+  "slug": "permutation-sequence",
+  "link": "https://leetcode.com/problems/permutation-sequence/",
+  "difficulty": "Hard",
+  "index": "1781",
+  "description_full": "The set [1, 2, 3, ..., n] contains a total of n! unique permutations.\n\nBy listing and labeling all of the permutations in order, we get the following sequence for n = 3:\n\n\n\t\"123\"\n\t\"132\"\n\t\"213\"\n\t\"231\"\n\t\"312\"\n\t\"321\"\n\n\nGiven n and k, return the kth permutation sequence.\n\n \nExample 1:\nInput: n = 3, k = 3\nOutput: \"213\"\nExample 2:\nInput: n = 4, k = 9\nOutput: \"2314\"\nExample 3:\nInput: n = 3, k = 1\nOutput: \"123\"\n\n \nConstraints:\n\n\n\t1 <= n <= 9\n\t1 <= k <= n!\n\n",
+  "description": "The set [1, 2, 3, ..., n] contains a total of n! unique permutations.\n\nBy listing and labeling all of the permutations in order, we get the following sequence for n = 3:\n\n\n\t\"123\"\n\t\"132\"\n\t\"213\"\n\t\"231\"\n\t\"312\"\n\t\"321\"\n\n\nGiven n and k, return the kth permutation sequence.",
+  "example": "Input: n = 3, k = 3\nOutput: \"213\"",
+  "constraints_text": "1 <= n <= 9\n\t1 <= k <= n!",
+  "templates": {
+    "c": "char* getPermutation(int n, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string getPermutation(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String getPermutation(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {string}\n */\nvar getPermutation = function(n, k) {\n    \n};",
+    "python": "class Solution(object):\n    def getPermutation(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct the k-th lexicographical permutation by iteratively selecting digits based on factorial block sizes.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "greedy",
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "kth-permutation",
+        "n",
+        "return-string"
+      ],
+      "constraints": [
+        "1-n-9",
+        "1-k-n"
+      ]
+    }
+  ]
+}

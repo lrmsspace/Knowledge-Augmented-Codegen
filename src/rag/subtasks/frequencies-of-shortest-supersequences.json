@@ -1,0 +1,57 @@
+{
+  "slug": "frequencies-of-shortest-supersequences",
+  "link": "https://leetcode.com/problems/frequencies-of-shortest-supersequences/",
+  "difficulty": "Hard",
+  "index": "2795",
+  "description_full": "You are given an array of strings words. Find all shortest common supersequences (SCS) of words that are not permutations of each other.\n\nA shortest common supersequence is a string of minimum length that contains each string in words as a subsequence.\n\nReturn a 2D array of integers freqs that represent all the SCSs. Each freqs[i] is an array of size 26, representing the frequency of each letter in the lowercase English alphabet for a single SCS. You may return the frequency arrays in any order.\n\n \nExample 1:\n\n\nInput: words = [\"ab\",\"ba\"]\n\nOutput: [[1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\n\nExplanation:\n\nThe two SCSs are \"aba\" and \"bab\". The output is the letter frequencies for each one.\n\n\nExample 2:\n\n\nInput: words = [\"aa\",\"ac\"]\n\nOutput: [[2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\n\nExplanation:\n\nThe two SCSs are \"aac\" and \"aca\". Since they are permutations of each other, keep only \"aac\".\n\n\nExample 3:\n\n\nInput: words = [\"aa\",\"bb\",\"cc\"]\n\nOutput: [[2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\n\nExplanation:\n\n\"aabbcc\" and all its permutations are SCSs.\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 256\n\twords[i].length == 2\n\tAll strings in words will altogether be composed of no more than 16 unique lowercase letters.\n\tAll strings in words are unique.\n\n",
+  "description": "You are given an array of strings words. Find all shortest common supersequences (SCS) of words that are not permutations of each other.\n\nA shortest common supersequence is a string of minimum length that contains each string in words as a subsequence.\n\nReturn a 2D array of integers freqs that represent all the SCSs. Each freqs[i] is an array of size 26, representing the frequency of each letter in the lowercase English alphabet for a single SCS. You may return the frequency arrays in any order.",
+  "example": "Input: words = [\"ab\",\"ba\"]\n\nOutput: [[1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]\n\nExplanation:\n\nThe two SCSs are \"aba\" and \"bab\". The output is the letter frequencies for each one.",
+  "constraints_text": "1 <= words.length <= 256\n\twords[i].length == 2\n\tAll strings in words will altogether be composed of no more than 16 unique lowercase letters.\n\tAll strings in words are unique.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** supersequences(char** words, int wordsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> supersequences(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> supersequences(String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number[][]}\n */\nvar supersequences = function(words) {\n    \n};",
+    "python": "class Solution(object):\n    def supersequences(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all shortest common supersequences (SCS) for the given input strings.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "shortest-common-supersequences",
+        "all"
+      ],
+      "constraints": [
+        "minimum-length"
+      ]
+    },
+    {
+      "intent": "Filter the generated SCSs to remove permutation duplicates and convert them to character frequency arrays.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "hashing"
+      ],
+      "cues": [
+        "not-permutations-of-each-other",
+        "frequency-of-each-letter",
+        "2d-array-of-integers-freqs"
+      ],
+      "constraints": [
+        "return-the-frequency-arrays-in-any-order"
+      ]
+    }
+  ]
+}

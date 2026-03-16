@@ -1,0 +1,60 @@
+{
+  "slug": "number-of-valid-clock-times",
+  "link": "https://leetcode.com/problems/number-of-valid-clock-times/",
+  "difficulty": "Easy",
+  "index": "519",
+  "description_full": "You are given a string of length 5 called time, representing the current time on a digital clock in the format \"hh:mm\". The earliest possible time is \"00:00\" and the latest possible time is \"23:59\".\n\nIn the string time, the digits represented by the ? symbol are unknown, and must be replaced with a digit from 0 to 9.\n\nReturn an integer answer, the number of valid clock times that can be created by replacing every ? with a digit from 0 to 9.\n\n \nExample 1:\n\n\nInput: time = \"?5:00\"\nOutput: 2\nExplanation: We can replace the ? with either a 0 or 1, producing \"05:00\" or \"15:00\". Note that we cannot replace it with a 2, since the time \"25:00\" is invalid. In total, we have two choices.\n\n\nExample 2:\n\n\nInput: time = \"0?:0?\"\nOutput: 100\nExplanation: Each ? can be replaced by any digit from 0 to 9, so we have 100 total choices.\n\n\nExample 3:\n\n\nInput: time = \"??:??\"\nOutput: 1440\nExplanation: There are 24 possible choices for the hours, and 60 possible choices for the minutes. In total, we have 24 * 60 = 1440 choices.\n\n\n \nConstraints:\n\n\n\ttime is a valid string of length 5 in the format \"hh:mm\".\n\t\"00\" <= hh <= \"23\"\n\t\"00\" <= mm <= \"59\"\n\tSome of the digits might be replaced with '?' and need to be replaced with digits from 0 to 9.\n\n",
+  "description": "You are given a string of length 5 called time, representing the current time on a digital clock in the format \"hh:mm\". The earliest possible time is \"00:00\" and the latest possible time is \"23:59\".\n\nIn the string time, the digits represented by the ? symbol are unknown, and must be replaced with a digit from 0 to 9.\n\nReturn an integer answer, the number of valid clock times that can be created by replacing every ? with a digit from 0 to 9.",
+  "example": "Input: time = \"?5:00\"\nOutput: 2\nExplanation: We can replace the ? with either a 0 or 1, producing \"05:00\" or \"15:00\". Note that we cannot replace it with a 2, since the time \"25:00\" is invalid. In total, we have two choices.",
+  "constraints_text": "time is a valid string of length 5 in the format \"hh:mm\".\n\t\"00\" <= hh <= \"23\"\n\t\"00\" <= mm <= \"59\"\n\tSome of the digits might be replaced with '?' and need to be replaced with digits from 0 to 9.",
+  "templates": {
+    "c": "int countTime(char* time) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countTime(string time) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countTime(String time) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} time\n * @return {number}\n */\nvar countTime = function(time) {\n    \n};",
+    "python": "class Solution(object):\n    def countTime(self, time):\n        \"\"\"\n        :type time: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the number of valid hour combinations (00-23) by replacing '?' in the 'hh' part of the time string.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "hh-part",
+        "in-hours",
+        "00-hh-23"
+      ],
+      "constraints": [
+        "time-is-length-5",
+        "hh-mm-format"
+      ]
+    },
+    {
+      "intent": "Calculate the number of valid minute combinations (00-59) by replacing '?' in the 'mm' part, then multiply by hour count.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "mm-part",
+        "in-minutes",
+        "00-mm-59",
+        "return-integer-answer"
+      ],
+      "constraints": [
+        "time-is-length-5",
+        "hh-mm-format"
+      ]
+    }
+  ]
+}

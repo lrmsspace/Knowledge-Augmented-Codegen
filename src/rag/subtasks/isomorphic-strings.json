@@ -1,0 +1,42 @@
+{
+  "slug": "isomorphic-strings",
+  "link": "https://leetcode.com/problems/isomorphic-strings/",
+  "difficulty": "Easy",
+  "index": "50",
+  "description_full": "Given two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.\n\n \nExample 1:\n\n\nInput: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.\n\n\n\nExample 2:\n\n\nInput: s = \"foo\", t = \"bar\"\n\nOutput: false\n\nExplanation:\n\nThe strings s and t can not be made identical as 'o' needs to be mapped to both 'a' and 'r'.\n\n\nExample 3:\n\n\nInput: s = \"paper\", t = \"title\"\n\nOutput: true\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.\n\n",
+  "description": "Given two strings s and t, determine if they are isomorphic.\n\nTwo strings s and t are isomorphic if the characters in s can be replaced to get t.\n\nAll occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.",
+  "example": "Input: s = \"egg\", t = \"add\"\n\nOutput: true\n\nExplanation:\n\nThe strings s and t can be made identical by:\n\n\n\tMapping 'e' to 'a'.\n\tMapping 'g' to 'd'.",
+  "constraints_text": "1 <= s.length <= 5 * 104\n\tt.length == s.length\n\ts and t consist of any valid ascii character.",
+  "templates": {
+    "c": "bool isIsomorphic(char* s, char* t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isIsomorphic(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isIsomorphic(String s, String t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {boolean}\n */\nvar isIsomorphic = function(s, t) {\n    \n};",
+    "python": "class Solution(object):\n    def isIsomorphic(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through strings, maintaining and validating character mappings in both directions to determine isomorphism.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "isomorphic",
+        "replace",
+        "all-occurrences",
+        "no-two-characters-map-to-same",
+        "preserve-order"
+      ],
+      "constraints": [
+        "s-length-t-length",
+        "1-s-length-5-104",
+        "valid-ascii-character"
+      ]
+    }
+  ]
+}

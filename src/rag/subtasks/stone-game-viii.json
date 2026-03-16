@@ -1,0 +1,54 @@
+{
+  "slug": "stone-game-viii",
+  "link": "https://leetcode.com/problems/stone-game-viii/",
+  "difficulty": "Hard",
+  "index": "2089",
+  "description_full": "Alice and Bob take turns playing a game, with Alice starting first.\r\n\r\nThere are n stones arranged in a row. On each player's turn, while the number of stones is more than one, they will do the following:\r\n\r\n\r\n\tChoose an integer x > 1, and remove the leftmost x stones from the row.\r\n\tAdd the sum of the removed stones' values to the player's score.\r\n\tPlace a new stone, whose value is equal to that sum, on the left side of the row.\r\n\r\n\r\nThe game stops when only one stone is left in the row.\r\n\r\nThe score difference between Alice and Bob is (Alice's score - Bob's score). Alice's goal is to maximize the score difference, and Bob's goal is the minimize the score difference.\r\n\r\nGiven an integer array stones of length n where stones[i] represents the value of the ith stone from the left, return the score difference between Alice and Bob if they both play optimally.\r\n\r\n \r\nExample 1:\r\n\r\n\r\nInput: stones = [-1,2,-3,4,-5]\r\nOutput: 5\r\nExplanation:\r\n- Alice removes the first 4 stones, adds (-1) + 2 + (-3) + 4 = 2 to her score, and places a stone of\r\n  value 2 on the left. stones = [2,-5].\r\n- Bob removes the first 2 stones, adds 2 + (-5) = -3 to his score, and places a stone of value -3 on\r\n  the left. stones = [-3].\r\nThe difference between their scores is 2 - (-3) = 5.\r\n\r\n\r\nExample 2:\r\n\r\n\r\nInput: stones = [7,-6,5,10,5,-2,-6]\r\nOutput: 13\r\nExplanation:\r\n- Alice removes all stones, adds 7 + (-6) + 5 + 10 + 5 + (-2) + (-6) = 13 to her score, and places a\r\n  stone of value 13 on the left. stones = [13].\r\nThe difference between their scores is 13 - 0 = 13.\r\n\r\n\r\nExample 3:\r\n\r\n\r\nInput: stones = [-10,-12]\r\nOutput: -22\r\nExplanation:\r\n- Alice can only make one move, which is to remove both stones. She adds (-10) + (-12) = -22 to her\r\n  score and places a stone of value -22 on the left. stones = [-22].\r\nThe difference between their scores is (-22) - 0 = -22.\r\n\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\tn == stones.length\r\n\t2 <= n <= 105\r\n\t-104 <= stones[i] <= 104\r\n",
+  "description": "Alice and Bob take turns playing a game, with Alice starting first.\r\n\r\nThere are n stones arranged in a row. On each player's turn, while the number of stones is more than one, they will do the following:\r\n\r\n\r\n\tChoose an integer x > 1, and remove the leftmost x stones from the row.\r\n\tAdd the sum of the removed stones' values to the player's score.\r\n\tPlace a new stone, whose value is equal to that sum, on the left side of the row.\r\n\r\n\r\nThe game stops when only one stone is left in the row.\r\n\r\nThe score difference between Alice and Bob is (Alice's score - Bob's score). Alice's goal is to maximize the score difference, and Bob's goal is the minimize the score difference.\r\n\r\nGiven an integer array stones of length n where stones[i] represents the value of the ith stone from the left, return the score difference between Alice and Bob if they both play optimally.",
+  "example": "Input: stones = [-1,2,-3,4,-5]\r\nOutput: 5\r\nExplanation:\r\n- Alice removes the first 4 stones, adds (-1) + 2 + (-3) + 4 = 2 to her score, and places a stone of\r\n  value 2 on the left. stones = [2,-5].\r\n- Bob removes the first 2 stones, adds 2 + (-5) = -3 to his score, and places a stone of value -3 on\r\n  the left. stones = [-3].\r\nThe difference between their scores is 2 - (-3) = 5.",
+  "constraints_text": "n == stones.length\r\n\t2 <= n <= 105\r\n\t-104 <= stones[i] <= 104",
+  "templates": {
+    "c": "\n\nint stoneGameVIII(int* stones, int stonesSize){\n\n}",
+    "cpp": "class Solution {\npublic:\n    int stoneGameVIII(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int stoneGameVIII(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number}\n */\nvar stoneGameVIII = function(stones) {\n    \n};",
+    "python": "class Solution(object):\n    def stoneGameVIII(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute prefix sums of the input stones array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-of-the-removed-stones-values"
+      ],
+      "constraints": [
+        "n-up-to-5000"
+      ]
+    },
+    {
+      "intent": "Compute the maximum score difference Alice can achieve using minimax dynamic programming.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "alice-starting-first",
+        "maximize-score-difference",
+        "bob-s-goal-is-to-minimize",
+        "play-optimally"
+      ],
+      "constraints": [
+        "x-1",
+        "game-stops-when-only-one-stone-is-left"
+      ]
+    }
+  ]
+}

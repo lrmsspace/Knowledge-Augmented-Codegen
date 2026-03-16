@@ -1,0 +1,58 @@
+{
+  "slug": "binary-trees-with-factors",
+  "link": "https://leetcode.com/problems/binary-trees-with-factors/",
+  "difficulty": "Medium",
+  "index": "972",
+  "description_full": "Given an array of unique integers, arr, where each integer arr[i] is strictly greater than 1.\n\nWe make a binary tree using these integers, and each number may be used for any number of times. Each non-leaf node's value should be equal to the product of the values of its children.\n\nReturn the number of binary trees we can make. The answer may be too large so return the answer modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: arr = [2,4]\nOutput: 3\nExplanation: We can make these trees: [2], [4], [4, 2, 2]\n\nExample 2:\n\n\nInput: arr = [2,4,5,10]\nOutput: 7\nExplanation: We can make these trees: [2], [4], [5], [10], [4, 2, 2], [10, 2, 5], [10, 5, 2].\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 1000\n\t2 <= arr[i] <= 109\n\tAll the values of arr are unique.\n\n",
+  "description": "Given an array of unique integers, arr, where each integer arr[i] is strictly greater than 1.\n\nWe make a binary tree using these integers, and each number may be used for any number of times. Each non-leaf node's value should be equal to the product of the values of its children.\n\nReturn the number of binary trees we can make. The answer may be too large so return the answer modulo 109 + 7.",
+  "example": "Input: arr = [2,4]\nOutput: 3\nExplanation: We can make these trees: [2], [4], [4, 2, 2]",
+  "constraints_text": "1 <= arr.length <= 1000\n\t2 <= arr[i] <= 109\n\tAll the values of arr are unique.",
+  "templates": {
+    "c": "int numFactoredBinaryTrees(int* arr, int arrSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numFactoredBinaryTrees(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numFactoredBinaryTrees(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar numFactoredBinaryTrees = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def numFactoredBinaryTrees(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array and compute the number of binary trees for each element as a root using dynamic programming.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "merge-sort",
+        "hashing",
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "array-of-unique-integers",
+        "non-leaf-node-s-value-should-be-equal-to-the-product-of-the-values-of-its-children",
+        "each-number-may-be-used-for-any-number-of-times",
+        "return-answer-modulo"
+      ],
+      "constraints": [
+        "arr-length-1000",
+        "arr-i-10-9"
+      ]
+    },
+    {
+      "intent": "Sum all calculated tree counts to get the final result modulo 10^9 + 7.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "return-the-number-of-binary-trees-we-can-make",
+        "return-the-answer-modulo"
+      ],
+      "constraints": [
+        "arr-length-1000"
+      ]
+    }
+  ]
+}

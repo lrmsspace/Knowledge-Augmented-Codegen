@@ -1,0 +1,37 @@
+{
+  "slug": "permutations",
+  "link": "https://leetcode.com/problems/permutations/",
+  "difficulty": "Medium",
+  "index": "635",
+  "description_full": "Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.\n\n \nExample 1:\nInput: nums = [1,2,3]\nOutput: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]\nExample 2:\nInput: nums = [0,1]\nOutput: [[0,1],[1,0]]\nExample 3:\nInput: nums = [1]\nOutput: [[1]]\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 6\n\t-10 <= nums[i] <= 10\n\tAll the integers of nums are unique.\n\n",
+  "description": "Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.",
+  "example": "Input: nums = [1,2,3]\nOutput: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]",
+  "constraints_text": "1 <= nums.length <= 6\n\t-10 <= nums[i] <= 10\n\tAll the integers of nums are unique.",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** permute(int* nums, int numsSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> permute(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> permute(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[][]}\n */\nvar permute = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def permute(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all unique permutations of the input array elements using a recursive backtracking approach.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "all-the-possible-permutations",
+        "distinct-integers"
+      ],
+      "constraints": [
+        "1-nums-length-6",
+        "all-the-integers-of-nums-are-unique"
+      ]
+    }
+  ]
+}

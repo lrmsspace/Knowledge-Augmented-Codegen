@@ -1,0 +1,85 @@
+{
+  "slug": "remove-zero-sum-consecutive-nodes-from-linked-list",
+  "link": "https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/",
+  "difficulty": "Medium",
+  "index": "1140",
+  "description_full": "Given the head of a linked list, we repeatedly delete consecutive sequences of nodes that sum to 0 until there are no such sequences.\r\n\r\nAfter doing so, return the head of the final linked list.  You may return any such answer.\r\n\n \n(Note that in the examples below, all sequences are serializations of ListNode objects.)\n\nExample 1:\n\n\nInput: head = [1,2,-3,3,1]\nOutput: [3,1]\nNote: The answer [1,2,1] would also be accepted.\n\n\nExample 2:\n\n\nInput: head = [1,2,3,-3,4]\nOutput: [1,2,4]\n\n\nExample 3:\n\n\nInput: head = [1,2,3,-3,-2]\nOutput: [1]\n\n\n \nConstraints:\n\n\n\tThe given linked list will contain between 1 and 1000 nodes.\n\tEach node in the linked list has -1000 <= node.val <= 1000.\n\n",
+  "description": "Given the head of a linked list, we repeatedly delete consecutive sequences of nodes that sum to 0 until there are no such sequences.\r\n\r\nAfter doing so, return the head of the final linked list.  You may return any such answer.\r\n\n \n(Note that in the examples below, all sequences are serializations of ListNode objects.)",
+  "example": "Input: head = [1,2,-3,3,1]\nOutput: [3,1]\nNote: The answer [1,2,1] would also be accepted.",
+  "constraints_text": "The given linked list will contain between 1 and 1000 nodes.\n\tEach node in the linked list has -1000 <= node.val <= 1000.",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* removeZeroSumSublists(struct ListNode* head) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* removeZeroSumSublists(ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode removeZeroSumSublists(ListNode head) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar removeZeroSumSublists = function(head) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def removeZeroSumSublists(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a dummy head node and a hash map to store prefix sums mapping to list nodes.",
+      "structures": [
+        "linked-list",
+        "ds"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "head-of-a-linked-list"
+      ],
+      "constraints": [
+        "1-to-1000-nodes"
+      ]
+    },
+    {
+      "intent": "Traverse the linked list, maintaining a running prefix sum and updating the hash map with current node references.",
+      "structures": [
+        "linked-list",
+        "ds"
+      ],
+      "actions": [
+        "simulation",
+        "prefix-sum",
+        "hashing"
+      ],
+      "cues": [
+        "consecutive-sequences",
+        "sum-to-0"
+      ],
+      "constraints": [
+        "node-val-between-1000-and-1000"
+      ]
+    },
+    {
+      "intent": "If the current prefix sum is already in the map, delete the corresponding sublist segment by adjusting pointers and rewinding the current node.",
+      "structures": [
+        "linked-list",
+        "ds"
+      ],
+      "actions": [
+        "simulation",
+        "hashing",
+        "greedy"
+      ],
+      "cues": [
+        "delete-consecutive-sequences",
+        "sum-to-0",
+        "repeatedly-delete"
+      ],
+      "constraints": []
+    },
+    {
+      "intent": "Return the head of the final modified linked list after all zero-sum sequences have been removed.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "return-the-head"
+      ],
+      "constraints": []
+    }
+  ]
+}

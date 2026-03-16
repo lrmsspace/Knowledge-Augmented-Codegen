@@ -1,0 +1,43 @@
+{
+  "slug": "subarray-sum-equals-k",
+  "link": "https://leetcode.com/problems/subarray-sum-equals-k/",
+  "difficulty": "Medium",
+  "index": "869",
+  "description_full": "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\nInput: nums = [1,1,1], k = 2\nOutput: 2\nExample 2:\nInput: nums = [1,2,3], k = 3\nOutput: 2\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107\n\n",
+  "description": "Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [1,1,1], k = 2\nOutput: 2",
+  "constraints_text": "1 <= nums.length <= 2 * 104\n\t-1000 <= nums[i] <= 1000\n\t-107 <= k <= 107",
+  "templates": {
+    "c": "int subarraySum(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int subarraySum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int subarraySum(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar subarraySum = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def subarraySum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count subarrays with sum k by iterating through prefix sums and using a hash map to store frequencies of previously encountered prefix sums.",
+      "structures": [
+        "array",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum",
+        "hashing",
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "total-number-of-subarrays",
+        "sum-equals-to-k",
+        "contiguous-non-empty-sequence"
+      ],
+      "constraints": [
+        "1-nums-length-2-104",
+        "1000-nums-i-1000",
+        "107-k-107"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "binary-tree-postorder-traversal",
+  "link": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+  "difficulty": "Easy",
+  "index": "33",
+  "description_full": "Given the root of a binary tree, return the postorder traversal of its nodes' values.\n\n \nExample 1:\n\n\nInput: root = [1,null,2,3]\n\nOutput: [3,2,1]\n\nExplanation:\n\n\n\n\nExample 2:\n\n\nInput: root = [1,2,3,4,5,null,8,null,null,6,7,9]\n\nOutput: [4,6,7,5,2,9,8,3,1]\n\nExplanation:\n\n\n\n\nExample 3:\n\n\nInput: root = []\n\nOutput: []\n\n\nExample 4:\n\n\nInput: root = [1]\n\nOutput: [1]\n\n\n \nConstraints:\n\n\n\tThe number of the nodes in the tree is in the range [0, 100].\n\t-100 <= Node.val <= 100\n\n\n \nFollow up: Recursive solution is trivial, could you do it iteratively?",
+  "description": "Given the root of a binary tree, return the postorder traversal of its nodes' values.",
+  "example": "Input: root = [1,null,2,3]\n\nOutput: [3,2,1]\n\nExplanation:",
+  "constraints_text": "The number of the nodes in the tree is in the range [0, 100].\n\t-100 <= Node.val <= 100\n\n\n \nFollow up: Recursive solution is trivial, could you do it iteratively?",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* postorderTraversal(struct TreeNode* root, int* returnSize) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> postorderTraversal(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public List<Integer> postorderTraversal(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar postorderTraversal = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def postorderTraversal(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a recursive postorder traversal of the binary tree and collect node values.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "postorder-traversal",
+        "recursive-solution-is-trivial"
+      ],
+      "constraints": [
+        "nodes-in-range-0-100"
+      ]
+    },
+    {
+      "intent": "Implement an iterative postorder traversal using a stack to collect node values.",
+      "structures": [
+        "tree",
+        "stack",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "simulation"
+      ],
+      "cues": [
+        "could-you-do-it-iteratively"
+      ],
+      "constraints": [
+        "nodes-in-range-0-100"
+      ]
+    }
+  ]
+}

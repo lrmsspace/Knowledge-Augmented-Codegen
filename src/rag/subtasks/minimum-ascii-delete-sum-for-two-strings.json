@@ -1,0 +1,54 @@
+{
+  "slug": "minimum-ascii-delete-sum-for-two-strings",
+  "link": "https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/",
+  "difficulty": "Medium",
+  "index": "922",
+  "description_full": "Given two strings s1 and s2, return the lowest ASCII sum of deleted characters to make two strings equal.\n\n \nExample 1:\n\n\nInput: s1 = \"sea\", s2 = \"eat\"\nOutput: 231\nExplanation: Deleting \"s\" from \"sea\" adds the ASCII value of \"s\" (115) to the sum.\nDeleting \"t\" from \"eat\" adds 116 to the sum.\nAt the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possible to achieve this.\n\n\nExample 2:\n\n\nInput: s1 = \"delete\", s2 = \"leet\"\nOutput: 403\nExplanation: Deleting \"dee\" from \"delete\" to turn the string into \"let\",\nadds 100[d] + 101[e] + 101[e] to the sum.\nDeleting \"e\" from \"leet\" adds 101[e] to the sum.\nAt the end, both strings are equal to \"let\", and the answer is 100+101+101+101 = 403.\nIf instead we turned both strings into \"lee\" or \"eet\", we would get answers of 433 or 417, which are higher.\n\n\n \nConstraints:\n\n\n\t1 <= s1.length, s2.length <= 1000\n\ts1 and s2 consist of lowercase English letters.\n\n",
+  "description": "Given two strings s1 and s2, return the lowest ASCII sum of deleted characters to make two strings equal.",
+  "example": "Input: s1 = \"sea\", s2 = \"eat\"\nOutput: 231\nExplanation: Deleting \"s\" from \"sea\" adds the ASCII value of \"s\" (115) to the sum.\nDeleting \"t\" from \"eat\" adds 116 to the sum.\nAt the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possible to achieve this.",
+  "constraints_text": "1 <= s1.length, s2.length <= 1000\n\ts1 and s2 consist of lowercase English letters.",
+  "templates": {
+    "c": "int minimumDeleteSum(char* s1, char* s2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumDeleteSum(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDeleteSum(String s1, String s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {number}\n */\nvar minimumDeleteSum = function(s1, s2) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumDeleteSum(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total ASCII sum of all characters in both input strings.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "ascii-sum",
+        "deleted-characters"
+      ],
+      "constraints": [
+        "1-s1-length-s2-length-1000"
+      ]
+    },
+    {
+      "intent": "Compute the maximum ASCII sum of a common subsequence using dynamic programming and derive the minimum deletion sum.",
+      "structures": [
+        "string",
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "make-two-strings-equal",
+        "lowest-ascii-sum"
+      ],
+      "constraints": [
+        "1-s1-length-s2-length-1000"
+      ]
+    }
+  ]
+}

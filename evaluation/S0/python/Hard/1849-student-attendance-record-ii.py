@@ -1,0 +1,58 @@
+# Source: https://leetcode.com/problems/student-attendance-record-ii/   |   Difficulty: Hard
+#
+# Problem Description:
+# An attendance record for a student can be represented as a string where each character signifies whether the student was absent, late, or present on that day. The record only contains the following three characters:
+#
+#
+# 	'A': Absent.
+# 	'L': Late.
+# 	'P': Present.
+#
+#
+# Any student is eligible for an attendance award if they meet both of the following criteria:
+#
+#
+# 	The student was absent ('A') for strictly fewer than 2 days total.
+# 	The student was never late ('L') for 3 or more consecutive days.
+#
+#
+# Given an integer n, return the number of possible attendance records of length n that make a student eligible for an attendance award. The answer may be very large, so return it modulo 109 + 7.
+#
+# Example:
+# Input: n = 2
+# Output: 8
+# Explanation: There are 8 records with length 2 that are eligible for an award:
+# "PP", "AP", "PA", "LP", "PL", "AL", "LA", "LL"
+# Only "AA" is not eligible because there are 2 absences (there need to be fewer than 2).
+#
+# Constraints:
+# 1 <= n <= 105
+#
+
+class Solution(object):
+    def checkRecord(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        MOD = 10**9 + 7
+        
+        # dp[i][j][k]: length i, j A's, ending with k L's
+        dp = [[[0]*3 for _ in range(2)] for _ in range(n+1)]
+        dp[0][0][0] = 1
+        
+        for i in range(1, n+1):
+            for j in range(2):
+                for k in range(3):
+                    # Add P
+                    dp[i][j][0] = (dp[i][j][0] + sum(dp[i-1][j])) % MOD
+                    
+                    # Add A
+                    if j > 0:
+                        dp[i][j][0] = (dp[i][j][0] + sum(dp[i-1][j-1])) % MOD
+                    
+                    # Add L
+                    if k > 0:
+                        dp[i][j][k] = (dp[i][j][k] + dp[i-1][j][k-1]) % MOD
+        
+        return sum(dp[n][j][k] for j in range(2) for k in range(3)) % MOD

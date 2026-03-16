@@ -1,0 +1,40 @@
+{
+  "slug": "double-modular-exponentiation",
+  "link": "https://leetcode.com/problems/double-modular-exponentiation/",
+  "difficulty": "Medium",
+  "index": "2443",
+  "description_full": "You are given a 0-indexed 2D array variables where variables[i] = [ai, bi, ci, mi], and an integer target.\n\nAn index i is good if the following formula holds:\n\n\n\t0 <= i < variables.length\n\t((aibi % 10)ci) % mi == target\n\n\nReturn an array consisting of good indices in any order.\n\n \nExample 1:\n\n\nInput: variables = [[2,3,3,10],[3,3,3,1],[6,1,1,4]], target = 2\nOutput: [0,2]\nExplanation: For each index i in the variables array:\n1) For the index 0, variables[0] = [2,3,3,10], (23 % 10)3 % 10 = 2.\n2) For the index 1, variables[1] = [3,3,3,1], (33 % 10)3 % 1 = 0.\n3) For the index 2, variables[2] = [6,1,1,4], (61 % 10)1 % 4 = 2.\nTherefore we return [0,2] as the answer.\n\n\nExample 2:\n\n\nInput: variables = [[39,3,1000,1000]], target = 17\nOutput: []\nExplanation: For each index i in the variables array:\n1) For the index 0, variables[0] = [39,3,1000,1000], (393 % 10)1000 % 1000 = 1.\nTherefore we return [] as the answer.\n\n\n \nConstraints:\n\n\n\t1 <= variables.length <= 100\n\tvariables[i] == [ai, bi, ci, mi]\n\t1 <= ai, bi, ci, mi <= 103\n\t0 <= target <= 103\n\n",
+  "description": "You are given a 0-indexed 2D array variables where variables[i] = [ai, bi, ci, mi], and an integer target.\n\nAn index i is good if the following formula holds:\n\n\n\t0 <= i < variables.length\n\t((aibi % 10)ci) % mi == target\n\n\nReturn an array consisting of good indices in any order.",
+  "example": "Input: variables = [[2,3,3,10],[3,3,3,1],[6,1,1,4]], target = 2\nOutput: [0,2]\nExplanation: For each index i in the variables array:\n1) For the index 0, variables[0] = [2,3,3,10], (23 % 10)3 % 10 = 2.\n2) For the index 1, variables[1] = [3,3,3,1], (33 % 10)3 % 1 = 0.\n3) For the index 2, variables[2] = [6,1,1,4], (61 % 10)1 % 4 = 2.\nTherefore we return [0,2] as the answer.",
+  "constraints_text": "1 <= variables.length <= 100\n\tvariables[i] == [ai, bi, ci, mi]\n\t1 <= ai, bi, ci, mi <= 103\n\t0 <= target <= 103",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getGoodIndices(int** variables, int variablesSize, int* variablesColSize, int target, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> getGoodIndices(vector<vector<int>>& variables, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> getGoodIndices(int[][] variables, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} variables\n * @param {number} target\n * @return {number[]}\n */\nvar getGoodIndices = function(variables, target) {\n    \n};",
+    "python": "class Solution(object):\n    def getGoodIndices(self, variables, target):\n        \"\"\"\n        :type variables: List[List[int]]\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through variable sets, apply modular exponentiation twice, and collect indices matching the target.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "mod-exp"
+      ],
+      "cues": [
+        "0-indexed-2d-array-variables",
+        "aibi-10-ci-mi-target",
+        "return-an-array-consisting-of-good-indices"
+      ],
+      "constraints": [
+        "1-variables-length-100",
+        "1-ai-bi-ci-mi-103",
+        "0-target-103"
+      ]
+    }
+  ]
+}

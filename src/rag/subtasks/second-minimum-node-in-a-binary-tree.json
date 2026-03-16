@@ -1,0 +1,40 @@
+{
+  "slug": "second-minimum-node-in-a-binary-tree",
+  "link": "https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/",
+  "difficulty": "Easy",
+  "index": "149",
+  "description_full": "Given a non-empty special binary tree consisting of nodes with the non-negative value, where each node in this tree has exactly two or zero sub-node. If the node has two sub-nodes, then this node's value is the smaller value among its two sub-nodes. More formally, the property root.val = min(root.left.val, root.right.val) always holds.\n\nGiven such a binary tree, you need to output the second minimum value in the set made of all the nodes' value in the whole tree.\n\nIf no such second minimum value exists, output -1 instead.\n\n \n\n \nExample 1:\n\n\nInput: root = [2,2,5,null,null,5,7]\nOutput: 5\nExplanation: The smallest value is 2, the second smallest value is 5.\n\n\nExample 2:\n\n\nInput: root = [2,2,2]\nOutput: -1\nExplanation: The smallest value is 2, but there isn't any second smallest value.\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 25].\n\t1 <= Node.val <= 231 - 1\n\troot.val == min(root.left.val, root.right.val) for each internal node of the tree.\n\n",
+  "description": "Given a non-empty special binary tree consisting of nodes with the non-negative value, where each node in this tree has exactly two or zero sub-node. If the node has two sub-nodes, then this node's value is the smaller value among its two sub-nodes. More formally, the property root.val = min(root.left.val, root.right.val) always holds.\n\nGiven such a binary tree, you need to output the second minimum value in the set made of all the nodes' value in the whole tree.\n\nIf no such second minimum value exists, output -1 instead.",
+  "example": "Input: root = [2,2,5,null,null,5,7]\nOutput: 5\nExplanation: The smallest value is 2, the second smallest value is 5.",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 25].\n\t1 <= Node.val <= 231 - 1\n\troot.val == min(root.left.val, root.right.val) for each internal node of the tree.",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nint findSecondMinimumValue(struct TreeNode* root) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int findSecondMinimumValue(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int findSecondMinimumValue(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar findSecondMinimumValue = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def findSecondMinimumValue(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the second minimum value by traversing the tree and tracking two distinct minimums.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "second-minimum-value",
+        "all-nodes-value",
+        "root-val-min-root-left-val-root-right-val"
+      ],
+      "constraints": [
+        "1-node-val-231-1",
+        "number-of-nodes-in-the-range-1-25"
+      ]
+    }
+  ]
+}

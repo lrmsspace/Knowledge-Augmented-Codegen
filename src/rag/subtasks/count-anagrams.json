@@ -1,0 +1,75 @@
+{
+  "slug": "count-anagrams",
+  "link": "https://leetcode.com/problems/count-anagrams/",
+  "difficulty": "Hard",
+  "index": "2217",
+  "description_full": "You are given a string s containing one or more words. Every consecutive pair of words is separated by a single space ' '.\n\nA string t is an anagram of string s if the ith word of t is a permutation of the ith word of s.\n\n\n\tFor example, \"acb dfe\" is an anagram of \"abc def\", but \"def cab\" and \"adc bef\" are not.\n\n\nReturn the number of distinct anagrams of s. Since the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: s = \"too hot\"\nOutput: 18\nExplanation: Some of the anagrams of the given string are \"too hot\", \"oot hot\", \"oto toh\", \"too toh\", and \"too oht\".\n\n\nExample 2:\n\n\nInput: s = \"aa\"\nOutput: 1\nExplanation: There is only one anagram possible for the given string.\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters and spaces ' '.\n\tThere is single space between consecutive words.\n\n",
+  "description": "You are given a string s containing one or more words. Every consecutive pair of words is separated by a single space ' '.\n\nA string t is an anagram of string s if the ith word of t is a permutation of the ith word of s.\n\n\n\tFor example, \"acb dfe\" is an anagram of \"abc def\", but \"def cab\" and \"adc bef\" are not.\n\n\nReturn the number of distinct anagrams of s. Since the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: s = \"too hot\"\nOutput: 18\nExplanation: Some of the anagrams of the given string are \"too hot\", \"oot hot\", \"oto toh\", \"too toh\", and \"too oht\".",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of lowercase English letters and spaces ' '.\n\tThere is single space between consecutive words.",
+  "templates": {
+    "c": "int countAnagrams(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countAnagrams(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countAnagrams(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countAnagrams = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def countAnagrams(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse the input string 's' into a list of individual words.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "separated-by-a-single-space",
+        "consecutive-pair-of-words"
+      ],
+      "constraints": [
+        "1-s-length-105"
+      ]
+    },
+    {
+      "intent": "Precompute factorials and their modular inverses up to the maximum possible word length for efficient permutation calculations.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "mod-exp"
+      ],
+      "cues": [
+        "modulo-10-9-7",
+        "distinct-anagrams"
+      ],
+      "constraints": [
+        "1-s-length-105"
+      ]
+    },
+    {
+      "intent": "For each word, count character frequencies, compute distinct permutations using precomputed values, and accumulate the product modulo 10^9 + 7.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration",
+        "mod-exp"
+      ],
+      "cues": [
+        "distinct-anagrams",
+        "ith-word-of-t-is-a-permutation-of-the-ith-word-of-s",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "s-consists-of-lowercase-english-letters",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

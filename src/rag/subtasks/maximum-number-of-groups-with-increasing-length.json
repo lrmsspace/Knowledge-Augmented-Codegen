@@ -1,0 +1,54 @@
+{
+  "slug": "maximum-number-of-groups-with-increasing-length",
+  "link": "https://leetcode.com/problems/maximum-number-of-groups-with-increasing-length/",
+  "difficulty": "Hard",
+  "index": "2256",
+  "description_full": "You are given a 0-indexed array usageLimits of length n.\n\nYour task is to create groups using numbers from 0 to n - 1, ensuring that each number, i, is used no more than usageLimits[i] times in total across all groups. You must also satisfy the following conditions:\n\n\n\tEach group must consist of distinct numbers, meaning that no duplicate numbers are allowed within a single group.\n\tEach group (except the first one) must have a length strictly greater than the previous group.\n\n\nReturn an integer denoting the maximum number of groups you can create while satisfying these conditions.\n\n \nExample 1:\n\n\nInput: usageLimits = [1,2,5]\nOutput: 3\nExplanation: In this example, we can use 0 at most once, 1 at most twice, and 2 at most five times.\nOne way of creating the maximum number of groups while satisfying the conditions is: \nGroup 1 contains the number [2].\nGroup 2 contains the numbers [1,2].\nGroup 3 contains the numbers [0,1,2]. \nIt can be shown that the maximum number of groups is 3. \nSo, the output is 3. \n\nExample 2:\n\n\nInput: usageLimits = [2,1,2]\nOutput: 2\nExplanation: In this example, we can use 0 at most twice, 1 at most once, and 2 at most twice.\nOne way of creating the maximum number of groups while satisfying the conditions is:\nGroup 1 contains the number [0].\nGroup 2 contains the numbers [1,2].\nIt can be shown that the maximum number of groups is 2.\nSo, the output is 2. \n\n\nExample 3:\n\n\nInput: usageLimits = [1,1]\nOutput: 1\nExplanation: In this example, we can use both 0 and 1 at most once.\nOne way of creating the maximum number of groups while satisfying the conditions is:\nGroup 1 contains the number [0].\nIt can be shown that the maximum number of groups is 1.\nSo, the output is 1. \n\n\n \nConstraints:\n\n\n\t1 <= usageLimits.length <= 105\n\t1 <= usageLimits[i] <= 109\n\n",
+  "description": "You are given a 0-indexed array usageLimits of length n.\n\nYour task is to create groups using numbers from 0 to n - 1, ensuring that each number, i, is used no more than usageLimits[i] times in total across all groups. You must also satisfy the following conditions:\n\n\n\tEach group must consist of distinct numbers, meaning that no duplicate numbers are allowed within a single group.\n\tEach group (except the first one) must have a length strictly greater than the previous group.\n\n\nReturn an integer denoting the maximum number of groups you can create while satisfying these conditions.",
+  "example": "Input: usageLimits = [1,2,5]\nOutput: 3\nExplanation: In this example, we can use 0 at most once, 1 at most twice, and 2 at most five times.\nOne way of creating the maximum number of groups while satisfying the conditions is: \nGroup 1 contains the number [2].\nGroup 2 contains the numbers [1,2].\nGroup 3 contains the numbers [0,1,2]. \nIt can be shown that the maximum number of groups is 3. \nSo, the output is 3.",
+  "constraints_text": "1 <= usageLimits.length <= 105\n\t1 <= usageLimits[i] <= 109",
+  "templates": {
+    "c": "int maxIncreasingGroups(int* usageLimits, int usageLimitsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxIncreasingGroups(vector<int>& usageLimits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxIncreasingGroups(List<Integer> usageLimits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} usageLimits\n * @return {number}\n */\nvar maxIncreasingGroups = function(usageLimits) {\n    \n};",
+    "python": "class Solution(object):\n    def maxIncreasingGroups(self, usageLimits):\n        \"\"\"\n        :type usageLimits: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the maximum number of groups (k) using binary search on the possible answer range.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "maximum-number-of-groups"
+      ],
+      "constraints": [
+        "k-can-be-up-to-2-10-7"
+      ]
+    },
+    {
+      "intent": "Implement a helper function to check if 'k' groups can be formed with lengths 1 to k, respecting usage limits.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "each-number-i-is-used-no-more-than-usagelimits-i-times",
+        "each-group-must-consist-of-distinct-numbers",
+        "each-group-except-the-first-one-must-have-a-length-strictly-greater-than-the-previous-group"
+      ],
+      "constraints": [
+        "usagelimits-i-up-to-10-9",
+        "n-up-to-10-5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "shortest-distance-to-a-character",
+  "link": "https://leetcode.com/problems/shortest-distance-to-a-character/",
+  "difficulty": "Easy",
+  "index": "179",
+  "description_full": "Given a string s and a character c that occurs in s, return an array of integers answer where answer.length == s.length and answer[i] is the distance from index i to the closest occurrence of character c in s.\n\nThe distance between two indices i and j is abs(i - j), where abs is the absolute value function.\n\n \nExample 1:\n\n\nInput: s = \"loveleetcode\", c = \"e\"\nOutput: [3,2,1,0,1,0,0,1,2,2,1,0]\nExplanation: The character 'e' appears at indices 3, 5, 6, and 11 (0-indexed).\nThe closest occurrence of 'e' for index 0 is at index 3, so the distance is abs(0 - 3) = 3.\nThe closest occurrence of 'e' for index 1 is at index 3, so the distance is abs(1 - 3) = 2.\nFor index 4, there is a tie between the 'e' at index 3 and the 'e' at index 5, but the distance is still the same: abs(4 - 3) == abs(4 - 5) = 1.\nThe closest occurrence of 'e' for index 8 is at index 6, so the distance is abs(8 - 6) = 2.\n\n\nExample 2:\n\n\nInput: s = \"aaab\", c = \"b\"\nOutput: [3,2,1,0]\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts[i] and c are lowercase English letters.\n\tIt is guaranteed that c occurs at least once in s.\n\n",
+  "description": "Given a string s and a character c that occurs in s, return an array of integers answer where answer.length == s.length and answer[i] is the distance from index i to the closest occurrence of character c in s.\n\nThe distance between two indices i and j is abs(i - j), where abs is the absolute value function.",
+  "example": "Input: s = \"loveleetcode\", c = \"e\"\nOutput: [3,2,1,0,1,0,0,1,2,2,1,0]\nExplanation: The character 'e' appears at indices 3, 5, 6, and 11 (0-indexed).\nThe closest occurrence of 'e' for index 0 is at index 3, so the distance is abs(0 - 3) = 3.\nThe closest occurrence of 'e' for index 1 is at index 3, so the distance is abs(1 - 3) = 2.\nFor index 4, there is a tie between the 'e' at index 3 and the 'e' at index 5, but the distance is still the same: abs(4 - 3) == abs(4 - 5) = 1.\nThe closest occurrence of 'e' for index 8 is at index 6, so the distance is abs(8 - 6) = 2.",
+  "constraints_text": "1 <= s.length <= 104\n\ts[i] and c are lowercase English letters.\n\tIt is guaranteed that c occurs at least once in s.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* shortestToChar(char* s, char c, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> shortestToChar(string s, char c) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] shortestToChar(String s, char c) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {character} c\n * @return {number[]}\n */\nvar shortestToChar = function(s, c) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestToChar(self, s, c):\n        \"\"\"\n        :type s: str\n        :type c: str\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the minimum distance for each index to the closest character 'c' by performing two linear passes.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "closest-occurrence",
+        "distance-from-index-i"
+      ],
+      "constraints": [
+        "s-length-10-4",
+        "c-occurs-at-least-once"
+      ]
+    }
+  ]
+}

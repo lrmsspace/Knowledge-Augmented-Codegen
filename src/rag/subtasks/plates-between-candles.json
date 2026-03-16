@@ -1,0 +1,69 @@
+{
+  "slug": "plates-between-candles",
+  "link": "https://leetcode.com/problems/plates-between-candles/",
+  "difficulty": "Medium",
+  "index": "1474",
+  "description_full": "There is a long table with a line of plates and candles arranged on top of it. You are given a 0-indexed string s consisting of characters '*' and '|' only, where a '*' represents a plate and a '|' represents a candle.\n\nYou are also given a 0-indexed 2D integer array queries where queries[i] = [lefti, righti] denotes the substring s[lefti...righti] (inclusive). For each query, you need to find the number of plates between candles that are in the substring. A plate is considered between candles if there is at least one candle to its left and at least one candle to its right in the substring.\n\n\n\tFor example, s = \"||**||**|*\", and a query [3, 8] denotes the substring \"*||**|\". The number of plates between candles in this substring is 2, as each of the two plates has at least one candle in the substring to its left and right.\n\n\nReturn an integer array answer where answer[i] is the answer to the ith query.\n\n \nExample 1:\n\n\nInput: s = \"**|**|***|\", queries = [[2,5],[5,9]]\nOutput: [2,3]\nExplanation:\n- queries[0] has two plates between candles.\n- queries[1] has three plates between candles.\n\n\nExample 2:\n\n\nInput: s = \"***|**|*****|**||**|*\", queries = [[1,17],[4,5],[14,17],[5,11],[15,16]]\nOutput: [9,0,0,0,0]\nExplanation:\n- queries[0] has nine plates between candles.\n- The other queries have zero plates between candles.\n\n\n \nConstraints:\n\n\n\t3 <= s.length <= 105\n\ts consists of '*' and '|' characters.\n\t1 <= queries.length <= 105\n\tqueries[i].length == 2\n\t0 <= lefti <= righti < s.length\n\n",
+  "description": "There is a long table with a line of plates and candles arranged on top of it. You are given a 0-indexed string s consisting of characters '*' and '|' only, where a '*' represents a plate and a '|' represents a candle.\n\nYou are also given a 0-indexed 2D integer array queries where queries[i] = [lefti, righti] denotes the substring s[lefti...righti] (inclusive). For each query, you need to find the number of plates between candles that are in the substring. A plate is considered between candles if there is at least one candle to its left and at least one candle to its right in the substring.\n\n\n\tFor example, s = \"||**||**|*\", and a query [3, 8] denotes the substring \"*||**|\". The number of plates between candles in this substring is 2, as each of the two plates has at least one candle in the substring to its left and right.\n\n\nReturn an integer array answer where answer[i] is the answer to the ith query.",
+  "example": "Input: s = \"**|**|***|\", queries = [[2,5],[5,9]]\nOutput: [2,3]\nExplanation:\n- queries[0] has two plates between candles.\n- queries[1] has three plates between candles.",
+  "constraints_text": "3 <= s.length <= 105\n\ts consists of '*' and '|' characters.\n\t1 <= queries.length <= 105\n\tqueries[i].length == 2\n\t0 <= lefti <= righti < s.length",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* platesBetweenCandles(char* s, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> platesBetweenCandles(string s, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] platesBetweenCandles(String s, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar platesBetweenCandles = function(s, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def platesBetweenCandles(self, s, queries):\n        \"\"\"\n        :type s: str\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute indices of the nearest candle to the left and right for each position in the string.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "candle-to-its-left",
+        "candle-to-its-right"
+      ],
+      "constraints": [
+        "s-length-10-5"
+      ]
+    },
+    {
+      "intent": "Precompute prefix sums of plate counts to quickly query plates within any range.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "number-of-plates",
+        "between-candles"
+      ],
+      "constraints": [
+        "s-length-10-5"
+      ]
+    },
+    {
+      "intent": "Process each query by finding the effective candle boundaries and calculating plate counts using precomputed data.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "queries",
+        "find-the-number-of-plates"
+      ],
+      "constraints": [
+        "queries-length-10-5",
+        "0-lefti-righti-s-length"
+      ]
+    }
+  ]
+}

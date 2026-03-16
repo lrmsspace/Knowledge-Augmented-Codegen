@@ -1,0 +1,69 @@
+{
+  "slug": "sum-of-k-subarrays-with-length-at-least-m",
+  "link": "https://leetcode.com/problems/sum-of-k-subarrays-with-length-at-least-m/",
+  "difficulty": "Medium",
+  "index": "2620",
+  "description_full": "You are given an integer array nums and two integers, k and m.\n\nReturn the maximum sum of k non-overlapping subarrays of nums, where each subarray has a length of at least m.\n\n \nExample 1:\n\n\nInput: nums = [1,2,-1,3,3,4], k = 2, m = 2\n\nOutput: 13\n\nExplanation:\n\nThe optimal choice is:\n\n\n\tSubarray nums[3..5] with sum 3 + 3 + 4 = 10 (length is 3 >= m).\n\tSubarray nums[0..1] with sum 1 + 2 = 3 (length is 2 >= m).\n\n\nThe total sum is 10 + 3 = 13.\n\n\nExample 2:\n\n\nInput: nums = [-10,3,-1,-2], k = 4, m = 1\n\nOutput: -10\n\nExplanation:\n\nThe optimal choice is choosing each element as a subarray. The output is (-10) + 3 + (-1) + (-2) = -10.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 2000\n\t-104 <= nums[i] <= 104\n\t1 <= k <= floor(nums.length / m)\n\t1 <= m <= 3\n\n",
+  "description": "You are given an integer array nums and two integers, k and m.\n\nReturn the maximum sum of k non-overlapping subarrays of nums, where each subarray has a length of at least m.",
+  "example": "Input: nums = [1,2,-1,3,3,4], k = 2, m = 2\n\nOutput: 13\n\nExplanation:\n\nThe optimal choice is:\n\n\n\tSubarray nums[3..5] with sum 3 + 3 + 4 = 10 (length is 3 >= m).\n\tSubarray nums[0..1] with sum 1 + 2 = 3 (length is 2 >= m).\n\n\nThe total sum is 10 + 3 = 13.",
+  "constraints_text": "1 <= nums.length <= 2000\n\t-104 <= nums[i] <= 104\n\t1 <= k <= floor(nums.length / m)\n\t1 <= m <= 3",
+  "templates": {
+    "c": "int maxSum(int* nums, int numsSize, int k, int m) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxSum(vector<int>& nums, int k, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSum(int[] nums, int k, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} m\n * @return {number}\n */\nvar maxSum = function(nums, k, m) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSum(self, nums, k, m):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type m: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute prefix sums of the input array to enable O(1) calculation of subarray sums.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-of-k-non-overlapping-subarrays"
+      ],
+      "constraints": [
+        "nums-length-2000"
+      ]
+    },
+    {
+      "intent": "Initialize a 2D DP table where dp[j][i] stores the maximum sum using 'j' subarrays ending at or before index 'i'.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "maximum-sum",
+        "k-non-overlapping-subarrays"
+      ],
+      "constraints": [
+        "k-floor-nums-length-m",
+        "nums-length-2000"
+      ]
+    },
+    {
+      "intent": "Iterate through the DP table, filling states using an optimized O(1) transition for selecting the best previous non-overlapping subarray.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "greedy"
+      ],
+      "cues": [
+        "non-overlapping",
+        "length-of-at-least-m"
+      ],
+      "constraints": [
+        "m-3"
+      ]
+    }
+  ]
+}

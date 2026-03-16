@@ -1,0 +1,41 @@
+{
+  "slug": "two-sum-iv-input-is-a-bst",
+  "link": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+  "difficulty": "Easy",
+  "index": "146",
+  "description_full": "Given the root of a binary search tree and an integer k, return true if there exist two elements in the BST such that their sum is equal to k, or false otherwise.\n\n \nExample 1:\n\n\nInput: root = [5,3,6,2,4,null,7], k = 9\nOutput: true\n\n\nExample 2:\n\n\nInput: root = [5,3,6,2,4,null,7], k = 28\nOutput: false\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 104].\n\t-104 <= Node.val <= 104\n\troot is guaranteed to be a valid binary search tree.\n\t-105 <= k <= 105\n\n",
+  "description": "Given the root of a binary search tree and an integer k, return true if there exist two elements in the BST such that their sum is equal to k, or false otherwise.",
+  "example": "Input: root = [5,3,6,2,4,null,7], k = 9\nOutput: true",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 104].\n\t-104 <= Node.val <= 104\n\troot is guaranteed to be a valid binary search tree.\n\t-105 <= k <= 105",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nbool findTarget(struct TreeNode* root, int k) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    bool findTarget(TreeNode* root, int k) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public boolean findTarget(TreeNode root, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} k\n * @return {boolean}\n */\nvar findTarget = function(root, k) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def findTarget(self, root, k):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Check for a pair of nodes in the BST that sum to k.",
+      "structures": [
+        "tree",
+        "ds"
+      ],
+      "actions": [
+        "dfs",
+        "hashing",
+        "enumeration"
+      ],
+      "cues": [
+        "binary-search-tree",
+        "sum-is-equal-to-k",
+        "exist-two-elements"
+      ],
+      "constraints": [
+        "number-of-nodes-in-range-1-104",
+        "104-node-val-104",
+        "105-k-105"
+      ]
+    }
+  ]
+}

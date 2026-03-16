@@ -1,0 +1,39 @@
+{
+  "slug": "sum-of-values-at-indices-with-k-set-bits",
+  "link": "https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/",
+  "difficulty": "Easy",
+  "index": "2269",
+  "description_full": "You are given a 0-indexed integer array nums and an integer k.\n\nReturn an integer that denotes the sum of elements in nums whose corresponding indices have exactly k set bits in their binary representation.\n\nThe set bits in an integer are the 1's present when it is written in binary.\n\n\n\tFor example, the binary representation of 21 is 10101, which has 3 set bits.\n\n\n \nExample 1:\n\n\nInput: nums = [5,10,1,5,2], k = 1\nOutput: 13\nExplanation: The binary representation of the indices are: \n0 = 0002\n1 = 0012\n2 = 0102\n3 = 0112\n4 = 1002 \nIndices 1, 2, and 4 have k = 1 set bits in their binary representation.\nHence, the answer is nums[1] + nums[2] + nums[4] = 13.\n\nExample 2:\n\n\nInput: nums = [4,3,2,1], k = 2\nOutput: 1\nExplanation: The binary representation of the indices are:\n0 = 002\n1 = 012\n2 = 102\n3 = 112\nOnly index 3 has k = 2 set bits in its binary representation.\nHence, the answer is nums[3] = 1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t1 <= nums[i] <= 105\n\t0 <= k <= 10\n\n",
+  "description": "You are given a 0-indexed integer array nums and an integer k.\n\nReturn an integer that denotes the sum of elements in nums whose corresponding indices have exactly k set bits in their binary representation.\n\nThe set bits in an integer are the 1's present when it is written in binary.\n\n\n\tFor example, the binary representation of 21 is 10101, which has 3 set bits.",
+  "example": "Input: nums = [5,10,1,5,2], k = 1\nOutput: 13\nExplanation: The binary representation of the indices are: \n0 = 0002\n1 = 0012\n2 = 0102\n3 = 0112\n4 = 1002 \nIndices 1, 2, and 4 have k = 1 set bits in their binary representation.\nHence, the answer is nums[1] + nums[2] + nums[4] = 13.",
+  "constraints_text": "1 <= nums.length <= 1000\n\t1 <= nums[i] <= 105\n\t0 <= k <= 10",
+  "templates": {
+    "c": "int sumIndicesWithKSetBits(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int sumIndicesWithKSetBits(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumIndicesWithKSetBits(List<Integer> nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar sumIndicesWithKSetBits = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def sumIndicesWithKSetBits(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array, count set bits for each index, and accumulate elements whose index has exactly k set bits.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "sum-of-elements",
+        "indices-have-exactly-k-set-bits",
+        "binary-representation"
+      ],
+      "constraints": [
+        "1-nums-length-1000",
+        "0-k-10"
+      ]
+    }
+  ]
+}

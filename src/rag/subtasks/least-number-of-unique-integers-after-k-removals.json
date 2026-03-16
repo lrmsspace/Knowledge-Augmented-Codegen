@@ -1,0 +1,53 @@
+{
+  "slug": "least-number-of-unique-integers-after-k-removals",
+  "link": "https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/",
+  "difficulty": "Medium",
+  "index": "1259",
+  "description_full": "Given an array of integers arr and an integer k. Find the least number of unique integers after removing exactly k elements.\r\n\r\n\r\n\r\n\r\n \r\nExample 1:\r\n\r\n\r\nInput: arr = [5,5,4], k = 1\r\nOutput: 1\r\nExplanation: Remove the single 4, only 5 is left.\r\n\r\nExample 2:\r\n\r\n\r\nInput: arr = [4,3,1,1,3,3,2], k = 3\r\nOutput: 2\r\nExplanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\t1 <= arr.length <= 10^5\r\n\t1 <= arr[i] <= 10^9\r\n\t0 <= k <= arr.length\r\n",
+  "description": "Given an array of integers arr and an integer k. Find the least number of unique integers after removing exactly k elements.",
+  "example": "Input: arr = [5,5,4], k = 1\r\nOutput: 1\r\nExplanation: Remove the single 4, only 5 is left.",
+  "constraints_text": "1 <= arr.length <= 10^5\r\n\t1 <= arr[i] <= 10^9\r\n\t0 <= k <= arr.length",
+  "templates": {
+    "c": "int findLeastNumOfUniqueInts(int* arr, int arrSize, int k){\r\n\r\n}",
+    "cpp": "class Solution {\r\npublic:\r\n    int findLeastNumOfUniqueInts(vector<int>& arr, int k) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public int findLeastNumOfUniqueInts(int[] arr, int k) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number[]} arr\r\n * @param {number} k\r\n * @return {number}\r\n */\r\nvar findLeastNumOfUniqueInts = function(arr, k) {\r\n    \r\n};",
+    "python": "class Solution(object):\r\n    def findLeastNumOfUniqueInts(self, arr, k):\r\n        \"\"\"\r\n        :type arr: List[int]\r\n        :type k: int\r\n        :rtype: int\r\n        \"\"\""
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each unique integer in the input array.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "array-of-integers",
+        "unique-integers"
+      ],
+      "constraints": [
+        "1-arr-length-10-5"
+      ]
+    },
+    {
+      "intent": "Greedily remove elements by prioritizing those with the lowest frequencies until k elements are removed, then count remaining unique types.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "least-number-of-unique-integers",
+        "removing-exactly-k-elements"
+      ],
+      "constraints": [
+        "0-k-arr-length"
+      ]
+    }
+  ]
+}

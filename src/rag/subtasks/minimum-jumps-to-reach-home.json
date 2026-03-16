@@ -1,0 +1,58 @@
+{
+  "slug": "minimum-jumps-to-reach-home",
+  "link": "https://leetcode.com/problems/minimum-jumps-to-reach-home/",
+  "difficulty": "Medium",
+  "index": "1322",
+  "description_full": "A certain bug's home is on the x-axis at position x. Help them get there from position 0.\n\nThe bug jumps according to the following rules:\n\n\n\tIt can jump exactly a positions forward (to the right).\n\tIt can jump exactly b positions backward (to the left).\n\tIt cannot jump backward twice in a row.\n\tIt cannot jump to any forbidden positions.\n\n\nThe bug may jump forward beyond its home, but it cannot jump to positions numbered with negative integers.\n\nGiven an array of integers forbidden, where forbidden[i] means that the bug cannot jump to the position forbidden[i], and integers a, b, and x, return the minimum number of jumps needed for the bug to reach its home. If there is no possible sequence of jumps that lands the bug on position x, return -1.\n\n \nExample 1:\n\n\nInput: forbidden = [14,4,18,1,15], a = 3, b = 15, x = 9\nOutput: 3\nExplanation: 3 jumps forward (0 -> 3 -> 6 -> 9) will get the bug home.\n\n\nExample 2:\n\n\nInput: forbidden = [8,3,16,6,12,20], a = 15, b = 13, x = 11\nOutput: -1\n\n\nExample 3:\n\n\nInput: forbidden = [1,6,2,14,5,17,4], a = 16, b = 9, x = 7\nOutput: 2\nExplanation: One jump forward (0 -> 16) then one jump backward (16 -> 7) will get the bug home.\n\n\n \nConstraints:\n\n\n\t1 <= forbidden.length <= 1000\n\t1 <= a, b, forbidden[i] <= 2000\n\t0 <= x <= 2000\n\tAll the elements in forbidden are distinct.\n\tPosition x is not forbidden.\n\n",
+  "description": "A certain bug's home is on the x-axis at position x. Help them get there from position 0.\n\nThe bug jumps according to the following rules:\n\n\n\tIt can jump exactly a positions forward (to the right).\n\tIt can jump exactly b positions backward (to the left).\n\tIt cannot jump backward twice in a row.\n\tIt cannot jump to any forbidden positions.\n\n\nThe bug may jump forward beyond its home, but it cannot jump to positions numbered with negative integers.\n\nGiven an array of integers forbidden, where forbidden[i] means that the bug cannot jump to the position forbidden[i], and integers a, b, and x, return the minimum number of jumps needed for the bug to reach its home. If there is no possible sequence of jumps that lands the bug on position x, return -1.",
+  "example": "Input: forbidden = [14,4,18,1,15], a = 3, b = 15, x = 9\nOutput: 3\nExplanation: 3 jumps forward (0 -> 3 -> 6 -> 9) will get the bug home.",
+  "constraints_text": "1 <= forbidden.length <= 1000\n\t1 <= a, b, forbidden[i] <= 2000\n\t0 <= x <= 2000\n\tAll the elements in forbidden are distinct.\n\tPosition x is not forbidden.",
+  "templates": {
+    "c": "int minimumJumps(int* forbidden, int forbiddenSize, int a, int b, int x) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumJumps(vector<int>& forbidden, int a, int b, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumJumps(int[] forbidden, int a, int b, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} forbidden\n * @param {number} a\n * @param {number} b\n * @param {number} x\n * @return {number}\n */\nvar minimumJumps = function(forbidden, a, b, x) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumJumps(self, forbidden, a, b, x):\n        \"\"\"\n        :type forbidden: List[int]\n        :type a: int\n        :type b: int\n        :type x: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize data structures for efficient forbidden position lookup and BFS state tracking.",
+      "structures": [
+        "array",
+        "bitset",
+        "queue"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "forbidden-positions",
+        "minimum-number-of-jumps"
+      ],
+      "constraints": [
+        "cannot-jump-to-any-forbidden-positions",
+        "cannot-jump-to-positions-numbered-with-negative-integers"
+      ]
+    },
+    {
+      "intent": "Execute a Breadth-First Search to find the shortest path to the target position x, respecting jump rules.",
+      "structures": [
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "minimum-number-of-jumps",
+        "cannot-jump-backward-twice-in-a-row",
+        "reach-its-home"
+      ],
+      "constraints": [
+        "cannot-jump-backward-twice-in-a-row",
+        "cannot-jump-to-positions-numbered-with-negative-integers"
+      ]
+    }
+  ]
+}

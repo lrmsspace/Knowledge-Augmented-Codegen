@@ -1,0 +1,66 @@
+// Source: https://leetcode.com/problems/most-frequent-even-element/   |   Difficulty: Easy
+//
+// Problem Description:
+// Given an integer array nums, return the most frequent even element.
+//
+// If there is a tie, return the smallest one. If there is no such element, return -1.
+//
+// Example:
+// Input: nums = [0,1,2,2,4,4,1]
+// Output: 2
+// Explanation:
+// The even elements are 0, 2, and 4. Of these, 2 and 4 appear the most.
+// We return the smallest one, which is 2.
+//
+// Constraints:
+// 1 <= nums.length <= 2000
+// 	0 <= nums[i] <= 105
+//
+// Helpful references (internal KB):
+// - Non-negative Integers without Consecutive Ones (number, enumeration, simulation)
+//   • When to use: Use when counting numbers up to a given limit that satisfy a specific bit pattern constraint, particularly when the limit is small enough for direct iteration and checking.
+//   • Idea: This approach iterates through every non-negative integer from 0 up to the given limit num. For each integer, it simulates checking its binary representation to determine if it contains any two consecutive '1's.
+//   • Invariants: count stores the number of integers k (where 0 <= k < i) that do not have consecutive ones.; All integers j such that 0 <= j < i have been processed.
+//   • Tips: Use bitwise operations like (i & (i >> 1)) to efficiently detect consecutive ones.; Remember to include 0 in the count as it satisfies the condition (no consecutive ones).
+//   • Pitfalls: Performance degradation for large num due to linear scan and per-number bit check.; Incorrectly handling the upper bound of the iteration (e.g., i < num instead of i <= num).
+// - Search the subarray with the maximum/minimum sum (array, greedy, dp-1d)
+//   • When to use: When you need to find the contiguous subarray within a one-dimensional array of numbers that has the largest or smallest sum, typically in linear time.
+//   • Idea: This algorithm efficiently finds the maximum (or minimum) sum of a contiguous subarray by iterating through the array and maintaining a current sum, resetting it if it becomes detrimental. It operates in O(N) time complexity with O(1) space complexity.
+//   • Invariants: `global_max` holds the maximum sum of any contiguous subarray encountered up to the current element.; `current_max` holds the maximum sum of a contiguous subarray ending at the current element.
+//   • Tips: Initialize current and global maximums appropriately (e.g., to negative infinity or first element).; Adapt for minimum sum by resetting current sum if it becomes positive.
+//   • Pitfalls: Failing to correctly initialize maximum/minimum sum variables.; Not handling arrays where all elements are negative (for max sum) or positive (for min sum).
+// - Sparse Table (array, sparse-table, enumeration)
+//   • When to use: Use when you need to perform many range queries on a static array, especially when the query operation is associative and idempotent, allowing for O(1) query time after O(N log N) precomputation.
+//   • Idea: A Sparse Table is a data structure that precomputes answers for all possible range queries of power-of-two lengths. It allows O(1) query time for idempotent operations like min/max/gcd and O(log N) for non-idempotent associative operations, after an O(N log N) build time.
+//   • Invariants: After precomputation, dp[k][i] stores the result for the range [i, i + 2^k - 1].; For any k > 0, dp[k][i] is the result of combining dp[k-1][i] and dp[k-1][i + 2^(k-1)].
+//   • Tips: Precompute log2 values for faster range length calculations.; Store dp[k][i] as the result for range [i, i + 2^k - 1].
+//   • Pitfalls: Does not support updates to array elements efficiently.; Requires O(N log N) space, which can be significant for large N.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Do not add custom input parsing or console I/O unless the template explicitly requires it; rely on parameters/return value only.
+// - Use standard ECMAScript features supported by LeetCode (Node.js runtime); no external packages.
+// - Be careful with number precision: JavaScript Number is double; use BigInt only when necessary and keep return type consistent with the problem requirements.
+// - If you introduce helper functions, define them in the same file and avoid relying on global mutable state across test cases.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var mostFrequentEven = function(nums) {
+    const freqMap = new Map();
+    for (const num of nums) {
+        if (num % 2 === 0) {
+            freqMap.set(num, (freqMap.get(num) || 0) + 1);
+        }
+    }
+    let maxFreq = 0;
+    let result = -1;
+    for (const [num, freq] of freqMap.entries()) {
+        if (freq > maxFreq || (freq === maxFreq && num < result)) {
+            maxFreq = freq;
+            result = num;
+        }
+    }
+    return result;
+};

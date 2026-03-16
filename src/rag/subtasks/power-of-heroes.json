@@ -1,0 +1,51 @@
+{
+  "slug": "power-of-heroes",
+  "link": "https://leetcode.com/problems/power-of-heroes/",
+  "difficulty": "Hard",
+  "index": "2245",
+  "description_full": "You are given a 0-indexed integer array nums representing the strength of some heroes. The power of a group of heroes is defined as follows:\n\n\n\tLet i0, i1, ... ,ik be the indices of the heroes in a group. Then, the power of this group is max(nums[i0], nums[i1], ... ,nums[ik])2 * min(nums[i0], nums[i1], ... ,nums[ik]).\n\n\nReturn the sum of the power of all non-empty groups of heroes possible. Since the sum could be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: nums = [2,1,4]\nOutput: 141\nExplanation: \n1st group: [2] has power = 22 * 2 = 8.\n2nd group: [1] has power = 12 * 1 = 1. \n3rd group: [4] has power = 42 * 4 = 64. \n4th group: [2,1] has power = 22 * 1 = 4. \n5th group: [2,4] has power = 42 * 2 = 32. \n6th group: [1,4] has power = 42 * 1 = 16. \n​​​​​​​7th group: [2,1,4] has power = 42​​​​​​​ * 1 = 16. \nThe sum of powers of all groups is 8 + 1 + 64 + 4 + 32 + 16 + 16 = 141.\n\n\n\nExample 2:\n\n\nInput: nums = [1,1,1]\nOutput: 7\nExplanation: A total of 7 groups are possible, and the power of each group will be 1. Therefore, the sum of the powers of all groups is 7.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\n",
+  "description": "You are given a 0-indexed integer array nums representing the strength of some heroes. The power of a group of heroes is defined as follows:\n\n\n\tLet i0, i1, ... ,ik be the indices of the heroes in a group. Then, the power of this group is max(nums[i0], nums[i1], ... ,nums[ik])2 * min(nums[i0], nums[i1], ... ,nums[ik]).\n\n\nReturn the sum of the power of all non-empty groups of heroes possible. Since the sum could be very large, return it modulo 109 + 7.",
+  "example": "Input: nums = [2,1,4]\nOutput: 141\nExplanation: \n1st group: [2] has power = 22 * 2 = 8.\n2nd group: [1] has power = 12 * 1 = 1. \n3rd group: [4] has power = 42 * 4 = 64. \n4th group: [2,1] has power = 22 * 1 = 4. \n5th group: [2,4] has power = 42 * 2 = 32. \n6th group: [1,4] has power = 42 * 1 = 16. \n​​​​​​​7th group: [2,1,4] has power = 42​​​​​​​ * 1 = 16. \nThe sum of powers of all groups is 8 + 1 + 64 + 4 + 32 + 16 + 16 = 141.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109",
+  "templates": {
+    "c": "int sumOfPower(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int sumOfPower(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfPower(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar sumOfPower = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def sumOfPower(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array in ascending order to facilitate processing based on minimum and maximum elements.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "max-nums-i0",
+        "min-nums-i0"
+      ],
+      "constraints": []
+    },
+    {
+      "intent": "Iterate through the sorted array, calculating the total power sum using a dynamic programming approach to track suffix sums of squared maximums.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "sum-of-the-power-of-all-non-empty-groups",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

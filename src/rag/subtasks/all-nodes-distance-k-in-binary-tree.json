@@ -1,0 +1,59 @@
+{
+  "slug": "all-nodes-distance-k-in-binary-tree",
+  "link": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/",
+  "difficulty": "Medium",
+  "index": "994",
+  "description_full": "Given the root of a binary tree, the value of a target node target, and an integer k, return an array of the values of all nodes that have a distance k from the target node.\n\nYou can return the answer in any order.\n\n \nExample 1:\n\n\nInput: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2\nOutput: [7,4,1]\nExplanation: The nodes that are a distance 2 from the target node (with value 5) have values 7, 4, and 1.\n\n\nExample 2:\n\n\nInput: root = [1], target = 1, k = 3\nOutput: []\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 500].\n\t0 <= Node.val <= 500\n\tAll the values Node.val are unique.\n\ttarget is the value of one of the nodes in the tree.\n\t0 <= k <= 1000\n\n",
+  "description": "Given the root of a binary tree, the value of a target node target, and an integer k, return an array of the values of all nodes that have a distance k from the target node.\n\nYou can return the answer in any order.",
+  "example": "Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2\nOutput: [7,4,1]\nExplanation: The nodes that are a distance 2 from the target node (with value 5) have values 7, 4, and 1.",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 500].\n\t0 <= Node.val <= 500\n\tAll the values Node.val are unique.\n\ttarget is the value of one of the nodes in the tree.\n\t0 <= k <= 1000",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n\n\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* distanceK(struct TreeNode* root, struct TreeNode* target, int k, int* returnSize) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode(int x) { val = x; }\n * }\n */\nclass Solution {\n    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val) {\n *     this.val = val;\n *     this.left = this.right = null;\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {TreeNode} target\n * @param {number} k\n * @return {number[]}\n */\nvar distanceK = function(root, target, k) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, x):\n#         self.val = x\n#         self.left = None\n#         self.right = None\n\nclass Solution(object):\n    def distanceK(self, root, target, k):\n        \"\"\"\n        :type root: TreeNode\n        :type target: TreeNode\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Traverse the binary tree to build an undirected graph (adjacency list) and locate the actual target node object.",
+      "structures": [
+        "tree",
+        "graph",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "enumeration"
+      ],
+      "cues": [
+        "binary-tree",
+        "target-node-target",
+        "distance-k"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-tree-is-in-the-range-1-500",
+        "target-is-the-value-of-one-of-the-nodes"
+      ]
+    },
+    {
+      "intent": "Perform a Breadth-First Search from the identified target node to find all nodes at exactly distance k.",
+      "structures": [
+        "graph",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "distance-k",
+        "return-an-array-of-the-values"
+      ],
+      "constraints": [
+        "0-k-1000"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "number-of-ways-to-rearrange-sticks-with-k-sticks-visible",
+  "link": "https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/",
+  "difficulty": "Hard",
+  "index": "2088",
+  "description_full": "There are n uniquely-sized sticks whose lengths are integers from 1 to n. You want to arrange the sticks such that exactly k sticks are visible from the left. A stick is visible from the left if there are no longer sticks to the left of it.\n\n\n\tFor example, if the sticks are arranged [1,3,2,5,4], then the sticks with lengths 1, 3, and 5 are visible from the left.\n\n\nGiven n and k, return the number of such arrangements. Since the answer may be large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: n = 3, k = 2\nOutput: 3\nExplanation: [1,3,2], [2,3,1], and [2,1,3] are the only arrangements such that exactly 2 sticks are visible.\nThe visible sticks are underlined.\n\n\nExample 2:\n\n\nInput: n = 5, k = 5\nOutput: 1\nExplanation: [1,2,3,4,5] is the only arrangement such that all 5 sticks are visible.\nThe visible sticks are underlined.\n\n\nExample 3:\n\n\nInput: n = 20, k = 11\nOutput: 647427950\nExplanation: There are 647427950 (mod 109 + 7) ways to rearrange the sticks such that exactly 11 sticks are visible.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 1000\n\t1 <= k <= n\n\n",
+  "description": "There are n uniquely-sized sticks whose lengths are integers from 1 to n. You want to arrange the sticks such that exactly k sticks are visible from the left. A stick is visible from the left if there are no longer sticks to the left of it.\n\n\n\tFor example, if the sticks are arranged [1,3,2,5,4], then the sticks with lengths 1, 3, and 5 are visible from the left.\n\n\nGiven n and k, return the number of such arrangements. Since the answer may be large, return it modulo 109 + 7.",
+  "example": "Input: n = 3, k = 2\nOutput: 3\nExplanation: [1,3,2], [2,3,1], and [2,1,3] are the only arrangements such that exactly 2 sticks are visible.\nThe visible sticks are underlined.",
+  "constraints_text": "1 <= n <= 1000\n\t1 <= k <= n",
+  "templates": {
+    "c": "int rearrangeSticks(int n, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int rearrangeSticks(int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rearrangeSticks(int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar rearrangeSticks = function(n, k) {\n    \n};",
+    "python": "class Solution(object):\n    def rearrangeSticks(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize the 2D DP table and set base cases for 0 sticks or 0 visible sticks.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "number-of-arrangements",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "1-n-1000",
+        "1-k-n"
+      ]
+    },
+    {
+      "intent": "Iteratively compute the number of arrangements using the DP recurrence relation with modulo arithmetic.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "exactly-k-sticks-are-visible",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "1-n-1000",
+        "1-k-n"
+      ]
+    }
+  ]
+}

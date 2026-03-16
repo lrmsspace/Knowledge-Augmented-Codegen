@@ -1,0 +1,40 @@
+{
+  "slug": "combination-sum",
+  "link": "https://leetcode.com/problems/combination-sum/",
+  "difficulty": "Medium",
+  "index": "631",
+  "description_full": "Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.\n\nThe same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.\n\nThe test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.\n\n \nExample 1:\n\n\nInput: candidates = [2,3,6,7], target = 7\nOutput: [[2,2,3],[7]]\nExplanation:\n2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.\n7 is a candidate, and 7 = 7.\nThese are the only two combinations.\n\n\nExample 2:\n\n\nInput: candidates = [2,3,5], target = 8\nOutput: [[2,2,2,2],[2,3,3],[3,5]]\n\n\nExample 3:\n\n\nInput: candidates = [2], target = 1\nOutput: []\n\n\n \nConstraints:\n\n\n\t1 <= candidates.length <= 30\n\t2 <= candidates[i] <= 40\n\tAll elements of candidates are distinct.\n\t1 <= target <= 40\n\n",
+  "description": "Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.\n\nThe same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.\n\nThe test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.",
+  "example": "Input: candidates = [2,3,6,7], target = 7\nOutput: [[2,2,3],[7]]\nExplanation:\n2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.\n7 is a candidate, and 7 = 7.\nThese are the only two combinations.",
+  "constraints_text": "1 <= candidates.length <= 30\n\t2 <= candidates[i] <= 40\n\tAll elements of candidates are distinct.\n\t1 <= target <= 40",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** combinationSum(int* candidates, int candidatesSize, int target, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> combinationSum(int[] candidates, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} candidates\n * @param {number} target\n * @return {number[][]}\n */\nvar combinationSum = function(candidates, target) {\n    \n};",
+    "python": "class Solution(object):\n    def combinationSum(self, candidates, target):\n        \"\"\"\n        :type candidates: List[int]\n        :type target: int\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find all unique combinations of candidates that sum to the target, allowing numbers to be reused multiple times.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "all-unique-combinations",
+        "sum-to-target",
+        "unlimited-number-of-times"
+      ],
+      "constraints": [
+        "distinct-integers-candidates",
+        "1-target-40",
+        "number-of-unique-combinations-150"
+      ]
+    }
+  ]
+}

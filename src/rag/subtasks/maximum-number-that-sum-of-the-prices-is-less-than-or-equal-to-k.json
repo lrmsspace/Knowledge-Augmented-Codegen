@@ -1,0 +1,55 @@
+{
+  "slug": "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k",
+  "link": "https://leetcode.com/problems/maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k/",
+  "difficulty": "Medium",
+  "index": "2457",
+  "description_full": "You are given an integer k and an integer x. The price of a number num is calculated by the count of set bits at positions x, 2x, 3x, etc., in its binary representation, starting from the least significant bit. The following table contains examples of how price is calculated.\n\n\n\t\n\t\t\n\t\t\tx\n\t\t\tnum\n\t\t\tBinary Representation\n\t\t\tPrice\n\t\t\n\t\t\n\t\t\t1\n\t\t\t13\n\t\t\t000001101\n\t\t\t3\n\t\t\n\t\t\n\t\t\t2\n\t\t\t13\n\t\t\t000001101\n\t\t\t1\n\t\t\n\t\t\n\t\t\t2\n\t\t\t233\n\t\t\t011101001\n\t\t\t3\n\t\t\n\t\t\n\t\t\t3\n\t\t\t13\n\t\t\t000001101\n\t\t\t1\n\t\t\n\t\t\n\t\t\t3\n\t\t\t362\n\t\t\t101101010\n\t\t\t2\n\t\t\n\t\n\n\nThe accumulated price of num is the total price of numbers from 1 to num. num is considered cheap if its accumulated price is less than or equal to k.\n\nReturn the greatest cheap number.\n\n \nExample 1:\n\n\nInput: k = 9, x = 1\n\nOutput: 6\n\nExplanation:\n\nAs shown in the table below, 6 is the greatest cheap number.\n\n\n\t\n\t\t\n\t\t\tx\n\t\t\tnum\n\t\t\tBinary Representation\n\t\t\tPrice\n\t\t\tAccumulated Price\n\t\t\n\t\t\n\t\t\t1\n\t\t\t1\n\t\t\t001\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t1\n\t\t\t2\n\t\t\t010\n\t\t\t1\n\t\t\t2\n\t\t\n\t\t\n\t\t\t1\n\t\t\t3\n\t\t\t011\n\t\t\t2\n\t\t\t4\n\t\t\n\t\t\n\t\t\t1\n\t\t\t4\n\t\t\t100\n\t\t\t1\n\t\t\t5\n\t\t\n\t\t\n\t\t\t1\n\t\t\t5\n\t\t\t101\n\t\t\t2\n\t\t\t7\n\t\t\n\t\t\n\t\t\t1\n\t\t\t6\n\t\t\t110\n\t\t\t2\n\t\t\t9\n\t\t\n\t\t\n\t\t\t1\n\t\t\t7\n\t\t\t111\n\t\t\t3\n\t\t\t12\n\t\t\n\t\n\n\n\nExample 2:\n\n\nInput: k = 7, x = 2\n\nOutput: 9\n\nExplanation:\n\nAs shown in the table below, 9 is the greatest cheap number.\n\n\n\t\n\t\t\n\t\t\tx\n\t\t\tnum\n\t\t\tBinary Representation\n\t\t\tPrice\n\t\t\tAccumulated Price\n\t\t\n\t\t\n\t\t\t2\n\t\t\t1\n\t\t\t0001\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t2\n\t\t\t2\n\t\t\t0010\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t2\n\t\t\t3\n\t\t\t0011\n\t\t\t1\n\t\t\t2\n\t\t\n\t\t\n\t\t\t2\n\t\t\t4\n\t\t\t0100\n\t\t\t0\n\t\t\t2\n\t\t\n\t\t\n\t\t\t2\n\t\t\t5\n\t\t\t0101\n\t\t\t0\n\t\t\t2\n\t\t\n\t\t\n\t\t\t2\n\t\t\t6\n\t\t\t0110\n\t\t\t1\n\t\t\t3\n\t\t\n\t\t\n\t\t\t2\n\t\t\t7\n\t\t\t0111\n\t\t\t1\n\t\t\t4\n\t\t\n\t\t\n\t\t\t2\n\t\t\t8\n\t\t\t1000\n\t\t\t1\n\t\t\t5\n\t\t\n\t\t\n\t\t\t2\n\t\t\t9\n\t\t\t1001\n\t\t\t1\n\t\t\t6\n\t\t\n\t\t\n\t\t\t2\n\t\t\t10\n\t\t\t1010\n\t\t\t2\n\t\t\t8\n\t\t\n\t\n\n\n\n \nConstraints:\n\n\n\t1 <= k <= 1015\n\t1 <= x <= 8\n\n",
+  "description": "You are given an integer k and an integer x. The price of a number num is calculated by the count of set bits at positions x, 2x, 3x, etc., in its binary representation, starting from the least significant bit. The following table contains examples of how price is calculated.\n\n\n\t\n\t\t\n\t\t\tx\n\t\t\tnum\n\t\t\tBinary Representation\n\t\t\tPrice\n\t\t\n\t\t\n\t\t\t1\n\t\t\t13\n\t\t\t000001101\n\t\t\t3\n\t\t\n\t\t\n\t\t\t2\n\t\t\t13\n\t\t\t000001101\n\t\t\t1\n\t\t\n\t\t\n\t\t\t2\n\t\t\t233\n\t\t\t011101001\n\t\t\t3\n\t\t\n\t\t\n\t\t\t3\n\t\t\t13\n\t\t\t000001101\n\t\t\t1\n\t\t\n\t\t\n\t\t\t3\n\t\t\t362\n\t\t\t101101010\n\t\t\t2\n\t\t\n\t\n\n\nThe accumulated price of num is the total price of numbers from 1 to num. num is considered cheap if its accumulated price is less than or equal to k.\n\nReturn the greatest cheap number.",
+  "example": "Input: k = 9, x = 1\n\nOutput: 6\n\nExplanation:\n\nAs shown in the table below, 6 is the greatest cheap number.\n\n\n\t\n\t\t\n\t\t\tx\n\t\t\tnum\n\t\t\tBinary Representation\n\t\t\tPrice\n\t\t\tAccumulated Price\n\t\t\n\t\t\n\t\t\t1\n\t\t\t1\n\t\t\t001\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t1\n\t\t\t2\n\t\t\t010\n\t\t\t1\n\t\t\t2\n\t\t\n\t\t\n\t\t\t1\n\t\t\t3\n\t\t\t011\n\t\t\t2\n\t\t\t4\n\t\t\n\t\t\n\t\t\t1\n\t\t\t4\n\t\t\t100\n\t\t\t1\n\t\t\t5\n\t\t\n\t\t\n\t\t\t1\n\t\t\t5\n\t\t\t101\n\t\t\t2\n\t\t\t7\n\t\t\n\t\t\n\t\t\t1\n\t\t\t6\n\t\t\t110\n\t\t\t2\n\t\t\t9\n\t\t\n\t\t\n\t\t\t1\n\t\t\t7\n\t\t\t111\n\t\t\t3\n\t\t\t12",
+  "constraints_text": "1 <= k <= 1015\n\t1 <= x <= 8",
+  "templates": {
+    "c": "long long findMaximumNumber(long long k, int x) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long findMaximumNumber(long long k, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findMaximumNumber(long k, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number} x\n * @return {number}\n */\nvar findMaximumNumber = function(k, x) {\n    \n};",
+    "python": "class Solution(object):\n    def findMaximumNumber(self, k, x):\n        \"\"\"\n        :type k: int\n        :type x: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a helper function to calculate the total accumulated price up to a given number 'num'.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "accumulated-price",
+        "count-of-set-bits-at-positions-x-2x-3x-etc"
+      ],
+      "constraints": [
+        "num-can-be-up-to-10-14",
+        "k-up-to-10-15"
+      ]
+    },
+    {
+      "intent": "Perform binary search to find the largest number 'num' whose accumulated price is less than or equal to 'k'.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "greatest-cheap-number",
+        "accumulated-price-is-less-than-or-equal-to-k"
+      ],
+      "constraints": [
+        "k-10-15",
+        "x-8",
+        "search-space-for-num-up-to-2-63-1"
+      ]
+    }
+  ]
+}

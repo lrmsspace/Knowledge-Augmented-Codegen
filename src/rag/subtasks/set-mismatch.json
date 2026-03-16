@@ -1,0 +1,40 @@
+{
+  "slug": "set-mismatch",
+  "link": "https://leetcode.com/problems/set-mismatch/",
+  "difficulty": "Easy",
+  "index": "145",
+  "description_full": "You have a set of integers s, which originally contains all the numbers from 1 to n. Unfortunately, due to some error, one of the numbers in s got duplicated to another number in the set, which results in repetition of one number and loss of another number.\n\nYou are given an integer array nums representing the data status of this set after the error.\n\nFind the number that occurs twice and the number that is missing and return them in the form of an array.\n\n \nExample 1:\nInput: nums = [1,2,2,4]\nOutput: [2,3]\nExample 2:\nInput: nums = [1,1]\nOutput: [1,2]\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 104\n\t1 <= nums[i] <= 104\n\n",
+  "description": "You have a set of integers s, which originally contains all the numbers from 1 to n. Unfortunately, due to some error, one of the numbers in s got duplicated to another number in the set, which results in repetition of one number and loss of another number.\n\nYou are given an integer array nums representing the data status of this set after the error.\n\nFind the number that occurs twice and the number that is missing and return them in the form of an array.",
+  "example": "Input: nums = [1,2,2,4]\nOutput: [2,3]",
+  "constraints_text": "2 <= nums.length <= 104\n\t1 <= nums[i] <= 104",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findErrorNums(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> findErrorNums(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] findErrorNums(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar findErrorNums = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findErrorNums(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the duplicated and missing numbers by tracking element presence and frequency within the expected range [1, n].",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "occurs-twice",
+        "missing",
+        "1-to-n",
+        "nums-length"
+      ],
+      "constraints": [
+        "2-nums-length-104",
+        "1-nums-i-104"
+      ]
+    }
+  ]
+}

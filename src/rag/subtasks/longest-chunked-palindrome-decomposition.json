@@ -1,0 +1,56 @@
+{
+  "slug": "longest-chunked-palindrome-decomposition",
+  "link": "https://leetcode.com/problems/longest-chunked-palindrome-decomposition/",
+  "difficulty": "Hard",
+  "index": "1952",
+  "description_full": "You are given a string text. You should split it to k substrings (subtext1, subtext2, ..., subtextk) such that:\n\n\n\tsubtexti is a non-empty string.\n\tThe concatenation of all the substrings is equal to text (i.e., subtext1 + subtext2 + ... + subtextk == text).\n\tsubtexti == subtextk - i + 1 for all valid values of i (i.e., 1 <= i <= k).\n\n\nReturn the largest possible value of k.\n\n \nExample 1:\n\n\nInput: text = \"ghiabcdefhelloadamhelloabcdefghi\"\nOutput: 7\nExplanation: We can split the string on \"(ghi)(abcdef)(hello)(adam)(hello)(abcdef)(ghi)\".\n\n\nExample 2:\n\n\nInput: text = \"merchant\"\nOutput: 1\nExplanation: We can split the string on \"(merchant)\".\n\n\nExample 3:\n\n\nInput: text = \"antaprezatepzapreanta\"\nOutput: 11\nExplanation: We can split the string on \"(a)(nt)(a)(pre)(za)(tep)(za)(pre)(a)(nt)(a)\".\n\n\n \nConstraints:\n\n\n\t1 <= text.length <= 1000\n\ttext consists only of lowercase English characters.\n\n",
+  "description": "You are given a string text. You should split it to k substrings (subtext1, subtext2, ..., subtextk) such that:\n\n\n\tsubtexti is a non-empty string.\n\tThe concatenation of all the substrings is equal to text (i.e., subtext1 + subtext2 + ... + subtextk == text).\n\tsubtexti == subtextk - i + 1 for all valid values of i (i.e., 1 <= i <= k).\n\n\nReturn the largest possible value of k.",
+  "example": "Input: text = \"ghiabcdefhelloadamhelloabcdefghi\"\nOutput: 7\nExplanation: We can split the string on \"(ghi)(abcdef)(hello)(adam)(hello)(abcdef)(ghi)\".",
+  "constraints_text": "1 <= text.length <= 1000\n\ttext consists only of lowercase English characters.",
+  "templates": {
+    "c": "int longestDecomposition(char* text) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestDecomposition(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestDecomposition(String text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar longestDecomposition = function(text) {\n    \n};",
+    "python": "class Solution(object):\n    def longestDecomposition(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute polynomial hashes for all prefixes of the text to enable O(1) comparison of any two substrings.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "hashing"
+      ],
+      "cues": [
+        "subtexti-subtextk-i-1",
+        "substring-comparison"
+      ],
+      "constraints": [
+        "1-text-length-1000"
+      ]
+    },
+    {
+      "intent": "Implement a 2D dynamic programming solution to find the maximum k by considering all possible palindromic splits.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "largest-possible-value-of-k",
+        "split-it-to-k-substrings",
+        "subtexti-subtextk-i-1"
+      ],
+      "constraints": [
+        "1-text-length-1000"
+      ]
+    }
+  ]
+}

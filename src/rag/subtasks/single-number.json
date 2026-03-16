@@ -1,0 +1,38 @@
+{
+  "slug": "single-number",
+  "link": "https://leetcode.com/problems/single-number/",
+  "difficulty": "Easy",
+  "index": "30",
+  "description_full": "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.\n\n \nExample 1:\n\n\nInput: nums = [2,2,1]\n\nOutput: 1\n\n\nExample 2:\n\n\nInput: nums = [4,1,2,1,2]\n\nOutput: 4\n\n\nExample 3:\n\n\nInput: nums = [1]\n\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 3 * 104\n\t-3 * 104 <= nums[i] <= 3 * 104\n\tEach element in the array appears twice except for one element which appears only once.\n\n",
+  "description": "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.",
+  "example": "Input: nums = [2,2,1]\n\nOutput: 1",
+  "constraints_text": "1 <= nums.length <= 3 * 104\n\t-3 * 104 <= nums[i] <= 3 * 104\n\tEach element in the array appears twice except for one element which appears only once.",
+  "templates": {
+    "c": "int singleNumber(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int singleNumber(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar singleNumber = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def singleNumber(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array, applying the XOR operation to each element to find the unique number that appears only once.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-xor"
+      ],
+      "cues": [
+        "every-element-appears-twice-except-for-one",
+        "find-that-single-one"
+      ],
+      "constraints": [
+        "linear-runtime-complexity",
+        "constant-extra-space"
+      ]
+    }
+  ]
+}

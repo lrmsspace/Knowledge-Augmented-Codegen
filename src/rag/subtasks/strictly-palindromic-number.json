@@ -1,0 +1,40 @@
+{
+  "slug": "strictly-palindromic-number",
+  "link": "https://leetcode.com/problems/strictly-palindromic-number/",
+  "difficulty": "Medium",
+  "index": "1603",
+  "description_full": "An integer n is strictly palindromic if, for every base b between 2 and n - 2 (inclusive), the string representation of the integer n in base b is palindromic.\n\nGiven an integer n, return true if n is strictly palindromic and false otherwise.\n\nA string is palindromic if it reads the same forward and backward.\n\n \nExample 1:\n\n\nInput: n = 9\nOutput: false\nExplanation: In base 2: 9 = 1001 (base 2), which is palindromic.\nIn base 3: 9 = 100 (base 3), which is not palindromic.\nTherefore, 9 is not strictly palindromic so we return false.\nNote that in bases 4, 5, 6, and 7, n = 9 is also not palindromic.\n\n\nExample 2:\n\n\nInput: n = 4\nOutput: false\nExplanation: We only consider base 2: 4 = 100 (base 2), which is not palindromic.\nTherefore, we return false.\n\n\n\n \nConstraints:\n\n\n\t4 <= n <= 105\n\n",
+  "description": "An integer n is strictly palindromic if, for every base b between 2 and n - 2 (inclusive), the string representation of the integer n in base b is palindromic.\n\nGiven an integer n, return true if n is strictly palindromic and false otherwise.\n\nA string is palindromic if it reads the same forward and backward.",
+  "example": "Input: n = 9\nOutput: false\nExplanation: In base 2: 9 = 1001 (base 2), which is palindromic.\nIn base 3: 9 = 100 (base 3), which is not palindromic.\nTherefore, 9 is not strictly palindromic so we return false.\nNote that in bases 4, 5, 6, and 7, n = 9 is also not palindromic.",
+  "constraints_text": "4 <= n <= 105",
+  "templates": {
+    "c": "bool isStrictlyPalindromic(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isStrictlyPalindromic(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isStrictlyPalindromic(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar isStrictlyPalindromic = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def isStrictlyPalindromic(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all required bases, convert the integer to its base-b string representation, and verify if the string is palindromic.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "every-base-b-between-2-and-n-2",
+        "string-representation-of-the-integer-n-in-base-b-is-palindromic",
+        "return-true-if-n-is-strictly-palindromic-and-false-otherwise"
+      ],
+      "constraints": [
+        "4-n-105",
+        "base-b-between-2-and-n-2-inclusive"
+      ]
+    }
+  ]
+}

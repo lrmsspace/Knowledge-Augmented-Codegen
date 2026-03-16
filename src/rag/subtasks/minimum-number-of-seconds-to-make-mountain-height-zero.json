@@ -1,0 +1,69 @@
+{
+  "slug": "minimum-number-of-seconds-to-make-mountain-height-zero",
+  "link": "https://leetcode.com/problems/minimum-number-of-seconds-to-make-mountain-height-zero/",
+  "difficulty": "Medium",
+  "index": "2557",
+  "description_full": "You are given an integer mountainHeight denoting the height of a mountain.\n\nYou are also given an integer array workerTimes representing the work time of workers in seconds.\n\nThe workers work simultaneously to reduce the height of the mountain. For worker i:\n\n\n\tTo decrease the mountain's height by x, it takes workerTimes[i] + workerTimes[i] * 2 + ... + workerTimes[i] * x seconds. For example:\n\n\t\n\t\tTo reduce the height of the mountain by 1, it takes workerTimes[i] seconds.\n\t\tTo reduce the height of the mountain by 2, it takes workerTimes[i] + workerTimes[i] * 2 seconds, and so on.\n\t\n\t\n\n\nReturn an integer representing the minimum number of seconds required for the workers to make the height of the mountain 0.\n\n \nExample 1:\n\n\nInput: mountainHeight = 4, workerTimes = [2,1,1]\n\nOutput: 3\n\nExplanation:\n\nOne way the height of the mountain can be reduced to 0 is:\n\n\n\tWorker 0 reduces the height by 1, taking workerTimes[0] = 2 seconds.\n\tWorker 1 reduces the height by 2, taking workerTimes[1] + workerTimes[1] * 2 = 3 seconds.\n\tWorker 2 reduces the height by 1, taking workerTimes[2] = 1 second.\n\n\nSince they work simultaneously, the minimum time needed is max(2, 3, 1) = 3 seconds.\n\n\nExample 2:\n\n\nInput: mountainHeight = 10, workerTimes = [3,2,2,4]\n\nOutput: 12\n\nExplanation:\n\n\n\tWorker 0 reduces the height by 2, taking workerTimes[0] + workerTimes[0] * 2 = 9 seconds.\n\tWorker 1 reduces the height by 3, taking workerTimes[1] + workerTimes[1] * 2 + workerTimes[1] * 3 = 12 seconds.\n\tWorker 2 reduces the height by 3, taking workerTimes[2] + workerTimes[2] * 2 + workerTimes[2] * 3 = 12 seconds.\n\tWorker 3 reduces the height by 2, taking workerTimes[3] + workerTimes[3] * 2 = 12 seconds.\n\n\nThe number of seconds needed is max(9, 12, 12, 12) = 12 seconds.\n\n\nExample 3:\n\n\nInput: mountainHeight = 5, workerTimes = [1]\n\nOutput: 15\n\nExplanation:\n\nThere is only one worker in this example, so the answer is workerTimes[0] + workerTimes[0] * 2 + workerTimes[0] * 3 + workerTimes[0] * 4 + workerTimes[0] * 5 = 15.\n\n\n \nConstraints:\n\n\n\t1 <= mountainHeight <= 105\n\t1 <= workerTimes.length <= 104\n\t1 <= workerTimes[i] <= 106\n\n",
+  "description": "You are given an integer mountainHeight denoting the height of a mountain.\n\nYou are also given an integer array workerTimes representing the work time of workers in seconds.\n\nThe workers work simultaneously to reduce the height of the mountain. For worker i:\n\n\n\tTo decrease the mountain's height by x, it takes workerTimes[i] + workerTimes[i] * 2 + ... + workerTimes[i] * x seconds. For example:\n\n\t\n\t\tTo reduce the height of the mountain by 1, it takes workerTimes[i] seconds.\n\t\tTo reduce the height of the mountain by 2, it takes workerTimes[i] + workerTimes[i] * 2 seconds, and so on.\n\t\n\t\n\n\nReturn an integer representing the minimum number of seconds required for the workers to make the height of the mountain 0.",
+  "example": "Input: mountainHeight = 4, workerTimes = [2,1,1]\n\nOutput: 3\n\nExplanation:\n\nOne way the height of the mountain can be reduced to 0 is:\n\n\n\tWorker 0 reduces the height by 1, taking workerTimes[0] = 2 seconds.\n\tWorker 1 reduces the height by 2, taking workerTimes[1] + workerTimes[1] * 2 = 3 seconds.\n\tWorker 2 reduces the height by 1, taking workerTimes[2] = 1 second.\n\n\nSince they work simultaneously, the minimum time needed is max(2, 3, 1) = 3 seconds.",
+  "constraints_text": "1 <= mountainHeight <= 105\n\t1 <= workerTimes.length <= 104\n\t1 <= workerTimes[i] <= 106",
+  "templates": {
+    "c": "long long minNumberOfSeconds(int mountainHeight, int* workerTimes, int workerTimesSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minNumberOfSeconds(int mountainHeight, vector<int>& workerTimes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minNumberOfSeconds(int mountainHeight, int[] workerTimes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} mountainHeight\n * @param {number[]} workerTimes\n * @return {number}\n */\nvar minNumberOfSeconds = function(mountainHeight, workerTimes) {\n    \n};",
+    "python": "class Solution(object):\n    def minNumberOfSeconds(self, mountainHeight, workerTimes):\n        \"\"\"\n        :type mountainHeight: int\n        :type workerTimes: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the maximum height a single worker can reduce within a given time T.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search"
+      ],
+      "cues": [
+        "reduce-height-by-x",
+        "workertimes-i-x-x-1-2-seconds"
+      ],
+      "constraints": [
+        "x-must-be-non-negative",
+        "time-t-is-non-negative"
+      ]
+    },
+    {
+      "intent": "Verify if the total mountainHeight can be reduced by all workers within a candidate maximum time.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "workers-work-simultaneously",
+        "sum-of-heights-reduced"
+      ],
+      "constraints": [
+        "sum-heights-reduced-mountainheight"
+      ]
+    },
+    {
+      "intent": "Find the minimum possible maximum time required for all workers to reduce the mountainHeight to 0.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "minimum-number-of-seconds",
+        "max-times"
+      ],
+      "constraints": [
+        "search-range-for-time-0-to-5e18-assuming-long-long-is-sufficient"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "minimum-insertions-to-balance-a-parentheses-string",
+  "link": "https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/",
+  "difficulty": "Medium",
+  "index": "1281",
+  "description_full": "Given a parentheses string s containing only the characters '(' and ')'. A parentheses string is balanced if:\n\n\n\tAny left parenthesis '(' must have a corresponding two consecutive right parenthesis '))'.\n\tLeft parenthesis '(' must go before the corresponding two consecutive right parenthesis '))'.\n\n\nIn other words, we treat '(' as an opening parenthesis and '))' as a closing parenthesis.\n\n\n\tFor example, \"())\", \"())(())))\" and \"(())())))\" are balanced, \")()\", \"()))\" and \"(()))\" are not balanced.\n\n\nYou can insert the characters '(' and ')' at any position of the string to balance it if needed.\n\nReturn the minimum number of insertions needed to make s balanced.\n\n \nExample 1:\n\n\nInput: s = \"(()))\"\nOutput: 1\nExplanation: The second '(' has two matching '))', but the first '(' has only ')' matching. We need to add one more ')' at the end of the string to be \"(())))\" which is balanced.\n\n\nExample 2:\n\n\nInput: s = \"())\"\nOutput: 0\nExplanation: The string is already balanced.\n\n\nExample 3:\n\n\nInput: s = \"))())(\"\nOutput: 3\nExplanation: Add '(' to match the first '))', Add '))' to match the last '('.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of '(' and ')' only.\n\n",
+  "description": "Given a parentheses string s containing only the characters '(' and ')'. A parentheses string is balanced if:\n\n\n\tAny left parenthesis '(' must have a corresponding two consecutive right parenthesis '))'.\n\tLeft parenthesis '(' must go before the corresponding two consecutive right parenthesis '))'.\n\n\nIn other words, we treat '(' as an opening parenthesis and '))' as a closing parenthesis.\n\n\n\tFor example, \"())\", \"())(())))\" and \"(())())))\" are balanced, \")()\", \"()))\" and \"(()))\" are not balanced.\n\n\nYou can insert the characters '(' and ')' at any position of the string to balance it if needed.\n\nReturn the minimum number of insertions needed to make s balanced.",
+  "example": "Input: s = \"(()))\"\nOutput: 1\nExplanation: The second '(' has two matching '))', but the first '(' has only ')' matching. We need to add one more ')' at the end of the string to be \"(())))\" which is balanced.",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of '(' and ')' only.",
+  "templates": {
+    "c": "int minInsertions(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minInsertions(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minInsertions(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minInsertions = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minInsertions(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, tracking open parentheses and calculating minimum insertions required for balancing.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "parentheses-string",
+        "minimum-number-of-insertions",
+        "balanced-if",
+        "insert-characters"
+      ],
+      "constraints": [
+        "only-and",
+        "corresponding-two-consecutive-right-parenthesis",
+        "left-parenthesis-must-go-before"
+      ]
+    }
+  ]
+}

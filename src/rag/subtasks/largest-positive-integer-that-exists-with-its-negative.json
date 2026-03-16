@@ -1,0 +1,39 @@
+{
+  "slug": "largest-positive-integer-that-exists-with-its-negative",
+  "link": "https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/",
+  "difficulty": "Easy",
+  "index": "520",
+  "description_full": "Given an integer array nums that does not contain any zeros, find the largest positive integer k such that -k also exists in the array.\n\nReturn the positive integer k. If there is no such integer, return -1.\n\n \nExample 1:\n\n\nInput: nums = [-1,2,-3,3]\nOutput: 3\nExplanation: 3 is the only valid k we can find in the array.\n\n\nExample 2:\n\n\nInput: nums = [-1,10,6,7,-7,1]\nOutput: 7\nExplanation: Both 1 and 7 have their corresponding negative values in the array. 7 has a larger value.\n\n\nExample 3:\n\n\nInput: nums = [-10,8,6,7,-2,-3]\nOutput: -1\nExplanation: There is no a single valid k, we return -1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t-1000 <= nums[i] <= 1000\n\tnums[i] != 0\n\n",
+  "description": "Given an integer array nums that does not contain any zeros, find the largest positive integer k such that -k also exists in the array.\n\nReturn the positive integer k. If there is no such integer, return -1.",
+  "example": "Input: nums = [-1,2,-3,3]\nOutput: 3\nExplanation: 3 is the only valid k we can find in the array.",
+  "constraints_text": "1 <= nums.length <= 1000\n\t-1000 <= nums[i] <= 1000\n\tnums[i] != 0",
+  "templates": {
+    "c": "int findMaxK(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findMaxK(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMaxK(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findMaxK = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findMaxK(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the largest positive k such that -k exists in the array, returning -1 if no such k.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "greedy"
+      ],
+      "cues": [
+        "largest-positive-integer-k",
+        "k-also-exists",
+        "return-1"
+      ],
+      "constraints": [
+        "nums-length-1000",
+        "nums-i-0"
+      ]
+    }
+  ]
+}

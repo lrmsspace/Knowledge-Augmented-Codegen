@@ -1,0 +1,40 @@
+{
+  "slug": "counting-bits",
+  "link": "https://leetcode.com/problems/counting-bits/",
+  "difficulty": "Easy",
+  "index": "72",
+  "description_full": "Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.\n\n \nExample 1:\n\n\nInput: n = 2\nOutput: [0,1,1]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10\n\n\nExample 2:\n\n\nInput: n = 5\nOutput: [0,1,1,2,1,2]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10\n3 --> 11\n4 --> 100\n5 --> 101\n\n\n \nConstraints:\n\n\n\t0 <= n <= 105\n\n\n \nFollow up:\n\n\n\tIt is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?\n\tCan you do it without using any built-in function (i.e., like __builtin_popcount in C++)?\n\n",
+  "description": "Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.",
+  "example": "Input: n = 2\nOutput: [0,1,1]\nExplanation:\n0 --> 0\n1 --> 1\n2 --> 10",
+  "constraints_text": "0 <= n <= 105\n\n\n \nFollow up:\n\n\n\tIt is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?\n\tCan you do it without using any built-in function (i.e., like __builtin_popcount in C++)?",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* countBits(int n, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> countBits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] countBits(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number[]}\n */\nvar countBits = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def countBits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the number of set bits for each integer from 0 to n using a dynamic programming approach and store them in an array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "return-an-array-ans",
+        "number-of-1-s-in-the-binary-representation",
+        "for-each-i-0-i-n"
+      ],
+      "constraints": [
+        "0-n-105",
+        "o-n-and-possibly-in-a-single-pass",
+        "without-using-any-built-in-function"
+      ]
+    }
+  ]
+}

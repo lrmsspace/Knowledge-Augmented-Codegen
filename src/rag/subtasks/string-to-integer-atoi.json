@@ -1,0 +1,80 @@
+{
+  "slug": "string-to-integer-atoi",
+  "link": "https://leetcode.com/problems/string-to-integer-atoi/",
+  "difficulty": "Medium",
+  "index": "615",
+  "description_full": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.\n\nThe algorithm for myAtoi(string s) is as follows:\n\n\n\tWhitespace: Ignore any leading whitespace (\" \").\n\tSignedness: Determine the sign by checking if the next character is '-' or '+', assuming positivity if neither present.\n\tConversion: Read the integer by skipping leading zeros until a non-digit character is encountered or the end of the string is reached. If no digits were read, then the result is 0.\n\tRounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.\n\n\nReturn the integer as the final result.\n\n \nExample 1:\n\n\nInput: s = \"42\"\n\nOutput: 42\n\nExplanation:\n\n\nThe underlined characters are what is read in and the caret is the current reader position.\nStep 1: \"42\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"42\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"42\" (\"42\" is read in)\n           ^\n\n\n\nExample 2:\n\n\nInput: s = \" -042\"\n\nOutput: -42\n\nExplanation:\n\n\nStep 1: \"   -042\" (leading whitespace is read and ignored)\n            ^\nStep 2: \"   -042\" ('-' is read, so the result should be negative)\n             ^\nStep 3: \"   -042\" (\"042\" is read in, leading zeros ignored in the result)\n               ^\n\n\n\nExample 3:\n\n\nInput: s = \"1337c0d3\"\n\nOutput: 1337\n\nExplanation:\n\n\nStep 1: \"1337c0d3\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"1337c0d3\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"1337c0d3\" (\"1337\" is read in; reading stops because the next character is a non-digit)\n             ^\n\n\n\nExample 4:\n\n\nInput: s = \"0-1\"\n\nOutput: 0\n\nExplanation:\n\n\nStep 1: \"0-1\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"0-1\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"0-1\" (\"0\" is read in; reading stops because the next character is a non-digit)\n          ^\n\n\n\nExample 5:\n\n\nInput: s = \"words and 987\"\n\nOutput: 0\n\nExplanation:\n\nReading stops at the first non-digit character 'w'.\n\n\n \nConstraints:\n\n\n\t0 <= s.length <= 200\n\ts consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.\n\n",
+  "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.\n\nThe algorithm for myAtoi(string s) is as follows:\n\n\n\tWhitespace: Ignore any leading whitespace (\" \").\n\tSignedness: Determine the sign by checking if the next character is '-' or '+', assuming positivity if neither present.\n\tConversion: Read the integer by skipping leading zeros until a non-digit character is encountered or the end of the string is reached. If no digits were read, then the result is 0.\n\tRounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.\n\n\nReturn the integer as the final result.",
+  "example": "Input: s = \"42\"\n\nOutput: 42\n\nExplanation:\n\n\nThe underlined characters are what is read in and the caret is the current reader position.\nStep 1: \"42\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"42\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"42\" (\"42\" is read in)\n           ^",
+  "constraints_text": "0 <= s.length <= 200\n\ts consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.",
+  "templates": {
+    "c": "int myAtoi(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int myAtoi(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int myAtoi(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar myAtoi = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def myAtoi(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse leading whitespace and determine the sign of the number.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "whitespace",
+        "signedness",
+        "leading-whitespace",
+        "next-character-is-or"
+      ],
+      "constraints": [
+        "assuming-positivity-if-neither-present"
+      ]
+    },
+    {
+      "intent": "Convert consecutive digits into a numerical value, handling leading zeros and detecting intermediate overflow.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "conversion",
+        "read-the-integer",
+        "skipping-leading-zeros",
+        "non-digit-character",
+        "if-no-digits-were-read-then-the-result-is-0"
+      ],
+      "constraints": [
+        "32-bit-signed-integer-range"
+      ]
+    },
+    {
+      "intent": "Clamp the final computed integer value to the 32-bit signed integer range.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "rounding",
+        "out-of-the-32-bit-signed-integer-range"
+      ],
+      "constraints": [
+        "231-231-1",
+        "less-than-231-should-be-rounded-to-231",
+        "greater-than-231-1-should-be-rounded-to-231-1"
+      ]
+    }
+  ]
+}

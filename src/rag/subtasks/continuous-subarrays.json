@@ -1,0 +1,56 @@
+{
+  "slug": "continuous-subarrays",
+  "link": "https://leetcode.com/problems/continuous-subarrays/",
+  "difficulty": "Medium",
+  "index": "1748",
+  "description_full": "You are given a 0-indexed integer array nums. A subarray of nums is called continuous if:\n\n\n\tLet i, i + 1, ..., j be the indices in the subarray. Then, for each pair of indices i <= i1, i2 <= j, 0 <= |nums[i1] - nums[i2]| <= 2.\n\n\nReturn the total number of continuous subarrays.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: nums = [5,4,2,4]\nOutput: 8\nExplanation: \nContinuous subarray of size 1: [5], [4], [2], [4].\nContinuous subarray of size 2: [5,4], [4,2], [2,4].\nContinuous subarray of size 3: [4,2,4].\nThere are no subarrys of size 4.\nTotal continuous subarrays = 4 + 3 + 1 = 8.\nIt can be shown that there are no more continuous subarrays.\n\n\n \n\nExample 2:\n\n\nInput: nums = [1,2,3]\nOutput: 6\nExplanation: \nContinuous subarray of size 1: [1], [2], [3].\nContinuous subarray of size 2: [1,2], [2,3].\nContinuous subarray of size 3: [1,2,3].\nTotal continuous subarrays = 3 + 2 + 1 = 6.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\n",
+  "description": "You are given a 0-indexed integer array nums. A subarray of nums is called continuous if:\n\n\n\tLet i, i + 1, ..., j be the indices in the subarray. Then, for each pair of indices i <= i1, i2 <= j, 0 <= |nums[i1] - nums[i2]| <= 2.\n\n\nReturn the total number of continuous subarrays.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [5,4,2,4]\nOutput: 8\nExplanation: \nContinuous subarray of size 1: [5], [4], [2], [4].\nContinuous subarray of size 2: [5,4], [4,2], [2,4].\nContinuous subarray of size 3: [4,2,4].\nThere are no subarrys of size 4.\nTotal continuous subarrays = 4 + 3 + 1 = 8.\nIt can be shown that there are no more continuous subarrays.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109",
+  "templates": {
+    "c": "long long continuousSubarrays(int* nums, int numsSize){\n\n}",
+    "cpp": "class Solution {\npublic:\n    long long continuousSubarrays(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long continuousSubarrays(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar continuousSubarrays = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def continuousSubarrays(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array using a sliding window approach to identify and count all continuous subarrays.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "counting"
+      ],
+      "cues": [
+        "subarray",
+        "total-number",
+        "continuous"
+      ],
+      "constraints": [
+        "1-nums-length-105"
+      ]
+    },
+    {
+      "intent": "Efficiently maintain and query the minimum and maximum values within the current sliding window.",
+      "structures": [
+        "deque"
+      ],
+      "actions": [
+        "monotonic-queue"
+      ],
+      "cues": [
+        "nums-i1-nums-i2-2",
+        "max",
+        "min"
+      ],
+      "constraints": [
+        "1-nums-i-109"
+      ]
+    }
+  ]
+}

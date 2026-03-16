@@ -1,0 +1,67 @@
+{
+  "slug": "dice-roll-simulation",
+  "link": "https://leetcode.com/problems/dice-roll-simulation/",
+  "difficulty": "Hard",
+  "index": "1963",
+  "description_full": "A die simulator generates a random number from 1 to 6 for each roll. You introduced a constraint to the generator such that it cannot roll the number i more than rollMax[i] (1-indexed) consecutive times.\n\nGiven an array of integers rollMax and an integer n, return the number of distinct sequences that can be obtained with exact n rolls. Since the answer may be too large, return it modulo 109 + 7.\n\nTwo sequences are considered different if at least one element differs from each other.\n\n \nExample 1:\n\n\nInput: n = 2, rollMax = [1,1,2,2,2,3]\nOutput: 34\nExplanation: There will be 2 rolls of die, if there are no constraints on the die, there are 6 * 6 = 36 possible combinations. In this case, looking at rollMax array, the numbers 1 and 2 appear at most once consecutively, therefore sequences (1,1) and (2,2) cannot occur, so the final answer is 36-2 = 34.\n\n\nExample 2:\n\n\nInput: n = 2, rollMax = [1,1,1,1,1,1]\nOutput: 30\n\n\nExample 3:\n\n\nInput: n = 3, rollMax = [1,1,1,2,2,3]\nOutput: 181\n\n\n \nConstraints:\n\n\n\t1 <= n <= 5000\n\trollMax.length == 6\n\t1 <= rollMax[i] <= 15\n\n",
+  "description": "A die simulator generates a random number from 1 to 6 for each roll. You introduced a constraint to the generator such that it cannot roll the number i more than rollMax[i] (1-indexed) consecutive times.\n\nGiven an array of integers rollMax and an integer n, return the number of distinct sequences that can be obtained with exact n rolls. Since the answer may be too large, return it modulo 109 + 7.\n\nTwo sequences are considered different if at least one element differs from each other.",
+  "example": "Input: n = 2, rollMax = [1,1,2,2,2,3]\nOutput: 34\nExplanation: There will be 2 rolls of die, if there are no constraints on the die, there are 6 * 6 = 36 possible combinations. In this case, looking at rollMax array, the numbers 1 and 2 appear at most once consecutively, therefore sequences (1,1) and (2,2) cannot occur, so the final answer is 36-2 = 34.",
+  "constraints_text": "1 <= n <= 5000\n\trollMax.length == 6\n\t1 <= rollMax[i] <= 15",
+  "templates": {
+    "c": "int dieSimulator(int n, int* rollMax, int rollMaxSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int dieSimulator(int n, vector<int>& rollMax) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int dieSimulator(int n, int[] rollMax) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} rollMax\n * @return {number}\n */\nvar dieSimulator = function(n, rollMax) {\n    \n};",
+    "python": "class Solution(object):\n    def dieSimulator(self, n, rollMax):\n        \"\"\"\n        :type n: int\n        :type rollMax: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a 3D DP table to store counts of sequences of length 'i' ending with a specific die roll 'j' rolled 'k' consecutive times, and set base cases for the first roll.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "distinct-sequences",
+        "exact-n-rolls"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Iterate through each roll count 'i' from 2 to 'n', and for each possible current roll 'j' and its consecutive count 'k', calculate dp[i][j][k] based on dp[i-1] states and rollMax constraints.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "cannot-roll-the-number-i-more-than-rollmax-i-consecutive-times"
+      ],
+      "constraints": [
+        "1-n-5000",
+        "1-rollmax-i-15"
+      ]
+    },
+    {
+      "intent": "Sum all valid sequence counts for length 'n' from the DP table to get the final total number of distinct sequences, applying modulo.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-number-of-distinct-sequences"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

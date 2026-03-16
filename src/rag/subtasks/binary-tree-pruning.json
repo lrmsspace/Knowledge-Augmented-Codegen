@@ -1,0 +1,38 @@
+{
+  "slug": "binary-tree-pruning",
+  "link": "https://leetcode.com/problems/binary-tree-pruning/",
+  "difficulty": "Medium",
+  "index": "967",
+  "description_full": "Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.\n\nA subtree of a node node is node plus every node that is a descendant of node.\n\n \nExample 1:\n\n\nInput: root = [1,null,0,0,1]\nOutput: [1,null,0,null,1]\nExplanation: \nOnly the red nodes satisfy the property \"every subtree not containing a 1\".\nThe diagram on the right represents the answer.\n\n\nExample 2:\n\n\nInput: root = [1,0,1,0,0,0,1]\nOutput: [1,null,1,null,1]\n\n\nExample 3:\n\n\nInput: root = [1,1,0,1,1,0,1,0]\nOutput: [1,1,0,1,1,null,1]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 200].\n\tNode.val is either 0 or 1.\n\n",
+  "description": "Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.\n\nA subtree of a node node is node plus every node that is a descendant of node.",
+  "example": "Input: root = [1,null,0,0,1]\nOutput: [1,null,0,null,1]\nExplanation: \nOnly the red nodes satisfy the property \"every subtree not containing a 1\".\nThe diagram on the right represents the answer.",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 200].\n\tNode.val is either 0 or 1.",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* pruneTree(struct TreeNode* root) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* pruneTree(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode pruneTree(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {TreeNode}\n */\nvar pruneTree = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def pruneTree(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: Optional[TreeNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively traverse the tree in post-order to prune subtrees that do not contain any '1's.",
+      "structures": [
+        "tree"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "subtree-not-containing-a-1",
+        "removed",
+        "binary-tree"
+      ],
+      "constraints": [
+        "node-val-is-0-or-1",
+        "1-to-200-nodes"
+      ]
+    }
+  ]
+}

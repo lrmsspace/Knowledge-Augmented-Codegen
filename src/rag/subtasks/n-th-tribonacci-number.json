@@ -1,0 +1,38 @@
+{
+  "slug": "n-th-tribonacci-number",
+  "link": "https://leetcode.com/problems/n-th-tribonacci-number/",
+  "difficulty": "Easy",
+  "index": "243",
+  "description_full": "The Tribonacci sequence Tn is defined as follows: \n\nT0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.\n\nGiven n, return the value of Tn.\n\n \nExample 1:\n\n\nInput: n = 4\nOutput: 4\nExplanation:\nT_3 = 0 + 1 + 1 = 2\nT_4 = 1 + 1 + 2 = 4\n\n\nExample 2:\n\n\nInput: n = 25\nOutput: 1389537\n\n\n \nConstraints:\n\n\n\t0 <= n <= 37\n\tThe answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.\n\n",
+  "description": "The Tribonacci sequence Tn is defined as follows: \n\nT0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.\n\nGiven n, return the value of Tn.",
+  "example": "Input: n = 4\nOutput: 4\nExplanation:\nT_3 = 0 + 1 + 1 = 2\nT_4 = 1 + 1 + 2 = 4",
+  "constraints_text": "0 <= n <= 37\n\tThe answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.",
+  "templates": {
+    "c": "int tribonacci(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int tribonacci(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int tribonacci(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar tribonacci = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def tribonacci(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the Nth Tribonacci number by iteratively building the sequence from base cases.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "simulation"
+      ],
+      "cues": [
+        "tn-3-tn-tn-1-tn-2",
+        "t0-0-t1-1-t2-1"
+      ],
+      "constraints": [
+        "0-n-37",
+        "answer-2-31-1"
+      ]
+    }
+  ]
+}

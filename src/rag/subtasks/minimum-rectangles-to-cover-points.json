@@ -1,0 +1,36 @@
+{
+  "slug": "minimum-rectangles-to-cover-points",
+  "link": "https://leetcode.com/problems/minimum-rectangles-to-cover-points/",
+  "difficulty": "Medium",
+  "index": "2494",
+  "description_full": "You are given a 2D integer array points, where points[i] = [xi, yi]. You are also given an integer w. Your task is to cover all the given points with rectangles.\n\nEach rectangle has its lower end at some point (x1, 0) and its upper end at some point (x2, y2), where x1 <= x2, y2 >= 0, and the condition x2 - x1 <= w must be satisfied for each rectangle.\n\nA point is considered covered by a rectangle if it lies within or on the boundary of the rectangle.\n\nReturn an integer denoting the minimum number of rectangles needed so that each point is covered by at least one rectangle.\n\nNote: A point may be covered by more than one rectangle.\n\n \nExample 1:\n\n\n\n\nInput: points = [[2,1],[1,0],[1,4],[1,8],[3,5],[4,6]], w = 1\n\nOutput: 2\n\nExplanation: \n\nThe image above shows one possible placement of rectangles to cover the points:\n\n\n\tA rectangle with a lower end at (1, 0) and its upper end at (2, 8)\n\tA rectangle with a lower end at (3, 0) and its upper end at (4, 8)\n\n\n\nExample 2:\n\n\n\n\nInput: points = [[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6]], w = 2\n\nOutput: 3\n\nExplanation: \n\nThe image above shows one possible placement of rectangles to cover the points:\n\n\n\tA rectangle with a lower end at (0, 0) and its upper end at (2, 2)\n\tA rectangle with a lower end at (3, 0) and its upper end at (5, 5)\n\tA rectangle with a lower end at (6, 0) and its upper end at (6, 6)\n\n\n\nExample 3:\n\n\n\n\nInput: points = [[2,3],[1,2]], w = 0\n\nOutput: 2\n\nExplanation: \n\nThe image above shows one possible placement of rectangles to cover the points:\n\n\n\tA rectangle with a lower end at (1, 0) and its upper end at (1, 2)\n\tA rectangle with a lower end at (2, 0) and its upper end at (2, 3)\n\n\n\n \nConstraints:\n\n\n\t1 <= points.length <= 105\n\tpoints[i].length == 2\n\t0 <= xi == points[i][0] <= 109\n\t0 <= yi == points[i][1] <= 109\n\t0 <= w <= 109\n\tAll pairs (xi, yi) are distinct.\n\n",
+  "description": "You are given a 2D integer array points, where points[i] = [xi, yi]. You are also given an integer w. Your task is to cover all the given points with rectangles.\n\nEach rectangle has its lower end at some point (x1, 0) and its upper end at some point (x2, y2), where x1 <= x2, y2 >= 0, and the condition x2 - x1 <= w must be satisfied for each rectangle.\n\nA point is considered covered by a rectangle if it lies within or on the boundary of the rectangle.\n\nReturn an integer denoting the minimum number of rectangles needed so that each point is covered by at least one rectangle.\n\nNote: A point may be covered by more than one rectangle.",
+  "example": "Input: points = [[2,1],[1,0],[1,4],[1,8],[3,5],[4,6]], w = 1\n\nOutput: 2\n\nExplanation: \n\nThe image above shows one possible placement of rectangles to cover the points:\n\n\n\tA rectangle with a lower end at (1, 0) and its upper end at (2, 8)\n\tA rectangle with a lower end at (3, 0) and its upper end at (4, 8)",
+  "constraints_text": "1 <= points.length <= 105\n\tpoints[i].length == 2\n\t0 <= xi == points[i][0] <= 109\n\t0 <= yi == points[i][1] <= 109\n\t0 <= w <= 109\n\tAll pairs (xi, yi) are distinct.",
+  "templates": {
+    "c": "int minRectanglesToCoverPoints(int** points, int pointsSize, int* pointsColSize, int w) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minRectanglesToCoverPoints(vector<vector<int>>& points, int w) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minRectanglesToCoverPoints(int[][] points, int w) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @param {number} w\n * @return {number}\n */\nvar minRectanglesToCoverPoints = function(points, w) {\n    \n};",
+    "python": "class Solution(object):\n    def minRectanglesToCoverPoints(self, points, w):\n        \"\"\"\n        :type points: List[List[int]]\n        :type w: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort points by their x-coordinate and then greedily count the minimum number of rectangles needed to cover all points.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-rectangles",
+        "x2-x1-w"
+      ],
+      "constraints": [
+        "points-length-10-5"
+      ]
+    }
+  ]
+}

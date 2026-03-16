@@ -1,0 +1,38 @@
+{
+  "slug": "percentage-of-letter-in-string",
+  "link": "https://leetcode.com/problems/percentage-of-letter-in-string/",
+  "difficulty": "Easy",
+  "index": "487",
+  "description_full": "Given a string s and a character letter, return the percentage of characters in s that equal letter rounded down to the nearest whole percent.\n\n \nExample 1:\n\n\nInput: s = \"foobar\", letter = \"o\"\nOutput: 33\nExplanation:\nThe percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down, so we return 33.\n\n\nExample 2:\n\n\nInput: s = \"jjjj\", letter = \"k\"\nOutput: 0\nExplanation:\nThe percentage of characters in s that equal the letter 'k' is 0%, so we return 0.\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists of lowercase English letters.\n\tletter is a lowercase English letter.\n\n",
+  "description": "Given a string s and a character letter, return the percentage of characters in s that equal letter rounded down to the nearest whole percent.",
+  "example": "Input: s = \"foobar\", letter = \"o\"\nOutput: 33\nExplanation:\nThe percentage of characters in s that equal the letter 'o' is 2 / 6 * 100% = 33% when rounded down, so we return 33.",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists of lowercase English letters.\n\tletter is a lowercase English letter.",
+  "templates": {
+    "c": "int percentageLetter(char* s, char letter) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int percentageLetter(string s, char letter) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int percentageLetter(String s, char letter) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {character} letter\n * @return {number}\n */\nvar percentageLetter = function(s, letter) {\n    \n};",
+    "python": "class Solution(object):\n    def percentageLetter(self, s, letter):\n        \"\"\"\n        :type s: str\n        :type letter: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count occurrences of a specific character in a string, then calculate its percentage rounded down.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "percentage-of-characters",
+        "equal-letter",
+        "rounded-down"
+      ],
+      "constraints": [
+        "1-s-length-100"
+      ]
+    }
+  ]
+}

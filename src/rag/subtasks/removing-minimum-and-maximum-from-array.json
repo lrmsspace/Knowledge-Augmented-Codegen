@@ -1,0 +1,56 @@
+{
+  "slug": "removing-minimum-and-maximum-from-array",
+  "link": "https://leetcode.com/problems/removing-minimum-and-maximum-from-array/",
+  "difficulty": "Medium",
+  "index": "1488",
+  "description_full": "You are given a 0-indexed array of distinct integers nums.\n\nThere is an element in nums that has the lowest value and an element that has the highest value. We call them the minimum and maximum respectively. Your goal is to remove both these elements from the array.\n\nA deletion is defined as either removing an element from the front of the array or removing an element from the back of the array.\n\nReturn the minimum number of deletions it would take to remove both the minimum and maximum element from the array.\n\n \nExample 1:\n\n\nInput: nums = [2,10,7,5,4,1,8,6]\nOutput: 5\nExplanation: \nThe minimum element in the array is nums[5], which is 1.\nThe maximum element in the array is nums[1], which is 10.\nWe can remove both the minimum and maximum by removing 2 elements from the front and 3 elements from the back.\nThis results in 2 + 3 = 5 deletions, which is the minimum number possible.\n\n\nExample 2:\n\n\nInput: nums = [0,-4,19,1,8,-2,-3,5]\nOutput: 3\nExplanation: \nThe minimum element in the array is nums[1], which is -4.\nThe maximum element in the array is nums[2], which is 19.\nWe can remove both the minimum and maximum by removing 3 elements from the front.\nThis results in only 3 deletions, which is the minimum number possible.\n\n\nExample 3:\n\n\nInput: nums = [101]\nOutput: 1\nExplanation:  \nThere is only one element in the array, which makes it both the minimum and maximum element.\nWe can remove it with 1 deletion.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t-105 <= nums[i] <= 105\n\tThe integers in nums are distinct.\n\n",
+  "description": "You are given a 0-indexed array of distinct integers nums.\n\nThere is an element in nums that has the lowest value and an element that has the highest value. We call them the minimum and maximum respectively. Your goal is to remove both these elements from the array.\n\nA deletion is defined as either removing an element from the front of the array or removing an element from the back of the array.\n\nReturn the minimum number of deletions it would take to remove both the minimum and maximum element from the array.",
+  "example": "Input: nums = [2,10,7,5,4,1,8,6]\nOutput: 5\nExplanation: \nThe minimum element in the array is nums[5], which is 1.\nThe maximum element in the array is nums[1], which is 10.\nWe can remove both the minimum and maximum by removing 2 elements from the front and 3 elements from the back.\nThis results in 2 + 3 = 5 deletions, which is the minimum number possible.",
+  "constraints_text": "1 <= nums.length <= 105\n\t-105 <= nums[i] <= 105\n\tThe integers in nums are distinct.",
+  "templates": {
+    "c": "int minimumDeletions(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumDeletions(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumDeletions(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumDeletions = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumDeletions(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find indices of the minimum and maximum elements in the array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "lowest-value",
+        "highest-value",
+        "0-indexed-array"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "distinct-integers"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum deletions by comparing three removal strategies.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-deletions",
+        "remove-from-front",
+        "remove-from-back"
+      ],
+      "constraints": [
+        "1-nums-length"
+      ]
+    }
+  ]
+}

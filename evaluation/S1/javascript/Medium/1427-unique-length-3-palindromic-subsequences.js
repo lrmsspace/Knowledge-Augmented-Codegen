@@ -1,0 +1,89 @@
+// Source: https://leetcode.com/problems/unique-length-3-palindromic-subsequences/   |   Difficulty: Medium
+//
+// Problem Description:
+// Given a string s, return the number of unique palindromes of length three that are a subsequence of s.
+//
+// Note that even if there are multiple ways to obtain the same subsequence, it is still only counted once.
+//
+// A palindrome is a string that reads the same forwards and backwards.
+//
+// A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+//
+//
+// 	For example, "ace" is a subsequence of "abcde".
+//
+// Example:
+// Input: s = "aabca"
+// Output: 3
+// Explanation: The 3 palindromic subsequences of length 3 are:
+// - "aba" (subsequence of "aabca")
+// - "aaa" (subsequence of "aabca")
+// - "aca" (subsequence of "aabca")
+//
+// Constraints:
+// 3 <= s.length <= 105
+// 	s consists of only lowercase English letters.
+//
+// Helpful references (internal KB):
+// - The Inclusion-Exclusion Principle (string, counting)
+//   • When to use: Use when you need to determine the frequency of characters or substrings within a string. It is essential for tasks like anagram detection or checking character distribution.
+//   • Idea: This technique involves iterating through a string to tally the occurrences of its constituent elements, typically characters or words. It generally operates in O(N) time complexity, where N is the string's length.
+//   • Invariants: The count for each character reflects its total occurrences processed so far.; All characters encountered up to the current position have been tallied.
+//   • Tips: Use a hash map (dictionary) for arbitrary character sets.; Use an array for fixed-size character sets (e.g., ASCII, lowercase English).
+//   • Pitfalls: Forgetting to handle case sensitivity or ignore non-alphanumeric characters.; Incorrectly handling Unicode characters with fixed-size arrays.
+// - Generating all K-combinations (bitset, enumeration)
+//   • When to use: When all subsets of a fixed size K need to be generated, either in lexicographical order or such that successive combinations differ by exactly one element.
+//   • Idea: This algorithm enumerates all K-combinations from a set, either in lexicographical order or using a Gray code approach where adjacent combinations differ by a single element. It typically runs in O(N choose K) time, generating each combination in O(K) or O(1) amortized time.
+//   • Invariants: Each generated combination contains exactly K distinct elements.; All elements within a combination are unique and from the original set.
+//   • Tips: For lexicographical generation, find the rightmost element that can be incremented without exceeding its maximum possible value.; After incrementing an element, set all subsequent elements to their minimum valid values.
+//   • Pitfalls: Incorrectly handling boundary conditions for the rightmost element or its maximum value.; Off-by-one errors when assigning subsequent elements after an increment.
+// - Manacher's Algorithm - Finding all sub-p (string, array, simulation, enumeration)
+//   • When to use: When you need to find all palindromic substrings or the longest palindromic substring within a given string efficiently. It is particularly useful for achieving linear time complexity for this task.
+//   • Idea: Manacher's algorithm finds all maximal palindromic substrings centered at each position in a string by leveraging symmetry and previously computed results. It achieves an optimal O(N) time complexity.
+//   • Invariants: d_odd[i] stores the radius of the longest odd-length palindrome centered at i.; The (l, r) interval always defines the rightmost palindrome found so far.
+//   • Tips: Preprocess the string with delimiters to unify odd and even length palindromes.; Maintain the current rightmost boundary `r` of the largest palindrome found.
+//   • Pitfalls: Forgetting to update the `(l, r)` boundaries after processing each center.; Incorrectly calculating mirror positions or handling boundary cases for `i > r`.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Do not add custom input parsing or console I/O unless the template explicitly requires it; rely on parameters/return value only.
+// - Use standard ECMAScript features supported by LeetCode (Node.js runtime); no external packages.
+// - Be careful with number precision: JavaScript Number is double; use BigInt only when necessary and keep return type consistent with the problem requirements.
+// - If you introduce helper functions, define them in the same file and avoid relying on global mutable state across test cases.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countPalindromicSubsequence = function(s) {
+    const firstOccurrence = Array(26).fill(-1);
+    const lastOccurrence = Array(26).fill(-1);
+    const n = s.length;
+
+    for (let i = 0; i < n; i++) {
+        const charIndex = s.charCodeAt(i) - 97;
+        if (firstOccurrence[charIndex] === -1) {
+            firstOccurrence[charIndex] = i;
+        }
+        lastOccurrence[charIndex] = i;
+    }
+
+    let uniquePalindromesCount = 0;
+
+    for (let charCode = 0; charCode < 26; charCode++) {
+        const firstIndex = firstOccurrence[charCode];
+        const lastIndex = lastOccurrence[charCode];
+
+        if (firstIndex !== -1 && lastIndex - firstIndex > 1) {
+            const seenMiddleChars = new Set();
+
+            for (let j = firstIndex + 1; j < lastIndex; j++) {
+                seenMiddleChars.add(s[j]);
+            }
+
+            uniquePalindromesCount += seenMiddleChars.size;
+        }
+    }
+
+    return uniquePalindromesCount;
+};

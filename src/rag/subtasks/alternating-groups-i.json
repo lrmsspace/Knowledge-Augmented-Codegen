@@ -1,0 +1,39 @@
+{
+  "slug": "alternating-groups-i",
+  "link": "https://leetcode.com/problems/alternating-groups-i/",
+  "difficulty": "Easy",
+  "index": "2332",
+  "description_full": "There is a circle of red and blue tiles. You are given an array of integers colors. The color of tile i is represented by colors[i]:\n\n\n\tcolors[i] == 0 means that tile i is red.\n\tcolors[i] == 1 means that tile i is blue.\n\n\nEvery 3 contiguous tiles in the circle with alternating colors (the middle tile has a different color from its left and right tiles) is called an alternating group.\n\nReturn the number of alternating groups.\n\nNote that since colors represents a circle, the first and the last tiles are considered to be next to each other.\n\n \nExample 1:\n\n\nInput: colors = [1,1,1]\n\nOutput: 0\n\nExplanation:\n\n\n\n\nExample 2:\n\n\nInput: colors = [0,1,0,0,1]\n\nOutput: 3\n\nExplanation:\n\n\n\nAlternating groups:\n\n\n\n\n \nConstraints:\n\n\n\t3 <= colors.length <= 100\n\t0 <= colors[i] <= 1\n\n",
+  "description": "There is a circle of red and blue tiles. You are given an array of integers colors. The color of tile i is represented by colors[i]:\n\n\n\tcolors[i] == 0 means that tile i is red.\n\tcolors[i] == 1 means that tile i is blue.\n\n\nEvery 3 contiguous tiles in the circle with alternating colors (the middle tile has a different color from its left and right tiles) is called an alternating group.\n\nReturn the number of alternating groups.\n\nNote that since colors represents a circle, the first and the last tiles are considered to be next to each other.",
+  "example": "Input: colors = [1,1,1]\n\nOutput: 0\n\nExplanation:",
+  "constraints_text": "3 <= colors.length <= 100\n\t0 <= colors[i] <= 1",
+  "templates": {
+    "c": "int numberOfAlternatingGroups(int* colors, int colorsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfAlternatingGroups(vector<int>& colors) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfAlternatingGroups(int[] colors) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} colors\n * @return {number}\n */\nvar numberOfAlternatingGroups = function(colors) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfAlternatingGroups(self, colors):\n        \"\"\"\n        :type colors: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through each tile as a potential center of an alternating group, checking its neighbors while handling the circular arrangement.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "circle-of-red-and-blue-tiles",
+        "3-contiguous-tiles",
+        "alternating-colors",
+        "first-and-last-tiles-are-considered-to-be-next-to-each-other"
+      ],
+      "constraints": [
+        "3-colors-length-100",
+        "0-colors-i-1"
+      ]
+    }
+  ]
+}

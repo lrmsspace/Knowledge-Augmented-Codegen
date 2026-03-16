@@ -1,0 +1,72 @@
+{
+  "slug": "block-placement-queries",
+  "link": "https://leetcode.com/problems/block-placement-queries/",
+  "difficulty": "Hard",
+  "index": "2727",
+  "description_full": "There exists an infinite number line, with its origin at 0 and extending towards the positive x-axis.\n\nYou are given a 2D array queries, which contains two types of queries:\n\n\n\tFor a query of type 1, queries[i] = [1, x]. Build an obstacle at distance x from the origin. It is guaranteed that there is no obstacle at distance x when the query is asked.\n\tFor a query of type 2, queries[i] = [2, x, sz]. Check if it is possible to place a block of size sz anywhere in the range [0, x] on the line, such that the block entirely lies in the range [0, x]. A block cannot be placed if it intersects with any obstacle, but it may touch it. Note that you do not actually place the block. Queries are separate.\n\n\nReturn a boolean array results, where results[i] is true if you can place the block specified in the ith query of type 2, and false otherwise.\n\n \nExample 1:\n\n\nInput: queries = [[1,2],[2,3,3],[2,3,1],[2,2,2]]\n\nOutput: [false,true,true]\n\nExplanation:\n\n\n\nFor query 0, place an obstacle at x = 2. A block of size at most 2 can be placed before x = 3.\n\n\nExample 2:\n\n\nInput: queries = [[1,7],[2,7,6],[1,2],[2,7,5],[2,7,6]]\n\nOutput: [true,true,false]\n\nExplanation:\n\n\n\n\n\tPlace an obstacle at x = 7 for query 0. A block of size at most 7 can be placed before x = 7.\n\tPlace an obstacle at x = 2 for query 2. Now, a block of size at most 5 can be placed before x = 7, and a block of size at most 2 before x = 2.\n\n\n\n \nConstraints:\n\n\n\t1 <= queries.length <= 15 * 104\n\t2 <= queries[i].length <= 3\n\t1 <= queries[i][0] <= 2\n\t1 <= x, sz <= min(5 * 104, 3 * queries.length)\n\tThe input is generated such that for queries of type 1, no obstacle exists at distance x when the query is asked.\n\tThe input is generated such that there is at least one query of type 2.\n\n",
+  "description": "There exists an infinite number line, with its origin at 0 and extending towards the positive x-axis.\n\nYou are given a 2D array queries, which contains two types of queries:\n\n\n\tFor a query of type 1, queries[i] = [1, x]. Build an obstacle at distance x from the origin. It is guaranteed that there is no obstacle at distance x when the query is asked.\n\tFor a query of type 2, queries[i] = [2, x, sz]. Check if it is possible to place a block of size sz anywhere in the range [0, x] on the line, such that the block entirely lies in the range [0, x]. A block cannot be placed if it intersects with any obstacle, but it may touch it. Note that you do not actually place the block. Queries are separate.\n\n\nReturn a boolean array results, where results[i] is true if you can place the block specified in the ith query of type 2, and false otherwise.",
+  "example": "Input: queries = [[1,2],[2,3,3],[2,3,1],[2,2,2]]\n\nOutput: [false,true,true]\n\nExplanation:\n\n\n\nFor query 0, place an obstacle at x = 2. A block of size at most 2 can be placed before x = 3.",
+  "constraints_text": "1 <= queries.length <= 15 * 104\n\t2 <= queries[i].length <= 3\n\t1 <= queries[i][0] <= 2\n\t1 <= x, sz <= min(5 * 104, 3 * queries.length)\n\tThe input is generated such that for queries of type 1, no obstacle exists at distance x when the query is asked.\n\tThe input is generated such that there is at least one query of type 2.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nbool* getResults(int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<bool> getResults(vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Boolean> getResults(int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} queries\n * @return {boolean[]}\n */\nvar getResults = function(queries) {\n    \n};",
+    "python": "class Solution(object):\n    def getResults(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: List[bool]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement the dynamic segment tree node structure and its merge logic for combining child node information.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "segment-tree",
+        "recursion"
+      ],
+      "cues": [
+        "infinite-number-line",
+        "block-of-size-sz"
+      ],
+      "constraints": [
+        "coordinates-up-to-2-10-9",
+        "max-len-pref-len-suff-len"
+      ]
+    },
+    {
+      "intent": "Process type 1 queries by updating the dynamic segment tree to mark an obstacle at a given position.",
+      "structures": [
+        "tree"
+      ],
+      "actions": [
+        "segment-tree",
+        "simulation"
+      ],
+      "cues": [
+        "build-an-obstacle-at-distance-x"
+      ],
+      "constraints": [
+        "guaranteed-no-obstacle-at-x"
+      ]
+    },
+    {
+      "intent": "Process type 2 queries by querying the dynamic segment tree for the maximum free segment within a specified range.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "segment-tree",
+        "simulation"
+      ],
+      "cues": [
+        "check-if-it-is-possible-to-place-a-block",
+        "range-0-x"
+      ],
+      "constraints": [
+        "block-entirely-lies-in-0-x"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "count-substrings-with-k-frequency-characters-i",
+  "link": "https://leetcode.com/problems/count-substrings-with-k-frequency-characters-i/",
+  "difficulty": "Medium",
+  "index": "2569",
+  "description_full": "Given a string s and an integer k, return the total number of substrings of s where at least one character appears at least k times.\n\n \nExample 1:\n\n\nInput: s = \"abacb\", k = 2\n\nOutput: 4\n\nExplanation:\n\nThe valid substrings are:\n\n\n\t\"aba\" (character 'a' appears 2 times).\n\t\"abac\" (character 'a' appears 2 times).\n\t\"abacb\" (character 'a' appears 2 times).\n\t\"bacb\" (character 'b' appears 2 times).\n\n\n\nExample 2:\n\n\nInput: s = \"abcde\", k = 1\n\nOutput: 15\n\nExplanation:\n\nAll substrings are valid because every character appears at least once.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 3000\n\t1 <= k <= s.length\n\ts consists only of lowercase English letters.\n\n",
+  "description": "Given a string s and an integer k, return the total number of substrings of s where at least one character appears at least k times.",
+  "example": "Input: s = \"abacb\", k = 2\n\nOutput: 4\n\nExplanation:\n\nThe valid substrings are:\n\n\n\t\"aba\" (character 'a' appears 2 times).\n\t\"abac\" (character 'a' appears 2 times).\n\t\"abacb\" (character 'a' appears 2 times).\n\t\"bacb\" (character 'b' appears 2 times).",
+  "constraints_text": "1 <= s.length <= 3000\n\t1 <= k <= s.length\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int numberOfSubstrings(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfSubstrings(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSubstrings(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar numberOfSubstrings = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfSubstrings(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize total count and iterate through all possible starting indices for substrings.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "total-number-of-substrings"
+      ],
+      "constraints": [
+        "1-s-length"
+      ]
+    },
+    {
+      "intent": "For each starting index, extend the substring by iterating through ending indices and update character frequencies.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "substrings",
+        "character-appears"
+      ],
+      "constraints": [
+        "s-consists-only-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Check if any character in the current substring meets the frequency requirement and increment the total count.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "at-least-one-character-appears-at-least-k-times"
+      ],
+      "constraints": [
+        "1-k"
+      ]
+    }
+  ]
+}

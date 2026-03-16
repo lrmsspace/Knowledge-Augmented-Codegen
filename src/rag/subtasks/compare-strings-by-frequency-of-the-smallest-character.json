@@ -1,0 +1,73 @@
+{
+  "slug": "compare-strings-by-frequency-of-the-smallest-character",
+  "link": "https://leetcode.com/problems/compare-strings-by-frequency-of-the-smallest-character/",
+  "difficulty": "Medium",
+  "index": "1139",
+  "description_full": "Let the function f(s) be the frequency of the lexicographically smallest character in a non-empty string s. For example, if s = \"dcce\" then f(s) = 2 because the lexicographically smallest character is 'c', which has a frequency of 2.\n\nYou are given an array of strings words and another array of query strings queries. For each query queries[i], count the number of words in words such that f(queries[i]) < f(W) for each W in words.\n\nReturn an integer array answer, where each answer[i] is the answer to the ith query.\n\n \nExample 1:\n\n\nInput: queries = [\"cbd\"], words = [\"zaaaz\"]\nOutput: [1]\nExplanation: On the first query we have f(\"cbd\") = 1, f(\"zaaaz\") = 3 so f(\"cbd\") < f(\"zaaaz\").\n\n\nExample 2:\n\n\nInput: queries = [\"bbb\",\"cc\"], words = [\"a\",\"aa\",\"aaa\",\"aaaa\"]\nOutput: [1,2]\nExplanation: On the first query only f(\"bbb\") < f(\"aaaa\"). On the second query both f(\"aaa\") and f(\"aaaa\") are both > f(\"cc\").\n\n\n \nConstraints:\n\n\n\t1 <= queries.length <= 2000\n\t1 <= words.length <= 2000\n\t1 <= queries[i].length, words[i].length <= 10\n\tqueries[i][j], words[i][j] consist of lowercase English letters.\n\n",
+  "description": "Let the function f(s) be the frequency of the lexicographically smallest character in a non-empty string s. For example, if s = \"dcce\" then f(s) = 2 because the lexicographically smallest character is 'c', which has a frequency of 2.\n\nYou are given an array of strings words and another array of query strings queries. For each query queries[i], count the number of words in words such that f(queries[i]) < f(W) for each W in words.\n\nReturn an integer array answer, where each answer[i] is the answer to the ith query.",
+  "example": "Input: queries = [\"cbd\"], words = [\"zaaaz\"]\nOutput: [1]\nExplanation: On the first query we have f(\"cbd\") = 1, f(\"zaaaz\") = 3 so f(\"cbd\") < f(\"zaaaz\").",
+  "constraints_text": "1 <= queries.length <= 2000\n\t1 <= words.length <= 2000\n\t1 <= queries[i].length, words[i].length <= 10\n\tqueries[i][j], words[i][j] consist of lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numSmallerByFrequency(char** queries, int queriesSize, char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numSmallerByFrequency(String[] queries, String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} queries\n * @param {string[]} words\n * @return {number[]}\n */\nvar numSmallerByFrequency = function(queries, words) {\n    \n};",
+    "python": "class Solution(object):\n    def numSmallerByFrequency(self, queries, words):\n        \"\"\"\n        :type queries: List[str]\n        :type words: List[str]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the frequency of the lexicographically smallest character for each word in the 'words' array.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "f-s-frequency-of-lexicographically-smallest-character",
+        "words-array"
+      ],
+      "constraints": [
+        "words-i-length-10"
+      ]
+    },
+    {
+      "intent": "Preprocess the calculated word frequencies to enable efficient counting of words with higher frequencies.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "prefix-sum"
+      ],
+      "cues": [
+        "count-the-number-of-words",
+        "f-queries-i-f-w"
+      ],
+      "constraints": [
+        "f-s-values-are-between-1-and-10"
+      ]
+    },
+    {
+      "intent": "For each query, calculate its f-value and use the preprocessed data to find the count of words with higher f-values.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "for-each-query-queries-i",
+        "return-an-integer-array-answer"
+      ],
+      "constraints": [
+        "queries-i-length-10"
+      ]
+    }
+  ]
+}

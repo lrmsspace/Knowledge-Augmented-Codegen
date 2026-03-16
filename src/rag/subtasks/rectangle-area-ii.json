@@ -1,0 +1,60 @@
+{
+  "slug": "rectangle-area-ii",
+  "link": "https://leetcode.com/problems/rectangle-area-ii/",
+  "difficulty": "Hard",
+  "index": "1902",
+  "description_full": "You are given a 2D array of axis-aligned rectangles. Each rectangle[i] = [xi1, yi1, xi2, yi2] denotes the ith rectangle where (xi1, yi1) are the coordinates of the bottom-left corner, and (xi2, yi2) are the coordinates of the top-right corner.\n\nCalculate the total area covered by all rectangles in the plane. Any area covered by two or more rectangles should only be counted once.\n\nReturn the total area. Since the answer may be too large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]\nOutput: 6\nExplanation: A total area of 6 is covered by all three rectangles, as illustrated in the picture.\nFrom (1,1) to (2,2), the green and red rectangles overlap.\nFrom (1,0) to (2,3), all three rectangles overlap.\n\n\nExample 2:\n\n\nInput: rectangles = [[0,0,1000000000,1000000000]]\nOutput: 49\nExplanation: The answer is 1018 modulo (109 + 7), which is 49.\n\n\n \nConstraints:\n\n\n\t1 <= rectangles.length <= 200\n\trectanges[i].length == 4\n\t0 <= xi1, yi1, xi2, yi2 <= 109\n\txi1 <= xi2\n\tyi1 <= yi2\n\tAll rectangles have non zero area.\n\n",
+  "description": "You are given a 2D array of axis-aligned rectangles. Each rectangle[i] = [xi1, yi1, xi2, yi2] denotes the ith rectangle where (xi1, yi1) are the coordinates of the bottom-left corner, and (xi2, yi2) are the coordinates of the top-right corner.\n\nCalculate the total area covered by all rectangles in the plane. Any area covered by two or more rectangles should only be counted once.\n\nReturn the total area. Since the answer may be too large, return it modulo 109 + 7.",
+  "example": "Input: rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]\nOutput: 6\nExplanation: A total area of 6 is covered by all three rectangles, as illustrated in the picture.\nFrom (1,1) to (2,2), the green and red rectangles overlap.\nFrom (1,0) to (2,3), all three rectangles overlap.",
+  "constraints_text": "1 <= rectangles.length <= 200\n\trectanges[i].length == 4\n\t0 <= xi1, yi1, xi2, yi2 <= 109\n\txi1 <= xi2\n\tyi1 <= yi2\n\tAll rectangles have non zero area.",
+  "templates": {
+    "c": "int rectangleArea(int** rectangles, int rectanglesSize, int* rectanglesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int rectangleArea(vector<vector<int>>& rectangles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rectangleArea(int[][] rectangles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} rectangles\n * @return {number}\n */\nvar rectangleArea = function(rectangles) {\n    \n};",
+    "python": "class Solution(object):\n    def rectangleArea(self, rectangles):\n        \"\"\"\n        :type rectangles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate and sort sweep-line events from rectangle coordinates, including coordinate compression for y-values.",
+      "structures": [
+        "array",
+        "number",
+        "interval"
+      ],
+      "actions": [
+        "enumeration",
+        "coordinate-compress"
+      ],
+      "cues": [
+        "2d-array-of-axis-aligned-rectangles",
+        "xi1-yi1-xi2-yi2"
+      ],
+      "constraints": [
+        "rectangles-length-200",
+        "0-xi1-yi1-xi2-yi2-10-9"
+      ]
+    },
+    {
+      "intent": "Process sorted sweep-line events using a segment tree to calculate the total non-overlapping area.",
+      "structures": [
+        "array",
+        "number",
+        "interval"
+      ],
+      "actions": [
+        "sweep-line",
+        "segment-tree"
+      ],
+      "cues": [
+        "total-area-covered",
+        "any-area-covered-by-two-or-more-rectangles-should-only-be-counted-once"
+      ],
+      "constraints": [
+        "rectangles-length-200",
+        "0-xi1-yi1-xi2-yi2-10-9",
+        "return-total-area-modulo-10-9-7"
+      ]
+    }
+  ]
+}

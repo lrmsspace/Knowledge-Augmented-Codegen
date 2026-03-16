@@ -1,0 +1,60 @@
+{
+  "slug": "split-the-array-to-make-coprime-products",
+  "link": "https://leetcode.com/problems/split-the-array-to-make-coprime-products/",
+  "difficulty": "Hard",
+  "index": "2232",
+  "description_full": "You are given a 0-indexed integer array nums of length n.\n\nA split at an index i where 0 <= i <= n - 2 is called valid if the product of the first i + 1 elements and the product of the remaining elements are coprime.\n\n\n\tFor example, if nums = [2, 3, 3], then a split at the index i = 0 is valid because 2 and 9 are coprime, while a split at the index i = 1 is not valid because 6 and 3 are not coprime. A split at the index i = 2 is not valid because i == n - 1.\n\n\nReturn the smallest index i at which the array can be split validly or -1 if there is no such split.\n\nTwo values val1 and val2 are coprime if gcd(val1, val2) == 1 where gcd(val1, val2) is the greatest common divisor of val1 and val2.\n\n \nExample 1:\n\n\nInput: nums = [4,7,8,15,3,5]\nOutput: 2\nExplanation: The table above shows the values of the product of the first i + 1 elements, the remaining elements, and their gcd at each index i.\nThe only valid split is at index 2.\n\n\nExample 2:\n\n\nInput: nums = [4,7,15,8,3,5]\nOutput: -1\nExplanation: The table above shows the values of the product of the first i + 1 elements, the remaining elements, and their gcd at each index i.\nThere is no valid split.\n\n\n \nConstraints:\n\n\n\tn == nums.length\n\t1 <= n <= 104\n\t1 <= nums[i] <= 106\n\n",
+  "description": "You are given a 0-indexed integer array nums of length n.\n\nA split at an index i where 0 <= i <= n - 2 is called valid if the product of the first i + 1 elements and the product of the remaining elements are coprime.\n\n\n\tFor example, if nums = [2, 3, 3], then a split at the index i = 0 is valid because 2 and 9 are coprime, while a split at the index i = 1 is not valid because 6 and 3 are not coprime. A split at the index i = 2 is not valid because i == n - 1.\n\n\nReturn the smallest index i at which the array can be split validly or -1 if there is no such split.\n\nTwo values val1 and val2 are coprime if gcd(val1, val2) == 1 where gcd(val1, val2) is the greatest common divisor of val1 and val2.",
+  "example": "Input: nums = [4,7,8,15,3,5]\nOutput: 2\nExplanation: The table above shows the values of the product of the first i + 1 elements, the remaining elements, and their gcd at each index i.\nThe only valid split is at index 2.",
+  "constraints_text": "n == nums.length\n\t1 <= n <= 104\n\t1 <= nums[i] <= 106",
+  "templates": {
+    "c": "int findValidSplit(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findValidSplit(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findValidSplit(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findValidSplit = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findValidSplit(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute the smallest prime factor for all numbers up to max(nums[i]) using a sieve.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sieve",
+        "enumeration"
+      ],
+      "cues": [
+        "nums-i-10-6",
+        "gcd"
+      ],
+      "constraints": [
+        "1-nums-i-10-6"
+      ]
+    },
+    {
+      "intent": "Iterate through possible split points, maintaining and updating prime factor counts for left and right products to check coprimality.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting",
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-index-i",
+        "product-of-first-i-1-elements",
+        "product-of-remaining-elements",
+        "coprime"
+      ],
+      "constraints": [
+        "0-i-n-2",
+        "n-10-4"
+      ]
+    }
+  ]
+}

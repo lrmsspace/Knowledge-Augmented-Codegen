@@ -1,0 +1,41 @@
+{
+  "slug": "check-if-there-is-a-valid-path-in-a-grid",
+  "link": "https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid/",
+  "difficulty": "Medium",
+  "index": "1223",
+  "description_full": "You are given an m x n grid. Each cell of grid represents a street. The street of grid[i][j] can be:\n\n\n\t1 which means a street connecting the left cell and the right cell.\n\t2 which means a street connecting the upper cell and the lower cell.\n\t3 which means a street connecting the left cell and the lower cell.\n\t4 which means a street connecting the right cell and the lower cell.\n\t5 which means a street connecting the left cell and the upper cell.\n\t6 which means a street connecting the right cell and the upper cell.\n\n\nYou will initially start at the street of the upper-left cell (0, 0). A valid path in the grid is a path that starts from the upper left cell (0, 0) and ends at the bottom-right cell (m - 1, n - 1). The path should only follow the streets.\n\nNotice that you are not allowed to change any street.\n\nReturn true if there is a valid path in the grid or false otherwise.\n\n \nExample 1:\n\n\nInput: grid = [[2,4,3],[6,5,2]]\nOutput: true\nExplanation: As shown you can start at cell (0, 0) and visit all the cells of the grid to reach (m - 1, n - 1).\n\n\nExample 2:\n\n\nInput: grid = [[1,2,1],[1,2,1]]\nOutput: false\nExplanation: As shown you the street at cell (0, 0) is not connected with any street of any other cell and you will get stuck at cell (0, 0)\n\n\nExample 3:\n\n\nInput: grid = [[1,1,2]]\nOutput: false\nExplanation: You will get stuck at cell (0, 1) and you cannot reach cell (0, 2).\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\t1 <= grid[i][j] <= 6\n\n",
+  "description": "You are given an m x n grid. Each cell of grid represents a street. The street of grid[i][j] can be:\n\n\n\t1 which means a street connecting the left cell and the right cell.\n\t2 which means a street connecting the upper cell and the lower cell.\n\t3 which means a street connecting the left cell and the lower cell.\n\t4 which means a street connecting the right cell and the lower cell.\n\t5 which means a street connecting the left cell and the upper cell.\n\t6 which means a street connecting the right cell and the upper cell.\n\n\nYou will initially start at the street of the upper-left cell (0, 0). A valid path in the grid is a path that starts from the upper left cell (0, 0) and ends at the bottom-right cell (m - 1, n - 1). The path should only follow the streets.\n\nNotice that you are not allowed to change any street.\n\nReturn true if there is a valid path in the grid or false otherwise.",
+  "example": "Input: grid = [[2,4,3],[6,5,2]]\nOutput: true\nExplanation: As shown you can start at cell (0, 0) and visit all the cells of the grid to reach (m - 1, n - 1).",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\t1 <= grid[i][j] <= 6",
+  "templates": {
+    "c": "bool hasValidPath(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool hasValidPath(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasValidPath(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {boolean}\n */\nvar hasValidPath = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def hasValidPath(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if a valid path exists from the top-left to the bottom-right cell by traversing grid cells according to street connection rules.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "grid",
+        "valid-path",
+        "starts-from-0-0",
+        "ends-at-m-1-n-1",
+        "follow-the-streets"
+      ],
+      "constraints": [
+        "1-m-n-300",
+        "no-street-changes"
+      ]
+    }
+  ]
+}

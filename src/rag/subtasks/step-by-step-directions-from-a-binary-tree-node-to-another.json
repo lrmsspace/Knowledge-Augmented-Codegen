@@ -1,0 +1,58 @@
+{
+  "slug": "step-by-step-directions-from-a-binary-tree-node-to-another",
+  "link": "https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/",
+  "difficulty": "Medium",
+  "index": "1490",
+  "description_full": "You are given the root of a binary tree with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue representing the value of the start node s, and a different integer destValue representing the value of the destination node t.\n\nFind the shortest path starting from node s and ending at node t. Generate step-by-step directions of such path as a string consisting of only the uppercase letters 'L', 'R', and 'U'. Each letter indicates a specific direction:\n\n\n\t'L' means to go from a node to its left child node.\n\t'R' means to go from a node to its right child node.\n\t'U' means to go from a node to its parent node.\n\n\nReturn the step-by-step directions of the shortest path from node s to node t.\n\n \nExample 1:\n\n\nInput: root = [5,1,2,3,null,6,4], startValue = 3, destValue = 6\nOutput: \"UURL\"\nExplanation: The shortest path is: 3 → 1 → 5 → 2 → 6.\n\n\nExample 2:\n\n\nInput: root = [2,1], startValue = 2, destValue = 1\nOutput: \"L\"\nExplanation: The shortest path is: 2 → 1.\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is n.\n\t2 <= n <= 105\n\t1 <= Node.val <= n\n\tAll the values in the tree are unique.\n\t1 <= startValue, destValue <= n\n\tstartValue != destValue\n\n",
+  "description": "You are given the root of a binary tree with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue representing the value of the start node s, and a different integer destValue representing the value of the destination node t.\n\nFind the shortest path starting from node s and ending at node t. Generate step-by-step directions of such path as a string consisting of only the uppercase letters 'L', 'R', and 'U'. Each letter indicates a specific direction:\n\n\n\t'L' means to go from a node to its left child node.\n\t'R' means to go from a node to its right child node.\n\t'U' means to go from a node to its parent node.\n\n\nReturn the step-by-step directions of the shortest path from node s to node t.",
+  "example": "Input: root = [5,1,2,3,null,6,4], startValue = 3, destValue = 6\nOutput: \"UURL\"\nExplanation: The shortest path is: 3 → 1 → 5 → 2 → 6.",
+  "constraints_text": "The number of nodes in the tree is n.\n\t2 <= n <= 105\n\t1 <= Node.val <= n\n\tAll the values in the tree are unique.\n\t1 <= startValue, destValue <= n\n\tstartValue != destValue",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nchar* getDirections(struct TreeNode* root, int startValue, int destValue) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    string getDirections(TreeNode* root, int startValue, int destValue) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public String getDirections(TreeNode root, int startValue, int destValue) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} startValue\n * @param {number} destValue\n * @return {string}\n */\nvar getDirections = function(root, startValue, destValue) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def getDirections(self, root, startValue, destValue):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type startValue: int\n        :type destValue: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively traverse the binary tree to find and record the path from the root to both the startValue and destValue nodes.",
+      "structures": [
+        "tree",
+        "string"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "root-of-a-binary-tree",
+        "startvalue",
+        "destvalue",
+        "path"
+      ],
+      "constraints": [
+        "n-nodes",
+        "unique-values",
+        "2-n-105"
+      ]
+    },
+    {
+      "intent": "Compare the recorded root-to-start and root-to-dest paths to identify their common prefix (LCA), then construct the final directions string.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "shortest-path",
+        "step-by-step-directions",
+        "l-r-u"
+      ],
+      "constraints": [
+        "startvalue-destvalue"
+      ]
+    }
+  ]
+}

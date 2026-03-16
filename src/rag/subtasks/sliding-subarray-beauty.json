@@ -1,0 +1,56 @@
+{
+  "slug": "sliding-subarray-beauty",
+  "link": "https://leetcode.com/problems/sliding-subarray-beauty/",
+  "difficulty": "Medium",
+  "index": "1711",
+  "description_full": "Given an integer array nums containing n integers, find the beauty of each subarray of size k.\n\nThe beauty of a subarray is the xth smallest integer in the subarray if it is negative, or 0 if there are fewer than x negative integers.\n\nReturn an integer array containing n - k + 1 integers, which denote the beauty of the subarrays in order from the first index in the array.\n\n\n\t\n\tA subarray is a contiguous non-empty sequence of elements within an array.\n\t\n\n\n \nExample 1:\n\n\nInput: nums = [1,-1,-3,-2,3], k = 3, x = 2\nOutput: [-1,-2,-2]\nExplanation: There are 3 subarrays with size k = 3. \nThe first subarray is [1, -1, -3] and the 2nd smallest negative integer is -1. \nThe second subarray is [-1, -3, -2] and the 2nd smallest negative integer is -2. \nThe third subarray is [-3, -2, 3] and the 2nd smallest negative integer is -2.\n\nExample 2:\n\n\nInput: nums = [-1,-2,-3,-4,-5], k = 2, x = 2\nOutput: [-1,-2,-3,-4]\nExplanation: There are 4 subarrays with size k = 2.\nFor [-1, -2], the 2nd smallest negative integer is -1.\nFor [-2, -3], the 2nd smallest negative integer is -2.\nFor [-3, -4], the 2nd smallest negative integer is -3.\nFor [-4, -5], the 2nd smallest negative integer is -4. \n\nExample 3:\n\n\nInput: nums = [-3,1,2,-3,0,-3], k = 2, x = 1\nOutput: [-3,0,-3,-3,-3]\nExplanation: There are 5 subarrays with size k = 2.\nFor [-3, 1], the 1st smallest negative integer is -3.\nFor [1, 2], there is no negative integer so the beauty is 0.\nFor [2, -3], the 1st smallest negative integer is -3.\nFor [-3, 0], the 1st smallest negative integer is -3.\nFor [0, -3], the 1st smallest negative integer is -3.\n\n \nConstraints:\n\n\n\tn == nums.length \n\t1 <= n <= 105\n\t1 <= k <= n\n\t1 <= x <= k \n\t-50 <= nums[i] <= 50 \n\n",
+  "description": "Given an integer array nums containing n integers, find the beauty of each subarray of size k.\n\nThe beauty of a subarray is the xth smallest integer in the subarray if it is negative, or 0 if there are fewer than x negative integers.\n\nReturn an integer array containing n - k + 1 integers, which denote the beauty of the subarrays in order from the first index in the array.\n\n\n\t\n\tA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [1,-1,-3,-2,3], k = 3, x = 2\nOutput: [-1,-2,-2]\nExplanation: There are 3 subarrays with size k = 3. \nThe first subarray is [1, -1, -3] and the 2nd smallest negative integer is -1. \nThe second subarray is [-1, -3, -2] and the 2nd smallest negative integer is -2. \nThe third subarray is [-3, -2, 3] and the 2nd smallest negative integer is -2.",
+  "constraints_text": "n == nums.length \n\t1 <= n <= 105\n\t1 <= k <= n\n\t1 <= x <= k \n\t-50 <= nums[i] <= 50",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* getSubarrayBeauty(int* nums, int numsSize, int k, int x, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> getSubarrayBeauty(vector<int>& nums, int k, int x) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] getSubarrayBeauty(int[] nums, int k, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @param {number} x\n * @return {number[]}\n */\nvar getSubarrayBeauty = function(nums, k, x) {\n    \n};",
+    "python": "class Solution(object):\n    def getSubarrayBeauty(self, nums, k, x):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type x: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Maintain frequency counts of numbers within the current sliding window.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "sliding-window",
+        "simulation"
+      ],
+      "cues": [
+        "each-subarray",
+        "size-k"
+      ],
+      "constraints": [
+        "1-n-105",
+        "1-k-n"
+      ]
+    },
+    {
+      "intent": "Determine the beauty of the current window by finding the xth smallest negative number or returning 0.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "xth-smallest-negative-integer",
+        "fewer-than-x-negative-integers"
+      ],
+      "constraints": [
+        "50-nums-i-50",
+        "1-x-k"
+      ]
+    }
+  ]
+}

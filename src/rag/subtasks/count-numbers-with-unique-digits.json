@@ -1,0 +1,37 @@
+{
+  "slug": "count-numbers-with-unique-digits",
+  "link": "https://leetcode.com/problems/count-numbers-with-unique-digits/",
+  "difficulty": "Medium",
+  "index": "772",
+  "description_full": "Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.\n\n \nExample 1:\n\n\nInput: n = 2\nOutput: 91\nExplanation: The answer should be the total numbers in the range of 0 ≤ x < 100, excluding 11,22,33,44,55,66,77,88,99\n\n\nExample 2:\n\n\nInput: n = 0\nOutput: 1\n\n\n \nConstraints:\n\n\n\t0 <= n <= 8\n\n",
+  "description": "Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.",
+  "example": "Input: n = 2\nOutput: 91\nExplanation: The answer should be the total numbers in the range of 0 ≤ x < 100, excluding 11,22,33,44,55,66,77,88,99",
+  "constraints_text": "0 <= n <= 8",
+  "templates": {
+    "c": "int countNumbersWithUniqueDigits(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countNumbersWithUniqueDigits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countNumbersWithUniqueDigits(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar countNumbersWithUniqueDigits = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def countNumbersWithUniqueDigits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total count of numbers with unique digits up to n digits.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "count-of-all-numbers",
+        "unique-digits",
+        "0-x-10n"
+      ],
+      "constraints": [
+        "0-n-8"
+      ]
+    }
+  ]
+}

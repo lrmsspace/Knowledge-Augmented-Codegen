@@ -1,0 +1,38 @@
+{
+  "slug": "powx-n",
+  "link": "https://leetcode.com/problems/powx-n/",
+  "difficulty": "Medium",
+  "index": "639",
+  "description_full": "Implement pow(x, n), which calculates x raised to the power n (i.e., xn).\n\n \nExample 1:\n\n\nInput: x = 2.00000, n = 10\nOutput: 1024.00000\n\n\nExample 2:\n\n\nInput: x = 2.10000, n = 3\nOutput: 9.26100\n\n\nExample 3:\n\n\nInput: x = 2.00000, n = -2\nOutput: 0.25000\nExplanation: 2-2 = 1/22 = 1/4 = 0.25\n\n\n \nConstraints:\n\n\n\t-100.0 < x < 100.0\n\t-231 <= n <= 231-1\n\tn is an integer.\n\tEither x is not zero or n > 0.\n\t-104 <= xn <= 104\n\n",
+  "description": "Implement pow(x, n), which calculates x raised to the power n (i.e., xn).",
+  "example": "Input: x = 2.00000, n = 10\nOutput: 1024.00000",
+  "constraints_text": "-100.0 < x < 100.0\n\t-231 <= n <= 231-1\n\tn is an integer.\n\tEither x is not zero or n > 0.\n\t-104 <= xn <= 104",
+  "templates": {
+    "c": "double myPow(double x, int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    double myPow(double x, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double myPow(double x, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} x\n * @param {number} n\n * @return {number}\n */\nvar myPow = function(x, n) {\n    \n};",
+    "python": "class Solution(object):\n    def myPow(self, x, n):\n        \"\"\"\n        :type x: float\n        :type n: int\n        :rtype: float\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate x raised to the power n using binary exponentiation, handling negative exponents and potential integer overflow for n.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "mod-exp"
+      ],
+      "cues": [
+        "pow-x-n",
+        "x-n"
+      ],
+      "constraints": [
+        "n-is-an-integer",
+        "large-n",
+        "negative-n",
+        "n-can-be-2-31"
+      ]
+    }
+  ]
+}

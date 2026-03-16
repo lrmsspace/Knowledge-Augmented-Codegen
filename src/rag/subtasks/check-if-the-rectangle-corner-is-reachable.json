@@ -1,0 +1,88 @@
+{
+  "slug": "check-if-the-rectangle-corner-is-reachable",
+  "link": "https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/",
+  "difficulty": "Hard",
+  "index": "2741",
+  "description_full": "You are given two positive integers xCorner and yCorner, and a 2D array circles, where circles[i] = [xi, yi, ri] denotes a circle with center at (xi, yi) and radius ri.\n\nThere is a rectangle in the coordinate plane with its bottom left corner at the origin and top right corner at the coordinate (xCorner, yCorner). You need to check whether there is a path from the bottom left corner to the top right corner such that the entire path lies inside the rectangle, does not touch or lie inside any circle, and touches the rectangle only at the two corners.\n\nReturn true if such a path exists, and false otherwise.\n\n \nExample 1:\n\n\nInput: xCorner = 3, yCorner = 4, circles = [[2,1,1]]\n\nOutput: true\n\nExplanation:\n\n\n\nThe black curve shows a possible path between (0, 0) and (3, 4).\n\n\nExample 2:\n\n\nInput: xCorner = 3, yCorner = 3, circles = [[1,1,2]]\n\nOutput: false\n\nExplanation:\n\n\n\nNo path exists from (0, 0) to (3, 3).\n\n\nExample 3:\n\n\nInput: xCorner = 3, yCorner = 3, circles = [[2,1,1],[1,2,1]]\n\nOutput: false\n\nExplanation:\n\n\n\nNo path exists from (0, 0) to (3, 3).\n\n\nExample 4:\n\n\nInput: xCorner = 4, yCorner = 4, circles = [[5,5,1]]\n\nOutput: true\n\nExplanation:\n\n\n\n\n \nConstraints:\n\n\n\t3 <= xCorner, yCorner <= 109\n\t1 <= circles.length <= 1000\n\tcircles[i].length == 3\n\t1 <= xi, yi, ri <= 109\n\n",
+  "description": "You are given two positive integers xCorner and yCorner, and a 2D array circles, where circles[i] = [xi, yi, ri] denotes a circle with center at (xi, yi) and radius ri.\n\nThere is a rectangle in the coordinate plane with its bottom left corner at the origin and top right corner at the coordinate (xCorner, yCorner). You need to check whether there is a path from the bottom left corner to the top right corner such that the entire path lies inside the rectangle, does not touch or lie inside any circle, and touches the rectangle only at the two corners.\n\nReturn true if such a path exists, and false otherwise.",
+  "example": "Input: xCorner = 3, yCorner = 4, circles = [[2,1,1]]\n\nOutput: true\n\nExplanation:\n\n\n\nThe black curve shows a possible path between (0, 0) and (3, 4).",
+  "constraints_text": "3 <= xCorner, yCorner <= 109\n\t1 <= circles.length <= 1000\n\tcircles[i].length == 3\n\t1 <= xi, yi, ri <= 109",
+  "templates": {
+    "c": "bool canReachCorner(int xCorner, int yCorner, int** circles, int circlesSize, int* circlesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canReachCorner(int xCorner, int yCorner, vector<vector<int>>& circles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canReachCorner(int xCorner, int yCorner, int[][] circles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} xCorner\n * @param {number} yCorner\n * @param {number[][]} circles\n * @return {boolean}\n */\nvar canReachCorner = function(xCorner, yCorner, circles) {\n    \n};",
+    "python": "class Solution(object):\n    def canReachCorner(self, xCorner, yCorner, circles):\n        \"\"\"\n        :type xCorner: int\n        :type yCorner: int\n        :type circles: List[List[int]]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a Union-Find data structure for circles and four virtual boundary nodes.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "union-find"
+      ],
+      "cues": [
+        "circles-length"
+      ],
+      "constraints": [
+        "1-circles-length-1000"
+      ]
+    },
+    {
+      "intent": "Connect each circle to any rectangle boundary it touches or overlaps with.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "union-find"
+      ],
+      "cues": [
+        "xi-yi-ri",
+        "xcorner",
+        "ycorner"
+      ],
+      "constraints": [
+        "1-xi-yi-ri-10-9"
+      ]
+    },
+    {
+      "intent": "Connect any two circles that overlap or touch each other.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "union-find"
+      ],
+      "cues": [
+        "dist",
+        "ri"
+      ],
+      "constraints": [
+        "1-circles-length-1000"
+      ]
+    },
+    {
+      "intent": "Determine if a path exists by checking if the left boundary is connected to the right, or the bottom to the top.",
+      "structures": [
+        "ds"
+      ],
+      "actions": [
+        "union-find"
+      ],
+      "cues": [
+        "find-left",
+        "find-right",
+        "find-bottom",
+        "find-top"
+      ],
+      "constraints": []
+    }
+  ]
+}

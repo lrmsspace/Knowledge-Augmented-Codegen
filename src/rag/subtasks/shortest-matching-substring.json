@@ -1,0 +1,73 @@
+{
+  "slug": "shortest-matching-substring",
+  "link": "https://leetcode.com/problems/shortest-matching-substring/",
+  "difficulty": "Hard",
+  "index": "2802",
+  "description_full": "You are given a string s and a pattern string p, where p contains exactly two '*' characters.\n\nThe '*' in p matches any sequence of zero or more characters.\n\nReturn the length of the shortest substring in s that matches p. If there is no such substring, return -1.\nNote: The empty substring is considered valid.\n \nExample 1:\n\n\nInput: s = \"abaacbaecebce\", p = \"ba*c*ce\"\n\nOutput: 8\n\nExplanation:\n\nThe shortest matching substring of p in s is \"baecebce\".\n\n\nExample 2:\n\n\nInput: s = \"baccbaadbc\", p = \"cc*baa*adb\"\n\nOutput: -1\n\nExplanation:\n\nThere is no matching substring in s.\n\n\nExample 3:\n\n\nInput: s = \"a\", p = \"**\"\n\nOutput: 0\n\nExplanation:\n\nThe empty substring is the shortest matching substring.\n\n\nExample 4:\n\n\nInput: s = \"madlogic\", p = \"*adlogi*\"\n\nOutput: 6\n\nExplanation:\n\nThe shortest matching substring of p in s is \"adlogi\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\t2 <= p.length <= 105\n\ts contains only lowercase English letters.\n\tp contains only lowercase English letters and exactly two '*'.\n\n",
+  "description": "You are given a string s and a pattern string p, where p contains exactly two '*' characters.\n\nThe '*' in p matches any sequence of zero or more characters.\n\nReturn the length of the shortest substring in s that matches p. If there is no such substring, return -1.\nNote: The empty substring is considered valid.",
+  "example": "Input: s = \"abaacbaecebce\", p = \"ba*c*ce\"\n\nOutput: 8\n\nExplanation:\n\nThe shortest matching substring of p in s is \"baecebce\".",
+  "constraints_text": "1 <= s.length <= 105\n\t2 <= p.length <= 105\n\ts contains only lowercase English letters.\n\tp contains only lowercase English letters and exactly two '*'.",
+  "templates": {
+    "c": "int shortestMatchingSubstring(char* s, char* p) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int shortestMatchingSubstring(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int shortestMatchingSubstring(String s, String p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {number}\n */\nvar shortestMatchingSubstring = function(s, p) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestMatchingSubstring(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Extract pattern segments P1, P2, P3 and find all their occurrences in the string s using KMP or Z-function.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "kmp",
+        "enumeration"
+      ],
+      "cues": [
+        "pattern-string-p",
+        "exactly-two",
+        "matches-any-sequence"
+      ],
+      "constraints": [
+        "1-s-length-10-5",
+        "2-p-length-10-5"
+      ]
+    },
+    {
+      "intent": "Precompute suffix minimum arrays for P3 and P2-P3 sequences to efficiently find earliest valid end points.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "shortest-substring",
+        "zero-or-more-characters"
+      ],
+      "constraints": [
+        "s-length-up-to-10-5"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible starting positions of P1 and use precomputed values to find the minimum length matching substring.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "shortest-substring",
+        "return-the-length",
+        "return-1-if-no-such-substring"
+      ],
+      "constraints": [
+        "s-length-up-to-10-5"
+      ]
+    }
+  ]
+}

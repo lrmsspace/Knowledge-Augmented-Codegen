@@ -1,0 +1,38 @@
+{
+  "slug": "divide-a-string-into-groups-of-size-k",
+  "link": "https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/",
+  "difficulty": "Easy",
+  "index": "458",
+  "description_full": "A string s can be partitioned into groups of size k using the following procedure:\n\n\n\tThe first group consists of the first k characters of the string, the second group consists of the next k characters of the string, and so on. Each element can be a part of exactly one group.\n\tFor the last group, if the string does not have k characters remaining, a character fill is used to complete the group.\n\n\nNote that the partition is done so that after removing the fill character from the last group (if it exists) and concatenating all the groups in order, the resultant string should be s.\n\nGiven the string s, the size of each group k and the character fill, return a string array denoting the composition of every group s has been divided into, using the above procedure.\n\n \nExample 1:\n\n\nInput: s = \"abcdefghi\", k = 3, fill = \"x\"\nOutput: [\"abc\",\"def\",\"ghi\"]\nExplanation:\nThe first 3 characters \"abc\" form the first group.\nThe next 3 characters \"def\" form the second group.\nThe last 3 characters \"ghi\" form the third group.\nSince all groups can be completely filled by characters from the string, we do not need to use fill.\nThus, the groups formed are \"abc\", \"def\", and \"ghi\".\n\n\nExample 2:\n\n\nInput: s = \"abcdefghij\", k = 3, fill = \"x\"\nOutput: [\"abc\",\"def\",\"ghi\",\"jxx\"]\nExplanation:\nSimilar to the previous example, we are forming the first three groups \"abc\", \"def\", and \"ghi\".\nFor the last group, we can only use the character 'j' from the string. To complete this group, we add 'x' twice.\nThus, the 4 groups formed are \"abc\", \"def\", \"ghi\", and \"jxx\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists of lowercase English letters only.\n\t1 <= k <= 100\n\tfill is a lowercase English letter.\n\n",
+  "description": "A string s can be partitioned into groups of size k using the following procedure:\n\n\n\tThe first group consists of the first k characters of the string, the second group consists of the next k characters of the string, and so on. Each element can be a part of exactly one group.\n\tFor the last group, if the string does not have k characters remaining, a character fill is used to complete the group.\n\n\nNote that the partition is done so that after removing the fill character from the last group (if it exists) and concatenating all the groups in order, the resultant string should be s.\n\nGiven the string s, the size of each group k and the character fill, return a string array denoting the composition of every group s has been divided into, using the above procedure.",
+  "example": "Input: s = \"abcdefghi\", k = 3, fill = \"x\"\nOutput: [\"abc\",\"def\",\"ghi\"]\nExplanation:\nThe first 3 characters \"abc\" form the first group.\nThe next 3 characters \"def\" form the second group.\nThe last 3 characters \"ghi\" form the third group.\nSince all groups can be completely filled by characters from the string, we do not need to use fill.\nThus, the groups formed are \"abc\", \"def\", and \"ghi\".",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists of lowercase English letters only.\n\t1 <= k <= 100\n\tfill is a lowercase English letter.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** divideString(char* s, int k, char fill, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> divideString(string s, int k, char fill) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] divideString(String s, int k, char fill) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @param {character} fill\n * @return {string[]}\n */\nvar divideString = function(s, k, fill) {\n    \n};",
+    "python": "class Solution(object):\n    def divideString(self, s, k, fill):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :type fill: str\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, extract k-sized segments, and pad the final segment if incomplete.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "partitioned-into-groups-of-size-k",
+        "character-fill-is-used-to-complete-the-group"
+      ],
+      "constraints": [
+        "1-s-length-100",
+        "1-k-100"
+      ]
+    }
+  ]
+}

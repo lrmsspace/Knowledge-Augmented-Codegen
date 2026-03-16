@@ -1,0 +1,83 @@
+// Source: https://leetcode.com/problems/maximum-palindromes-after-operations/   |   Difficulty: Medium
+//
+// Problem Description:
+// You are given a 0-indexed string array words having length n and containing 0-indexed strings.
+//
+// You are allowed to perform the following operation any number of times (including zero):
+//
+//
+// 	Choose integers i, j, x, and y such that 0 <= i, j < n, 0 <= x < words[i].length, 0 <= y < words[j].length, and swap the characters words[i][x] and words[j][y].
+//
+//
+// Return an integer denoting the maximum number of palindromes words can contain, after performing some operations.
+//
+// Note: i and j may be equal during an operation.
+//
+// Example:
+// Input: words = ["abbb","ba","aa"]
+// Output: 3
+// Explanation: In this example, one way to get the maximum number of palindromes is:
+// Choose i = 0, j = 1, x = 0, y = 0, so we swap words[0][0] and words[1][0]. words becomes ["bbbb","aa","aa"].
+// All strings in words are now palindromes.
+// Hence, the maximum number of palindromes achievable is 3.
+//
+// Constraints:
+// 1 <= words.length <= 1000
+// 	1 <= words[i].length <= 100
+// 	words[i] consists only of lowercase English letters.
+//
+// Helpful references (internal KB):
+// - Manacher's Algorithm - Finding all sub-p (string, array, simulation, enumeration)
+//   • When to use: When you need to find all palindromic substrings or the longest palindromic substring within a given string efficiently. It is particularly useful for achieving linear time complexity for this task.
+//   • Idea: Manacher's algorithm finds all maximal palindromic substrings centered at each position in a string by leveraging symmetry and previously computed results. It achieves an optimal O(N) time complexity.
+//   • Invariants: d_odd[i] stores the radius of the longest odd-length palindrome centered at i.; The (l, r) interval always defines the rightmost palindrome found so far.
+//   • Tips: Preprocess the string with delimiters to unify odd and even length palindromes.; Maintain the current rightmost boundary `r` of the largest palindrome found.
+//   • Pitfalls: Forgetting to update the `(l, r)` boundaries after processing each center.; Incorrectly calculating mirror positions or handling boundary cases for `i > r`.
+// - The Inclusion-Exclusion Principle (string, counting)
+//   • When to use: Use when you need to determine the frequency of characters or substrings within a string. It is essential for tasks like anagram detection or checking character distribution.
+//   • Idea: This technique involves iterating through a string to tally the occurrences of its constituent elements, typically characters or words. It generally operates in O(N) time complexity, where N is the string's length.
+//   • Invariants: The count for each character reflects its total occurrences processed so far.; All characters encountered up to the current position have been tallied.
+//   • Tips: Use a hash map (dictionary) for arbitrary character sets.; Use an array for fixed-size character sets (e.g., ASCII, lowercase English).
+//   • Pitfalls: Forgetting to handle case sensitivity or ignore non-alphanumeric characters.; Incorrectly handling Unicode characters with fixed-size arrays.
+// - Search the subarray with the maximum/minimum sum (array, greedy, dp-1d)
+//   • When to use: When you need to find the contiguous subarray within a one-dimensional array of numbers that has the largest or smallest sum, typically in linear time.
+//   • Idea: This algorithm efficiently finds the maximum (or minimum) sum of a contiguous subarray by iterating through the array and maintaining a current sum, resetting it if it becomes detrimental. It operates in O(N) time complexity with O(1) space complexity.
+//   • Invariants: `global_max` holds the maximum sum of any contiguous subarray encountered up to the current element.; `current_max` holds the maximum sum of a contiguous subarray ending at the current element.
+//   • Tips: Initialize current and global maximums appropriately (e.g., to negative infinity or first element).; Adapt for minimum sum by resetting current sum if it becomes positive.
+//   • Pitfalls: Failing to correctly initialize maximum/minimum sum variables.; Not handling arrays where all elements are negative (for max sum) or positive (for min sum).
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Use the C standard library only; no external packages.
+// - Do not change input/output formats or return value semantics.
+// - Conformance: ISO C (C89/C99/C11). Do NOT use GNU C extensions (nested functions, statement expressions, typeof, __auto_type, etc.). Avoid VLAs and non-standard builtins.
+// - If you introduce any helper functions, include their full implementations in this file; no hidden helpers.
+
+int maxPalindromesAfterOperations(char** words, int wordsSize) {
+    int odd_count = 0;
+    int even_count = 0;
+    int total_length = 0;
+
+    for (int i = 0; i < wordsSize; i++) {
+        int length = 0;
+        while (words[i][length] != '\0') {
+            length++;
+        }
+        total_length += length;
+        if (length % 2 == 0) {
+            even_count++;
+        } else {
+            odd_count++;
+        }
+    }
+
+    if (total_length % 2 == 0) {
+        return wordsSize;
+    } else {
+        if (odd_count > 0) {
+            return wordsSize;
+        } else {
+            return wordsSize - 1;
+        }
+    }       
+}

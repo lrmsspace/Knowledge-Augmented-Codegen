@@ -1,0 +1,40 @@
+{
+  "slug": "average-of-levels-in-binary-tree",
+  "link": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+  "difficulty": "Easy",
+  "index": "143",
+  "description_full": "Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.\n \nExample 1:\n\n\nInput: root = [3,9,20,null,null,15,7]\nOutput: [3.00000,14.50000,11.00000]\nExplanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.\nHence return [3, 14.5, 11].\n\n\nExample 2:\n\n\nInput: root = [3,9,20,15,7]\nOutput: [3.00000,14.50000,11.00000]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 104].\n\t-231 <= Node.val <= 231 - 1\n\n",
+  "description": "Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.",
+  "example": "Input: root = [3,9,20,null,null,15,7]\nOutput: [3.00000,14.50000,11.00000]\nExplanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.\nHence return [3, 14.5, 11].",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 104].\n\t-231 <= Node.val <= 231 - 1",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\ndouble* averageOfLevels(struct TreeNode* root, int* returnSize) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<double> averageOfLevels(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public List<Double> averageOfLevels(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar averageOfLevels = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def averageOfLevels(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: List[float]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a level-order traversal of the binary tree, summing node values and counting nodes for each level, then calculate and store the average.",
+      "structures": [
+        "tree",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "average-value-of-the-nodes-on-each-level",
+        "binary-tree"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-tree-is-in-the-range-1-10-4",
+        "answers-within-10-5-of-the-actual-answer-will-be-accepted"
+      ]
+    }
+  ]
+}

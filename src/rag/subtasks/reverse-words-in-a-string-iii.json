@@ -1,0 +1,38 @@
+{
+  "slug": "reverse-words-in-a-string-iii",
+  "link": "https://leetcode.com/problems/reverse-words-in-a-string-iii/",
+  "difficulty": "Easy",
+  "index": "117",
+  "description_full": "Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.\n\n \nExample 1:\n\n\nInput: s = \"Let's take LeetCode contest\"\nOutput: \"s'teL ekat edoCteeL tsetnoc\"\n\n\nExample 2:\n\n\nInput: s = \"Mr Ding\"\nOutput: \"rM gniD\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 5 * 104\n\ts contains printable ASCII characters.\n\ts does not contain any leading or trailing spaces.\n\tThere is at least one word in s.\n\tAll the words in s are separated by a single space.\n\n",
+  "description": "Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.",
+  "example": "Input: s = \"Let's take LeetCode contest\"\nOutput: \"s'teL ekat edoCteeL tsetnoc\"",
+  "constraints_text": "1 <= s.length <= 5 * 104\n\ts contains printable ASCII characters.\n\ts does not contain any leading or trailing spaces.\n\tThere is at least one word in s.\n\tAll the words in s are separated by a single space.",
+  "templates": {
+    "c": "char* reverseWords(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string reverseWords(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String reverseWords(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar reverseWords = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def reverseWords(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the sentence, identify each word, and reverse its characters while preserving whitespace and original word order.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "reverse-the-order-of-characters-in-each-word",
+        "preserving-whitespace-and-initial-word-order"
+      ],
+      "constraints": [
+        "separated-by-a-single-space",
+        "no-leading-or-trailing-spaces",
+        "at-least-one-word"
+      ]
+    }
+  ]
+}

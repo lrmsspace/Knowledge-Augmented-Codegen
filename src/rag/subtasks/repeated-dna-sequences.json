@@ -1,0 +1,52 @@
+{
+  "slug": "repeated-dna-sequences",
+  "link": "https://leetcode.com/problems/repeated-dna-sequences/",
+  "difficulty": "Medium",
+  "index": "715",
+  "description_full": "The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.\n\n\n\tFor example, \"ACGAATTCCG\" is a DNA sequence.\n\n\nWhen studying DNA, it is useful to identify repeated sequences within the DNA.\n\nGiven a string s that represents a DNA sequence, return all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in any order.\n\n \nExample 1:\nInput: s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\nOutput: [\"AAAAACCCCC\",\"CCCCCAAAAA\"]\nExample 2:\nInput: s = \"AAAAAAAAAAAAA\"\nOutput: [\"AAAAAAAAAA\"]\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts[i] is either 'A', 'C', 'G', or 'T'.\n\n",
+  "description": "The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.\n\n\n\tFor example, \"ACGAATTCCG\" is a DNA sequence.\n\n\nWhen studying DNA, it is useful to identify repeated sequences within the DNA.\n\nGiven a string s that represents a DNA sequence, return all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in any order.",
+  "example": "Input: s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\nOutput: [\"AAAAACCCCC\",\"CCCCCAAAAA\"]",
+  "constraints_text": "1 <= s.length <= 105\n\ts[i] is either 'A', 'C', 'G', or 'T'.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findRepeatedDnaSequences(char* s, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findRepeatedDnaSequences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findRepeatedDnaSequences(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar findRepeatedDnaSequences = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def findRepeatedDnaSequences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the DNA sequence to extract all 10-letter substrings and count their occurrences.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "sliding-window",
+        "hashing"
+      ],
+      "cues": [
+        "10-letter-long-sequences",
+        "dna-sequence"
+      ],
+      "constraints": [
+        "1-s-length-10-5"
+      ]
+    },
+    {
+      "intent": "Filter the collected substrings to identify and return only those that occurred more than once.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "occur-more-than-once",
+        "return-all"
+      ],
+      "constraints": []
+    }
+  ]
+}

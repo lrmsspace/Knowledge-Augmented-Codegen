@@ -1,0 +1,38 @@
+{
+  "slug": "widest-vertical-area-between-two-points-containing-no-points",
+  "link": "https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points/",
+  "difficulty": "Medium",
+  "index": "1315",
+  "description_full": "Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such that no points are inside the area.\n\nA vertical area is an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The widest vertical area is the one with the maximum width.\n\nNote that points on the edge of a vertical area are not considered included in the area.\n\n \nExample 1:\n​\n\nInput: points = [[8,7],[9,9],[7,4],[9,7]]\nOutput: 1\nExplanation: Both the red and the blue area are optimal.\n\n\nExample 2:\n\n\nInput: points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]\nOutput: 3\n\n\n \nConstraints:\n\n\n\tn == points.length\n\t2 <= n <= 105\n\tpoints[i].length == 2\n\t0 <= xi, yi <= 109\n\n",
+  "description": "Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such that no points are inside the area.\n\nA vertical area is an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The widest vertical area is the one with the maximum width.\n\nNote that points on the edge of a vertical area are not considered included in the area.",
+  "example": "​\n\nInput: points = [[8,7],[9,9],[7,4],[9,7]]\nOutput: 1\nExplanation: Both the red and the blue area are optimal.",
+  "constraints_text": "n == points.length\n\t2 <= n <= 105\n\tpoints[i].length == 2\n\t0 <= xi, yi <= 109",
+  "templates": {
+    "c": "int maxWidthOfVerticalArea(int** points, int pointsSize, int* pointsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxWidthOfVerticalArea(vector<vector<int>>& points) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxWidthOfVerticalArea(int[][] points) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} points\n * @return {number}\n */\nvar maxWidthOfVerticalArea = function(points) {\n    \n};",
+    "python": "class Solution(object):\n    def maxWidthOfVerticalArea(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the maximum difference between adjacent x-coordinates after sorting them to determine the widest vertical area.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "widest-vertical-area",
+        "no-points-inside",
+        "x-axis"
+      ],
+      "constraints": [
+        "2-n-10-5",
+        "0-xi-10-9"
+      ]
+    }
+  ]
+}

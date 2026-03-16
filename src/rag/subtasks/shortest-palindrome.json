@@ -1,0 +1,37 @@
+{
+  "slug": "shortest-palindrome",
+  "link": "https://leetcode.com/problems/shortest-palindrome/",
+  "difficulty": "Hard",
+  "index": "1803",
+  "description_full": "You are given a string s. You can convert s to a palindrome by adding characters in front of it.\n\nReturn the shortest palindrome you can find by performing this transformation.\n\n \nExample 1:\nInput: s = \"aacecaaa\"\nOutput: \"aaacecaaa\"\nExample 2:\nInput: s = \"abcd\"\nOutput: \"dcbabcd\"\n\n \nConstraints:\n\n\n\t0 <= s.length <= 5 * 104\n\ts consists of lowercase English letters only.\n\n",
+  "description": "You are given a string s. You can convert s to a palindrome by adding characters in front of it.\n\nReturn the shortest palindrome you can find by performing this transformation.",
+  "example": "Input: s = \"aacecaaa\"\nOutput: \"aaacecaaa\"",
+  "constraints_text": "0 <= s.length <= 5 * 104\n\ts consists of lowercase English letters only.",
+  "templates": {
+    "c": "char* shortestPalindrome(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string shortestPalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shortestPalindrome(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar shortestPalindrome = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestPalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a combined string and use KMP's LPS array to find the length of the longest palindromic prefix, then build the shortest palindrome.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "kmp"
+      ],
+      "cues": [
+        "shortest-palindrome",
+        "add-characters-in-front"
+      ],
+      "constraints": [
+        "0-s-length-5-104",
+        "s-consists-of-lowercase-english-letters-only"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "count-subarrays-with-fixed-bounds",
+  "link": "https://leetcode.com/problems/count-subarrays-with-fixed-bounds/",
+  "difficulty": "Hard",
+  "index": "2201",
+  "description_full": "You are given an integer array nums and two integers minK and maxK.\n\nA fixed-bound subarray of nums is a subarray that satisfies the following conditions:\n\n\n\tThe minimum value in the subarray is equal to minK.\n\tThe maximum value in the subarray is equal to maxK.\n\n\nReturn the number of fixed-bound subarrays.\n\nA subarray is a contiguous part of an array.\n\n \nExample 1:\n\n\nInput: nums = [1,3,5,2,7,5], minK = 1, maxK = 5\nOutput: 2\nExplanation: The fixed-bound subarrays are [1,3,5] and [1,3,5,2].\n\n\nExample 2:\n\n\nInput: nums = [1,1,1,1], minK = 1, maxK = 1\nOutput: 10\nExplanation: Every subarray of nums is a fixed-bound subarray. There are 10 possible subarrays.\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 105\n\t1 <= nums[i], minK, maxK <= 106\n\n",
+  "description": "You are given an integer array nums and two integers minK and maxK.\n\nA fixed-bound subarray of nums is a subarray that satisfies the following conditions:\n\n\n\tThe minimum value in the subarray is equal to minK.\n\tThe maximum value in the subarray is equal to maxK.\n\n\nReturn the number of fixed-bound subarrays.\n\nA subarray is a contiguous part of an array.",
+  "example": "Input: nums = [1,3,5,2,7,5], minK = 1, maxK = 5\nOutput: 2\nExplanation: The fixed-bound subarrays are [1,3,5] and [1,3,5,2].",
+  "constraints_text": "2 <= nums.length <= 105\n\t1 <= nums[i], minK, maxK <= 106",
+  "templates": {
+    "c": "long long countSubarrays(int* nums, int numsSize, int minK, int maxK) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long countSubarrays(vector<int>& nums, int minK, int maxK) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countSubarrays(int[] nums, int minK, int maxK) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} minK\n * @param {number} maxK\n * @return {number}\n */\nvar countSubarrays = function(nums, minK, maxK) {\n    \n};",
+    "python": "class Solution(object):\n    def countSubarrays(self, nums, minK, maxK):\n        \"\"\"\n        :type nums: List[int]\n        :type minK: int\n        :type maxK: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count fixed-bound subarrays by iterating through the array, tracking the last valid indices for minK, maxK, and any out-of-range elements.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "sliding-window",
+        "enumeration"
+      ],
+      "cues": [
+        "fixed-bound-subarray",
+        "minimum-value-in-subarray-is-mink",
+        "maximum-value-in-subarray-is-maxk",
+        "contiguous-part-of-an-array"
+      ],
+      "constraints": [
+        "2-nums-length-105"
+      ]
+    }
+  ]
+}

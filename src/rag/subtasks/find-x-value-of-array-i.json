@@ -1,0 +1,41 @@
+{
+  "slug": "find-x-value-of-array-i",
+  "link": "https://leetcode.com/problems/find-x-value-of-array-i/",
+  "difficulty": "Medium",
+  "index": "2634",
+  "description_full": "You are given an array of positive integers nums, and a positive integer k.\n\nYou are allowed to perform an operation once on nums, where in each operation you can remove any non-overlapping prefix and suffix from nums such that nums remains non-empty.\n\nYou need to find the x-value of nums, which is the number of ways to perform this operation so that the product of the remaining elements leaves a remainder of x when divided by k.\n\nReturn an array result of size k where result[x] is the x-value of nums for 0 <= x <= k - 1.\n\nA prefix of an array is a subarray that starts from the beginning of the array and extends to any point within it.\n\nA suffix of an array is a subarray that starts at any point within the array and extends to the end of the array.\n\nNote that the prefix and suffix to be chosen for the operation can be empty.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3,4,5], k = 3\n\nOutput: [9,2,4]\n\nExplanation:\n\n\n\tFor x = 0, the possible operations include all possible ways to remove non-overlapping prefix/suffix that do not remove nums[2] == 3.\n\tFor x = 1, the possible operations are:\n\t\n\t\tRemove the empty prefix and the suffix [2, 3, 4, 5]. nums becomes [1].\n\t\tRemove the prefix [1, 2, 3] and the suffix [5]. nums becomes [4].\n\t\n\t\n\tFor x = 2, the possible operations are:\n\t\n\t\tRemove the empty prefix and the suffix [3, 4, 5]. nums becomes [1, 2].\n\t\tRemove the prefix [1] and the suffix [3, 4, 5]. nums becomes [2].\n\t\tRemove the prefix [1, 2, 3] and the empty suffix. nums becomes [4, 5].\n\t\tRemove the prefix [1, 2, 3, 4] and the empty suffix. nums becomes [5].\n\t\n\t\n\n\n\nExample 2:\n\n\nInput: nums = [1,2,4,8,16,32], k = 4\n\nOutput: [18,1,2,0]\n\nExplanation:\n\n\n\tFor x = 0, the only operations that do not result in x = 0 are:\n\n\t\n\t\tRemove the empty prefix and the suffix [4, 8, 16, 32]. nums becomes [1, 2].\n\t\tRemove the empty prefix and the suffix [2, 4, 8, 16, 32]. nums becomes [1].\n\t\tRemove the prefix [1] and the suffix [4, 8, 16, 32]. nums becomes [2].\n\t\n\t\n\tFor x = 1, the only possible operation is:\n\t\n\t\tRemove the empty prefix and the suffix [2, 4, 8, 16, 32]. nums becomes [1].\n\t\n\t\n\tFor x = 2, the possible operations are:\n\t\n\t\tRemove the empty prefix and the suffix [4, 8, 16, 32]. nums becomes [1, 2].\n\t\tRemove the prefix [1] and the suffix [4, 8, 16, 32]. nums becomes [2].\n\t\n\t\n\tFor x = 3, there is no possible way to perform the operation.\n\n\n\nExample 3:\n\n\nInput: nums = [1,1,2,1,1], k = 2\n\nOutput: [9,6]\n\n\n \nConstraints:\n\n\n\t1 <= nums[i] <= 109\n\t1 <= nums.length <= 105\n\t1 <= k <= 5\n\n",
+  "description": "You are given an array of positive integers nums, and a positive integer k.\n\nYou are allowed to perform an operation once on nums, where in each operation you can remove any non-overlapping prefix and suffix from nums such that nums remains non-empty.\n\nYou need to find the x-value of nums, which is the number of ways to perform this operation so that the product of the remaining elements leaves a remainder of x when divided by k.\n\nReturn an array result of size k where result[x] is the x-value of nums for 0 <= x <= k - 1.\n\nA prefix of an array is a subarray that starts from the beginning of the array and extends to any point within it.\n\nA suffix of an array is a subarray that starts at any point within the array and extends to the end of the array.\n\nNote that the prefix and suffix to be chosen for the operation can be empty.",
+  "example": "Input: nums = [1,2,3,4,5], k = 3\n\nOutput: [9,2,4]\n\nExplanation:\n\n\n\tFor x = 0, the possible operations include all possible ways to remove non-overlapping prefix/suffix that do not remove nums[2] == 3.\n\tFor x = 1, the possible operations are:\n\t\n\t\tRemove the empty prefix and the suffix [2, 3, 4, 5]. nums becomes [1].\n\t\tRemove the prefix [1, 2, 3] and the suffix [5]. nums becomes [4].\n\t\n\t\n\tFor x = 2, the possible operations are:\n\t\n\t\tRemove the empty prefix and the suffix [3, 4, 5]. nums becomes [1, 2].\n\t\tRemove the prefix [1] and the suffix [3, 4, 5]. nums becomes [2].\n\t\tRemove the prefix [1, 2, 3] and the empty suffix. nums becomes [4, 5].\n\t\tRemove the prefix [1, 2, 3, 4] and the empty suffix. nums becomes [5].",
+  "constraints_text": "1 <= nums[i] <= 109\n\t1 <= nums.length <= 105\n\t1 <= k <= 5",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* resultArray(int* nums, int numsSize, int k, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<long long> resultArray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] resultArray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number[]}\n */\nvar resultArray = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def resultArray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all contiguous subarrays, calculate their product modulo k, and accumulate counts for each remainder.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "array-of-positive-integers-nums",
+        "positive-integer-k",
+        "remove-any-non-overlapping-prefix-and-suffix",
+        "product-of-the-remaining-elements-leaves-a-remainder-of-x-when-divided-by-k",
+        "return-an-array-result-of-size-k"
+      ],
+      "constraints": [
+        "nums-remains-non-empty",
+        "0-x-k-1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "maximize-subarray-gcd-score",
+  "link": "https://leetcode.com/problems/maximize-subarray-gcd-score/",
+  "difficulty": "Hard",
+  "index": 2836,
+  "description_full": "You are given an array of positive integers nums and an integer k.\n\nYou may perform at most k operations. In each operation, you can choose one element in the array and double its value. Each element can be doubled at most once.\n\nThe score of a contiguous subarray is defined as the product of its length and the greatest common divisor (GCD) of all its elements.\n\nYour task is to return the maximum score that can be achieved by selecting a contiguous subarray from the modified array.\n\nNote:\n\n\n The greatest common divisor (GCD) of an array is the largest integer that evenly divides all the array elements.\n\n\n \nExample 1:\n\n\nInput: nums = [2,4], k = 1\n\nOutput: 8\n\nExplanation:\n\n\n Double nums[0] to 4 using one operation. The modified array becomes [4, 4].\n The GCD of the subarray [4, 4] is 4, and the length is 2.\n Thus, the maximum possible score is 2 × 4 = 8.\n\n\n\nExample 2:\n\n\nInput: nums = [3,5,7], k = 2\n\nOutput: 14\n\nExplanation:\n\n\n Double nums[2] to 14 using one operation. The modified array becomes [3, 5, 14].\n The GCD of the subarray [14] is 14, and the length is 1.\n Thus, the maximum possible score is 1 × 14 = 14.\n\n\n\nExample 3:\n\n\nInput: nums = [5,5,5], k = 1\n\nOutput: 15\n\nExplanation:\n\n\n The subarray [5, 5, 5] has a GCD of 5, and its length is 3.\n Since doubling any element doesn't improve the score, the maximum score is 3 × 5 = 15.\n\n\n\n \nConstraints:\n\n\n 1 <= n == nums.length <= 1500\n 1 <= nums[i] <= 109\n 1 <= k <= n\n\n",
+  "description": "You are given an array of positive integers nums and an integer k.\n\nYou may perform at most k operations. In each operation, you can choose one element in the array and double its value. Each element can be doubled at most once.\n\nThe score of a contiguous subarray is defined as the product of its length and the greatest common divisor (GCD) of all its elements.\n\nYour task is to return the maximum score that can be achieved by selecting a contiguous subarray from the modified array.",
+  "example": "Input: nums = [2,4], k = 1\n\nOutput: 8\n\nExplanation:\n\n\n Double nums[0] to 4 using one operation. The modified array becomes [4, 4].\n The GCD of the subarray [4, 4] is 4, and the length is 2.\n Thus, the maximum possible score is 2 × 4 = 8.",
+  "constraints_text": "1 <= n == nums.length <= 1500\n 1 <= nums[i] <= 109\n 1 <= k <= n",
+  "templates": {
+    "c": "long long maxGCDScore(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long maxGCDScore(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxGCDScore(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar maxGCDScore = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxGCDScore(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all possible contiguous subarrays $[i, j]$ of the original $nums$ array.",
+      "structures": [
+        "array",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "nums",
+        "k",
+        "maximum score",
+        "contiguous subarray"
+      ],
+      "constraints": [
+        "at most k operations"
+      ]
+    },
+    {
+      "intent": "For a fixed subarray $[i, j]$, calculate the maximum possible GCD after at most $k$ doublings, where each element is doubled at most once.",
+      "structures": [
+        "array",
+        "hashmap"
+      ],
+      "actions": [
+        "greedy",
+        "binary-search"
+      ],
+      "cues": [
+        "GCD",
+        "double its value"
+      ],
+      "constraints": [
+        "maximize $\text{GCD} \times \text{length}$"
+      ]
+    },
+    {
+      "intent": "Pre-calculate or compute the GCD of all subarrays to aid the greedy selection of elements to double.",
+      "structures": [
+        "array",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "subarrays",
+        "greatest common divisor"
+      ],
+      "constraints": [
+        "efficient GCD calculation"
+      ]
+    }
+  ]
+}

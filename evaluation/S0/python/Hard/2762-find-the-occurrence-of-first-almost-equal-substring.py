@@ -1,0 +1,46 @@
+# Source: https://leetcode.com/problems/find-the-occurrence-of-first-almost-equal-substring/   |   Difficulty: Hard
+#
+# Problem Description:
+# You are given two strings s and pattern.
+#
+# A string x is called almost equal to y if you can change at most one character in x to make it identical to y.
+#
+# Return the smallest starting index of a substring in s that is almost equal to pattern. If no such index exists, return -1.
+# A substring is a contiguous non-empty sequence of characters within a string.
+#
+# Example:
+# Input: s = "abcdefg", pattern = "bcdffg"
+#
+# Output: 1
+#
+# Explanation:
+#
+# The substring s[1..6] == "bcdefg" can be converted to "bcdffg" by changing s[4] to "f".
+#
+# Constraints:
+# 1 <= pattern.length < s.length <= 105
+# 	s and pattern consist only of lowercase English letters.
+#
+#
+#  
+# Follow-up: Could you solve the problem if at most k consecutive characters can be changed?
+#
+
+class Solution(object):
+    def minStartingIndex(self, s, pattern):
+        """
+        :type s: str
+        :type pattern: str
+        :rtype: int
+        """
+        n, m = len(s), len(pattern)
+        for i in range(n - m + 1):
+            diff = 0
+            for j in range(m):
+                if s[i + j] != pattern[j]:
+                    diff += 1
+                    if diff > 1:
+                        break
+            if diff <= 1:
+                return i
+        return -1

@@ -1,0 +1,57 @@
+{
+  "slug": "determine-if-two-events-have-conflict",
+  "link": "https://leetcode.com/problems/determine-if-two-events-have-conflict/",
+  "difficulty": "Easy",
+  "index": "521",
+  "description_full": "You are given two arrays of strings that represent two inclusive events that happened on the same day, event1 and event2, where:\n\n\n\tevent1 = [startTime1, endTime1] and\n\tevent2 = [startTime2, endTime2].\n\n\nEvent times are valid 24 hours format in the form of HH:MM.\n\nA conflict happens when two events have some non-empty intersection (i.e., some moment is common to both events).\n\nReturn true if there is a conflict between two events. Otherwise, return false.\n\n \nExample 1:\n\n\nInput: event1 = [\"01:15\",\"02:00\"], event2 = [\"02:00\",\"03:00\"]\nOutput: true\nExplanation: The two events intersect at time 2:00.\n\n\nExample 2:\n\n\nInput: event1 = [\"01:00\",\"02:00\"], event2 = [\"01:20\",\"03:00\"]\nOutput: true\nExplanation: The two events intersect starting from 01:20 to 02:00.\n\n\nExample 3:\n\n\nInput: event1 = [\"10:00\",\"11:00\"], event2 = [\"14:00\",\"15:00\"]\nOutput: false\nExplanation: The two events do not intersect.\n\n\n \nConstraints:\n\n\n\tevent1.length == event2.length == 2\n\tevent1[i].length == event2[i].length == 5\n\tstartTime1 <= endTime1\n\tstartTime2 <= endTime2\n\tAll the event times follow the HH:MM format.\n\n",
+  "description": "You are given two arrays of strings that represent two inclusive events that happened on the same day, event1 and event2, where:\n\n\n\tevent1 = [startTime1, endTime1] and\n\tevent2 = [startTime2, endTime2].\n\n\nEvent times are valid 24 hours format in the form of HH:MM.\n\nA conflict happens when two events have some non-empty intersection (i.e., some moment is common to both events).\n\nReturn true if there is a conflict between two events. Otherwise, return false.",
+  "example": "Input: event1 = [\"01:15\",\"02:00\"], event2 = [\"02:00\",\"03:00\"]\nOutput: true\nExplanation: The two events intersect at time 2:00.",
+  "constraints_text": "event1.length == event2.length == 2\n\tevent1[i].length == event2[i].length == 5\n\tstartTime1 <= endTime1\n\tstartTime2 <= endTime2\n\tAll the event times follow the HH:MM format.",
+  "templates": {
+    "c": "bool haveConflict(char** event1, int event1Size, char** event2, int event2Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool haveConflict(vector<string>& event1, vector<string>& event2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean haveConflict(String[] event1, String[] event2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} event1\n * @param {string[]} event2\n * @return {boolean}\n */\nvar haveConflict = function(event1, event2) {\n    \n};",
+    "python": "class Solution(object):\n    def haveConflict(self, event1, event2):\n        \"\"\"\n        :type event1: List[str]\n        :type event2: List[str]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Convert HH:MM time strings from event arrays into comparable integer minutes from midnight.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "hh-mm-format",
+        "event-times"
+      ],
+      "constraints": [
+        "event1-i-length-5",
+        "valid-24-hours-format"
+      ]
+    },
+    {
+      "intent": "Determine if the two converted time intervals have a non-empty intersection, indicating a conflict.",
+      "structures": [
+        "interval",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "conflict-happens",
+        "non-empty-intersection"
+      ],
+      "constraints": [
+        "starttime1-endtime1",
+        "starttime2-endtime2"
+      ]
+    }
+  ]
+}

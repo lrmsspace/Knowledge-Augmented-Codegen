@@ -1,0 +1,56 @@
+{
+  "slug": "longest-duplicate-substring",
+  "link": "https://leetcode.com/problems/longest-duplicate-substring/",
+  "difficulty": "Hard",
+  "index": "1945",
+  "description_full": "Given a string s, consider all duplicated substrings: (contiguous) substrings of s that occur 2 or more times. The occurrences may overlap.\n\nReturn any duplicated substring that has the longest possible length. If s does not have a duplicated substring, the answer is \"\".\n\n \nExample 1:\nInput: s = \"banana\"\nOutput: \"ana\"\nExample 2:\nInput: s = \"abcd\"\nOutput: \"\"\n\n \nConstraints:\n\n\n\t2 <= s.length <= 3 * 104\n\ts consists of lowercase English letters.\n\n",
+  "description": "Given a string s, consider all duplicated substrings: (contiguous) substrings of s that occur 2 or more times. The occurrences may overlap.\n\nReturn any duplicated substring that has the longest possible length. If s does not have a duplicated substring, the answer is \"\".",
+  "example": "Input: s = \"banana\"\nOutput: \"ana\"",
+  "constraints_text": "2 <= s.length <= 3 * 104\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "char* longestDupSubstring(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string longestDupSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestDupSubstring(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar longestDupSubstring = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def longestDupSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Binary search for the maximum possible length of a duplicated substring within the given string.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "longest-possible-length",
+        "duplicated-substring"
+      ],
+      "constraints": [
+        "2-s-length-3-104"
+      ]
+    },
+    {
+      "intent": "Implement a helper function to efficiently check if any substring of a specific length L appears at least twice.",
+      "structures": [
+        "string",
+        "number",
+        "array"
+      ],
+      "actions": [
+        "hashing",
+        "rolling-hash",
+        "simulation"
+      ],
+      "cues": [
+        "duplicated-substrings",
+        "occur-2-or-more-times",
+        "may-overlap"
+      ],
+      "constraints": [
+        "s-consists-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

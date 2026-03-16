@@ -1,0 +1,81 @@
+{
+  "slug": "build-a-matrix-with-conditions",
+  "link": "https://leetcode.com/problems/build-a-matrix-with-conditions/",
+  "difficulty": "Hard",
+  "index": "2190",
+  "description_full": "You are given a positive integer k. You are also given:\n\n\n\ta 2D integer array rowConditions of size n where rowConditions[i] = [abovei, belowi], and\n\ta 2D integer array colConditions of size m where colConditions[i] = [lefti, righti].\n\n\nThe two arrays contain integers from 1 to k.\n\nYou have to build a k x k matrix that contains each of the numbers from 1 to k exactly once. The remaining cells should have the value 0.\n\nThe matrix should also satisfy the following conditions:\n\n\n\tThe number abovei should appear in a row that is strictly above the row at which the number belowi appears for all i from 0 to n - 1.\n\tThe number lefti should appear in a column that is strictly left of the column at which the number righti appears for all i from 0 to m - 1.\n\n\nReturn any matrix that satisfies the conditions. If no answer exists, return an empty matrix.\n\n \nExample 1:\n\n\nInput: k = 3, rowConditions = [[1,2],[3,2]], colConditions = [[2,1],[3,2]]\nOutput: [[3,0,0],[0,0,1],[0,2,0]]\nExplanation: The diagram above shows a valid example of a matrix that satisfies all the conditions.\nThe row conditions are the following:\n- Number 1 is in row 1, and number 2 is in row 2, so 1 is above 2 in the matrix.\n- Number 3 is in row 0, and number 2 is in row 2, so 3 is above 2 in the matrix.\nThe column conditions are the following:\n- Number 2 is in column 1, and number 1 is in column 2, so 2 is left of 1 in the matrix.\n- Number 3 is in column 0, and number 2 is in column 1, so 3 is left of 2 in the matrix.\nNote that there may be multiple correct answers.\n\n\nExample 2:\n\n\nInput: k = 3, rowConditions = [[1,2],[2,3],[3,1],[2,3]], colConditions = [[2,1]]\nOutput: []\nExplanation: From the first two conditions, 3 has to be below 1 but the third conditions needs 3 to be above 1 to be satisfied.\nNo matrix can satisfy all the conditions, so we return the empty matrix.\n\n\n \nConstraints:\n\n\n\t2 <= k <= 400\n\t1 <= rowConditions.length, colConditions.length <= 104\n\trowConditions[i].length == colConditions[i].length == 2\n\t1 <= abovei, belowi, lefti, righti <= k\n\tabovei != belowi\n\tlefti != righti\n\n",
+  "description": "You are given a positive integer k. You are also given:\n\n\n\ta 2D integer array rowConditions of size n where rowConditions[i] = [abovei, belowi], and\n\ta 2D integer array colConditions of size m where colConditions[i] = [lefti, righti].\n\n\nThe two arrays contain integers from 1 to k.\n\nYou have to build a k x k matrix that contains each of the numbers from 1 to k exactly once. The remaining cells should have the value 0.\n\nThe matrix should also satisfy the following conditions:\n\n\n\tThe number abovei should appear in a row that is strictly above the row at which the number belowi appears for all i from 0 to n - 1.\n\tThe number lefti should appear in a column that is strictly left of the column at which the number righti appears for all i from 0 to m - 1.\n\n\nReturn any matrix that satisfies the conditions. If no answer exists, return an empty matrix.",
+  "example": "Input: k = 3, rowConditions = [[1,2],[3,2]], colConditions = [[2,1],[3,2]]\nOutput: [[3,0,0],[0,0,1],[0,2,0]]\nExplanation: The diagram above shows a valid example of a matrix that satisfies all the conditions.\nThe row conditions are the following:\n- Number 1 is in row 1, and number 2 is in row 2, so 1 is above 2 in the matrix.\n- Number 3 is in row 0, and number 2 is in row 2, so 3 is above 2 in the matrix.\nThe column conditions are the following:\n- Number 2 is in column 1, and number 1 is in column 2, so 2 is left of 1 in the matrix.\n- Number 3 is in column 0, and number 2 is in column 1, so 3 is left of 2 in the matrix.\nNote that there may be multiple correct answers.",
+  "constraints_text": "2 <= k <= 400\n\t1 <= rowConditions.length, colConditions.length <= 104\n\trowConditions[i].length == colConditions[i].length == 2\n\t1 <= abovei, belowi, lefti, righti <= k\n\tabovei != belowi\n\tlefti != righti",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** buildMatrix(int k, int** rowConditions, int rowConditionsSize, int* rowConditionsColSize, int** colConditions, int colConditionsSize, int* colConditionsColSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> buildMatrix(int k, vector<vector<int>>& rowConditions, vector<vector<int>>& colConditions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] buildMatrix(int k, int[][] rowConditions, int[][] colConditions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number[][]} rowConditions\n * @param {number[][]} colConditions\n * @return {number[][]}\n */\nvar buildMatrix = function(k, rowConditions, colConditions) {\n    \n};",
+    "python": "class Solution(object):\n    def buildMatrix(self, k, rowConditions, colConditions):\n        \"\"\"\n        :type k: int\n        :type rowConditions: List[List[int]]\n        :type colConditions: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute a valid topological ordering of numbers for row placement based on row conditions.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "topo"
+      ],
+      "cues": [
+        "rowconditions",
+        "abovei",
+        "belowi",
+        "strictly-above"
+      ],
+      "constraints": [
+        "1-to-k-numbers",
+        "each-number-exactly-once"
+      ]
+    },
+    {
+      "intent": "Compute a valid topological ordering of numbers for column placement based on column conditions.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "topo"
+      ],
+      "cues": [
+        "colconditions",
+        "lefti",
+        "righti",
+        "strictly-left"
+      ],
+      "constraints": [
+        "1-to-k-numbers",
+        "each-number-exactly-once"
+      ]
+    },
+    {
+      "intent": "Construct the final k x k matrix using the determined row and column positions.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "build-k-x-k-matrix",
+        "contains-each-of-the-numbers-from-1-to-k-exactly-once",
+        "remaining-cells-should-have-the-value-0",
+        "return-any-matrix",
+        "if-no-answer-exists-return-an-empty-matrix"
+      ],
+      "constraints": [
+        "k-x-k-matrix",
+        "numbers-1-to-k",
+        "0-for-empty-cells"
+      ]
+    }
+  ]
+}

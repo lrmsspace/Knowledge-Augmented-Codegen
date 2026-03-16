@@ -1,0 +1,38 @@
+{
+  "slug": "remove-duplicates-from-sorted-list-ii",
+  "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/",
+  "difficulty": "Medium",
+  "index": "660",
+  "description_full": "Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.\n\n \nExample 1:\n\n\nInput: head = [1,2,3,3,4,4,5]\nOutput: [1,2,5]\n\n\nExample 2:\n\n\nInput: head = [1,1,1,2,3]\nOutput: [2,3]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the list is in the range [0, 300].\n\t-100 <= Node.val <= 100\n\tThe list is guaranteed to be sorted in ascending order.\n\n",
+  "description": "Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.",
+  "example": "Input: head = [1,2,3,3,4,4,5]\nOutput: [1,2,5]",
+  "constraints_text": "The number of nodes in the list is in the range [0, 300].\n\t-100 <= Node.val <= 100\n\tThe list is guaranteed to be sorted in ascending order.",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* deleteDuplicates(struct ListNode* head) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* deleteDuplicates(ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode deleteDuplicates(ListNode head) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar deleteDuplicates = function(head) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def deleteDuplicates(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a new linked list by iterating through the original sorted list, identifying and skipping all duplicate number sequences, and linking only unique nodes.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "delete-all-nodes-that-have-duplicate-numbers",
+        "leaving-only-distinct-numbers",
+        "sorted-linked-list"
+      ],
+      "constraints": [
+        "list-is-sorted",
+        "number-of-nodes-in-the-list-is-in-the-range-0-300"
+      ]
+    }
+  ]
+}

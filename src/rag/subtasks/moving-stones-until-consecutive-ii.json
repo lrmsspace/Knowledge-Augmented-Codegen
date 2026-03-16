@@ -1,0 +1,53 @@
+{
+  "slug": "moving-stones-until-consecutive-ii",
+  "link": "https://leetcode.com/problems/moving-stones-until-consecutive-ii/",
+  "difficulty": "Medium",
+  "index": 1091,
+  "description_full": "There are some stones in different positions on the X-axis. You are given an integer array stones, the positions of the stones.\n\nCall a stone an endpoint stone if it has the smallest or largest position. In one move, you pick up an endpoint stone and move it to an unoccupied position so that it is no longer an endpoint stone.\n\n\n In particular, if the stones are at say, stones = [1,2,5], you cannot move the endpoint stone at position 5, since moving it to any position (such as 0, or 3) will still keep that stone as an endpoint stone.\n\n\nThe game ends when you cannot make any more moves (i.e., the stones are in three consecutive positions).\n\nReturn an integer array answer of length 2 where:\n\n\n answer[0] is the minimum number of moves you can play, and\n answer[1] is the maximum number of moves you can play.\n\n\n \nExample 1:\n\n\nInput: stones = [7,4,9]\nOutput: [1,2]\nExplanation: We can move 4 -> 8 for one move to finish the game.\nOr, we can move 9 -> 5, 4 -> 6 for two moves to finish the game.\n\n\nExample 2:\n\n\nInput: stones = [6,5,4,3,10]\nOutput: [2,3]\nExplanation: We can move 3 -> 8 then 10 -> 7 to finish the game.\nOr, we can move 3 -> 7, 4 -> 8, 5 -> 9 to finish the game.\nNotice we cannot move 10 -> 2 to finish the game, because that would be an illegal move.\n\n\n \nConstraints:\n\n\n 3 <= stones.length <= 104\n 1 <= stones[i] <= 109\n All the values of stones are unique.\n\n",
+  "description": "There are some stones in different positions on the X-axis. You are given an integer array stones, the positions of the stones.\n\nCall a stone an endpoint stone if it has the smallest or largest position. In one move, you pick up an endpoint stone and move it to an unoccupied position so that it is no longer an endpoint stone.\n\n\n In particular, if the stones are at say, stones = [1,2,5], you cannot move the endpoint stone at position 5, since moving it to any position (such as 0, or 3) will still keep that stone as an endpoint stone.\n\n\nThe game ends when you cannot make any more moves (i.e., the stones are in three consecutive positions).\n\nReturn an integer array answer of length 2 where:\n\n\n answer[0] is the minimum number of moves you can play, and\n answer[1] is the maximum number of moves you can play.",
+  "example": "Input: stones = [7,4,9]\nOutput: [1,2]\nExplanation: We can move 4 -> 8 for one move to finish the game.\nOr, we can move 9 -> 5, 4 -> 6 for two moves to finish the game.",
+  "constraints_text": "3 <= stones.length <= 104\n 1 <= stones[i] <= 109\n All the values of stones are unique.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numMovesStonesII(int* stones, int stonesSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> numMovesStonesII(vector<int>& stones) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] numMovesStonesII(int[] stones) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} stones\n * @return {number[]}\n */\nvar numMovesStonesII = function(stones) {\n    \n};",
+    "python": "class Solution(object):\n    def numMovesStonesII(self, stones):\n        \"\"\"\n        :type stones: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort stones and compute max moves by finding the maximum number of empty slots to be filled between the first two or last two stones.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "sort",
+        "greedy"
+      ],
+      "cues": [
+        "stones",
+        "max moves"
+      ],
+      "constraints": [
+        ""
+      ]
+    },
+    {
+      "intent": "Find min moves by using a sliding window to maximize the count of stones within any N-length contiguous interval.",
+      "structures": [
+        "array",
+        "interval"
+      ],
+      "actions": [
+        "sliding-window"
+      ],
+      "cues": [
+        "stones",
+        "min moves"
+      ],
+      "constraints": [
+        "handle special case"
+      ]
+    }
+  ]
+}

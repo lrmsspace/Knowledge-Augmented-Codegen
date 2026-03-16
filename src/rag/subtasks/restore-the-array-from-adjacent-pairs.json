@@ -1,0 +1,59 @@
+{
+  "slug": "restore-the-array-from-adjacent-pairs",
+  "link": "https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/",
+  "difficulty": "Medium",
+  "index": "1355",
+  "description_full": "There is an integer array nums that consists of n unique elements, but you have forgotten it. However, you do remember every pair of adjacent elements in nums.\n\nYou are given a 2D integer array adjacentPairs of size n - 1 where each adjacentPairs[i] = [ui, vi] indicates that the elements ui and vi are adjacent in nums.\n\nIt is guaranteed that every adjacent pair of elements nums[i] and nums[i+1] will exist in adjacentPairs, either as [nums[i], nums[i+1]] or [nums[i+1], nums[i]]. The pairs can appear in any order.\n\nReturn the original array nums. If there are multiple solutions, return any of them.\n\n \nExample 1:\n\n\nInput: adjacentPairs = [[2,1],[3,4],[3,2]]\nOutput: [1,2,3,4]\nExplanation: This array has all its adjacent pairs in adjacentPairs.\nNotice that adjacentPairs[i] may not be in left-to-right order.\n\n\nExample 2:\n\n\nInput: adjacentPairs = [[4,-2],[1,4],[-3,1]]\nOutput: [-2,4,1,-3]\nExplanation: There can be negative numbers.\nAnother solution is [-3,1,4,-2], which would also be accepted.\n\n\nExample 3:\n\n\nInput: adjacentPairs = [[100000,-100000]]\nOutput: [100000,-100000]\n\n\n \nConstraints:\n\n\n\tnums.length == n\n\tadjacentPairs.length == n - 1\n\tadjacentPairs[i].length == 2\n\t2 <= n <= 105\n\t-105 <= nums[i], ui, vi <= 105\n\tThere exists some nums that has adjacentPairs as its pairs.\n\n",
+  "description": "There is an integer array nums that consists of n unique elements, but you have forgotten it. However, you do remember every pair of adjacent elements in nums.\n\nYou are given a 2D integer array adjacentPairs of size n - 1 where each adjacentPairs[i] = [ui, vi] indicates that the elements ui and vi are adjacent in nums.\n\nIt is guaranteed that every adjacent pair of elements nums[i] and nums[i+1] will exist in adjacentPairs, either as [nums[i], nums[i+1]] or [nums[i+1], nums[i]]. The pairs can appear in any order.\n\nReturn the original array nums. If there are multiple solutions, return any of them.",
+  "example": "Input: adjacentPairs = [[2,1],[3,4],[3,2]]\nOutput: [1,2,3,4]\nExplanation: This array has all its adjacent pairs in adjacentPairs.\nNotice that adjacentPairs[i] may not be in left-to-right order.",
+  "constraints_text": "nums.length == n\n\tadjacentPairs.length == n - 1\n\tadjacentPairs[i].length == 2\n\t2 <= n <= 105\n\t-105 <= nums[i], ui, vi <= 105\n\tThere exists some nums that has adjacentPairs as its pairs.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* restoreArray(int** adjacentPairs, int adjacentPairsSize, int* adjacentPairsColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> restoreArray(vector<vector<int>>& adjacentPairs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] restoreArray(int[][] adjacentPairs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} adjacentPairs\n * @return {number[]}\n */\nvar restoreArray = function(adjacentPairs) {\n    \n};",
+    "python": "class Solution(object):\n    def restoreArray(self, adjacentPairs):\n        \"\"\"\n        :type adjacentPairs: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a graph representation mapping each number to its adjacent numbers.",
+      "structures": [
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "adjacentpairs",
+        "ui-and-vi-are-adjacent"
+      ],
+      "constraints": [
+        "n-1-pairs",
+        "2-n-105"
+      ]
+    },
+    {
+      "intent": "Identify an endpoint in the adjacency map and traverse the unique path to reconstruct the original array.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "return-the-original-array-nums",
+        "unique-elements",
+        "every-pair-of-adjacent-elements"
+      ],
+      "constraints": [
+        "n-unique-elements",
+        "n-1-pairs",
+        "2-n-105"
+      ]
+    }
+  ]
+}

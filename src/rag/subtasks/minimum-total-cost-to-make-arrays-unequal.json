@@ -1,0 +1,73 @@
+{
+  "slug": "minimum-total-cost-to-make-arrays-unequal",
+  "link": "https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal/",
+  "difficulty": "Hard",
+  "index": 2213,
+  "description_full": "You are given two 0-indexed integer arrays nums1 and nums2, of equal length n.\n\nIn one operation, you can swap the values of any two indices of nums1. The cost of this operation is the sum of the indices.\n\nFind the minimum total cost of performing the given operation any number of times such that nums1[i] != nums2[i] for all 0 <= i <= n - 1 after performing all the operations.\n\nReturn the minimum total cost such that nums1 and nums2 satisfy the above condition. In case it is not possible, return -1.\n\n \nExample 1:\n\n\nInput: nums1 = [1,2,3,4,5], nums2 = [1,2,3,4,5]\nOutput: 10\nExplanation: \nOne of the ways we can perform the operations is:\n- Swap values at indices 0 and 3, incurring cost = 0 + 3 = 3. Now, nums1 = [4,2,3,1,5]\n- Swap values at indices 1 and 2, incurring cost = 1 + 2 = 3. Now, nums1 = [4,3,2,1,5].\n- Swap values at indices 0 and 4, incurring cost = 0 + 4 = 4. Now, nums1 =[5,3,2,1,4].\nWe can see that for each index i, nums1[i] != nums2[i]. The cost required here is 10.\nNote that there are other ways to swap values, but it can be proven that it is not possible to obtain a cost less than 10.\n\n\nExample 2:\n\n\nInput: nums1 = [2,2,2,1,3], nums2 = [1,2,2,3,3]\nOutput: 10\nExplanation: \nOne of the ways we can perform the operations is:\n- Swap values at indices 2 and 3, incurring cost = 2 + 3 = 5. Now, nums1 = [2,2,1,2,3].\n- Swap values at indices 1 and 4, incurring cost = 1 + 4 = 5. Now, nums1 = [2,3,1,2,2].\nThe total cost needed here is 10, which is the minimum possible.\n\n\nExample 3:\n\n\nInput: nums1 = [1,2,2], nums2 = [1,2,2]\nOutput: -1\nExplanation: \nIt can be shown that it is not possible to satisfy the given conditions irrespective of the number of operations we perform.\nHence, we return -1.\n\n\n \nConstraints:\n\n\n n == nums1.length == nums2.length\n 1 <= n <= 105\n 1 <= nums1[i], nums2[i] <= n\n\n",
+  "description": "You are given two 0-indexed integer arrays nums1 and nums2, of equal length n.\n\nIn one operation, you can swap the values of any two indices of nums1. The cost of this operation is the sum of the indices.\n\nFind the minimum total cost of performing the given operation any number of times such that nums1[i] != nums2[i] for all 0 <= i <= n - 1 after performing all the operations.\n\nReturn the minimum total cost such that nums1 and nums2 satisfy the above condition. In case it is not possible, return -1.",
+  "example": "Input: nums1 = [1,2,3,4,5], nums2 = [1,2,3,4,5]\nOutput: 10\nExplanation: \nOne of the ways we can perform the operations is:\n- Swap values at indices 0 and 3, incurring cost = 0 + 3 = 3. Now, nums1 = [4,2,3,1,5]\n- Swap values at indices 1 and 2, incurring cost = 1 + 2 = 3. Now, nums1 = [4,3,2,1,5].\n- Swap values at indices 0 and 4, incurring cost = 0 + 4 = 4. Now, nums1 =[5,3,2,1,4].\nWe can see that for each index i, nums1[i] != nums2[i]. The cost required here is 10.\nNote that there are other ways to swap values, but it can be proven that it is not possible to obtain a cost less than 10.",
+  "constraints_text": "n == nums1.length == nums2.length\n 1 <= n <= 105\n 1 <= nums1[i], nums2[i] <= n",
+  "templates": {
+    "c": "long long minimumTotalCost(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minimumTotalCost(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimumTotalCost(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar minimumTotalCost = function(nums1, nums2) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumTotalCost(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify indices where nums1[i] == nums2[i] (mismatch) and partition them by nums1[i] value.",
+      "structures": [
+        "array",
+        "hashmap"
+      ],
+      "actions": [
+        ""
+      ],
+      "cues": [
+        "nums1",
+        "nums2",
+        "mismatch",
+        "cost"
+      ],
+      "constraints": [
+        "minimize total cost"
+      ]
+    },
+    {
+      "intent": "Attempt to resolve mismatches using indices where nums1[i] != nums2[i] (match), prioritizing low-cost swaps.",
+      "structures": [
+        "array",
+        "greedy"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "swap",
+        "minimum total cost"
+      ],
+      "constraints": [
+        "check for feasibility first"
+      ]
+    },
+    {
+      "intent": "Model remaining swaps as a minimum weight perfect matching problem on a graph to cover all mismatch groups.",
+      "structures": [
+        "graph",
+        "heap",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "minimum total cost",
+        "perfect matching"
+      ],
+      "constraints": [
+        ""
+      ]
+    }
+  ]
+}

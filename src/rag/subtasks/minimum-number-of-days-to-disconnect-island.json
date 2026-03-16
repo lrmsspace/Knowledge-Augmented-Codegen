@@ -1,0 +1,92 @@
+{
+  "slug": "minimum-number-of-days-to-disconnect-island",
+  "link": "https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/",
+  "difficulty": "Hard",
+  "index": "2029",
+  "description_full": "You are given an m x n binary grid grid where 1 represents land and 0 represents water. An island is a maximal 4-directionally (horizontal or vertical) connected group of 1's.\n\nThe grid is said to be connected if we have exactly one island, otherwise is said disconnected.\n\nIn one day, we are allowed to change any single land cell (1) into a water cell (0).\n\nReturn the minimum number of days to disconnect the grid.\n\n \nExample 1:\n\n\nInput: grid = [[0,1,1,0],[0,1,1,0],[0,0,0,0]]\n\nOutput: 2\nExplanation: We need at least 2 days to get a disconnected grid.\nChange land grid[1][1] and grid[0][2] to water and get 2 disconnected island.\n\n\nExample 2:\n\n\nInput: grid = [[1,1]]\nOutput: 2\nExplanation: Grid of full water is also disconnected ([[1,1]] -> [[0,0]]), 0 islands.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 30\n\tgrid[i][j] is either 0 or 1.\n\n",
+  "description": "You are given an m x n binary grid grid where 1 represents land and 0 represents water. An island is a maximal 4-directionally (horizontal or vertical) connected group of 1's.\n\nThe grid is said to be connected if we have exactly one island, otherwise is said disconnected.\n\nIn one day, we are allowed to change any single land cell (1) into a water cell (0).\n\nReturn the minimum number of days to disconnect the grid.",
+  "example": "Input: grid = [[0,1,1,0],[0,1,1,0],[0,0,0,0]]\n\nOutput: 2\nExplanation: We need at least 2 days to get a disconnected grid.\nChange land grid[1][1] and grid[0][2] to water and get 2 disconnected island.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 30\n\tgrid[i][j] is either 0 or 1.",
+  "templates": {
+    "c": "int minDays(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minDays(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDays(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minDays = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def minDays(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a helper function to count connected components of '1's in a binary grid using BFS/DFS.",
+      "structures": [
+        "matrix",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs",
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "island",
+        "4-directionally-connected",
+        "group-of-1-s"
+      ],
+      "constraints": [
+        "m-n-30"
+      ]
+    },
+    {
+      "intent": "Check if the initial grid is already disconnected (0 or more than 1 island), returning 0 days if so.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-days",
+        "exactly-one-island",
+        "disconnected"
+      ],
+      "constraints": [
+        "m-n-30"
+      ]
+    },
+    {
+      "intent": "Iterate through all land cells, temporarily removing each, and check if the grid becomes disconnected, returning 1 day if possible.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "change-any-single-land-cell",
+        "minimum-number-of-days"
+      ],
+      "constraints": [
+        "m-n-30"
+      ]
+    },
+    {
+      "intent": "If neither 0 nor 1 day disconnections are possible, the answer is always 2 days.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-days"
+      ],
+      "constraints": [
+        "m-n-30"
+      ]
+    }
+  ]
+}

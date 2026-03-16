@@ -1,0 +1,38 @@
+{
+  "slug": "find-valid-matrix-given-row-and-column-sums",
+  "link": "https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/",
+  "difficulty": "Medium",
+  "index": "1305",
+  "description_full": "You are given two arrays rowSum and colSum of non-negative integers where rowSum[i] is the sum of the elements in the ith row and colSum[j] is the sum of the elements of the jth column of a 2D matrix. In other words, you do not know the elements of the matrix, but you do know the sums of each row and column.\n\nFind any matrix of non-negative integers of size rowSum.length x colSum.length that satisfies the rowSum and colSum requirements.\n\nReturn a 2D array representing any matrix that fulfills the requirements. It's guaranteed that at least one matrix that fulfills the requirements exists.\n\n \nExample 1:\n\n\nInput: rowSum = [3,8], colSum = [4,7]\nOutput: [[3,0],\n         [1,7]]\nExplanation: \n0th row: 3 + 0 = 3 == rowSum[0]\n1st row: 1 + 7 = 8 == rowSum[1]\n0th column: 3 + 1 = 4 == colSum[0]\n1st column: 0 + 7 = 7 == colSum[1]\nThe row and column sums match, and all matrix elements are non-negative.\nAnother possible matrix is: [[1,2],\n                             [3,5]]\n\n\nExample 2:\n\n\nInput: rowSum = [5,7,10], colSum = [8,6,8]\nOutput: [[0,5,0],\n         [6,1,0],\n         [2,0,8]]\n\n\n \nConstraints:\n\n\n\t1 <= rowSum.length, colSum.length <= 500\n\t0 <= rowSum[i], colSum[i] <= 108\n\tsum(rowSum) == sum(colSum)\n\n",
+  "description": "You are given two arrays rowSum and colSum of non-negative integers where rowSum[i] is the sum of the elements in the ith row and colSum[j] is the sum of the elements of the jth column of a 2D matrix. In other words, you do not know the elements of the matrix, but you do know the sums of each row and column.\n\nFind any matrix of non-negative integers of size rowSum.length x colSum.length that satisfies the rowSum and colSum requirements.\n\nReturn a 2D array representing any matrix that fulfills the requirements. It's guaranteed that at least one matrix that fulfills the requirements exists.",
+  "example": "Input: rowSum = [3,8], colSum = [4,7]\nOutput: [[3,0],\n         [1,7]]\nExplanation: \n0th row: 3 + 0 = 3 == rowSum[0]\n1st row: 1 + 7 = 8 == rowSum[1]\n0th column: 3 + 1 = 4 == colSum[0]\n1st column: 0 + 7 = 7 == colSum[1]\nThe row and column sums match, and all matrix elements are non-negative.\nAnother possible matrix is: [[1,2],\n                             [3,5]]",
+  "constraints_text": "1 <= rowSum.length, colSum.length <= 500\n\t0 <= rowSum[i], colSum[i] <= 108\n\tsum(rowSum) == sum(colSum)",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** restoreMatrix(int* rowSum, int rowSumSize, int* colSum, int colSumSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> restoreMatrix(vector<int>& rowSum, vector<int>& colSum) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] restoreMatrix(int[] rowSum, int[] colSum) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} rowSum\n * @param {number[]} colSum\n * @return {number[][]}\n */\nvar restoreMatrix = function(rowSum, colSum) {\n    \n};",
+    "python": "class Solution(object):\n    def restoreMatrix(self, rowSum, colSum):\n        \"\"\"\n        :type rowSum: List[int]\n        :type colSum: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a matrix by greedily filling each cell with the minimum of its remaining row sum and column sum.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "find-any-matrix",
+        "satisfies-the-rowsum-and-colsum-requirements"
+      ],
+      "constraints": [
+        "non-negative-integers",
+        "sum-rowsum-sum-colsum"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "rotated-digits",
+  "link": "https://leetcode.com/problems/rotated-digits/",
+  "difficulty": "Medium",
+  "index": "952",
+  "description_full": "An integer x is a good if after rotating each digit individually by 180 degrees, we get a valid number that is different from x. Each digit must be rotated - we cannot choose to leave it alone.\n\nA number is valid if each digit remains a digit after rotation. For example:\n\n\n\t0, 1, and 8 rotate to themselves,\n\t2 and 5 rotate to each other (in this case they are rotated in a different direction, in other words, 2 or 5 gets mirrored),\n\t6 and 9 rotate to each other, and\n\tthe rest of the numbers do not rotate to any other number and become invalid.\n\n\nGiven an integer n, return the number of good integers in the range [1, n].\n\n \nExample 1:\n\n\nInput: n = 10\nOutput: 4\nExplanation: There are four good numbers in the range [1, 10] : 2, 5, 6, 9.\nNote that 1 and 10 are not good numbers, since they remain unchanged after rotating.\n\n\nExample 2:\n\n\nInput: n = 1\nOutput: 0\n\n\nExample 3:\n\n\nInput: n = 2\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= n <= 104\n\n",
+  "description": "An integer x is a good if after rotating each digit individually by 180 degrees, we get a valid number that is different from x. Each digit must be rotated - we cannot choose to leave it alone.\n\nA number is valid if each digit remains a digit after rotation. For example:\n\n\n\t0, 1, and 8 rotate to themselves,\n\t2 and 5 rotate to each other (in this case they are rotated in a different direction, in other words, 2 or 5 gets mirrored),\n\t6 and 9 rotate to each other, and\n\tthe rest of the numbers do not rotate to any other number and become invalid.\n\n\nGiven an integer n, return the number of good integers in the range [1, n].",
+  "example": "Input: n = 10\nOutput: 4\nExplanation: There are four good numbers in the range [1, 10] : 2, 5, 6, 9.\nNote that 1 and 10 are not good numbers, since they remain unchanged after rotating.",
+  "constraints_text": "1 <= n <= 104",
+  "templates": {
+    "c": "int rotatedDigits(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int rotatedDigits(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int rotatedDigits(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar rotatedDigits = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def rotatedDigits(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Map digits to their rotated counterparts and identify invalid ones for rotation.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "rotate-each-digit-individually",
+        "valid-number",
+        "0-1-8-rotate-to-themselves",
+        "2-5-rotate-to-each-other",
+        "6-9-rotate-to-each-other",
+        "rest-invalid"
+      ],
+      "constraints": [
+        "each-digit-must-be-rotated"
+      ]
+    },
+    {
+      "intent": "Determine if a given integer is a 'good' number by applying digit rotation rules.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "after-rotating-each-digit-individually",
+        "valid-number-that-is-different-from-x"
+      ],
+      "constraints": [
+        "each-digit-must-be-rotated"
+      ]
+    },
+    {
+      "intent": "Iterate through the range [1, n] and count all good numbers.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "return-the-number-of-good-integers-in-the-range-1-n"
+      ],
+      "constraints": [
+        "1-n-104"
+      ]
+    }
+  ]
+}

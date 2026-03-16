@@ -1,0 +1,55 @@
+{
+  "slug": "uncommon-words-from-two-sentences",
+  "link": "https://leetcode.com/problems/uncommon-words-from-two-sentences/",
+  "difficulty": "Easy",
+  "index": "192",
+  "description_full": "A sentence is a string of single-space separated words where each word consists only of lowercase letters.\n\nA word is uncommon if it appears exactly once in one of the sentences, and does not appear in the other sentence.\n\nGiven two sentences s1 and s2, return a list of all the uncommon words. You may return the answer in any order.\n\n \nExample 1:\n\n\nInput: s1 = \"this apple is sweet\", s2 = \"this apple is sour\"\n\nOutput: [\"sweet\",\"sour\"]\n\nExplanation:\n\nThe word \"sweet\" appears only in s1, while the word \"sour\" appears only in s2.\n\n\nExample 2:\n\n\nInput: s1 = \"apple apple\", s2 = \"banana\"\n\nOutput: [\"banana\"]\n\n\n \nConstraints:\n\n\n\t1 <= s1.length, s2.length <= 200\n\ts1 and s2 consist of lowercase English letters and spaces.\n\ts1 and s2 do not have leading or trailing spaces.\n\tAll the words in s1 and s2 are separated by a single space.\n\n",
+  "description": "A sentence is a string of single-space separated words where each word consists only of lowercase letters.\n\nA word is uncommon if it appears exactly once in one of the sentences, and does not appear in the other sentence.\n\nGiven two sentences s1 and s2, return a list of all the uncommon words. You may return the answer in any order.",
+  "example": "Input: s1 = \"this apple is sweet\", s2 = \"this apple is sour\"\n\nOutput: [\"sweet\",\"sour\"]\n\nExplanation:\n\nThe word \"sweet\" appears only in s1, while the word \"sour\" appears only in s2.",
+  "constraints_text": "1 <= s1.length, s2.length <= 200\n\ts1 and s2 consist of lowercase English letters and spaces.\n\ts1 and s2 do not have leading or trailing spaces.\n\tAll the words in s1 and s2 are separated by a single space.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** uncommonFromSentences(char* s1, char* s2, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> uncommonFromSentences(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] uncommonFromSentences(String s1, String s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {string[]}\n */\nvar uncommonFromSentences = function(s1, s2) {\n    \n};",
+    "python": "class Solution(object):\n    def uncommonFromSentences(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse sentences into words and count frequencies for each word in s1 and s2 separately.",
+      "structures": [
+        "string",
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "hashing"
+      ],
+      "cues": [
+        "single-space-separated-words",
+        "lowercase-letters"
+      ],
+      "constraints": [
+        "1-s1-length-s2-length-200"
+      ]
+    },
+    {
+      "intent": "Filter words based on their counts in both sentences to identify and collect uncommon words.",
+      "structures": [
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "appears-exactly-once-in-one-of-the-sentences-and-does-not-appear-in-the-other-sentence"
+      ],
+      "constraints": []
+    }
+  ]
+}

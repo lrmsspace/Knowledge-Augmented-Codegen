@@ -1,0 +1,39 @@
+{
+  "slug": "fizz-buzz",
+  "link": "https://leetcode.com/problems/fizz-buzz/",
+  "difficulty": "Easy",
+  "index": "88",
+  "description_full": "Given an integer n, return a string array answer (1-indexed) where:\n\n\n\tanswer[i] == \"FizzBuzz\" if i is divisible by 3 and 5.\n\tanswer[i] == \"Fizz\" if i is divisible by 3.\n\tanswer[i] == \"Buzz\" if i is divisible by 5.\n\tanswer[i] == i (as a string) if none of the above conditions are true.\n\n\n \nExample 1:\nInput: n = 3\nOutput: [\"1\",\"2\",\"Fizz\"]\nExample 2:\nInput: n = 5\nOutput: [\"1\",\"2\",\"Fizz\",\"4\",\"Buzz\"]\nExample 3:\nInput: n = 15\nOutput: [\"1\",\"2\",\"Fizz\",\"4\",\"Buzz\",\"Fizz\",\"7\",\"8\",\"Fizz\",\"Buzz\",\"11\",\"Fizz\",\"13\",\"14\",\"FizzBuzz\"]\n\n \nConstraints:\n\n\n\t1 <= n <= 104\n\n",
+  "description": "Given an integer n, return a string array answer (1-indexed) where:\n\n\n\tanswer[i] == \"FizzBuzz\" if i is divisible by 3 and 5.\n\tanswer[i] == \"Fizz\" if i is divisible by 3.\n\tanswer[i] == \"Buzz\" if i is divisible by 5.\n\tanswer[i] == i (as a string) if none of the above conditions are true.",
+  "example": "Input: n = 3\nOutput: [\"1\",\"2\",\"Fizz\"]",
+  "constraints_text": "1 <= n <= 104",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** fizzBuzz(int n, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> fizzBuzz(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> fizzBuzz(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar fizzBuzz = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def fizzBuzz(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate from 1 to n, apply FizzBuzz rules based on divisibility, and store the resulting strings in an array.",
+      "structures": [
+        "array",
+        "number",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "return-a-string-array",
+        "i-is-divisible-by-3-and-5",
+        "1-indexed"
+      ],
+      "constraints": [
+        "1-n-104"
+      ]
+    }
+  ]
+}

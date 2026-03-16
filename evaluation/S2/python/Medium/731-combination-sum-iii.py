@@ -1,0 +1,53 @@
+# Source: https://leetcode.com/problems/combination-sum-iii/   |   Difficulty: Medium
+#
+# Problem Description:
+# Find all valid combinations of k numbers that sum up to n such that the following conditions are true:
+#
+#
+# 	Only numbers 1 through 9 are used.
+# 	Each number is used at most once.
+#
+#
+# Return a list of all possible valid combinations. The list must not contain the same combination twice, and the combinations may be returned in any order.
+#
+# Example:
+# Input: k = 3, n = 7
+# Output: [[1,2,4]]
+# Explanation:
+# 1 + 2 + 4 = 7
+# There are no other valid combinations.
+#
+# Constraints:
+# 2 <= k <= 9
+# 	1 <= n <= 60
+#
+# Helpful references (internal KB):
+# - N/A
+#
+# Notes:
+# - Keep the given function signature unchanged.
+# - Use only the Python standard library; no third-party packages.
+# - Do not change input/output formats or return value semantics as defined by the template/problem.
+# - Conformance: use features compatible with LeetCode’s Python3 runtime; do NOT rely on undefined/implementation-specific behavior.
+# - If you introduce any helper functions/classes, include their full implementations in this file; no hidden helpers.
+
+class Solution(object):
+    def combinationSum3(self, k, n):
+        """
+        :type k: int
+        :type n: int
+        :rtype: List[List[int]]
+        """
+        def backtrack(start, path, target):
+            if len(path) == k and target == 0:
+                result.append(path)
+                return
+            if len(path) > k or target < 0:
+                return
+            
+            for num in range(start, 10):
+                backtrack(num + 1, path + [num], target - num)
+        
+        result = []
+        backtrack(1, [], n)
+        return result

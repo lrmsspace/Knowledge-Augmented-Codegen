@@ -1,0 +1,55 @@
+{
+  "slug": "minimum-average-of-smallest-and-largest-elements",
+  "link": "https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements/",
+  "difficulty": "Easy",
+  "index": "2330",
+  "description_full": "You have an array of floating point numbers averages which is initially empty. You are given an array nums of n integers where n is even.\n\nYou repeat the following procedure n / 2 times:\n\n\n\tRemove the smallest element, minElement, and the largest element maxElement, from nums.\n\tAdd (minElement + maxElement) / 2 to averages.\n\n\nReturn the minimum element in averages.\n\n \nExample 1:\n\n\nInput: nums = [7,8,3,4,15,13,4,1]\n\nOutput: 5.5\n\nExplanation:\n\n\n\t\n\t\t\n\t\t\tstep\n\t\t\tnums\n\t\t\taverages\n\t\t\n\t\t\n\t\t\t0\n\t\t\t[7,8,3,4,15,13,4,1]\n\t\t\t[]\n\t\t\n\t\t\n\t\t\t1\n\t\t\t[7,8,3,4,13,4]\n\t\t\t[8]\n\t\t\n\t\t\n\t\t\t2\n\t\t\t[7,8,4,4]\n\t\t\t[8,8]\n\t\t\n\t\t\n\t\t\t3\n\t\t\t[7,4]\n\t\t\t[8,8,6]\n\t\t\n\t\t\n\t\t\t4\n\t\t\t[]\n\t\t\t[8,8,6,5.5]\n\t\t\n\t\n\nThe smallest element of averages, 5.5, is returned.\n\nExample 2:\n\n\nInput: nums = [1,9,8,3,10,5]\n\nOutput: 5.5\n\nExplanation:\n\n\n\t\n\t\t\n\t\t\tstep\n\t\t\tnums\n\t\t\taverages\n\t\t\n\t\t\n\t\t\t0\n\t\t\t[1,9,8,3,10,5]\n\t\t\t[]\n\t\t\n\t\t\n\t\t\t1\n\t\t\t[9,8,3,5]\n\t\t\t[5.5]\n\t\t\n\t\t\n\t\t\t2\n\t\t\t[8,5]\n\t\t\t[5.5,6]\n\t\t\n\t\t\n\t\t\t3\n\t\t\t[]\n\t\t\t[5.5,6,6.5]\n\t\t\n\t\n\n\n\nExample 3:\n\n\nInput: nums = [1,2,3,7,8,9]\n\nOutput: 5.0\n\nExplanation:\n\n\n\t\n\t\t\n\t\t\tstep\n\t\t\tnums\n\t\t\taverages\n\t\t\n\t\t\n\t\t\t0\n\t\t\t[1,2,3,7,8,9]\n\t\t\t[]\n\t\t\n\t\t\n\t\t\t1\n\t\t\t[2,3,7,8]\n\t\t\t[5]\n\t\t\n\t\t\n\t\t\t2\n\t\t\t[3,7]\n\t\t\t[5,5]\n\t\t\n\t\t\n\t\t\t3\n\t\t\t[]\n\t\t\t[5,5,5]\n\t\t\n\t\n\n\n\n \nConstraints:\n\n\n\t2 <= n == nums.length <= 50\n\tn is even.\n\t1 <= nums[i] <= 50\n\n",
+  "description": "You have an array of floating point numbers averages which is initially empty. You are given an array nums of n integers where n is even.\n\nYou repeat the following procedure n / 2 times:\n\n\n\tRemove the smallest element, minElement, and the largest element maxElement, from nums.\n\tAdd (minElement + maxElement) / 2 to averages.\n\n\nReturn the minimum element in averages.",
+  "example": "Input: nums = [7,8,3,4,15,13,4,1]\n\nOutput: 5.5\n\nExplanation:\n\n\n\t\n\t\t\n\t\t\tstep\n\t\t\tnums\n\t\t\taverages\n\t\t\n\t\t\n\t\t\t0\n\t\t\t[7,8,3,4,15,13,4,1]\n\t\t\t[]\n\t\t\n\t\t\n\t\t\t1\n\t\t\t[7,8,3,4,13,4]\n\t\t\t[8]\n\t\t\n\t\t\n\t\t\t2\n\t\t\t[7,8,4,4]\n\t\t\t[8,8]\n\t\t\n\t\t\n\t\t\t3\n\t\t\t[7,4]\n\t\t\t[8,8,6]\n\t\t\n\t\t\n\t\t\t4\n\t\t\t[]\n\t\t\t[8,8,6,5.5]\n\t\t\n\t\n\nThe smallest element of averages, 5.5, is returned.",
+  "constraints_text": "2 <= n == nums.length <= 50\n\tn is even.\n\t1 <= nums[i] <= 50",
+  "templates": {
+    "c": "double minimumAverage(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    double minimumAverage(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double minimumAverage(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumAverage = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumAverage(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: float\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array to efficiently identify the smallest and largest elements for pairing.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "remove-the-smallest-element",
+        "largest-element"
+      ],
+      "constraints": [
+        "2-n-50"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted array using two pointers, calculate averages of paired min/max elements, and track the minimum average found.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "repeat-n-2-times",
+        "add-minelement-maxelement-2-to-averages",
+        "return-the-minimum-element-in-averages"
+      ],
+      "constraints": [
+        "n-is-even"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "different-ways-to-add-parentheses",
+  "link": "https://leetcode.com/problems/different-ways-to-add-parentheses/",
+  "difficulty": "Medium",
+  "index": "742",
+  "description_full": "Given a string expression of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. You may return the answer in any order.\n\nThe test cases are generated such that the output values fit in a 32-bit integer and the number of different results does not exceed 104.\n\n \nExample 1:\n\n\nInput: expression = \"2-1-1\"\nOutput: [0,2]\nExplanation:\n((2-1)-1) = 0 \n(2-(1-1)) = 2\n\n\nExample 2:\n\n\nInput: expression = \"2*3-4*5\"\nOutput: [-34,-14,-10,-10,10]\nExplanation:\n(2*(3-(4*5))) = -34 \n((2*3)-(4*5)) = -14 \n((2*(3-4))*5) = -10 \n(2*((3-4)*5)) = -10 \n(((2*3)-4)*5) = 10\n\n\n \nConstraints:\n\n\n\t1 <= expression.length <= 20\n\texpression consists of digits and the operator '+', '-', and '*'.\n\tAll the integer values in the input expression are in the range [0, 99].\n\tThe integer values in the input expression do not have a leading '-' or '+' denoting the sign.\n\n",
+  "description": "Given a string expression of numbers and operators, return all possible results from computing all the different possible ways to group numbers and operators. You may return the answer in any order.\n\nThe test cases are generated such that the output values fit in a 32-bit integer and the number of different results does not exceed 104.",
+  "example": "Input: expression = \"2-1-1\"\nOutput: [0,2]\nExplanation:\n((2-1)-1) = 0 \n(2-(1-1)) = 2",
+  "constraints_text": "1 <= expression.length <= 20\n\texpression consists of digits and the operator '+', '-', and '*'.\n\tAll the integer values in the input expression are in the range [0, 99].\n\tThe integer values in the input expression do not have a leading '-' or '+' denoting the sign.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* diffWaysToCompute(char* expression, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> diffWaysToCompute(string expression) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> diffWaysToCompute(String expression) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} expression\n * @return {number[]}\n */\nvar diffWaysToCompute = function(expression) {\n    \n};",
+    "python": "class Solution(object):\n    def diffWaysToCompute(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively compute all possible evaluation results for sub-expressions, memoizing intermediate results to avoid redundant computations.",
+      "structures": [
+        "string",
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "recursion",
+        "divide-and-conquer",
+        "dp-2d"
+      ],
+      "cues": [
+        "all-possible-results",
+        "different-possible-ways-to-group",
+        "expression-of-numbers-and-operators"
+      ],
+      "constraints": [
+        "expression-length-20",
+        "output-values-fit-in-32-bit-integer"
+      ]
+    }
+  ]
+}

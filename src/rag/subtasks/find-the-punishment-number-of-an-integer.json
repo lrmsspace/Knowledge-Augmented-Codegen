@@ -1,0 +1,53 @@
+{
+  "slug": "find-the-punishment-number-of-an-integer",
+  "link": "https://leetcode.com/problems/find-the-punishment-number-of-an-integer/",
+  "difficulty": "Medium",
+  "index": "1727",
+  "description_full": "Given a positive integer n, return the punishment number of n.\n\nThe punishment number of n is defined as the sum of the squares of all integers i such that:\n\n\n\t1 <= i <= n\n\tThe decimal representation of i * i can be partitioned into contiguous substrings such that the sum of the integer values of these substrings equals i.\n\n\n \nExample 1:\n\n\nInput: n = 10\nOutput: 182\nExplanation: There are exactly 3 integers i in the range [1, 10] that satisfy the conditions in the statement:\n- 1 since 1 * 1 = 1\n- 9 since 9 * 9 = 81 and 81 can be partitioned into 8 and 1 with a sum equal to 8 + 1 == 9.\n- 10 since 10 * 10 = 100 and 100 can be partitioned into 10 and 0 with a sum equal to 10 + 0 == 10.\nHence, the punishment number of 10 is 1 + 81 + 100 = 182\n\n\nExample 2:\n\n\nInput: n = 37\nOutput: 1478\nExplanation: There are exactly 4 integers i in the range [1, 37] that satisfy the conditions in the statement:\n- 1 since 1 * 1 = 1. \n- 9 since 9 * 9 = 81 and 81 can be partitioned into 8 + 1. \n- 10 since 10 * 10 = 100 and 100 can be partitioned into 10 + 0. \n- 36 since 36 * 36 = 1296 and 1296 can be partitioned into 1 + 29 + 6.\nHence, the punishment number of 37 is 1 + 81 + 100 + 1296 = 1478\n\n\n \nConstraints:\n\n\n\t1 <= n <= 1000\n\n",
+  "description": "Given a positive integer n, return the punishment number of n.\n\nThe punishment number of n is defined as the sum of the squares of all integers i such that:\n\n\n\t1 <= i <= n\n\tThe decimal representation of i * i can be partitioned into contiguous substrings such that the sum of the integer values of these substrings equals i.",
+  "example": "Input: n = 10\nOutput: 182\nExplanation: There are exactly 3 integers i in the range [1, 10] that satisfy the conditions in the statement:\n- 1 since 1 * 1 = 1\n- 9 since 9 * 9 = 81 and 81 can be partitioned into 8 and 1 with a sum equal to 8 + 1 == 9.\n- 10 since 10 * 10 = 100 and 100 can be partitioned into 10 and 0 with a sum equal to 10 + 0 == 10.\nHence, the punishment number of 10 is 1 + 81 + 100 = 182",
+  "constraints_text": "1 <= n <= 1000",
+  "templates": {
+    "c": "int punishmentNumber(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int punishmentNumber(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int punishmentNumber(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar punishmentNumber = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def punishmentNumber(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through integers from 1 to n, calculate their squares, and accumulate the squares of those satisfying the partition condition.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "sum-of-the-squares",
+        "1-i-n",
+        "punishment-number-of-n"
+      ],
+      "constraints": [
+        "1-n-1000"
+      ]
+    },
+    {
+      "intent": "Recursively determine if the decimal string representation of a number's square can be partitioned into contiguous substrings whose sum equals the original number.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "decimal-representation-of-i-i-can-be-partitioned",
+        "sum-of-the-integer-values-of-these-substrings-equals-i"
+      ],
+      "constraints": []
+    }
+  ]
+}

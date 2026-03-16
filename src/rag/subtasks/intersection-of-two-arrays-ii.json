@@ -1,0 +1,57 @@
+{
+  "slug": "intersection-of-two-arrays-ii",
+  "link": "https://leetcode.com/problems/intersection-of-two-arrays-ii/",
+  "difficulty": "Easy",
+  "index": "77",
+  "description_full": "Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.\n\n \nExample 1:\n\n\nInput: nums1 = [1,2,2,1], nums2 = [2,2]\nOutput: [2,2]\n\n\nExample 2:\n\n\nInput: nums1 = [4,9,5], nums2 = [9,4,9,8,4]\nOutput: [4,9]\nExplanation: [9,4] is also accepted.\n\n\n \nConstraints:\n\n\n\t1 <= nums1.length, nums2.length <= 1000\n\t0 <= nums1[i], nums2[i] <= 1000\n\n\n \nFollow up:\n\n\n\tWhat if the given array is already sorted? How would you optimize your algorithm?\n\tWhat if nums1's size is small compared to nums2's size? Which algorithm is better?\n\tWhat if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?\n\n",
+  "description": "Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.",
+  "example": "Input: nums1 = [1,2,2,1], nums2 = [2,2]\nOutput: [2,2]",
+  "constraints_text": "1 <= nums1.length, nums2.length <= 1000\n\t0 <= nums1[i], nums2[i] <= 1000\n\n\n \nFollow up:\n\n\n\tWhat if the given array is already sorted? How would you optimize your algorithm?\n\tWhat if nums1's size is small compared to nums2's size? Which algorithm is better?\n\tWhat if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] intersect(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar intersect = function(nums1, nums2) {\n    \n};",
+    "python": "class Solution(object):\n    def intersect(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Create a frequency map for elements in the first array to track their occurrences.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "intersection",
+        "each-element-as-many-times"
+      ],
+      "constraints": [
+        "0-nums1-i-1000",
+        "nums1-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through the second array, decrement counts in the frequency map, and collect common elements into the result array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "return-an-array-of-their-intersection",
+        "each-element-as-many-times"
+      ],
+      "constraints": [
+        "0-nums2-i-1000",
+        "nums2-length-1000"
+      ]
+    }
+  ]
+}

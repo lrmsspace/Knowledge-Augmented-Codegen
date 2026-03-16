@@ -1,0 +1,41 @@
+{
+  "slug": "insufficient-nodes-in-root-to-leaf-paths",
+  "link": "https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/",
+  "difficulty": "Medium",
+  "index": "1106",
+  "description_full": "Given the root of a binary tree and an integer limit, delete all insufficient nodes in the tree simultaneously, and return the root of the resulting binary tree.\n\nA node is insufficient if every root to leaf path intersecting this node has a sum strictly less than limit.\n\nA leaf is a node with no children.\n\n \nExample 1:\n\n\nInput: root = [1,2,3,4,-99,-99,7,8,9,-99,-99,12,13,-99,14], limit = 1\nOutput: [1,2,3,4,null,null,7,8,9,null,14]\n\n\nExample 2:\n\n\nInput: root = [5,4,8,11,null,17,4,7,1,null,null,5,3], limit = 22\nOutput: [5,4,8,11,null,17,4,7,null,null,null,5]\n\n\nExample 3:\n\n\nInput: root = [1,2,-3,-5,null,4,null], limit = -1\nOutput: [1,null,-3,4]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 5000].\n\t-105 <= Node.val <= 105\n\t-109 <= limit <= 109\n\n",
+  "description": "Given the root of a binary tree and an integer limit, delete all insufficient nodes in the tree simultaneously, and return the root of the resulting binary tree.\n\nA node is insufficient if every root to leaf path intersecting this node has a sum strictly less than limit.\n\nA leaf is a node with no children.",
+  "example": "Input: root = [1,2,3,4,-99,-99,7,8,9,-99,-99,12,13,-99,14], limit = 1\nOutput: [1,2,3,4,null,null,7,8,9,null,14]",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 5000].\n\t-105 <= Node.val <= 105\n\t-109 <= limit <= 109",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* sufficientSubset(struct TreeNode* root, int limit) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* sufficientSubset(TreeNode* root, int limit) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode sufficientSubset(TreeNode root, int limit) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} limit\n * @return {TreeNode}\n */\nvar sufficientSubset = function(root, limit) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def sufficientSubset(self, root, limit):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type limit: int\n        :rtype: Optional[TreeNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively traverse the binary tree in a post-order fashion, calculating the current path sum from the root, and prune nodes if all root-to-leaf paths through them fall below the given limit.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "delete-all-insufficient-nodes",
+        "root-to-leaf-path",
+        "sum-strictly-less-than-limit",
+        "simultaneously"
+      ],
+      "constraints": [
+        "number-of-nodes-in-range-1-5000",
+        "10-5-node-val-10-5",
+        "10-9-limit-10-9"
+      ]
+    }
+  ]
+}

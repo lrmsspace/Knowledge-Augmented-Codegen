@@ -1,0 +1,76 @@
+{
+  "slug": "find-the-k-th-character-in-string-game-ii",
+  "link": "https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/",
+  "difficulty": "Hard",
+  "index": "2763",
+  "description_full": "Alice and Bob are playing a game. Initially, Alice has a string word = \"a\".\n\nYou are given a positive integer k. You are also given an integer array operations, where operations[i] represents the type of the ith operation.\n\nNow Bob will ask Alice to perform all operations in sequence:\n\n\n\tIf operations[i] == 0, append a copy of word to itself.\n\tIf operations[i] == 1, generate a new string by changing each character in word to its next character in the English alphabet, and append it to the original word. For example, performing the operation on \"c\" generates \"cd\" and performing the operation on \"zb\" generates \"zbac\".\n\n\nReturn the value of the kth character in word after performing all the operations.\n\nNote that the character 'z' can be changed to 'a' in the second type of operation.\n\n \nExample 1:\n\n\nInput: k = 5, operations = [0,0,0]\n\nOutput: \"a\"\n\nExplanation:\n\nInitially, word == \"a\". Alice performs the three operations as follows:\n\n\n\tAppends \"a\" to \"a\", word becomes \"aa\".\n\tAppends \"aa\" to \"aa\", word becomes \"aaaa\".\n\tAppends \"aaaa\" to \"aaaa\", word becomes \"aaaaaaaa\".\n\n\n\nExample 2:\n\n\nInput: k = 10, operations = [0,1,0,1]\n\nOutput: \"b\"\n\nExplanation:\n\nInitially, word == \"a\". Alice performs the four operations as follows:\n\n\n\tAppends \"a\" to \"a\", word becomes \"aa\".\n\tAppends \"bb\" to \"aa\", word becomes \"aabb\".\n\tAppends \"aabb\" to \"aabb\", word becomes \"aabbaabb\".\n\tAppends \"bbccbbcc\" to \"aabbaabb\", word becomes \"aabbaabbbbccbbcc\".\n\n\n\n \nConstraints:\n\n\n\t1 <= k <= 1014\n\t1 <= operations.length <= 100\n\toperations[i] is either 0 or 1.\n\tThe input is generated such that word has at least k characters after all operations.\n\n",
+  "description": "Alice and Bob are playing a game. Initially, Alice has a string word = \"a\".\n\nYou are given a positive integer k. You are also given an integer array operations, where operations[i] represents the type of the ith operation.\n\nNow Bob will ask Alice to perform all operations in sequence:\n\n\n\tIf operations[i] == 0, append a copy of word to itself.\n\tIf operations[i] == 1, generate a new string by changing each character in word to its next character in the English alphabet, and append it to the original word. For example, performing the operation on \"c\" generates \"cd\" and performing the operation on \"zb\" generates \"zbac\".\n\n\nReturn the value of the kth character in word after performing all the operations.\n\nNote that the character 'z' can be changed to 'a' in the second type of operation.",
+  "example": "Input: k = 5, operations = [0,0,0]\n\nOutput: \"a\"\n\nExplanation:\n\nInitially, word == \"a\". Alice performs the three operations as follows:\n\n\n\tAppends \"a\" to \"a\", word becomes \"aa\".\n\tAppends \"aa\" to \"aa\", word becomes \"aaaa\".\n\tAppends \"aaaa\" to \"aaaa\", word becomes \"aaaaaaaa\".",
+  "constraints_text": "1 <= k <= 1014\n\t1 <= operations.length <= 100\n\toperations[i] is either 0 or 1.\n\tThe input is generated such that word has at least k characters after all operations.",
+  "templates": {
+    "c": "char kthCharacter(long long k, int* operations, int operationsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    char kthCharacter(long long k, vector<int>& operations) {\n        \n    }\n};",
+    "java": "class Solution {\n    public char kthCharacter(long k, int[] operations) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number[]} operations\n * @return {character}\n */\nvar kthCharacter = function(k, operations) {\n    \n};",
+    "python": "class Solution(object):\n    def kthCharacter(self, k, operations):\n        \"\"\"\n        :type k: int\n        :type operations: List[int]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize k (0-indexed), character transformation offset, and total string length for backward processing.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "k",
+        "operations-length"
+      ],
+      "constraints": [
+        "k-10-14",
+        "operations-length-100"
+      ]
+    },
+    {
+      "intent": "Trace the k-th character's origin through operations in reverse, accumulating character transformations.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "recursion"
+      ],
+      "cues": [
+        "kth-character",
+        "operations-in-sequence",
+        "append",
+        "change-character"
+      ],
+      "constraints": [
+        "k-10-14",
+        "operations-length-100"
+      ]
+    },
+    {
+      "intent": "Calculate the final character by applying the accumulated transformation offset to the initial character 'a'.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "next-character",
+        "z-to-a"
+      ],
+      "constraints": [
+        "character-z-can-be-changed-to-a"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "maximum-number-of-points-from-grid-queries",
+  "link": "https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/",
+  "difficulty": "Hard",
+  "index": "2214",
+  "description_full": "You are given an m x n integer matrix grid and an array queries of size k.\n\nFind an array answer of size k such that for each integer queries[i] you start in the top left cell of the matrix and repeat the following process:\n\n\n\tIf queries[i] is strictly greater than the value of the current cell that you are in, then you get one point if it is your first time visiting this cell, and you can move to any adjacent cell in all 4 directions: up, down, left, and right.\n\tOtherwise, you do not get any points, and you end this process.\n\n\nAfter the process, answer[i] is the maximum number of points you can get. Note that for each query you are allowed to visit the same cell multiple times.\n\nReturn the resulting array answer.\n\n \nExample 1:\n\n\nInput: grid = [[1,2,3],[2,5,7],[3,5,1]], queries = [5,6,2]\nOutput: [5,8,1]\nExplanation: The diagrams above show which cells we visit to get points for each query.\n\nExample 2:\n\n\nInput: grid = [[5,2,1],[1,1,2]], queries = [3]\nOutput: [0]\nExplanation: We can not get any points because the value of the top left cell is already greater than or equal to 3.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t2 <= m, n <= 1000\n\t4 <= m * n <= 105\n\tk == queries.length\n\t1 <= k <= 104\n\t1 <= grid[i][j], queries[i] <= 106\n\n",
+  "description": "You are given an m x n integer matrix grid and an array queries of size k.\n\nFind an array answer of size k such that for each integer queries[i] you start in the top left cell of the matrix and repeat the following process:\n\n\n\tIf queries[i] is strictly greater than the value of the current cell that you are in, then you get one point if it is your first time visiting this cell, and you can move to any adjacent cell in all 4 directions: up, down, left, and right.\n\tOtherwise, you do not get any points, and you end this process.\n\n\nAfter the process, answer[i] is the maximum number of points you can get. Note that for each query you are allowed to visit the same cell multiple times.\n\nReturn the resulting array answer.",
+  "example": "Input: grid = [[1,2,3],[2,5,7],[3,5,1]], queries = [5,6,2]\nOutput: [5,8,1]\nExplanation: The diagrams above show which cells we visit to get points for each query.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t2 <= m, n <= 1000\n\t4 <= m * n <= 105\n\tk == queries.length\n\t1 <= k <= 104\n\t1 <= grid[i][j], queries[i] <= 106",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maxPoints(int** grid, int gridSize, int* gridColSize, int* queries, int queriesSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> maxPoints(vector<vector<int>>& grid, vector<int>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maxPoints(int[][] grid, int[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number[]} queries\n * @return {number[]}\n */\nvar maxPoints = function(grid, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def maxPoints(self, grid, queries):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the minimum maximum cell value encountered on any path from (0,0) to every other cell in the grid.",
+      "structures": [
+        "matrix",
+        "heap"
+      ],
+      "actions": [
+        "dijkstra"
+      ],
+      "cues": [
+        "start-in-top-left-cell",
+        "move-to-any-adjacent-cell",
+        "strictly-greater-than-value"
+      ],
+      "constraints": [
+        "m-x-n-grid"
+      ]
+    },
+    {
+      "intent": "For each query, count the number of reachable cells using the precomputed minimum maximum path values.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "two-pointers"
+      ],
+      "cues": [
+        "array-queries-of-size-k",
+        "answer-of-size-k",
+        "maximum-number-of-points"
+      ],
+      "constraints": [
+        "k-queries"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+# IDE
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache / temp
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/

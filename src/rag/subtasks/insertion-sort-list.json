@@ -1,0 +1,54 @@
+{
+  "slug": "insertion-sort-list",
+  "link": "https://leetcode.com/problems/insertion-sort-list/",
+  "difficulty": "Medium",
+  "index": "696",
+  "description_full": "Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list's head.\n\nThe steps of the insertion sort algorithm:\n\n\n\tInsertion sort iterates, consuming one input element each repetition and growing a sorted output list.\n\tAt each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list and inserts it there.\n\tIt repeats until no input elements remain.\n\n\nThe following is a graphical example of the insertion sort algorithm. The partially sorted list (black) initially contains only the first element in the list. One element (red) is removed from the input data and inserted in-place into the sorted list with each iteration.\n\n \nExample 1:\n\n\nInput: head = [4,2,1,3]\nOutput: [1,2,3,4]\n\n\nExample 2:\n\n\nInput: head = [-1,5,3,4,0]\nOutput: [-1,0,3,4,5]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the list is in the range [1, 5000].\n\t-5000 <= Node.val <= 5000\n\n",
+  "description": "Given the head of a singly linked list, sort the list using insertion sort, and return the sorted list's head.\n\nThe steps of the insertion sort algorithm:\n\n\n\tInsertion sort iterates, consuming one input element each repetition and growing a sorted output list.\n\tAt each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list and inserts it there.\n\tIt repeats until no input elements remain.\n\n\nThe following is a graphical example of the insertion sort algorithm. The partially sorted list (black) initially contains only the first element in the list. One element (red) is removed from the input data and inserted in-place into the sorted list with each iteration.",
+  "example": "Input: head = [4,2,1,3]\nOutput: [1,2,3,4]",
+  "constraints_text": "The number of nodes in the list is in the range [1, 5000].\n\t-5000 <= Node.val <= 5000",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* insertionSortList(struct ListNode* head) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* insertionSortList(ListNode* head) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode insertionSortList(ListNode head) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @return {ListNode}\n */\nvar insertionSortList = function(head) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def insertionSortList(self, head):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a dummy head for the sorted list and iterate through the original list, detaching nodes one by one.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "insertion-sort-iterates",
+        "consuming-one-input-element",
+        "removes-one-element-from-the-input-data"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-range-1-5000"
+      ]
+    },
+    {
+      "intent": "For each detached node, traverse the partially sorted list to find its correct position and insert it.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "finds-the-location-it-belongs",
+        "inserts-it-there",
+        "in-place-into-the-sorted-list"
+      ],
+      "constraints": [
+        "5000-node-val-5000"
+      ]
+    }
+  ]
+}

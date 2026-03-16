@@ -1,0 +1,84 @@
+{
+  "slug": "maximum-good-subtree-score",
+  "link": "https://leetcode.com/problems/maximum-good-subtree-score/",
+  "difficulty": "Hard",
+  "index": "2837",
+  "description_full": "You are given an undirected tree rooted at node 0 with n nodes numbered from 0 to n - 1. Each node i has an integer value vals[i], and its parent is given by par[i].\n\nA subset of nodes within the subtree of a node is called good if every digit from 0 to 9 appears at most once in the decimal representation of the values of the selected nodes.\n\nThe score of a good subset is the sum of the values of its nodes.\n\nDefine an array maxScore of length n, where maxScore[u] represents the maximum possible sum of values of a good subset of nodes that belong to the subtree rooted at node u, including u itself and all its descendants.\n\nReturn the sum of all values in maxScore.\n\nSince the answer may be large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: vals = [2,3], par = [-1,0]\n\nOutput: 8\n\nExplanation:\n\n\n\n\n\tThe subtree rooted at node 0 includes nodes {0, 1}. The subset {2, 3} is good as the digits 2 and 3 appear only once. The score of this subset is 2 + 3 = 5.\n\tThe subtree rooted at node 1 includes only node {1}. The subset {3} is good. The score of this subset is 3.\n\tThe maxScore array is [5, 3], and the sum of all values in maxScore is 5 + 3 = 8. Thus, the answer is 8.\n\n\n\nExample 2:\n\n\nInput: vals = [1,5,2], par = [-1,0,0]\n\nOutput: 15\n\nExplanation:\n\n\n\n\n\tThe subtree rooted at node 0 includes nodes {0, 1, 2}. The subset {1, 5, 2} is good as the digits 1, 5 and 2 appear only once. The score of this subset is 1 + 5 + 2 = 8.\n\tThe subtree rooted at node 1 includes only node {1}. The subset {5} is good. The score of this subset is 5.\n\tThe subtree rooted at node 2 includes only node {2}. The subset {2} is good. The score of this subset is 2.\n\tThe maxScore array is [8, 5, 2], and the sum of all values in maxScore is 8 + 5 + 2 = 15. Thus, the answer is 15.\n\n\n\nExample 3:\n\n\nInput: vals = [34,1,2], par = [-1,0,1]\n\nOutput: 42\n\nExplanation:\n\n\n\n\n\tThe subtree rooted at node 0 includes nodes {0, 1, 2}. The subset {34, 1, 2} is good as the digits 3, 4, 1 and 2 appear only once. The score of this subset is 34 + 1 + 2 = 37.\n\tThe subtree rooted at node 1 includes node {1, 2}. The subset {1, 2} is good as the digits 1 and 2 appear only once. The score of this subset is 1 + 2 = 3.\n\tThe subtree rooted at node 2 includes only node {2}. The subset {2} is good. The score of this subset is 2.\n\tThe maxScore array is [37, 3, 2], and the sum of all values in maxScore is 37 + 3 + 2 = 42. Thus, the answer is 42.\n\n\n\nExample 4:\n\n\nInput: vals = [3,22,5], par = [-1,0,1]\n\nOutput: 18\n\nExplanation:\n\n\n\tThe subtree rooted at node 0 includes nodes {0, 1, 2}. The subset {3, 22, 5} is not good, as digit 2 appears twice. Therefore, the subset {3, 5} is valid. The score of this subset is 3 + 5 = 8.\n\tThe subtree rooted at node 1 includes nodes {1, 2}. The subset {22, 5} is not good, as digit 2 appears twice. Therefore, the subset {5} is valid. The score of this subset is 5.\n\tThe subtree rooted at node 2 includes {2}. The subset {5} is good. The score of this subset is 5.\n\tThe maxScore array is [8, 5, 5], and the sum of all values in maxScore is 8 + 5 + 5 = 18. Thus, the answer is 18.\n\n\n\n\n\n\n \nConstraints:\n\n\n\t1 <= n == vals.length <= 500\n\t1 <= vals[i] <= 109\n\tpar.length == n\n\tpar[0] == -1\n\t0 <= par[i] < n for i in [1, n - 1]\n\tThe input is generated such that the parent array par represents a valid tree.\n\n",
+  "description": "You are given an undirected tree rooted at node 0 with n nodes numbered from 0 to n - 1. Each node i has an integer value vals[i], and its parent is given by par[i].\n\nA subset of nodes within the subtree of a node is called good if every digit from 0 to 9 appears at most once in the decimal representation of the values of the selected nodes.\n\nThe score of a good subset is the sum of the values of its nodes.\n\nDefine an array maxScore of length n, where maxScore[u] represents the maximum possible sum of values of a good subset of nodes that belong to the subtree rooted at node u, including u itself and all its descendants.\n\nReturn the sum of all values in maxScore.\n\nSince the answer may be large, return it modulo 109 + 7.",
+  "example": "Input: vals = [2,3], par = [-1,0]\n\nOutput: 8\n\nExplanation:\n\n\n\n\n\tThe subtree rooted at node 0 includes nodes {0, 1}. The subset {2, 3} is good as the digits 2 and 3 appear only once. The score of this subset is 2 + 3 = 5.\n\tThe subtree rooted at node 1 includes only node {1}. The subset {3} is good. The score of this subset is 3.\n\tThe maxScore array is [5, 3], and the sum of all values in maxScore is 5 + 3 = 8. Thus, the answer is 8.",
+  "constraints_text": "1 <= n == vals.length <= 500\n\t1 <= vals[i] <= 109\n\tpar.length == n\n\tpar[0] == -1\n\t0 <= par[i] < n for i in [1, n - 1]\n\tThe input is generated such that the parent array par represents a valid tree.",
+  "templates": {
+    "c": "int goodSubtreeSum(int* vals, int valsSize, int* par, int parSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int goodSubtreeSum(vector<int>& vals, vector<int>& par) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int goodSubtreeSum(int[] vals, int[] par) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} vals\n * @param {number[]} par\n * @return {number}\n */\nvar goodSubtreeSum = function(vals, par) {\n    \n};",
+    "python": "class Solution(object):\n    def goodSubtreeSum(self, vals, par):\n        \"\"\"\n        :type vals: List[int]\n        :type par: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct the tree's adjacency list and pre-calculate the digit mask for each node's value, marking invalid values.",
+      "structures": [
+        "tree",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "undirected-tree-rooted-at-node-0",
+        "parent-is-given-by-par-i",
+        "vals-i",
+        "every-digit-from-0-to-9-appears-at-most-once"
+      ],
+      "constraints": [
+        "n-nodes",
+        "vals-i-integers"
+      ]
+    },
+    {
+      "intent": "Perform a post-order DFS traversal to compute maxScore[u] for each node u using tree DP with bitmasks.",
+      "structures": [
+        "tree",
+        "bitset",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "tree-dp",
+        "bitmask-dp",
+        "recursion"
+      ],
+      "cues": [
+        "maxscore-u-represents-the-maximum-possible-sum",
+        "good-subset",
+        "subtree-rooted-at-node-u",
+        "every-digit-from-0-to-9-appears-at-most-once"
+      ],
+      "constraints": [
+        "2-10-possible-digit-masks",
+        "n-nodes"
+      ]
+    },
+    {
+      "intent": "Sum all computed maxScore values and apply the required modulo operation.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "return-the-sum-of-all-values-in-maxscore",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

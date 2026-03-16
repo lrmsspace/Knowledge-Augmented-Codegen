@@ -1,0 +1,55 @@
+{
+  "slug": "advantage-shuffle",
+  "link": "https://leetcode.com/problems/advantage-shuffle/",
+  "difficulty": "Medium",
+  "index": "998",
+  "description_full": "You are given two integer arrays nums1 and nums2 both of the same length. The advantage of nums1 with respect to nums2 is the number of indices i for which nums1[i] > nums2[i].\n\nReturn any permutation of nums1 that maximizes its advantage with respect to nums2.\n\n \nExample 1:\nInput: nums1 = [2,7,11,15], nums2 = [1,10,4,11]\nOutput: [2,11,7,15]\nExample 2:\nInput: nums1 = [12,24,8,32], nums2 = [13,25,32,11]\nOutput: [24,32,8,12]\n\n \nConstraints:\n\n\n\t1 <= nums1.length <= 105\n\tnums2.length == nums1.length\n\t0 <= nums1[i], nums2[i] <= 109\n\n",
+  "description": "You are given two integer arrays nums1 and nums2 both of the same length. The advantage of nums1 with respect to nums2 is the number of indices i for which nums1[i] > nums2[i].\n\nReturn any permutation of nums1 that maximizes its advantage with respect to nums2.",
+  "example": "Input: nums1 = [2,7,11,15], nums2 = [1,10,4,11]\nOutput: [2,11,7,15]",
+  "constraints_text": "1 <= nums1.length <= 105\n\tnums2.length == nums1.length\n\t0 <= nums1[i], nums2[i] <= 109",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* advantageCount(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> advantageCount(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] advantageCount(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number[]}\n */\nvar advantageCount = function(nums1, nums2) {\n    \n};",
+    "python": "class Solution(object):\n    def advantageCount(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort nums1 and create sorted (value, original_index) pairs for nums2 to prepare for greedy matching.",
+      "structures": [
+        "array",
+        "number",
+        "ds"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "permutation",
+        "maximize-advantage"
+      ],
+      "constraints": [
+        "1-nums1-length-105"
+      ]
+    },
+    {
+      "intent": "Apply a two-pointer greedy strategy to assign nums1 elements to nums2 positions, maximizing the number of wins.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "maximize-advantage",
+        "return-any-permutation"
+      ],
+      "constraints": [
+        "0-nums1-i-nums2-i-109"
+      ]
+    }
+  ]
+}

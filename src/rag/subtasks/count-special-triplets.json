@@ -1,0 +1,58 @@
+{
+  "slug": "count-special-triplets",
+  "link": "https://leetcode.com/problems/count-special-triplets/",
+  "difficulty": "Medium",
+  "index": "2658",
+  "description_full": "You are given an integer array nums.\n\nA special triplet is defined as a triplet of indices (i, j, k) such that:\n\n\n\t0 <= i < j < k < n, where n = nums.length\n\tnums[i] == nums[j] * 2\n\tnums[k] == nums[j] * 2\n\n\nReturn the total number of special triplets in the array.\n\nSince the answer may be large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: nums = [6,3,6]\n\nOutput: 1\n\nExplanation:\n\nThe only special triplet is (i, j, k) = (0, 1, 2), where:\n\n\n\tnums[0] = 6, nums[1] = 3, nums[2] = 6\n\tnums[0] = nums[1] * 2 = 3 * 2 = 6\n\tnums[2] = nums[1] * 2 = 3 * 2 = 6\n\n\n\nExample 2:\n\n\nInput: nums = [0,1,0,0]\n\nOutput: 1\n\nExplanation:\n\nThe only special triplet is (i, j, k) = (0, 2, 3), where:\n\n\n\tnums[0] = 0, nums[2] = 0, nums[3] = 0\n\tnums[0] = nums[2] * 2 = 0 * 2 = 0\n\tnums[3] = nums[2] * 2 = 0 * 2 = 0\n\n\n\nExample 3:\n\n\nInput: nums = [8,4,2,8,4]\n\nOutput: 2\n\nExplanation:\n\nThere are exactly two special triplets:\n\n\n\t(i, j, k) = (0, 1, 3)\n\n\t\n\t\tnums[0] = 8, nums[1] = 4, nums[3] = 8\n\t\tnums[0] = nums[1] * 2 = 4 * 2 = 8\n\t\tnums[3] = nums[1] * 2 = 4 * 2 = 8\n\t\n\t\n\t(i, j, k) = (1, 2, 4)\n\t\n\t\tnums[1] = 4, nums[2] = 2, nums[4] = 4\n\t\tnums[1] = nums[2] * 2 = 2 * 2 = 4\n\t\tnums[4] = nums[2] * 2 = 2 * 2 = 4\n\t\n\t\n\n\n\n \nConstraints:\n\n\n\t3 <= n == nums.length <= 105\n\t0 <= nums[i] <= 105\n\n",
+  "description": "You are given an integer array nums.\n\nA special triplet is defined as a triplet of indices (i, j, k) such that:\n\n\n\t0 <= i < j < k < n, where n = nums.length\n\tnums[i] == nums[j] * 2\n\tnums[k] == nums[j] * 2\n\n\nReturn the total number of special triplets in the array.\n\nSince the answer may be large, return it modulo 109 + 7.",
+  "example": "Input: nums = [6,3,6]\n\nOutput: 1\n\nExplanation:\n\nThe only special triplet is (i, j, k) = (0, 1, 2), where:\n\n\n\tnums[0] = 6, nums[1] = 3, nums[2] = 6\n\tnums[0] = nums[1] * 2 = 3 * 2 = 6\n\tnums[2] = nums[1] * 2 = 3 * 2 = 6",
+  "constraints_text": "3 <= n == nums.length <= 105\n\t0 <= nums[i] <= 105",
+  "templates": {
+    "c": "int specialTriplets(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int specialTriplets(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int specialTriplets(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar specialTriplets = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def specialTriplets(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize frequency counts for all numbers in the input array to represent elements to the right of any potential middle element.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "nums",
+        "total-number"
+      ],
+      "constraints": [
+        "0-nums-i-105"
+      ]
+    },
+    {
+      "intent": "Iterate through the array, updating left and right frequency counts for each element as the middle 'j', and accumulate special triplet counts.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "0-i-j-k-n",
+        "nums-i-nums-j-2",
+        "nums-k-nums-j-2",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "n-105",
+        "nums-i-105",
+        "answer-may-be-large"
+      ]
+    }
+  ]
+}

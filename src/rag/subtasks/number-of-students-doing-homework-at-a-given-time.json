@@ -1,0 +1,38 @@
+{
+  "slug": "number-of-students-doing-homework-at-a-given-time",
+  "link": "https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/",
+  "difficulty": "Easy",
+  "index": "305",
+  "description_full": "Given two integer arrays startTime and endTime and given an integer queryTime.\n\nThe ith student started doing their homework at the time startTime[i] and finished it at time endTime[i].\n\nReturn the number of students doing their homework at time queryTime. More formally, return the number of students where queryTime lays in the interval [startTime[i], endTime[i]] inclusive.\n\n \nExample 1:\n\n\nInput: startTime = [1,2,3], endTime = [3,2,7], queryTime = 4\nOutput: 1\nExplanation: We have 3 students where:\nThe first student started doing homework at time 1 and finished at time 3 and wasn't doing anything at time 4.\nThe second student started doing homework at time 2 and finished at time 2 and also wasn't doing anything at time 4.\nThe third student started doing homework at time 3 and finished at time 7 and was the only student doing homework at time 4.\n\n\nExample 2:\n\n\nInput: startTime = [4], endTime = [4], queryTime = 4\nOutput: 1\nExplanation: The only student was doing their homework at the queryTime.\n\n\n \nConstraints:\n\n\n\tstartTime.length == endTime.length\n\t1 <= startTime.length <= 100\n\t1 <= startTime[i] <= endTime[i] <= 1000\n\t1 <= queryTime <= 1000\n\n",
+  "description": "Given two integer arrays startTime and endTime and given an integer queryTime.\n\nThe ith student started doing their homework at the time startTime[i] and finished it at time endTime[i].\n\nReturn the number of students doing their homework at time queryTime. More formally, return the number of students where queryTime lays in the interval [startTime[i], endTime[i]] inclusive.",
+  "example": "Input: startTime = [1,2,3], endTime = [3,2,7], queryTime = 4\nOutput: 1\nExplanation: We have 3 students where:\nThe first student started doing homework at time 1 and finished at time 3 and wasn't doing anything at time 4.\nThe second student started doing homework at time 2 and finished at time 2 and also wasn't doing anything at time 4.\nThe third student started doing homework at time 3 and finished at time 7 and was the only student doing homework at time 4.",
+  "constraints_text": "startTime.length == endTime.length\n\t1 <= startTime.length <= 100\n\t1 <= startTime[i] <= endTime[i] <= 1000\n\t1 <= queryTime <= 1000",
+  "templates": {
+    "c": "int busyStudent(int* startTime, int startTimeSize, int* endTime, int endTimeSize, int queryTime) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int busyStudent(vector<int>& startTime, vector<int>& endTime, int queryTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int busyStudent(int[] startTime, int[] endTime, int queryTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} startTime\n * @param {number[]} endTime\n * @param {number} queryTime\n * @return {number}\n */\nvar busyStudent = function(startTime, endTime, queryTime) {\n    \n};",
+    "python": "class Solution(object):\n    def busyStudent(self, startTime, endTime, queryTime):\n        \"\"\"\n        :type startTime: List[int]\n        :type endTime: List[int]\n        :type queryTime: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through each student's homework interval and count how many include the query time.",
+      "structures": [
+        "array",
+        "interval"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "number-of-students",
+        "querytime-lays-in-the-interval-starttime-i-endtime-i-inclusive"
+      ],
+      "constraints": [
+        "starttime-length-endtime-length",
+        "1-starttime-length-100"
+      ]
+    }
+  ]
+}

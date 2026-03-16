@@ -1,0 +1,68 @@
+{
+  "slug": "maximum-number-of-operations-to-move-ones-to-the-end",
+  "link": "https://leetcode.com/problems/maximum-number-of-operations-to-move-ones-to-the-end/",
+  "difficulty": "Medium",
+  "index": 2538,
+  "description_full": "You are given a binary string s.\n\nYou can perform the following operation on the string any number of times:\n\n\n Choose any index i from the string where i + 1 < s.length such that s[i] == '1' and s[i + 1] == '0'.\n Move the character s[i] to the right until it reaches the end of the string or another '1'. For example, for s = \"010010\", if we choose i = 1, the resulting string will be s = \"000110\".\n\n\nReturn the maximum number of operations that you can perform.\n\n \nExample 1:\n\n\nInput: s = \"1001101\"\n\nOutput: 4\n\nExplanation:\n\nWe can perform the following operations:\n\n\n Choose index i = 0. The resulting string is s = \"0011101\".\n Choose index i = 4. The resulting string is s = \"0011011\".\n Choose index i = 3. The resulting string is s = \"0010111\".\n Choose index i = 2. The resulting string is s = \"0001111\".\n\n\n\nExample 2:\n\n\nInput: s = \"00111\"\n\nOutput: 0\n\n\n \nConstraints:\n\n\n 1 <= s.length <= 105\n s[i] is either '0' or '1'.\n\n",
+  "description": "You are given a binary string s.\n\nYou can perform the following operation on the string any number of times:\n\n\n Choose any index i from the string where i + 1 < s.length such that s[i] == '1' and s[i + 1] == '0'.\n Move the character s[i] to the right until it reaches the end of the string or another '1'. For example, for s = \"010010\", if we choose i = 1, the resulting string will be s = \"000110\".\n\n\nReturn the maximum number of operations that you can perform.",
+  "example": "Input: s = \"1001101\"\n\nOutput: 4\n\nExplanation:\n\nWe can perform the following operations:\n\n\n Choose index i = 0. The resulting string is s = \"0011101\".\n Choose index i = 4. The resulting string is s = \"0011011\".\n Choose index i = 3. The resulting string is s = \"0010111\".\n Choose index i = 2. The resulting string is s = \"0001111\".",
+  "constraints_text": "1 <= s.length <= 105\n s[i] is either '0' or '1'.",
+  "templates": {
+    "c": "int maxOperations(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxOperations(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxOperations(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxOperations = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def maxOperations(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recognize that the operation moves a '1' past '0's and does not change relative order of '1's or '0's.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        ""
+      ],
+      "cues": [
+        "binary string",
+        "s[i]=='1' and s[i+1]=='0'"
+      ],
+      "constraints": [
+        "operation invariant"
+      ]
+    },
+    {
+      "intent": "The total number of operations is the sum of times each '1' is moved past a '0'.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "maximum number of operations"
+      ],
+      "constraints": [
+        "count operations per '1'"
+      ]
+    },
+    {
+      "intent": "Use a prefix sum or running count to track the number of '1's encountered to the left of each '0' to calculate the total number of operations.",
+      "structures": [
+        "prefix-sum",
+        "array"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "running count of '1's",
+        "total operations"
+      ],
+      "constraints": [
+        ""
+      ]
+    }
+  ]
+}

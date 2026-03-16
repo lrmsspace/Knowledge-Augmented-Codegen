@@ -1,0 +1,36 @@
+{
+  "slug": "consecutive-numbers-sum",
+  "link": "https://leetcode.com/problems/consecutive-numbers-sum/",
+  "difficulty": "Hard",
+  "index": "1897",
+  "description_full": "Given an integer n, return the number of ways you can write n as the sum of consecutive positive integers.\n\n \nExample 1:\n\n\nInput: n = 5\nOutput: 2\nExplanation: 5 = 2 + 3\n\n\nExample 2:\n\n\nInput: n = 9\nOutput: 3\nExplanation: 9 = 4 + 5 = 2 + 3 + 4\n\n\nExample 3:\n\n\nInput: n = 15\nOutput: 4\nExplanation: 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5\n\n\n \nConstraints:\n\n\n\t1 <= n <= 109\n\n",
+  "description": "Given an integer n, return the number of ways you can write n as the sum of consecutive positive integers.",
+  "example": "Input: n = 5\nOutput: 2\nExplanation: 5 = 2 + 3",
+  "constraints_text": "1 <= n <= 109",
+  "templates": {
+    "c": "int consecutiveNumbersSum(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int consecutiveNumbersSum(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int consecutiveNumbersSum(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar consecutiveNumbersSum = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def consecutiveNumbersSum(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the largest odd factor of N, then count its divisors to determine the number of ways N can be written as a sum of consecutive positive integers.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "sum-of-consecutive-positive-integers",
+        "number-of-ways"
+      ],
+      "constraints": [
+        "1-n-10-9"
+      ]
+    }
+  ]
+}

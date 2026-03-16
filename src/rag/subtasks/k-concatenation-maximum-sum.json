@@ -1,0 +1,64 @@
+{
+  "slug": "k-concatenation-maximum-sum",
+  "link": "https://leetcode.com/problems/k-concatenation-maximum-sum/",
+  "difficulty": "Medium",
+  "index": "1145",
+  "description_full": "Given an integer array arr and an integer k, modify the array by repeating it k times.\n\nFor example, if arr = [1, 2] and k = 3 then the modified array will be [1, 2, 1, 2, 1, 2].\n\nReturn the maximum sub-array sum in the modified array. Note that the length of the sub-array can be 0 and its sum in that case is 0.\n\nAs the answer can be very large, return the answer modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: arr = [1,2], k = 3\nOutput: 9\n\n\nExample 2:\n\n\nInput: arr = [1,-2,1], k = 5\nOutput: 2\n\n\nExample 3:\n\n\nInput: arr = [-1,-2], k = 7\nOutput: 0\n\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 105\n\t1 <= k <= 105\n\t-104 <= arr[i] <= 104\n\n",
+  "description": "Given an integer array arr and an integer k, modify the array by repeating it k times.\n\nFor example, if arr = [1, 2] and k = 3 then the modified array will be [1, 2, 1, 2, 1, 2].\n\nReturn the maximum sub-array sum in the modified array. Note that the length of the sub-array can be 0 and its sum in that case is 0.\n\nAs the answer can be very large, return the answer modulo 109 + 7.",
+  "example": "Input: arr = [1,2], k = 3\nOutput: 9",
+  "constraints_text": "1 <= arr.length <= 105\n\t1 <= k <= 105\n\t-104 <= arr[i] <= 104",
+  "templates": {
+    "c": "int kConcatenationMaxSum(int* arr, int arrSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int kConcatenationMaxSum(vector<int>& arr, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int kConcatenationMaxSum(int[] arr, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} k\n * @return {number}\n */\nvar kConcatenationMaxSum = function(arr, k) {\n    \n};",
+    "python": "class Solution(object):\n    def kConcatenationMaxSum(self, arr, k):\n        \"\"\"\n        :type arr: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute maximum subarray sum, total sum, and maximum prefix/suffix sums for the base array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "prefix-sum",
+        "enumeration"
+      ],
+      "cues": [
+        "arr",
+        "max-subarray-sum",
+        "total-sum",
+        "max-prefix-sum",
+        "max-suffix-sum"
+      ],
+      "constraints": [
+        "1-arr-length-105",
+        "104-arr-i-104"
+      ]
+    },
+    {
+      "intent": "Determine the overall maximum subarray sum in the k-repeated array, handling large numbers and modulo.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "k",
+        "total-sum-arr",
+        "max-subarray-sum-single",
+        "max-prefix-sum-arr",
+        "max-suffix-sum-arr",
+        "modulo"
+      ],
+      "constraints": [
+        "1-k-105",
+        "answer-modulo-10-9-7"
+      ]
+    }
+  ]
+}

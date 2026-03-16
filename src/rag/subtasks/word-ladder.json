@@ -1,0 +1,59 @@
+{
+  "slug": "word-ladder",
+  "link": "https://leetcode.com/problems/word-ladder/",
+  "difficulty": "Hard",
+  "index": "1792",
+  "description_full": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:\n\n\n\tEvery adjacent pair of words differs by a single letter.\n\tEvery si for 1 <= i <= k is in wordList. Note that beginWord does not need to be in wordList.\n\tsk == endWord\n\n\nGiven two words, beginWord and endWord, and a dictionary wordList, return the number of words in the shortest transformation sequence from beginWord to endWord, or 0 if no such sequence exists.\n\n \nExample 1:\n\n\nInput: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: 5\nExplanation: One shortest transformation sequence is \"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> cog\", which is 5 words long.\n\n\nExample 2:\n\n\nInput: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\nOutput: 0\nExplanation: The endWord \"cog\" is not in wordList, therefore there is no valid transformation sequence.\n\n\n \nConstraints:\n\n\n\t1 <= beginWord.length <= 10\n\tendWord.length == beginWord.length\n\t1 <= wordList.length <= 5000\n\twordList[i].length == beginWord.length\n\tbeginWord, endWord, and wordList[i] consist of lowercase English letters.\n\tbeginWord != endWord\n\tAll the words in wordList are unique.\n\n",
+  "description": "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:\n\n\n\tEvery adjacent pair of words differs by a single letter.\n\tEvery si for 1 <= i <= k is in wordList. Note that beginWord does not need to be in wordList.\n\tsk == endWord\n\n\nGiven two words, beginWord and endWord, and a dictionary wordList, return the number of words in the shortest transformation sequence from beginWord to endWord, or 0 if no such sequence exists.",
+  "example": "Input: beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\nOutput: 5\nExplanation: One shortest transformation sequence is \"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> cog\", which is 5 words long.",
+  "constraints_text": "1 <= beginWord.length <= 10\n\tendWord.length == beginWord.length\n\t1 <= wordList.length <= 5000\n\twordList[i].length == beginWord.length\n\tbeginWord, endWord, and wordList[i] consist of lowercase English letters.\n\tbeginWord != endWord\n\tAll the words in wordList are unique.",
+  "templates": {
+    "c": "int ladderLength(char* beginWord, char* endWord, char** wordList, int wordListSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int ladderLength(String beginWord, String endWord, List<String> wordList) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} beginWord\n * @param {string} endWord\n * @param {string[]} wordList\n * @return {number}\n */\nvar ladderLength = function(beginWord, endWord, wordList) {\n    \n};",
+    "python": "class Solution(object):\n    def ladderLength(self, beginWord, endWord, wordList):\n        \"\"\"\n        :type beginWord: str\n        :type endWord: str\n        :type wordList: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize data structures for efficient word lookup and check for endWord existence in the dictionary.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "wordlist",
+        "endword",
+        "beginword"
+      ],
+      "constraints": [
+        "endword-not-in-wordlist-0"
+      ]
+    },
+    {
+      "intent": "Execute Breadth-First Search (BFS) to find the shortest transformation path from beginWord to endWord.",
+      "structures": [
+        "string",
+        "queue",
+        "ds"
+      ],
+      "actions": [
+        "bfs",
+        "simulation",
+        "hashing"
+      ],
+      "cues": [
+        "shortest-transformation-sequence",
+        "adjacent-pair-of-words-differs-by-a-single-letter"
+      ],
+      "constraints": [
+        "1-beginword-length-10",
+        "1-wordlist-length-5000"
+      ]
+    }
+  ]
+}

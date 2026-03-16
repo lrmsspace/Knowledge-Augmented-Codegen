@@ -1,0 +1,36 @@
+{
+  "slug": "check-if-binary-string-has-at-most-one-segment-of-ones",
+  "link": "https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/",
+  "difficulty": "Easy",
+  "index": "382",
+  "description_full": "Given a binary string s ​​​​​without leading zeros, return true​​​ if s contains at most one contiguous segment of ones. Otherwise, return false.\n\n \nExample 1:\n\n\nInput: s = \"1001\"\nOutput: false\nExplanation: The ones do not form a contiguous segment.\n\n\nExample 2:\n\n\nInput: s = \"110\"\nOutput: true\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts[i]​​​​ is either '0' or '1'.\n\ts[0] is '1'.\n\n",
+  "description": "Given a binary string s ​​​​​without leading zeros, return true​​​ if s contains at most one contiguous segment of ones. Otherwise, return false.",
+  "example": "Input: s = \"1001\"\nOutput: false\nExplanation: The ones do not form a contiguous segment.",
+  "constraints_text": "1 <= s.length <= 100\n\ts[i]​​​​ is either '0' or '1'.\n\ts[0] is '1'.",
+  "templates": {
+    "c": "bool checkOnesSegment(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkOnesSegment(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkOnesSegment(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkOnesSegment = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def checkOnesSegment(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if a binary string contains at most one contiguous block of '1's by iterating and tracking state.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "at-most-one-contiguous-segment-of-ones",
+        "binary-string"
+      ],
+      "constraints": [
+        "s-length-100",
+        "s-0-is-1"
+      ]
+    }
+  ]
+}

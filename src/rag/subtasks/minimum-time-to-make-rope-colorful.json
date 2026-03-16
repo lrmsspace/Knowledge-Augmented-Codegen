@@ -1,0 +1,56 @@
+{
+  "slug": "minimum-time-to-make-rope-colorful",
+  "link": "https://leetcode.com/problems/minimum-time-to-make-rope-colorful/",
+  "difficulty": "Medium",
+  "index": "1295",
+  "description_full": "Alice has n balloons arranged on a rope. You are given a 0-indexed string colors where colors[i] is the color of the ith balloon.\n\nAlice wants the rope to be colorful. She does not want two consecutive balloons to be of the same color, so she asks Bob for help. Bob can remove some balloons from the rope to make it colorful. You are given a 0-indexed integer array neededTime where neededTime[i] is the time (in seconds) that Bob needs to remove the ith balloon from the rope.\n\nReturn the minimum time Bob needs to make the rope colorful.\n\n \nExample 1:\n\n\nInput: colors = \"abaac\", neededTime = [1,2,3,4,5]\nOutput: 3\nExplanation: In the above image, 'a' is blue, 'b' is red, and 'c' is green.\nBob can remove the blue balloon at index 2. This takes 3 seconds.\nThere are no longer two consecutive balloons of the same color. Total time = 3.\n\nExample 2:\n\n\nInput: colors = \"abc\", neededTime = [1,2,3]\nOutput: 0\nExplanation: The rope is already colorful. Bob does not need to remove any balloons from the rope.\n\n\nExample 3:\n\n\nInput: colors = \"aabaa\", neededTime = [1,2,3,4,1]\nOutput: 2\nExplanation: Bob will remove the balloons at indices 0 and 4. Each balloons takes 1 second to remove.\nThere are no longer two consecutive balloons of the same color. Total time = 1 + 1 = 2.\n\n\n \nConstraints:\n\n\n\tn == colors.length == neededTime.length\n\t1 <= n <= 105\n\t1 <= neededTime[i] <= 104\n\tcolors contains only lowercase English letters.\n\n",
+  "description": "Alice has n balloons arranged on a rope. You are given a 0-indexed string colors where colors[i] is the color of the ith balloon.\n\nAlice wants the rope to be colorful. She does not want two consecutive balloons to be of the same color, so she asks Bob for help. Bob can remove some balloons from the rope to make it colorful. You are given a 0-indexed integer array neededTime where neededTime[i] is the time (in seconds) that Bob needs to remove the ith balloon from the rope.\n\nReturn the minimum time Bob needs to make the rope colorful.",
+  "example": "Input: colors = \"abaac\", neededTime = [1,2,3,4,5]\nOutput: 3\nExplanation: In the above image, 'a' is blue, 'b' is red, and 'c' is green.\nBob can remove the blue balloon at index 2. This takes 3 seconds.\nThere are no longer two consecutive balloons of the same color. Total time = 3.",
+  "constraints_text": "n == colors.length == neededTime.length\n\t1 <= n <= 105\n\t1 <= neededTime[i] <= 104\n\tcolors contains only lowercase English letters.",
+  "templates": {
+    "c": "int minCost(char* colors, int* neededTime, int neededTimeSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minCost(string colors, vector<int>& neededTime) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCost(String colors, int[] neededTime) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} colors\n * @param {number[]} neededTime\n * @return {number}\n */\nvar minCost = function(colors, neededTime) {\n    \n};",
+    "python": "class Solution(object):\n    def minCost(self, colors, neededTime):\n        \"\"\"\n        :type colors: str\n        :type neededTime: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the balloons to identify contiguous segments of identical colors.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "consecutive-balloons",
+        "same-color"
+      ],
+      "constraints": [
+        "n-colors-length",
+        "n-105"
+      ]
+    },
+    {
+      "intent": "For each identified segment of same-colored balloons, calculate the minimum time to remove all but one.",
+      "structures": [
+        "number",
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-time",
+        "remove-some-balloons"
+      ],
+      "constraints": [
+        "1-neededtime-i-104"
+      ]
+    }
+  ]
+}

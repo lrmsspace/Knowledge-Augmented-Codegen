@@ -1,0 +1,39 @@
+{
+  "slug": "find-the-minimum-area-to-cover-all-ones-i",
+  "link": "https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i/",
+  "difficulty": "Medium",
+  "index": "2525",
+  "description_full": "You are given a 2D binary array grid. Find a rectangle with horizontal and vertical sides with the smallest area, such that all the 1's in grid lie inside this rectangle.\n\nReturn the minimum possible area of the rectangle.\n\n \nExample 1:\n\n\nInput: grid = [[0,1,0],[1,0,1]]\n\nOutput: 6\n\nExplanation:\n\n\n\nThe smallest rectangle has a height of 2 and a width of 3, so it has an area of 2 * 3 = 6.\n\n\nExample 2:\n\n\nInput: grid = [[1,0],[0,0]]\n\nOutput: 1\n\nExplanation:\n\n\n\nThe smallest rectangle has both height and width 1, so its area is 1 * 1 = 1.\n\n\n \nConstraints:\n\n\n\t1 <= grid.length, grid[i].length <= 1000\n\tgrid[i][j] is either 0 or 1.\n\tThe input is generated such that there is at least one 1 in grid.\n\n",
+  "description": "You are given a 2D binary array grid. Find a rectangle with horizontal and vertical sides with the smallest area, such that all the 1's in grid lie inside this rectangle.\n\nReturn the minimum possible area of the rectangle.",
+  "example": "Input: grid = [[0,1,0],[1,0,1]]\n\nOutput: 6\n\nExplanation:\n\n\n\nThe smallest rectangle has a height of 2 and a width of 3, so it has an area of 2 * 3 = 6.",
+  "constraints_text": "1 <= grid.length, grid[i].length <= 1000\n\tgrid[i][j] is either 0 or 1.\n\tThe input is generated such that there is at least one 1 in grid.",
+  "templates": {
+    "c": "int minimumArea(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumArea(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumArea(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar minimumArea = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumArea(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the grid to find the minimum and maximum row and column indices that contain a '1'.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "2d-binary-array-grid",
+        "all-the-1-s",
+        "smallest-area"
+      ],
+      "constraints": [
+        "1-grid-length-grid-i-length-1000",
+        "at-least-one-1-in-grid"
+      ]
+    }
+  ]
+}

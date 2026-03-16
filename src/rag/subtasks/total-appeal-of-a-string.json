@@ -1,0 +1,38 @@
+{
+  "slug": "total-appeal-of-a-string",
+  "link": "https://leetcode.com/problems/total-appeal-of-a-string/",
+  "difficulty": "Hard",
+  "index": "2164",
+  "description_full": "The appeal of a string is the number of distinct characters found in the string.\n\n\n\tFor example, the appeal of \"abbca\" is 3 because it has 3 distinct characters: 'a', 'b', and 'c'.\n\n\nGiven a string s, return the total appeal of all of its substrings.\n\nA substring is a contiguous sequence of characters within a string.\n\n \nExample 1:\n\n\nInput: s = \"abbca\"\nOutput: 28\nExplanation: The following are the substrings of \"abbca\":\n- Substrings of length 1: \"a\", \"b\", \"b\", \"c\", \"a\" have an appeal of 1, 1, 1, 1, and 1 respectively. The sum is 5.\n- Substrings of length 2: \"ab\", \"bb\", \"bc\", \"ca\" have an appeal of 2, 1, 2, and 2 respectively. The sum is 7.\n- Substrings of length 3: \"abb\", \"bbc\", \"bca\" have an appeal of 2, 2, and 3 respectively. The sum is 7.\n- Substrings of length 4: \"abbc\", \"bbca\" have an appeal of 3 and 3 respectively. The sum is 6.\n- Substrings of length 5: \"abbca\" has an appeal of 3. The sum is 3.\nThe total sum is 5 + 7 + 7 + 6 + 3 = 28.\n\n\nExample 2:\n\n\nInput: s = \"code\"\nOutput: 20\nExplanation: The following are the substrings of \"code\":\n- Substrings of length 1: \"c\", \"o\", \"d\", \"e\" have an appeal of 1, 1, 1, and 1 respectively. The sum is 4.\n- Substrings of length 2: \"co\", \"od\", \"de\" have an appeal of 2, 2, and 2 respectively. The sum is 6.\n- Substrings of length 3: \"cod\", \"ode\" have an appeal of 3 and 3 respectively. The sum is 6.\n- Substrings of length 4: \"code\" has an appeal of 4. The sum is 4.\nThe total sum is 4 + 6 + 6 + 4 = 20.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts consists of lowercase English letters.\n\n",
+  "description": "The appeal of a string is the number of distinct characters found in the string.\n\n\n\tFor example, the appeal of \"abbca\" is 3 because it has 3 distinct characters: 'a', 'b', and 'c'.\n\n\nGiven a string s, return the total appeal of all of its substrings.\n\nA substring is a contiguous sequence of characters within a string.",
+  "example": "Input: s = \"abbca\"\nOutput: 28\nExplanation: The following are the substrings of \"abbca\":\n- Substrings of length 1: \"a\", \"b\", \"b\", \"c\", \"a\" have an appeal of 1, 1, 1, 1, and 1 respectively. The sum is 5.\n- Substrings of length 2: \"ab\", \"bb\", \"bc\", \"ca\" have an appeal of 2, 1, 2, and 2 respectively. The sum is 7.\n- Substrings of length 3: \"abb\", \"bbc\", \"bca\" have an appeal of 2, 2, and 3 respectively. The sum is 7.\n- Substrings of length 4: \"abbc\", \"bbca\" have an appeal of 3 and 3 respectively. The sum is 6.\n- Substrings of length 5: \"abbca\" has an appeal of 3. The sum is 3.\nThe total sum is 5 + 7 + 7 + 6 + 3 = 28.",
+  "constraints_text": "1 <= s.length <= 105\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "long long appealSum(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long appealSum(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long appealSum(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar appealSum = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def appealSum(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total appeal of all substrings by summing the contribution of each character to substrings where it is the first occurrence.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "total-appeal-of-all-of-its-substrings",
+        "distinct-characters"
+      ],
+      "constraints": [
+        "1-s-length-105",
+        "s-consists-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

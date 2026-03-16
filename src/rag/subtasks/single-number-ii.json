@@ -1,0 +1,39 @@
+{
+  "slug": "single-number-ii",
+  "link": "https://leetcode.com/problems/single-number-ii/",
+  "difficulty": "Medium",
+  "index": "690",
+  "description_full": "Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.\n\n \nExample 1:\nInput: nums = [2,2,3,2]\nOutput: 3\nExample 2:\nInput: nums = [0,1,0,1,0,1,99]\nOutput: 99\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 3 * 104\n\t-231 <= nums[i] <= 231 - 1\n\tEach element in nums appears exactly three times except for one element which appears once.\n\n",
+  "description": "Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.\n\nYou must implement a solution with a linear runtime complexity and use only constant extra space.",
+  "example": "Input: nums = [2,2,3,2]\nOutput: 3",
+  "constraints_text": "1 <= nums.length <= 3 * 104\n\t-231 <= nums[i] <= 231 - 1\n\tEach element in nums appears exactly three times except for one element which appears once.",
+  "templates": {
+    "c": "int singleNumber(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int singleNumber(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int singleNumber(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar singleNumber = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def singleNumber(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the unique number by summing bits at each position modulo 3.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "every-element-appears-three-times-except-for-one",
+        "find-the-single-element"
+      ],
+      "constraints": [
+        "linear-runtime-complexity",
+        "constant-extra-space"
+      ]
+    }
+  ]
+}

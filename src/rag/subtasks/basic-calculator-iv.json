@@ -1,0 +1,84 @@
+{
+  "slug": "basic-calculator-iv",
+  "link": "https://leetcode.com/problems/basic-calculator-iv/",
+  "difficulty": "Hard",
+  "index": "1882",
+  "description_full": "Given an expression such as expression = \"e + 8 - a + 5\" and an evaluation map such as {\"e\": 1} (given in terms of evalvars = [\"e\"] and evalints = [1]), return a list of tokens representing the simplified expression, such as [\"-1*a\",\"14\"]\n\n\n\tAn expression alternates chunks and symbols, with a space separating each chunk and symbol.\n\tA chunk is either an expression in parentheses, a variable, or a non-negative integer.\n\tA variable is a string of lowercase letters (not including digits.) Note that variables can be multiple letters, and note that variables never have a leading coefficient or unary operator like \"2x\" or \"-x\".\n\n\nExpressions are evaluated in the usual order: brackets first, then multiplication, then addition and subtraction.\n\n\n\tFor example, expression = \"1 + 2 * 3\" has an answer of [\"7\"].\n\n\nThe format of the output is as follows:\n\n\n\tFor each term of free variables with a non-zero coefficient, we write the free variables within a term in sorted order lexicographically.\n\t\n\t\tFor example, we would never write a term like \"b*a*c\", only \"a*b*c\".\n\t\n\t\n\tTerms have degrees equal to the number of free variables being multiplied, counting multiplicity. We write the largest degree terms of our answer first, breaking ties by lexicographic order ignoring the leading coefficient of the term.\n\t\n\t\tFor example, \"a*a*b*c\" has degree 4.\n\t\n\t\n\tThe leading coefficient of the term is placed directly to the left with an asterisk separating it from the variables (if they exist.) A leading coefficient of 1 is still printed.\n\tAn example of a well-formatted answer is [\"-2*a*a*a\", \"3*a*a*b\", \"3*b*b\", \"4*a\", \"5*c\", \"-6\"].\n\tTerms (including constant terms) with coefficient 0 are not included.\n\t\n\t\tFor example, an expression of \"0\" has an output of [].\n\t\n\t\n\n\nNote: You may assume that the given expression is always valid. All intermediate results will be in the range of [-231, 231 - 1].\n\n \nExample 1:\n\n\nInput: expression = \"e + 8 - a + 5\", evalvars = [\"e\"], evalints = [1]\nOutput: [\"-1*a\",\"14\"]\n\n\nExample 2:\n\n\nInput: expression = \"e - 8 + temperature - pressure\", evalvars = [\"e\", \"temperature\"], evalints = [1, 12]\nOutput: [\"-1*pressure\",\"5\"]\n\n\nExample 3:\n\n\nInput: expression = \"(e + 8) * (e - 8)\", evalvars = [], evalints = []\nOutput: [\"1*e*e\",\"-64\"]\n\n\n \nConstraints:\n\n\n\t1 <= expression.length <= 250\n\texpression consists of lowercase English letters, digits, '+', '-', '*', '(', ')', ' '.\n\texpression does not contain any leading or trailing spaces.\n\tAll the tokens in expression are separated by a single space.\n\t0 <= evalvars.length <= 100\n\t1 <= evalvars[i].length <= 20\n\tevalvars[i] consists of lowercase English letters.\n\tevalints.length == evalvars.length\n\t-100 <= evalints[i] <= 100\n\n",
+  "description": "Given an expression such as expression = \"e + 8 - a + 5\" and an evaluation map such as {\"e\": 1} (given in terms of evalvars = [\"e\"] and evalints = [1]), return a list of tokens representing the simplified expression, such as [\"-1*a\",\"14\"]\n\n\n\tAn expression alternates chunks and symbols, with a space separating each chunk and symbol.\n\tA chunk is either an expression in parentheses, a variable, or a non-negative integer.\n\tA variable is a string of lowercase letters (not including digits.) Note that variables can be multiple letters, and note that variables never have a leading coefficient or unary operator like \"2x\" or \"-x\".\n\n\nExpressions are evaluated in the usual order: brackets first, then multiplication, then addition and subtraction.\n\n\n\tFor example, expression = \"1 + 2 * 3\" has an answer of [\"7\"].\n\n\nThe format of the output is as follows:\n\n\n\tFor each term of free variables with a non-zero coefficient, we write the free variables within a term in sorted order lexicographically.\n\t\n\t\tFor example, we would never write a term like \"b*a*c\", only \"a*b*c\".\n\t\n\t\n\tTerms have degrees equal to the number of free variables being multiplied, counting multiplicity. We write the largest degree terms of our answer first, breaking ties by lexicographic order ignoring the leading coefficient of the term.\n\t\n\t\tFor example, \"a*a*b*c\" has degree 4.\n\t\n\t\n\tThe leading coefficient of the term is placed directly to the left with an asterisk separating it from the variables (if they exist.) A leading coefficient of 1 is still printed.\n\tAn example of a well-formatted answer is [\"-2*a*a*a\", \"3*a*a*b\", \"3*b*b\", \"4*a\", \"5*c\", \"-6\"].\n\tTerms (including constant terms) with coefficient 0 are not included.\n\t\n\t\tFor example, an expression of \"0\" has an output of [].\n\t\n\t\n\n\nNote: You may assume that the given expression is always valid. All intermediate results will be in the range of [-231, 231 - 1].",
+  "example": "Input: expression = \"e + 8 - a + 5\", evalvars = [\"e\"], evalints = [1]\nOutput: [\"-1*a\",\"14\"]",
+  "constraints_text": "1 <= expression.length <= 250\n\texpression consists of lowercase English letters, digits, '+', '-', '*', '(', ')', ' '.\n\texpression does not contain any leading or trailing spaces.\n\tAll the tokens in expression are separated by a single space.\n\t0 <= evalvars.length <= 100\n\t1 <= evalvars[i].length <= 20\n\tevalvars[i] consists of lowercase English letters.\n\tevalints.length == evalvars.length\n\t-100 <= evalints[i] <= 100",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** basicCalculatorIV(char* expression, char** evalvars, int evalvarsSize, int* evalints, int evalintsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> basicCalculatorIV(string expression, vector<string>& evalvars, vector<int>& evalints) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> basicCalculatorIV(String expression, String[] evalvars, int[] evalints) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} expression\n * @param {string[]} evalvars\n * @param {number[]} evalints\n * @return {string[]}\n */\nvar basicCalculatorIV = function(expression, evalvars, evalints) {\n    \n};",
+    "python": "class Solution(object):\n    def basicCalculatorIV(self, expression, evalvars, evalints):\n        \"\"\"\n        :type expression: str\n        :type evalvars: List[str]\n        :type evalints: List[int]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a polynomial data structure to represent terms (coefficient and variable products) and define arithmetic operations (add, subtract, multiply) on them.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "recursion"
+      ],
+      "cues": [
+        "simplified-expression",
+        "terms-have-degrees",
+        "variables-in-sorted-order-lexicographically"
+      ],
+      "constraints": [
+        "non-negative-integer",
+        "lowercase-letters",
+        "variables-can-be-multiple-letters"
+      ]
+    },
+    {
+      "intent": "Parse the input expression string into the polynomial data structure, handling operator precedence, parentheses, and variable substitutions from the evaluation map.",
+      "structures": [
+        "string",
+        "stack"
+      ],
+      "actions": [
+        "recursion",
+        "dfs",
+        "simulation",
+        "hashing"
+      ],
+      "cues": [
+        "expression-alternates-chunks-and-symbols",
+        "expression-in-parentheses",
+        "evaluation-map",
+        "usual-order-brackets-first-then-multiplication-then-addition-and-subtraction"
+      ],
+      "constraints": [
+        "evalvars",
+        "evalints"
+      ]
+    },
+    {
+      "intent": "Format the final simplified polynomial into a list of strings, adhering to specified sorting rules for terms (degree, then lexicographical) and variables within terms.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "output-is-as-follows",
+        "variables-within-a-term-in-sorted-order-lexicographically",
+        "largest-degree-terms-of-our-answer-first",
+        "leading-coefficient-of-1-is-still-printed",
+        "coefficient-0-are-not-included"
+      ],
+      "constraints": [
+        "non-zero-coefficient",
+        "degree-equal-to-the-number-of-free-variables"
+      ]
+    }
+  ]
+}

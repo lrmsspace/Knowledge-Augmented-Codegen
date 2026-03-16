@@ -1,0 +1,38 @@
+{
+  "slug": "search-in-rotated-sorted-array-ii",
+  "link": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
+  "difficulty": "Medium",
+  "index": "659",
+  "description_full": "There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).\n\nBefore being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].\n\nGiven the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.\n\nYou must decrease the overall operation steps as much as possible.\n\n \nExample 1:\nInput: nums = [2,5,6,0,0,1,2], target = 0\nOutput: true\nExample 2:\nInput: nums = [2,5,6,0,0,1,2], target = 3\nOutput: false\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tnums is guaranteed to be rotated at some pivot.\n\t-104 <= target <= 104\n\n\n \nFollow up: This problem is similar to Search in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?\n",
+  "description": "There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).\n\nBefore being passed to your function, nums is rotated at an unknown pivot index k (0 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,4,4,5,6,6,7] might be rotated at pivot index 5 and become [4,5,6,6,7,0,1,2,4,4].\n\nGiven the array nums after the rotation and an integer target, return true if target is in nums, or false if it is not in nums.\n\nYou must decrease the overall operation steps as much as possible.",
+  "example": "Input: nums = [2,5,6,0,0,1,2], target = 0\nOutput: true",
+  "constraints_text": "1 <= nums.length <= 5000\n\t-104 <= nums[i] <= 104\n\tnums is guaranteed to be rotated at some pivot.\n\t-104 <= target <= 104\n\n\n \nFollow up: This problem is similar to Search in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?",
+  "templates": {
+    "c": "bool search(int* nums, int numsSize, int target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool search(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean search(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {boolean}\n */\nvar search = function(nums, target) {\n    \n};",
+    "python": "class Solution(object):\n    def search(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Search for the target value in a rotated sorted array that may contain duplicate elements, optimizing for minimal operations.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "binary-search"
+      ],
+      "cues": [
+        "rotated",
+        "sorted-in-non-decreasing-order",
+        "duplicates",
+        "target"
+      ],
+      "constraints": [
+        "decrease-overall-operation-steps",
+        "1-nums-length-5000"
+      ]
+    }
+  ]
+}

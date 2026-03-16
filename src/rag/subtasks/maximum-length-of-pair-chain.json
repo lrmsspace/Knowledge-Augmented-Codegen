@@ -1,0 +1,53 @@
+{
+  "slug": "maximum-length-of-pair-chain",
+  "link": "https://leetcode.com/problems/maximum-length-of-pair-chain/",
+  "difficulty": "Medium",
+  "index": "892",
+  "description_full": "You are given an array of n pairs pairs where pairs[i] = [lefti, righti] and lefti < righti.\n\nA pair p2 = [c, d] follows a pair p1 = [a, b] if b < c. A chain of pairs can be formed in this fashion.\n\nReturn the length longest chain which can be formed.\n\nYou do not need to use up all the given intervals. You can select pairs in any order.\n\n \nExample 1:\n\n\nInput: pairs = [[1,2],[2,3],[3,4]]\nOutput: 2\nExplanation: The longest chain is [1,2] -> [3,4].\n\n\nExample 2:\n\n\nInput: pairs = [[1,2],[7,8],[4,5]]\nOutput: 3\nExplanation: The longest chain is [1,2] -> [4,5] -> [7,8].\n\n\n \nConstraints:\n\n\n\tn == pairs.length\n\t1 <= n <= 1000\n\t-1000 <= lefti < righti <= 1000\n\n",
+  "description": "You are given an array of n pairs pairs where pairs[i] = [lefti, righti] and lefti < righti.\n\nA pair p2 = [c, d] follows a pair p1 = [a, b] if b < c. A chain of pairs can be formed in this fashion.\n\nReturn the length longest chain which can be formed.\n\nYou do not need to use up all the given intervals. You can select pairs in any order.",
+  "example": "Input: pairs = [[1,2],[2,3],[3,4]]\nOutput: 2\nExplanation: The longest chain is [1,2] -> [3,4].",
+  "constraints_text": "n == pairs.length\n\t1 <= n <= 1000\n\t-1000 <= lefti < righti <= 1000",
+  "templates": {
+    "c": "int findLongestChain(int** pairs, int pairsSize, int* pairsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findLongestChain(vector<vector<int>>& pairs) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLongestChain(int[][] pairs) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} pairs\n * @return {number}\n */\nvar findLongestChain = function(pairs) {\n    \n};",
+    "python": "class Solution(object):\n    def findLongestChain(self, pairs):\n        \"\"\"\n        :type pairs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input pairs by their right endpoint to enable a greedy selection strategy.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "select-pairs-in-any-order",
+        "chain-of-pairs"
+      ],
+      "constraints": [
+        "n-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted pairs, greedily selecting the next available pair to extend the chain.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "longest-chain",
+        "p2-follows-p1-if-b-c"
+      ],
+      "constraints": [
+        "n-1000"
+      ]
+    }
+  ]
+}

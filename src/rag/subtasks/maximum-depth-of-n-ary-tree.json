@@ -1,0 +1,38 @@
+{
+  "slug": "maximum-depth-of-n-ary-tree",
+  "link": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
+  "difficulty": "Easy",
+  "index": "118",
+  "description_full": "Given a n-ary tree, find its maximum depth.\n\nThe maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.\n\nNary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).\n\n \nExample 1:\n\n\n\n\nInput: root = [1,null,3,2,4,null,5,6]\nOutput: 3\n\n\nExample 2:\n\n\n\n\nInput: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]\nOutput: 5\n\n\n \nConstraints:\n\n\n\tThe total number of nodes is in the range [0, 104].\n\tThe depth of the n-ary tree is less than or equal to 1000.\n\n",
+  "description": "Given a n-ary tree, find its maximum depth.\n\nThe maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.\n\nNary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).",
+  "example": "Input: root = [1,null,3,2,4,null,5,6]\nOutput: 3",
+  "constraints_text": "The total number of nodes is in the range [0, 104].\n\tThe depth of the n-ary tree is less than or equal to 1000.",
+  "templates": {
+    "c": "/**\n * Definition for a Node.\n * struct Node {\n *     int val;\n *     int numChildren;\n *     struct Node** children;\n * };\n */\n\nint maxDepth(struct Node* root) {\n    \n}",
+    "cpp": "/*\n// Definition for a Node.\nclass Node {\npublic:\n    int val;\n    vector<Node*> children;\n\n    Node() {}\n\n    Node(int _val) {\n        val = _val;\n    }\n\n    Node(int _val, vector<Node*> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\npublic:\n    int maxDepth(Node* root) {\n        \n    }\n};",
+    "java": "/*\n// Definition for a Node.\nclass Node {\n    public int val;\n    public List<Node> children;\n\n    public Node() {}\n\n    public Node(int _val) {\n        val = _val;\n    }\n\n    public Node(int _val, List<Node> _children) {\n        val = _val;\n        children = _children;\n    }\n};\n*/\n\nclass Solution {\n    public int maxDepth(Node root) {\n        \n    }\n}",
+    "javascript": "/**\n * // Definition for a _Node.\n * function _Node(val,children) {\n *    this.val = val === undefined ? null : val;\n *    this.children = children === undefined ? null : children;\n * };\n */\n\n/**\n * @param {_Node|null} root\n * @return {number}\n */\nvar maxDepth = function(root) {\n    \n};",
+    "python": "\"\"\"\n# Definition for a Node.\nclass Node(object):\n    def __init__(self, val=None, children=None):\n        self.val = val\n        self.children = children\n\"\"\"\n\nclass Solution(object):\n    def maxDepth(self, root):\n        \"\"\"\n        :type root: Node\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Traverse the n-ary tree to determine its maximum depth by finding the longest path from the root to any leaf node.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "maximum-depth",
+        "n-ary-tree",
+        "longest-path"
+      ],
+      "constraints": [
+        "total-number-of-nodes-is-in-the-range-0-104",
+        "depth-less-than-or-equal-to-1000"
+      ]
+    }
+  ]
+}

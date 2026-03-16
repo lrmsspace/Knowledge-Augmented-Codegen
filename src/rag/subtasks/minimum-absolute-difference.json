@@ -1,0 +1,53 @@
+{
+  "slug": "minimum-absolute-difference",
+  "link": "https://leetcode.com/problems/minimum-absolute-difference/",
+  "difficulty": "Easy",
+  "index": "254",
+  "description_full": "Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.\n\nReturn a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows\n\n\n\ta, b are from arr\n\ta < b\n\tb - a equals to the minimum absolute difference of any two elements in arr\n\n\n \nExample 1:\n\n\nInput: arr = [4,2,1,3]\nOutput: [[1,2],[2,3],[3,4]]\nExplanation: The minimum absolute difference is 1. List all pairs with difference equal to 1 in ascending order.\n\nExample 2:\n\n\nInput: arr = [1,3,6,10,15]\nOutput: [[1,3]]\n\n\nExample 3:\n\n\nInput: arr = [3,8,-10,23,19,-4,-14,27]\nOutput: [[-14,-10],[19,23],[23,27]]\n\n\n \nConstraints:\n\n\n\t2 <= arr.length <= 105\n\t-106 <= arr[i] <= 106\n\n",
+  "description": "Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.\n\nReturn a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows\n\n\n\ta, b are from arr\n\ta < b\n\tb - a equals to the minimum absolute difference of any two elements in arr",
+  "example": "Input: arr = [4,2,1,3]\nOutput: [[1,2],[2,3],[3,4]]\nExplanation: The minimum absolute difference is 1. List all pairs with difference equal to 1 in ascending order.",
+  "constraints_text": "2 <= arr.length <= 105\n\t-106 <= arr[i] <= 106",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** minimumAbsDifference(int* arr, int arrSize, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> minimumAbsDifference(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<List<Integer>> minimumAbsDifference(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number[][]}\n */\nvar minimumAbsDifference = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumAbsDifference(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array and determine the minimum absolute difference between any two adjacent elements.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-absolute-difference",
+        "distinct-integers"
+      ],
+      "constraints": [
+        "2-arr-length-105",
+        "106-arr-i-106"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted array to collect all pairs whose difference equals the calculated minimum absolute difference.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-a-list-of-pairs-in-ascending-order",
+        "b-a-equals-to-the-minimum-absolute-difference"
+      ],
+      "constraints": [
+        "a-b"
+      ]
+    }
+  ]
+}

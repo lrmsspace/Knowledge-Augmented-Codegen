@@ -1,0 +1,38 @@
+{
+  "slug": "count-substrings-starting-and-ending-with-given-character",
+  "link": "https://leetcode.com/problems/count-substrings-starting-and-ending-with-given-character/",
+  "difficulty": "Medium",
+  "index": "2484",
+  "description_full": "You are given a string s and a character c. Return the total number of substrings of s that start and end with c.\n\n \nExample 1:\n\n\nInput: s = \"abada\", c = \"a\"\n\nOutput: 6\n\nExplanation: Substrings starting and ending with \"a\" are: \"abada\", \"abada\", \"abada\", \"abada\", \"abada\", \"abada\".\n\n\nExample 2:\n\n\nInput: s = \"zzz\", c = \"z\"\n\nOutput: 6\n\nExplanation: There are a total of 6 substrings in s and all start and end with \"z\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts and c consist only of lowercase English letters.\n\n",
+  "description": "You are given a string s and a character c. Return the total number of substrings of s that start and end with c.",
+  "example": "Input: s = \"abada\", c = \"a\"\n\nOutput: 6\n\nExplanation: Substrings starting and ending with \"a\" are: \"abada\", \"abada\", \"abada\", \"abada\", \"abada\", \"abada\".",
+  "constraints_text": "1 <= s.length <= 105\n\ts and c consist only of lowercase English letters.",
+  "templates": {
+    "c": "long long countSubstrings(char* s, char c) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long countSubstrings(string s, char c) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countSubstrings(String s, char c) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {character} c\n * @return {number}\n */\nvar countSubstrings = function(s, c) {\n    \n};",
+    "python": "class Solution(object):\n    def countSubstrings(self, s, c):\n        \"\"\"\n        :type s: str\n        :type c: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the occurrences of the target character in the string and calculate the sum of combinations for valid substrings.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "total-number-of-substrings",
+        "start-and-end-with-c"
+      ],
+      "constraints": [
+        "1-s-length-105",
+        "s-and-c-consist-only-of-lowercase-english-letters"
+      ]
+    }
+  ]
+}

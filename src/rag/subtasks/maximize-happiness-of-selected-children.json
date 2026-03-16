@@ -1,0 +1,54 @@
+{
+  "slug": "maximize-happiness-of-selected-children",
+  "link": "https://leetcode.com/problems/maximize-happiness-of-selected-children/",
+  "difficulty": "Medium",
+  "index": "2480",
+  "description_full": "You are given an array happiness of length n, and a positive integer k.\n\nThere are n children standing in a queue, where the ith child has happiness value happiness[i]. You want to select k children from these n children in k turns.\n\nIn each turn, when you select a child, the happiness value of all the children that have not been selected till now decreases by 1. Note that the happiness value cannot become negative and gets decremented only if it is positive.\n\nReturn the maximum sum of the happiness values of the selected children you can achieve by selecting k children.\n\n \nExample 1:\n\n\nInput: happiness = [1,2,3], k = 2\nOutput: 4\nExplanation: We can pick 2 children in the following way:\n- Pick the child with the happiness value == 3. The happiness value of the remaining children becomes [0,1].\n- Pick the child with the happiness value == 1. The happiness value of the remaining child becomes [0]. Note that the happiness value cannot become less than 0.\nThe sum of the happiness values of the selected children is 3 + 1 = 4.\n\n\nExample 2:\n\n\nInput: happiness = [1,1,1,1], k = 2\nOutput: 1\nExplanation: We can pick 2 children in the following way:\n- Pick any child with the happiness value == 1. The happiness value of the remaining children becomes [0,0,0].\n- Pick the child with the happiness value == 0. The happiness value of the remaining child becomes [0,0].\nThe sum of the happiness values of the selected children is 1 + 0 = 1.\n\n\nExample 3:\n\n\nInput: happiness = [2,3,4,5], k = 1\nOutput: 5\nExplanation: We can pick 1 child in the following way:\n- Pick the child with the happiness value == 5. The happiness value of the remaining children becomes [1,2,3].\nThe sum of the happiness values of the selected children is 5.\n\n\n \nConstraints:\n\n\n\t1 <= n == happiness.length <= 2 * 105\n\t1 <= happiness[i] <= 108\n\t1 <= k <= n\n\n",
+  "description": "You are given an array happiness of length n, and a positive integer k.\n\nThere are n children standing in a queue, where the ith child has happiness value happiness[i]. You want to select k children from these n children in k turns.\n\nIn each turn, when you select a child, the happiness value of all the children that have not been selected till now decreases by 1. Note that the happiness value cannot become negative and gets decremented only if it is positive.\n\nReturn the maximum sum of the happiness values of the selected children you can achieve by selecting k children.",
+  "example": "Input: happiness = [1,2,3], k = 2\nOutput: 4\nExplanation: We can pick 2 children in the following way:\n- Pick the child with the happiness value == 3. The happiness value of the remaining children becomes [0,1].\n- Pick the child with the happiness value == 1. The happiness value of the remaining child becomes [0]. Note that the happiness value cannot become less than 0.\nThe sum of the happiness values of the selected children is 3 + 1 = 4.",
+  "constraints_text": "1 <= n == happiness.length <= 2 * 105\n\t1 <= happiness[i] <= 108\n\t1 <= k <= n",
+  "templates": {
+    "c": "long long maximumHappinessSum(int* happiness, int happinessSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long maximumHappinessSum(vector<int>& happiness, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maximumHappinessSum(int[] happiness, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} happiness\n * @param {number} k\n * @return {number}\n */\nvar maximumHappinessSum = function(happiness, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumHappinessSum(self, happiness, k):\n        \"\"\"\n        :type happiness: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the initial happiness values in descending order to prioritize selection.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "maximum-sum",
+        "select-k-children"
+      ],
+      "constraints": [
+        "n-2-105"
+      ]
+    },
+    {
+      "intent": "Iterate through the top k sorted happiness values, applying decrements and summing them up.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "k-turns",
+        "decreases-by-1",
+        "cannot-become-negative"
+      ],
+      "constraints": [
+        "k-n"
+      ]
+    }
+  ]
+}

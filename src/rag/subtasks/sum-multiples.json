@@ -1,0 +1,37 @@
+{
+  "slug": "sum-multiples",
+  "link": "https://leetcode.com/problems/sum-multiples/",
+  "difficulty": "Easy",
+  "index": "570",
+  "description_full": "Given a positive integer n, find the sum of all integers in the range [1, n] inclusive that are divisible by 3, 5, or 7.\n\nReturn an integer denoting the sum of all numbers in the given range satisfying the constraint.\n\n \nExample 1:\n\n\nInput: n = 7\nOutput: 21\nExplanation: Numbers in the range [1, 7] that are divisible by 3, 5, or 7 are 3, 5, 6, 7. The sum of these numbers is 21.\n\n\nExample 2:\n\n\nInput: n = 10\nOutput: 40\nExplanation: Numbers in the range [1, 10] that are divisible by 3, 5, or 7 are 3, 5, 6, 7, 9, 10. The sum of these numbers is 40.\n\n\nExample 3:\n\n\nInput: n = 9\nOutput: 30\nExplanation: Numbers in the range [1, 9] that are divisible by 3, 5, or 7 are 3, 5, 6, 7, 9. The sum of these numbers is 30.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 103\n\n",
+  "description": "Given a positive integer n, find the sum of all integers in the range [1, n] inclusive that are divisible by 3, 5, or 7.\n\nReturn an integer denoting the sum of all numbers in the given range satisfying the constraint.",
+  "example": "Input: n = 7\nOutput: 21\nExplanation: Numbers in the range [1, 7] that are divisible by 3, 5, or 7 are 3, 5, 6, 7. The sum of these numbers is 21.",
+  "constraints_text": "1 <= n <= 103",
+  "templates": {
+    "c": "int sumOfMultiples(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int sumOfMultiples(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int sumOfMultiples(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar sumOfMultiples = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def sumOfMultiples(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the sum of numbers divisible by 3, 5, or 7 up to n using the inclusion-exclusion principle.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "gcd"
+      ],
+      "cues": [
+        "sum-of-all-integers",
+        "divisible-by-3-5-or-7",
+        "range-1-n"
+      ],
+      "constraints": [
+        "1-n-103"
+      ]
+    }
+  ]
+}

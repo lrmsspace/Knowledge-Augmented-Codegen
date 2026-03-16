@@ -1,0 +1,39 @@
+{
+  "slug": "distinct-subsequences",
+  "link": "https://leetcode.com/problems/distinct-subsequences/",
+  "difficulty": "Hard",
+  "index": "1788",
+  "description_full": "Given two strings s and t, return the number of distinct subsequences of s which equals t.\n\nThe test cases are generated so that the answer fits on a 32-bit signed integer.\n\n \nExample 1:\n\n\nInput: s = \"rabbbit\", t = \"rabbit\"\nOutput: 3\nExplanation:\nAs shown below, there are 3 ways you can generate \"rabbit\" from s.\nrabbbit\nrabbbit\nrabbbit\n\n\nExample 2:\n\n\nInput: s = \"babgbag\", t = \"bag\"\nOutput: 5\nExplanation:\nAs shown below, there are 5 ways you can generate \"bag\" from s.\nbabgbag\nbabgbag\nbabgbag\nbabgbag\nbabgbag\n\n \nConstraints:\n\n\n\t1 <= s.length, t.length <= 1000\n\ts and t consist of English letters.\n\n",
+  "description": "Given two strings s and t, return the number of distinct subsequences of s which equals t.\n\nThe test cases are generated so that the answer fits on a 32-bit signed integer.",
+  "example": "Input: s = \"rabbbit\", t = \"rabbit\"\nOutput: 3\nExplanation:\nAs shown below, there are 3 ways you can generate \"rabbit\" from s.\nrabbbit\nrabbbit\nrabbbit",
+  "constraints_text": "1 <= s.length, t.length <= 1000\n\ts and t consist of English letters.",
+  "templates": {
+    "c": "int numDistinct(char* s, char* t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numDistinct(string s, string t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numDistinct(String s, String t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @return {number}\n */\nvar numDistinct = function(s, t) {\n    \n};",
+    "python": "class Solution(object):\n    def numDistinct(self, s, t):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the count of distinct subsequences of string s that equal string t using dynamic programming.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "distinct-subsequences",
+        "equals-t",
+        "number-of"
+      ],
+      "constraints": [
+        "1-s-length-t-length-1000",
+        "answer-fits-32-bit-signed-integer"
+      ]
+    }
+  ]
+}

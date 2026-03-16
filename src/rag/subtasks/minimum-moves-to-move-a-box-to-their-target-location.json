@@ -1,0 +1,75 @@
+{
+  "slug": "minimum-moves-to-move-a-box-to-their-target-location",
+  "link": "https://leetcode.com/problems/minimum-moves-to-move-a-box-to-their-target-location/",
+  "difficulty": "Hard",
+  "index": "1969",
+  "description_full": "A storekeeper is a game in which the player pushes boxes around in a warehouse trying to get them to target locations.\n\nThe game is represented by an m x n grid of characters grid where each element is a wall, floor, or box.\n\nYour task is to move the box 'B' to the target position 'T' under the following rules:\n\n\n\tThe character 'S' represents the player. The player can move up, down, left, right in grid if it is a floor (empty cell).\n\tThe character '.' represents the floor which means a free cell to walk.\n\tThe character '#' represents the wall which means an obstacle (impossible to walk there).\n\tThere is only one box 'B' and one target cell 'T' in the grid.\n\tThe box can be moved to an adjacent free cell by standing next to the box and then moving in the direction of the box. This is a push.\n\tThe player cannot walk through the box.\n\n\nReturn the minimum number of pushes to move the box to the target. If there is no way to reach the target, return -1.\n\n \nExample 1:\n\n\nInput: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\".\",\".\",\"B\",\".\",\"#\"],\n               [\"#\",\".\",\"#\",\"#\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: 3\nExplanation: We return only the number of times the box is pushed.\n\nExample 2:\n\n\nInput: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\".\",\".\",\"B\",\".\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: -1\n\n\nExample 3:\n\n\nInput: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\".\",\".\",\"#\",\"#\"],\n               [\"#\",\".\",\"#\",\"B\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: 5\nExplanation: push the box down, left, left, up and up.\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 20\n\tgrid contains only characters '.', '#', 'S', 'T', or 'B'.\n\tThere is only one character 'S', 'B', and 'T' in the grid.\n\n",
+  "description": "A storekeeper is a game in which the player pushes boxes around in a warehouse trying to get them to target locations.\n\nThe game is represented by an m x n grid of characters grid where each element is a wall, floor, or box.\n\nYour task is to move the box 'B' to the target position 'T' under the following rules:\n\n\n\tThe character 'S' represents the player. The player can move up, down, left, right in grid if it is a floor (empty cell).\n\tThe character '.' represents the floor which means a free cell to walk.\n\tThe character '#' represents the wall which means an obstacle (impossible to walk there).\n\tThere is only one box 'B' and one target cell 'T' in the grid.\n\tThe box can be moved to an adjacent free cell by standing next to the box and then moving in the direction of the box. This is a push.\n\tThe player cannot walk through the box.\n\n\nReturn the minimum number of pushes to move the box to the target. If there is no way to reach the target, return -1.",
+  "example": "Input: grid = [[\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\"T\",\"#\",\"#\",\"#\",\"#\"],\n               [\"#\",\".\",\".\",\"B\",\".\",\"#\"],\n               [\"#\",\".\",\"#\",\"#\",\".\",\"#\"],\n               [\"#\",\".\",\".\",\".\",\"S\",\"#\"],\n               [\"#\",\"#\",\"#\",\"#\",\"#\",\"#\"]]\nOutput: 3\nExplanation: We return only the number of times the box is pushed.",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 20\n\tgrid contains only characters '.', '#', 'S', 'T', or 'B'.\n\tThere is only one character 'S', 'B', and 'T' in the grid.",
+  "templates": {
+    "c": "int minPushBox(char** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minPushBox(vector<vector<char>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minPushBox(char[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {character[][]} grid\n * @return {number}\n */\nvar minPushBox = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def minPushBox(self, grid):\n        \"\"\"\n        :type grid: List[List[str]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse the grid to find initial positions of player, box, and target, and initialize the main search queue and visited states tracker.",
+      "structures": [
+        "matrix",
+        "queue",
+        "ds"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "m-x-n-grid",
+        "s-b-t-characters"
+      ],
+      "constraints": [
+        "only-one-box-b-and-one-target-cell-t"
+      ]
+    },
+    {
+      "intent": "Determine if the player can reach a specific adjacent cell to push the box, considering the box as an obstacle.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "player-can-move-up-down-left-right",
+        "player-cannot-walk-through-the-box"
+      ],
+      "constraints": [
+        "grid-boundaries",
+        "walls-are-obstacles"
+      ]
+    },
+    {
+      "intent": "Perform a breadth-first search on the state space (box position, player position) to find the minimum pushes to move the box to the target.",
+      "structures": [
+        "queue",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "bfs",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-pushes",
+        "move-the-box-to-the-target"
+      ],
+      "constraints": [
+        "box-can-be-moved-by-standing-next-to-it",
+        "player-cannot-walk-through-the-box"
+      ]
+    }
+  ]
+}

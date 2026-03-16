@@ -1,0 +1,61 @@
+{
+  "slug": "identify-the-largest-outlier-in-an-array",
+  "link": "https://leetcode.com/problems/identify-the-largest-outlier-in-an-array/",
+  "difficulty": "Medium",
+  "index": "2585",
+  "description_full": "You are given an integer array nums. This array contains n elements, where exactly n - 2 elements are special numbers. One of the remaining two elements is the sum of these special numbers, and the other is an outlier.\n\nAn outlier is defined as a number that is neither one of the original special numbers nor the element representing the sum of those numbers.\n\nNote that special numbers, the sum element, and the outlier must have distinct indices, but may share the same value.\n\nReturn the largest potential outlier in nums.\n\n \nExample 1:\n\n\nInput: nums = [2,3,5,10]\n\nOutput: 10\n\nExplanation:\n\nThe special numbers could be 2 and 3, thus making their sum 5 and the outlier 10.\n\n\nExample 2:\n\n\nInput: nums = [-2,-1,-3,-6,4]\n\nOutput: 4\n\nExplanation:\n\nThe special numbers could be -2, -1, and -3, thus making their sum -6 and the outlier 4.\n\n\nExample 3:\n\n\nInput: nums = [1,1,1,1,1,5,5]\n\nOutput: 5\n\nExplanation:\n\nThe special numbers could be 1, 1, 1, 1, and 1, thus making their sum 5 and the other 5 as the outlier.\n\n\n \nConstraints:\n\n\n\t3 <= nums.length <= 105\n\t-1000 <= nums[i] <= 1000\n\tThe input is generated such that at least one potential outlier exists in nums.\n\n",
+  "description": "You are given an integer array nums. This array contains n elements, where exactly n - 2 elements are special numbers. One of the remaining two elements is the sum of these special numbers, and the other is an outlier.\n\nAn outlier is defined as a number that is neither one of the original special numbers nor the element representing the sum of those numbers.\n\nNote that special numbers, the sum element, and the outlier must have distinct indices, but may share the same value.\n\nReturn the largest potential outlier in nums.",
+  "example": "Input: nums = [2,3,5,10]\n\nOutput: 10\n\nExplanation:\n\nThe special numbers could be 2 and 3, thus making their sum 5 and the outlier 10.",
+  "constraints_text": "3 <= nums.length <= 105\n\t-1000 <= nums[i] <= 1000\n\tThe input is generated such that at least one potential outlier exists in nums.",
+  "templates": {
+    "c": "int getLargestOutlier(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int getLargestOutlier(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getLargestOutlier(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar getLargestOutlier = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def getLargestOutlier(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the total sum of all numbers and their frequencies using a hash map for efficient lookups.",
+      "structures": [
+        "array",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "counting"
+      ],
+      "cues": [
+        "n-elements",
+        "sum-of-elements"
+      ],
+      "constraints": [
+        "nums-length-105",
+        "1000-nums-i-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through each number as a potential outlier, calculate the required sum value, and validate its existence using precomputed frequencies to find the maximum outlier.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "simulation"
+      ],
+      "cues": [
+        "largest-potential-outlier",
+        "distinct-indices",
+        "sum-of-these-special-numbers"
+      ],
+      "constraints": [
+        "3-nums-length",
+        "at-least-one-potential-outlier-exists"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+// Source: https://leetcode.com/problems/right-triangles/   |   Difficulty: Medium
+//
+// Problem Description:
+// You are given a 2D boolean matrix grid.
+//
+// A collection of 3 elements of grid is a right triangle if one of its elements is in the same row with another element and in the same column with the third element. The 3 elements may not be next to each other.
+//
+// Return an integer that is the number of right triangles that can be made with 3 elements of grid such that all of them have a value of 1.
+//
+// Example:
+// 0
+// 			1
+// 			0
+// 		
+// 		
+// 			0
+// 			1
+// 			1
+// 		
+// 		
+// 			0
+// 			1
+// 			0
+// 		
+// 	
+//
+//
+//
+// 	
+// 		
+// 			0
+// 			1
+// 			0
+// 		
+// 		
+// 			0
+// 			1
+// 			1
+// 		
+// 		
+// 			0
+// 			1
+// 			0
+// 		
+// 	
+//
+//
+//
+// 	
+// 		
+// 			0
+// 			1
+// 			0
+// 		
+// 		
+// 			0
+// 			1
+// 			1
+// 		
+// 		
+// 			0
+// 			1
+// 			0
+// 		
+// 	
+//
+//
+//
+//
+// Input: grid = [[0,1,0],[0,1,1],[0,1,0]]
+//
+// Output: 2
+//
+// Explanation:
+//
+// There are two right triangles with elements of the value 1. Notice that the blue ones do not form a right triangle because the 3 elements are in the same column.
+//
+// Constraints:
+// 1 <= grid.length <= 1000
+// 	1 <= grid[i].length <= 1000
+// 	0 <= grid[i][j] <= 1
+//
+
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var numberOfRightTriangles = function(grid) {
+    const m = grid.length;
+    const n = grid[0].length;
+    const rowCount = new Array(m).fill(0);
+    const colCount = new Array(n).fill(0);
+
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] === 1) {
+                rowCount[i]++;
+                colCount[j]++;
+            }
+        }
+    }
+
+    let result = 0;
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            if (grid[i][j] === 1) {
+                result += (rowCount[i] - 1) * (colCount[j] - 1);
+            }
+        }
+    }
+
+    return result;
+};

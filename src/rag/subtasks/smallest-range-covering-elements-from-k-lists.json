@@ -1,0 +1,58 @@
+{
+  "slug": "smallest-range-covering-elements-from-k-lists",
+  "link": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/",
+  "difficulty": "Hard",
+  "index": "1857",
+  "description_full": "You have k lists of sorted integers in non-decreasing order. Find the smallest range that includes at least one number from each of the k lists.\n\nWe define the range [a, b] is smaller than range [c, d] if b - a < d - c or a < c if b - a == d - c.\n\n \nExample 1:\n\n\nInput: nums = [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]]\nOutput: [20,24]\nExplanation: \nList 1: [4, 10, 15, 24,26], 24 is in range [20,24].\nList 2: [0, 9, 12, 20], 20 is in range [20,24].\nList 3: [5, 18, 22, 30], 22 is in range [20,24].\n\n\nExample 2:\n\n\nInput: nums = [[1,2,3],[1,2,3],[1,2,3]]\nOutput: [1,1]\n\n\n \nConstraints:\n\n\n\tnums.length == k\n\t1 <= k <= 3500\n\t1 <= nums[i].length <= 50\n\t-105 <= nums[i][j] <= 105\n\tnums[i] is sorted in non-decreasing order.\n\n",
+  "description": "You have k lists of sorted integers in non-decreasing order. Find the smallest range that includes at least one number from each of the k lists.\n\nWe define the range [a, b] is smaller than range [c, d] if b - a < d - c or a < c if b - a == d - c.",
+  "example": "Input: nums = [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]]\nOutput: [20,24]\nExplanation: \nList 1: [4, 10, 15, 24,26], 24 is in range [20,24].\nList 2: [0, 9, 12, 20], 20 is in range [20,24].\nList 3: [5, 18, 22, 30], 22 is in range [20,24].",
+  "constraints_text": "nums.length == k\n\t1 <= k <= 3500\n\t1 <= nums[i].length <= 50\n\t-105 <= nums[i][j] <= 105\n\tnums[i] is sorted in non-decreasing order.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* smallestRange(int** nums, int numsSize, int* numsColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> smallestRange(vector<vector<int>>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] smallestRange(List<List<Integer>> nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} nums\n * @return {number[]}\n */\nvar smallestRange = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def smallestRange(self, nums):\n        \"\"\"\n        :type nums: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a min-priority queue with the first element from each list and track the current maximum value across these elements.",
+      "structures": [
+        "heap",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "k-lists",
+        "first-element-from-each"
+      ],
+      "constraints": [
+        "nums-length-k",
+        "nums-i-is-sorted-in-non-decreasing-order"
+      ]
+    },
+    {
+      "intent": "Iteratively extract the minimum element from the priority queue, update the smallest range found so far, and add the next element from the corresponding list.",
+      "structures": [
+        "heap",
+        "array"
+      ],
+      "actions": [
+        "heap-select",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "smallest-range",
+        "includes-at-least-one-number-from-each",
+        "range-comparison-criteria"
+      ],
+      "constraints": [
+        "nums-i-is-sorted-in-non-decreasing-order"
+      ]
+    }
+  ]
+}

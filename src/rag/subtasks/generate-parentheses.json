@@ -1,0 +1,38 @@
+{
+  "slug": "generate-parentheses",
+  "link": "https://leetcode.com/problems/generate-parentheses/",
+  "difficulty": "Medium",
+  "index": "623",
+  "description_full": "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.\n\n \nExample 1:\nInput: n = 3\nOutput: [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\nExample 2:\nInput: n = 1\nOutput: [\"()\"]\n\n \nConstraints:\n\n\n\t1 <= n <= 8\n\n",
+  "description": "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
+  "example": "Input: n = 3\nOutput: [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+  "constraints_text": "1 <= n <= 8",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** generateParenthesis(int n, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> generateParenthesis(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> generateParenthesis(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {string[]}\n */\nvar generateParenthesis = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def generateParenthesis(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively generate all valid parenthesis combinations by maintaining counts of open and close parentheses.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion",
+        "enumeration"
+      ],
+      "cues": [
+        "generate-all-combinations",
+        "well-formed-parentheses"
+      ],
+      "constraints": [
+        "1-n-8"
+      ]
+    }
+  ]
+}

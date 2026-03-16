@@ -1,0 +1,37 @@
+{
+  "slug": "defanging-an-ip-address",
+  "link": "https://leetcode.com/problems/defanging-an-ip-address/",
+  "difficulty": "Easy",
+  "index": "239",
+  "description_full": "Given a valid (IPv4) IP address, return a defanged version of that IP address.\r\n\r\nA defanged IP address replaces every period \".\" with \"[.]\".\r\n\r\n \r\nExample 1:\r\nInput: address = \"1.1.1.1\"\r\nOutput: \"1[.]1[.]1[.]1\"\r\nExample 2:\r\nInput: address = \"255.100.50.0\"\r\nOutput: \"255[.]100[.]50[.]0\"\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\tThe given address is a valid IPv4 address.\r\n",
+  "description": "Given a valid (IPv4) IP address, return a defanged version of that IP address.\r\n\r\nA defanged IP address replaces every period \".\" with \"[.]\".",
+  "example": "Input: address = \"1.1.1.1\"\r\nOutput: \"1[.]1[.]1[.]1\"",
+  "constraints_text": "The given address is a valid IPv4 address.",
+  "templates": {
+    "c": "\n\nchar * defangIPaddr(char * address){\n\n}",
+    "cpp": "class Solution {\npublic:\n    string defangIPaddr(string address) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String defangIPaddr(String address) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} address\n * @return {string}\n */\nvar defangIPaddr = function(address) {\n    \n};",
+    "python": "class Solution(object):\n    def defangIPaddr(self, address):\n        \"\"\"\n        :type address: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the input IP address string and replace every occurrence of '.' with '[.]' to form the defanged address.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "defanged-ip-address",
+        "replaces-every-period",
+        ""
+      ],
+      "constraints": [
+        "valid-ipv4-address"
+      ]
+    }
+  ]
+}

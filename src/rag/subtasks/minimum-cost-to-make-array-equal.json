@@ -1,0 +1,54 @@
+{
+  "slug": "minimum-cost-to-make-array-equal",
+  "link": "https://leetcode.com/problems/minimum-cost-to-make-array-equal/",
+  "difficulty": "Hard",
+  "index": "2202",
+  "description_full": "You are given two 0-indexed arrays nums and cost consisting each of n positive integers.\n\nYou can do the following operation any number of times:\n\n\n\tIncrease or decrease any element of the array nums by 1.\n\n\nThe cost of doing one operation on the ith element is cost[i].\n\nReturn the minimum total cost such that all the elements of the array nums become equal.\n\n \nExample 1:\n\n\nInput: nums = [1,3,5,2], cost = [2,3,1,14]\nOutput: 8\nExplanation: We can make all the elements equal to 2 in the following way:\n- Increase the 0th element one time. The cost is 2.\n- Decrease the 1st element one time. The cost is 3.\n- Decrease the 2nd element three times. The cost is 1 + 1 + 1 = 3.\nThe total cost is 2 + 3 + 3 = 8.\nIt can be shown that we cannot make the array equal with a smaller cost.\n\n\nExample 2:\n\n\nInput: nums = [2,2,2,2,2], cost = [4,2,8,1,3]\nOutput: 0\nExplanation: All the elements are already equal, so no operations are needed.\n\n\n \nConstraints:\n\n\n\tn == nums.length == cost.length\n\t1 <= n <= 105\n\t1 <= nums[i], cost[i] <= 106\n\tTest cases are generated in a way that the output doesn't exceed 253-1\n\n",
+  "description": "You are given two 0-indexed arrays nums and cost consisting each of n positive integers.\n\nYou can do the following operation any number of times:\n\n\n\tIncrease or decrease any element of the array nums by 1.\n\n\nThe cost of doing one operation on the ith element is cost[i].\n\nReturn the minimum total cost such that all the elements of the array nums become equal.",
+  "example": "Input: nums = [1,3,5,2], cost = [2,3,1,14]\nOutput: 8\nExplanation: We can make all the elements equal to 2 in the following way:\n- Increase the 0th element one time. The cost is 2.\n- Decrease the 1st element one time. The cost is 3.\n- Decrease the 2nd element three times. The cost is 1 + 1 + 1 = 3.\nThe total cost is 2 + 3 + 3 = 8.\nIt can be shown that we cannot make the array equal with a smaller cost.",
+  "constraints_text": "n == nums.length == cost.length\n\t1 <= n <= 105\n\t1 <= nums[i], cost[i] <= 106\n\tTest cases are generated in a way that the output doesn't exceed 253-1",
+  "templates": {
+    "c": "long long minCost(int* nums, int numsSize, int* cost, int costSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minCost(vector<int>& nums, vector<int>& cost) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minCost(int[] nums, int[] cost) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} cost\n * @return {number}\n */\nvar minCost = function(nums, cost) {\n    \n};",
+    "python": "class Solution(object):\n    def minCost(self, nums, cost):\n        \"\"\"\n        :type nums: List[int]\n        :type cost: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a function to calculate the total cost for making all elements equal to a given target value.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "cost-of-doing-one-operation",
+        "total-cost"
+      ],
+      "constraints": [
+        "output-doesn-t-exceed-2-53-1"
+      ]
+    },
+    {
+      "intent": "Use binary search on the possible target values to find the minimum total cost.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "minimum-total-cost",
+        "all-elements-equal"
+      ],
+      "constraints": [
+        "1-nums-i-10-6",
+        "n-10-5"
+      ]
+    }
+  ]
+}

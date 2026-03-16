@@ -1,0 +1,72 @@
+{
+  "slug": "find-the-original-typed-string-ii",
+  "link": "https://leetcode.com/problems/find-the-original-typed-string-ii/",
+  "difficulty": "Hard",
+  "index": 2770,
+  "description_full": "Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and may press a key for too long, resulting in a character being typed multiple times.\n\nYou are given a string word, which represents the final output displayed on Alice's screen. You are also given a positive integer k.\n\nReturn the total number of possible original strings that Alice might have intended to type, if she was trying to type a string of size at least k.\n\nSince the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: word = \"aabbccdd\", k = 7\n\nOutput: 5\n\nExplanation:\n\nThe possible strings are: \"aabbccdd\", \"aabbccd\", \"aabbcdd\", \"aabccdd\", and \"abbccdd\".\n\n\nExample 2:\n\n\nInput: word = \"aabbccdd\", k = 8\n\nOutput: 1\n\nExplanation:\n\nThe only possible string is \"aabbccdd\".\n\n\nExample 3:\n\n\nInput: word = \"aaabbb\", k = 3\n\nOutput: 8\n\n\n \nConstraints:\n\n\n 1 <= word.length <= 5 * 105\n word consists only of lowercase English letters.\n 1 <= k <= 2000\n\n",
+  "description": "Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and may press a key for too long, resulting in a character being typed multiple times.\n\nYou are given a string word, which represents the final output displayed on Alice's screen. You are also given a positive integer k.\n\nReturn the total number of possible original strings that Alice might have intended to type, if she was trying to type a string of size at least k.\n\nSince the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: word = \"aabbccdd\", k = 7\n\nOutput: 5\n\nExplanation:\n\nThe possible strings are: \"aabbccdd\", \"aabbccd\", \"aabbcdd\", \"aabccdd\", and \"abbccdd\".",
+  "constraints_text": "1 <= word.length <= 5 * 105\n word consists only of lowercase English letters.\n 1 <= k <= 2000",
+  "templates": {
+    "c": "int possibleStringCount(char* word, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int possibleStringCount(string word, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int possibleStringCount(String word, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} k\n * @return {number}\n */\nvar possibleStringCount = function(word, k) {\n    \n};",
+    "python": "class Solution(object):\n    def possibleStringCount(self, word, k):\n        \"\"\"\n        :type word: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Define DP state: dp[i] is the number of possible intended strings that can form the prefix word[0...i-1].",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "word",
+        "final output",
+        "intended to type"
+      ],
+      "constraints": [
+        "modulo 10^9 + 7"
+      ]
+    },
+    {
+      "intent": "Calculate DP transitions: The last character of the intended string, $c$, must be the last character of a run in word. The length of this run, $L$, must be $\\ge 1$.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "clumsy",
+        "multiple times"
+      ],
+      "constraints": [
+        "run length $\\ge 1$"
+      ]
+    },
+    {
+      "intent": "Sum the final DP states from $\text{length}(word)$ down to $k$ to find the total number of intended strings of size $\\ge k$.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "prefix-sum"
+      ],
+      "cues": [
+        "size at least k",
+        "total number"
+      ],
+      "constraints": [
+        "final sum"
+      ]
+    }
+  ]
+}

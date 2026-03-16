@@ -1,0 +1,69 @@
+{
+  "slug": "shortest-subarray-to-be-removed-to-make-array-sorted",
+  "link": "https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/",
+  "difficulty": "Medium",
+  "index": "1293",
+  "description_full": "Given an integer array arr, remove a subarray (can be empty) from arr such that the remaining elements in arr are non-decreasing.\n\nReturn the length of the shortest subarray to remove.\n\nA subarray is a contiguous subsequence of the array.\n\n \nExample 1:\n\n\nInput: arr = [1,2,3,10,4,2,3,5]\nOutput: 3\nExplanation: The shortest subarray we can remove is [10,4,2] of length 3. The remaining elements after that will be [1,2,3,3,5] which are sorted.\nAnother correct solution is to remove the subarray [3,10,4].\n\n\nExample 2:\n\n\nInput: arr = [5,4,3,2,1]\nOutput: 4\nExplanation: Since the array is strictly decreasing, we can only keep a single element. Therefore we need to remove a subarray of length 4, either [5,4,3,2] or [4,3,2,1].\n\n\nExample 3:\n\n\nInput: arr = [1,2,3]\nOutput: 0\nExplanation: The array is already non-decreasing. We do not need to remove any elements.\n\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 105\n\t0 <= arr[i] <= 109\n\n",
+  "description": "Given an integer array arr, remove a subarray (can be empty) from arr such that the remaining elements in arr are non-decreasing.\n\nReturn the length of the shortest subarray to remove.\n\nA subarray is a contiguous subsequence of the array.",
+  "example": "Input: arr = [1,2,3,10,4,2,3,5]\nOutput: 3\nExplanation: The shortest subarray we can remove is [10,4,2] of length 3. The remaining elements after that will be [1,2,3,3,5] which are sorted.\nAnother correct solution is to remove the subarray [3,10,4].",
+  "constraints_text": "1 <= arr.length <= 105\n\t0 <= arr[i] <= 109",
+  "templates": {
+    "c": "int findLengthOfShortestSubarray(int* arr, int arrSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findLengthOfShortestSubarray(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findLengthOfShortestSubarray(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {number}\n */\nvar findLengthOfShortestSubarray = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def findLengthOfShortestSubarray(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the end index of the longest non-decreasing prefix of the array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "non-decreasing",
+        "prefix"
+      ],
+      "constraints": [
+        "arr-length-10-5"
+      ]
+    },
+    {
+      "intent": "Identify the start index of the longest non-decreasing suffix of the array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "non-decreasing",
+        "suffix"
+      ],
+      "constraints": [
+        "arr-length-10-5"
+      ]
+    },
+    {
+      "intent": "Find the minimum length of the subarray to remove by merging valid prefix and suffix segments.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "shortest-subarray-to-remove",
+        "remaining-elements-non-decreasing"
+      ],
+      "constraints": [
+        "arr-length-10-5"
+      ]
+    }
+  ]
+}

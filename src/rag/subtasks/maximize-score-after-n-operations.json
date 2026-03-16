@@ -1,0 +1,57 @@
+{
+  "slug": "maximize-score-after-n-operations",
+  "link": "https://leetcode.com/problems/maximize-score-after-n-operations/",
+  "difficulty": "Hard",
+  "index": "2075",
+  "description_full": "You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.\n\nIn the ith operation (1-indexed), you will:\n\n\n\tChoose two elements, x and y.\n\tReceive a score of i * gcd(x, y).\n\tRemove x and y from nums.\n\n\nReturn the maximum score you can receive after performing n operations.\n\nThe function gcd(x, y) is the greatest common divisor of x and y.\n\n \nExample 1:\n\n\nInput: nums = [1,2]\nOutput: 1\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 2)) = 1\n\n\nExample 2:\n\n\nInput: nums = [3,4,6,8]\nOutput: 11\nExplanation: The optimal choice of operations is:\n(1 * gcd(3, 6)) + (2 * gcd(4, 8)) = 3 + 8 = 11\n\n\nExample 3:\n\n\nInput: nums = [1,2,3,4,5,6]\nOutput: 14\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 5)) + (2 * gcd(2, 4)) + (3 * gcd(3, 6)) = 1 + 4 + 9 = 14\n\n\n \nConstraints:\n\n\n\t1 <= n <= 7\n\tnums.length == 2 * n\n\t1 <= nums[i] <= 106\n\n",
+  "description": "You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.\n\nIn the ith operation (1-indexed), you will:\n\n\n\tChoose two elements, x and y.\n\tReceive a score of i * gcd(x, y).\n\tRemove x and y from nums.\n\n\nReturn the maximum score you can receive after performing n operations.\n\nThe function gcd(x, y) is the greatest common divisor of x and y.",
+  "example": "Input: nums = [1,2]\nOutput: 1\nExplanation: The optimal choice of operations is:\n(1 * gcd(1, 2)) = 1",
+  "constraints_text": "1 <= n <= 7\n\tnums.length == 2 * n\n\t1 <= nums[i] <= 106",
+  "templates": {
+    "c": "int maxScore(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxScore(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxScore = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maxScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute GCDs for all possible pairs of numbers in the input array to optimize repeated calculations during the main algorithm.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "gcd",
+        "enumeration"
+      ],
+      "cues": [
+        "gcd-x-y"
+      ],
+      "constraints": [
+        "1-nums-i-106"
+      ]
+    },
+    {
+      "intent": "Implement a dynamic programming solution using a bitmask to represent the set of used numbers, finding the maximum score by iterating through all possible pairings.",
+      "structures": [
+        "array",
+        "bitset"
+      ],
+      "actions": [
+        "bitmask-dp",
+        "recursion"
+      ],
+      "cues": [
+        "maximum-score",
+        "n-operations",
+        "choose-two-elements",
+        "remove-x-and-y"
+      ],
+      "constraints": [
+        "1-n-7",
+        "nums-length-2-n"
+      ]
+    }
+  ]
+}

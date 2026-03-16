@@ -1,0 +1,35 @@
+{
+  "slug": "smallest-number-with-all-set-bits",
+  "link": "https://leetcode.com/problems/smallest-number-with-all-set-bits/",
+  "difficulty": "Easy",
+  "index": "2358",
+  "description_full": "You are given a positive number n.\n\nReturn the smallest number x greater than or equal to n, such that the binary representation of x contains only set bits\n\n \nExample 1:\n\n\nInput: n = 5\n\nOutput: 7\n\nExplanation:\n\nThe binary representation of 7 is \"111\".\n\n\nExample 2:\n\n\nInput: n = 10\n\nOutput: 15\n\nExplanation:\n\nThe binary representation of 15 is \"1111\".\n\n\nExample 3:\n\n\nInput: n = 3\n\nOutput: 3\n\nExplanation:\n\nThe binary representation of 3 is \"11\".\n\n\n \nConstraints:\n\n\n\t1 <= n <= 1000\n\n",
+  "description": "You are given a positive number n.\n\nReturn the smallest number x greater than or equal to n, such that the binary representation of x contains only set bits",
+  "example": "Input: n = 5\n\nOutput: 7\n\nExplanation:\n\nThe binary representation of 7 is \"111\".",
+  "constraints_text": "1 <= n <= 1000",
+  "templates": {
+    "c": "int smallestNumber(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int smallestNumber(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int smallestNumber(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar smallestNumber = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def smallestNumber(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the smallest number x, greater than or equal to n, whose binary representation consists only of set bits.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "smallest-number-x-n",
+        "only-set-bits"
+      ],
+      "constraints": [
+        "1-n-1000"
+      ]
+    }
+  ]
+}

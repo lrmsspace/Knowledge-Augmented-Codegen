@@ -1,0 +1,41 @@
+{
+  "slug": "flip-columns-for-maximum-number-of-equal-rows",
+  "link": "https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/",
+  "difficulty": "Medium",
+  "index": "1103",
+  "description_full": "You are given an m x n binary matrix matrix.\n\nYou can choose any number of columns in the matrix and flip every cell in that column (i.e., Change the value of the cell from 0 to 1 or vice versa).\n\nReturn the maximum number of rows that have all values equal after some number of flips.\n\n \nExample 1:\n\n\nInput: matrix = [[0,1],[1,1]]\nOutput: 1\nExplanation: After flipping no values, 1 row has all values equal.\n\n\nExample 2:\n\n\nInput: matrix = [[0,1],[1,0]]\nOutput: 2\nExplanation: After flipping values in the first column, both rows have equal values.\n\n\nExample 3:\n\n\nInput: matrix = [[0,0,0],[0,0,1],[1,1,0]]\nOutput: 2\nExplanation: After flipping values in the first two columns, the last two rows have equal values.\n\n\n \nConstraints:\n\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 300\n\tmatrix[i][j] is either 0 or 1.\n\n",
+  "description": "You are given an m x n binary matrix matrix.\n\nYou can choose any number of columns in the matrix and flip every cell in that column (i.e., Change the value of the cell from 0 to 1 or vice versa).\n\nReturn the maximum number of rows that have all values equal after some number of flips.",
+  "example": "Input: matrix = [[0,1],[1,1]]\nOutput: 1\nExplanation: After flipping no values, 1 row has all values equal.",
+  "constraints_text": "m == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 300\n\tmatrix[i][j] is either 0 or 1.",
+  "templates": {
+    "c": "int maxEqualRowsAfterFlips(int** matrix, int matrixSize, int* matrixColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxEqualRowsAfterFlips(vector<vector<int>>& matrix) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxEqualRowsAfterFlips(int[][] matrix) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @return {number}\n */\nvar maxEqualRowsAfterFlips = function(matrix) {\n    \n};",
+    "python": "class Solution(object):\n    def maxEqualRowsAfterFlips(self, matrix):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Normalize each row to a canonical form (e.g., by ensuring its first element is 0) and count the frequencies of these normalized patterns to find the maximum.",
+      "structures": [
+        "matrix",
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "counting"
+      ],
+      "cues": [
+        "maximum-number-of-rows",
+        "all-values-equal",
+        "flip-every-cell"
+      ],
+      "constraints": [
+        "m-n-300",
+        "binary-matrix"
+      ]
+    }
+  ]
+}

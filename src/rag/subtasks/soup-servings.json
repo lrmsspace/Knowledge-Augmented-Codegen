@@ -1,0 +1,54 @@
+{
+  "slug": "soup-servings",
+  "link": "https://leetcode.com/problems/soup-servings/",
+  "difficulty": "Medium",
+  "index": "963",
+  "description_full": "You have two soups, A and B, each starting with n mL. On every turn, one of the following four serving operations is chosen at random, each with probability 0.25 independent of all previous turns:\n\n\n\tpour 100 mL from type A and 0 mL from type B\n\tpour 75 mL from type A and 25 mL from type B\n\tpour 50 mL from type A and 50 mL from type B\n\tpour 25 mL from type A and 75 mL from type B\n\n\nNote:\n\n\n\tThere is no operation that pours 0 mL from A and 100 mL from B.\n\tThe amounts from A and B are poured simultaneously during the turn.\n\tIf an operation asks you to pour more than you have left of a soup, pour all that remains of that soup.\n\n\nThe process stops immediately after any turn in which one of the soups is used up.\n\nReturn the probability that A is used up before B, plus half the probability that both soups are used up in the same turn. Answers within 10-5 of the actual answer will be accepted.\n\n \nExample 1:\n\n\nInput: n = 50\nOutput: 0.62500\nExplanation: \nIf we perform either of the first two serving operations, soup A will become empty first.\nIf we perform the third operation, A and B will become empty at the same time.\nIf we perform the fourth operation, B will become empty first.\nSo the total probability of A becoming empty first plus half the probability that A and B become empty at the same time, is 0.25 * (1 + 1 + 0.5 + 0) = 0.625.\n\n\nExample 2:\n\n\nInput: n = 100\nOutput: 0.71875\nExplanation: \nIf we perform the first serving operation, soup A will become empty first.\nIf we perform the second serving operations, A will become empty on performing operation [1, 2, 3], and both A and B become empty on performing operation 4.\nIf we perform the third operation, A will become empty on performing operation [1, 2], and both A and B become empty on performing operation 3.\nIf we perform the fourth operation, A will become empty on performing operation 1, and both A and B become empty on performing operation 2.\nSo the total probability of A becoming empty first plus half the probability that A and B become empty at the same time, is 0.71875.\n\n\n \nConstraints:\n\n\n\t0 <= n <= 109\n\n",
+  "description": "You have two soups, A and B, each starting with n mL. On every turn, one of the following four serving operations is chosen at random, each with probability 0.25 independent of all previous turns:\n\n\n\tpour 100 mL from type A and 0 mL from type B\n\tpour 75 mL from type A and 25 mL from type B\n\tpour 50 mL from type A and 50 mL from type B\n\tpour 25 mL from type A and 75 mL from type B\n\n\nNote:\n\n\n\tThere is no operation that pours 0 mL from A and 100 mL from B.\n\tThe amounts from A and B are poured simultaneously during the turn.\n\tIf an operation asks you to pour more than you have left of a soup, pour all that remains of that soup.\n\n\nThe process stops immediately after any turn in which one of the soups is used up.\n\nReturn the probability that A is used up before B, plus half the probability that both soups are used up in the same turn. Answers within 10-5 of the actual answer will be accepted.",
+  "example": "Input: n = 50\nOutput: 0.62500\nExplanation: \nIf we perform either of the first two serving operations, soup A will become empty first.\nIf we perform the third operation, A and B will become empty at the same time.\nIf we perform the fourth operation, B will become empty first.\nSo the total probability of A becoming empty first plus half the probability that A and B become empty at the same time, is 0.25 * (1 + 1 + 0.5 + 0) = 0.625.",
+  "constraints_text": "0 <= n <= 109",
+  "templates": {
+    "c": "double soupServings(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    double soupServings(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double soupServings(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar soupServings = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def soupServings(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: float\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Optimize for large initial soup amounts where the probability converges to 1.0 due to average consumption rates.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "answers-within-10-5",
+        "n-ml"
+      ],
+      "constraints": [
+        "n-can-be-very-large"
+      ]
+    },
+    {
+      "intent": "Calculate the exact probability using memoized recursion for smaller initial soup amounts.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "recursion",
+        "dp-2d"
+      ],
+      "cues": [
+        "probability",
+        "four-serving-operations",
+        "process-stops-immediately"
+      ],
+      "constraints": [
+        "n-up-to-4799-after-scaling-by-25"
+      ]
+    }
+  ]
+}

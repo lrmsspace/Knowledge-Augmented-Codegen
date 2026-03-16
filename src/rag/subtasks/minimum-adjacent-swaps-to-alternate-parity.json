@@ -1,0 +1,71 @@
+{
+  "slug": "minimum-adjacent-swaps-to-alternate-parity",
+  "link": "https://leetcode.com/problems/minimum-adjacent-swaps-to-alternate-parity/",
+  "difficulty": "Medium",
+  "index": "2660",
+  "description_full": "You are given an array nums of distinct integers.\n\nIn one operation, you can swap any two adjacent elements in the array.\n\nAn arrangement of the array is considered valid if the parity of adjacent elements alternates, meaning every pair of neighboring elements consists of one even and one odd number.\n\nReturn the minimum number of adjacent swaps required to transform nums into any valid arrangement.\n\nIf it is impossible to rearrange nums such that no two adjacent elements have the same parity, return -1.\n\n \nExample 1:\n\n\nInput: nums = [2,4,6,5,7]\n\nOutput: 3\n\nExplanation:\n\nSwapping 5 and 6, the array becomes [2,4,5,6,7]\n\nSwapping 5 and 4, the array becomes [2,5,4,6,7]\n\nSwapping 6 and 7, the array becomes [2,5,4,7,6]. The array is now a valid arrangement. Thus, the answer is 3.\n\n\nExample 2:\n\n\nInput: nums = [2,4,5,7]\n\nOutput: 1\n\nExplanation:\n\nBy swapping 4 and 5, the array becomes [2,5,4,7], which is a valid arrangement. Thus, the answer is 1.\n\n\nExample 3:\n\n\nInput: nums = [1,2,3]\n\nOutput: 0\n\nExplanation:\n\nThe array is already a valid arrangement. Thus, no operations are needed.\n\n\nExample 4:\n\n\nInput: nums = [4,5,6,8]\n\nOutput: -1\n\nExplanation:\n\nNo valid arrangement is possible. Thus, the answer is -1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\tAll elements in nums are distinct.\n\n",
+  "description": "You are given an array nums of distinct integers.\n\nIn one operation, you can swap any two adjacent elements in the array.\n\nAn arrangement of the array is considered valid if the parity of adjacent elements alternates, meaning every pair of neighboring elements consists of one even and one odd number.\n\nReturn the minimum number of adjacent swaps required to transform nums into any valid arrangement.\n\nIf it is impossible to rearrange nums such that no two adjacent elements have the same parity, return -1.",
+  "example": "Input: nums = [2,4,6,5,7]\n\nOutput: 3\n\nExplanation:\n\nSwapping 5 and 6, the array becomes [2,4,5,6,7]\n\nSwapping 5 and 4, the array becomes [2,5,4,6,7]\n\nSwapping 6 and 7, the array becomes [2,5,4,7,6]. The array is now a valid arrangement. Thus, the answer is 3.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\tAll elements in nums are distinct.",
+  "templates": {
+    "c": "int minSwaps(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minSwaps(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSwaps(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minSwaps = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minSwaps(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count even and odd numbers in the input array and determine initial feasibility for an alternating arrangement.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "parity-of-adjacent-elements-alternates",
+        "impossible-to-rearrange"
+      ],
+      "constraints": [
+        "abs-n-e-n-o-1"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum adjacent swaps required to transform an array into a target permutation by counting inversions.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "bit-fenwick"
+      ],
+      "cues": [
+        "minimum-number-of-adjacent-swaps"
+      ],
+      "constraints": [
+        "nums-length-105"
+      ]
+    },
+    {
+      "intent": "Generate target index sequences for all possible valid alternating parity patterns and apply inversion counting to find the minimum swaps.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "any-valid-arrangement"
+      ],
+      "constraints": [
+        "n-e-n-o",
+        "n-e-n-o-1",
+        "n-o-n-e-1"
+      ]
+    }
+  ]
+}

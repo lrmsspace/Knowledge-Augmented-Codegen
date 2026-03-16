@@ -1,0 +1,54 @@
+{
+  "slug": "mirror-reflection",
+  "link": "https://leetcode.com/problems/mirror-reflection/",
+  "difficulty": "Medium",
+  "index": "992",
+  "description_full": "There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered 0, 1, and 2.\n\nThe square room has walls of length p and a laser ray from the southwest corner first meets the east wall at a distance q from the 0th receptor.\n\nGiven the two integers p and q, return the number of the receptor that the ray meets first.\n\nThe test cases are guaranteed so that the ray will meet a receptor eventually.\n\n \nExample 1:\n\n\nInput: p = 2, q = 1\nOutput: 2\nExplanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.\n\n\nExample 2:\n\n\nInput: p = 3, q = 1\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= q <= p <= 1000\n\n",
+  "description": "There is a special square room with mirrors on each of the four walls. Except for the southwest corner, there are receptors on each of the remaining corners, numbered 0, 1, and 2.\n\nThe square room has walls of length p and a laser ray from the southwest corner first meets the east wall at a distance q from the 0th receptor.\n\nGiven the two integers p and q, return the number of the receptor that the ray meets first.\n\nThe test cases are guaranteed so that the ray will meet a receptor eventually.",
+  "example": "Input: p = 2, q = 1\nOutput: 2\nExplanation: The ray meets receptor 2 the first time it gets reflected back to the left wall.",
+  "constraints_text": "1 <= q <= p <= 1000",
+  "templates": {
+    "c": "int mirrorReflection(int p, int q) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int mirrorReflection(int p, int q) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int mirrorReflection(int p, int q) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} p\n * @param {number} q\n * @return {number}\n */\nvar mirrorReflection = function(p, q) {\n    \n};",
+    "python": "class Solution(object):\n    def mirrorReflection(self, p, q):\n        \"\"\"\n        :type p: int\n        :type q: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum number of effective horizontal and vertical room traversals for the ray to reach a receptor.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "gcd"
+      ],
+      "cues": [
+        "p",
+        "q",
+        "ray-meets-first"
+      ],
+      "constraints": [
+        "1-q-p-1000"
+      ]
+    },
+    {
+      "intent": "Determine the receptor number (0, 1, or 2) based on the parity of the calculated horizontal and vertical traversals.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "receptors-0-1-2",
+        "southwest-corner",
+        "east-wall",
+        "distance-q"
+      ],
+      "constraints": [
+        "ray-meets-receptor-eventually"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+// Source: https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/   |   Difficulty: Medium
+//
+// Problem Description:
+// You are given an integer n. There is an undirected graph with n nodes, numbered from 0 to n - 1. You are given a 2D integer array edges where edges[i] = [ai, bi] denotes that there exists an undirected edge connecting nodes ai and bi.
+//
+// Return the number of pairs of different nodes that are unreachable from each other.
+//
+// Example:
+// Input: n = 3, edges = [[0,1],[0,2],[1,2]]
+// Output: 0
+// Explanation: There are no pairs of nodes that are unreachable from each other. Therefore, we return 0.
+//
+// Constraints:
+// 1 <= n <= 105
+// 	0 <= edges.length <= 2 * 105
+// 	edges[i].length == 2
+// 	0 <= ai, bi < n
+// 	ai != bi
+// 	There are no repeated edges.
+//
+// Helpful references (internal KB):
+// - Search for connected components in a graph (graph, dfs, bfs, enumeration)
+//   • When to use: Use when you need to partition an undirected graph into maximal connected subgraphs where every node is reachable from every other node within its subgraph.
+//   • Idea: This algorithm identifies all connected components in an undirected graph by iteratively performing graph traversals (DFS or BFS) from unvisited nodes. It has a time complexity of O(V + E) for adjacency list representation.
+//   • Invariants: All nodes visited so far belong to an identified connected component.; Any node currently being visited is part of the current connected component being explored.
+//   • Tips: Maintain a visited array or set to track processed nodes.; Iterate through all nodes, starting a new traversal if a node is unvisited.
+//   • Pitfalls: Failing to iterate through all nodes to find all components in a disconnected graph.; Not correctly marking nodes as visited during traversal, leading to infinite loops or re-processing.
+// - The Inclusion-Exclusion Principle (array, number, counting, sieve)
+//   • When to use: Use when direct counting of elements satisfying specific conditions is difficult due to overlaps, and you need to find the count of elements satisfying at least one, exactly k, or none of several properties.
+//   • Idea: The Inclusion-Exclusion Principle counts the size of a union of sets by alternately adding and subtracting the sizes of intersections of increasing numbers of sets. Its complexity is often exponential in the number of properties.
+//   • Invariants: At the start of processing subsets of size k, the running total correctly accounts for all intersections of size less than k.; For every element x, its contribution to the total sum is 1 if it satisfies the target condition, and 0 otherwise.
+//   • Tips: Clearly define the properties (P1, P2, ..., Pn) for which elements are counted.; Systematically calculate the sizes of all relevant intersections of properties.
+//   • Pitfalls: Incorrectly defining the properties or the universe of elements being counted.; Errors in calculating the sizes of specific intersections of properties.
+// - Directed Graphs (graph, matrix, dfs)
+//   • When to use: Use when needing to determine reachability between all pairs of vertices in a directed graph, especially for small or dense graphs where O(V*(V+E)) time is acceptable.
+//   • Idea: This approach determines all-pairs reachability in a directed graph by performing a Depth-First Search starting from each vertex. It has a time complexity of O(V*(V+E)) and a space complexity of O(V^2).
+//   • Invariants: For any vertex u, after its dedicated DFS completes, TC[u][v] is true for all v reachable from u.; The transitive closure matrix TC accurately reflects all-pairs reachability in the original graph.
+//   • Tips: Initialize a boolean matrix to store reachability results.; For each vertex, perform a full DFS to mark all nodes reachable from it.
+//   • Pitfalls: High time complexity O(V*(V+E)) makes it unsuitable for large sparse graphs.; High space complexity O(V^2) can be prohibitive for graphs with many vertices.
+//
+// Notes:
+// - Keep the given method signatures unchanged.
+// - Use only Java standard library (`java.*`); no external dependencies.
+// - Do not change input/output formats or return value semantics.
+// - Conformance: single public class 'Solution'; no 'package' statement; place any extra types as static inner classes.
+// - If you introduce any helper functions, include their full implementations in this file; no hidden helpers.
+
+class Solution {
+    public long countPairs(int n, int[][] edges) {
+        List<List<Integer>> graph = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
+        }
+        for (int[] edge : edges) {
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
+        }
+
+        boolean[] visited = new boolean[n];
+        List<Integer> componentSizes = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                int size = dfs(i, graph, visited);
+                componentSizes.add(size);
+            }
+        }
+
+        long totalPairs = (long) n * (n - 1) / 2;
+        long reachablePairs = 0;
+        for (int size : componentSizes) {
+            reachablePairs += (long) size * (size - 1) / 2;
+        }
+
+        return totalPairs - reachablePairs;         
+    }
+}

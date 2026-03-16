@@ -1,0 +1,59 @@
+{
+  "slug": "allocate-mailboxes",
+  "link": "https://leetcode.com/problems/allocate-mailboxes/",
+  "difficulty": "Hard",
+  "index": "2012",
+  "description_full": "Given the array houses where houses[i] is the location of the ith house along a street and an integer k, allocate k mailboxes in the street.\n\nReturn the minimum total distance between each house and its nearest mailbox.\n\nThe test cases are generated so that the answer fits in a 32-bit integer.\n\n \nExample 1:\n\n\nInput: houses = [1,4,8,10,20], k = 3\nOutput: 5\nExplanation: Allocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5 \n\n\nExample 2:\n\n\nInput: houses = [2,3,5,12,18], k = 2\nOutput: 9\nExplanation: Allocate mailboxes in position 3 and 14.\nMinimum total distance from each houses to nearest mailboxes is |2-3| + |3-3| + |5-3| + |12-14| + |18-14| = 9.\n\n\n \nConstraints:\n\n\n\t1 <= k <= houses.length <= 100\n\t1 <= houses[i] <= 104\n\tAll the integers of houses are unique.\n\n",
+  "description": "Given the array houses where houses[i] is the location of the ith house along a street and an integer k, allocate k mailboxes in the street.\n\nReturn the minimum total distance between each house and its nearest mailbox.\n\nThe test cases are generated so that the answer fits in a 32-bit integer.",
+  "example": "Input: houses = [1,4,8,10,20], k = 3\nOutput: 5\nExplanation: Allocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5",
+  "constraints_text": "1 <= k <= houses.length <= 100\n\t1 <= houses[i] <= 104\n\tAll the integers of houses are unique.",
+  "templates": {
+    "c": "int minDistance(int* houses, int housesSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minDistance(vector<int>& houses, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minDistance(int[] houses, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} houses\n * @param {number} k\n * @return {number}\n */\nvar minDistance = function(houses, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minDistance(self, houses, k):\n        \"\"\"\n        :type houses: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort house locations and precompute the minimum cost to cover any contiguous segment of houses with a single mailbox.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "merge-sort",
+        "prefix-sum",
+        "enumeration"
+      ],
+      "cues": [
+        "houses-i-is-the-location",
+        "minimum-total-distance",
+        "each-house-and-its-nearest-mailbox"
+      ],
+      "constraints": [
+        "houses-length-100",
+        "1-houses-i-104"
+      ]
+    },
+    {
+      "intent": "Use dynamic programming to determine the minimum total distance for allocating k mailboxes across all houses, leveraging precomputed segment costs.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "allocate-k-mailboxes",
+        "minimum-total-distance"
+      ],
+      "constraints": [
+        "1-k-houses-length",
+        "houses-length-100"
+      ]
+    }
+  ]
+}

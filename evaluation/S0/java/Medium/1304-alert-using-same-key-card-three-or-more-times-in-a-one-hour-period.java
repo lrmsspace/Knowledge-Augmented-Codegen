@@ -1,0 +1,58 @@
+// Source: https://leetcode.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period/   |   Difficulty: Medium
+//
+// Problem Description:
+// LeetCode company workers use key-cards to unlock office doors. Each time a worker uses their key-card, the security system saves the worker's name and the time when it was used. The system emits an alert if any worker uses the key-card three or more times in a one-hour period.
+//
+// You are given a list of strings keyName and keyTime where [keyName[i], keyTime[i]] corresponds to a person's name and the time when their key-card was used in a single day.
+//
+// Access times are given in the 24-hour time format "HH:MM", such as "23:51" and "09:49".
+//
+// Return a list of unique worker names who received an alert for frequent keycard use. Sort the names in ascending order alphabetically.
+//
+// Notice that "10:00" - "11:00" is considered to be within a one-hour period, while "22:51" - "23:52" is not considered to be within a one-hour period.
+//
+// Example:
+// Input: keyName = ["daniel","daniel","daniel","luis","luis","luis","luis"], keyTime = ["10:00","10:40","11:00","09:00","11:00","13:00","15:00"]
+// Output: ["daniel"]
+// Explanation: "daniel" used the keycard 3 times in a one-hour period ("10:00","10:40", "11:00").
+//
+// Constraints:
+// 1 <= keyName.length, keyTime.length <= 105
+// 	keyName.length == keyTime.length
+// 	keyTime[i] is in the format "HH:MM".
+// 	[keyName[i], keyTime[i]] is unique.
+// 	1 <= keyName[i].length <= 10
+// 	keyName[i] contains only lowercase English letters.
+//
+
+class Solution {
+    public List<String> alertNames(String[] keyName, String[] keyTime) {
+        Map<String, List<Integer>> map = new HashMap<>();
+        Set<String> res = new HashSet<>();
+
+        for (int i = 0; i < keyName.length; i++) {
+            String name = keyName[i];
+            String time = keyTime[i];
+            int minutes = Integer.parseInt(time.substring(0, 2)) * 60 + Integer.parseInt(time.substring(3, 5));
+
+            map.putIfAbsent(name, new ArrayList<>());
+            map.get(name).add(minutes);
+        }
+
+        for (String name : map.keySet()) {
+            List<Integer> times = map.get(name);
+            Collections.sort(times);
+
+            for (int i = 2; i < times.size(); i++) {
+                if (times.get(i) - times.get(i - 2) <= 60) {
+                    res.add(name);
+                    break;
+                }
+            }
+        }
+
+        List<String> result = new ArrayList<>(res);
+        Collections.sort(result);
+        return result;          
+    }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "mark-elements-on-array-by-performing-queries",
+  "link": "https://leetcode.com/problems/mark-elements-on-array-by-performing-queries/",
+  "difficulty": "Medium",
+  "index": "2482",
+  "description_full": "You are given a 0-indexed array nums of size n consisting of positive integers.\n\nYou are also given a 2D array queries of size m where queries[i] = [indexi, ki].\n\nInitially all elements of the array are unmarked.\n\nYou need to apply m queries on the array in order, where on the ith query you do the following:\n\n\n\tMark the element at index indexi if it is not already marked.\n\tThen mark ki unmarked elements in the array with the smallest values. If multiple such elements exist, mark the ones with the smallest indices. And if less than ki unmarked elements exist, then mark all of them.\n\n\nReturn an array answer of size m where answer[i] is the sum of unmarked elements in the array after the ith query.\n\n \nExample 1:\n\n\nInput: nums = [1,2,2,1,2,3,1], queries = [[1,2],[3,3],[4,2]]\n\nOutput: [8,3,0]\n\nExplanation:\n\nWe do the following queries on the array:\n\n\n\tMark the element at index 1, and 2 of the smallest unmarked elements with the smallest indices if they exist, the marked elements now are nums = [1,2,2,1,2,3,1]. The sum of unmarked elements is 2 + 2 + 3 + 1 = 8.\n\tMark the element at index 3, since it is already marked we skip it. Then we mark 3 of the smallest unmarked elements with the smallest indices, the marked elements now are nums = [1,2,2,1,2,3,1]. The sum of unmarked elements is 3.\n\tMark the element at index 4, since it is already marked we skip it. Then we mark 2 of the smallest unmarked elements with the smallest indices if they exist, the marked elements now are nums = [1,2,2,1,2,3,1]. The sum of unmarked elements is 0.\n\n\n\nExample 2:\n\n\nInput: nums = [1,4,2,3], queries = [[0,1]]\n\nOutput: [7]\n\nExplanation:  We do one query which is mark the element at index 0 and mark the smallest element among unmarked elements. The marked elements will be nums = [1,4,2,3], and the sum of unmarked elements is 4 + 3 = 7.\n\n\n \nConstraints:\n\n\n\tn == nums.length\n\tm == queries.length\n\t1 <= m <= n <= 105\n\t1 <= nums[i] <= 105\n\tqueries[i].length == 2\n\t0 <= indexi, ki <= n - 1\n\n",
+  "description": "You are given a 0-indexed array nums of size n consisting of positive integers.\n\nYou are also given a 2D array queries of size m where queries[i] = [indexi, ki].\n\nInitially all elements of the array are unmarked.\n\nYou need to apply m queries on the array in order, where on the ith query you do the following:\n\n\n\tMark the element at index indexi if it is not already marked.\n\tThen mark ki unmarked elements in the array with the smallest values. If multiple such elements exist, mark the ones with the smallest indices. And if less than ki unmarked elements exist, then mark all of them.\n\n\nReturn an array answer of size m where answer[i] is the sum of unmarked elements in the array after the ith query.",
+  "example": "Input: nums = [1,2,2,1,2,3,1], queries = [[1,2],[3,3],[4,2]]\n\nOutput: [8,3,0]\n\nExplanation:\n\nWe do the following queries on the array:\n\n\n\tMark the element at index 1, and 2 of the smallest unmarked elements with the smallest indices if they exist, the marked elements now are nums = [1,2,2,1,2,3,1]. The sum of unmarked elements is 2 + 2 + 3 + 1 = 8.\n\tMark the element at index 3, since it is already marked we skip it. Then we mark 3 of the smallest unmarked elements with the smallest indices, the marked elements now are nums = [1,2,2,1,2,3,1]. The sum of unmarked elements is 3.\n\tMark the element at index 4, since it is already marked we skip it. Then we mark 2 of the smallest unmarked elements with the smallest indices if they exist, the marked elements now are nums = [1,2,2,1,2,3,1]. The sum of unmarked elements is 0.",
+  "constraints_text": "n == nums.length\n\tm == queries.length\n\t1 <= m <= n <= 105\n\t1 <= nums[i] <= 105\n\tqueries[i].length == 2\n\t0 <= indexi, ki <= n - 1",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nlong long* unmarkedSumArray(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<long long> unmarkedSumArray(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long[] unmarkedSumArray(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar unmarkedSumArray = function(nums, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def unmarkedSumArray(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize total sum and marked status, then process direct index marking for each query.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "0-indexed-array",
+        "unmarked",
+        "sum-of-unmarked-elements",
+        "mark-the-element-at-index-indexi"
+      ],
+      "constraints": [
+        "positive-integers",
+        "m-queries-in-order"
+      ]
+    },
+    {
+      "intent": "Maintain and query a min-priority queue to find and mark k smallest unmarked elements.",
+      "structures": [
+        "heap",
+        "array"
+      ],
+      "actions": [
+        "heap-select",
+        "simulation"
+      ],
+      "cues": [
+        "mark-ki-unmarked-elements",
+        "smallest-values",
+        "smallest-indices",
+        "less-than-ki-unmarked-elements"
+      ],
+      "constraints": [
+        "positive-integers"
+      ]
+    }
+  ]
+}

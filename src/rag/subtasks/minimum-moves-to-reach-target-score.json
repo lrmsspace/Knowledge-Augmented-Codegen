@@ -1,0 +1,38 @@
+{
+  "slug": "minimum-moves-to-reach-target-score",
+  "link": "https://leetcode.com/problems/minimum-moves-to-reach-target-score/",
+  "difficulty": "Medium",
+  "index": "1507",
+  "description_full": "You are playing a game with integers. You start with the integer 1 and you want to reach the integer target.\n\nIn one move, you can either:\n\n\n\tIncrement the current integer by one (i.e., x = x + 1).\n\tDouble the current integer (i.e., x = 2 * x).\n\n\nYou can use the increment operation any number of times, however, you can only use the double operation at most maxDoubles times.\n\nGiven the two integers target and maxDoubles, return the minimum number of moves needed to reach target starting with 1.\n\n \nExample 1:\n\n\nInput: target = 5, maxDoubles = 0\nOutput: 4\nExplanation: Keep incrementing by 1 until you reach target.\n\n\nExample 2:\n\n\nInput: target = 19, maxDoubles = 2\nOutput: 7\nExplanation: Initially, x = 1\nIncrement 3 times so x = 4\nDouble once so x = 8\nIncrement once so x = 9\nDouble again so x = 18\nIncrement once so x = 19\n\n\nExample 3:\n\n\nInput: target = 10, maxDoubles = 4\nOutput: 4\nExplanation: Initially, x = 1\nIncrement once so x = 2\nDouble once so x = 4\nIncrement once so x = 5\nDouble again so x = 10\n\n\n \nConstraints:\n\n\n\t1 <= target <= 109\n\t0 <= maxDoubles <= 100\n\n",
+  "description": "You are playing a game with integers. You start with the integer 1 and you want to reach the integer target.\n\nIn one move, you can either:\n\n\n\tIncrement the current integer by one (i.e., x = x + 1).\n\tDouble the current integer (i.e., x = 2 * x).\n\n\nYou can use the increment operation any number of times, however, you can only use the double operation at most maxDoubles times.\n\nGiven the two integers target and maxDoubles, return the minimum number of moves needed to reach target starting with 1.",
+  "example": "Input: target = 5, maxDoubles = 0\nOutput: 4\nExplanation: Keep incrementing by 1 until you reach target.",
+  "constraints_text": "1 <= target <= 109\n\t0 <= maxDoubles <= 100",
+  "templates": {
+    "c": "int minMoves(int target, int maxDoubles) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minMoves(int target, int maxDoubles) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMoves(int target, int maxDoubles) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} target\n * @param {number} maxDoubles\n * @return {number}\n */\nvar minMoves = function(target, maxDoubles) {\n    \n};",
+    "python": "class Solution(object):\n    def minMoves(self, target, maxDoubles):\n        \"\"\"\n        :type target: int\n        :type maxDoubles: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum moves to reach 1 from target by applying a greedy strategy in reverse.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-number-of-moves",
+        "maxdoubles",
+        "reach-target-starting-with-1"
+      ],
+      "constraints": [
+        "1-target-10-9",
+        "0-maxdoubles-100"
+      ]
+    }
+  ]
+}

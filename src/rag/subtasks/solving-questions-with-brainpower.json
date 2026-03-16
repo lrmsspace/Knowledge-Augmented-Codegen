@@ -1,0 +1,53 @@
+{
+  "slug": "solving-questions-with-brainpower",
+  "link": "https://leetcode.com/problems/solving-questions-with-brainpower/",
+  "difficulty": "Medium",
+  "index": "1508",
+  "description_full": "You are given a 0-indexed 2D integer array questions where questions[i] = [pointsi, brainpoweri].\n\nThe array describes the questions of an exam, where you have to process the questions in order (i.e., starting from question 0) and make a decision whether to solve or skip each question. Solving question i will earn you pointsi points but you will be unable to solve each of the next brainpoweri questions. If you skip question i, you get to make the decision on the next question.\n\n\n\tFor example, given questions = [[3, 2], [4, 3], [4, 4], [2, 5]]:\n\n\t\n\t\tIf question 0 is solved, you will earn 3 points but you will be unable to solve questions 1 and 2.\n\t\tIf instead, question 0 is skipped and question 1 is solved, you will earn 4 points but you will be unable to solve questions 2 and 3.\n\t\n\t\n\n\nReturn the maximum points you can earn for the exam.\n\n \nExample 1:\n\n\nInput: questions = [[3,2],[4,3],[4,4],[2,5]]\nOutput: 5\nExplanation: The maximum points can be earned by solving questions 0 and 3.\n- Solve question 0: Earn 3 points, will be unable to solve the next 2 questions\n- Unable to solve questions 1 and 2\n- Solve question 3: Earn 2 points\nTotal points earned: 3 + 2 = 5. There is no other way to earn 5 or more points.\n\n\nExample 2:\n\n\nInput: questions = [[1,1],[2,2],[3,3],[4,4],[5,5]]\nOutput: 7\nExplanation: The maximum points can be earned by solving questions 1 and 4.\n- Skip question 0\n- Solve question 1: Earn 2 points, will be unable to solve the next 2 questions\n- Unable to solve questions 2 and 3\n- Solve question 4: Earn 5 points\nTotal points earned: 2 + 5 = 7. There is no other way to earn 7 or more points.\n\n\n \nConstraints:\n\n\n\t1 <= questions.length <= 105\n\tquestions[i].length == 2\n\t1 <= pointsi, brainpoweri <= 105\n\n",
+  "description": "You are given a 0-indexed 2D integer array questions where questions[i] = [pointsi, brainpoweri].\n\nThe array describes the questions of an exam, where you have to process the questions in order (i.e., starting from question 0) and make a decision whether to solve or skip each question. Solving question i will earn you pointsi points but you will be unable to solve each of the next brainpoweri questions. If you skip question i, you get to make the decision on the next question.\n\n\n\tFor example, given questions = [[3, 2], [4, 3], [4, 4], [2, 5]]:\n\n\t\n\t\tIf question 0 is solved, you will earn 3 points but you will be unable to solve questions 1 and 2.\n\t\tIf instead, question 0 is skipped and question 1 is solved, you will earn 4 points but you will be unable to solve questions 2 and 3.\n\t\n\t\n\n\nReturn the maximum points you can earn for the exam.",
+  "example": "Input: questions = [[3,2],[4,3],[4,4],[2,5]]\nOutput: 5\nExplanation: The maximum points can be earned by solving questions 0 and 3.\n- Solve question 0: Earn 3 points, will be unable to solve the next 2 questions\n- Unable to solve questions 1 and 2\n- Solve question 3: Earn 2 points\nTotal points earned: 3 + 2 = 5. There is no other way to earn 5 or more points.",
+  "constraints_text": "1 <= questions.length <= 105\n\tquestions[i].length == 2\n\t1 <= pointsi, brainpoweri <= 105",
+  "templates": {
+    "c": "long long mostPoints(int** questions, int questionsSize, int* questionsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long mostPoints(vector<vector<int>>& questions) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long mostPoints(int[][] questions) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} questions\n * @return {number}\n */\nvar mostPoints = function(questions) {\n    \n};",
+    "python": "class Solution(object):\n    def mostPoints(self, questions):\n        \"\"\"\n        :type questions: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Define the dynamic programming state and recurrence relation for maximum points.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "recursion"
+      ],
+      "cues": [
+        "maximum-points",
+        "solve-or-skip",
+        "unable-to-solve-next-brainpoweri"
+      ],
+      "constraints": [
+        "process-questions-in-order"
+      ]
+    },
+    {
+      "intent": "Implement the dynamic programming solution to compute the final maximum points iteratively.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-maximum-points"
+      ],
+      "constraints": [
+        "1-questions-length-105"
+      ]
+    }
+  ]
+}

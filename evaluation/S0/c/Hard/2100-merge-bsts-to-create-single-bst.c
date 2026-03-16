@@ -1,0 +1,109 @@
+// Source: https://leetcode.com/problems/merge-bsts-to-create-single-bst/   |   Difficulty: Hard
+//
+// Problem Description:
+// You are given n BST (binary search tree) root nodes for n separate BSTs stored in an array trees (0-indexed). Each BST in trees has at most 3 nodes, and no two roots have the same value. In one operation, you can:
+//
+//
+// 	Select two distinct indices i and j such that the value stored at one of the leaves of trees[i] is equal to the root value of trees[j].
+// 	Replace the leaf node in trees[i] with trees[j].
+// 	Remove trees[j] from trees.
+//
+//
+// Return the root of the resulting BST if it is possible to form a valid BST after performing n - 1 operations, or null if it is impossible to create a valid BST.
+//
+// A BST (binary search tree) is a binary tree where each node satisfies the following property:
+//
+//
+// 	Every node in the node's left subtree has a value strictly less than the node's value.
+// 	Every node in the node's right subtree has a value strictly greater than the node's value.
+//
+//
+// A leaf is a node that has no children.
+//
+// Example:
+// Input: trees = [[2,1],[3,2,5],[5,4]]
+// Output: [3,2,5,1,null,4]
+// Explanation:
+// In the first operation, pick i=1 and j=0, and merge trees[0] into trees[1].
+// Delete trees[0], so trees = [[3,2,5,1],[5,4]].
+//
+// In the second operation, pick i=0 and j=1, and merge trees[1] into trees[0].
+// Delete trees[1], so trees = [[3,2,5,1,null,4]].
+//
+// The resulting tree, shown above, is a valid BST, so return its root.
+//
+// Constraints:
+// n == trees.length
+// 	1 <= n <= 5 * 104
+// 	The number of nodes in each tree is in the range [1, 3].
+// 	Each node in the input may have children but no grandchildren.
+// 	No two roots of trees have the same value.
+// 	All the trees in the input are valid BSTs.
+// 	1 <= TreeNode.val <= 5 * 104.
+//
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+struct TreeNode* canMerge(struct TreeNode** trees, int treesSize){
+    #define MAX_VAL 50000
+    struct TreeNode* valToNode[MAX_VAL + 1];
+    int inDegree[MAX_VAL + 1];
+    memset(valToNode, 0, sizeof(valToNode));
+    memset(inDegree, 0, sizeof(inDegree));
+
+    for (int i = 0; i < treesSize; i++) {
+        struct TreeNode* root = trees[i];
+        valToNode[root->val] = root;
+        if (root->left) inDegree[root->left->val]++;
+        if (root->right) inDegree[root->right->val]++;
+    }
+
+    struct TreeNode* root = NULL;
+    for (int i = 0; i < treesSize; i++) {
+        struct TreeNode* node = trees[i];
+        if (inDegree[node->val] == 0) {
+            if (root) return NULL; // More than one root candidate
+            root = node;
+        }
+    }
+    if (!root) return NULL; // No root found
+
+    int mergedCount = 0;
+
+    int isValidBST(struct TreeNode* node, long minVal, long maxVal) {
+        if (!node) return 1;
+        if (node->val <= minVal || node->val >= maxVal) return 0;
+        return isValidBST(node->left, minVal, node->val) && isValidBST(node->right, node->val, maxVal);
+    }
+
+    struct TreeNode* merge(struct TreeNode* node) {
+        if (!node) return NULL;
+        if (!node->left && !node->right) {
+            if (valToNode[node->val] && valToNode[node->val] != node) {
+                struct TreeNode* toMerge = valToNode[node->val];
+                node->left = toMerge->left;
+                node->right = toMerge->right;
+                valToNode[node->val] = NULL;
+                mergedCount++;
+            }
+            return node;
+        }
+        node->left = merge(node->left);
+        node->right = merge(node->right);
+        return node;
+    }
+
+    root = merge(root);
+    if (mergedCount != treesSize - 1) return NULL;
+    if (!isValidBST(root, LONG_MIN, LONG_MAX)) return NULL;
+
+    return root;
+}

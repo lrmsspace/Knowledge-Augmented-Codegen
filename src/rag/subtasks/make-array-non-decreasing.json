@@ -1,0 +1,39 @@
+{
+  "slug": "make-array-non-decreasing",
+  "link": "https://leetcode.com/problems/make-array-non-decreasing/",
+  "difficulty": "Medium",
+  "index": "2633",
+  "description_full": "You are given an integer array nums. In one operation, you can select a subarray and replace it with a single element equal to its maximum value.\n\nReturn the maximum possible size of the array after performing zero or more operations such that the resulting array is non-decreasing.\n\n \nExample 1:\n\n\nInput: nums = [4,2,5,3,5]\n\nOutput: 3\n\nExplanation:\n\nOne way to achieve the maximum size is:\n\n\n\tReplace subarray nums[1..2] = [2, 5] with 5 → [4, 5, 3, 5].\n\tReplace subarray nums[2..3] = [3, 5] with 5 → [4, 5, 5].\n\n\nThe final array [4, 5, 5] is non-decreasing with size 3.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3]\n\nOutput: 3\n\nExplanation:\n\nNo operation is needed as the array [1,2,3] is already non-decreasing.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 2 * 105\n\t1 <= nums[i] <= 2 * 105\n\n",
+  "description": "You are given an integer array nums. In one operation, you can select a subarray and replace it with a single element equal to its maximum value.\n\nReturn the maximum possible size of the array after performing zero or more operations such that the resulting array is non-decreasing.",
+  "example": "Input: nums = [4,2,5,3,5]\n\nOutput: 3\n\nExplanation:\n\nOne way to achieve the maximum size is:\n\n\n\tReplace subarray nums[1..2] = [2, 5] with 5 → [4, 5, 3, 5].\n\tReplace subarray nums[2..3] = [3, 5] with 5 → [4, 5, 5].\n\n\nThe final array [4, 5, 5] is non-decreasing with size 3.",
+  "constraints_text": "1 <= nums.length <= 2 * 105\n\t1 <= nums[i] <= 2 * 105",
+  "templates": {
+    "c": "int maximumPossibleSize(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumPossibleSize(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumPossibleSize(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumPossibleSize = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumPossibleSize(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Apply a greedy strategy by iterating through the array from right to left, merging elements to maintain a non-decreasing suffix and maximize the final array size.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "maximum-possible-size",
+        "non-decreasing",
+        "replace-subarray-with-max"
+      ],
+      "constraints": [
+        "1-nums-length-2-10-5",
+        "1-nums-i-2-10-5"
+      ]
+    }
+  ]
+}

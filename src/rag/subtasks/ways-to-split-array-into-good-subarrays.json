@@ -1,0 +1,57 @@
+{
+  "slug": "ways-to-split-array-into-good-subarrays",
+  "link": "https://leetcode.com/problems/ways-to-split-array-into-good-subarrays/",
+  "difficulty": "Medium",
+  "index": "1746",
+  "description_full": "You are given a binary array nums.\n\nA subarray of an array is good if it contains exactly one element with the value 1.\n\nReturn an integer denoting the number of ways to split the array nums into good subarrays. As the number may be too large, return it modulo 109 + 7.\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: nums = [0,1,0,0,1]\nOutput: 3\nExplanation: There are 3 ways to split nums into good subarrays:\n- [0,1] [0,0,1]\n- [0,1,0] [0,1]\n- [0,1,0,0] [1]\n\n\nExample 2:\n\n\nInput: nums = [0,1,0]\nOutput: 1\nExplanation: There is 1 way to split nums into good subarrays:\n- [0,1,0]\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= nums[i] <= 1\n\n",
+  "description": "You are given a binary array nums.\n\nA subarray of an array is good if it contains exactly one element with the value 1.\n\nReturn an integer denoting the number of ways to split the array nums into good subarrays. As the number may be too large, return it modulo 109 + 7.\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [0,1,0,0,1]\nOutput: 3\nExplanation: There are 3 ways to split nums into good subarrays:\n- [0,1] [0,0,1]\n- [0,1,0] [0,1]\n- [0,1,0,0] [1]",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= nums[i] <= 1",
+  "templates": {
+    "c": "int numberOfGoodSubarraySplits(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfGoodSubarraySplits(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfGoodSubarraySplits(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar numberOfGoodSubarraySplits = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfGoodSubarraySplits(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Collect indices of all '1's in the array and handle base cases for zero or one '1's.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "binary-array",
+        "exactly-one-element-with-the-value-1",
+        "split-the-array"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "0-nums-i-1"
+      ]
+    },
+    {
+      "intent": "Compute the total number of ways by multiplying the number of split options for each zero-segment between consecutive '1's, applying modulo.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "number-of-ways",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

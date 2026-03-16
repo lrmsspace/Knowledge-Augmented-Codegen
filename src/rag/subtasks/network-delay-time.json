@@ -1,0 +1,57 @@
+{
+  "slug": "network-delay-time",
+  "link": "https://leetcode.com/problems/network-delay-time/",
+  "difficulty": "Medium",
+  "index": "936",
+  "description_full": "You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.\n\nWe will send a signal from a given node k. Return the minimum time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.\n\n \nExample 1:\n\n\nInput: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2\nOutput: 2\n\n\nExample 2:\n\n\nInput: times = [[1,2,1]], n = 2, k = 1\nOutput: 1\n\n\nExample 3:\n\n\nInput: times = [[1,2,1]], n = 2, k = 2\nOutput: -1\n\n\n \nConstraints:\n\n\n\t1 <= k <= n <= 100\n\t1 <= times.length <= 6000\n\ttimes[i].length == 3\n\t1 <= ui, vi <= n\n\tui != vi\n\t0 <= wi <= 100\n\tAll the pairs (ui, vi) are unique. (i.e., no multiple edges.)\n\n",
+  "description": "You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.\n\nWe will send a signal from a given node k. Return the minimum time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.",
+  "example": "Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2\nOutput: 2",
+  "constraints_text": "1 <= k <= n <= 100\n\t1 <= times.length <= 6000\n\ttimes[i].length == 3\n\t1 <= ui, vi <= n\n\tui != vi\n\t0 <= wi <= 100\n\tAll the pairs (ui, vi) are unique. (i.e., no multiple edges.)",
+  "templates": {
+    "c": "int networkDelayTime(int** times, int timesSize, int* timesColSize, int n, int k){\n\n}",
+    "cpp": "class Solution {\npublic:\n    int networkDelayTime(vector<vector<int>>& times, int n, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int networkDelayTime(int[][] times, int n, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} times\n * @param {number} n\n * @param {number} k\n * @return {number}\n */\nvar networkDelayTime = function(times, n, k) {\n    \n};",
+    "python": "class Solution(object):\n    def networkDelayTime(self, times, n, k):\n        \"\"\"\n        :type times: List[List[int]]\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the shortest path from the source node k to all other nodes in the network.",
+      "structures": [
+        "graph",
+        "heap",
+        "array"
+      ],
+      "actions": [
+        "dijkstra"
+      ],
+      "cues": [
+        "signal-from-k",
+        "travel-times",
+        "directed-edges"
+      ],
+      "constraints": [
+        "1-k-n-100",
+        "0-wi-100"
+      ]
+    },
+    {
+      "intent": "Determine the maximum shortest path time among all nodes, returning -1 if any node is unreachable.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-time-for-all-n-nodes",
+        "impossible-for-all-n-nodes",
+        "return-1"
+      ],
+      "constraints": [
+        "all-n-nodes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "smallest-divisible-digit-product-i",
+  "link": "https://leetcode.com/problems/smallest-divisible-digit-product-i/",
+  "difficulty": "Easy",
+  "index": "2353",
+  "description_full": "You are given two integers n and t. Return the smallest number greater than or equal to n such that the product of its digits is divisible by t.\n\n \nExample 1:\n\n\nInput: n = 10, t = 2\n\nOutput: 10\n\nExplanation:\n\nThe digit product of 10 is 0, which is divisible by 2, making it the smallest number greater than or equal to 10 that satisfies the condition.\n\n\nExample 2:\n\n\nInput: n = 15, t = 3\n\nOutput: 16\n\nExplanation:\n\nThe digit product of 16 is 6, which is divisible by 3, making it the smallest number greater than or equal to 15 that satisfies the condition.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 100\n\t1 <= t <= 10\n\n",
+  "description": "You are given two integers n and t. Return the smallest number greater than or equal to n such that the product of its digits is divisible by t.",
+  "example": "Input: n = 10, t = 2\n\nOutput: 10\n\nExplanation:\n\nThe digit product of 10 is 0, which is divisible by 2, making it the smallest number greater than or equal to 10 that satisfies the condition.",
+  "constraints_text": "1 <= n <= 100\n\t1 <= t <= 10",
+  "templates": {
+    "c": "int smallestNumber(int n, int t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int smallestNumber(int n, int t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int smallestNumber(int n, int t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} t\n * @return {number}\n */\nvar smallestNumber = function(n, t) {\n    \n};",
+    "python": "class Solution(object):\n    def smallestNumber(self, n, t):\n        \"\"\"\n        :type n: int\n        :type t: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate from N, calculate the product of digits for each number, and return the first number whose digit product is divisible by T.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-number",
+        "product-of-its-digits",
+        "divisible-by-t"
+      ],
+      "constraints": [
+        "1-n-100",
+        "1-t-10"
+      ]
+    }
+  ]
+}

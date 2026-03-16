@@ -1,0 +1,72 @@
+{
+  "slug": "find-if-array-can-be-sorted",
+  "link": "https://leetcode.com/problems/find-if-array-can-be-sorted/",
+  "difficulty": "Medium",
+  "index": "2458",
+  "description_full": "You are given a 0-indexed array of positive integers nums.\n\nIn one operation, you can swap any two adjacent elements if they have the same number of set bits. You are allowed to do this operation any number of times (including zero).\n\nReturn true if you can sort the array in ascending order, else return false.\n\n \nExample 1:\n\n\nInput: nums = [8,4,2,30,15]\nOutput: true\nExplanation: Let's look at the binary representation of every element. The numbers 2, 4, and 8 have one set bit each with binary representation \"10\", \"100\", and \"1000\" respectively. The numbers 15 and 30 have four set bits each with binary representation \"1111\" and \"11110\".\nWe can sort the array using 4 operations:\n- Swap nums[0] with nums[1]. This operation is valid because 8 and 4 have one set bit each. The array becomes [4,8,2,30,15].\n- Swap nums[1] with nums[2]. This operation is valid because 8 and 2 have one set bit each. The array becomes [4,2,8,30,15].\n- Swap nums[0] with nums[1]. This operation is valid because 4 and 2 have one set bit each. The array becomes [2,4,8,30,15].\n- Swap nums[3] with nums[4]. This operation is valid because 30 and 15 have four set bits each. The array becomes [2,4,8,15,30].\nThe array has become sorted, hence we return true.\nNote that there may be other sequences of operations which also sort the array.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3,4,5]\nOutput: true\nExplanation: The array is already sorted, hence we return true.\n\n\nExample 3:\n\n\nInput: nums = [3,16,8,4,2]\nOutput: false\nExplanation: It can be shown that it is not possible to sort the input array using any number of operations.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t1 <= nums[i] <= 28\n\n",
+  "description": "You are given a 0-indexed array of positive integers nums.\n\nIn one operation, you can swap any two adjacent elements if they have the same number of set bits. You are allowed to do this operation any number of times (including zero).\n\nReturn true if you can sort the array in ascending order, else return false.",
+  "example": "Input: nums = [8,4,2,30,15]\nOutput: true\nExplanation: Let's look at the binary representation of every element. The numbers 2, 4, and 8 have one set bit each with binary representation \"10\", \"100\", and \"1000\" respectively. The numbers 15 and 30 have four set bits each with binary representation \"1111\" and \"11110\".\nWe can sort the array using 4 operations:\n- Swap nums[0] with nums[1]. This operation is valid because 8 and 4 have one set bit each. The array becomes [4,8,2,30,15].\n- Swap nums[1] with nums[2]. This operation is valid because 8 and 2 have one set bit each. The array becomes [4,2,8,30,15].\n- Swap nums[0] with nums[1]. This operation is valid because 4 and 2 have one set bit each. The array becomes [2,4,8,30,15].\n- Swap nums[3] with nums[4]. This operation is valid because 30 and 15 have four set bits each. The array becomes [2,4,8,15,30].\nThe array has become sorted, hence we return true.\nNote that there may be other sequences of operations which also sort the array.",
+  "constraints_text": "1 <= nums.length <= 100\n\t1 <= nums[i] <= 28",
+  "templates": {
+    "c": "bool canSortArray(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canSortArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canSortArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar canSortArray = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def canSortArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute set bit counts for all numbers and initialize data structures for component grouping.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "number-of-set-bits",
+        "0-indexed-array"
+      ],
+      "constraints": [
+        "1-nums-length-100",
+        "1-nums-i-2-8"
+      ]
+    },
+    {
+      "intent": "Build connected components of indices where elements can be freely reordered using adjacent swaps.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "union-find",
+        "enumeration"
+      ],
+      "cues": [
+        "swap-any-two-adjacent-elements-if-they-have-the-same-number-of-set-bits"
+      ],
+      "constraints": [
+        "1-nums-length-100"
+      ]
+    },
+    {
+      "intent": "Verify if elements within each component can be arranged to match the globally sorted array.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "return-true-if-you-can-sort-the-array-in-ascending-order"
+      ],
+      "constraints": [
+        "1-nums-length-100"
+      ]
+    }
+  ]
+}

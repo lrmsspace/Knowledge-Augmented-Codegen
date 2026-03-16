@@ -1,0 +1,59 @@
+{
+  "slug": "find-the-largest-almost-missing-integer",
+  "link": "https://leetcode.com/problems/find-the-largest-almost-missing-integer/",
+  "difficulty": "Easy",
+  "index": "2377",
+  "description_full": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\nA subarray is a contiguous sequence of elements within an array.\n \nExample 1:\n\n\nInput: nums = [3,9,2,1,7], k = 3\n\nOutput: 7\n\nExplanation:\n\n\n\t1 appears in 2 subarrays of size 3: [9, 2, 1] and [2, 1, 7].\n\t2 appears in 3 subarrays of size 3: [3, 9, 2], [9, 2, 1], [2, 1, 7].\n\t3 appears in 1 subarray of size 3: [3, 9, 2].\n\t7 appears in 1 subarray of size 3: [2, 1, 7].\n\t9 appears in 2 subarrays of size 3: [3, 9, 2], and [9, 2, 1].\n\n\nWe return 7 since it is the largest integer that appears in exactly one subarray of size k.\n\n\nExample 2:\n\n\nInput: nums = [3,9,7,2,1,7], k = 4\n\nOutput: 3\n\nExplanation:\n\n\n\t1 appears in 2 subarrays of size 4: [9, 7, 2, 1], [7, 2, 1, 7].\n\t2 appears in 3 subarrays of size 4: [3, 9, 7, 2], [9, 7, 2, 1], [7, 2, 1, 7].\n\t3 appears in 1 subarray of size 4: [3, 9, 7, 2].\n\t7 appears in 3 subarrays of size 4: [3, 9, 7, 2], [9, 7, 2, 1], [7, 2, 1, 7].\n\t9 appears in 2 subarrays of size 4: [3, 9, 7, 2], [9, 7, 2, 1].\n\n\nWe return 3 since it is the largest and only integer that appears in exactly one subarray of size k.\n\n\nExample 3:\n\n\nInput: nums = [0,0], k = 1\n\nOutput: -1\n\nExplanation:\n\nThere is no integer that appears in only one subarray of size 1.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 50\n\t0 <= nums[i] <= 50\n\t1 <= k <= nums.length\n\n",
+  "description": "You are given an integer array nums and an integer k.\n\nAn integer x is almost missing from nums if x appears in exactly one subarray of size k within nums.\n\nReturn the largest almost missing integer from nums. If no such integer exists, return -1.\nA subarray is a contiguous sequence of elements within an array.",
+  "example": "Input: nums = [3,9,2,1,7], k = 3\n\nOutput: 7\n\nExplanation:\n\n\n\t1 appears in 2 subarrays of size 3: [9, 2, 1] and [2, 1, 7].\n\t2 appears in 3 subarrays of size 3: [3, 9, 2], [9, 2, 1], [2, 1, 7].\n\t3 appears in 1 subarray of size 3: [3, 9, 2].\n\t7 appears in 1 subarray of size 3: [2, 1, 7].\n\t9 appears in 2 subarrays of size 3: [3, 9, 2], and [9, 2, 1].\n\n\nWe return 7 since it is the largest integer that appears in exactly one subarray of size k.",
+  "constraints_text": "1 <= nums.length <= 50\n\t0 <= nums[i] <= 50\n\t1 <= k <= nums.length",
+  "templates": {
+    "c": "int largestInteger(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int largestInteger(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int largestInteger(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar largestInteger = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def largestInteger(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all subarrays of size k, identify unique elements in each, and count how many distinct k-sized subarrays each number appears in.",
+      "structures": [
+        "array",
+        "number",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing",
+        "counting"
+      ],
+      "cues": [
+        "subarray-of-size-k",
+        "appears-in-exactly-one-subarray"
+      ],
+      "constraints": [
+        "1-nums-length-50",
+        "0-nums-i-50",
+        "1-k-nums-length"
+      ]
+    },
+    {
+      "intent": "From the calculated frequencies, identify numbers that appeared in exactly one subarray of size k and return the largest among them.",
+      "structures": [
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "exactly-one-subarray",
+        "largest-almost-missing-integer"
+      ],
+      "constraints": [
+        "if-no-such-integer-exists-return-1"
+      ]
+    }
+  ]
+}

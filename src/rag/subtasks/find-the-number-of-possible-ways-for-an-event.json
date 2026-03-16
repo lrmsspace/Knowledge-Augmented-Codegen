@@ -1,0 +1,78 @@
+{
+  "slug": "find-the-number-of-possible-ways-for-an-event",
+  "link": "https://leetcode.com/problems/find-the-number-of-possible-ways-for-an-event/",
+  "difficulty": "Hard",
+  "index": "2766",
+  "description_full": "You are given three integers n, x, and y.\n\nAn event is being held for n performers. When a performer arrives, they are assigned to one of the x stages. All performers assigned to the same stage will perform together as a band, though some stages might remain empty.\n\nAfter all performances are completed, the jury will award each band a score in the range [1, y].\n\nReturn the total number of possible ways the event can take place.\n\nSince the answer may be very large, return it modulo 109 + 7.\n\nNote that two events are considered to have been held differently if either of the following conditions is satisfied:\n\n\n\tAny performer is assigned a different stage.\n\tAny band is awarded a different score.\n\n\n \nExample 1:\n\n\nInput: n = 1, x = 2, y = 3\n\nOutput: 6\n\nExplanation:\n\n\n\tThere are 2 ways to assign a stage to the performer.\n\tThe jury can award a score of either 1, 2, or 3 to the only band.\n\n\n\nExample 2:\n\n\nInput: n = 5, x = 2, y = 1\n\nOutput: 32\n\nExplanation:\n\n\n\tEach performer will be assigned either stage 1 or stage 2.\n\tAll bands will be awarded a score of 1.\n\n\n\nExample 3:\n\n\nInput: n = 3, x = 3, y = 4\n\nOutput: 684\n\n\n \nConstraints:\n\n\n\t1 <= n, x, y <= 1000\n\n",
+  "description": "You are given three integers n, x, and y.\n\nAn event is being held for n performers. When a performer arrives, they are assigned to one of the x stages. All performers assigned to the same stage will perform together as a band, though some stages might remain empty.\n\nAfter all performances are completed, the jury will award each band a score in the range [1, y].\n\nReturn the total number of possible ways the event can take place.\n\nSince the answer may be very large, return it modulo 109 + 7.\n\nNote that two events are considered to have been held differently if either of the following conditions is satisfied:\n\n\n\tAny performer is assigned a different stage.\n\tAny band is awarded a different score.",
+  "example": "Input: n = 1, x = 2, y = 3\n\nOutput: 6\n\nExplanation:\n\n\n\tThere are 2 ways to assign a stage to the performer.\n\tThe jury can award a score of either 1, 2, or 3 to the only band.",
+  "constraints_text": "1 <= n, x, y <= 1000",
+  "templates": {
+    "c": "int numberOfWays(int n, int x, int y) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfWays(int n, int x, int y) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWays(int n, int x, int y) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number} x\n * @param {number} y\n * @return {number}\n */\nvar numberOfWays = function(n, x, y) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfWays(self, n, x, y):\n        \"\"\"\n        :type n: int\n        :type x: int\n        :type y: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Populate a 2D DP table for Stirling numbers of the second kind S(i, j) up to max(n, x).",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "s-n-k"
+      ],
+      "constraints": [
+        "n-1000",
+        "x-1000",
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Precompute factorials and their modular inverses to efficiently calculate combinations C(N, K).",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "mod-exp",
+        "counting"
+      ],
+      "cues": [
+        "c-x-k",
+        "modulo"
+      ],
+      "constraints": [
+        "x-1000",
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Iterate through possible numbers of non-empty stages (k), compute each term C(x, k) * k! * S(n, k) * y^k, and sum them modulo M.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "mod-exp",
+        "counting"
+      ],
+      "cues": [
+        "total-ways",
+        "sum",
+        "modulo"
+      ],
+      "constraints": [
+        "n-1000",
+        "x-1000",
+        "y-1000",
+        "modulo-10-9-7"
+      ]
+    }
+  ]
+}

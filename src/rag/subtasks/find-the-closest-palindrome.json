@@ -1,0 +1,56 @@
+{
+  "slug": "find-the-closest-palindrome",
+  "link": "https://leetcode.com/problems/find-the-closest-palindrome/",
+  "difficulty": "Hard",
+  "index": "1850",
+  "description_full": "Given a string n representing an integer, return the closest integer (not including itself), which is a palindrome. If there is a tie, return the smaller one.\n\nThe closest is defined as the absolute difference minimized between two integers.\n\n \nExample 1:\n\n\nInput: n = \"123\"\nOutput: \"121\"\n\n\nExample 2:\n\n\nInput: n = \"1\"\nOutput: \"0\"\nExplanation: 0 and 2 are the closest palindromes but we return the smallest which is 0.\n\n\n \nConstraints:\n\n\n\t1 <= n.length <= 18\n\tn consists of only digits.\n\tn does not have leading zeros.\n\tn is representing an integer in the range [1, 1018 - 1].\n\n",
+  "description": "Given a string n representing an integer, return the closest integer (not including itself), which is a palindrome. If there is a tie, return the smaller one.\n\nThe closest is defined as the absolute difference minimized between two integers.",
+  "example": "Input: n = \"123\"\nOutput: \"121\"",
+  "constraints_text": "1 <= n.length <= 18\n\tn consists of only digits.\n\tn does not have leading zeros.\n\tn is representing an integer in the range [1, 1018 - 1].",
+  "templates": {
+    "c": "char* nearestPalindromic(char* n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string nearestPalindromic(string n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String nearestPalindromic(String n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} n\n * @return {string}\n */\nvar nearestPalindromic = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def nearestPalindromic(self, n):\n        \"\"\"\n        :type n: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate a set of candidate palindrome strings based on the input's length, prefix, and boundary conditions.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "closest-integer",
+        "palindrome"
+      ],
+      "constraints": [
+        "n-length-18"
+      ]
+    },
+    {
+      "intent": "Compare all generated candidate palindromes against the input to find the one with the minimum absolute difference, applying tie-breaking rules.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "absolute-difference-minimized",
+        "return-the-smaller-one",
+        "not-including-itself"
+      ],
+      "constraints": [
+        "n-candidate"
+      ]
+    }
+  ]
+}

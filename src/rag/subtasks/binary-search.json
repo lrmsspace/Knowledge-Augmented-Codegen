@@ -1,0 +1,37 @@
+{
+  "slug": "binary-search",
+  "link": "https://leetcode.com/problems/binary-search/",
+  "difficulty": "Easy",
+  "index": "158",
+  "description_full": "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.\n\n \nExample 1:\n\n\nInput: nums = [-1,0,3,5,9,12], target = 9\nOutput: 4\nExplanation: 9 exists in nums and its index is 4\n\n\nExample 2:\n\n\nInput: nums = [-1,0,3,5,9,12], target = 2\nOutput: -1\nExplanation: 2 does not exist in nums so return -1\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 104\n\t-104 < nums[i], target < 104\n\tAll the integers in nums are unique.\n\tnums is sorted in ascending order.\n\n",
+  "description": "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.",
+  "example": "Input: nums = [-1,0,3,5,9,12], target = 9\nOutput: 4\nExplanation: 9 exists in nums and its index is 4",
+  "constraints_text": "1 <= nums.length <= 104\n\t-104 < nums[i], target < 104\n\tAll the integers in nums are unique.\n\tnums is sorted in ascending order.",
+  "templates": {
+    "c": "int search(int* nums, int numsSize, int target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int search(int[] nums, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {number}\n */\nvar search = function(nums, target) {\n    \n};",
+    "python": "class Solution(object):\n    def search(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Search for the target value in the sorted array and return its index, or -1 if not found.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "binary-search"
+      ],
+      "cues": [
+        "sorted-in-ascending-order",
+        "search-target",
+        "return-its-index"
+      ],
+      "constraints": [
+        "o-log-n-runtime-complexity",
+        "nums-is-sorted"
+      ]
+    }
+  ]
+}

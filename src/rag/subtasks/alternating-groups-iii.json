@@ -1,0 +1,72 @@
+{
+  "slug": "alternating-groups-iii",
+  "link": "https://leetcode.com/problems/alternating-groups-iii/",
+  "difficulty": "Hard",
+  "index": 2744,
+  "description_full": "There are some red and blue tiles arranged circularly. You are given an array of integers colors and a 2D integers array queries.\n\nThe color of tile i is represented by colors[i]:\n\n\n colors[i] == 0 means that tile i is red.\n colors[i] == 1 means that tile i is blue.\n\n\nAn alternating group is a contiguous subset of tiles in the circle with alternating colors (each tile in the group except the first and last one has a different color from its adjacent tiles in the group).\n\nYou have to process queries of two types:\n\n\n queries[i] = [1, sizei], determine the count of alternating groups with size sizei.\n queries[i] = [2, indexi, colori], change colors[indexi] to colori.\n\n\nReturn an array answer containing the results of the queries of the first type in order.\n\nNote that since colors represents a circle, the first and the last tiles are considered to be next to each other.\n\n \nExample 1:\n\n\nInput: colors = [0,1,1,0,1], queries = [[2,1,0],[1,4]]\n\nOutput: [2]\n\nExplanation:\n\n\n\nFirst query:\n\nChange colors[1] to 0.\n\n\n\nSecond query:\n\nCount of the alternating groups with size 4:\n\n\n\n\nExample 2:\n\n\nInput: colors = [0,0,1,0,1,1], queries = [[1,3],[2,3,0],[1,5]]\n\nOutput: [2,0]\n\nExplanation:\n\n\n\nFirst query:\n\nCount of the alternating groups with size 3:\n\n\n\nSecond query: colors will not change.\n\nThird query: There is no alternating group with size 5.\n\n\n \nConstraints:\n\n\n 4 <= colors.length <= 5 * 104\n 0 <= colors[i] <= 1\n 1 <= queries.length <= 5 * 104\n queries[i][0] == 1 or queries[i][0] == 2\n For all i that:\n \n  queries[i][0] == 1: queries[i].length == 2, 3 <= queries[i][1] <= colors.length - 1\n  queries[i][0] == 2: queries[i].length == 3, 0 <= queries[i][1] <= colors.length - 1, 0 <= queries[i][2] <= 1\n \n \n\n",
+  "description": "There are some red and blue tiles arranged circularly. You are given an array of integers colors and a 2D integers array queries.\n\nThe color of tile i is represented by colors[i]:\n\n\n colors[i] == 0 means that tile i is red.\n colors[i] == 1 means that tile i is blue.\n\n\nAn alternating group is a contiguous subset of tiles in the circle with alternating colors (each tile in the group except the first and last one has a different color from its adjacent tiles in the group).\n\nYou have to process queries of two types:\n\n\n queries[i] = [1, sizei], determine the count of alternating groups with size sizei.\n queries[i] = [2, indexi, colori], change colors[indexi] to colori.\n\n\nReturn an array answer containing the results of the queries of the first type in order.\n\nNote that since colors represents a circle, the first and the last tiles are considered to be next to each other.",
+  "example": "Input: colors = [0,1,1,0,1], queries = [[2,1,0],[1,4]]\n\nOutput: [2]\n\nExplanation:\n\n\n\nFirst query:\n\nChange colors[1] to 0.\n\n\n\nSecond query:\n\nCount of the alternating groups with size 4:",
+  "constraints_text": "4 <= colors.length <= 5 * 104\n 0 <= colors[i] <= 1\n 1 <= queries.length <= 5 * 104\n queries[i][0] == 1 or queries[i][0] == 2\n For all i that:\n \n  queries[i][0] == 1: queries[i].length == 2, 3 <= queries[i][1] <= colors.length - 1\n  queries[i][0] == 2: queries[i].length == 3, 0 <= queries[i][1] <= colors.length - 1, 0 <= queries[i][2] <= 1",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* numberOfAlternatingGroups(int* colors, int colorsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> numberOfAlternatingGroups(vector<int>& colors, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<Integer> numberOfAlternatingGroups(int[] colors, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} colors\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar numberOfAlternatingGroups = function(colors, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfAlternatingGroups(self, colors, queries):\n        \"\"\"\n        :type colors: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Pre-calculate and maintain the number of consecutive alternating tiles at each index in a dynamic array/tree structure.",
+      "structures": [
+        "array",
+        "tree"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "colors",
+        "circular",
+        "alternating group",
+        "queries"
+      ],
+      "constraints": [
+        "dynamic updates"
+      ]
+    },
+    {
+      "intent": "Use a Hashmap to store the frequency of each alternating group size encountered in the current 'colors' state.",
+      "structures": [
+        "hashmap",
+        "array"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "count of alternating groups",
+        "sizei"
+      ],
+      "constraints": [
+        "constant time query"
+      ]
+    },
+    {
+      "intent": "For a type 2 query (change), locally update the dynamic array/tree and the Hashmap, reflecting the change in alternating group sizes at the modified index and its neighbors.",
+      "structures": [
+        "array",
+        "hashmap"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "change colors[indexi]",
+        "update frequency"
+      ],
+      "constraints": [
+        "efficient local update"
+      ]
+    }
+  ]
+}

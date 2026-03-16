@@ -1,0 +1,56 @@
+{
+  "slug": "swap-for-longest-repeated-character-substring",
+  "link": "https://leetcode.com/problems/swap-for-longest-repeated-character-substring/",
+  "difficulty": "Medium",
+  "index": "1133",
+  "description_full": "You are given a string text. You can swap two of the characters in the text.\n\nReturn the length of the longest substring with repeated characters.\n\n \nExample 1:\n\n\nInput: text = \"ababa\"\nOutput: 3\nExplanation: We can swap the first 'b' with the last 'a', or the last 'b' with the first 'a'. Then, the longest repeated character substring is \"aaa\" with length 3.\n\n\nExample 2:\n\n\nInput: text = \"aaabaaa\"\nOutput: 6\nExplanation: Swap 'b' with the last 'a' (or the first 'a'), and we get longest repeated character substring \"aaaaaa\" with length 6.\n\n\nExample 3:\n\n\nInput: text = \"aaaaa\"\nOutput: 5\nExplanation: No need to swap, longest repeated character substring is \"aaaaa\" with length is 5.\n\n\n \nConstraints:\n\n\n\t1 <= text.length <= 2 * 104\n\ttext consist of lowercase English characters only.\n\n",
+  "description": "You are given a string text. You can swap two of the characters in the text.\n\nReturn the length of the longest substring with repeated characters.",
+  "example": "Input: text = \"ababa\"\nOutput: 3\nExplanation: We can swap the first 'b' with the last 'a', or the last 'b' with the first 'a'. Then, the longest repeated character substring is \"aaa\" with length 3.",
+  "constraints_text": "1 <= text.length <= 2 * 104\n\ttext consist of lowercase English characters only.",
+  "templates": {
+    "c": "int maxRepOpt1(char* text) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxRepOpt1(string text) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxRepOpt1(String text) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} text\n * @return {number}\n */\nvar maxRepOpt1 = function(text) {\n    \n};",
+    "python": "class Solution(object):\n    def maxRepOpt1(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute frequency of each character in the text.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "text",
+        "repeated-characters"
+      ],
+      "constraints": [
+        "lowercase-english-characters-only"
+      ]
+    },
+    {
+      "intent": "Find the longest repeated character substring after at most one swap by iterating through blocks.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "longest-substring",
+        "repeated-characters",
+        "swap-two-characters"
+      ],
+      "constraints": [
+        "1-text-length-2-104"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "partition-array-into-two-equal-product-subsets",
+  "link": "https://leetcode.com/problems/partition-array-into-two-equal-product-subsets/",
+  "difficulty": "Medium",
+  "index": "2650",
+  "description_full": "You are given an integer array nums containing distinct positive integers and an integer target.\n\nDetermine if you can partition nums into two non-empty disjoint subsets, with each element belonging to exactly one subset, such that the product of the elements in each subset is equal to target.\n\nReturn true if such a partition exists and false otherwise.\nA subset of an array is a selection of elements of the array.\n \nExample 1:\n\n\nInput: nums = [3,1,6,8,4], target = 24\n\nOutput: true\n\nExplanation: The subsets [3, 8] and [1, 6, 4] each have a product of 24. Hence, the output is true.\n\n\nExample 2:\n\n\nInput: nums = [2,5,3,7], target = 15\n\nOutput: false\n\nExplanation: There is no way to partition nums into two non-empty disjoint subsets such that both subsets have a product of 15. Hence, the output is false.\n\n\n \nConstraints:\n\n\n\t3 <= nums.length <= 12\n\t1 <= target <= 1015\n\t1 <= nums[i] <= 100\n\tAll elements of nums are distinct.\n\n",
+  "description": "You are given an integer array nums containing distinct positive integers and an integer target.\n\nDetermine if you can partition nums into two non-empty disjoint subsets, with each element belonging to exactly one subset, such that the product of the elements in each subset is equal to target.\n\nReturn true if such a partition exists and false otherwise.\nA subset of an array is a selection of elements of the array.",
+  "example": "Input: nums = [3,1,6,8,4], target = 24\n\nOutput: true\n\nExplanation: The subsets [3, 8] and [1, 6, 4] each have a product of 24. Hence, the output is true.",
+  "constraints_text": "3 <= nums.length <= 12\n\t1 <= target <= 1015\n\t1 <= nums[i] <= 100\n\tAll elements of nums are distinct.",
+  "templates": {
+    "c": "bool checkEqualPartitions(int* nums, int numsSize, long long target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkEqualPartitions(vector<int>& nums, long long target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkEqualPartitions(int[] nums, long target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} target\n * @return {boolean}\n */\nvar checkEqualPartitions = function(nums, target) {\n    \n};",
+    "python": "class Solution(object):\n    def checkEqualPartitions(self, nums, target):\n        \"\"\"\n        :type nums: List[int]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively explore all partitions of nums into two subsets, pruning branches where products exceed target, and validate non-empty subsets at the end.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "partition-nums-into-two-non-empty-disjoint-subsets",
+        "product-of-elements-in-each-subset-is-equal-to-target"
+      ],
+      "constraints": [
+        "nums-length-12",
+        "target-10-15",
+        "nums-i-100"
+      ]
+    }
+  ]
+}

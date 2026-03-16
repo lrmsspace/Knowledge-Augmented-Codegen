@@ -1,0 +1,39 @@
+{
+  "slug": "detect-capital",
+  "link": "https://leetcode.com/problems/detect-capital/",
+  "difficulty": "Easy",
+  "index": "111",
+  "description_full": "We define the usage of capitals in a word to be right when one of the following cases holds:\n\n\n\tAll letters in this word are capitals, like \"USA\".\n\tAll letters in this word are not capitals, like \"leetcode\".\n\tOnly the first letter in this word is capital, like \"Google\".\n\n\nGiven a string word, return true if the usage of capitals in it is right.\n\n \nExample 1:\nInput: word = \"USA\"\nOutput: true\nExample 2:\nInput: word = \"FlaG\"\nOutput: false\n\n \nConstraints:\n\n\n\t1 <= word.length <= 100\n\tword consists of lowercase and uppercase English letters.\n\n",
+  "description": "We define the usage of capitals in a word to be right when one of the following cases holds:\n\n\n\tAll letters in this word are capitals, like \"USA\".\n\tAll letters in this word are not capitals, like \"leetcode\".\n\tOnly the first letter in this word is capital, like \"Google\".\n\n\nGiven a string word, return true if the usage of capitals in it is right.",
+  "example": "Input: word = \"USA\"\nOutput: true",
+  "constraints_text": "1 <= word.length <= 100\n\tword consists of lowercase and uppercase English letters.",
+  "templates": {
+    "c": "bool detectCapitalUse(char* word) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool detectCapitalUse(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean detectCapitalUse(String word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {boolean}\n */\nvar detectCapitalUse = function(word) {\n    \n};",
+    "python": "class Solution(object):\n    def detectCapitalUse(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if the word's capitalization follows one of the three valid patterns: all caps, all lower, or first letter capitalized only.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "all-letters-are-capitals",
+        "all-letters-are-not-capitals",
+        "only-the-first-letter-is-capital"
+      ],
+      "constraints": [
+        "1-word-length-100",
+        "word-consists-of-lowercase-and-uppercase-english-letters"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "longest-zigzag-path-in-a-binary-tree",
+  "link": "https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/",
+  "difficulty": "Medium",
+  "index": "1215",
+  "description_full": "You are given the root of a binary tree.\n\nA ZigZag path for a binary tree is defined as follow:\n\n\n\tChoose any node in the binary tree and a direction (right or left).\n\tIf the current direction is right, move to the right child of the current node; otherwise, move to the left child.\n\tChange the direction from right to left or from left to right.\n\tRepeat the second and third steps until you can't move in the tree.\n\n\nZigzag length is defined as the number of nodes visited - 1. (A single node has a length of 0).\n\nReturn the longest ZigZag path contained in that tree.\n\n \nExample 1:\n\n\nInput: root = [1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]\nOutput: 3\nExplanation: Longest ZigZag path in blue nodes (right -> left -> right).\n\n\nExample 2:\n\n\nInput: root = [1,1,1,null,1,null,null,1,1,null,1]\nOutput: 4\nExplanation: Longest ZigZag path in blue nodes (left -> right -> left -> right).\n\n\nExample 3:\n\n\nInput: root = [1]\nOutput: 0\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 5 * 104].\n\t1 <= Node.val <= 100\n\n",
+  "description": "You are given the root of a binary tree.\n\nA ZigZag path for a binary tree is defined as follow:\n\n\n\tChoose any node in the binary tree and a direction (right or left).\n\tIf the current direction is right, move to the right child of the current node; otherwise, move to the left child.\n\tChange the direction from right to left or from left to right.\n\tRepeat the second and third steps until you can't move in the tree.\n\n\nZigzag length is defined as the number of nodes visited - 1. (A single node has a length of 0).\n\nReturn the longest ZigZag path contained in that tree.",
+  "example": "Input: root = [1,null,1,1,1,null,null,1,1,null,1,null,null,null,1]\nOutput: 3\nExplanation: Longest ZigZag path in blue nodes (right -> left -> right).",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 5 * 104].\n\t1 <= Node.val <= 100",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nint longestZigZag(struct TreeNode* root) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int longestZigZag(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int longestZigZag(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar longestZigZag = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def longestZigZag(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively traverse the binary tree to calculate the longest zigzag path lengths (number of edges) starting at each node, one going left-then-right and the other right-then-left.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "binary-tree",
+        "zigzag-path",
+        "direction-right-or-left",
+        "repeat-the-second-and-third-steps"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-tree-is-in-the-range-1-5-10-4"
+      ]
+    },
+    {
+      "intent": "Maintain and update a global variable with the maximum zigzag path length found across all nodes during the tree traversal.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "dfs"
+      ],
+      "cues": [
+        "return-the-longest-zigzag-path",
+        "longest-zigzag-path-contained-in-that-tree"
+      ],
+      "constraints": [
+        "zigzag-length-is-defined-as-the-number-of-nodes-visited-1"
+      ]
+    }
+  ]
+}

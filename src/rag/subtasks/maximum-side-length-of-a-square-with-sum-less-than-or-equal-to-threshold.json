@@ -1,0 +1,53 @@
+{
+  "slug": "maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold",
+  "link": "https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/",
+  "difficulty": "Medium",
+  "index": "1179",
+  "description_full": "Given a m x n matrix mat and an integer threshold, return the maximum side-length of a square with a sum less than or equal to threshold or return 0 if there is no such square.\n\n \nExample 1:\n\n\nInput: mat = [[1,1,3,2,4,3,2],[1,1,3,2,4,3,2],[1,1,3,2,4,3,2]], threshold = 4\nOutput: 2\nExplanation: The maximum side length of square with sum less than 4 is 2 as shown.\n\n\nExample 2:\n\n\nInput: mat = [[2,2,2,2,2],[2,2,2,2,2],[2,2,2,2,2],[2,2,2,2,2],[2,2,2,2,2]], threshold = 1\nOutput: 0\n\n\n \nConstraints:\n\n\n\tm == mat.length\n\tn == mat[i].length\n\t1 <= m, n <= 300\n\t0 <= mat[i][j] <= 104\n\t0 <= threshold <= 105\n\n",
+  "description": "Given a m x n matrix mat and an integer threshold, return the maximum side-length of a square with a sum less than or equal to threshold or return 0 if there is no such square.",
+  "example": "Input: mat = [[1,1,3,2,4,3,2],[1,1,3,2,4,3,2],[1,1,3,2,4,3,2]], threshold = 4\nOutput: 2\nExplanation: The maximum side length of square with sum less than 4 is 2 as shown.",
+  "constraints_text": "m == mat.length\n\tn == mat[i].length\n\t1 <= m, n <= 300\n\t0 <= mat[i][j] <= 104\n\t0 <= threshold <= 105",
+  "templates": {
+    "c": "int maxSideLength(int** mat, int matSize, int* matColSize, int threshold) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxSideLength(vector<vector<int>>& mat, int threshold) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxSideLength(int[][] mat, int threshold) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @param {number} threshold\n * @return {number}\n */\nvar maxSideLength = function(mat, threshold) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSideLength(self, mat, threshold):\n        \"\"\"\n        :type mat: List[List[int]]\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute a 2D prefix sum matrix to enable efficient calculation of submatrix sums.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "sum-less-than-or-equal-to-threshold",
+        "square"
+      ],
+      "constraints": [
+        "m-n-300"
+      ]
+    },
+    {
+      "intent": "Binary search for the maximum possible square side length, checking if a square of that size with sum <= threshold exists.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "binary-search-answer",
+        "enumeration"
+      ],
+      "cues": [
+        "maximum-side-length",
+        "sum-less-than-or-equal-to-threshold"
+      ],
+      "constraints": [
+        "m-n-300",
+        "threshold-105"
+      ]
+    }
+  ]
+}

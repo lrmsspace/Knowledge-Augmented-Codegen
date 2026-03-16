@@ -1,0 +1,74 @@
+{
+  "slug": "make-array-elements-equal-to-zero",
+  "link": "https://leetcode.com/problems/make-array-elements-equal-to-zero/",
+  "difficulty": "Easy",
+  "index": "2355",
+  "description_full": "You are given an integer array nums.\n\nStart by selecting a starting position curr such that nums[curr] == 0, and choose a movement direction of either left or right.\n\nAfter that, you repeat the following process:\n\n\n\tIf curr is out of the range [0, n - 1], this process ends.\n\tIf nums[curr] == 0, move in the current direction by incrementing curr if you are moving right, or decrementing curr if you are moving left.\n\tElse if nums[curr] > 0:\n\t\n\t\tDecrement nums[curr] by 1.\n\t\tReverse your movement direction (left becomes right and vice versa).\n\t\tTake a step in your new direction.\n\t\n\t\n\n\nA selection of the initial position curr and movement direction is considered valid if every element in nums becomes 0 by the end of the process.\n\nReturn the number of possible valid selections.\n\n \nExample 1:\n\n\nInput: nums = [1,0,2,0,3]\n\nOutput: 2\n\nExplanation:\n\nThe only possible valid selections are the following:\n\n\n\tChoose curr = 3, and a movement direction to the left.\n\n\t\n\t\t[1,0,2,0,3] -> [1,0,2,0,3] -> [1,0,1,0,3] -> [1,0,1,0,3] -> [1,0,1,0,2] -> [1,0,1,0,2] -> [1,0,0,0,2] -> [1,0,0,0,2] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,0].\n\t\n\t\n\tChoose curr = 3, and a movement direction to the right.\n\t\n\t\t[1,0,2,0,3] -> [1,0,2,0,3] -> [1,0,2,0,2] -> [1,0,2,0,2] -> [1,0,1,0,2] -> [1,0,1,0,2] -> [1,0,1,0,1] -> [1,0,1,0,1] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [1,0,0,0,0] -> [1,0,0,0,0] -> [1,0,0,0,0] -> [1,0,0,0,0] -> [0,0,0,0,0].\n\t\n\t\n\n\n\nExample 2:\n\n\nInput: nums = [2,3,4,0,4,1,0]\n\nOutput: 0\n\nExplanation:\n\nThere are no possible valid selections.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t0 <= nums[i] <= 100\n\tThere is at least one element i where nums[i] == 0.\n\n",
+  "description": "You are given an integer array nums.\n\nStart by selecting a starting position curr such that nums[curr] == 0, and choose a movement direction of either left or right.\n\nAfter that, you repeat the following process:\n\n\n\tIf curr is out of the range [0, n - 1], this process ends.\n\tIf nums[curr] == 0, move in the current direction by incrementing curr if you are moving right, or decrementing curr if you are moving left.\n\tElse if nums[curr] > 0:\n\t\n\t\tDecrement nums[curr] by 1.\n\t\tReverse your movement direction (left becomes right and vice versa).\n\t\tTake a step in your new direction.\n\t\n\t\n\n\nA selection of the initial position curr and movement direction is considered valid if every element in nums becomes 0 by the end of the process.\n\nReturn the number of possible valid selections.",
+  "example": "Input: nums = [1,0,2,0,3]\n\nOutput: 2\n\nExplanation:\n\nThe only possible valid selections are the following:\n\n\n\tChoose curr = 3, and a movement direction to the left.\n\n\t\n\t\t[1,0,2,0,3] -> [1,0,2,0,3] -> [1,0,1,0,3] -> [1,0,1,0,3] -> [1,0,1,0,2] -> [1,0,1,0,2] -> [1,0,0,0,2] -> [1,0,0,0,2] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,1] -> [0,0,0,0,0].\n\t\n\t\n\tChoose curr = 3, and a movement direction to the right.\n\t\n\t\t[1,0,2,0,3] -> [1,0,2,0,3] -> [1,0,2,0,2] -> [1,0,2,0,2] -> [1,0,1,0,2] -> [1,0,1,0,2] -> [1,0,1,0,1] -> [1,0,1,0,1] -> [1,0,0,0,1] -> [1,0,0,0,1] -> [1,0,0,0,0] -> [1,0,0,0,0] -> [1,0,0,0,0] -> [1,0,0,0,0] -> [0,0,0,0,0].",
+  "constraints_text": "1 <= nums.length <= 100\n\t0 <= nums[i] <= 100\n\tThere is at least one element i where nums[i] == 0.",
+  "templates": {
+    "c": "int countValidSelections(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countValidSelections(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countValidSelections(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar countValidSelections = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def countValidSelections(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify all valid starting positions and initial movement directions.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "start-by-selecting-a-starting-position-curr-such-that-nums-curr-0",
+        "choose-a-movement-direction"
+      ],
+      "constraints": [
+        "nums-curr-0"
+      ]
+    },
+    {
+      "intent": "Efficiently simulate the movement and value decrement process for a given initial state.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "ordered-set"
+      ],
+      "cues": [
+        "if-curr-is-out-of-the-range",
+        "if-nums-curr-0-move",
+        "else-if-nums-curr-0-decrement-nums-curr-by-1-reverse-your-movement-direction-take-a-step-in-your-new-direction"
+      ],
+      "constraints": [
+        "curr-in-0-n-1",
+        "nums-curr-0-or-nums-curr-0"
+      ]
+    },
+    {
+      "intent": "Verify if all elements in the array became zero after simulation and count valid selections.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "every-element-in-nums-becomes-0-by-the-end-of-the-process",
+        "return-the-number-of-possible-valid-selections"
+      ],
+      "constraints": [
+        "all-nums-i-must-be-0"
+      ]
+    }
+  ]
+}

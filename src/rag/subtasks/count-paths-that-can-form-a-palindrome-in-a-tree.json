@@ -1,0 +1,57 @@
+{
+  "slug": "count-paths-that-can-form-a-palindrome-in-a-tree",
+  "link": "https://leetcode.com/problems/count-paths-that-can-form-a-palindrome-in-a-tree/",
+  "difficulty": "Hard",
+  "index": "2257",
+  "description_full": "You are given a tree (i.e. a connected, undirected graph that has no cycles) rooted at node 0 consisting of n nodes numbered from 0 to n - 1. The tree is represented by a 0-indexed array parent of size n, where parent[i] is the parent of node i. Since node 0 is the root, parent[0] == -1.\n\nYou are also given a string s of length n, where s[i] is the character assigned to the edge between i and parent[i]. s[0] can be ignored.\n\nReturn the number of pairs of nodes (u, v) such that u < v and the characters assigned to edges on the path from u to v can be rearranged to form a palindrome.\n\nA string is a palindrome when it reads the same backwards as forwards.\n\n \nExample 1:\n\n\n\n\nInput: parent = [-1,0,0,1,1,2], s = \"acaabc\"\nOutput: 8\nExplanation: The valid pairs are:\n- All the pairs (0,1), (0,2), (1,3), (1,4) and (2,5) result in one character which is always a palindrome.\n- The pair (2,3) result in the string \"aca\" which is a palindrome.\n- The pair (1,5) result in the string \"cac\" which is a palindrome.\n- The pair (3,5) result in the string \"acac\" which can be rearranged into the palindrome \"acca\".\n\n\nExample 2:\n\n\nInput: parent = [-1,0,0,0,0], s = \"aaaaa\"\nOutput: 10\nExplanation: Any pair of nodes (u,v) where u < v is valid.\n\n\n \nConstraints:\n\n\n\tn == parent.length == s.length\n\t1 <= n <= 105\n\t0 <= parent[i] <= n - 1 for all i >= 1\n\tparent[0] == -1\n\tparent represents a valid tree.\n\ts consists of only lowercase English letters.\n\n",
+  "description": "You are given a tree (i.e. a connected, undirected graph that has no cycles) rooted at node 0 consisting of n nodes numbered from 0 to n - 1. The tree is represented by a 0-indexed array parent of size n, where parent[i] is the parent of node i. Since node 0 is the root, parent[0] == -1.\n\nYou are also given a string s of length n, where s[i] is the character assigned to the edge between i and parent[i]. s[0] can be ignored.\n\nReturn the number of pairs of nodes (u, v) such that u < v and the characters assigned to edges on the path from u to v can be rearranged to form a palindrome.\n\nA string is a palindrome when it reads the same backwards as forwards.",
+  "example": "Input: parent = [-1,0,0,1,1,2], s = \"acaabc\"\nOutput: 8\nExplanation: The valid pairs are:\n- All the pairs (0,1), (0,2), (1,3), (1,4) and (2,5) result in one character which is always a palindrome.\n- The pair (2,3) result in the string \"aca\" which is a palindrome.\n- The pair (1,5) result in the string \"cac\" which is a palindrome.\n- The pair (3,5) result in the string \"acac\" which can be rearranged into the palindrome \"acca\".",
+  "constraints_text": "n == parent.length == s.length\n\t1 <= n <= 105\n\t0 <= parent[i] <= n - 1 for all i >= 1\n\tparent[0] == -1\n\tparent represents a valid tree.\n\ts consists of only lowercase English letters.",
+  "templates": {
+    "c": "long long countPalindromePaths(int* parent, int parentSize, char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long countPalindromePaths(vector<int>& parent, string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countPalindromePaths(List<Integer> parent, String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} parent\n * @param {string} s\n * @return {number}\n */\nvar countPalindromePaths = function(parent, s) {\n    \n};",
+    "python": "class Solution(object):\n    def countPalindromePaths(self, parent, s):\n        \"\"\"\n        :type parent: List[int]\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct the tree's adjacency list and compute the XOR sum of edge characters from the root to each node.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "tree",
+        "parent-array",
+        "path-from-u-to-v"
+      ],
+      "constraints": [
+        "n-105",
+        "parent-represents-a-valid-tree"
+      ]
+    },
+    {
+      "intent": "Count pairs (u, v) with u < v such that the XOR sum of their root-path masks represents a palindrome.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "number-of-pairs",
+        "rearranged-to-form-a-palindrome",
+        "u-v"
+      ],
+      "constraints": [
+        "s-consists-of-only-lowercase-english-letters"
+      ]
+    }
+  ]
+}

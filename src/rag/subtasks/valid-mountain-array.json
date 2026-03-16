@@ -1,0 +1,38 @@
+{
+  "slug": "valid-mountain-array",
+  "link": "https://leetcode.com/problems/valid-mountain-array/",
+  "difficulty": "Easy",
+  "index": "206",
+  "description_full": "Given an array of integers arr, return true if and only if it is a valid mountain array.\n\nRecall that arr is a mountain array if and only if:\n\n\n\tarr.length >= 3\n\tThere exists some i with 0 < i < arr.length - 1 such that:\n\t\n\t\tarr[0] < arr[1] < ... < arr[i - 1] < arr[i] \n\t\tarr[i] > arr[i + 1] > ... > arr[arr.length - 1]\n\t\n\t\n\n\n \nExample 1:\nInput: arr = [2,1]\nOutput: false\nExample 2:\nInput: arr = [3,5,5]\nOutput: false\nExample 3:\nInput: arr = [0,3,2,1]\nOutput: true\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 104\n\t0 <= arr[i] <= 104\n\n",
+  "description": "Given an array of integers arr, return true if and only if it is a valid mountain array.\n\nRecall that arr is a mountain array if and only if:\n\n\n\tarr.length >= 3\n\tThere exists some i with 0 < i < arr.length - 1 such that:\n\t\n\t\tarr[0] < arr[1] < ... < arr[i - 1] < arr[i] \n\t\tarr[i] > arr[i + 1] > ... > arr[arr.length - 1]",
+  "example": "Input: arr = [2,1]\nOutput: false",
+  "constraints_text": "1 <= arr.length <= 104\n\t0 <= arr[i] <= 104",
+  "templates": {
+    "c": "\n\nbool validMountainArray(int* arr, int arrSize){\n\n}",
+    "cpp": "class Solution {\npublic:\n    bool validMountainArray(vector<int>& arr) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validMountainArray(int[] arr) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @return {boolean}\n */\nvar validMountainArray = function(arr) {\n    \n};",
+    "python": "class Solution(object):\n    def validMountainArray(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Verify if the array forms a valid mountain by checking length, a strictly increasing prefix, and a strictly decreasing suffix.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "mountain-array",
+        "increasing-then-decreasing",
+        "peak"
+      ],
+      "constraints": [
+        "arr-length-3",
+        "0-peak-index-arr-length-1"
+      ]
+    }
+  ]
+}

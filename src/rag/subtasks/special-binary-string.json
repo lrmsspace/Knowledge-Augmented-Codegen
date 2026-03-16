@@ -1,0 +1,54 @@
+{
+  "slug": "special-binary-string",
+  "link": "https://leetcode.com/problems/special-binary-string/",
+  "difficulty": "Hard",
+  "index": "1879",
+  "description_full": "Special binary strings are binary strings with the following two properties:\n\n\n\tThe number of 0's is equal to the number of 1's.\n\tEvery prefix of the binary string has at least as many 1's as 0's.\n\n\nYou are given a special binary string s.\n\nA move consists of choosing two consecutive, non-empty, special substrings of s, and swapping them. Two strings are consecutive if the last character of the first string is exactly one index before the first character of the second string.\n\nReturn the lexicographically largest resulting string possible after applying the mentioned operations on the string.\n\n \nExample 1:\n\n\nInput: s = \"11011000\"\nOutput: \"11100100\"\nExplanation: The strings \"10\" [occuring at s[1]] and \"1100\" [at s[3]] are swapped.\nThis is the lexicographically largest string possible after some number of swaps.\n\n\nExample 2:\n\n\nInput: s = \"10\"\nOutput: \"10\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 50\n\ts[i] is either '0' or '1'.\n\ts is a special binary string.\n\n",
+  "description": "Special binary strings are binary strings with the following two properties:\n\n\n\tThe number of 0's is equal to the number of 1's.\n\tEvery prefix of the binary string has at least as many 1's as 0's.\n\n\nYou are given a special binary string s.\n\nA move consists of choosing two consecutive, non-empty, special substrings of s, and swapping them. Two strings are consecutive if the last character of the first string is exactly one index before the first character of the second string.\n\nReturn the lexicographically largest resulting string possible after applying the mentioned operations on the string.",
+  "example": "Input: s = \"11011000\"\nOutput: \"11100100\"\nExplanation: The strings \"10\" [occuring at s[1]] and \"1100\" [at s[3]] are swapped.\nThis is the lexicographically largest string possible after some number of swaps.",
+  "constraints_text": "1 <= s.length <= 50\n\ts[i] is either '0' or '1'.\n\ts is a special binary string.",
+  "templates": {
+    "c": "char* makeLargestSpecial(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string makeLargestSpecial(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String makeLargestSpecial(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar makeLargestSpecial = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def makeLargestSpecial(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively parse the input string to identify and process its top-level special substrings.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "recursion",
+        "simulation"
+      ],
+      "cues": [
+        "special-binary-string",
+        "consecutive",
+        "swap"
+      ],
+      "constraints": [
+        "s-length-50"
+      ]
+    },
+    {
+      "intent": "Sort the processed special substrings lexicographically in descending order and concatenate them.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "lexicographically-largest"
+      ],
+      "constraints": [
+        "s-length-50"
+      ]
+    }
+  ]
+}

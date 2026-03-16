@@ -1,0 +1,40 @@
+{
+  "slug": "replace-question-marks-in-string-to-minimize-its-value",
+  "link": "https://leetcode.com/problems/replace-question-marks-in-string-to-minimize-its-value/",
+  "difficulty": "Medium",
+  "index": "2483",
+  "description_full": "You are given a string s. s[i] is either a lowercase English letter or '?'.\n\nFor a string t having length m containing only lowercase English letters, we define the function cost(i) for an index i as the number of characters equal to t[i] that appeared before it, i.e. in the range [0, i - 1].\n\nThe value of t is the sum of cost(i) for all indices i.\n\nFor example, for the string t = \"aab\":\n\n\n\tcost(0) = 0\n\tcost(1) = 1\n\tcost(2) = 0\n\tHence, the value of \"aab\" is 0 + 1 + 0 = 1.\n\n\nYour task is to replace all occurrences of '?' in s with any lowercase English letter so that the value of s is minimized.\n\nReturn a string denoting the modified string with replaced occurrences of '?'. If there are multiple strings resulting in the minimum value, return the lexicographically smallest one.\n\n \nExample 1:\n\n\nInput:   s = \"???\" \n\nOutput:   \"abc\" \n\nExplanation:  In this example, we can replace the occurrences of '?' to make s equal to \"abc\".\n\nFor \"abc\", cost(0) = 0, cost(1) = 0, and cost(2) = 0.\n\nThe value of \"abc\" is 0.\n\nSome other modifications of s that have a value of 0 are \"cba\", \"abz\", and, \"hey\".\n\nAmong all of them, we choose the lexicographically smallest.\n\n\nExample 2:\n\n\nInput:  s = \"a?a?\"\n\nOutput:  \"abac\"\n\nExplanation:  In this example, the occurrences of '?' can be replaced to make s equal to \"abac\".\n\nFor \"abac\", cost(0) = 0, cost(1) = 0, cost(2) = 1, and cost(3) = 0.\n\nThe value of \"abac\" is 1.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts[i] is either a lowercase English letter or '?'.\n\n",
+  "description": "You are given a string s. s[i] is either a lowercase English letter or '?'.\n\nFor a string t having length m containing only lowercase English letters, we define the function cost(i) for an index i as the number of characters equal to t[i] that appeared before it, i.e. in the range [0, i - 1].\n\nThe value of t is the sum of cost(i) for all indices i.\n\nFor example, for the string t = \"aab\":\n\n\n\tcost(0) = 0\n\tcost(1) = 1\n\tcost(2) = 0\n\tHence, the value of \"aab\" is 0 + 1 + 0 = 1.\n\n\nYour task is to replace all occurrences of '?' in s with any lowercase English letter so that the value of s is minimized.\n\nReturn a string denoting the modified string with replaced occurrences of '?'. If there are multiple strings resulting in the minimum value, return the lexicographically smallest one.",
+  "example": "Input:   s = \"???\" \n\nOutput:   \"abc\" \n\nExplanation:  In this example, we can replace the occurrences of '?' to make s equal to \"abc\".\n\nFor \"abc\", cost(0) = 0, cost(1) = 0, and cost(2) = 0.\n\nThe value of \"abc\" is 0.\n\nSome other modifications of s that have a value of 0 are \"cba\", \"abz\", and, \"hey\".\n\nAmong all of them, we choose the lexicographically smallest.",
+  "constraints_text": "1 <= s.length <= 105\n\ts[i] is either a lowercase English letter or '?'.",
+  "templates": {
+    "c": "char* minimizeStringValue(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string minimizeStringValue(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minimizeStringValue(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar minimizeStringValue = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minimizeStringValue(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the input string, replacing '?' characters with the lexicographically smallest character that minimizes its current cost, to produce the overall lexicographically smallest string with ",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy",
+        "counting"
+      ],
+      "cues": [
+        "s-i-is-either-a-lowercase-english-letter-or",
+        "value-of-t-is-the-sum-of-cost-i",
+        "minimized",
+        "lexicographically-smallest-one"
+      ],
+      "constraints": [
+        "1-s-length-105"
+      ]
+    }
+  ]
+}

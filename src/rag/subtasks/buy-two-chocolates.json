@@ -1,0 +1,52 @@
+{
+  "slug": "buy-two-chocolates",
+  "link": "https://leetcode.com/problems/buy-two-chocolates/",
+  "difficulty": "Easy",
+  "index": "585",
+  "description_full": "You are given an integer array prices representing the prices of various chocolates in a store. You are also given a single integer money, which represents your initial amount of money.\n\nYou must buy exactly two chocolates in such a way that you still have some non-negative leftover money. You would like to minimize the sum of the prices of the two chocolates you buy.\n\nReturn the amount of money you will have leftover after buying the two chocolates. If there is no way for you to buy two chocolates without ending up in debt, return money. Note that the leftover must be non-negative.\n\n \nExample 1:\n\n\nInput: prices = [1,2,2], money = 3\nOutput: 0\nExplanation: Purchase the chocolates priced at 1 and 2 units respectively. You will have 3 - 3 = 0 units of money afterwards. Thus, we return 0.\n\n\nExample 2:\n\n\nInput: prices = [3,2,3], money = 3\nOutput: 3\nExplanation: You cannot buy 2 chocolates without going in debt, so we return 3.\n\n\n \nConstraints:\n\n\n\t2 <= prices.length <= 50\n\t1 <= prices[i] <= 100\n\t1 <= money <= 100\n\n",
+  "description": "You are given an integer array prices representing the prices of various chocolates in a store. You are also given a single integer money, which represents your initial amount of money.\n\nYou must buy exactly two chocolates in such a way that you still have some non-negative leftover money. You would like to minimize the sum of the prices of the two chocolates you buy.\n\nReturn the amount of money you will have leftover after buying the two chocolates. If there is no way for you to buy two chocolates without ending up in debt, return money. Note that the leftover must be non-negative.",
+  "example": "Input: prices = [1,2,2], money = 3\nOutput: 0\nExplanation: Purchase the chocolates priced at 1 and 2 units respectively. You will have 3 - 3 = 0 units of money afterwards. Thus, we return 0.",
+  "constraints_text": "2 <= prices.length <= 50\n\t1 <= prices[i] <= 100\n\t1 <= money <= 100",
+  "templates": {
+    "c": "int buyChoco(int* prices, int pricesSize, int money) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int buyChoco(vector<int>& prices, int money) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int buyChoco(int[] prices, int money) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} prices\n * @param {number} money\n * @return {number}\n */\nvar buyChoco = function(prices, money) {\n    \n};",
+    "python": "class Solution(object):\n    def buyChoco(self, prices, money):\n        \"\"\"\n        :type prices: List[int]\n        :type money: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the two lowest prices from the array to minimize their sum.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "minimize-the-sum-of-the-prices",
+        "buy-exactly-two-chocolates"
+      ],
+      "constraints": [
+        "2-prices-length-50"
+      ]
+    },
+    {
+      "intent": "Calculate the final leftover money, ensuring it's non-negative, or return initial money if impossible.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "non-negative-leftover-money",
+        "return-money-if-no-way"
+      ],
+      "constraints": [
+        "leftover-must-be-non-negative"
+      ]
+    }
+  ]
+}

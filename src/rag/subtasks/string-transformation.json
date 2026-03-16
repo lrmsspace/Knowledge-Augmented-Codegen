@@ -1,0 +1,70 @@
+{
+  "slug": "string-transformation",
+  "link": "https://leetcode.com/problems/string-transformation/",
+  "difficulty": "Hard",
+  "index": "2670",
+  "description_full": "You are given two strings s and t of equal length n. You can perform the following operation on the string s:\n\n\n\tRemove a suffix of s of length l where 0 < l < n and append it at the start of s.\n\tFor example, let s = 'abcd' then in one operation you can remove the suffix 'cd' and append it in front of s making s = 'cdab'.\n\n\nYou are also given an integer k. Return the number of ways in which s can be transformed into t in exactly k operations.\n\nSince the answer can be large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: s = \"abcd\", t = \"cdab\", k = 2\nOutput: 2\nExplanation: \nFirst way:\nIn first operation, choose suffix from index = 3, so resulting s = \"dabc\".\nIn second operation, choose suffix from index = 3, so resulting s = \"cdab\".\n\nSecond way:\nIn first operation, choose suffix from index = 1, so resulting s = \"bcda\".\nIn second operation, choose suffix from index = 1, so resulting s = \"cdab\".\n\n\nExample 2:\n\n\nInput: s = \"ababab\", t = \"ababab\", k = 1\nOutput: 2\nExplanation: \nFirst way:\nChoose suffix from index = 2, so resulting s = \"ababab\".\n\nSecond way:\nChoose suffix from index = 4, so resulting s = \"ababab\".\n\n\n \nConstraints:\n\n\n\t2 <= s.length <= 5 * 105\n\t1 <= k <= 1015\n\ts.length == t.length\n\ts and t consist of only lowercase English alphabets.\n\n",
+  "description": "You are given two strings s and t of equal length n. You can perform the following operation on the string s:\n\n\n\tRemove a suffix of s of length l where 0 < l < n and append it at the start of s.\n\tFor example, let s = 'abcd' then in one operation you can remove the suffix 'cd' and append it in front of s making s = 'cdab'.\n\n\nYou are also given an integer k. Return the number of ways in which s can be transformed into t in exactly k operations.\n\nSince the answer can be large, return it modulo 109 + 7.",
+  "example": "Input: s = \"abcd\", t = \"cdab\", k = 2\nOutput: 2\nExplanation: \nFirst way:\nIn first operation, choose suffix from index = 3, so resulting s = \"dabc\".\nIn second operation, choose suffix from index = 3, so resulting s = \"cdab\".\n\nSecond way:\nIn first operation, choose suffix from index = 1, so resulting s = \"bcda\".\nIn second operation, choose suffix from index = 1, so resulting s = \"cdab\".",
+  "constraints_text": "2 <= s.length <= 5 * 105\n\t1 <= k <= 1015\n\ts.length == t.length\n\ts and t consist of only lowercase English alphabets.",
+  "templates": {
+    "c": "int numberOfWays(char* s, char* t, long long k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfWays(string s, string t, long long k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfWays(String s, String t, long k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} t\n * @param {number} k\n * @return {number}\n */\nvar numberOfWays = function(s, t, k) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfWays(self, s, t, k):\n        \"\"\"\n        :type s: str\n        :type t: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if the target string 't' is a cyclic shift of the source string 's', and identify if 't' is identical to 's'.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "kmp"
+      ],
+      "cues": [
+        "s-and-t-of-equal-length-n",
+        "transformed-into-t"
+      ],
+      "constraints": [
+        "s-length-t-length"
+      ]
+    },
+    {
+      "intent": "Compute the k-th power of the 2x2 state transition matrix using modular exponentiation.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "matrix-exp",
+        "mod-exp"
+      ],
+      "cues": [
+        "exactly-k-operations",
+        "k-10-15",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "k-10-15"
+      ]
+    },
+    {
+      "intent": "Calculate the final number of ways based on whether 't' is identical to 's' and the results from matrix exponentiation.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting"
+      ],
+      "cues": [
+        "number-of-ways",
+        "return-it-modulo"
+      ],
+      "constraints": [
+        "2-s-length-5-105"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "unique-3-digit-even-numbers",
+  "link": "https://leetcode.com/problems/unique-3-digit-even-numbers/",
+  "difficulty": "Easy",
+  "index": "2379",
+  "description_full": "You are given an array of digits called digits. Your task is to determine the number of distinct three-digit even numbers that can be formed using these digits.\n\nNote: Each copy of a digit can only be used once per number, and there may not be leading zeros.\n\n \nExample 1:\n\n\nInput: digits = [1,2,3,4]\n\nOutput: 12\n\nExplanation: The 12 distinct 3-digit even numbers that can be formed are 124, 132, 134, 142, 214, 234, 312, 314, 324, 342, 412, and 432. Note that 222 cannot be formed because there is only 1 copy of the digit 2.\n\n\nExample 2:\n\n\nInput: digits = [0,2,2]\n\nOutput: 2\n\nExplanation: The only 3-digit even numbers that can be formed are 202 and 220. Note that the digit 2 can be used twice because it appears twice in the array.\n\n\nExample 3:\n\n\nInput: digits = [6,6,6]\n\nOutput: 1\n\nExplanation: Only 666 can be formed.\n\n\nExample 4:\n\n\nInput: digits = [1,3,5]\n\nOutput: 0\n\nExplanation: No even 3-digit numbers can be formed.\n\n\n \nConstraints:\n\n\n\t3 <= digits.length <= 10\n\t0 <= digits[i] <= 9\n\n",
+  "description": "You are given an array of digits called digits. Your task is to determine the number of distinct three-digit even numbers that can be formed using these digits.\n\nNote: Each copy of a digit can only be used once per number, and there may not be leading zeros.",
+  "example": "Input: digits = [1,2,3,4]\n\nOutput: 12\n\nExplanation: The 12 distinct 3-digit even numbers that can be formed are 124, 132, 134, 142, 214, 234, 312, 314, 324, 342, 412, and 432. Note that 222 cannot be formed because there is only 1 copy of the digit 2.",
+  "constraints_text": "3 <= digits.length <= 10\n\t0 <= digits[i] <= 9",
+  "templates": {
+    "c": "int totalNumbers(int* digits, int digitsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int totalNumbers(vector<int>& digits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalNumbers(int[] digits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} digits\n * @return {number}\n */\nvar totalNumbers = function(digits) {\n    \n};",
+    "python": "class Solution(object):\n    def totalNumbers(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count available digits, then iterate through all 3-digit even numbers, verifying if each can be formed.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "distinct-three-digit-even-numbers",
+        "digits-array",
+        "each-copy-of-a-digit-can-only-be-used-once",
+        "no-leading-zeros"
+      ],
+      "constraints": [
+        "3-digits-length-10",
+        "0-digits-i-9"
+      ]
+    }
+  ]
+}

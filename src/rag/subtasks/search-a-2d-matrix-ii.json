@@ -1,0 +1,38 @@
+{
+  "slug": "search-a-2d-matrix-ii",
+  "link": "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+  "difficulty": "Medium",
+  "index": "741",
+  "description_full": "Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.\n\n\n \nExample 1:\n\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true\n\n\nExample 2:\n\n\nInput: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20\nOutput: false\n\n\n \nConstraints:\n\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109\n\n",
+  "description": "Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:\n\n\n\tIntegers in each row are sorted in ascending from left to right.\n\tIntegers in each column are sorted in ascending from top to bottom.",
+  "example": "Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput: true",
+  "constraints_text": "m == matrix.length\n\tn == matrix[i].length\n\t1 <= n, m <= 300\n\t-109 <= matrix[i][j] <= 109\n\tAll the integers in each row are sorted in ascending order.\n\tAll the integers in each column are sorted in ascending order.\n\t-109 <= target <= 109",
+  "templates": {
+    "c": "\n\nbool searchMatrix(int** matrix, int matrixSize, int* matrixColSize, int target){\n\n}",
+    "cpp": "class Solution {\npublic:\n    bool searchMatrix(vector<vector<int>>& matrix, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean searchMatrix(int[][] matrix, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @param {number} target\n * @return {boolean}\n */\nvar searchMatrix = function(matrix, target) {\n    \n};",
+    "python": "class Solution(object):\n    def searchMatrix(self, matrix, target):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Search for the target value by traversing the matrix from a corner, eliminating rows or columns based on comparisons.",
+      "structures": [
+        "matrix"
+      ],
+      "actions": [
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "search-for-a-value-target",
+        "rows-sorted",
+        "columns-sorted"
+      ],
+      "constraints": [
+        "m-x-n-integer-matrix",
+        "1-n-m-300"
+      ]
+    }
+  ]
+}

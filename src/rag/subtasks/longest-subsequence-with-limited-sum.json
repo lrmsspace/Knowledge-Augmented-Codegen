@@ -1,0 +1,58 @@
+{
+  "slug": "longest-subsequence-with-limited-sum",
+  "link": "https://leetcode.com/problems/longest-subsequence-with-limited-sum/",
+  "difficulty": "Easy",
+  "index": "509",
+  "description_full": "You are given an integer array nums of length n, and an integer array queries of length m.\n\nReturn an array answer of length m where answer[i] is the maximum size of a subsequence that you can take from nums such that the sum of its elements is less than or equal to queries[i].\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\n\n \nExample 1:\n\n\nInput: nums = [4,5,2,1], queries = [3,10,21]\nOutput: [2,3,4]\nExplanation: We answer the queries as follows:\n- The subsequence [2,1] has a sum less than or equal to 3. It can be proven that 2 is the maximum size of such a subsequence, so answer[0] = 2.\n- The subsequence [4,5,1] has a sum less than or equal to 10. It can be proven that 3 is the maximum size of such a subsequence, so answer[1] = 3.\n- The subsequence [4,5,2,1] has a sum less than or equal to 21. It can be proven that 4 is the maximum size of such a subsequence, so answer[2] = 4.\n\n\nExample 2:\n\n\nInput: nums = [2,3,4,5], queries = [1]\nOutput: [0]\nExplanation: The empty subsequence is the only subsequence that has a sum less than or equal to 1, so answer[0] = 0.\n\n \nConstraints:\n\n\n\tn == nums.length\n\tm == queries.length\n\t1 <= n, m <= 1000\n\t1 <= nums[i], queries[i] <= 106\n\n",
+  "description": "You are given an integer array nums of length n, and an integer array queries of length m.\n\nReturn an array answer of length m where answer[i] is the maximum size of a subsequence that you can take from nums such that the sum of its elements is less than or equal to queries[i].\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.",
+  "example": "Input: nums = [4,5,2,1], queries = [3,10,21]\nOutput: [2,3,4]\nExplanation: We answer the queries as follows:\n- The subsequence [2,1] has a sum less than or equal to 3. It can be proven that 2 is the maximum size of such a subsequence, so answer[0] = 2.\n- The subsequence [4,5,1] has a sum less than or equal to 10. It can be proven that 3 is the maximum size of such a subsequence, so answer[1] = 3.\n- The subsequence [4,5,2,1] has a sum less than or equal to 21. It can be proven that 4 is the maximum size of such a subsequence, so answer[2] = 4.",
+  "constraints_text": "n == nums.length\n\tm == queries.length\n\t1 <= n, m <= 1000\n\t1 <= nums[i], queries[i] <= 106",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* answerQueries(int* nums, int numsSize, int* queries, int queriesSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> answerQueries(vector<int>& nums, vector<int>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] answerQueries(int[] nums, int[] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[]} queries\n * @return {number[]}\n */\nvar answerQueries = function(nums, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def answerQueries(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input numbers and compute their prefix sums to enable efficient query processing.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort",
+        "prefix-sum"
+      ],
+      "cues": [
+        "maximum-size",
+        "subsequence",
+        "sum-less-than-or-equal"
+      ],
+      "constraints": [
+        "n-nums-length",
+        "1-n-1000",
+        "1-nums-i-106"
+      ]
+    },
+    {
+      "intent": "For each query, find the maximum subsequence length by performing a binary search on the precomputed prefix sums.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "binary-search-answer"
+      ],
+      "cues": [
+        "answer-of-length-m",
+        "answer-i-is-the-maximum-size",
+        "queries-i"
+      ],
+      "constraints": [
+        "m-queries-length",
+        "1-m-1000",
+        "1-queries-i-106"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "longest-special-path-ii",
+  "link": "https://leetcode.com/problems/longest-special-path-ii/",
+  "difficulty": "Hard",
+  "index": "2810",
+  "description_full": "You are given an undirected tree rooted at node 0, with n nodes numbered from 0 to n - 1. This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, lengthi] indicates an edge between nodes ui and vi with length lengthi. You are also given an integer array nums, where nums[i] represents the value at node i.\n\nA special path is defined as a downward path from an ancestor node to a descendant node in which all node values are distinct, except for at most one value that may appear twice.\n\nReturn an array result of size 2, where result[0] is the length of the longest special path, and result[1] is the minimum number of nodes in all possible longest special paths.\n\n \nExample 1:\n\n\nInput: edges = [[0,1,1],[1,2,3],[1,3,1],[2,4,6],[4,7,2],[3,5,2],[3,6,5],[6,8,3]], nums = [1,1,0,3,1,2,1,1,0]\n\nOutput: [9,3]\n\nExplanation:\n\nIn the image below, nodes are colored by their corresponding values in nums.\n\n\n\nThe longest special paths are 1 -> 2 -> 4 and 1 -> 3 -> 6 -> 8, both having a length of 9. The minimum number of nodes across all longest special paths is 3.\n\n\nExample 2:\n\n\nInput: edges = [[1,0,3],[0,2,4],[0,3,5]], nums = [1,1,0,2]\n\nOutput: [5,2]\n\nExplanation:\n\n\n\nThe longest path is 0 -> 3 consisting of 2 nodes with a length of 5.\n\n\n \nConstraints:\n\n\n\t2 <= n <= 5 * 104\n\tedges.length == n - 1\n\tedges[i].length == 3\n\t0 <= ui, vi < n\n\t1 <= lengthi <= 103\n\tnums.length == n\n\t0 <= nums[i] <= 5 * 104\n\tThe input is generated such that edges represents a valid tree.\n\n",
+  "description": "You are given an undirected tree rooted at node 0, with n nodes numbered from 0 to n - 1. This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi, lengthi] indicates an edge between nodes ui and vi with length lengthi. You are also given an integer array nums, where nums[i] represents the value at node i.\n\nA special path is defined as a downward path from an ancestor node to a descendant node in which all node values are distinct, except for at most one value that may appear twice.\n\nReturn an array result of size 2, where result[0] is the length of the longest special path, and result[1] is the minimum number of nodes in all possible longest special paths.",
+  "example": "Input: edges = [[0,1,1],[1,2,3],[1,3,1],[2,4,6],[4,7,2],[3,5,2],[3,6,5],[6,8,3]], nums = [1,1,0,3,1,2,1,1,0]\n\nOutput: [9,3]\n\nExplanation:\n\nIn the image below, nodes are colored by their corresponding values in nums.\n\n\n\nThe longest special paths are 1 -> 2 -> 4 and 1 -> 3 -> 6 -> 8, both having a length of 9. The minimum number of nodes across all longest special paths is 3.",
+  "constraints_text": "2 <= n <= 5 * 104\n\tedges.length == n - 1\n\tedges[i].length == 3\n\t0 <= ui, vi < n\n\t1 <= lengthi <= 103\n\tnums.length == n\n\t0 <= nums[i] <= 5 * 104\n\tThe input is generated such that edges represents a valid tree.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* longestSpecialPath(int** edges, int edgesSize, int* edgesColSize, int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> longestSpecialPath(vector<vector<int>>& edges, vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] longestSpecialPath(int[][] edges, int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} edges\n * @param {number[]} nums\n * @return {number[]}\n */\nvar longestSpecialPath = function(edges, nums) {\n    \n};",
+    "python": "class Solution(object):\n    def longestSpecialPath(self, edges, nums):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct the tree's adjacency list representation and initialize global variables for tracking the longest special path.",
+      "structures": [
+        "graph",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "undirected-tree",
+        "edges",
+        "rooted-at-node-0"
+      ],
+      "constraints": [
+        "n-5-104"
+      ]
+    },
+    {
+      "intent": "Perform a depth-first search (DFS) to traverse all downward paths, validating them as 'special' and updating the global maximum length and minimum node count.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "backtracking",
+        "counting"
+      ],
+      "cues": [
+        "downward-path",
+        "distinct-values-at-most-one-duplicate",
+        "longest-special-path",
+        "minimum-nodes"
+      ],
+      "constraints": [
+        "nums-i-5-104"
+      ]
+    }
+  ]
+}

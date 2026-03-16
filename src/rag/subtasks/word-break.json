@@ -1,0 +1,54 @@
+{
+  "slug": "word-break",
+  "link": "https://leetcode.com/problems/word-break/",
+  "difficulty": "Medium",
+  "index": "692",
+  "description_full": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.\n\nNote that the same word in the dictionary may be reused multiple times in the segmentation.\n\n \nExample 1:\n\n\nInput: s = \"leetcode\", wordDict = [\"leet\",\"code\"]\nOutput: true\nExplanation: Return true because \"leetcode\" can be segmented as \"leet code\".\n\n\nExample 2:\n\n\nInput: s = \"applepenapple\", wordDict = [\"apple\",\"pen\"]\nOutput: true\nExplanation: Return true because \"applepenapple\" can be segmented as \"apple pen apple\".\nNote that you are allowed to reuse a dictionary word.\n\n\nExample 3:\n\n\nInput: s = \"catsandog\", wordDict = [\"cats\",\"dog\",\"sand\",\"and\",\"cat\"]\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 300\n\t1 <= wordDict.length <= 1000\n\t1 <= wordDict[i].length <= 20\n\ts and wordDict[i] consist of only lowercase English letters.\n\tAll the strings of wordDict are unique.\n\n",
+  "description": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.\n\nNote that the same word in the dictionary may be reused multiple times in the segmentation.",
+  "example": "Input: s = \"leetcode\", wordDict = [\"leet\",\"code\"]\nOutput: true\nExplanation: Return true because \"leetcode\" can be segmented as \"leet code\".",
+  "constraints_text": "1 <= s.length <= 300\n\t1 <= wordDict.length <= 1000\n\t1 <= wordDict[i].length <= 20\n\ts and wordDict[i] consist of only lowercase English letters.\n\tAll the strings of wordDict are unique.",
+  "templates": {
+    "c": "bool wordBreak(char* s, char** wordDict, int wordDictSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool wordBreak(string s, vector<string>& wordDict) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean wordBreak(String s, List<String> wordDict) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string[]} wordDict\n * @return {boolean}\n */\nvar wordBreak = function(s, wordDict) {\n    \n};",
+    "python": "class Solution(object):\n    def wordBreak(self, s, wordDict):\n        \"\"\"\n        :type s: str\n        :type wordDict: List[str]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Optimize dictionary word lookups for efficient substring matching.",
+      "structures": [
+        "string",
+        "trie"
+      ],
+      "actions": [
+        "trie-match"
+      ],
+      "cues": [
+        "worddict",
+        "dictionary-of-strings"
+      ],
+      "constraints": [
+        "worddict-i-length-20"
+      ]
+    },
+    {
+      "intent": "Use dynamic programming to determine if the input string can be segmented.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "return-true-if-s-can-be-segmented",
+        "reuse-multiple-times"
+      ],
+      "constraints": [
+        "1-s-length-300"
+      ]
+    }
+  ]
+}

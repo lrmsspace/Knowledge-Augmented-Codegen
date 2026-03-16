@@ -1,0 +1,41 @@
+{
+  "slug": "score-of-parentheses",
+  "link": "https://leetcode.com/problems/score-of-parentheses/",
+  "difficulty": "Medium",
+  "index": "991",
+  "description_full": "Given a balanced parentheses string s, return the score of the string.\n\nThe score of a balanced parentheses string is based on the following rule:\n\n\n\t\"()\" has score 1.\n\tAB has score A + B, where A and B are balanced parentheses strings.\n\t(A) has score 2 * A, where A is a balanced parentheses string.\n\n\n \nExample 1:\n\n\nInput: s = \"()\"\nOutput: 1\n\n\nExample 2:\n\n\nInput: s = \"(())\"\nOutput: 2\n\n\nExample 3:\n\n\nInput: s = \"()()\"\nOutput: 2\n\n\n \nConstraints:\n\n\n\t2 <= s.length <= 50\n\ts consists of only '(' and ')'.\n\ts is a balanced parentheses string.\n\n",
+  "description": "Given a balanced parentheses string s, return the score of the string.\n\nThe score of a balanced parentheses string is based on the following rule:\n\n\n\t\"()\" has score 1.\n\tAB has score A + B, where A and B are balanced parentheses strings.\n\t(A) has score 2 * A, where A is a balanced parentheses string.",
+  "example": "Input: s = \"()\"\nOutput: 1",
+  "constraints_text": "2 <= s.length <= 50\n\ts consists of only '(' and ')'.\n\ts is a balanced parentheses string.",
+  "templates": {
+    "c": "int scoreOfParentheses(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int scoreOfParentheses(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int scoreOfParentheses(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar scoreOfParentheses = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def scoreOfParentheses(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the score of the balanced parentheses string by iterating through characters and using a stack to manage nested scores.",
+      "structures": [
+        "stack",
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "balanced-parentheses-string",
+        "score-of-the-string",
+        "has-score-1",
+        "ab-has-score-a-b",
+        "a-has-score-2-a"
+      ],
+      "constraints": [
+        "2-s-length-50",
+        "s-consists-of-only-and",
+        "s-is-a-balanced-parentheses-string"
+      ]
+    }
+  ]
+}

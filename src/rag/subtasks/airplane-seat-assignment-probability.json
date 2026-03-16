@@ -1,0 +1,38 @@
+{
+  "slug": "airplane-seat-assignment-probability",
+  "link": "https://leetcode.com/problems/airplane-seat-assignment-probability/",
+  "difficulty": "Medium",
+  "index": "1157",
+  "description_full": "n passengers board an airplane with exactly n seats. The first passenger has lost the ticket and picks a seat randomly. But after that, the rest of the passengers will:\n\n\n\tTake their own seat if it is still available, and\n\tPick other seats randomly when they find their seat occupied\n\n\nReturn the probability that the nth person gets his own seat.\n\n \nExample 1:\n\n\nInput: n = 1\nOutput: 1.00000\nExplanation: The first person can only get the first seat.\n\nExample 2:\n\n\nInput: n = 2\nOutput: 0.50000\nExplanation: The second person has a probability of 0.5 to get the second seat (when first person gets the first seat).\n\n\n \nConstraints:\n\n\n\t1 <= n <= 105\n\n",
+  "description": "n passengers board an airplane with exactly n seats. The first passenger has lost the ticket and picks a seat randomly. But after that, the rest of the passengers will:\n\n\n\tTake their own seat if it is still available, and\n\tPick other seats randomly when they find their seat occupied\n\n\nReturn the probability that the nth person gets his own seat.",
+  "example": "Input: n = 1\nOutput: 1.00000\nExplanation: The first person can only get the first seat.",
+  "constraints_text": "1 <= n <= 105",
+  "templates": {
+    "c": "double nthPersonGetsNthSeat(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    double nthPersonGetsNthSeat(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public double nthPersonGetsNthSeat(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar nthPersonGetsNthSeat = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def nthPersonGetsNthSeat(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: float\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the probability that the nth person gets their own seat, considering the special case for n=1.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "probability-statistics",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "nth-person-gets-own-seat",
+        "pick-randomly",
+        "own-seat-if-available"
+      ],
+      "constraints": [
+        "1-n-10-5"
+      ]
+    }
+  ]
+}

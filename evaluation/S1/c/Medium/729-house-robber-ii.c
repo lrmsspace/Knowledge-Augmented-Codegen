@@ -1,0 +1,66 @@
+// Source: https://leetcode.com/problems/house-robber-ii/   |   Difficulty: Medium
+//
+// Problem Description:
+// You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.
+//
+// Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
+//
+// Example:
+// Input: nums = [2,3,2]
+// Output: 3
+// Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses.
+//
+// Constraints:
+// 1 <= nums.length <= 100
+// 	0 <= nums[i] <= 1000
+//
+// Helpful references (internal KB):
+// - Search the subarray with the maximum/minimum sum (array, greedy, dp-1d)
+//   • When to use: When you need to find the contiguous subarray within a one-dimensional array of numbers that has the largest or smallest sum, typically in linear time.
+//   • Idea: This algorithm efficiently finds the maximum (or minimum) sum of a contiguous subarray by iterating through the array and maintaining a current sum, resetting it if it becomes detrimental. It operates in O(N) time complexity with O(1) space complexity.
+//   • Invariants: `global_max` holds the maximum sum of any contiguous subarray encountered up to the current element.; `current_max` holds the maximum sum of a contiguous subarray ending at the current element.
+//   • Tips: Initialize current and global maximums appropriately (e.g., to negative infinity or first element).; Adapt for minimum sum by resetting current sum if it becomes positive.
+//   • Pitfalls: Failing to correctly initialize maximum/minimum sum variables.; Not handling arrays where all elements are negative (for max sum) or positive (for min sum).
+// - Minimum stack / Minimum queue (queue, stack, simulation)
+//   • When to use: Use when needing to efficiently query the minimum element of a stack or queue in O(1) average time. Also applicable for finding minimums in all fixed-length subarrays using a sliding window.
+//   • Idea: This technique augments a stack or queue to support O(1) average time retrieval of its minimum element, typically by storing minimums alongside data or using auxiliary structures. It achieves amortized constant time for all operations.
+//   • Invariants: For a minimum stack, the auxiliary minimum stack's top element is always the minimum of all elements currently in the main stack.; For a minimum queue implemented with two stacks, the output stack is only refilled from the input stack when the output stack becomes empty.
+//   • Tips: For a minimum stack, use an auxiliary stack to store minimums encountered so far.; Only push to the auxiliary minimum stack if the new element is less than or equal to its current top.
+//   • Pitfalls: Forgetting to pop from the auxiliary minimum stack when the main stack's top is removed.; Incorrectly handling the transfer logic between the two stacks for a minimum queue.
+// - Divide and Conquer DP (array, number, divide-and-conquer, dp-2d)
+//   • When to use: Use when a problem can be broken into smaller, independent subproblems, and their solutions combine to solve the original. Also applicable when overlapping subproblems benefit from memoization or tabulation.
+//   • Idea: This approach solves problems by recursively breaking them into smaller subproblems, solving each once, and storing results in a 2D table to avoid recomputation. It typically achieves a time complexity of O(N*M) or O(N^2) depending on state definition.
+//   • Invariants: The DP table entry `dp[i][j]` correctly stores the optimal solution for the subproblem defined by `i` and `j`.; All subproblems `dp[x][y]` where `x < i` or `y < j` (or based on dependency order) are already computed and correct.
+//   • Tips: Clearly define the state variables for your 2D DP table.; Establish the base cases before defining recursive relations.
+//   • Pitfalls: Incorrectly defining state transitions or recurrence relations.; Missing or incorrect base cases leading to infinite recursion or wrong results.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Use the C standard library only; no external packages.
+// - Do not change input/output formats or return value semantics.
+// - Conformance: ISO C (C89/C99/C11). Do NOT use GNU C extensions (nested functions, statement expressions, typeof, __auto_type, etc.). Avoid VLAs and non-standard builtins.
+// - If you introduce any helper functions, include their full implementations in this file; no hidden helpers.
+
+int rob(int* nums, int numsSize) {
+    if (numsSize == 1) {
+        return nums[0];
+    }
+
+    int rob_linear(int* arr, int size) {
+        int prev1 = 0; // max money can get till previous house
+        int prev2 = 0; // max money can get till house before previous house
+        for (int i = 0; i < size; i++) {
+            int temp = prev1;
+            prev1 = (prev2 + arr[i] > prev1) ? prev2 + arr[i] : prev1;
+            prev2 = temp;
+        }
+        return prev1;
+    }
+
+    // Case 1: Rob houses from index 0 to numsSize - 2
+    int case1 = rob_linear(nums, numsSize - 1);
+    // Case 2: Rob houses from index 1 to numsSize - 1
+    int case2 = rob_linear(nums + 1, numsSize - 1);
+
+    return (case1 > case2) ? case1 : case2;     
+}

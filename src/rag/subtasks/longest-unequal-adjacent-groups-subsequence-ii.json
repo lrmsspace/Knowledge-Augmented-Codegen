@@ -1,0 +1,74 @@
+{
+  "slug": "longest-unequal-adjacent-groups-subsequence-ii",
+  "link": "https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/",
+  "difficulty": "Medium",
+  "index": "2418",
+  "description_full": "You are given a string array words, and an array groups, both arrays having length n.\n\nThe hamming distance between two strings of equal length is the number of positions at which the corresponding characters are different.\n\nYou need to select the longest subsequence from an array of indices [0, 1, ..., n - 1], such that for the subsequence denoted as [i0, i1, ..., ik-1] having length k, the following holds:\n\n\n\tFor adjacent indices in the subsequence, their corresponding groups are unequal, i.e., groups[ij] != groups[ij+1], for each j where 0 < j + 1 < k.\n\twords[ij] and words[ij+1] are equal in length, and the hamming distance between them is 1, where 0 < j + 1 < k, for all indices in the subsequence.\n\n\nReturn a string array containing the words corresponding to the indices (in order) in the selected subsequence. If there are multiple answers, return any of them.\n\nNote: strings in words may be unequal in length.\n\n \nExample 1:\n\n\nInput: words = [\"bab\",\"dab\",\"cab\"], groups = [1,2,2]\n\nOutput: [\"bab\",\"cab\"]\n\nExplanation: A subsequence that can be selected is [0,2].\n\n\n\tgroups[0] != groups[2]\n\twords[0].length == words[2].length, and the hamming distance between them is 1.\n\n\nSo, a valid answer is [words[0],words[2]] = [\"bab\",\"cab\"].\n\nAnother subsequence that can be selected is [0,1].\n\n\n\tgroups[0] != groups[1]\n\twords[0].length == words[1].length, and the hamming distance between them is 1.\n\n\nSo, another valid answer is [words[0],words[1]] = [\"bab\",\"dab\"].\n\nIt can be shown that the length of the longest subsequence of indices that satisfies the conditions is 2.\n\n\nExample 2:\n\n\nInput: words = [\"a\",\"b\",\"c\",\"d\"], groups = [1,2,3,4]\n\nOutput: [\"a\",\"b\",\"c\",\"d\"]\n\nExplanation: We can select the subsequence [0,1,2,3].\n\nIt satisfies both conditions.\n\nHence, the answer is [words[0],words[1],words[2],words[3]] = [\"a\",\"b\",\"c\",\"d\"].\n\nIt has the longest length among all subsequences of indices that satisfy the conditions.\n\nHence, it is the only answer.\n\n\n \nConstraints:\n\n\n\t1 <= n == words.length == groups.length <= 1000\n\t1 <= words[i].length <= 10\n\t1 <= groups[i] <= n\n\twords consists of distinct strings.\n\twords[i] consists of lowercase English letters.\n\n",
+  "description": "You are given a string array words, and an array groups, both arrays having length n.\n\nThe hamming distance between two strings of equal length is the number of positions at which the corresponding characters are different.\n\nYou need to select the longest subsequence from an array of indices [0, 1, ..., n - 1], such that for the subsequence denoted as [i0, i1, ..., ik-1] having length k, the following holds:\n\n\n\tFor adjacent indices in the subsequence, their corresponding groups are unequal, i.e., groups[ij] != groups[ij+1], for each j where 0 < j + 1 < k.\n\twords[ij] and words[ij+1] are equal in length, and the hamming distance between them is 1, where 0 < j + 1 < k, for all indices in the subsequence.\n\n\nReturn a string array containing the words corresponding to the indices (in order) in the selected subsequence. If there are multiple answers, return any of them.\n\nNote: strings in words may be unequal in length.",
+  "example": "Input: words = [\"bab\",\"dab\",\"cab\"], groups = [1,2,2]\n\nOutput: [\"bab\",\"cab\"]\n\nExplanation: A subsequence that can be selected is [0,2].\n\n\n\tgroups[0] != groups[2]\n\twords[0].length == words[2].length, and the hamming distance between them is 1.\n\n\nSo, a valid answer is [words[0],words[2]] = [\"bab\",\"cab\"].\n\nAnother subsequence that can be selected is [0,1].\n\n\n\tgroups[0] != groups[1]\n\twords[0].length == words[1].length, and the hamming distance between them is 1.\n\n\nSo, another valid answer is [words[0],words[1]] = [\"bab\",\"dab\"].\n\nIt can be shown that the length of the longest subsequence of indices that satisfies the conditions is 2.",
+  "constraints_text": "1 <= n == words.length == groups.length <= 1000\n\t1 <= words[i].length <= 10\n\t1 <= groups[i] <= n\n\twords consists of distinct strings.\n\twords[i] consists of lowercase English letters.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** getWordsInLongestSubsequence(char** words, int wordsSize, int* groups, int groupsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> getWordsInLongestSubsequence(vector<string>& words, vector<int>& groups) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> getWordsInLongestSubsequence(String[] words, int[] groups) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {number[]} groups\n * @return {string[]}\n */\nvar getWordsInLongestSubsequence = function(words, groups) {\n    \n};",
+    "python": "class Solution(object):\n    def getWordsInLongestSubsequence(self, words, groups):\n        \"\"\"\n        :type words: List[str]\n        :type groups: List[int]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute all valid direct transitions between words based on group, length, and Hamming distance conditions.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "hamming-distance",
+        "groups-unequal",
+        "equal-length"
+      ],
+      "constraints": [
+        "n-up-to-1000",
+        "word-length-up-to-10"
+      ]
+    },
+    {
+      "intent": "Compute the length of the longest valid subsequence ending at each index using dynamic programming.",
+      "structures": [
+        "array",
+        "graph"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "longest-subsequence",
+        "subsequence-from-an-array-of-indices"
+      ],
+      "constraints": [
+        "n-up-to-1000"
+      ]
+    },
+    {
+      "intent": "Reconstruct the actual sequence of words by backtracking from the end of the longest subsequence.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "backtracking"
+      ],
+      "cues": [
+        "return-a-string-array-containing-the-words",
+        "indices-in-order"
+      ],
+      "constraints": [
+        "if-there-are-multiple-answers-return-any-of-them"
+      ]
+    }
+  ]
+}

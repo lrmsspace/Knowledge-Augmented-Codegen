@@ -1,0 +1,37 @@
+{
+  "slug": "longest-happy-prefix",
+  "link": "https://leetcode.com/problems/longest-happy-prefix/",
+  "difficulty": "Hard",
+  "index": "1995",
+  "description_full": "A string is called a happy prefix if is a non-empty prefix which is also a suffix (excluding itself).\n\nGiven a string s, return the longest happy prefix of s. Return an empty string \"\" if no such prefix exists.\n\n \nExample 1:\n\n\nInput: s = \"level\"\nOutput: \"l\"\nExplanation: s contains 4 prefix excluding itself (\"l\", \"le\", \"lev\", \"leve\"), and suffix (\"l\", \"el\", \"vel\", \"evel\"). The largest prefix which is also suffix is given by \"l\".\n\n\nExample 2:\n\n\nInput: s = \"ababab\"\nOutput: \"abab\"\nExplanation: \"abab\" is the largest prefix which is also suffix. They can overlap in the original string.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 105\n\ts contains only lowercase English letters.\n\n",
+  "description": "A string is called a happy prefix if is a non-empty prefix which is also a suffix (excluding itself).\n\nGiven a string s, return the longest happy prefix of s. Return an empty string \"\" if no such prefix exists.",
+  "example": "Input: s = \"level\"\nOutput: \"l\"\nExplanation: s contains 4 prefix excluding itself (\"l\", \"le\", \"lev\", \"leve\"), and suffix (\"l\", \"el\", \"vel\", \"evel\"). The largest prefix which is also suffix is given by \"l\".",
+  "constraints_text": "1 <= s.length <= 105\n\ts contains only lowercase English letters.",
+  "templates": {
+    "c": "char* longestPrefix(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string longestPrefix(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String longestPrefix(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar longestPrefix = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def longestPrefix(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the length of the longest proper prefix of the string that is also a suffix, then extract that prefix.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "kmp"
+      ],
+      "cues": [
+        "longest-happy-prefix",
+        "non-empty-prefix-which-is-also-a-suffix-excluding-itself"
+      ],
+      "constraints": [
+        "1-s-length-105",
+        "s-contains-only-lowercase-english-letters"
+      ]
+    }
+  ]
+}

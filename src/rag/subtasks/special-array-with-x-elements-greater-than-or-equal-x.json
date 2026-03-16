@@ -1,0 +1,55 @@
+{
+  "slug": "special-array-with-x-elements-greater-than-or-equal-x",
+  "link": "https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/",
+  "difficulty": "Easy",
+  "index": "340",
+  "description_full": "You are given an array nums of non-negative integers. nums is considered special if there exists a number x such that there are exactly x numbers in nums that are greater than or equal to x.\n\nNotice that x does not have to be an element in nums.\n\nReturn x if the array is special, otherwise, return -1. It can be proven that if nums is special, the value for x is unique.\n\n \nExample 1:\n\n\nInput: nums = [3,5]\nOutput: 2\nExplanation: There are 2 values (3 and 5) that are greater than or equal to 2.\n\n\nExample 2:\n\n\nInput: nums = [0,0]\nOutput: -1\nExplanation: No numbers fit the criteria for x.\nIf x = 0, there should be 0 numbers >= x, but there are 2.\nIf x = 1, there should be 1 number >= x, but there are 0.\nIf x = 2, there should be 2 numbers >= x, but there are 0.\nx cannot be greater since there are only 2 numbers in nums.\n\n\nExample 3:\n\n\nInput: nums = [0,4,3,0,4]\nOutput: 3\nExplanation: There are 3 values that are greater than or equal to 3.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t0 <= nums[i] <= 1000\n\n",
+  "description": "You are given an array nums of non-negative integers. nums is considered special if there exists a number x such that there are exactly x numbers in nums that are greater than or equal to x.\n\nNotice that x does not have to be an element in nums.\n\nReturn x if the array is special, otherwise, return -1. It can be proven that if nums is special, the value for x is unique.",
+  "example": "Input: nums = [3,5]\nOutput: 2\nExplanation: There are 2 values (3 and 5) that are greater than or equal to 2.",
+  "constraints_text": "1 <= nums.length <= 100\n\t0 <= nums[i] <= 1000",
+  "templates": {
+    "c": "int specialArray(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int specialArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int specialArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar specialArray = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def specialArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Order the input array to enable efficient counting of elements greater than or equal to a specific value.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "greater-than-or-equal-to-x"
+      ],
+      "constraints": [
+        "nums-length-100"
+      ]
+    },
+    {
+      "intent": "Find the unique integer x such that exactly x numbers in the sorted array are greater than or equal to x.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "binary-search"
+      ],
+      "cues": [
+        "exists-a-number-x",
+        "exactly-x-numbers",
+        "greater-than-or-equal-to-x",
+        "x-is-unique"
+      ],
+      "constraints": [
+        "x-range-0-to-nums-length",
+        "nums-length-100"
+      ]
+    }
+  ]
+}

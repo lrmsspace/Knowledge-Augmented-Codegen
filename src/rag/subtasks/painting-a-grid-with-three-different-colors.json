@@ -1,0 +1,75 @@
+{
+  "slug": "painting-a-grid-with-three-different-colors",
+  "link": "https://leetcode.com/problems/painting-a-grid-with-three-different-colors/",
+  "difficulty": "Hard",
+  "index": "2099",
+  "description_full": "You are given two integers m and n. Consider an m x n grid where each cell is initially white. You can paint each cell red, green, or blue. All cells must be painted.\n\nReturn the number of ways to color the grid with no two adjacent cells having the same color. Since the answer can be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: m = 1, n = 1\nOutput: 3\nExplanation: The three possible colorings are shown in the image above.\n\n\nExample 2:\n\n\nInput: m = 1, n = 2\nOutput: 6\nExplanation: The six possible colorings are shown in the image above.\n\n\nExample 3:\n\n\nInput: m = 5, n = 5\nOutput: 580986\n\n\n \nConstraints:\n\n\n\t1 <= m <= 5\n\t1 <= n <= 1000\n\n",
+  "description": "You are given two integers m and n. Consider an m x n grid where each cell is initially white. You can paint each cell red, green, or blue. All cells must be painted.\n\nReturn the number of ways to color the grid with no two adjacent cells having the same color. Since the answer can be very large, return it modulo 109 + 7.",
+  "example": "Input: m = 1, n = 1\nOutput: 3\nExplanation: The three possible colorings are shown in the image above.",
+  "constraints_text": "1 <= m <= 5\n\t1 <= n <= 1000",
+  "templates": {
+    "c": "int colorTheGrid(int m, int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int colorTheGrid(int m, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int colorTheGrid(int m, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} m\n * @param {number} n\n * @return {number}\n */\nvar colorTheGrid = function(m, n) {\n    \n};",
+    "python": "class Solution(object):\n    def colorTheGrid(self, m, n):\n        \"\"\"\n        :type m: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute all valid column colorings and their pairwise compatibilities.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "recursion",
+        "enumeration"
+      ],
+      "cues": [
+        "n",
+        "o",
+        "t",
+        "w",
+        "o",
+        "a",
+        "d",
+        "j"
+      ],
+      "constraints": [
+        "m",
+        "",
+        "",
+        "5"
+      ]
+    },
+    {
+      "intent": "Calculate the total number of ways to color the grid using dynamic programming.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "counting"
+      ],
+      "cues": [
+        "m",
+        "x",
+        "n",
+        "g",
+        "r",
+        "i",
+        "d"
+      ],
+      "constraints": [
+        "n",
+        "",
+        "",
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ]
+}

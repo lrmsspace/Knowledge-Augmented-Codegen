@@ -1,0 +1,56 @@
+{
+  "slug": "validate-binary-tree-nodes",
+  "link": "https://leetcode.com/problems/validate-binary-tree-nodes/",
+  "difficulty": "Medium",
+  "index": "1210",
+  "description_full": "You have n binary tree nodes numbered from 0 to n - 1 where node i has two children leftChild[i] and rightChild[i], return true if and only if all the given nodes form exactly one valid binary tree.\n\nIf node i has no left child then leftChild[i] will equal -1, similarly for the right child.\n\nNote that the nodes have no values and that we only use the node numbers in this problem.\n\n \nExample 1:\n\n\nInput: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,-1,-1,-1]\nOutput: true\n\n\nExample 2:\n\n\nInput: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,3,-1,-1]\nOutput: false\n\n\nExample 3:\n\n\nInput: n = 2, leftChild = [1,0], rightChild = [-1,-1]\nOutput: false\n\n\n \nConstraints:\n\n\n\tn == leftChild.length == rightChild.length\n\t1 <= n <= 104\n\t-1 <= leftChild[i], rightChild[i] <= n - 1\n\n",
+  "description": "You have n binary tree nodes numbered from 0 to n - 1 where node i has two children leftChild[i] and rightChild[i], return true if and only if all the given nodes form exactly one valid binary tree.\n\nIf node i has no left child then leftChild[i] will equal -1, similarly for the right child.\n\nNote that the nodes have no values and that we only use the node numbers in this problem.",
+  "example": "Input: n = 4, leftChild = [1,-1,3,-1], rightChild = [2,-1,-1,-1]\nOutput: true",
+  "constraints_text": "n == leftChild.length == rightChild.length\n\t1 <= n <= 104\n\t-1 <= leftChild[i], rightChild[i] <= n - 1",
+  "templates": {
+    "c": "bool validateBinaryTreeNodes(int n, int* leftChild, int leftChildSize, int* rightChild, int rightChildSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool validateBinaryTreeNodes(int n, vector<int>& leftChild, vector<int>& rightChild) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean validateBinaryTreeNodes(int n, int[] leftChild, int[] rightChild) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[]} leftChild\n * @param {number[]} rightChild\n * @return {boolean}\n */\nvar validateBinaryTreeNodes = function(n, leftChild, rightChild) {\n    \n};",
+    "python": "class Solution(object):\n    def validateBinaryTreeNodes(self, n, leftChild, rightChild):\n        \"\"\"\n        :type n: int\n        :type leftChild: List[int]\n        :type rightChild: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count incoming edges for each node to identify a unique root and ensure no node has multiple parents.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "exactly-one-valid-binary-tree",
+        "leftchild-i-rightchild-i"
+      ],
+      "constraints": [
+        "1-n-104",
+        "each-node-has-at-most-one-parent"
+      ]
+    },
+    {
+      "intent": "Perform a graph traversal from the identified root to verify all nodes are reachable and no cycles exist.",
+      "structures": [
+        "graph",
+        "queue",
+        "array"
+      ],
+      "actions": [
+        "bfs"
+      ],
+      "cues": [
+        "all-the-given-nodes-form-exactly-one-valid-binary-tree"
+      ],
+      "constraints": [
+        "1-n-104",
+        "no-cycles",
+        "all-nodes-connected"
+      ]
+    }
+  ]
+}

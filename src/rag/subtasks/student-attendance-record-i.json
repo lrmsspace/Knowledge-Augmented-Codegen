@@ -1,0 +1,38 @@
+{
+  "slug": "student-attendance-record-i",
+  "link": "https://leetcode.com/problems/student-attendance-record-i/",
+  "difficulty": "Easy",
+  "index": "116",
+  "description_full": "You are given a string s representing an attendance record for a student where each character signifies whether the student was absent, late, or present on that day. The record only contains the following three characters:\n\n\n\t'A': Absent.\n\t'L': Late.\n\t'P': Present.\n\n\nThe student is eligible for an attendance award if they meet both of the following criteria:\n\n\n\tThe student was absent ('A') for strictly fewer than 2 days total.\n\tThe student was never late ('L') for 3 or more consecutive days.\n\n\nReturn true if the student is eligible for an attendance award, or false otherwise.\n\n \nExample 1:\n\n\nInput: s = \"PPALLP\"\nOutput: true\nExplanation: The student has fewer than 2 absences and was never late 3 or more consecutive days.\n\n\nExample 2:\n\n\nInput: s = \"PPALLL\"\nOutput: false\nExplanation: The student was late 3 consecutive days in the last 3 days, so is not eligible for the award.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts[i] is either 'A', 'L', or 'P'.\n\n",
+  "description": "You are given a string s representing an attendance record for a student where each character signifies whether the student was absent, late, or present on that day. The record only contains the following three characters:\n\n\n\t'A': Absent.\n\t'L': Late.\n\t'P': Present.\n\n\nThe student is eligible for an attendance award if they meet both of the following criteria:\n\n\n\tThe student was absent ('A') for strictly fewer than 2 days total.\n\tThe student was never late ('L') for 3 or more consecutive days.\n\n\nReturn true if the student is eligible for an attendance award, or false otherwise.",
+  "example": "Input: s = \"PPALLP\"\nOutput: true\nExplanation: The student has fewer than 2 absences and was never late 3 or more consecutive days.",
+  "constraints_text": "1 <= s.length <= 1000\n\ts[i] is either 'A', 'L', or 'P'.",
+  "templates": {
+    "c": "bool checkRecord(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool checkRecord(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean checkRecord(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar checkRecord = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def checkRecord(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the attendance record to count total absences and track consecutive late days, returning eligibility.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "absent-strictly-fewer-than-2",
+        "never-late-3-or-more-consecutive-days"
+      ],
+      "constraints": [
+        "1-s-length-1000",
+        "s-i-is-either-a-l-or-p"
+      ]
+    }
+  ]
+}

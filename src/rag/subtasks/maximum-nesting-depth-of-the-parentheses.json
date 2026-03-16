@@ -1,0 +1,39 @@
+{
+  "slug": "maximum-nesting-depth-of-the-parentheses",
+  "link": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/",
+  "difficulty": "Easy",
+  "index": "341",
+  "description_full": "Given a valid parentheses string s, return the nesting depth of s. The nesting depth is the maximum number of nested parentheses.\n\n \nExample 1:\n\n\nInput: s = \"(1+(2*3)+((8)/4))+1\"\n\nOutput: 3\n\nExplanation:\n\nDigit 8 is inside of 3 nested parentheses in the string.\n\n\nExample 2:\n\n\nInput: s = \"(1)+((2))+(((3)))\"\n\nOutput: 3\n\nExplanation:\n\nDigit 3 is inside of 3 nested parentheses in the string.\n\n\nExample 3:\n\n\nInput: s = \"()(())((()()))\"\n\nOutput: 3\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\ts consists of digits 0-9 and characters '+', '-', '*', '/', '(', and ')'.\n\tIt is guaranteed that parentheses expression s is a VPS.\n\n",
+  "description": "Given a valid parentheses string s, return the nesting depth of s. The nesting depth is the maximum number of nested parentheses.",
+  "example": "Input: s = \"(1+(2*3)+((8)/4))+1\"\n\nOutput: 3\n\nExplanation:\n\nDigit 8 is inside of 3 nested parentheses in the string.",
+  "constraints_text": "1 <= s.length <= 100\n\ts consists of digits 0-9 and characters '+', '-', '*', '/', '(', and ')'.\n\tIt is guaranteed that parentheses expression s is a VPS.",
+  "templates": {
+    "c": "int maxDepth(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxDepth(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDepth(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxDepth = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def maxDepth(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, maintaining a current nesting depth and tracking the maximum depth encountered.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "nesting-depth",
+        "maximum-number-of-nested-parentheses",
+        "valid-parentheses-string"
+      ],
+      "constraints": [
+        "1-s-length-100",
+        "s-consists-of-digits-0-9-and-characters-and"
+      ]
+    }
+  ]
+}

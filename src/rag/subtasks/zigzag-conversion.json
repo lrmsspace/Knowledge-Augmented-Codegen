@@ -1,0 +1,58 @@
+{
+  "slug": "zigzag-conversion",
+  "link": "https://leetcode.com/problems/zigzag-conversion/",
+  "difficulty": "Medium",
+  "index": "613",
+  "description_full": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\n\n\nP   A   H   N\nA P L S I I G\nY   I   R\n\n\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\n\nWrite the code that will take a string and make this conversion given a number of rows:\n\n\nstring convert(string s, int numRows);\n\n\n \nExample 1:\n\n\nInput: s = \"PAYPALISHIRING\", numRows = 3\nOutput: \"PAHNAPLSIIGYIR\"\n\n\nExample 2:\n\n\nInput: s = \"PAYPALISHIRING\", numRows = 4\nOutput: \"PINALSIGYAHRPI\"\nExplanation:\nP     I    N\nA   L S  I G\nY A   H R\nP     I\n\n\nExample 3:\n\n\nInput: s = \"A\", numRows = 1\nOutput: \"A\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts consists of English letters (lower-case and upper-case), ',' and '.'.\n\t1 <= numRows <= 1000\n\n",
+  "description": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\n\n\nP   A   H   N\nA P L S I I G\nY   I   R\n\n\nAnd then read line by line: \"PAHNAPLSIIGYIR\"\n\nWrite the code that will take a string and make this conversion given a number of rows:\n\n\nstring convert(string s, int numRows);",
+  "example": "Input: s = \"PAYPALISHIRING\", numRows = 3\nOutput: \"PAHNAPLSIIGYIR\"",
+  "constraints_text": "1 <= s.length <= 1000\n\ts consists of English letters (lower-case and upper-case), ',' and '.'.\n\t1 <= numRows <= 1000",
+  "templates": {
+    "c": "char* convert(char* s, int numRows) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string convert(string s, int numRows) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String convert(String s, int numRows) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} numRows\n * @return {string}\n */\nvar convert = function(s, numRows) {\n    \n};",
+    "python": "class Solution(object):\n    def convert(self, s, numRows):\n        \"\"\"\n        :type s: str\n        :type numRows: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Handle the base case of one row, then initialize row storage and simulate the zigzag pattern by appending characters from the input string to the correct row, managing direction.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "zigzag-pattern",
+        "given-number-of-rows",
+        "string-convert"
+      ],
+      "constraints": [
+        "1-s-length-1000",
+        "1-numrows-1000"
+      ]
+    },
+    {
+      "intent": "Aggregate all characters from the populated row structures into a single final result string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "read-line-by-line",
+        "and-then-read-line-by-line"
+      ],
+      "constraints": [
+        "1-s-length-1000",
+        "1-numrows-1000"
+      ]
+    }
+  ]
+}

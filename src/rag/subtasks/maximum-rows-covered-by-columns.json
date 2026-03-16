@@ -1,0 +1,71 @@
+{
+  "slug": "maximum-rows-covered-by-columns",
+  "link": "https://leetcode.com/problems/maximum-rows-covered-by-columns/",
+  "difficulty": "Medium",
+  "index": "1604",
+  "description_full": "You are given an m x n binary matrix matrix and an integer numSelect.\n\nYour goal is to select exactly numSelect distinct columns from matrix such that you cover as many rows as possible.\n\nA row is considered covered if all the 1's in that row are also part of a column that you have selected. If a row does not have any 1s, it is also considered covered.\n\nMore formally, let us consider selected = {c1, c2, ...., cnumSelect} as the set of columns selected by you. A row i is covered by selected if:\n\n\n\tFor each cell where matrix[i][j] == 1, the column j is in selected.\n\tOr, no cell in row i has a value of 1.\n\n\nReturn the maximum number of rows that can be covered by a set of numSelect columns.\n\n \nExample 1:\n\n\n\n\nInput: matrix = [[0,0,0],[1,0,1],[0,1,1],[0,0,1]], numSelect = 2\n\nOutput: 3\n\nExplanation:\n\nOne possible way to cover 3 rows is shown in the diagram above.\nWe choose s = {0, 2}.\n- Row 0 is covered because it has no occurrences of 1.\n- Row 1 is covered because the columns with value 1, i.e. 0 and 2 are present in s.\n- Row 2 is not covered because matrix[2][1] == 1 but 1 is not present in s.\n- Row 3 is covered because matrix[2][2] == 1 and 2 is present in s.\nThus, we can cover three rows.\nNote that s = {1, 2} will also cover 3 rows, but it can be shown that no more than three rows can be covered.\n\n\nExample 2:\n\n\n\n\nInput: matrix = [[1],[0]], numSelect = 1\n\nOutput: 2\n\nExplanation:\n\nSelecting the only column will result in both rows being covered since the entire matrix is selected.\n\n\n \nConstraints:\n\n\n\tm == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 12\n\tmatrix[i][j] is either 0 or 1.\n\t1 <= numSelect <= n\n\n",
+  "description": "You are given an m x n binary matrix matrix and an integer numSelect.\n\nYour goal is to select exactly numSelect distinct columns from matrix such that you cover as many rows as possible.\n\nA row is considered covered if all the 1's in that row are also part of a column that you have selected. If a row does not have any 1s, it is also considered covered.\n\nMore formally, let us consider selected = {c1, c2, ...., cnumSelect} as the set of columns selected by you. A row i is covered by selected if:\n\n\n\tFor each cell where matrix[i][j] == 1, the column j is in selected.\n\tOr, no cell in row i has a value of 1.\n\n\nReturn the maximum number of rows that can be covered by a set of numSelect columns.",
+  "example": "Input: matrix = [[0,0,0],[1,0,1],[0,1,1],[0,0,1]], numSelect = 2\n\nOutput: 3\n\nExplanation:\n\nOne possible way to cover 3 rows is shown in the diagram above.\nWe choose s = {0, 2}.\n- Row 0 is covered because it has no occurrences of 1.\n- Row 1 is covered because the columns with value 1, i.e. 0 and 2 are present in s.\n- Row 2 is not covered because matrix[2][1] == 1 but 1 is not present in s.\n- Row 3 is covered because matrix[2][2] == 1 and 2 is present in s.\nThus, we can cover three rows.\nNote that s = {1, 2} will also cover 3 rows, but it can be shown that no more than three rows can be covered.",
+  "constraints_text": "m == matrix.length\n\tn == matrix[i].length\n\t1 <= m, n <= 12\n\tmatrix[i][j] is either 0 or 1.\n\t1 <= numSelect <= n",
+  "templates": {
+    "c": "int maximumRows(int** matrix, int matrixSize, int* matrixColSize, int numSelect) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumRows(vector<vector<int>>& matrix, int numSelect) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumRows(int[][] matrix, int numSelect) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} matrix\n * @param {number} numSelect\n * @return {number}\n */\nvar maximumRows = function(matrix, numSelect) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumRows(self, matrix, numSelect):\n        \"\"\"\n        :type matrix: List[List[int]]\n        :type numSelect: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Convert each row of the binary matrix into an integer bitmask for efficient coverage checking.",
+      "structures": [
+        "matrix",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "binary-matrix",
+        "matrix-i-j-is-either-0-or-1"
+      ],
+      "constraints": [
+        "m-n-12"
+      ]
+    },
+    {
+      "intent": "Generate all unique combinations of exactly numSelect columns to be selected.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "backtracking"
+      ],
+      "cues": [
+        "select-exactly-numselect-distinct-columns"
+      ],
+      "constraints": [
+        "n-12",
+        "numselect-n"
+      ]
+    },
+    {
+      "intent": "For each combination of selected columns, calculate the number of covered rows and track the maximum found.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "a-row-is-considered-covered-if",
+        "return-the-maximum-number-of-rows"
+      ],
+      "constraints": [
+        "m-12"
+      ]
+    }
+  ]
+}

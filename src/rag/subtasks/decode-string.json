@@ -1,0 +1,43 @@
+{
+  "slug": "decode-string",
+  "link": "https://leetcode.com/problems/decode-string/",
+  "difficulty": "Medium",
+  "index": "790",
+  "description_full": "Given an encoded string, return its decoded string.\n\nThe encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.\n\nYou may assume that the input string is always valid; there are no extra white spaces, square brackets are well-formed, etc. Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. For example, there will not be input like 3a or 2[4].\n\nThe test cases are generated so that the length of the output will never exceed 105.\n\n \nExample 1:\n\n\nInput: s = \"3[a]2[bc]\"\nOutput: \"aaabcbc\"\n\n\nExample 2:\n\n\nInput: s = \"3[a2[c]]\"\nOutput: \"accaccacc\"\n\n\nExample 3:\n\n\nInput: s = \"2[abc]3[cd]ef\"\nOutput: \"abcabccdcdcdef\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 30\n\ts consists of lowercase English letters, digits, and square brackets '[]'.\n\ts is guaranteed to be a valid input.\n\tAll the integers in s are in the range [1, 300].\n\n",
+  "description": "Given an encoded string, return its decoded string.\n\nThe encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.\n\nYou may assume that the input string is always valid; there are no extra white spaces, square brackets are well-formed, etc. Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. For example, there will not be input like 3a or 2[4].\n\nThe test cases are generated so that the length of the output will never exceed 105.",
+  "example": "Input: s = \"3[a]2[bc]\"\nOutput: \"aaabcbc\"",
+  "constraints_text": "1 <= s.length <= 30\n\ts consists of lowercase English letters, digits, and square brackets '[]'.\n\ts is guaranteed to be a valid input.\n\tAll the integers in s are in the range [1, 300].",
+  "templates": {
+    "c": "char* decodeString(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string decodeString(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String decodeString(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar decodeString = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def decodeString(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Decode the input string by processing characters sequentially and managing nested repetitions using a stack to store previous states.",
+      "structures": [
+        "string",
+        "stack",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "dfs"
+      ],
+      "cues": [
+        "k-encoded-string",
+        "nested",
+        "square-brackets",
+        "digits-for-k"
+      ],
+      "constraints": [
+        "1-s-length-30",
+        "k-in-1-300",
+        "valid-input",
+        "output-length-105"
+      ]
+    }
+  ]
+}

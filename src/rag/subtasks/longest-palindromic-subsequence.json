@@ -1,0 +1,37 @@
+{
+  "slug": "longest-palindromic-subsequence",
+  "link": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+  "difficulty": "Medium",
+  "index": "846",
+  "description_full": "Given a string s, find the longest palindromic subsequence's length in s.\n\nA subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.\n\n \nExample 1:\n\n\nInput: s = \"bbbab\"\nOutput: 4\nExplanation: One possible longest palindromic subsequence is \"bbbb\".\n\n\nExample 2:\n\n\nInput: s = \"cbbd\"\nOutput: 2\nExplanation: One possible longest palindromic subsequence is \"bb\".\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts consists only of lowercase English letters.\n\n",
+  "description": "Given a string s, find the longest palindromic subsequence's length in s.\n\nA subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.",
+  "example": "Input: s = \"bbbab\"\nOutput: 4\nExplanation: One possible longest palindromic subsequence is \"bbbb\".",
+  "constraints_text": "1 <= s.length <= 1000\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int longestPalindromeSubseq(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestPalindromeSubseq(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestPalindromeSubseq(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar longestPalindromeSubseq = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def longestPalindromeSubseq(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the maximum length of a palindromic subsequence within the given string using dynamic programming.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "longest-palindromic-subsequence",
+        "length"
+      ],
+      "constraints": [
+        "1-s-length-1000"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "shortest-common-supersequence",
+  "link": "https://leetcode.com/problems/shortest-common-supersequence/",
+  "difficulty": "Hard",
+  "index": "1947",
+  "description_full": "Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If there are multiple valid strings, return any of them.\n\nA string s is a subsequence of string t if deleting some number of characters from t (possibly 0) results in the string s.\n\n \nExample 1:\n\n\nInput: str1 = \"abac\", str2 = \"cab\"\nOutput: \"cabac\"\nExplanation: \nstr1 = \"abac\" is a subsequence of \"cabac\" because we can delete the first \"c\".\nstr2 = \"cab\" is a subsequence of \"cabac\" because we can delete the last \"ac\".\nThe answer provided is the shortest such string that satisfies these properties.\n\n\nExample 2:\n\n\nInput: str1 = \"aaaaaaaa\", str2 = \"aaaaaaaa\"\nOutput: \"aaaaaaaa\"\n\n\n \nConstraints:\n\n\n\t1 <= str1.length, str2.length <= 1000\n\tstr1 and str2 consist of lowercase English letters.\n\n",
+  "description": "Given two strings str1 and str2, return the shortest string that has both str1 and str2 as subsequences. If there are multiple valid strings, return any of them.\n\nA string s is a subsequence of string t if deleting some number of characters from t (possibly 0) results in the string s.",
+  "example": "Input: str1 = \"abac\", str2 = \"cab\"\nOutput: \"cabac\"\nExplanation: \nstr1 = \"abac\" is a subsequence of \"cabac\" because we can delete the first \"c\".\nstr2 = \"cab\" is a subsequence of \"cabac\" because we can delete the last \"ac\".\nThe answer provided is the shortest such string that satisfies these properties.",
+  "constraints_text": "1 <= str1.length, str2.length <= 1000\n\tstr1 and str2 consist of lowercase English letters.",
+  "templates": {
+    "c": "char* shortestCommonSupersequence(char* str1, char* str2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string shortestCommonSupersequence(string str1, string str2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shortestCommonSupersequence(String str1, String str2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} str1\n * @param {string} str2\n * @return {string}\n */\nvar shortestCommonSupersequence = function(str1, str2) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestCommonSupersequence(self, str1, str2):\n        \"\"\"\n        :type str1: str\n        :type str2: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the Longest Common Subsequence (LCS) DP table to find lengths of common subsequences for all prefixes.",
+      "structures": [
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "shortest-string",
+        "subsequences"
+      ],
+      "constraints": [
+        "1-str1-length-str2-length-1000"
+      ]
+    },
+    {
+      "intent": "Reconstruct the Shortest Common Supersequence (SCS) string by backtracking through the computed LCS DP table.",
+      "structures": [
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "backtracking"
+      ],
+      "cues": [
+        "return-the-shortest-string",
+        "any-of-them"
+      ],
+      "constraints": [
+        "1-str1-length-str2-length-1000"
+      ]
+    }
+  ]
+}

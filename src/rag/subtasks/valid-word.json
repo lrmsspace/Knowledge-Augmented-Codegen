@@ -1,0 +1,41 @@
+{
+  "slug": "valid-word",
+  "link": "https://leetcode.com/problems/valid-word/",
+  "difficulty": "Easy",
+  "index": "2319",
+  "description_full": "A word is considered valid if:\n\n\n\tIt contains a minimum of 3 characters.\n\tIt contains only digits (0-9), and English letters (uppercase and lowercase).\n\tIt includes at least one vowel.\n\tIt includes at least one consonant.\n\n\nYou are given a string word.\n\nReturn true if word is valid, otherwise, return false.\n\nNotes:\n\n\n\t'a', 'e', 'i', 'o', 'u', and their uppercases are vowels.\n\tA consonant is an English letter that is not a vowel.\n\n\n \nExample 1:\n\n\nInput: word = \"234Adas\"\n\nOutput: true\n\nExplanation:\n\nThis word satisfies the conditions.\n\n\nExample 2:\n\n\nInput: word = \"b3\"\n\nOutput: false\n\nExplanation:\n\nThe length of this word is fewer than 3, and does not have a vowel.\n\n\nExample 3:\n\n\nInput: word = \"a3$e\"\n\nOutput: false\n\nExplanation:\n\nThis word contains a '$' character and does not have a consonant.\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 20\n\tword consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.\n\n",
+  "description": "A word is considered valid if:\n\n\n\tIt contains a minimum of 3 characters.\n\tIt contains only digits (0-9), and English letters (uppercase and lowercase).\n\tIt includes at least one vowel.\n\tIt includes at least one consonant.\n\n\nYou are given a string word.\n\nReturn true if word is valid, otherwise, return false.\n\nNotes:\n\n\n\t'a', 'e', 'i', 'o', 'u', and their uppercases are vowels.\n\tA consonant is an English letter that is not a vowel.",
+  "example": "Input: word = \"234Adas\"\n\nOutput: true\n\nExplanation:\n\nThis word satisfies the conditions.",
+  "constraints_text": "1 <= word.length <= 20\n\tword consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.",
+  "templates": {
+    "c": "bool isValid(char* word) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isValid(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isValid(String word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {boolean}\n */\nvar isValid = function(word) {\n    \n};",
+    "python": "class Solution(object):\n    def isValid(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Validate the input string by checking its length, character types, and the presence of at least one vowel and one consonant.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "minimum-3-characters",
+        "only-digits-and-letters",
+        "at-least-one-vowel",
+        "at-least-one-consonant"
+      ],
+      "constraints": [
+        "1-word-length-20",
+        "word-consists-of-english-uppercase-and-lowercase-letters-digits-and"
+      ]
+    }
+  ]
+}

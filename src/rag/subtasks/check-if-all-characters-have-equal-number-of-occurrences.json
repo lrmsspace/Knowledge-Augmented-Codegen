@@ -1,0 +1,56 @@
+{
+  "slug": "check-if-all-characters-have-equal-number-of-occurrences",
+  "link": "https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/",
+  "difficulty": "Easy",
+  "index": "416",
+  "description_full": "Given a string s, return true if s is a good string, or false otherwise.\n\nA string s is good if all the characters that appear in s have the same number of occurrences (i.e., the same frequency).\n\n \nExample 1:\n\n\nInput: s = \"abacbc\"\nOutput: true\nExplanation: The characters that appear in s are 'a', 'b', and 'c'. All characters occur 2 times in s.\n\n\nExample 2:\n\n\nInput: s = \"aaabb\"\nOutput: false\nExplanation: The characters that appear in s are 'a' and 'b'.\n'a' occurs 3 times while 'b' occurs 2 times, which is not the same number of times.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts consists of lowercase English letters.\n\n",
+  "description": "Given a string s, return true if s is a good string, or false otherwise.\n\nA string s is good if all the characters that appear in s have the same number of occurrences (i.e., the same frequency).",
+  "example": "Input: s = \"abacbc\"\nOutput: true\nExplanation: The characters that appear in s are 'a', 'b', and 'c'. All characters occur 2 times in s.",
+  "constraints_text": "1 <= s.length <= 1000\n\ts consists of lowercase English letters.",
+  "templates": {
+    "c": "bool areOccurrencesEqual(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool areOccurrencesEqual(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean areOccurrencesEqual(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {boolean}\n */\nvar areOccurrencesEqual = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def areOccurrencesEqual(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each lowercase English letter in the input string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "characters-that-appear",
+        "number-of-occurrences",
+        "frequency"
+      ],
+      "constraints": [
+        "s-consists-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Verify if all characters that appeared in the string have the same frequency.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "same-number-of-occurrences",
+        "same-frequency"
+      ],
+      "constraints": [
+        "1-s-length-1000"
+      ]
+    }
+  ]
+}

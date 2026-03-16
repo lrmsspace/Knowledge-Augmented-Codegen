@@ -1,0 +1,71 @@
+{
+  "slug": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+  "link": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+  "difficulty": "Medium",
+  "index": "1198",
+  "description_full": "There are n cities numbered from 0 to n-1. Given the array edges where edges[i] = [fromi, toi, weighti] represents a bidirectional and weighted edge between cities fromi and toi, and given the integer distanceThreshold.\n\nReturn the city with the smallest number of cities that are reachable through some path and whose distance is at most distanceThreshold, If there are multiple such cities, return the city with the greatest number.\n\nNotice that the distance of a path connecting cities i and j is equal to the sum of the edges' weights along that path.\n\n \nExample 1:\n\n\n\n\nInput: n = 4, edges = [[0,1,3],[1,2,1],[1,3,4],[2,3,1]], distanceThreshold = 4\nOutput: 3\nExplanation: The figure above describes the graph. \nThe neighboring cities at a distanceThreshold = 4 for each city are:\nCity 0 -> [City 1, City 2] \nCity 1 -> [City 0, City 2, City 3] \nCity 2 -> [City 0, City 1, City 3] \nCity 3 -> [City 1, City 2] \nCities 0 and 3 have 2 neighboring cities at a distanceThreshold = 4, but we have to return city 3 since it has the greatest number.\n\n\nExample 2:\n\n\n\n\nInput: n = 5, edges = [[0,1,2],[0,4,8],[1,2,3],[1,4,2],[2,3,1],[3,4,1]], distanceThreshold = 2\nOutput: 0\nExplanation: The figure above describes the graph. \nThe neighboring cities at a distanceThreshold = 2 for each city are:\nCity 0 -> [City 1] \nCity 1 -> [City 0, City 4] \nCity 2 -> [City 3, City 4] \nCity 3 -> [City 2, City 4]\nCity 4 -> [City 1, City 2, City 3] \nThe city 0 has 1 neighboring city at a distanceThreshold = 2.\n\n\n \nConstraints:\n\n\n\t2 <= n <= 100\n\t1 <= edges.length <= n * (n - 1) / 2\n\tedges[i].length == 3\n\t0 <= fromi < toi < n\n\t1 <= weighti, distanceThreshold <= 10^4\n\tAll pairs (fromi, toi) are distinct.\n\n",
+  "description": "There are n cities numbered from 0 to n-1. Given the array edges where edges[i] = [fromi, toi, weighti] represents a bidirectional and weighted edge between cities fromi and toi, and given the integer distanceThreshold.\n\nReturn the city with the smallest number of cities that are reachable through some path and whose distance is at most distanceThreshold, If there are multiple such cities, return the city with the greatest number.\n\nNotice that the distance of a path connecting cities i and j is equal to the sum of the edges' weights along that path.",
+  "example": "Input: n = 4, edges = [[0,1,3],[1,2,1],[1,3,4],[2,3,1]], distanceThreshold = 4\nOutput: 3\nExplanation: The figure above describes the graph. \nThe neighboring cities at a distanceThreshold = 4 for each city are:\nCity 0 -> [City 1, City 2] \nCity 1 -> [City 0, City 2, City 3] \nCity 2 -> [City 0, City 1, City 3] \nCity 3 -> [City 1, City 2] \nCities 0 and 3 have 2 neighboring cities at a distanceThreshold = 4, but we have to return city 3 since it has the greatest number.",
+  "constraints_text": "2 <= n <= 100\n\t1 <= edges.length <= n * (n - 1) / 2\n\tedges[i].length == 3\n\t0 <= fromi < toi < n\n\t1 <= weighti, distanceThreshold <= 10^4\n\tAll pairs (fromi, toi) are distinct.",
+  "templates": {
+    "c": "int findTheCity(int n, int** edges, int edgesSize, int* edgesColSize, int distanceThreshold) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findTheCity(int n, int[][] edges, int distanceThreshold) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} edges\n * @param {number} distanceThreshold\n * @return {number}\n */\nvar findTheCity = function(n, edges, distanceThreshold) {\n    \n};",
+    "python": "class Solution(object):\n    def findTheCity(self, n, edges, distanceThreshold):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type distanceThreshold: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the shortest path distance between all pairs of cities.",
+      "structures": [
+        "graph",
+        "matrix"
+      ],
+      "actions": [
+        "floyd-warshall"
+      ],
+      "cues": [
+        "bidirectional-and-weighted-edge",
+        "distance-of-a-path"
+      ],
+      "constraints": [
+        "n-100"
+      ]
+    },
+    {
+      "intent": "For each city, determine the count of other cities reachable within the given distance threshold.",
+      "structures": [
+        "array",
+        "matrix"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "reachable-through-some-path",
+        "distance-is-at-most-distancethreshold"
+      ],
+      "constraints": [
+        "distancethreshold"
+      ]
+    },
+    {
+      "intent": "Find the city with the minimum count of reachable cities, breaking ties by selecting the city with the largest index.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "smallest-number-of-cities",
+        "greatest-number"
+      ],
+      "constraints": [
+        "return-the-city-with-the-greatest-number"
+      ]
+    }
+  ]
+}

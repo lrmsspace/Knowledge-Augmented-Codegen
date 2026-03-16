@@ -1,0 +1,78 @@
+{
+  "slug": "super-egg-drop",
+  "link": "https://leetcode.com/problems/super-egg-drop/",
+  "difficulty": "Hard",
+  "index": "1911",
+  "description_full": "You are given k identical eggs and you have access to a building with n floors labeled from 1 to n.\n\nYou know that there exists a floor f where 0 <= f <= n such that any egg dropped at a floor higher than f will break, and any egg dropped at or below floor f will not break.\n\nEach move, you may take an unbroken egg and drop it from any floor x (where 1 <= x <= n). If the egg breaks, you can no longer use it. However, if the egg does not break, you may reuse it in future moves.\n\nReturn the minimum number of moves that you need to determine with certainty what the value of f is.\n\n \nExample 1:\n\n\nInput: k = 1, n = 2\nOutput: 2\nExplanation: \nDrop the egg from floor 1. If it breaks, we know that f = 0.\nOtherwise, drop the egg from floor 2. If it breaks, we know that f = 1.\nIf it does not break, then we know f = 2.\nHence, we need at minimum 2 moves to determine with certainty what the value of f is.\n\n\nExample 2:\n\n\nInput: k = 2, n = 6\nOutput: 3\n\n\nExample 3:\n\n\nInput: k = 3, n = 14\nOutput: 4\n\n\n \nConstraints:\n\n\n\t1 <= k <= 100\n\t1 <= n <= 104\n\n",
+  "description": "You are given k identical eggs and you have access to a building with n floors labeled from 1 to n.\n\nYou know that there exists a floor f where 0 <= f <= n such that any egg dropped at a floor higher than f will break, and any egg dropped at or below floor f will not break.\n\nEach move, you may take an unbroken egg and drop it from any floor x (where 1 <= x <= n). If the egg breaks, you can no longer use it. However, if the egg does not break, you may reuse it in future moves.\n\nReturn the minimum number of moves that you need to determine with certainty what the value of f is.",
+  "example": "Input: k = 1, n = 2\nOutput: 2\nExplanation: \nDrop the egg from floor 1. If it breaks, we know that f = 0.\nOtherwise, drop the egg from floor 2. If it breaks, we know that f = 1.\nIf it does not break, then we know f = 2.\nHence, we need at minimum 2 moves to determine with certainty what the value of f is.",
+  "constraints_text": "1 <= k <= 100\n\t1 <= n <= 104",
+  "templates": {
+    "c": "int superEggDrop(int k, int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int superEggDrop(int k, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int superEggDrop(int k, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number} n\n * @return {number}\n */\nvar superEggDrop = function(k, n) {\n    \n};",
+    "python": "class Solution(object):\n    def superEggDrop(self, k, n):\n        \"\"\"\n        :type k: int\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a 2D DP table to store the maximum floors coverable with a given number of moves and eggs.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration"
+      ],
+      "cues": [
+        "k-eggs",
+        "n-floors",
+        "minimum-moves"
+      ],
+      "constraints": [
+        "1-k-100",
+        "1-n-104"
+      ]
+    },
+    {
+      "intent": "Iteratively compute the maximum floors coverable for each (moves, eggs) state using the recurrence relation.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "dp-2d"
+      ],
+      "cues": [
+        "egg-breaks",
+        "egg-doesn-t-break",
+        "reuse-egg",
+        "1-dp-m-1-e-1-dp-m-1-e"
+      ],
+      "constraints": [
+        "1-k-100",
+        "1-n-104"
+      ]
+    },
+    {
+      "intent": "Find the smallest number of moves 'm' for which the maximum floors coverable with 'k' eggs is at least 'n'.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-moves",
+        "determine-with-certainty",
+        "dp-m-k-n"
+      ],
+      "constraints": [
+        "1-k-100",
+        "1-n-104"
+      ]
+    }
+  ]
+}

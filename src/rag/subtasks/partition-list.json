@@ -1,0 +1,53 @@
+{
+  "slug": "partition-list",
+  "link": "https://leetcode.com/problems/partition-list/",
+  "difficulty": "Medium",
+  "index": "661",
+  "description_full": "Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.\n\nYou should preserve the original relative order of the nodes in each of the two partitions.\n\n \nExample 1:\n\n\nInput: head = [1,4,3,2,5,2], x = 3\nOutput: [1,2,2,4,3,5]\n\n\nExample 2:\n\n\nInput: head = [2,1], x = 2\nOutput: [1,2]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the list is in the range [0, 200].\n\t-100 <= Node.val <= 100\n\t-200 <= x <= 200\n\n",
+  "description": "Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.\n\nYou should preserve the original relative order of the nodes in each of the two partitions.",
+  "example": "Input: head = [1,4,3,2,5,2], x = 3\nOutput: [1,2,2,4,3,5]",
+  "constraints_text": "The number of nodes in the list is in the range [0, 200].\n\t-100 <= Node.val <= 100\n\t-200 <= x <= 200",
+  "templates": {
+    "c": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     struct ListNode *next;\n * };\n */\nstruct ListNode* partition(struct ListNode* head, int x) {\n    \n}",
+    "cpp": "/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode() : val(0), next(nullptr) {}\n *     ListNode(int x) : val(x), next(nullptr) {}\n *     ListNode(int x, ListNode *next) : val(x), next(next) {}\n * };\n */\nclass Solution {\npublic:\n    ListNode* partition(ListNode* head, int x) {\n        \n    }\n};",
+    "java": "/**\n * Definition for singly-linked list.\n * public class ListNode {\n *     int val;\n *     ListNode next;\n *     ListNode() {}\n *     ListNode(int val) { this.val = val; }\n *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }\n * }\n */\nclass Solution {\n    public ListNode partition(ListNode head, int x) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for singly-linked list.\n * function ListNode(val, next) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.next = (next===undefined ? null : next)\n * }\n */\n/**\n * @param {ListNode} head\n * @param {number} x\n * @return {ListNode}\n */\nvar partition = function(head, x) {\n    \n};",
+    "python": "# Definition for singly-linked list.\n# class ListNode(object):\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution(object):\n    def partition(self, head, x):\n        \"\"\"\n        :type head: Optional[ListNode]\n        :type x: int\n        :rtype: Optional[ListNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the original linked list, creating two separate sub-lists based on their value relative to x.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "partition-it",
+        "less-than-x",
+        "greater-than-or-equal-to-x",
+        "preserve-original-relative-order"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-range-0-200"
+      ]
+    },
+    {
+      "intent": "Concatenate the two newly formed sub-lists (less than x and greater than or equal to x) to form the final partitioned list.",
+      "structures": [
+        "linked-list"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "come-before"
+      ],
+      "constraints": [
+        "number-of-nodes-in-the-range-0-200"
+      ]
+    }
+  ]
+}

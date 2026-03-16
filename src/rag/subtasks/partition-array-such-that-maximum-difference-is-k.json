@@ -1,0 +1,52 @@
+{
+  "slug": "partition-array-such-that-maximum-difference-is-k",
+  "link": "https://leetcode.com/problems/partition-array-such-that-maximum-difference-is-k/",
+  "difficulty": "Medium",
+  "index": "1566",
+  "description_full": "You are given an integer array nums and an integer k. You may partition nums into one or more subsequences such that each element in nums appears in exactly one of the subsequences.\n\nReturn the minimum number of subsequences needed such that the difference between the maximum and minimum values in each subsequence is at most k.\n\nA subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.\n\n \nExample 1:\n\n\nInput: nums = [3,6,1,2,5], k = 2\nOutput: 2\nExplanation:\nWe can partition nums into the two subsequences [3,1,2] and [6,5].\nThe difference between the maximum and minimum value in the first subsequence is 3 - 1 = 2.\nThe difference between the maximum and minimum value in the second subsequence is 6 - 5 = 1.\nSince two subsequences were created, we return 2. It can be shown that 2 is the minimum number of subsequences needed.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3], k = 1\nOutput: 2\nExplanation:\nWe can partition nums into the two subsequences [1,2] and [3].\nThe difference between the maximum and minimum value in the first subsequence is 2 - 1 = 1.\nThe difference between the maximum and minimum value in the second subsequence is 3 - 3 = 0.\nSince two subsequences were created, we return 2. Note that another optimal solution is to partition nums into the two subsequences [1] and [2,3].\n\n\nExample 3:\n\n\nInput: nums = [2,2,4,5], k = 0\nOutput: 3\nExplanation:\nWe can partition nums into the three subsequences [2,2], [4], and [5].\nThe difference between the maximum and minimum value in the first subsequences is 2 - 2 = 0.\nThe difference between the maximum and minimum value in the second subsequences is 4 - 4 = 0.\nThe difference between the maximum and minimum value in the third subsequences is 5 - 5 = 0.\nSince three subsequences were created, we return 3. It can be shown that 3 is the minimum number of subsequences needed.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= nums[i] <= 105\n\t0 <= k <= 105\n\n",
+  "description": "You are given an integer array nums and an integer k. You may partition nums into one or more subsequences such that each element in nums appears in exactly one of the subsequences.\n\nReturn the minimum number of subsequences needed such that the difference between the maximum and minimum values in each subsequence is at most k.\n\nA subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.",
+  "example": "Input: nums = [3,6,1,2,5], k = 2\nOutput: 2\nExplanation:\nWe can partition nums into the two subsequences [3,1,2] and [6,5].\nThe difference between the maximum and minimum value in the first subsequence is 3 - 1 = 2.\nThe difference between the maximum and minimum value in the second subsequence is 6 - 5 = 1.\nSince two subsequences were created, we return 2. It can be shown that 2 is the minimum number of subsequences needed.",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= nums[i] <= 105\n\t0 <= k <= 105",
+  "templates": {
+    "c": "int partitionArray(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int partitionArray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int partitionArray(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar partitionArray = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def partitionArray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array to enable efficient greedy partitioning.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "merge-sort"
+      ],
+      "cues": [
+        "minimum-number-of-subsequences",
+        "difference-between-maximum-and-minimum-values"
+      ],
+      "constraints": [
+        "nums-is-an-integer-array"
+      ]
+    },
+    {
+      "intent": "Greedily partition the sorted array into valid subsequences and count them.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "two-pointers"
+      ],
+      "cues": [
+        "minimum-number-of-subsequences",
+        "difference-between-max-and-min-values-in-each-subsequence-is-at-most-k"
+      ],
+      "constraints": [
+        "max-val-min-val-k-for-each-subsequence"
+      ]
+    }
+  ]
+}

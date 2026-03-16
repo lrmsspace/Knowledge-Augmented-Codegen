@@ -1,0 +1,38 @@
+{
+  "slug": "minimum-operations-to-reduce-an-integer-to-0",
+  "link": "https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/",
+  "difficulty": "Medium",
+  "index": "1676",
+  "description_full": "You are given a positive integer n, you can do the following operation any number of times:\n\n\n\tAdd or subtract a power of 2 from n.\n\n\nReturn the minimum number of operations to make n equal to 0.\n\nA number x is power of 2 if x == 2i where i >= 0.\n\n \nExample 1:\n\n\nInput: n = 39\nOutput: 3\nExplanation: We can do the following operations:\n- Add 20 = 1 to n, so now n = 40.\n- Subtract 23 = 8 from n, so now n = 32.\n- Subtract 25 = 32 from n, so now n = 0.\nIt can be shown that 3 is the minimum number of operations we need to make n equal to 0.\n\n\nExample 2:\n\n\nInput: n = 54\nOutput: 3\nExplanation: We can do the following operations:\n- Add 21 = 2 to n, so now n = 56.\n- Add 23 = 8 to n, so now n = 64.\n- Subtract 26 = 64 from n, so now n = 0.\nSo the minimum number of operations is 3.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 105\n\n",
+  "description": "You are given a positive integer n, you can do the following operation any number of times:\n\n\n\tAdd or subtract a power of 2 from n.\n\n\nReturn the minimum number of operations to make n equal to 0.\n\nA number x is power of 2 if x == 2i where i >= 0.",
+  "example": "Input: n = 39\nOutput: 3\nExplanation: We can do the following operations:\n- Add 20 = 1 to n, so now n = 40.\n- Subtract 23 = 8 from n, so now n = 32.\n- Subtract 25 = 32 from n, so now n = 0.\nIt can be shown that 3 is the minimum number of operations we need to make n equal to 0.",
+  "constraints_text": "1 <= n <= 105",
+  "templates": {
+    "c": "int minOperations(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minOperations(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minOperations(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar minOperations = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def minOperations(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum operations to transform n to 0 by adding or subtracting powers of 2 using Breadth-First Search.",
+      "structures": [
+        "queue",
+        "number",
+        "bitset"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "add-or-subtract-a-power-of-2"
+      ],
+      "constraints": [
+        "1-n-105"
+      ]
+    }
+  ]
+}

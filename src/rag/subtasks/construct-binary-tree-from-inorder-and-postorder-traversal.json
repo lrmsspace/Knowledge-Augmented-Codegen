@@ -1,0 +1,57 @@
+{
+  "slug": "construct-binary-tree-from-inorder-and-postorder-traversal",
+  "link": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
+  "difficulty": "Medium",
+  "index": "675",
+  "description_full": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.\n\n \nExample 1:\n\n\nInput: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]\nOutput: [3,9,20,null,null,15,7]\n\n\nExample 2:\n\n\nInput: inorder = [-1], postorder = [-1]\nOutput: [-1]\n\n\n \nConstraints:\n\n\n\t1 <= inorder.length <= 3000\n\tpostorder.length == inorder.length\n\t-3000 <= inorder[i], postorder[i] <= 3000\n\tinorder and postorder consist of unique values.\n\tEach value of postorder also appears in inorder.\n\tinorder is guaranteed to be the inorder traversal of the tree.\n\tpostorder is guaranteed to be the postorder traversal of the tree.\n\n",
+  "description": "Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.",
+  "example": "Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]\nOutput: [3,9,20,null,null,15,7]",
+  "constraints_text": "1 <= inorder.length <= 3000\n\tpostorder.length == inorder.length\n\t-3000 <= inorder[i], postorder[i] <= 3000\n\tinorder and postorder consist of unique values.\n\tEach value of postorder also appears in inorder.\n\tinorder is guaranteed to be the inorder traversal of the tree.\n\tpostorder is guaranteed to be the postorder traversal of the tree.",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nstruct TreeNode* buildTree(int* inorder, int inorderSize, int* postorder, int postorderSize) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public TreeNode buildTree(int[] inorder, int[] postorder) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {number[]} inorder\n * @param {number[]} postorder\n * @return {TreeNode}\n */\nvar buildTree = function(inorder, postorder) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def buildTree(self, inorder, postorder):\n        \"\"\"\n        :type inorder: List[int]\n        :type postorder: List[int]\n        :rtype: Optional[TreeNode]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Pre-process inorder array to create a map for efficient lookup of element indices.",
+      "structures": [
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "hashing",
+        "enumeration"
+      ],
+      "cues": [
+        "inorder-traversal",
+        "unique-values"
+      ],
+      "constraints": [
+        "inorder-length-3000"
+      ]
+    },
+    {
+      "intent": "Recursively construct the binary tree using postorder to identify roots and inorder to partition subtrees.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "recursion",
+        "dfs"
+      ],
+      "cues": [
+        "construct-and-return-the-binary-tree",
+        "inorder",
+        "postorder"
+      ],
+      "constraints": [
+        "postorder-length-inorder-length",
+        "unique-values"
+      ]
+    }
+  ]
+}

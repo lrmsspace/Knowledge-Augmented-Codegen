@@ -1,0 +1,38 @@
+{
+  "slug": "build-array-from-permutation",
+  "link": "https://leetcode.com/problems/build-array-from-permutation/",
+  "difficulty": "Easy",
+  "index": "412",
+  "description_full": "Given a zero-based permutation nums (0-indexed), build an array ans of the same length where ans[i] = nums[nums[i]] for each 0 <= i < nums.length and return it.\n\nA zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 (inclusive).\n\n \nExample 1:\n\n\nInput: nums = [0,2,1,5,3,4]\nOutput: [0,1,2,4,5,3]\nExplanation: The array ans is built as follows: \nans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]], nums[nums[5]]]\n    = [nums[0], nums[2], nums[1], nums[5], nums[3], nums[4]]\n    = [0,1,2,4,5,3]\n\nExample 2:\n\n\nInput: nums = [5,0,1,2,3,4]\nOutput: [4,5,0,1,2,3]\nExplanation: The array ans is built as follows:\nans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]], nums[nums[5]]]\n    = [nums[5], nums[0], nums[1], nums[2], nums[3], nums[4]]\n    = [4,5,0,1,2,3]\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] < nums.length\n\tThe elements in nums are distinct.\n\n\n \nFollow-up: Can you solve it without using an extra space (i.e., O(1) memory)?\n",
+  "description": "Given a zero-based permutation nums (0-indexed), build an array ans of the same length where ans[i] = nums[nums[i]] for each 0 <= i < nums.length and return it.\n\nA zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 (inclusive).",
+  "example": "Input: nums = [0,2,1,5,3,4]\nOutput: [0,1,2,4,5,3]\nExplanation: The array ans is built as follows: \nans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]], nums[nums[5]]]\n    = [nums[0], nums[2], nums[1], nums[5], nums[3], nums[4]]\n    = [0,1,2,4,5,3]",
+  "constraints_text": "1 <= nums.length <= 1000\n\t0 <= nums[i] < nums.length\n\tThe elements in nums are distinct.\n\n\n \nFollow-up: Can you solve it without using an extra space (i.e., O(1) memory)?",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* buildArray(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> buildArray(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] buildArray(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar buildArray = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def buildArray(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the input array `nums` to compute `nums[nums[i]]` for each index `i` and store it in a new result array `ans`.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "build-an-array-ans",
+        "ans-i-nums-nums-i",
+        "return-it"
+      ],
+      "constraints": [
+        "0-i-nums-length",
+        "nums-length-1000"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "single-element-in-a-sorted-array",
+  "link": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+  "difficulty": "Medium",
+  "index": "861",
+  "description_full": "You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.\n\nReturn the single element that appears only once.\n\nYour solution must run in O(log n) time and O(1) space.\n\n \nExample 1:\nInput: nums = [1,1,2,3,3,4,4,8,8]\nOutput: 2\nExample 2:\nInput: nums = [3,3,7,7,10,11,11]\nOutput: 10\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= nums[i] <= 105\n\n",
+  "description": "You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.\n\nReturn the single element that appears only once.\n\nYour solution must run in O(log n) time and O(1) space.",
+  "example": "Input: nums = [1,1,2,3,3,4,4,8,8]\nOutput: 2",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= nums[i] <= 105",
+  "templates": {
+    "c": "int singleNonDuplicate(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int singleNonDuplicate(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int singleNonDuplicate(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar singleNonDuplicate = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def singleNonDuplicate(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a binary search to find the unique element in the sorted array where all other elements appear twice.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "binary-search"
+      ],
+      "cues": [
+        "sorted-array",
+        "single-element",
+        "o-log-n"
+      ],
+      "constraints": [
+        "o-1-space"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "calculate-money-in-leetcode-bank",
+  "link": "https://leetcode.com/problems/calculate-money-in-leetcode-bank/",
+  "difficulty": "Easy",
+  "index": "365",
+  "description_full": "Hercy wants to save money for his first car. He puts money in the Leetcode bank every day.\n\nHe starts by putting in $1 on Monday, the first day. Every day from Tuesday to Sunday, he will put in $1 more than the day before. On every subsequent Monday, he will put in $1 more than the previous Monday. \n\nGiven n, return the total amount of money he will have in the Leetcode bank at the end of the nth day.\n\n \nExample 1:\n\n\nInput: n = 4\nOutput: 10\nExplanation: After the 4th day, the total is 1 + 2 + 3 + 4 = 10.\n\n\nExample 2:\n\n\nInput: n = 10\nOutput: 37\nExplanation: After the 10th day, the total is (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4) = 37. Notice that on the 2nd Monday, Hercy only puts in $2.\n\n\nExample 3:\n\n\nInput: n = 20\nOutput: 96\nExplanation: After the 20th day, the total is (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4 + 5 + 6 + 7 + 8) + (3 + 4 + 5 + 6 + 7 + 8) = 96.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 1000\n\n",
+  "description": "Hercy wants to save money for his first car. He puts money in the Leetcode bank every day.\n\nHe starts by putting in $1 on Monday, the first day. Every day from Tuesday to Sunday, he will put in $1 more than the day before. On every subsequent Monday, he will put in $1 more than the previous Monday. \n\nGiven n, return the total amount of money he will have in the Leetcode bank at the end of the nth day.",
+  "example": "Input: n = 4\nOutput: 10\nExplanation: After the 4th day, the total is 1 + 2 + 3 + 4 = 10.",
+  "constraints_text": "1 <= n <= 1000",
+  "templates": {
+    "c": "int totalMoney(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int totalMoney(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int totalMoney(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar totalMoney = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def totalMoney(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total money deposited by simulating daily increments based on the given rules.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "puts-money-in",
+        "every-day",
+        "nth-day",
+        "1-more-than-day-before",
+        "1-more-than-previous-monday"
+      ],
+      "constraints": [
+        "1-n-1000"
+      ]
+    }
+  ]
+}

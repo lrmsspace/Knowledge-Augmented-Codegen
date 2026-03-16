@@ -1,0 +1,63 @@
+{
+  "slug": "cat-and-mouse-ii",
+  "link": "https://leetcode.com/problems/cat-and-mouse-ii/",
+  "difficulty": "Hard",
+  "index": "2061",
+  "description_full": "A game is played by a cat and a mouse named Cat and Mouse.\n\nThe environment is represented by a grid of size rows x cols, where each element is a wall, floor, player (Cat, Mouse), or food.\n\n\n\tPlayers are represented by the characters 'C'(Cat),'M'(Mouse).\n\tFloors are represented by the character '.' and can be walked on.\n\tWalls are represented by the character '#' and cannot be walked on.\n\tFood is represented by the character 'F' and can be walked on.\n\tThere is only one of each character 'C', 'M', and 'F' in grid.\n\n\nMouse and Cat play according to the following rules:\n\n\n\tMouse moves first, then they take turns to move.\n\tDuring each turn, Cat and Mouse can jump in one of the four directions (left, right, up, down). They cannot jump over the wall nor outside of the grid.\n\tcatJump, mouseJump are the maximum lengths Cat and Mouse can jump at a time, respectively. Cat and Mouse can jump less than the maximum length.\n\tStaying in the same position is allowed.\n\tMouse can jump over Cat.\n\n\nThe game can end in 4 ways:\n\n\n\tIf Cat occupies the same position as Mouse, Cat wins.\n\tIf Cat reaches the food first, Cat wins.\n\tIf Mouse reaches the food first, Mouse wins.\n\tIf Mouse cannot get to the food within 1000 turns, Cat wins.\n\n\nGiven a rows x cols matrix grid and two integers catJump and mouseJump, return true if Mouse can win the game if both Cat and Mouse play optimally, otherwise return false.\n\n \nExample 1:\n\n\nInput: grid = [\"####F\",\"#C...\",\"M....\"], catJump = 1, mouseJump = 2\nOutput: true\nExplanation: Cat cannot catch Mouse on its turn nor can it get the food before Mouse.\n\n\nExample 2:\n\n\nInput: grid = [\"M.C...F\"], catJump = 1, mouseJump = 4\nOutput: true\n\n\nExample 3:\n\n\nInput: grid = [\"M.C...F\"], catJump = 1, mouseJump = 3\nOutput: false\n\n\n \nConstraints:\n\n\n\trows == grid.length\n\tcols = grid[i].length\n\t1 <= rows, cols <= 8\n\tgrid[i][j] consist only of characters 'C', 'M', 'F', '.', and '#'.\n\tThere is only one of each character 'C', 'M', and 'F' in grid.\n\t1 <= catJump, mouseJump <= 8\n\n",
+  "description": "A game is played by a cat and a mouse named Cat and Mouse.\n\nThe environment is represented by a grid of size rows x cols, where each element is a wall, floor, player (Cat, Mouse), or food.\n\n\n\tPlayers are represented by the characters 'C'(Cat),'M'(Mouse).\n\tFloors are represented by the character '.' and can be walked on.\n\tWalls are represented by the character '#' and cannot be walked on.\n\tFood is represented by the character 'F' and can be walked on.\n\tThere is only one of each character 'C', 'M', and 'F' in grid.\n\n\nMouse and Cat play according to the following rules:\n\n\n\tMouse moves first, then they take turns to move.\n\tDuring each turn, Cat and Mouse can jump in one of the four directions (left, right, up, down). They cannot jump over the wall nor outside of the grid.\n\tcatJump, mouseJump are the maximum lengths Cat and Mouse can jump at a time, respectively. Cat and Mouse can jump less than the maximum length.\n\tStaying in the same position is allowed.\n\tMouse can jump over Cat.\n\n\nThe game can end in 4 ways:\n\n\n\tIf Cat occupies the same position as Mouse, Cat wins.\n\tIf Cat reaches the food first, Cat wins.\n\tIf Mouse reaches the food first, Mouse wins.\n\tIf Mouse cannot get to the food within 1000 turns, Cat wins.\n\n\nGiven a rows x cols matrix grid and two integers catJump and mouseJump, return true if Mouse can win the game if both Cat and Mouse play optimally, otherwise return false.",
+  "example": "Input: grid = [\"####F\",\"#C...\",\"M....\"], catJump = 1, mouseJump = 2\nOutput: true\nExplanation: Cat cannot catch Mouse on its turn nor can it get the food before Mouse.",
+  "constraints_text": "rows == grid.length\n\tcols = grid[i].length\n\t1 <= rows, cols <= 8\n\tgrid[i][j] consist only of characters 'C', 'M', 'F', '.', and '#'.\n\tThere is only one of each character 'C', 'M', and 'F' in grid.\n\t1 <= catJump, mouseJump <= 8",
+  "templates": {
+    "c": "bool canMouseWin(char** grid, int gridSize, int catJump, int mouseJump) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canMouseWin(vector<string>& grid, int catJump, int mouseJump) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canMouseWin(String[] grid, int catJump, int mouseJump) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} grid\n * @param {number} catJump\n * @param {number} mouseJump\n * @return {boolean}\n */\nvar canMouseWin = function(grid, catJump, mouseJump) {\n    \n};",
+    "python": "class Solution(object):\n    def canMouseWin(self, grid, catJump, mouseJump):\n        \"\"\"\n        :type grid: List[str]\n        :type catJump: int\n        :type mouseJump: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse the grid, find initial positions of players and food, and precompute all valid moves for Cat and Mouse.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "grid",
+        "catjump",
+        "mousejump"
+      ],
+      "constraints": [
+        "rows-x-cols",
+        "walls",
+        "jump-lengths"
+      ]
+    },
+    {
+      "intent": "Implement a minimax dynamic programming solution to determine if Mouse can win, considering optimal play and turn limits.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "game-theory",
+        "dp-2d",
+        "recursion"
+      ],
+      "cues": [
+        "optimal-play",
+        "mouse-wins",
+        "cat-wins",
+        "1000-turns"
+      ],
+      "constraints": [
+        "4-ways-to-end",
+        "mouse-moves-first",
+        "turns"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "minimum-one-bit-operations-to-make-integers-zero",
+  "link": "https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/",
+  "difficulty": "Hard",
+  "index": "2039",
+  "description_full": "Given an integer n, you must transform it into 0 using the following operations any number of times:\n\n\n\tChange the rightmost (0th) bit in the binary representation of n.\n\tChange the ith bit in the binary representation of n if the (i-1)th bit is set to 1 and the (i-2)th through 0th bits are set to 0.\n\n\nReturn the minimum number of operations to transform n into 0.\n\n \nExample 1:\n\n\nInput: n = 3\nOutput: 2\nExplanation: The binary representation of 3 is \"11\".\n\"11\" -> \"01\" with the 2nd operation since the 0th bit is 1.\n\"01\" -> \"00\" with the 1st operation.\n\n\nExample 2:\n\n\nInput: n = 6\nOutput: 4\nExplanation: The binary representation of 6 is \"110\".\n\"110\" -> \"010\" with the 2nd operation since the 1st bit is 1 and 0th through 0th bits are 0.\n\"010\" -> \"011\" with the 1st operation.\n\"011\" -> \"001\" with the 2nd operation since the 0th bit is 1.\n\"001\" -> \"000\" with the 1st operation.\n\n\n \nConstraints:\n\n\n\t0 <= n <= 109\n\n",
+  "description": "Given an integer n, you must transform it into 0 using the following operations any number of times:\n\n\n\tChange the rightmost (0th) bit in the binary representation of n.\n\tChange the ith bit in the binary representation of n if the (i-1)th bit is set to 1 and the (i-2)th through 0th bits are set to 0.\n\n\nReturn the minimum number of operations to transform n into 0.",
+  "example": "Input: n = 3\nOutput: 2\nExplanation: The binary representation of 3 is \"11\".\n\"11\" -> \"01\" with the 2nd operation since the 0th bit is 1.\n\"01\" -> \"00\" with the 1st operation.",
+  "constraints_text": "0 <= n <= 109",
+  "templates": {
+    "c": "int minimumOneBitOperations(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumOneBitOperations(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOneBitOperations(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar minimumOneBitOperations = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumOneBitOperations(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Convert the given Gray code integer 'n' to its corresponding binary integer, which represents the minimum operations.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "change-the-rightmost-bit",
+        "change-the-ith-bit-if-the-i-1-th-bit-is-set-to-1-and-the-i-2-th-through-0th-bits-are-set-to-0"
+      ],
+      "constraints": [
+        "0-n-10-9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "minimum-number-of-operations-to-make-word-k-periodic",
+  "link": "https://leetcode.com/problems/minimum-number-of-operations-to-make-word-k-periodic/",
+  "difficulty": "Medium",
+  "index": "2503",
+  "description_full": "You are given a string word of size n, and an integer k such that k divides n.\n\nIn one operation, you can pick any two indices i and j, that are divisible by k, then replace the substring of length k starting at i with the substring of length k starting at j. That is, replace the substring word[i..i + k - 1] with the substring word[j..j + k - 1].\n\nReturn the minimum number of operations required to make word k-periodic.\n\nWe say that word is k-periodic if there is some string s of length k such that word can be obtained by concatenating s an arbitrary number of times. For example, if word == “ababab”, then word is 2-periodic for s = \"ab\".\n\n \nExample 1:\n\n\nInput: word = \"leetcodeleet\", k = 4\n\nOutput: 1\n\nExplanation:\n\nWe can obtain a 4-periodic string by picking i = 4 and j = 0. After this operation, word becomes equal to \"leetleetleet\".\n\n\nExample 2:\n\n\nInput: word = \"leetcoleet\", k = 2\n\nOutput: 3\n\nExplanation:\n\nWe can obtain a 2-periodic string by applying the operations in the table below.\n\n\n\t\n\t\t\n\t\t\ti\n\t\t\tj\n\t\t\tword\n\t\t\n\t\t\n\t\t\t0\n\t\t\t2\n\t\t\tetetcoleet\n\t\t\n\t\t\n\t\t\t4\n\t\t\t0\n\t\t\tetetetleet\n\t\t\n\t\t\n\t\t\t6\n\t\t\t0\n\t\t\tetetetetet\n\t\t\n\t\n\n\n\n\n \n\n\n \nConstraints:\n\n\n\t1 <= n == word.length <= 105\n\t1 <= k <= word.length\n\tk divides word.length.\n\tword consists only of lowercase English letters.\n\n",
+  "description": "You are given a string word of size n, and an integer k such that k divides n.\n\nIn one operation, you can pick any two indices i and j, that are divisible by k, then replace the substring of length k starting at i with the substring of length k starting at j. That is, replace the substring word[i..i + k - 1] with the substring word[j..j + k - 1].\n\nReturn the minimum number of operations required to make word k-periodic.\n\nWe say that word is k-periodic if there is some string s of length k such that word can be obtained by concatenating s an arbitrary number of times. For example, if word == “ababab”, then word is 2-periodic for s = \"ab\".",
+  "example": "Input: word = \"leetcodeleet\", k = 4\n\nOutput: 1\n\nExplanation:\n\nWe can obtain a 4-periodic string by picking i = 4 and j = 0. After this operation, word becomes equal to \"leetleetleet\".",
+  "constraints_text": "1 <= n == word.length <= 105\n\t1 <= k <= word.length\n\tk divides word.length.\n\tword consists only of lowercase English letters.",
+  "templates": {
+    "c": "int minimumOperationsToMakeKPeriodic(char* word, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumOperationsToMakeKPeriodic(string word, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperationsToMakeKPeriodic(String word, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} k\n * @return {number}\n */\nvar minimumOperationsToMakeKPeriodic = function(word, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumOperationsToMakeKPeriodic(self, word, k):\n        \"\"\"\n        :type word: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Extract all k-length substrings (blocks) from the word.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "substring-of-length-k",
+        "indices-i-and-j-that-are-divisible-by-k"
+      ],
+      "constraints": [
+        "k-divides-n"
+      ]
+    },
+    {
+      "intent": "Count the occurrences of each unique k-length block.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "hashing",
+        "counting"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "k-periodic"
+      ],
+      "constraints": [
+        "word-consists-only-of-lowercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum operations required to make the word k-periodic.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "k-periodic"
+      ],
+      "constraints": [
+        "k-divides-n"
+      ]
+    }
+  ]
+}

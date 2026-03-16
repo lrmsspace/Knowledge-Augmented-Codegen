@@ -1,0 +1,73 @@
+{
+  "slug": "count-artifacts-that-can-be-extracted",
+  "link": "https://leetcode.com/problems/count-artifacts-that-can-be-extracted/",
+  "difficulty": "Medium",
+  "index": "1530",
+  "description_full": "There is an n x n 0-indexed grid with some artifacts buried in it. You are given the integer n and a 0-indexed 2D integer array artifacts describing the positions of the rectangular artifacts where artifacts[i] = [r1i, c1i, r2i, c2i] denotes that the ith artifact is buried in the subgrid where:\n\n\n\t(r1i, c1i) is the coordinate of the top-left cell of the ith artifact and\n\t(r2i, c2i) is the coordinate of the bottom-right cell of the ith artifact.\n\n\nYou will excavate some cells of the grid and remove all the mud from them. If the cell has a part of an artifact buried underneath, it will be uncovered. If all the parts of an artifact are uncovered, you can extract it.\n\nGiven a 0-indexed 2D integer array dig where dig[i] = [ri, ci] indicates that you will excavate the cell (ri, ci), return the number of artifacts that you can extract.\n\nThe test cases are generated such that:\n\n\n\tNo two artifacts overlap.\n\tEach artifact only covers at most 4 cells.\n\tThe entries of dig are unique.\n\n\n \nExample 1:\n\n\nInput: n = 2, artifacts = [[0,0,0,0],[0,1,1,1]], dig = [[0,0],[0,1]]\nOutput: 1\nExplanation: \nThe different colors represent different artifacts. Excavated cells are labeled with a 'D' in the grid.\nThere is 1 artifact that can be extracted, namely the red artifact.\nThe blue artifact has one part in cell (1,1) which remains uncovered, so we cannot extract it.\nThus, we return 1.\n\n\nExample 2:\n\n\nInput: n = 2, artifacts = [[0,0,0,0],[0,1,1,1]], dig = [[0,0],[0,1],[1,1]]\nOutput: 2\nExplanation: Both the red and blue artifacts have all parts uncovered (labeled with a 'D') and can be extracted, so we return 2. \n\n\n \nConstraints:\n\n\n\t1 <= n <= 1000\n\t1 <= artifacts.length, dig.length <= min(n2, 105)\n\tartifacts[i].length == 4\n\tdig[i].length == 2\n\t0 <= r1i, c1i, r2i, c2i, ri, ci <= n - 1\n\tr1i <= r2i\n\tc1i <= c2i\n\tNo two artifacts will overlap.\n\tThe number of cells covered by an artifact is at most 4.\n\tThe entries of dig are unique.\n\n",
+  "description": "There is an n x n 0-indexed grid with some artifacts buried in it. You are given the integer n and a 0-indexed 2D integer array artifacts describing the positions of the rectangular artifacts where artifacts[i] = [r1i, c1i, r2i, c2i] denotes that the ith artifact is buried in the subgrid where:\n\n\n\t(r1i, c1i) is the coordinate of the top-left cell of the ith artifact and\n\t(r2i, c2i) is the coordinate of the bottom-right cell of the ith artifact.\n\n\nYou will excavate some cells of the grid and remove all the mud from them. If the cell has a part of an artifact buried underneath, it will be uncovered. If all the parts of an artifact are uncovered, you can extract it.\n\nGiven a 0-indexed 2D integer array dig where dig[i] = [ri, ci] indicates that you will excavate the cell (ri, ci), return the number of artifacts that you can extract.\n\nThe test cases are generated such that:\n\n\n\tNo two artifacts overlap.\n\tEach artifact only covers at most 4 cells.\n\tThe entries of dig are unique.",
+  "example": "Input: n = 2, artifacts = [[0,0,0,0],[0,1,1,1]], dig = [[0,0],[0,1]]\nOutput: 1\nExplanation: \nThe different colors represent different artifacts. Excavated cells are labeled with a 'D' in the grid.\nThere is 1 artifact that can be extracted, namely the red artifact.\nThe blue artifact has one part in cell (1,1) which remains uncovered, so we cannot extract it.\nThus, we return 1.",
+  "constraints_text": "1 <= n <= 1000\n\t1 <= artifacts.length, dig.length <= min(n2, 105)\n\tartifacts[i].length == 4\n\tdig[i].length == 2\n\t0 <= r1i, c1i, r2i, c2i, ri, ci <= n - 1\n\tr1i <= r2i\n\tc1i <= c2i\n\tNo two artifacts will overlap.\n\tThe number of cells covered by an artifact is at most 4.\n\tThe entries of dig are unique.",
+  "templates": {
+    "c": "int digArtifacts(int n, int** artifacts, int artifactsSize, int* artifactsColSize, int** dig, int digSize, int* digColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int digArtifacts(int n, vector<vector<int>>& artifacts, vector<vector<int>>& dig) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int digArtifacts(int n, int[][] artifacts, int[][] dig) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @param {number[][]} artifacts\n * @param {number[][]} dig\n * @return {number}\n */\nvar digArtifacts = function(n, artifacts, dig) {\n    \n};",
+    "python": "class Solution(object):\n    def digArtifacts(self, n, artifacts, dig):\n        \"\"\"\n        :type n: int\n        :type artifacts: List[List[int]]\n        :type dig: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess artifacts to map grid cells to artifact IDs and record each artifact's total cell count.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "artifacts-i-r1i-c1i-r2i-c2i",
+        "no-two-artifacts-overlap",
+        "each-artifact-only-covers-at-most-4-cells"
+      ],
+      "constraints": [
+        "1-n-1000",
+        "1-artifacts-length-min-n-2-10-5"
+      ]
+    },
+    {
+      "intent": "Initialize counters to track the number of excavated cells for each artifact.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "if-all-the-parts-of-an-artifact-are-uncovered-you-can-extract-it"
+      ],
+      "constraints": [
+        "artifacts-length-determines-array-size"
+      ]
+    },
+    {
+      "intent": "Process excavated cells, update artifact progress, and count fully extracted artifacts.",
+      "structures": [
+        "matrix",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "dig-i-ri-ci-indicates-that-you-will-excavate-the-cell",
+        "return-the-number-of-artifacts-that-you-can-extract"
+      ],
+      "constraints": [
+        "dig-length-10-5"
+      ]
+    }
+  ]
+}

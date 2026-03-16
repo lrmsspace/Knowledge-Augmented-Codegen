@@ -1,0 +1,56 @@
+{
+  "slug": "minimum-cost-to-equalize-array",
+  "link": "https://leetcode.com/problems/minimum-cost-to-equalize-array/",
+  "difficulty": "Hard",
+  "index": "2723",
+  "description_full": "You are given an integer array nums and two integers cost1 and cost2. You are allowed to perform either of the following operations any number of times:\n\n\n\tChoose an index i from nums and increase nums[i] by 1 for a cost of cost1.\n\tChoose two different indices i, j, from nums and increase nums[i] and nums[j] by 1 for a cost of cost2.\n\n\nReturn the minimum cost required to make all elements in the array equal. \n\nSince the answer may be very large, return it modulo 109 + 7.\n\n \nExample 1:\n\n\nInput: nums = [4,1], cost1 = 5, cost2 = 2\n\nOutput: 15\n\nExplanation: \n\nThe following operations can be performed to make the values equal:\n\n\n\tIncrease nums[1] by 1 for a cost of 5. nums becomes [4,2].\n\tIncrease nums[1] by 1 for a cost of 5. nums becomes [4,3].\n\tIncrease nums[1] by 1 for a cost of 5. nums becomes [4,4].\n\n\nThe total cost is 15.\n\n\nExample 2:\n\n\nInput: nums = [2,3,3,3,5], cost1 = 2, cost2 = 1\n\nOutput: 6\n\nExplanation: \n\nThe following operations can be performed to make the values equal:\n\n\n\tIncrease nums[0] and nums[1] by 1 for a cost of 1. nums becomes [3,4,3,3,5].\n\tIncrease nums[0] and nums[2] by 1 for a cost of 1. nums becomes [4,4,4,3,5].\n\tIncrease nums[0] and nums[3] by 1 for a cost of 1. nums becomes [5,4,4,4,5].\n\tIncrease nums[1] and nums[2] by 1 for a cost of 1. nums becomes [5,5,5,4,5].\n\tIncrease nums[3] by 1 for a cost of 2. nums becomes [5,5,5,5,5].\n\n\nThe total cost is 6.\n\n\nExample 3:\n\n\nInput: nums = [3,5,3], cost1 = 1, cost2 = 3\n\nOutput: 4\n\nExplanation:\n\nThe following operations can be performed to make the values equal:\n\n\n\tIncrease nums[0] by 1 for a cost of 1. nums becomes [4,5,3].\n\tIncrease nums[0] by 1 for a cost of 1. nums becomes [5,5,3].\n\tIncrease nums[2] by 1 for a cost of 1. nums becomes [5,5,4].\n\tIncrease nums[2] by 1 for a cost of 1. nums becomes [5,5,5].\n\n\nThe total cost is 4.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 106\n\t1 <= cost1 <= 106\n\t1 <= cost2 <= 106\n\n",
+  "description": "You are given an integer array nums and two integers cost1 and cost2. You are allowed to perform either of the following operations any number of times:\n\n\n\tChoose an index i from nums and increase nums[i] by 1 for a cost of cost1.\n\tChoose two different indices i, j, from nums and increase nums[i] and nums[j] by 1 for a cost of cost2.\n\n\nReturn the minimum cost required to make all elements in the array equal. \n\nSince the answer may be very large, return it modulo 109 + 7.",
+  "example": "Input: nums = [4,1], cost1 = 5, cost2 = 2\n\nOutput: 15\n\nExplanation: \n\nThe following operations can be performed to make the values equal:\n\n\n\tIncrease nums[1] by 1 for a cost of 5. nums becomes [4,2].\n\tIncrease nums[1] by 1 for a cost of 5. nums becomes [4,3].\n\tIncrease nums[1] by 1 for a cost of 5. nums becomes [4,4].\n\n\nThe total cost is 15.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 106\n\t1 <= cost1 <= 106\n\t1 <= cost2 <= 106",
+  "templates": {
+    "c": "int minCostToEqualizeArray(int* nums, int numsSize, int cost1, int cost2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minCostToEqualizeArray(vector<int>& nums, int cost1, int cost2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minCostToEqualizeArray(int[] nums, int cost1, int cost2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} cost1\n * @param {number} cost2\n * @return {number}\n */\nvar minCostToEqualizeArray = function(nums, cost1, cost2) {\n    \n};",
+    "python": "class Solution(object):\n    def minCostToEqualizeArray(self, nums, cost1, cost2):\n        \"\"\"\n        :type nums: List[int]\n        :type cost1: int\n        :type cost2: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess array to find max and sum, then handle the simple case where single increments are always optimal.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "max-nums",
+        "sum-nums",
+        "cost2-2-cost1"
+      ],
+      "constraints": [
+        "modulo-10-9-7"
+      ]
+    },
+    {
+      "intent": "Find the optimal target value 'k' using ternary search when paired increments are more efficient.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation"
+      ],
+      "cues": [
+        "cost2-2-cost1",
+        "minimum-cost",
+        "all-elements-equal"
+      ],
+      "constraints": [
+        "modulo-10-9-7",
+        "large-k-range"
+      ]
+    }
+  ]
+}

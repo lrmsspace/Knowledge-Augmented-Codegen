@@ -1,0 +1,54 @@
+{
+  "slug": "prime-arrangements",
+  "link": "https://leetcode.com/problems/prime-arrangements/",
+  "difficulty": "Easy",
+  "index": "249",
+  "description_full": "Return the number of permutations of 1 to n so that prime numbers are at prime indices (1-indexed.)\n\n(Recall that an integer is prime if and only if it is greater than 1, and cannot be written as a product of two positive integers both smaller than it.)\n\nSince the answer may be large, return the answer modulo 10^9 + 7.\n\n \nExample 1:\n\n\nInput: n = 5\nOutput: 12\nExplanation: For example [1,2,5,4,3] is a valid permutation, but [5,2,3,4,1] is not because the prime number 5 is at index 1.\n\n\nExample 2:\n\n\nInput: n = 100\nOutput: 682289015\n\n\n \nConstraints:\n\n\n\t1 <= n <= 100\n\n",
+  "description": "Return the number of permutations of 1 to n so that prime numbers are at prime indices (1-indexed.)\n\n(Recall that an integer is prime if and only if it is greater than 1, and cannot be written as a product of two positive integers both smaller than it.)\n\nSince the answer may be large, return the answer modulo 10^9 + 7.",
+  "example": "Input: n = 5\nOutput: 12\nExplanation: For example [1,2,5,4,3] is a valid permutation, but [5,2,3,4,1] is not because the prime number 5 is at index 1.",
+  "constraints_text": "1 <= n <= 100",
+  "templates": {
+    "c": "int numPrimeArrangements(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numPrimeArrangements(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numPrimeArrangements(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar numPrimeArrangements = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def numPrimeArrangements(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify all prime numbers up to N and count how many there are.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sieve",
+        "counting"
+      ],
+      "cues": [
+        "prime-numbers",
+        "1-to-n"
+      ],
+      "constraints": [
+        "1-n-100"
+      ]
+    },
+    {
+      "intent": "Compute the product of factorials of prime and non-prime counts modulo 10^9 + 7.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "mod-exp"
+      ],
+      "cues": [
+        "number-of-permutations",
+        "modulo-10-9-7"
+      ],
+      "constraints": [
+        "answer-may-be-large"
+      ]
+    }
+  ]
+}

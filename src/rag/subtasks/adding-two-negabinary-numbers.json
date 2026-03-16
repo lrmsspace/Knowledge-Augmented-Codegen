@@ -1,0 +1,73 @@
+{
+  "slug": "adding-two-negabinary-numbers",
+  "link": "https://leetcode.com/problems/adding-two-negabinary-numbers/",
+  "difficulty": "Medium",
+  "index": "1104",
+  "description_full": "Given two numbers arr1 and arr2 in base -2, return the result of adding them together.\n\nEach number is given in array format:  as an array of 0s and 1s, from most significant bit to least significant bit.  For example, arr = [1,1,0,1] represents the number (-2)^3 + (-2)^2 + (-2)^0 = -3.  A number arr in array, format is also guaranteed to have no leading zeros: either arr == [0] or arr[0] == 1.\n\nReturn the result of adding arr1 and arr2 in the same format: as an array of 0s and 1s with no leading zeros.\n\n \nExample 1:\n\n\nInput: arr1 = [1,1,1,1,1], arr2 = [1,0,1]\nOutput: [1,0,0,0,0]\nExplanation: arr1 represents 11, arr2 represents 5, the output represents 16.\n\n\nExample 2:\n\n\nInput: arr1 = [0], arr2 = [0]\nOutput: [0]\n\n\nExample 3:\n\n\nInput: arr1 = [0], arr2 = [1]\nOutput: [1]\n\n\n \nConstraints:\n\n\n\t1 <= arr1.length, arr2.length <= 1000\n\tarr1[i] and arr2[i] are 0 or 1\n\tarr1 and arr2 have no leading zeros\n\n",
+  "description": "Given two numbers arr1 and arr2 in base -2, return the result of adding them together.\n\nEach number is given in array format:  as an array of 0s and 1s, from most significant bit to least significant bit.  For example, arr = [1,1,0,1] represents the number (-2)^3 + (-2)^2 + (-2)^0 = -3.  A number arr in array, format is also guaranteed to have no leading zeros: either arr == [0] or arr[0] == 1.\n\nReturn the result of adding arr1 and arr2 in the same format: as an array of 0s and 1s with no leading zeros.",
+  "example": "Input: arr1 = [1,1,1,1,1], arr2 = [1,0,1]\nOutput: [1,0,0,0,0]\nExplanation: arr1 represents 11, arr2 represents 5, the output represents 16.",
+  "constraints_text": "1 <= arr1.length, arr2.length <= 1000\n\tarr1[i] and arr2[i] are 0 or 1\n\tarr1 and arr2 have no leading zeros",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* addNegabinary(int* arr1, int arr1Size, int* arr2, int arr2Size, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> addNegabinary(vector<int>& arr1, vector<int>& arr2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] addNegabinary(int[] arr1, int[] arr2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr1\n * @param {number[]} arr2\n * @return {number[]}\n */\nvar addNegabinary = function(arr1, arr2) {\n    \n};",
+    "python": "class Solution(object):\n    def addNegabinary(self, arr1, arr2):\n        \"\"\"\n        :type arr1: List[int]\n        :type arr2: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Prepare input arrays for LSB-first processing by reversing them and initializing the result list and carry variable.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "array-format",
+        "most-significant-bit-to-least-significant-bit"
+      ],
+      "constraints": [
+        "1-arr1-length-arr2-length-1000"
+      ]
+    },
+    {
+      "intent": "Iteratively add digits from LSB to MSB, applying base -2 addition rules to calculate current digit and carry.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "add-them-together",
+        "base-2"
+      ],
+      "constraints": [
+        "arr1-i-and-arr2-i-are-0-or-1"
+      ]
+    },
+    {
+      "intent": "Format the LSB-first result by reversing it to MSB-first and removing any leading zeros, handling the [0] case.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "return-the-result-in-the-same-format",
+        "no-leading-zeros",
+        "arr-0-or-arr-0-1"
+      ],
+      "constraints": [
+        "no-leading-zeros"
+      ]
+    }
+  ]
+}

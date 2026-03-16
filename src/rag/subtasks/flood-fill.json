@@ -1,0 +1,41 @@
+{
+  "slug": "flood-fill",
+  "link": "https://leetcode.com/problems/flood-fill/",
+  "difficulty": "Easy",
+  "index": "165",
+  "description_full": "You are given an image represented by an m x n grid of integers image, where image[i][j] represents the pixel value of the image. You are also given three integers sr, sc, and color. Your task is to perform a flood fill on the image starting from the pixel image[sr][sc].\n\nTo perform a flood fill:\n\n\n\tBegin with the starting pixel and change its color to color.\n\tPerform the same process for each pixel that is directly adjacent (pixels that share a side with the original pixel, either horizontally or vertically) and shares the same color as the starting pixel.\n\tKeep repeating this process by checking neighboring pixels of the updated pixels and modifying their color if it matches the original color of the starting pixel.\n\tThe process stops when there are no more adjacent pixels of the original color to update.\n\n\nReturn the modified image after performing the flood fill.\n\n \nExample 1:\n\n\nInput: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2\n\nOutput: [[2,2,2],[2,2,0],[2,0,1]]\n\nExplanation:\n\n\n\nFrom the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.\n\nNote the bottom corner is not colored 2, because it is not horizontally or vertically connected to the starting pixel.\n\n\nExample 2:\n\n\nInput: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0\n\nOutput: [[0,0,0],[0,0,0]]\n\nExplanation:\n\nThe starting pixel is already colored with 0, which is the same as the target color. Therefore, no changes are made to the image.\n\n\n \nConstraints:\n\n\n\tm == image.length\n\tn == image[i].length\n\t1 <= m, n <= 50\n\t0 <= image[i][j], color < 216\n\t0 <= sr < m\n\t0 <= sc < n\n\n",
+  "description": "You are given an image represented by an m x n grid of integers image, where image[i][j] represents the pixel value of the image. You are also given three integers sr, sc, and color. Your task is to perform a flood fill on the image starting from the pixel image[sr][sc].\n\nTo perform a flood fill:\n\n\n\tBegin with the starting pixel and change its color to color.\n\tPerform the same process for each pixel that is directly adjacent (pixels that share a side with the original pixel, either horizontally or vertically) and shares the same color as the starting pixel.\n\tKeep repeating this process by checking neighboring pixels of the updated pixels and modifying their color if it matches the original color of the starting pixel.\n\tThe process stops when there are no more adjacent pixels of the original color to update.\n\n\nReturn the modified image after performing the flood fill.",
+  "example": "Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2\n\nOutput: [[2,2,2],[2,2,0],[2,0,1]]\n\nExplanation:\n\n\n\nFrom the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.\n\nNote the bottom corner is not colored 2, because it is not horizontally or vertically connected to the starting pixel.",
+  "constraints_text": "m == image.length\n\tn == image[i].length\n\t1 <= m, n <= 50\n\t0 <= image[i][j], color < 216\n\t0 <= sr < m\n\t0 <= sc < n",
+  "templates": {
+    "c": "/**\n * Return an array of arrays of size *returnSize.\n * The sizes of the arrays are returned as *returnColumnSizes array.\n * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().\n */\nint** floodFill(int** image, int imageSize, int* imageColSize, int sr, int sc, int color, int* returnSize, int** returnColumnSizes) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[][] floodFill(int[][] image, int sr, int sc, int color) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} image\n * @param {number} sr\n * @param {number} sc\n * @param {number} color\n * @return {number[][]}\n */\nvar floodFill = function(image, sr, sc, color) {\n    \n};",
+    "python": "class Solution(object):\n    def floodFill(self, image, sr, sc, color):\n        \"\"\"\n        :type image: List[List[int]]\n        :type sr: int\n        :type sc: int\n        :type color: int\n        :rtype: List[List[int]]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a flood fill traversal on the image grid, updating all connected pixels that share the original color with the new color.",
+      "structures": [
+        "matrix",
+        "queue"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "flood-fill",
+        "directly-adjacent",
+        "shares-the-same-color",
+        "change-its-color-to-color"
+      ],
+      "constraints": [
+        "m-x-n-grid",
+        "1-m-n-50",
+        "0-image-i-j-color-216"
+      ]
+    }
+  ]
+}

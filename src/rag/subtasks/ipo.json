@@ -1,0 +1,60 @@
+{
+  "slug": "ipo",
+  "link": "https://leetcode.com/problems/ipo/",
+  "difficulty": "Hard",
+  "index": "1845",
+  "description_full": "Suppose LeetCode will start its IPO soon. In order to sell a good price of its shares to Venture Capital, LeetCode would like to work on some projects to increase its capital before the IPO. Since it has limited resources, it can only finish at most k distinct projects before the IPO. Help LeetCode design the best way to maximize its total capital after finishing at most k distinct projects.\n\nYou are given n projects where the ith project has a pure profit profits[i] and a minimum capital of capital[i] is needed to start it.\n\nInitially, you have w capital. When you finish a project, you will obtain its pure profit and the profit will be added to your total capital.\n\nPick a list of at most k distinct projects from given projects to maximize your final capital, and return the final maximized capital.\n\nThe answer is guaranteed to fit in a 32-bit signed integer.\n\n \nExample 1:\n\n\nInput: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]\nOutput: 4\nExplanation: Since your initial capital is 0, you can only start the project indexed 0.\nAfter finishing it you will obtain profit 1 and your capital becomes 1.\nWith capital 1, you can either start the project indexed 1 or the project indexed 2.\nSince you can choose at most 2 projects, you need to finish the project indexed 2 to get the maximum capital.\nTherefore, output the final maximized capital, which is 0 + 1 + 3 = 4.\n\n\nExample 2:\n\n\nInput: k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]\nOutput: 6\n\n\n \nConstraints:\n\n\n\t1 <= k <= 105\n\t0 <= w <= 109\n\tn == profits.length\n\tn == capital.length\n\t1 <= n <= 105\n\t0 <= profits[i] <= 104\n\t0 <= capital[i] <= 109\n\n",
+  "description": "Suppose LeetCode will start its IPO soon. In order to sell a good price of its shares to Venture Capital, LeetCode would like to work on some projects to increase its capital before the IPO. Since it has limited resources, it can only finish at most k distinct projects before the IPO. Help LeetCode design the best way to maximize its total capital after finishing at most k distinct projects.\n\nYou are given n projects where the ith project has a pure profit profits[i] and a minimum capital of capital[i] is needed to start it.\n\nInitially, you have w capital. When you finish a project, you will obtain its pure profit and the profit will be added to your total capital.\n\nPick a list of at most k distinct projects from given projects to maximize your final capital, and return the final maximized capital.\n\nThe answer is guaranteed to fit in a 32-bit signed integer.",
+  "example": "Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]\nOutput: 4\nExplanation: Since your initial capital is 0, you can only start the project indexed 0.\nAfter finishing it you will obtain profit 1 and your capital becomes 1.\nWith capital 1, you can either start the project indexed 1 or the project indexed 2.\nSince you can choose at most 2 projects, you need to finish the project indexed 2 to get the maximum capital.\nTherefore, output the final maximized capital, which is 0 + 1 + 3 = 4.",
+  "constraints_text": "1 <= k <= 105\n\t0 <= w <= 109\n\tn == profits.length\n\tn == capital.length\n\t1 <= n <= 105\n\t0 <= profits[i] <= 104\n\t0 <= capital[i] <= 109",
+  "templates": {
+    "c": "int findMaximizedCapital(int k, int w, int* profits, int profitsSize, int* capital, int capitalSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findMaximizedCapital(int k, int w, vector<int>& profits, vector<int>& capital) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} k\n * @param {number} w\n * @param {number[]} profits\n * @param {number[]} capital\n * @return {number}\n */\nvar findMaximizedCapital = function(k, w, profits, capital) {\n    \n};",
+    "python": "class Solution(object):\n    def findMaximizedCapital(self, k, w, profits, capital):\n        \"\"\"\n        :type k: int\n        :type w: int\n        :type profits: List[int]\n        :type capital: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Combine project capital and profit into pairs, then sort them by capital requirement for efficient processing.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "merge-sort"
+      ],
+      "cues": [
+        "profits-i",
+        "capital-i",
+        "n-projects"
+      ],
+      "constraints": [
+        "1-n-105"
+      ]
+    },
+    {
+      "intent": "Greedily select up to k projects by maintaining affordable projects in a max-heap and picking the most profitable.",
+      "structures": [
+        "heap",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "heap-select",
+        "simulation"
+      ],
+      "cues": [
+        "at-most-k-distinct-projects",
+        "maximize-your-final-capital",
+        "initial-capital-w",
+        "profit-will-be-added-to-your-total-capital"
+      ],
+      "constraints": [
+        "1-k-105",
+        "0-w-109"
+      ]
+    }
+  ]
+}

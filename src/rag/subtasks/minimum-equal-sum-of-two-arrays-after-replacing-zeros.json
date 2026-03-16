@@ -1,0 +1,57 @@
+{
+  "slug": "minimum-equal-sum-of-two-arrays-after-replacing-zeros",
+  "link": "https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/",
+  "difficulty": "Medium",
+  "index": "2426",
+  "description_full": "You are given two arrays nums1 and nums2 consisting of positive integers.\n\nYou have to replace all the 0's in both arrays with strictly positive integers such that the sum of elements of both arrays becomes equal.\n\nReturn the minimum equal sum you can obtain, or -1 if it is impossible.\n\n \nExample 1:\n\n\nInput: nums1 = [3,2,0,1,0], nums2 = [6,5,0]\nOutput: 12\nExplanation: We can replace 0's in the following way:\n- Replace the two 0's in nums1 with the values 2 and 4. The resulting array is nums1 = [3,2,2,1,4].\n- Replace the 0 in nums2 with the value 1. The resulting array is nums2 = [6,5,1].\nBoth arrays have an equal sum of 12. It can be shown that it is the minimum sum we can obtain.\n\n\nExample 2:\n\n\nInput: nums1 = [2,0,2,0], nums2 = [1,4]\nOutput: -1\nExplanation: It is impossible to make the sum of both arrays equal.\n\n\n \nConstraints:\n\n\n\t1 <= nums1.length, nums2.length <= 105\n\t0 <= nums1[i], nums2[i] <= 106\n\n",
+  "description": "You are given two arrays nums1 and nums2 consisting of positive integers.\n\nYou have to replace all the 0's in both arrays with strictly positive integers such that the sum of elements of both arrays becomes equal.\n\nReturn the minimum equal sum you can obtain, or -1 if it is impossible.",
+  "example": "Input: nums1 = [3,2,0,1,0], nums2 = [6,5,0]\nOutput: 12\nExplanation: We can replace 0's in the following way:\n- Replace the two 0's in nums1 with the values 2 and 4. The resulting array is nums1 = [3,2,2,1,4].\n- Replace the 0 in nums2 with the value 1. The resulting array is nums2 = [6,5,1].\nBoth arrays have an equal sum of 12. It can be shown that it is the minimum sum we can obtain.",
+  "constraints_text": "1 <= nums1.length, nums2.length <= 105\n\t0 <= nums1[i], nums2[i] <= 106",
+  "templates": {
+    "c": "long long minSum(int* nums1, int nums1Size, int* nums2, int nums2Size) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minSum(vector<int>& nums1, vector<int>& nums2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minSum(int[] nums1, int[] nums2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums1\n * @param {number[]} nums2\n * @return {number}\n */\nvar minSum = function(nums1, nums2) {\n    \n};",
+    "python": "class Solution(object):\n    def minSum(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the sum of non-zero elements and the count of zeros for both input arrays.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "sum-of-elements",
+        "replace-all-0-s"
+      ],
+      "constraints": [
+        "positive-integers",
+        "0-nums-i-10-6",
+        "1-length-10-5"
+      ]
+    },
+    {
+      "intent": "Determine the minimum achievable equal sum or impossibility based on calculated sums and zero counts.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-equal-sum",
+        "impossible",
+        "strictly-positive-integers"
+      ],
+      "constraints": [
+        "strictly-positive-integers"
+      ]
+    }
+  ]
+}

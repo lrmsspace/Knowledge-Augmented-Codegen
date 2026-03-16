@@ -1,0 +1,37 @@
+{
+  "slug": "last-substring-in-lexicographical-order",
+  "link": "https://leetcode.com/problems/last-substring-in-lexicographical-order/",
+  "difficulty": "Hard",
+  "index": "1954",
+  "description_full": "Given a string s, return the last substring of s in lexicographical order.\n\n \nExample 1:\n\n\nInput: s = \"abab\"\nOutput: \"bab\"\nExplanation: The substrings are [\"a\", \"ab\", \"aba\", \"abab\", \"b\", \"ba\", \"bab\"]. The lexicographically maximum substring is \"bab\".\n\n\nExample 2:\n\n\nInput: s = \"leetcode\"\nOutput: \"tcode\"\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 4 * 105\n\ts contains only lowercase English letters.\n\n",
+  "description": "Given a string s, return the last substring of s in lexicographical order.",
+  "example": "Input: s = \"abab\"\nOutput: \"bab\"\nExplanation: The substrings are [\"a\", \"ab\", \"aba\", \"abab\", \"b\", \"ba\", \"bab\"]. The lexicographically maximum substring is \"bab\".",
+  "constraints_text": "1 <= s.length <= 4 * 105\n\ts contains only lowercase English letters.",
+  "templates": {
+    "c": "char* lastSubstring(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string lastSubstring(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String lastSubstring(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string}\n */\nvar lastSubstring = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def lastSubstring(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify the starting index of the lexicographically largest suffix of the input string using an optimized two-pointer comparison.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy"
+      ],
+      "cues": [
+        "last-substring",
+        "lexicographical-order"
+      ],
+      "constraints": [
+        "s-length-4-10-5",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "find-the-k-or-of-an-array",
+  "link": "https://leetcode.com/problems/find-the-k-or-of-an-array/",
+  "difficulty": "Easy",
+  "index": "2279",
+  "description_full": "You are given an integer array nums, and an integer k. Let's introduce K-or operation by extending the standard bitwise OR. In K-or, a bit position in the result is set to 1 if at least k numbers in nums have a 1 in that position.\n\nReturn the K-or of nums.\n\n \nExample 1: \n\n\nInput: nums = [7,12,9,8,9,15], k = 4 \n\nOutput: 9 \n\nExplanation: \n\nRepresent numbers in binary:\n\n\n\t\n\t\t\n\t\t\tNumber\n\t\t\tBit 3\n\t\t\tBit 2\n\t\t\tBit 1\n\t\t\tBit 0\n\t\t\n\t\t\n\t\t\t7\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t12\n\t\t\t1\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t9\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t8\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t9\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t15\n\t\t\t1\n\t\t\t1\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\tResult = 9\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t1\n\t\t\n\t\n\n\nBit 0 is set in 7, 9, 9, and 15. Bit 3 is set in 12, 9, 8, 9, and 15.\nOnly bits 0 and 3 qualify. The result is (1001)2 = 9.\n\n\nExample 2: \n\n\nInput: nums = [2,12,1,11,4,5], k = 6 \n\nOutput: 0 \n\nExplanation: No bit appears as 1 in all six array numbers, as required for K-or with k = 6. Thus, the result is 0.\n\n\nExample 3: \n\n\nInput: nums = [10,8,5,9,11,6,8], k = 1 \n\nOutput: 15 \n\nExplanation:  Since k == 1, the 1-or of the array is equal to the bitwise OR of all its elements. Hence, the answer is 10 OR 8 OR 5 OR 9 OR 11 OR 6 OR 8 = 15.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 50\n\t0 <= nums[i] < 231\n\t1 <= k <= nums.length\n\n",
+  "description": "You are given an integer array nums, and an integer k. Let's introduce K-or operation by extending the standard bitwise OR. In K-or, a bit position in the result is set to 1 if at least k numbers in nums have a 1 in that position.\n\nReturn the K-or of nums.",
+  "example": "Input: nums = [7,12,9,8,9,15], k = 4 \n\nOutput: 9 \n\nExplanation: \n\nRepresent numbers in binary:\n\n\n\t\n\t\t\n\t\t\tNumber\n\t\t\tBit 3\n\t\t\tBit 2\n\t\t\tBit 1\n\t\t\tBit 0\n\t\t\n\t\t\n\t\t\t7\n\t\t\t0\n\t\t\t1\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\t12\n\t\t\t1\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t9\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t8\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t0\n\t\t\n\t\t\n\t\t\t9\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t1\n\t\t\n\t\t\n\t\t\t15\n\t\t\t1\n\t\t\t1\n\t\t\t1\n\t\t\t1\n\t\t\n\t\t\n\t\t\tResult = 9\n\t\t\t1\n\t\t\t0\n\t\t\t0\n\t\t\t1\n\t\t\n\t\n\n\nBit 0 is set in 7, 9, 9, and 15. Bit 3 is set in 12, 9, 8, 9, and 15.\nOnly bits 0 and 3 qualify. The result is (1001)2 = 9.",
+  "constraints_text": "1 <= nums.length <= 50\n\t0 <= nums[i] < 231\n\t1 <= k <= nums.length",
+  "templates": {
+    "c": "int findKOr(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findKOr(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findKOr(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar findKOr = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def findKOr(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the K-or of the given array by iterating through bit positions and counting occurrences.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting",
+        "simulation"
+      ],
+      "cues": [
+        "k-or-operation",
+        "bit-position-in-the-result-is-set-to-1-if-at-least-k-numbers-have-a-1"
+      ],
+      "constraints": [
+        "0-nums-i-2-31",
+        "1-k-nums-length"
+      ]
+    }
+  ]
+}

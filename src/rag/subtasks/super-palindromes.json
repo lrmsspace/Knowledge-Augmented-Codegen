@@ -1,0 +1,60 @@
+{
+  "slug": "super-palindromes",
+  "link": "https://leetcode.com/problems/super-palindromes/",
+  "difficulty": "Hard",
+  "index": "1917",
+  "description_full": "Let's say a positive integer is a super-palindrome if it is a palindrome, and it is also the square of a palindrome.\n\nGiven two positive integers left and right represented as strings, return the number of super-palindromes integers in the inclusive range [left, right].\n\n \nExample 1:\n\n\nInput: left = \"4\", right = \"1000\"\nOutput: 4\nExplanation: 4, 9, 121, and 484 are superpalindromes.\nNote that 676 is not a superpalindrome: 26 * 26 = 676, but 26 is not a palindrome.\n\n\nExample 2:\n\n\nInput: left = \"1\", right = \"2\"\nOutput: 1\n\n\n \nConstraints:\n\n\n\t1 <= left.length, right.length <= 18\n\tleft and right consist of only digits.\n\tleft and right cannot have leading zeros.\n\tleft and right represent integers in the range [1, 1018 - 1].\n\tleft is less than or equal to right.\n\n",
+  "description": "Let's say a positive integer is a super-palindrome if it is a palindrome, and it is also the square of a palindrome.\n\nGiven two positive integers left and right represented as strings, return the number of super-palindromes integers in the inclusive range [left, right].",
+  "example": "Input: left = \"4\", right = \"1000\"\nOutput: 4\nExplanation: 4, 9, 121, and 484 are superpalindromes.\nNote that 676 is not a superpalindrome: 26 * 26 = 676, but 26 is not a palindrome.",
+  "constraints_text": "1 <= left.length, right.length <= 18\n\tleft and right consist of only digits.\n\tleft and right cannot have leading zeros.\n\tleft and right represent integers in the range [1, 1018 - 1].\n\tleft is less than or equal to right.",
+  "templates": {
+    "c": "int superpalindromesInRange(char* left, char* right) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int superpalindromesInRange(string left, string right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int superpalindromesInRange(String left, String right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} left\n * @param {string} right\n * @return {number}\n */\nvar superpalindromesInRange = function(left, right) {\n    \n};",
+    "python": "class Solution(object):\n    def superpalindromesInRange(self, left, right):\n        \"\"\"\n        :type left: str\n        :type right: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Parse input range and initialize result counter.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "left",
+        "right",
+        "strings"
+      ],
+      "constraints": [
+        "1-left-length-right-length-18",
+        "left-and-right-represent-integers-in-the-range-1-10-18-1"
+      ]
+    },
+    {
+      "intent": "Generate palindromic roots, square them, and validate super-palindrome properties within the given range.",
+      "structures": [
+        "number",
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "super-palindrome",
+        "palindrome",
+        "square",
+        "inclusive-range"
+      ],
+      "constraints": [
+        "left-and-right-represent-integers-in-the-range-1-10-18-1",
+        "y-10-9"
+      ]
+    }
+  ]
+}

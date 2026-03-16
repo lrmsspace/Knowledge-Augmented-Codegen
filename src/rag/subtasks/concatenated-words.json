@@ -1,0 +1,56 @@
+{
+  "slug": "concatenated-words",
+  "link": "https://leetcode.com/problems/concatenated-words/",
+  "difficulty": "Hard",
+  "index": "1839",
+  "description_full": "Given an array of strings words (without duplicates), return all the concatenated words in the given list of words.\n\nA concatenated word is defined as a string that is comprised entirely of at least two shorter words (not necessarily distinct) in the given array.\n\n \nExample 1:\n\n\nInput: words = [\"cat\",\"cats\",\"catsdogcats\",\"dog\",\"dogcatsdog\",\"hippopotamuses\",\"rat\",\"ratcatdogcat\"]\nOutput: [\"catsdogcats\",\"dogcatsdog\",\"ratcatdogcat\"]\nExplanation: \"catsdogcats\" can be concatenated by \"cats\", \"dog\" and \"cats\"; \n\"dogcatsdog\" can be concatenated by \"dog\", \"cats\" and \"dog\"; \n\"ratcatdogcat\" can be concatenated by \"rat\", \"cat\", \"dog\" and \"cat\".\n\nExample 2:\n\n\nInput: words = [\"cat\",\"dog\",\"catdog\"]\nOutput: [\"catdog\"]\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 104\n\t1 <= words[i].length <= 30\n\twords[i] consists of only lowercase English letters.\n\tAll the strings of words are unique.\n\t1 <= sum(words[i].length) <= 105\n\n",
+  "description": "Given an array of strings words (without duplicates), return all the concatenated words in the given list of words.\n\nA concatenated word is defined as a string that is comprised entirely of at least two shorter words (not necessarily distinct) in the given array.",
+  "example": "Input: words = [\"cat\",\"cats\",\"catsdogcats\",\"dog\",\"dogcatsdog\",\"hippopotamuses\",\"rat\",\"ratcatdogcat\"]\nOutput: [\"catsdogcats\",\"dogcatsdog\",\"ratcatdogcat\"]\nExplanation: \"catsdogcats\" can be concatenated by \"cats\", \"dog\" and \"cats\"; \n\"dogcatsdog\" can be concatenated by \"dog\", \"cats\" and \"dog\"; \n\"ratcatdogcat\" can be concatenated by \"rat\", \"cat\", \"dog\" and \"cat\".",
+  "constraints_text": "1 <= words.length <= 104\n\t1 <= words[i].length <= 30\n\twords[i] consists of only lowercase English letters.\n\tAll the strings of words are unique.\n\t1 <= sum(words[i].length) <= 105",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findAllConcatenatedWordsInADict(char** words, int wordsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findAllConcatenatedWordsInADict(String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string[]}\n */\nvar findAllConcatenatedWordsInADict = function(words) {\n    \n};",
+    "python": "class Solution(object):\n    def findAllConcatenatedWordsInADict(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input words by length and populate a Trie data structure for efficient substring lookup.",
+      "structures": [
+        "array",
+        "trie"
+      ],
+      "actions": [
+        "enumeration",
+        "trie-match"
+      ],
+      "cues": [
+        "shorter-words",
+        "in-the-given-array"
+      ],
+      "constraints": [
+        "words-i-length-30",
+        "sum-words-i-length-105"
+      ]
+    },
+    {
+      "intent": "Iterate through the sorted words, using dynamic programming to determine if each word can be formed by concatenating at least two other words from the Trie.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "trie-match"
+      ],
+      "cues": [
+        "concatenated-word",
+        "at-least-two-shorter-words"
+      ],
+      "constraints": [
+        "words-i-length-30"
+      ]
+    }
+  ]
+}

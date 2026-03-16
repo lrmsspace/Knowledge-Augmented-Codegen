@@ -1,0 +1,55 @@
+{
+  "slug": "reconstruct-itinerary",
+  "link": "https://leetcode.com/problems/reconstruct-itinerary/",
+  "difficulty": "Hard",
+  "index": "1821",
+  "description_full": "You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.\n\nAll of the tickets belong to a man who departs from \"JFK\", thus, the itinerary must begin with \"JFK\". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.\n\n\n\tFor example, the itinerary [\"JFK\", \"LGA\"] has a smaller lexical order than [\"JFK\", \"LGB\"].\n\n\nYou may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.\n\n \nExample 1:\n\n\nInput: tickets = [[\"MUC\",\"LHR\"],[\"JFK\",\"MUC\"],[\"SFO\",\"SJC\"],[\"LHR\",\"SFO\"]]\nOutput: [\"JFK\",\"MUC\",\"LHR\",\"SFO\",\"SJC\"]\n\n\nExample 2:\n\n\nInput: tickets = [[\"JFK\",\"SFO\"],[\"JFK\",\"ATL\"],[\"SFO\",\"ATL\"],[\"ATL\",\"JFK\"],[\"ATL\",\"SFO\"]]\nOutput: [\"JFK\",\"ATL\",\"JFK\",\"SFO\",\"ATL\",\"SFO\"]\nExplanation: Another possible reconstruction is [\"JFK\",\"SFO\",\"ATL\",\"JFK\",\"ATL\",\"SFO\"] but it is larger in lexical order.\n\n\n \nConstraints:\n\n\n\t1 <= tickets.length <= 300\n\ttickets[i].length == 2\n\tfromi.length == 3\n\ttoi.length == 3\n\tfromi and toi consist of uppercase English letters.\n\tfromi != toi\n\n",
+  "description": "You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.\n\nAll of the tickets belong to a man who departs from \"JFK\", thus, the itinerary must begin with \"JFK\". If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.\n\n\n\tFor example, the itinerary [\"JFK\", \"LGA\"] has a smaller lexical order than [\"JFK\", \"LGB\"].\n\n\nYou may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.",
+  "example": "Input: tickets = [[\"MUC\",\"LHR\"],[\"JFK\",\"MUC\"],[\"SFO\",\"SJC\"],[\"LHR\",\"SFO\"]]\nOutput: [\"JFK\",\"MUC\",\"LHR\",\"SFO\",\"SJC\"]",
+  "constraints_text": "1 <= tickets.length <= 300\n\ttickets[i].length == 2\n\tfromi.length == 3\n\ttoi.length == 3\n\tfromi and toi consist of uppercase English letters.\n\tfromi != toi",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** findItinerary(char*** tickets, int ticketsSize, int* ticketsColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> findItinerary(vector<vector<string>>& tickets) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> findItinerary(List<List<String>> tickets) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} tickets\n * @return {string[]}\n */\nvar findItinerary = function(tickets) {\n    \n};",
+    "python": "class Solution(object):\n    def findItinerary(self, tickets):\n        \"\"\"\n        :type tickets: List[List[str]]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct a directed graph where airports are nodes and tickets are edges, storing destinations in lexicographical order.",
+      "structures": [
+        "graph"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "tickets-i-fromi-toi",
+        "smallest-lexical-order"
+      ],
+      "constraints": [
+        "1-tickets-length-300"
+      ]
+    },
+    {
+      "intent": "Perform a Depth-First Search (DFS) from 'JFK' to find the Eulerian path, collecting airports in reverse order to form the final itinerary.",
+      "structures": [
+        "graph"
+      ],
+      "actions": [
+        "dfs",
+        "recursion"
+      ],
+      "cues": [
+        "reconstruct-the-itinerary",
+        "begin-with-jfk",
+        "use-all-tickets-once"
+      ],
+      "constraints": [
+        "all-tickets-form-at-least-one-valid-itinerary",
+        "you-must-use-all-the-tickets-once-and-only-once"
+      ]
+    }
+  ]
+}

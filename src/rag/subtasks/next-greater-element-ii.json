@@ -1,0 +1,39 @@
+{
+  "slug": "next-greater-element-ii",
+  "link": "https://leetcode.com/problems/next-greater-element-ii/",
+  "difficulty": "Medium",
+  "index": "842",
+  "description_full": "Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.\n\n \nExample 1:\n\n\nInput: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3,4,3]\nOutput: [2,3,4,-1,4]\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109\n\n",
+  "description": "Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.\n\nThe next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.",
+  "example": "Input: nums = [1,2,1]\nOutput: [2,-1,2]\nExplanation: The first 1's next greater number is 2; \nThe number 2 can't find next greater number. \nThe second 1's next greater number needs to search circularly, which is also 2.",
+  "constraints_text": "1 <= nums.length <= 104\n\t-109 <= nums[i] <= 109",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* nextGreaterElements(int* nums, int numsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> nextGreaterElements(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] nextGreaterElements(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number[]}\n */\nvar nextGreaterElements = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def nextGreaterElements(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the next greater element for each number in a circular array by iterating twice and using a monotonic stack.",
+      "structures": [
+        "array",
+        "stack"
+      ],
+      "actions": [
+        "monotonic-stack",
+        "simulation"
+      ],
+      "cues": [
+        "next-greater-number",
+        "circular-integer-array",
+        "search-circularly"
+      ],
+      "constraints": [
+        "1-nums-length-104",
+        "109-nums-i-109"
+      ]
+    }
+  ]
+}

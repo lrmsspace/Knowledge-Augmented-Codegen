@@ -1,0 +1,71 @@
+{
+  "slug": "fair-candy-swap",
+  "link": "https://leetcode.com/problems/fair-candy-swap/",
+  "difficulty": "Easy",
+  "index": "193",
+  "description_full": "Alice and Bob have a different total number of candies. You are given two integer arrays aliceSizes and bobSizes where aliceSizes[i] is the number of candies of the ith box of candy that Alice has and bobSizes[j] is the number of candies of the jth box of candy that Bob has.\n\nSince they are friends, they would like to exchange one candy box each so that after the exchange, they both have the same total amount of candy. The total amount of candy a person has is the sum of the number of candies in each box they have.\n\nReturn an integer array answer where answer[0] is the number of candies in the box that Alice must exchange, and answer[1] is the number of candies in the box that Bob must exchange. If there are multiple answers, you may return any one of them. It is guaranteed that at least one answer exists.\n\n \nExample 1:\n\n\nInput: aliceSizes = [1,1], bobSizes = [2,2]\nOutput: [1,2]\n\n\nExample 2:\n\n\nInput: aliceSizes = [1,2], bobSizes = [2,3]\nOutput: [1,2]\n\n\nExample 3:\n\n\nInput: aliceSizes = [2], bobSizes = [1,3]\nOutput: [2,3]\n\n\n \nConstraints:\n\n\n\t1 <= aliceSizes.length, bobSizes.length <= 104\n\t1 <= aliceSizes[i], bobSizes[j] <= 105\n\tAlice and Bob have a different total number of candies.\n\tThere will be at least one valid answer for the given input.\n\n",
+  "description": "Alice and Bob have a different total number of candies. You are given two integer arrays aliceSizes and bobSizes where aliceSizes[i] is the number of candies of the ith box of candy that Alice has and bobSizes[j] is the number of candies of the jth box of candy that Bob has.\n\nSince they are friends, they would like to exchange one candy box each so that after the exchange, they both have the same total amount of candy. The total amount of candy a person has is the sum of the number of candies in each box they have.\n\nReturn an integer array answer where answer[0] is the number of candies in the box that Alice must exchange, and answer[1] is the number of candies in the box that Bob must exchange. If there are multiple answers, you may return any one of them. It is guaranteed that at least one answer exists.",
+  "example": "Input: aliceSizes = [1,1], bobSizes = [2,2]\nOutput: [1,2]",
+  "constraints_text": "1 <= aliceSizes.length, bobSizes.length <= 104\n\t1 <= aliceSizes[i], bobSizes[j] <= 105\n\tAlice and Bob have a different total number of candies.\n\tThere will be at least one valid answer for the given input.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* fairCandySwap(int* aliceSizes, int aliceSizesSize, int* bobSizes, int bobSizesSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> fairCandySwap(vector<int>& aliceSizes, vector<int>& bobSizes) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] fairCandySwap(int[] aliceSizes, int[] bobSizes) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} aliceSizes\n * @param {number[]} bobSizes\n * @return {number[]}\n */\nvar fairCandySwap = function(aliceSizes, bobSizes) {\n    \n};",
+    "python": "class Solution(object):\n    def fairCandySwap(self, aliceSizes, bobSizes):\n        \"\"\"\n        :type aliceSizes: List[int]\n        :type bobSizes: List[int]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate initial total candy sums for Alice and Bob, then determine the required difference between exchanged box sizes.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "total-number-of-candies",
+        "same-total-amount"
+      ],
+      "constraints": [
+        "alice-and-bob-have-a-different-total-number-of-candies"
+      ]
+    },
+    {
+      "intent": "Store Bob's candy box sizes in a hash set for efficient O(1) average-time lookup.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "hashing"
+      ],
+      "cues": [
+        "bobsizes",
+        "exchange-one-candy-box"
+      ],
+      "constraints": [
+        "bobsizes-length-104"
+      ]
+    },
+    {
+      "intent": "Iterate through Alice's candy boxes to find a box that, when exchanged with a specific box from Bob, balances their total candy amounts.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "alicesizes",
+        "bobsizes",
+        "return-an-integer-array-answer"
+      ],
+      "constraints": [
+        "at-least-one-valid-answer-exists"
+      ]
+    }
+  ]
+}

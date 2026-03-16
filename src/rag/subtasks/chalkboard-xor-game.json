@@ -1,0 +1,55 @@
+{
+  "slug": "chalkboard-xor-game",
+  "link": "https://leetcode.com/problems/chalkboard-xor-game/",
+  "difficulty": "Hard",
+  "index": "1892",
+  "description_full": "You are given an array of integers nums represents the numbers written on a chalkboard.\n\nAlice and Bob take turns erasing exactly one number from the chalkboard, with Alice starting first. If erasing a number causes the bitwise XOR of all the elements of the chalkboard to become 0, then that player loses. The bitwise XOR of one element is that element itself, and the bitwise XOR of no elements is 0.\n\nAlso, if any player starts their turn with the bitwise XOR of all the elements of the chalkboard equal to 0, then that player wins.\n\nReturn true if and only if Alice wins the game, assuming both players play optimally.\n\n \nExample 1:\n\n\nInput: nums = [1,1,2]\nOutput: false\nExplanation: \nAlice has two choices: erase 1 or erase 2. \nIf she erases 1, the nums array becomes [1, 2]. The bitwise XOR of all the elements of the chalkboard is 1 XOR 2 = 3. Now Bob can remove any element he wants, because Alice will be the one to erase the last element and she will lose. \nIf Alice erases 2 first, now nums become [1, 1]. The bitwise XOR of all the elements of the chalkboard is 1 XOR 1 = 0. Alice will lose.\n\n\nExample 2:\n\n\nInput: nums = [0,1]\nOutput: true\n\n\nExample 3:\n\n\nInput: nums = [1,2,3]\nOutput: true\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t0 <= nums[i] < 216\n\n",
+  "description": "You are given an array of integers nums represents the numbers written on a chalkboard.\n\nAlice and Bob take turns erasing exactly one number from the chalkboard, with Alice starting first. If erasing a number causes the bitwise XOR of all the elements of the chalkboard to become 0, then that player loses. The bitwise XOR of one element is that element itself, and the bitwise XOR of no elements is 0.\n\nAlso, if any player starts their turn with the bitwise XOR of all the elements of the chalkboard equal to 0, then that player wins.\n\nReturn true if and only if Alice wins the game, assuming both players play optimally.",
+  "example": "Input: nums = [1,1,2]\nOutput: false\nExplanation: \nAlice has two choices: erase 1 or erase 2. \nIf she erases 1, the nums array becomes [1, 2]. The bitwise XOR of all the elements of the chalkboard is 1 XOR 2 = 3. Now Bob can remove any element he wants, because Alice will be the one to erase the last element and she will lose. \nIf Alice erases 2 first, now nums become [1, 1]. The bitwise XOR of all the elements of the chalkboard is 1 XOR 1 = 0. Alice will lose.",
+  "constraints_text": "1 <= nums.length <= 1000\n\t0 <= nums[i] < 216",
+  "templates": {
+    "c": "bool xorGame(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool xorGame(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean xorGame(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar xorGame = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def xorGame(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the initial bitwise XOR sum of all numbers on the chalkboard.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-xor"
+      ],
+      "cues": [
+        "bitwise-xor-of-all-the-elements"
+      ],
+      "constraints": [
+        "nums-array"
+      ]
+    },
+    {
+      "intent": "Determine if Alice wins the game based on the initial XOR sum and the total number of elements.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "game-theory"
+      ],
+      "cues": [
+        "alice-wins",
+        "optimal-play",
+        "xor-of-all-elements-equal-to-0",
+        "erasing-exactly-one-number"
+      ],
+      "constraints": [
+        "initial-xor-sum",
+        "n-length-of-nums"
+      ]
+    }
+  ]
+}

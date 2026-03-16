@@ -1,0 +1,70 @@
+{
+  "slug": "find-the-maximum-length-of-valid-subsequence-i",
+  "link": "https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-i/",
+  "difficulty": "Medium",
+  "index": "2527",
+  "description_full": "You are given an integer array nums.\nA subsequence sub of nums with length x is called valid if it satisfies:\n\n\n\t(sub[0] + sub[1]) % 2 == (sub[1] + sub[2]) % 2 == ... == (sub[x - 2] + sub[x - 1]) % 2.\n\n\nReturn the length of the longest valid subsequence of nums.\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3,4]\n\nOutput: 4\n\nExplanation:\n\nThe longest valid subsequence is [1, 2, 3, 4].\n\n\nExample 2:\n\n\nInput: nums = [1,2,1,1,2,1,2]\n\nOutput: 6\n\nExplanation:\n\nThe longest valid subsequence is [1, 2, 1, 2, 1, 2].\n\n\nExample 3:\n\n\nInput: nums = [1,3]\n\nOutput: 2\n\nExplanation:\n\nThe longest valid subsequence is [1, 3].\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 2 * 105\n\t1 <= nums[i] <= 107\n\n",
+  "description": "You are given an integer array nums.\nA subsequence sub of nums with length x is called valid if it satisfies:\n\n\n\t(sub[0] + sub[1]) % 2 == (sub[1] + sub[2]) % 2 == ... == (sub[x - 2] + sub[x - 1]) % 2.\n\n\nReturn the length of the longest valid subsequence of nums.\n\nA subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.",
+  "example": "Input: nums = [1,2,3,4]\n\nOutput: 4\n\nExplanation:\n\nThe longest valid subsequence is [1, 2, 3, 4].",
+  "constraints_text": "2 <= nums.length <= 2 * 105\n\t1 <= nums[i] <= 107",
+  "templates": {
+    "c": "int maximumLength(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maximumLength(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maximumLength(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maximumLength = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumLength(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum length of a subsequence where all elements have the same parity.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "sub-i-2-sub-i-1-2",
+        "same-parity"
+      ],
+      "constraints": [
+        "nums-length-2-105"
+      ]
+    },
+    {
+      "intent": "Calculate the maximum length of a subsequence where adjacent elements strictly alternate in parity.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "sub-i-2-sub-i-1-2",
+        "alternating-parity"
+      ],
+      "constraints": [
+        "nums-length-2-105"
+      ]
+    },
+    {
+      "intent": "Determine the overall longest valid subsequence by comparing the lengths from the two parity cases.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "longest-valid-subsequence"
+      ],
+      "constraints": [
+        "2-nums-length"
+      ]
+    }
+  ]
+}

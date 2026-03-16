@@ -1,0 +1,53 @@
+{
+  "slug": "closest-divisors",
+  "link": "https://leetcode.com/problems/closest-divisors/",
+  "difficulty": "Medium",
+  "index": "1211",
+  "description_full": "Given an integer num, find the closest two integers in absolute difference whose product equals num + 1 or num + 2.\n\nReturn the two integers in any order.\n\n \nExample 1:\n\n\nInput: num = 8\nOutput: [3,3]\nExplanation: For num + 1 = 9, the closest divisors are 3 & 3, for num + 2 = 10, the closest divisors are 2 & 5, hence 3 & 3 is chosen.\n\n\nExample 2:\n\n\nInput: num = 123\nOutput: [5,25]\n\n\nExample 3:\n\n\nInput: num = 999\nOutput: [40,25]\n\n\n \nConstraints:\n\n\n\t1 <= num <= 10^9\n\n",
+  "description": "Given an integer num, find the closest two integers in absolute difference whose product equals num + 1 or num + 2.\n\nReturn the two integers in any order.",
+  "example": "Input: num = 8\nOutput: [3,3]\nExplanation: For num + 1 = 9, the closest divisors are 3 & 3, for num + 2 = 10, the closest divisors are 2 & 5, hence 3 & 3 is chosen.",
+  "constraints_text": "1 <= num <= 10^9",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* closestDivisors(int num, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> closestDivisors(int num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] closestDivisors(int num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @return {number[]}\n */\nvar closestDivisors = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def closestDivisors(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the pair of divisors with the minimum absolute difference for a given target product N.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "closest-two-integers",
+        "product-equals"
+      ],
+      "constraints": [
+        "target-product-10-9-2"
+      ]
+    },
+    {
+      "intent": "Apply the divisor finding logic to num + 1 and num + 2, then compare results to select the overall best pair.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "num-1-or-num-2",
+        "return-the-two-integers"
+      ],
+      "constraints": [
+        "1-num-10-9"
+      ]
+    }
+  ]
+}

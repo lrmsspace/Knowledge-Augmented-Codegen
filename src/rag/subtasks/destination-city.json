@@ -1,0 +1,40 @@
+{
+  "slug": "destination-city",
+  "link": "https://leetcode.com/problems/destination-city/",
+  "difficulty": "Easy",
+  "index": "302",
+  "description_full": "You are given the array paths, where paths[i] = [cityAi, cityBi] means there exists a direct path going from cityAi to cityBi. Return the destination city, that is, the city without any path outgoing to another city.\n\nIt is guaranteed that the graph of paths forms a line without any loop, therefore, there will be exactly one destination city.\n\n \nExample 1:\n\n\nInput: paths = [[\"London\",\"New York\"],[\"New York\",\"Lima\"],[\"Lima\",\"Sao Paulo\"]]\nOutput: \"Sao Paulo\" \nExplanation: Starting at \"London\" city you will reach \"Sao Paulo\" city which is the destination city. Your trip consist of: \"London\" -> \"New York\" -> \"Lima\" -> \"Sao Paulo\".\n\n\nExample 2:\n\n\nInput: paths = [[\"B\",\"C\"],[\"D\",\"B\"],[\"C\",\"A\"]]\nOutput: \"A\"\nExplanation: All possible trips are: \n\"D\" -> \"B\" -> \"C\" -> \"A\". \n\"B\" -> \"C\" -> \"A\". \n\"C\" -> \"A\". \n\"A\". \nClearly the destination city is \"A\".\n\n\nExample 3:\n\n\nInput: paths = [[\"A\",\"Z\"]]\nOutput: \"Z\"\n\n\n \nConstraints:\n\n\n\t1 <= paths.length <= 100\n\tpaths[i].length == 2\n\t1 <= cityAi.length, cityBi.length <= 10\n\tcityAi != cityBi\n\tAll strings consist of lowercase and uppercase English letters and the space character.\n\n",
+  "description": "You are given the array paths, where paths[i] = [cityAi, cityBi] means there exists a direct path going from cityAi to cityBi. Return the destination city, that is, the city without any path outgoing to another city.\n\nIt is guaranteed that the graph of paths forms a line without any loop, therefore, there will be exactly one destination city.",
+  "example": "Input: paths = [[\"London\",\"New York\"],[\"New York\",\"Lima\"],[\"Lima\",\"Sao Paulo\"]]\nOutput: \"Sao Paulo\" \nExplanation: Starting at \"London\" city you will reach \"Sao Paulo\" city which is the destination city. Your trip consist of: \"London\" -> \"New York\" -> \"Lima\" -> \"Sao Paulo\".",
+  "constraints_text": "1 <= paths.length <= 100\n\tpaths[i].length == 2\n\t1 <= cityAi.length, cityBi.length <= 10\n\tcityAi != cityBi\n\tAll strings consist of lowercase and uppercase English letters and the space character.",
+  "templates": {
+    "c": "char* destCity(char*** paths, int pathsSize, int* pathsColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string destCity(vector<vector<string>>& paths) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String destCity(List<List<String>> paths) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[][]} paths\n * @return {string}\n */\nvar destCity = function(paths) {\n    \n};",
+    "python": "class Solution(object):\n    def destCity(self, paths):\n        \"\"\"\n        :type paths: List[List[str]]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Identify all cities that are sources of paths and then find the unique city that is a destination but never a source.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "enumeration",
+        "hashing"
+      ],
+      "cues": [
+        "destination-city",
+        "no-path-outgoing",
+        "cityai",
+        "citybi"
+      ],
+      "constraints": [
+        "exactly-one-destination-city",
+        "paths-length-100"
+      ]
+    }
+  ]
+}

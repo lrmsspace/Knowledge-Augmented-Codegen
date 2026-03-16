@@ -1,0 +1,59 @@
+{
+  "slug": "maximum-xor-score-subarray-queries",
+  "link": "https://leetcode.com/problems/maximum-xor-score-subarray-queries/",
+  "difficulty": "Hard",
+  "index": "2756",
+  "description_full": "You are given an array nums of n integers, and a 2D integer array queries of size q, where queries[i] = [li, ri].\n\nFor each query, you must find the maximum XOR score of any subarray of nums[li..ri].\n\nThe XOR score of an array a is found by repeatedly applying the following operations on a so that only one element remains, that is the score:\n\n\n\tSimultaneously replace a[i] with a[i] XOR a[i + 1] for all indices i except the last one.\n\tRemove the last element of a.\n\n\nReturn an array answer of size q where answer[i] is the answer to query i.\n\n \nExample 1:\n\n\nInput: nums = [2,8,4,32,16,1], queries = [[0,2],[1,4],[0,5]]\n\nOutput: [12,60,60]\n\nExplanation:\n\nIn the first query, nums[0..2] has 6 subarrays [2], [8], [4], [2, 8], [8, 4], and [2, 8, 4] each with a respective XOR score of 2, 8, 4, 10, 12, and 6. The answer for the query is 12, the largest of all XOR scores.\n\nIn the second query, the subarray of nums[1..4] with the largest XOR score is nums[1..4] with a score of 60.\n\nIn the third query, the subarray of nums[0..5] with the largest XOR score is nums[1..4] with a score of 60.\n\n\nExample 2:\n\n\nInput: nums = [0,7,3,2,8,5,1], queries = [[0,3],[1,5],[2,4],[2,6],[5,6]]\n\nOutput: [7,14,11,14,5]\n\nExplanation:\n\n\n\t\n\t\t\n\t\t\tIndex\n\t\t\tnums[li..ri]\n\t\t\tMaximum XOR Score Subarray\n\t\t\tMaximum Subarray XOR Score\n\t\t\n\t\n\t\n\t\t\n\t\t\t0\n\t\t\t[0, 7, 3, 2]\n\t\t\t[7]\n\t\t\t7\n\t\t\n\t\t\n\t\t\t1\n\t\t\t[7, 3, 2, 8, 5]\n\t\t\t[7, 3, 2, 8]\n\t\t\t14\n\t\t\n\t\t\n\t\t\t2\n\t\t\t[3, 2, 8]\n\t\t\t[3, 2, 8]\n\t\t\t11\n\t\t\n\t\t\n\t\t\t3\n\t\t\t[3, 2, 8, 5, 1]\n\t\t\t[2, 8, 5, 1]\n\t\t\t14\n\t\t\n\t\t\n\t\t\t4\n\t\t\t[5, 1]\n\t\t\t[5]\n\t\t\t5\n\t\t\n\t\n\n\n\n \nConstraints:\n\n\n\t1 <= n == nums.length <= 2000\n\t0 <= nums[i] <= 231 - 1\n\t1 <= q == queries.length <= 105\n\tqueries[i].length == 2 \n\tqueries[i] = [li, ri]\n\t0 <= li <= ri <= n - 1\n\n",
+  "description": "You are given an array nums of n integers, and a 2D integer array queries of size q, where queries[i] = [li, ri].\n\nFor each query, you must find the maximum XOR score of any subarray of nums[li..ri].\n\nThe XOR score of an array a is found by repeatedly applying the following operations on a so that only one element remains, that is the score:\n\n\n\tSimultaneously replace a[i] with a[i] XOR a[i + 1] for all indices i except the last one.\n\tRemove the last element of a.\n\n\nReturn an array answer of size q where answer[i] is the answer to query i.",
+  "example": "Input: nums = [2,8,4,32,16,1], queries = [[0,2],[1,4],[0,5]]\n\nOutput: [12,60,60]\n\nExplanation:\n\nIn the first query, nums[0..2] has 6 subarrays [2], [8], [4], [2, 8], [8, 4], and [2, 8, 4] each with a respective XOR score of 2, 8, 4, 10, 12, and 6. The answer for the query is 12, the largest of all XOR scores.\n\nIn the second query, the subarray of nums[1..4] with the largest XOR score is nums[1..4] with a score of 60.\n\nIn the third query, the subarray of nums[0..5] with the largest XOR score is nums[1..4] with a score of 60.",
+  "constraints_text": "1 <= n == nums.length <= 2000\n\t0 <= nums[i] <= 231 - 1\n\t1 <= q == queries.length <= 105\n\tqueries[i].length == 2 \n\tqueries[i] = [li, ri]\n\t0 <= li <= ri <= n - 1",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* maximumSubarrayXor(int* nums, int numsSize, int** queries, int queriesSize, int* queriesColSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> maximumSubarrayXor(vector<int>& nums, vector<vector<int>>& queries) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] maximumSubarrayXor(int[] nums, int[][] queries) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number[][]} queries\n * @return {number[]}\n */\nvar maximumSubarrayXor = function(nums, queries) {\n    \n};",
+    "python": "class Solution(object):\n    def maximumSubarrayXor(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute all XOR scores S[x][k] for subarrays starting at x with length k+1 using Sum over Subsets DP.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "bitmask-dp",
+        "enumeration"
+      ],
+      "cues": [
+        "xor-score",
+        "repeatedly-applying-operations",
+        "any-subarray"
+      ],
+      "constraints": [
+        "n-2000",
+        "nums-i-2-30"
+      ]
+    },
+    {
+      "intent": "For each query [li, ri], find the maximum precomputed XOR score S[x][k] where li <= x <= y <= ri.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "for-each-query",
+        "maximum-xor-score",
+        "subarray-of-nums-li-ri"
+      ],
+      "constraints": [
+        "q-2000"
+      ]
+    }
+  ]
+}

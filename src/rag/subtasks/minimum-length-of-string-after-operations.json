@@ -1,0 +1,58 @@
+{
+  "slug": "minimum-length-of-string-after-operations",
+  "link": "https://leetcode.com/problems/minimum-length-of-string-after-operations/",
+  "difficulty": "Medium",
+  "index": "2535",
+  "description_full": "You are given a string s.\n\nYou can perform the following process on s any number of times:\n\n\n\tChoose an index i in the string such that there is at least one character to the left of index i that is equal to s[i], and at least one character to the right that is also equal to s[i].\n\tDelete the closest occurrence of s[i] located to the left of i.\n\tDelete the closest occurrence of s[i] located to the right of i.\n\n\nReturn the minimum length of the final string s that you can achieve.\n\n \nExample 1:\n\n\nInput: s = \"abaacbcbb\"\n\nOutput: 5\n\nExplanation:\nWe do the following operations:\n\n\n\tChoose index 2, then remove the characters at indices 0 and 3. The resulting string is s = \"bacbcbb\".\n\tChoose index 3, then remove the characters at indices 0 and 5. The resulting string is s = \"acbcb\".\n\n\n\nExample 2:\n\n\nInput: s = \"aa\"\n\nOutput: 2\n\nExplanation:\nWe cannot perform any operations, so we return the length of the original string.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 2 * 105\n\ts consists only of lowercase English letters.\n\n",
+  "description": "You are given a string s.\n\nYou can perform the following process on s any number of times:\n\n\n\tChoose an index i in the string such that there is at least one character to the left of index i that is equal to s[i], and at least one character to the right that is also equal to s[i].\n\tDelete the closest occurrence of s[i] located to the left of i.\n\tDelete the closest occurrence of s[i] located to the right of i.\n\n\nReturn the minimum length of the final string s that you can achieve.",
+  "example": "Input: s = \"abaacbcbb\"\n\nOutput: 5\n\nExplanation:\nWe do the following operations:\n\n\n\tChoose index 2, then remove the characters at indices 0 and 3. The resulting string is s = \"bacbcbb\".\n\tChoose index 3, then remove the characters at indices 0 and 5. The resulting string is s = \"acbcb\".",
+  "constraints_text": "1 <= s.length <= 2 * 105\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "int minimumLength(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumLength(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumLength(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minimumLength = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize the string as a doubly linked list and identify all initial indices that can trigger a deletion operation.",
+      "structures": [
+        "linked-list",
+        "array",
+        "queue"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "string-s",
+        "closest-occurrence",
+        "initial-operations"
+      ],
+      "constraints": [
+        "1-s-length-2-105"
+      ]
+    },
+    {
+      "intent": "Process deletion operations iteratively using a BFS-like approach, updating the linked list and adding new potential triggers to the queue.",
+      "structures": [
+        "linked-list",
+        "queue"
+      ],
+      "actions": [
+        "bfs",
+        "simulation"
+      ],
+      "cues": [
+        "any-number-of-times",
+        "minimum-length",
+        "delete-closest"
+      ],
+      "constraints": [
+        "s-length-2-105"
+      ]
+    }
+  ]
+}

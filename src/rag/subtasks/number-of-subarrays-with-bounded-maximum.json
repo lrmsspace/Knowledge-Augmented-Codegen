@@ -1,0 +1,56 @@
+{
+  "slug": "number-of-subarrays-with-bounded-maximum",
+  "link": "https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/",
+  "difficulty": "Medium",
+  "index": "958",
+  "description_full": "Given an integer array nums and two integers left and right, return the number of contiguous non-empty subarrays such that the value of the maximum array element in that subarray is in the range [left, right].\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.\n\n \nExample 1:\n\n\nInput: nums = [2,1,4,3], left = 2, right = 3\nOutput: 3\nExplanation: There are three subarrays that meet the requirements: [2], [2, 1], [3].\n\n\nExample 2:\n\n\nInput: nums = [2,9,2,5,6], left = 2, right = 8\nOutput: 7\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= nums[i] <= 109\n\t0 <= left <= right <= 109\n\n",
+  "description": "Given an integer array nums and two integers left and right, return the number of contiguous non-empty subarrays such that the value of the maximum array element in that subarray is in the range [left, right].\n\nThe test cases are generated so that the answer will fit in a 32-bit integer.",
+  "example": "Input: nums = [2,1,4,3], left = 2, right = 3\nOutput: 3\nExplanation: There are three subarrays that meet the requirements: [2], [2, 1], [3].",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= nums[i] <= 109\n\t0 <= left <= right <= 109",
+  "templates": {
+    "c": "int numSubarrayBoundedMax(int* nums, int numsSize, int left, int right) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numSubarrayBoundedMax(vector<int>& nums, int left, int right) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSubarrayBoundedMax(int[] nums, int left, int right) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} left\n * @param {number} right\n * @return {number}\n */\nvar numSubarrayBoundedMax = function(nums, left, right) {\n    \n};",
+    "python": "class Solution(object):\n    def numSubarrayBoundedMax(self, nums, left, right):\n        \"\"\"\n        :type nums: List[int]\n        :type left: int\n        :type right: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a helper function to count contiguous subarrays where all elements are less than or equal to a given limit K.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "sliding-window"
+      ],
+      "cues": [
+        "contiguous-non-empty-subarrays",
+        "maximum-array-element",
+        "at-most-k"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "0-nums-i-109"
+      ]
+    },
+    {
+      "intent": "Calculate the final count by subtracting the number of subarrays with max < left from those with max <= right using the helper function.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "return-the-number",
+        "range-left-right"
+      ],
+      "constraints": [
+        "0-left-right-109",
+        "answer-will-fit-in-a-32-bit-integer"
+      ]
+    }
+  ]
+}

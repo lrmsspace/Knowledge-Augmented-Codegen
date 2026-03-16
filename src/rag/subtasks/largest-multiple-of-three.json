@@ -1,0 +1,57 @@
+{
+  "slug": "largest-multiple-of-three",
+  "link": "https://leetcode.com/problems/largest-multiple-of-three/",
+  "difficulty": "Hard",
+  "index": "1989",
+  "description_full": "Given an array of digits digits, return the largest multiple of three that can be formed by concatenating some of the given digits in any order. If there is no answer return an empty string.\n\nSince the answer may not fit in an integer data type, return the answer as a string. Note that the returning answer must not contain unnecessary leading zeros.\n\n \nExample 1:\n\n\nInput: digits = [8,1,9]\nOutput: \"981\"\n\n\nExample 2:\n\n\nInput: digits = [8,6,7,1,0]\nOutput: \"8760\"\n\n\nExample 3:\n\n\nInput: digits = [1]\nOutput: \"\"\n\n\n \nConstraints:\n\n\n\t1 <= digits.length <= 104\n\t0 <= digits[i] <= 9\n\n",
+  "description": "Given an array of digits digits, return the largest multiple of three that can be formed by concatenating some of the given digits in any order. If there is no answer return an empty string.\n\nSince the answer may not fit in an integer data type, return the answer as a string. Note that the returning answer must not contain unnecessary leading zeros.",
+  "example": "Input: digits = [8,1,9]\nOutput: \"981\"",
+  "constraints_text": "1 <= digits.length <= 104\n\t0 <= digits[i] <= 9",
+  "templates": {
+    "c": "char* largestMultipleOfThree(int* digits, int digitsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string largestMultipleOfThree(vector<int>& digits) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestMultipleOfThree(int[] digits) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} digits\n * @return {string}\n */\nvar largestMultipleOfThree = function(digits) {\n    \n};",
+    "python": "class Solution(object):\n    def largestMultipleOfThree(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Categorize digits by their modulo 3 remainder and calculate the total sum to determine which digits to remove.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "digits",
+        "multiple-of-three"
+      ],
+      "constraints": [
+        "1-digits-length-104"
+      ]
+    },
+    {
+      "intent": "Apply the removal strategy and construct the largest possible multiple of three as a string, handling leading zeros.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "largest",
+        "no-unnecessary-leading-zeros",
+        "return-as-a-string"
+      ],
+      "constraints": [
+        "answer-may-not-fit-in-an-integer-data-type"
+      ]
+    }
+  ]
+}

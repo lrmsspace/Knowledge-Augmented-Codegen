@@ -1,0 +1,40 @@
+{
+  "slug": "excel-sheet-column-number",
+  "link": "https://leetcode.com/problems/excel-sheet-column-number/",
+  "difficulty": "Easy",
+  "index": "37",
+  "description_full": "Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.\n\nFor example:\n\n\nA -> 1\nB -> 2\nC -> 3\n...\nZ -> 26\nAA -> 27\nAB -> 28 \n...\n\n\n \nExample 1:\n\n\nInput: columnTitle = \"A\"\nOutput: 1\n\n\nExample 2:\n\n\nInput: columnTitle = \"AB\"\nOutput: 28\n\n\nExample 3:\n\n\nInput: columnTitle = \"ZY\"\nOutput: 701\n\n\n \nConstraints:\n\n\n\t1 <= columnTitle.length <= 7\n\tcolumnTitle consists only of uppercase English letters.\n\tcolumnTitle is in the range [\"A\", \"FXSHRXW\"].\n\n",
+  "description": "Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.\n\nFor example:\n\n\nA -> 1\nB -> 2\nC -> 3\n...\nZ -> 26\nAA -> 27\nAB -> 28 \n...",
+  "example": "Input: columnTitle = \"A\"\nOutput: 1",
+  "constraints_text": "1 <= columnTitle.length <= 7\n\tcolumnTitle consists only of uppercase English letters.\n\tcolumnTitle is in the range [\"A\", \"FXSHRXW\"].",
+  "templates": {
+    "c": "int titleToNumber(char* columnTitle) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int titleToNumber(string columnTitle) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int titleToNumber(String columnTitle) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} columnTitle\n * @return {number}\n */\nvar titleToNumber = function(columnTitle) {\n    \n};",
+    "python": "class Solution(object):\n    def titleToNumber(self, columnTitle):\n        \"\"\"\n        :type columnTitle: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the column number by converting the Excel column title string, treating it as a base-26 number where 'A' is 1.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "columntitle",
+        "column-number",
+        "a-1",
+        "base-26"
+      ],
+      "constraints": [
+        "1-length-7",
+        "uppercase-english-letters"
+      ]
+    }
+  ]
+}

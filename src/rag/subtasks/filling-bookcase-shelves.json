@@ -1,0 +1,56 @@
+{
+  "slug": "filling-bookcase-shelves",
+  "link": "https://leetcode.com/problems/filling-bookcase-shelves/",
+  "difficulty": "Medium",
+  "index": "1113",
+  "description_full": "You are given an array books where books[i] = [thicknessi, heighti] indicates the thickness and height of the ith book. You are also given an integer shelfWidth.\n\nWe want to place these books in order onto bookcase shelves that have a total width shelfWidth.\n\nWe choose some of the books to place on this shelf such that the sum of their thickness is less than or equal to shelfWidth, then build another level of the shelf of the bookcase so that the total height of the bookcase has increased by the maximum height of the books we just put down. We repeat this process until there are no more books to place.\n\nNote that at each step of the above process, the order of the books we place is the same order as the given sequence of books.\n\n\n\tFor example, if we have an ordered list of 5 books, we might place the first and second book onto the first shelf, the third book on the second shelf, and the fourth and fifth book on the last shelf.\n\n\nReturn the minimum possible height that the total bookshelf can be after placing shelves in this manner.\n\n \nExample 1:\n\n\nInput: books = [[1,1],[2,3],[2,3],[1,1],[1,1],[1,1],[1,2]], shelfWidth = 4\nOutput: 6\nExplanation:\nThe sum of the heights of the 3 shelves is 1 + 3 + 2 = 6.\nNotice that book number 2 does not have to be on the first shelf.\n\n\nExample 2:\n\n\nInput: books = [[1,3],[2,4],[3,2]], shelfWidth = 6\nOutput: 4\n\n\n \nConstraints:\n\n\n\t1 <= books.length <= 1000\n\t1 <= thicknessi <= shelfWidth <= 1000\n\t1 <= heighti <= 1000\n\n",
+  "description": "You are given an array books where books[i] = [thicknessi, heighti] indicates the thickness and height of the ith book. You are also given an integer shelfWidth.\n\nWe want to place these books in order onto bookcase shelves that have a total width shelfWidth.\n\nWe choose some of the books to place on this shelf such that the sum of their thickness is less than or equal to shelfWidth, then build another level of the shelf of the bookcase so that the total height of the bookcase has increased by the maximum height of the books we just put down. We repeat this process until there are no more books to place.\n\nNote that at each step of the above process, the order of the books we place is the same order as the given sequence of books.\n\n\n\tFor example, if we have an ordered list of 5 books, we might place the first and second book onto the first shelf, the third book on the second shelf, and the fourth and fifth book on the last shelf.\n\n\nReturn the minimum possible height that the total bookshelf can be after placing shelves in this manner.",
+  "example": "Input: books = [[1,1],[2,3],[2,3],[1,1],[1,1],[1,1],[1,2]], shelfWidth = 4\nOutput: 6\nExplanation:\nThe sum of the heights of the 3 shelves is 1 + 3 + 2 = 6.\nNotice that book number 2 does not have to be on the first shelf.",
+  "constraints_text": "1 <= books.length <= 1000\n\t1 <= thicknessi <= shelfWidth <= 1000\n\t1 <= heighti <= 1000",
+  "templates": {
+    "c": "int minHeightShelves(int** books, int booksSize, int* booksColSize, int shelfWidth) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minHeightShelves(vector<vector<int>>& books, int shelfWidth) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minHeightShelves(int[][] books, int shelfWidth) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} books\n * @param {number} shelfWidth\n * @return {number}\n */\nvar minHeightShelves = function(books, shelfWidth) {\n    \n};",
+    "python": "class Solution(object):\n    def minHeightShelves(self, books, shelfWidth):\n        \"\"\"\n        :type books: List[List[int]]\n        :type shelfWidth: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize the dynamic programming table to store minimum total heights for placing prefixes of books.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "minimum-possible-height",
+        "total-bookshelf"
+      ],
+      "constraints": [
+        "books-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through all books, and for each book, consider all valid previous shelf breaks to calculate the minimum total height.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "place-these-books-in-order",
+        "sum-of-their-thickness-shelfwidth",
+        "maximum-height-of-the-books-we-just-put-down"
+      ],
+      "constraints": [
+        "1-books-length-1000",
+        "1-thicknessi-shelfwidth-1000",
+        "1-heighti-1000"
+      ]
+    }
+  ]
+}

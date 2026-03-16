@@ -1,0 +1,76 @@
+// Source: https://leetcode.com/problems/odd-even-linked-list/   |   Difficulty: Medium
+//
+// Problem Description:
+// Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+//
+// The first node is considered odd, and the second node is even, and so on.
+//
+// Note that the relative order inside both the even and odd groups should remain as it was in the input.
+//
+// You must solve the problem in O(1) extra space complexity and O(n) time complexity.
+//
+// Example:
+// Input: head = [1,2,3,4,5]
+// Output: [1,3,5,2,4]
+//
+// Constraints:
+// The number of nodes in the linked list is in the range [0, 104].
+// 	-106 <= Node.val <= 106
+//
+// Helpful references (internal KB):
+// - Linked-list implementations of collections (linked-list, ds, simulation)
+//   • When to use: When you need dynamic collections that efficiently support insertions and deletions at specific points, or when memory usage needs to be precisely managed without contiguous memory allocation.
+//   • Idea: This describes how fundamental data structures like stacks, queues, and bags can be implemented using linked lists, providing dynamic resizing and efficient element manipulation. Operations typically achieve O(1) time complexity for additions and removals at the ends.
+//   • Invariants: The head pointer always points to the first element, or is null if the list is empty.; The tail pointer always points to the last element, or is null if the list is empty.
+//   • Tips: Use a Node class to encapsulate data and a reference to the next element.; Maintain head and tail pointers for efficient O(1) operations in queues.
+//   • Pitfalls: Forgetting to handle edge cases like empty lists or single-element lists.; Introducing 'loitering' by not nullifying references to removed objects, preventing garbage collection.
+// - Floyd's Linked List Cycle Finding Algorithm (linked-list, two-pointers, simulation)
+//   • When to use: Use this algorithm to efficiently detect if a linked list contains a cycle and, optionally, find the entry point of that cycle, using only constant extra space.
+//   • Idea: This algorithm uses two pointers, one moving faster than the other, to detect if a cycle exists in a linked list. If a cycle is found, it can then determine the cycle's starting node in O(N) time complexity and O(1) space complexity.
+//   • Invariants: The slow and fast pointers are always valid nodes or null.; In the detection phase, the fast pointer always covers twice the distance of the slow pointer.
+//   • Tips: Initialize both slow and fast pointers at the head of the list.; Move the slow pointer by one step and the fast pointer by two steps in each iteration.
+//   • Pitfalls: Forgetting to check for null on 'fast' and 'fast.next' before dereferencing them.; Incorrectly assuming the list is non-empty or has at least two nodes.
+// - Finding the Eulerian path in O(M) (graph, enumeration, bfs)
+//   • When to use: Use when the problem requires visiting every edge in a graph exactly once, either starting and ending at the same vertex (cycle) or at two different vertices (path).
+//   • Idea: An Eulerian path is a trail in a graph which visits every edge exactly once. An Eulerian cycle is an Eulerian path that starts and ends on the same vertex.
+//   • Invariants: Every edge in the graph is considered exactly once for inclusion in the path.; The current path segment always forms a valid trail in the graph.
+//   • Tips: Check vertex degrees to determine path/cycle existence before attempting to find it.; For an Eulerian path, start traversal from one of the two odd-degree vertices.
+//   • Pitfalls: Incorrectly handling multi-edges or self-loops can lead to errors in degree calculation or traversal.; Failing to check graph connectivity can result in incomplete paths or infinite loops.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Do not add custom input parsing or console I/O unless the template explicitly requires it; rely on parameters/return value only.
+// - Use standard ECMAScript features supported by LeetCode (Node.js runtime); no external packages.
+// - Be careful with number precision: JavaScript Number is double; use BigInt only when necessary and keep return type consistent with the problem requirements.
+// - If you introduce helper functions, define them in the same file and avoid relying on global mutable state across test cases.
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var oddEvenList = function(head) {
+	// We can maintain two pointers, one for the odd indexed nodes and one for the even indexed nodes. 
+	// We traverse the list once, rearranging the next pointers to group odd and even nodes together. Finally, we connect the end of the odd list to the head of the even list.
+	if (!head) return null;
+
+	let odd = head;
+	let even = head.next;
+	const evenHead = even; // Keep a reference to the head of the even list
+
+	while (even && even.next) {
+		odd.next = even.next; // Link current odd node to the next odd node
+		odd = odd.next; // Move odd pointer to the next odd node
+		even.next = odd.next; // Link current even node to the next even node
+		even = even.next; // Move even pointer to the next even node
+	}
+
+	odd.next = evenHead; // Connect end of odd list to head of even list
+	return head;
+};

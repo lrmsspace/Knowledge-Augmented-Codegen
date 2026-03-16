@@ -1,0 +1,57 @@
+{
+  "slug": "kth-distinct-string-in-an-array",
+  "link": "https://leetcode.com/problems/kth-distinct-string-in-an-array/",
+  "difficulty": "Easy",
+  "index": "440",
+  "description_full": "A distinct string is a string that is present only once in an array.\n\nGiven an array of strings arr, and an integer k, return the kth distinct string present in arr. If there are fewer than k distinct strings, return an empty string \"\".\n\nNote that the strings are considered in the order in which they appear in the array.\n\n \nExample 1:\n\n\nInput: arr = [\"d\",\"b\",\"c\",\"b\",\"c\",\"a\"], k = 2\nOutput: \"a\"\nExplanation:\nThe only distinct strings in arr are \"d\" and \"a\".\n\"d\" appears 1st, so it is the 1st distinct string.\n\"a\" appears 2nd, so it is the 2nd distinct string.\nSince k == 2, \"a\" is returned. \n\n\nExample 2:\n\n\nInput: arr = [\"aaa\",\"aa\",\"a\"], k = 1\nOutput: \"aaa\"\nExplanation:\nAll strings in arr are distinct, so the 1st string \"aaa\" is returned.\n\n\nExample 3:\n\n\nInput: arr = [\"a\",\"b\",\"a\"], k = 3\nOutput: \"\"\nExplanation:\nThe only distinct string is \"b\". Since there are fewer than 3 distinct strings, we return an empty string \"\".\n\n\n \nConstraints:\n\n\n\t1 <= k <= arr.length <= 1000\n\t1 <= arr[i].length <= 5\n\tarr[i] consists of lowercase English letters.\n\n",
+  "description": "A distinct string is a string that is present only once in an array.\n\nGiven an array of strings arr, and an integer k, return the kth distinct string present in arr. If there are fewer than k distinct strings, return an empty string \"\".\n\nNote that the strings are considered in the order in which they appear in the array.",
+  "example": "Input: arr = [\"d\",\"b\",\"c\",\"b\",\"c\",\"a\"], k = 2\nOutput: \"a\"\nExplanation:\nThe only distinct strings in arr are \"d\" and \"a\".\n\"d\" appears 1st, so it is the 1st distinct string.\n\"a\" appears 2nd, so it is the 2nd distinct string.\nSince k == 2, \"a\" is returned.",
+  "constraints_text": "1 <= k <= arr.length <= 1000\n\t1 <= arr[i].length <= 5\n\tarr[i] consists of lowercase English letters.",
+  "templates": {
+    "c": "char* kthDistinct(char** arr, int arrSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string kthDistinct(vector<string>& arr, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String kthDistinct(String[] arr, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} arr\n * @param {number} k\n * @return {string}\n */\nvar kthDistinct = function(arr, k) {\n    \n};",
+    "python": "class Solution(object):\n    def kthDistinct(self, arr, k):\n        \"\"\"\n        :type arr: List[str]\n        :type k: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each string in the input array to identify which strings are distinct.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "counting",
+        "hashing"
+      ],
+      "cues": [
+        "distinct-string",
+        "present-only-once"
+      ],
+      "constraints": [
+        "arr-length-1000",
+        "arr-i-length-5"
+      ]
+    },
+    {
+      "intent": "Iterate through the original array, using frequencies to find the k-th distinct string in order.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "kth-distinct-string",
+        "in-the-order-in-which-they-appear"
+      ],
+      "constraints": [
+        "1-k-arr-length"
+      ]
+    }
+  ]
+}

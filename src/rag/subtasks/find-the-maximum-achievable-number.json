@@ -1,0 +1,36 @@
+{
+  "slug": "find-the-maximum-achievable-number",
+  "link": "https://leetcode.com/problems/find-the-maximum-achievable-number/",
+  "difficulty": "Easy",
+  "index": "602",
+  "description_full": "Given two integers, num and t. A number x is achievable if it can become equal to num after applying the following operation at most t times:\n\n\n\tIncrease or decrease x by 1, and simultaneously increase or decrease num by 1.\n\n\nReturn the maximum possible value of x.\n\n \nExample 1:\n\n\nInput: num = 4, t = 1\n\nOutput: 6\n\nExplanation:\n\nApply the following operation once to make the maximum achievable number equal to num:\n\n\n\tDecrease the maximum achievable number by 1, and increase num by 1.\n\n\n\nExample 2:\n\n\nInput: num = 3, t = 2\n\nOutput: 7\n\nExplanation:\n\nApply the following operation twice to make the maximum achievable number equal to num:\n\n\n\tDecrease the maximum achievable number by 1, and increase num by 1.\n\n\n\n \nConstraints:\n\n\n\t1 <= num, t <= 50\n\n",
+  "description": "Given two integers, num and t. A number x is achievable if it can become equal to num after applying the following operation at most t times:\n\n\n\tIncrease or decrease x by 1, and simultaneously increase or decrease num by 1.\n\n\nReturn the maximum possible value of x.",
+  "example": "Input: num = 4, t = 1\n\nOutput: 6\n\nExplanation:\n\nApply the following operation once to make the maximum achievable number equal to num:\n\n\n\tDecrease the maximum achievable number by 1, and increase num by 1.",
+  "constraints_text": "1 <= num, t <= 50",
+  "templates": {
+    "c": "int theMaximumAchievableX(int num, int t) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int theMaximumAchievableX(int num, int t) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int theMaximumAchievableX(int num, int t) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} num\n * @param {number} t\n * @return {number}\n */\nvar theMaximumAchievableX = function(num, t) {\n    \n};",
+    "python": "class Solution(object):\n    def theMaximumAchievableX(self, num, t):\n        \"\"\"\n        :type num: int\n        :type t: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum initial value of x such that it can be transformed to equal num within t operations.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "maximum-possible-value-of-x",
+        "at-most-t-times",
+        "increase-or-decrease-x-by-1-and-simultaneously-increase-or-decrease-num-by-1"
+      ],
+      "constraints": [
+        "1-num-t-50"
+      ]
+    }
+  ]
+}

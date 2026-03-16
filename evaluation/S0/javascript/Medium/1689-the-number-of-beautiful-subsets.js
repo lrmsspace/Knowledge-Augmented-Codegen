@@ -1,0 +1,52 @@
+// Source: https://leetcode.com/problems/the-number-of-beautiful-subsets/   |   Difficulty: Medium
+//
+// Problem Description:
+// You are given an array nums of positive integers and a positive integer k.
+//
+// A subset of nums is beautiful if it does not contain two integers with an absolute difference equal to k.
+//
+// Return the number of non-empty beautiful subsets of the array nums.
+//
+// A subset of nums is an array that can be obtained by deleting some (possibly none) elements from nums. Two subsets are different if and only if the chosen indices to delete are different.
+//
+// Example:
+// Input: nums = [2,4,6], k = 2
+// Output: 4
+// Explanation: The beautiful subsets of the array nums are: [2], [4], [6], [2, 6].
+// It can be proved that there are only 4 beautiful subsets in the array [2,4,6].
+//
+// Constraints:
+// 1 <= nums.length <= 18
+// 	1 <= nums[i], k <= 1000
+//
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var beautifulSubsets = function(nums, k) {
+    const n = nums.length;
+    let count = 0;
+    const totalSubsets = 1 << n; // 2^n subsets
+        
+    for (let mask = 1; mask < totalSubsets; mask++) {
+        const subset = [];
+        let isBeautiful = true;
+        for (let i = 0; i < n; i++) {
+            if (mask & (1 << i)) {
+                for (const num of subset) {
+                    if (Math.abs(num - nums[i]) === k) {
+                        isBeautiful = false;
+                        break;
+                    }
+                }
+                if (!isBeautiful) break;
+                subset.push(nums[i]);
+            }
+        }
+        if (isBeautiful) count++;
+    }
+    return count;
+    
+};

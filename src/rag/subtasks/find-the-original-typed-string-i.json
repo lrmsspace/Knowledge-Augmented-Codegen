@@ -1,0 +1,39 @@
+{
+  "slug": "find-the-original-typed-string-i",
+  "link": "https://leetcode.com/problems/find-the-original-typed-string-i/",
+  "difficulty": "Easy",
+  "index": "2351",
+  "description_full": "Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and may press a key for too long, resulting in a character being typed multiple times.\n\nAlthough Alice tried to focus on her typing, she is aware that she may still have done this at most once.\n\nYou are given a string word, which represents the final output displayed on Alice's screen.\n\nReturn the total number of possible original strings that Alice might have intended to type.\n\n \nExample 1:\n\n\nInput: word = \"abbcccc\"\n\nOutput: 5\n\nExplanation:\n\nThe possible strings are: \"abbcccc\", \"abbccc\", \"abbcc\", \"abbc\", and \"abcccc\".\n\n\nExample 2:\n\n\nInput: word = \"abcd\"\n\nOutput: 1\n\nExplanation:\n\nThe only possible string is \"abcd\".\n\n\nExample 3:\n\n\nInput: word = \"aaaa\"\n\nOutput: 4\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 100\n\tword consists only of lowercase English letters.\n\n",
+  "description": "Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and may press a key for too long, resulting in a character being typed multiple times.\n\nAlthough Alice tried to focus on her typing, she is aware that she may still have done this at most once.\n\nYou are given a string word, which represents the final output displayed on Alice's screen.\n\nReturn the total number of possible original strings that Alice might have intended to type.",
+  "example": "Input: word = \"abbcccc\"\n\nOutput: 5\n\nExplanation:\n\nThe possible strings are: \"abbcccc\", \"abbccc\", \"abbcc\", \"abbc\", and \"abcccc\".",
+  "constraints_text": "1 <= word.length <= 100\n\tword consists only of lowercase English letters.",
+  "templates": {
+    "c": "int possibleStringCount(char* word) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int possibleStringCount(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int possibleStringCount(String word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar possibleStringCount = function(word) {\n    \n};",
+    "python": "class Solution(object):\n    def possibleStringCount(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total count of unique original strings by considering the base case and all variations where exactly one character block was typed too long.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "two-pointers",
+        "simulation"
+      ],
+      "cues": [
+        "at-most-once",
+        "character-typed-multiple-times",
+        "word"
+      ],
+      "constraints": [
+        "1-word-length-100",
+        "lowercase-english-letters"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "longest-valid-parentheses",
+  "link": "https://leetcode.com/problems/longest-valid-parentheses/",
+  "difficulty": "Hard",
+  "index": "1774",
+  "description_full": "Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.\n\n \nExample 1:\n\n\nInput: s = \"(()\"\nOutput: 2\nExplanation: The longest valid parentheses substring is \"()\".\n\n\nExample 2:\n\n\nInput: s = \")()())\"\nOutput: 4\nExplanation: The longest valid parentheses substring is \"()()\".\n\n\nExample 3:\n\n\nInput: s = \"\"\nOutput: 0\n\n\n \nConstraints:\n\n\n\t0 <= s.length <= 3 * 104\n\ts[i] is '(', or ')'.\n\n",
+  "description": "Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.",
+  "example": "Input: s = \"(()\"\nOutput: 2\nExplanation: The longest valid parentheses substring is \"()\".",
+  "constraints_text": "0 <= s.length <= 3 * 104\n\ts[i] is '(', or ')'.",
+  "templates": {
+    "c": "int longestValidParentheses(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestValidParentheses(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestValidParentheses(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar longestValidParentheses = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def longestValidParentheses(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, using a stack to track indices of unmatched opening parentheses or boundaries, calculating the maximum length of valid substrings.",
+      "structures": [
+        "string",
+        "stack"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "longest-valid-parentheses",
+        "well-formed",
+        "substring"
+      ],
+      "constraints": [
+        "0-s-length-3-104",
+        "s-i-is-or"
+      ]
+    }
+  ]
+}

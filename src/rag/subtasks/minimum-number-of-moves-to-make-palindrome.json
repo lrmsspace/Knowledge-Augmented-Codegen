@@ -1,0 +1,39 @@
+{
+  "slug": "minimum-number-of-moves-to-make-palindrome",
+  "link": "https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/",
+  "difficulty": "Hard",
+  "index": "2151",
+  "description_full": "You are given a string s consisting only of lowercase English letters.\n\nIn one move, you can select any two adjacent characters of s and swap them.\n\nReturn the minimum number of moves needed to make s a palindrome.\n\nNote that the input will be generated such that s can always be converted to a palindrome.\n\n \nExample 1:\n\n\nInput: s = \"aabb\"\nOutput: 2\nExplanation:\nWe can obtain two palindromes from s, \"abba\" and \"baab\". \n- We can obtain \"abba\" from s in 2 moves: \"aabb\" -> \"abab\" -> \"abba\".\n- We can obtain \"baab\" from s in 2 moves: \"aabb\" -> \"abab\" -> \"baab\".\nThus, the minimum number of moves needed to make s a palindrome is 2.\n\n\nExample 2:\n\n\nInput: s = \"letelt\"\nOutput: 2\nExplanation:\nOne of the palindromes we can obtain from s in 2 moves is \"lettel\".\nOne of the ways we can obtain it is \"letelt\" -> \"letetl\" -> \"lettel\".\nOther palindromes such as \"tleelt\" can also be obtained in 2 moves.\nIt can be shown that it is not possible to obtain a palindrome in less than 2 moves.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 2000\n\ts consists only of lowercase English letters.\n\ts can be converted to a palindrome using a finite number of moves.\n\n",
+  "description": "You are given a string s consisting only of lowercase English letters.\n\nIn one move, you can select any two adjacent characters of s and swap them.\n\nReturn the minimum number of moves needed to make s a palindrome.\n\nNote that the input will be generated such that s can always be converted to a palindrome.",
+  "example": "Input: s = \"aabb\"\nOutput: 2\nExplanation:\nWe can obtain two palindromes from s, \"abba\" and \"baab\". \n- We can obtain \"abba\" from s in 2 moves: \"aabb\" -> \"abab\" -> \"abba\".\n- We can obtain \"baab\" from s in 2 moves: \"aabb\" -> \"abab\" -> \"baab\".\nThus, the minimum number of moves needed to make s a palindrome is 2.",
+  "constraints_text": "1 <= s.length <= 2000\n\ts consists only of lowercase English letters.\n\ts can be converted to a palindrome using a finite number of moves.",
+  "templates": {
+    "c": "int minMovesToMakePalindrome(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minMovesToMakePalindrome(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minMovesToMakePalindrome(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar minMovesToMakePalindrome = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def minMovesToMakePalindrome(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Greedily match characters from both ends of the string, moving the rightmost matching character to its target position with minimum adjacent swaps, or moving the unique middle character to the center.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-number-of-moves",
+        "make-s-a-palindrome",
+        "adjacent-characters"
+      ],
+      "constraints": [
+        "s-can-always-be-converted-to-a-palindrome"
+      ]
+    }
+  ]
+}

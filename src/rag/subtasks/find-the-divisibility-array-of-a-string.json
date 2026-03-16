@@ -1,0 +1,40 @@
+{
+  "slug": "find-the-divisibility-array-of-a-string",
+  "link": "https://leetcode.com/problems/find-the-divisibility-array-of-a-string/",
+  "difficulty": "Medium",
+  "index": "1678",
+  "description_full": "You are given a 0-indexed string word of length n consisting of digits, and a positive integer m.\n\nThe divisibility array div of word is an integer array of length n such that:\n\n\n\tdiv[i] = 1 if the numeric value of word[0,...,i] is divisible by m, or\n\tdiv[i] = 0 otherwise.\n\n\nReturn the divisibility array of word.\n\n \nExample 1:\n\n\nInput: word = \"998244353\", m = 3\nOutput: [1,1,0,0,0,1,1,0,0]\nExplanation: There are only 4 prefixes that are divisible by 3: \"9\", \"99\", \"998244\", and \"9982443\".\n\n\nExample 2:\n\n\nInput: word = \"1010\", m = 10\nOutput: [0,1,0,1]\nExplanation: There are only 2 prefixes that are divisible by 10: \"10\", and \"1010\".\n\n\n \nConstraints:\n\n\n\t1 <= n <= 105\n\tword.length == n\n\tword consists of digits from 0 to 9\n\t1 <= m <= 109\n\n",
+  "description": "You are given a 0-indexed string word of length n consisting of digits, and a positive integer m.\n\nThe divisibility array div of word is an integer array of length n such that:\n\n\n\tdiv[i] = 1 if the numeric value of word[0,...,i] is divisible by m, or\n\tdiv[i] = 0 otherwise.\n\n\nReturn the divisibility array of word.",
+  "example": "Input: word = \"998244353\", m = 3\nOutput: [1,1,0,0,0,1,1,0,0]\nExplanation: There are only 4 prefixes that are divisible by 3: \"9\", \"99\", \"998244\", and \"9982443\".",
+  "constraints_text": "1 <= n <= 105\n\tword.length == n\n\tword consists of digits from 0 to 9\n\t1 <= m <= 109",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* divisibilityArray(char* word, int m, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<int> divisibilityArray(string word, int m) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int[] divisibilityArray(String word, int m) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @param {number} m\n * @return {number[]}\n */\nvar divisibilityArray = function(word, m) {\n    \n};",
+    "python": "class Solution(object):\n    def divisibilityArray(self, word, m):\n        \"\"\"\n        :type word: str\n        :type m: int\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the word, calculate the numeric value of each prefix modulo m, and populate the divisibility array.",
+      "structures": [
+        "string",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "divisibility-array",
+        "numeric-value-of-word-0-i",
+        "divisible-by-m"
+      ],
+      "constraints": [
+        "n-10-5",
+        "m-10-9"
+      ]
+    }
+  ]
+}

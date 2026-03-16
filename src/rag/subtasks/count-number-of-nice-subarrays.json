@@ -1,0 +1,56 @@
+{
+  "slug": "count-number-of-nice-subarrays",
+  "link": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+  "difficulty": "Medium",
+  "index": "1164",
+  "description_full": "Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.\n\nReturn the number of nice sub-arrays.\n\n \nExample 1:\n\n\nInput: nums = [1,1,2,1,1], k = 3\nOutput: 2\nExplanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].\n\n\nExample 2:\n\n\nInput: nums = [2,4,6], k = 1\nOutput: 0\nExplanation: There are no odd numbers in the array.\n\n\nExample 3:\n\n\nInput: nums = [2,2,2,1,2,2,1,2,2,2], k = 2\nOutput: 16\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 50000\n\t1 <= nums[i] <= 10^5\n\t1 <= k <= nums.length\n\n",
+  "description": "Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.\n\nReturn the number of nice sub-arrays.",
+  "example": "Input: nums = [1,1,2,1,1], k = 3\nOutput: 2\nExplanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].",
+  "constraints_text": "1 <= nums.length <= 50000\n\t1 <= nums[i] <= 10^5\n\t1 <= k <= nums.length",
+  "templates": {
+    "c": "int numberOfSubarrays(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfSubarrays(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSubarrays(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar numberOfSubarrays = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfSubarrays(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Preprocess the input array to count odd numbers efficiently using prefix sums.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "prefix-sum"
+      ],
+      "cues": [
+        "array-of-integers",
+        "k-odd-numbers",
+        "continuous-subarray"
+      ],
+      "constraints": [
+        "nums-length-50000"
+      ]
+    },
+    {
+      "intent": "Iterate through the prefix sums and count pairs that satisfy the k-odd condition.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "counting",
+        "prefix-sum"
+      ],
+      "cues": [
+        "return-the-number",
+        "k-odd-numbers"
+      ],
+      "constraints": [
+        "nums-length-50000"
+      ]
+    }
+  ]
+}

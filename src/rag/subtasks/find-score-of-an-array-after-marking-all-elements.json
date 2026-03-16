@@ -1,0 +1,55 @@
+{
+  "slug": "find-score-of-an-array-after-marking-all-elements",
+  "link": "https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/",
+  "difficulty": "Medium",
+  "index": "1686",
+  "description_full": "You are given an array nums consisting of positive integers.\n\nStarting with score = 0, apply the following algorithm:\n\n\n\tChoose the smallest integer of the array that is not marked. If there is a tie, choose the one with the smallest index.\n\tAdd the value of the chosen integer to score.\n\tMark the chosen element and its two adjacent elements if they exist.\n\tRepeat until all the array elements are marked.\n\n\nReturn the score you get after applying the above algorithm.\n\n \nExample 1:\n\n\nInput: nums = [2,1,3,4,5,2]\nOutput: 7\nExplanation: We mark the elements as follows:\n- 1 is the smallest unmarked element, so we mark it and its two adjacent elements: [2,1,3,4,5,2].\n- 2 is the smallest unmarked element, so we mark it and its left adjacent element: [2,1,3,4,5,2].\n- 4 is the only remaining unmarked element, so we mark it: [2,1,3,4,5,2].\nOur score is 1 + 2 + 4 = 7.\n\n\nExample 2:\n\n\nInput: nums = [2,3,5,1,3,2]\nOutput: 5\nExplanation: We mark the elements as follows:\n- 1 is the smallest unmarked element, so we mark it and its two adjacent elements: [2,3,5,1,3,2].\n- 2 is the smallest unmarked element, since there are two of them, we choose the left-most one, so we mark the one at index 0 and its right adjacent element: [2,3,5,1,3,2].\n- 2 is the only remaining unmarked element, so we mark it: [2,3,5,1,3,2].\nOur score is 1 + 2 + 2 = 5.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 106\n\n",
+  "description": "You are given an array nums consisting of positive integers.\n\nStarting with score = 0, apply the following algorithm:\n\n\n\tChoose the smallest integer of the array that is not marked. If there is a tie, choose the one with the smallest index.\n\tAdd the value of the chosen integer to score.\n\tMark the chosen element and its two adjacent elements if they exist.\n\tRepeat until all the array elements are marked.\n\n\nReturn the score you get after applying the above algorithm.",
+  "example": "Input: nums = [2,1,3,4,5,2]\nOutput: 7\nExplanation: We mark the elements as follows:\n- 1 is the smallest unmarked element, so we mark it and its two adjacent elements: [2,1,3,4,5,2].\n- 2 is the smallest unmarked element, so we mark it and its left adjacent element: [2,1,3,4,5,2].\n- 4 is the only remaining unmarked element, so we mark it: [2,1,3,4,5,2].\nOur score is 1 + 2 + 4 = 7.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 106",
+  "templates": {
+    "c": "long long findScore(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long findScore(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findScore(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findScore = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findScore(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize a min-priority queue with (value, index) pairs for all elements and a boolean array for tracking marked status.",
+      "structures": [
+        "array",
+        "heap"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-integer",
+        "smallest-index"
+      ],
+      "constraints": [
+        "nums-length-105"
+      ]
+    },
+    {
+      "intent": "Iteratively extract smallest unmarked elements from the priority queue, update the total score, and mark chosen and adjacent elements.",
+      "structures": [
+        "array",
+        "heap"
+      ],
+      "actions": [
+        "greedy",
+        "simulation",
+        "heap-select"
+      ],
+      "cues": [
+        "apply-the-following-algorithm",
+        "repeat-until-all-marked"
+      ],
+      "constraints": [
+        "nums-length-105"
+      ]
+    }
+  ]
+}

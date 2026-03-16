@@ -1,0 +1,41 @@
+{
+  "slug": "longest-substring-with-at-least-k-repeating-characters",
+  "link": "https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/",
+  "difficulty": "Medium",
+  "index": "791",
+  "description_full": "Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in this substring is greater than or equal to k.\n\nif no such substring exists, return 0.\n\n \nExample 1:\n\n\nInput: s = \"aaabb\", k = 3\nOutput: 3\nExplanation: The longest substring is \"aaa\", as 'a' is repeated 3 times.\n\n\nExample 2:\n\n\nInput: s = \"ababbc\", k = 2\nOutput: 5\nExplanation: The longest substring is \"ababb\", as 'a' is repeated 2 times and 'b' is repeated 3 times.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists of only lowercase English letters.\n\t1 <= k <= 105\n\n",
+  "description": "Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in this substring is greater than or equal to k.\n\nif no such substring exists, return 0.",
+  "example": "Input: s = \"aaabb\", k = 3\nOutput: 3\nExplanation: The longest substring is \"aaa\", as 'a' is repeated 3 times.",
+  "constraints_text": "1 <= s.length <= 104\n\ts consists of only lowercase English letters.\n\t1 <= k <= 105",
+  "templates": {
+    "c": "int longestSubstring(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestSubstring(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestSubstring(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar longestSubstring = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def longestSubstring(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively find the longest substring where all characters appear at least k times, splitting the string by characters that violate this condition.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "recursion",
+        "divide-and-conquer",
+        "counting"
+      ],
+      "cues": [
+        "longest-substring",
+        "frequency-of-each-character",
+        "greater-than-or-equal-to-k"
+      ],
+      "constraints": [
+        "1-s-length-104",
+        "s-consists-of-only-lowercase-english-letters",
+        "1-k-105"
+      ]
+    }
+  ]
+}

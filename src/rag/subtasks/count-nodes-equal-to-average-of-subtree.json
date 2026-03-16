@@ -1,0 +1,40 @@
+{
+  "slug": "count-nodes-equal-to-average-of-subtree",
+  "link": "https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/",
+  "difficulty": "Medium",
+  "index": "1554",
+  "description_full": "Given the root of a binary tree, return the number of nodes where the value of the node is equal to the average of the values in its subtree.\n\nNote:\n\n\n\tThe average of n elements is the sum of the n elements divided by n and rounded down to the nearest integer.\n\tA subtree of root is a tree consisting of root and all of its descendants.\n\n\n \nExample 1:\n\n\nInput: root = [4,8,5,0,1,null,6]\nOutput: 5\nExplanation: \nFor the node with value 4: The average of its subtree is (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4.\nFor the node with value 5: The average of its subtree is (5 + 6) / 2 = 11 / 2 = 5.\nFor the node with value 0: The average of its subtree is 0 / 1 = 0.\nFor the node with value 1: The average of its subtree is 1 / 1 = 1.\nFor the node with value 6: The average of its subtree is 6 / 1 = 6.\n\n\nExample 2:\n\n\nInput: root = [1]\nOutput: 1\nExplanation: For the node with value 1: The average of its subtree is 1 / 1 = 1.\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 1000].\n\t0 <= Node.val <= 1000\n\n",
+  "description": "Given the root of a binary tree, return the number of nodes where the value of the node is equal to the average of the values in its subtree.\n\nNote:\n\n\n\tThe average of n elements is the sum of the n elements divided by n and rounded down to the nearest integer.\n\tA subtree of root is a tree consisting of root and all of its descendants.",
+  "example": "Input: root = [4,8,5,0,1,null,6]\nOutput: 5\nExplanation: \nFor the node with value 4: The average of its subtree is (4 + 8 + 5 + 0 + 1 + 6) / 6 = 24 / 6 = 4.\nFor the node with value 5: The average of its subtree is (5 + 6) / 2 = 11 / 2 = 5.\nFor the node with value 0: The average of its subtree is 0 / 1 = 0.\nFor the node with value 1: The average of its subtree is 1 / 1 = 1.\nFor the node with value 6: The average of its subtree is 6 / 1 = 6.",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 1000].\n\t0 <= Node.val <= 1000",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nint averageOfSubtree(struct TreeNode* root) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int averageOfSubtree(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int averageOfSubtree(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number}\n */\nvar averageOfSubtree = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def averageOfSubtree(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively traverse the binary tree to compute the sum and count of nodes for each subtree, then count nodes where the node's value equals its subtree's average.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs",
+        "recursion",
+        "counting"
+      ],
+      "cues": [
+        "binary-tree",
+        "average-of-its-subtree",
+        "rounded-down"
+      ],
+      "constraints": [
+        "1-to-1000-nodes",
+        "0-node-val-1000"
+      ]
+    }
+  ]
+}

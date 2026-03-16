@@ -1,0 +1,53 @@
+{
+  "slug": "sort-the-people",
+  "link": "https://leetcode.com/problems/sort-the-people/",
+  "difficulty": "Easy",
+  "index": "515",
+  "description_full": "You are given an array of strings names, and an array heights that consists of distinct positive integers. Both arrays are of length n.\n\nFor each index i, names[i] and heights[i] denote the name and height of the ith person.\n\nReturn names sorted in descending order by the people's heights.\n\n \nExample 1:\n\n\nInput: names = [\"Mary\",\"John\",\"Emma\"], heights = [180,165,170]\nOutput: [\"Mary\",\"Emma\",\"John\"]\nExplanation: Mary is the tallest, followed by Emma and John.\n\n\nExample 2:\n\n\nInput: names = [\"Alice\",\"Bob\",\"Bob\"], heights = [155,185,150]\nOutput: [\"Bob\",\"Alice\",\"Bob\"]\nExplanation: The first Bob is the tallest, followed by Alice and the second Bob.\n\n\n \nConstraints:\n\n\n\tn == names.length == heights.length\n\t1 <= n <= 103\n\t1 <= names[i].length <= 20\n\t1 <= heights[i] <= 105\n\tnames[i] consists of lower and upper case English letters.\n\tAll the values of heights are distinct.\n\n",
+  "description": "You are given an array of strings names, and an array heights that consists of distinct positive integers. Both arrays are of length n.\n\nFor each index i, names[i] and heights[i] denote the name and height of the ith person.\n\nReturn names sorted in descending order by the people's heights.",
+  "example": "Input: names = [\"Mary\",\"John\",\"Emma\"], heights = [180,165,170]\nOutput: [\"Mary\",\"Emma\",\"John\"]\nExplanation: Mary is the tallest, followed by Emma and John.",
+  "constraints_text": "n == names.length == heights.length\n\t1 <= n <= 103\n\t1 <= names[i].length <= 20\n\t1 <= heights[i] <= 105\n\tnames[i] consists of lower and upper case English letters.\n\tAll the values of heights are distinct.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** sortPeople(char** names, int namesSize, int* heights, int heightsSize, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> sortPeople(vector<string>& names, vector<int>& heights) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String[] sortPeople(String[] names, int[] heights) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} names\n * @param {number[]} heights\n * @return {string[]}\n */\nvar sortPeople = function(names, heights) {\n    \n};",
+    "python": "class Solution(object):\n    def sortPeople(self, names, heights):\n        \"\"\"\n        :type names: List[str]\n        :type heights: List[int]\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Combine names and heights into a list of person objects or tuples.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "names-i-and-heights-i-denote-the-ith-person"
+      ],
+      "constraints": [
+        "n-names-length-heights-length"
+      ]
+    },
+    {
+      "intent": "Sort the combined list by height in descending order and extract names.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "merge-sort",
+        "enumeration"
+      ],
+      "cues": [
+        "return-names-sorted-in-descending-order-by-the-people-s-heights"
+      ],
+      "constraints": [
+        "all-the-values-of-heights-are-distinct"
+      ]
+    }
+  ]
+}

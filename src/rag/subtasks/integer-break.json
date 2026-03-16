@@ -1,0 +1,37 @@
+{
+  "slug": "integer-break",
+  "link": "https://leetcode.com/problems/integer-break/",
+  "difficulty": "Medium",
+  "index": "769",
+  "description_full": "Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.\n\nReturn the maximum product you can get.\n\n \nExample 1:\n\n\nInput: n = 2\nOutput: 1\nExplanation: 2 = 1 + 1, 1 × 1 = 1.\n\n\nExample 2:\n\n\nInput: n = 10\nOutput: 36\nExplanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.\n\n\n \nConstraints:\n\n\n\t2 <= n <= 58\n\n",
+  "description": "Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.\n\nReturn the maximum product you can get.",
+  "example": "Input: n = 2\nOutput: 1\nExplanation: 2 = 1 + 1, 1 × 1 = 1.",
+  "constraints_text": "2 <= n <= 58",
+  "templates": {
+    "c": "int integerBreak(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int integerBreak(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int integerBreak(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {number}\n */\nvar integerBreak = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def integerBreak(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the maximum product achievable by breaking an integer n into a sum of at least two positive integers using dynamic programming.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "maximize-product",
+        "break-into-sum",
+        "k-2"
+      ],
+      "constraints": [
+        "2-n-58"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "time-needed-to-rearrange-a-binary-string",
+  "link": "https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/",
+  "difficulty": "Medium",
+  "index": "1597",
+  "description_full": "You are given a binary string s. In one second, all occurrences of \"01\" are simultaneously replaced with \"10\". This process repeats until no occurrences of \"01\" exist.\n\nReturn the number of seconds needed to complete this process.\n\n \nExample 1:\n\n\nInput: s = \"0110101\"\nOutput: 4\nExplanation: \nAfter one second, s becomes \"1011010\".\nAfter another second, s becomes \"1101100\".\nAfter the third second, s becomes \"1110100\".\nAfter the fourth second, s becomes \"1111000\".\nNo occurrence of \"01\" exists any longer, and the process needed 4 seconds to complete,\nso we return 4.\n\n\nExample 2:\n\n\nInput: s = \"11100\"\nOutput: 0\nExplanation:\nNo occurrence of \"01\" exists in s, and the processes needed 0 seconds to complete,\nso we return 0.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 1000\n\ts[i] is either '0' or '1'.\n\n\n \nFollow up:\n\nCan you solve this problem in O(n) time complexity?\n",
+  "description": "You are given a binary string s. In one second, all occurrences of \"01\" are simultaneously replaced with \"10\". This process repeats until no occurrences of \"01\" exist.\n\nReturn the number of seconds needed to complete this process.",
+  "example": "Input: s = \"0110101\"\nOutput: 4\nExplanation: \nAfter one second, s becomes \"1011010\".\nAfter another second, s becomes \"1101100\".\nAfter the third second, s becomes \"1110100\".\nAfter the fourth second, s becomes \"1111000\".\nNo occurrence of \"01\" exists any longer, and the process needed 4 seconds to complete,\nso we return 4.",
+  "constraints_text": "1 <= s.length <= 1000\n\ts[i] is either '0' or '1'.\n\n\n \nFollow up:\n\nCan you solve this problem in O(n) time complexity?",
+  "templates": {
+    "c": "int secondsToRemoveOccurrences(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int secondsToRemoveOccurrences(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int secondsToRemoveOccurrences(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar secondsToRemoveOccurrences = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def secondsToRemoveOccurrences(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total seconds for all '0's to move past '1's, considering simultaneous swaps and blocking by other '0's.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "binary-string",
+        "01-simultaneously-replaced-with-10",
+        "number-of-seconds"
+      ],
+      "constraints": [
+        "1-s-length-1000",
+        "o-n-time-complexity"
+      ]
+    }
+  ]
+}

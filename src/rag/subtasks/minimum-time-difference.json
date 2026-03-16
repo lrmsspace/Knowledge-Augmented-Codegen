@@ -1,0 +1,58 @@
+{
+  "slug": "minimum-time-difference",
+  "link": "https://leetcode.com/problems/minimum-time-difference/",
+  "difficulty": "Medium",
+  "index": "860",
+  "description_full": "Given a list of 24-hour clock time points in \"HH:MM\" format, return the minimum minutes difference between any two time-points in the list.\n \nExample 1:\nInput: timePoints = [\"23:59\",\"00:00\"]\nOutput: 1\nExample 2:\nInput: timePoints = [\"00:00\",\"23:59\",\"00:00\"]\nOutput: 0\n\n \nConstraints:\n\n\n\t2 <= timePoints.length <= 2 * 104\n\ttimePoints[i] is in the format \"HH:MM\".\n\n",
+  "description": "Given a list of 24-hour clock time points in \"HH:MM\" format, return the minimum minutes difference between any two time-points in the list.",
+  "example": "Input: timePoints = [\"23:59\",\"00:00\"]\nOutput: 1",
+  "constraints_text": "2 <= timePoints.length <= 2 * 104\n\ttimePoints[i] is in the format \"HH:MM\".",
+  "templates": {
+    "c": "int findMinDifference(char** timePoints, int timePointsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int findMinDifference(vector<string>& timePoints) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int findMinDifference(List<String> timePoints) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} timePoints\n * @return {number}\n */\nvar findMinDifference = function(timePoints) {\n    \n};",
+    "python": "class Solution(object):\n    def findMinDifference(self, timePoints):\n        \"\"\"\n        :type timePoints: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Convert all 'HH:MM' time strings into total minutes from midnight and store them in an array.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "hh-mm-format",
+        "list-of-24-hour-clock-time-points"
+      ],
+      "constraints": [
+        "timepoints-i-is-in-the-format-hh-mm"
+      ]
+    },
+    {
+      "intent": "Sort the array of minute values and find the minimum difference between any two time points, including wrap-around for 24-hour clock.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "merge-sort",
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-minutes-difference",
+        "any-two-time-points",
+        "24-hour-clock"
+      ],
+      "constraints": [
+        "2-timepoints-length-2-104"
+      ]
+    }
+  ]
+}

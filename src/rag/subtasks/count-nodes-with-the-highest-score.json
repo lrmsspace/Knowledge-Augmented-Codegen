@@ -1,0 +1,56 @@
+{
+  "slug": "count-nodes-with-the-highest-score",
+  "link": "https://leetcode.com/problems/count-nodes-with-the-highest-score/",
+  "difficulty": "Medium",
+  "index": "1472",
+  "description_full": "There is a binary tree rooted at 0 consisting of n nodes. The nodes are labeled from 0 to n - 1. You are given a 0-indexed integer array parents representing the tree, where parents[i] is the parent of node i. Since node 0 is the root, parents[0] == -1.\n\nEach node has a score. To find the score of a node, consider if the node and the edges connected to it were removed. The tree would become one or more non-empty subtrees. The size of a subtree is the number of the nodes in it. The score of the node is the product of the sizes of all those subtrees.\n\nReturn the number of nodes that have the highest score.\n\n \nExample 1:\n\n\nInput: parents = [-1,2,0,2,0]\nOutput: 3\nExplanation:\n- The score of node 0 is: 3 * 1 = 3\n- The score of node 1 is: 4 = 4\n- The score of node 2 is: 1 * 1 * 2 = 2\n- The score of node 3 is: 4 = 4\n- The score of node 4 is: 4 = 4\nThe highest score is 4, and three nodes (node 1, node 3, and node 4) have the highest score.\n\n\nExample 2:\n\n\nInput: parents = [-1,2,0]\nOutput: 2\nExplanation:\n- The score of node 0 is: 2 = 2\n- The score of node 1 is: 2 = 2\n- The score of node 2 is: 1 * 1 = 1\nThe highest score is 2, and two nodes (node 0 and node 1) have the highest score.\n\n\n \nConstraints:\n\n\n\tn == parents.length\n\t2 <= n <= 105\n\tparents[0] == -1\n\t0 <= parents[i] <= n - 1 for i != 0\n\tparents represents a valid binary tree.\n\n",
+  "description": "There is a binary tree rooted at 0 consisting of n nodes. The nodes are labeled from 0 to n - 1. You are given a 0-indexed integer array parents representing the tree, where parents[i] is the parent of node i. Since node 0 is the root, parents[0] == -1.\n\nEach node has a score. To find the score of a node, consider if the node and the edges connected to it were removed. The tree would become one or more non-empty subtrees. The size of a subtree is the number of the nodes in it. The score of the node is the product of the sizes of all those subtrees.\n\nReturn the number of nodes that have the highest score.",
+  "example": "Input: parents = [-1,2,0,2,0]\nOutput: 3\nExplanation:\n- The score of node 0 is: 3 * 1 = 3\n- The score of node 1 is: 4 = 4\n- The score of node 2 is: 1 * 1 * 2 = 2\n- The score of node 3 is: 4 = 4\n- The score of node 4 is: 4 = 4\nThe highest score is 4, and three nodes (node 1, node 3, and node 4) have the highest score.",
+  "constraints_text": "n == parents.length\n\t2 <= n <= 105\n\tparents[0] == -1\n\t0 <= parents[i] <= n - 1 for i != 0\n\tparents represents a valid binary tree.",
+  "templates": {
+    "c": "int countHighestScoreNodes(int* parents, int parentsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countHighestScoreNodes(vector<int>& parents) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countHighestScoreNodes(int[] parents) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} parents\n * @return {number}\n */\nvar countHighestScoreNodes = function(parents) {\n    \n};",
+    "python": "class Solution(object):\n    def countHighestScoreNodes(self, parents):\n        \"\"\"\n        :type parents: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct the tree's adjacency list to represent parent-child relationships for efficient traversal.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "parents-i-is-parent-of-i"
+      ],
+      "constraints": [
+        "n-parents-length",
+        "2-n-105"
+      ]
+    },
+    {
+      "intent": "Perform a DFS to compute subtree sizes for all nodes, calculate each node's score, and determine the count of nodes with the highest score.",
+      "structures": [
+        "tree",
+        "number"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "size-of-a-subtree",
+        "score-of-a-node-is-product",
+        "highest-score",
+        "number-of-nodes"
+      ],
+      "constraints": [
+        "n-parents-length",
+        "2-n-105"
+      ]
+    }
+  ]
+}

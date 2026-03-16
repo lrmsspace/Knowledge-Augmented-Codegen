@@ -1,0 +1,69 @@
+{
+  "slug": "longest-string-chain",
+  "link": "https://leetcode.com/problems/longest-string-chain/",
+  "difficulty": "Medium",
+  "index": "1096",
+  "description_full": "You are given an array of words where each word consists of lowercase English letters.\n\nwordA is a predecessor of wordB if and only if we can insert exactly one letter anywhere in wordA without changing the order of the other characters to make it equal to wordB.\n\n\n\tFor example, \"abc\" is a predecessor of \"abac\", while \"cba\" is not a predecessor of \"bcad\".\n\n\nA word chain is a sequence of words [word1, word2, ..., wordk] with k >= 1, where word1 is a predecessor of word2, word2 is a predecessor of word3, and so on. A single word is trivially a word chain with k == 1.\n\nReturn the length of the longest possible word chain with words chosen from the given list of words.\n\n \nExample 1:\n\n\nInput: words = [\"a\",\"b\",\"ba\",\"bca\",\"bda\",\"bdca\"]\nOutput: 4\nExplanation: One of the longest word chains is [\"a\",\"ba\",\"bda\",\"bdca\"].\n\n\nExample 2:\n\n\nInput: words = [\"xbc\",\"pcxbcf\",\"xb\",\"cxbc\",\"pcxbc\"]\nOutput: 5\nExplanation: All the words can be put in a word chain [\"xb\", \"xbc\", \"cxbc\", \"pcxbc\", \"pcxbcf\"].\n\n\nExample 3:\n\n\nInput: words = [\"abcd\",\"dbqca\"]\nOutput: 1\nExplanation: The trivial word chain [\"abcd\"] is one of the longest word chains.\n[\"abcd\",\"dbqca\"] is not a valid word chain because the ordering of the letters is changed.\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 1000\n\t1 <= words[i].length <= 16\n\twords[i] only consists of lowercase English letters.\n\n",
+  "description": "You are given an array of words where each word consists of lowercase English letters.\n\nwordA is a predecessor of wordB if and only if we can insert exactly one letter anywhere in wordA without changing the order of the other characters to make it equal to wordB.\n\n\n\tFor example, \"abc\" is a predecessor of \"abac\", while \"cba\" is not a predecessor of \"bcad\".\n\n\nA word chain is a sequence of words [word1, word2, ..., wordk] with k >= 1, where word1 is a predecessor of word2, word2 is a predecessor of word3, and so on. A single word is trivially a word chain with k == 1.\n\nReturn the length of the longest possible word chain with words chosen from the given list of words.",
+  "example": "Input: words = [\"a\",\"b\",\"ba\",\"bca\",\"bda\",\"bdca\"]\nOutput: 4\nExplanation: One of the longest word chains is [\"a\",\"ba\",\"bda\",\"bdca\"].",
+  "constraints_text": "1 <= words.length <= 1000\n\t1 <= words[i].length <= 16\n\twords[i] only consists of lowercase English letters.",
+  "templates": {
+    "c": "int longestStrChain(char** words, int wordsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestStrChain(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestStrChain(String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {number}\n */\nvar longestStrChain = function(words) {\n    \n};",
+    "python": "class Solution(object):\n    def longestStrChain(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort words by length and initialize DP map for chain lengths.",
+      "structures": [
+        "array",
+        "ds"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "longest-possible-word-chain",
+        "predecessor"
+      ],
+      "constraints": [
+        "1-words-length-1000"
+      ]
+    },
+    {
+      "intent": "Iterate through sorted words, generate predecessors, and update DP values.",
+      "structures": [
+        "string",
+        "ds"
+      ],
+      "actions": [
+        "dp-1d",
+        "enumeration"
+      ],
+      "cues": [
+        "insert-exactly-one-letter",
+        "predecessor"
+      ],
+      "constraints": [
+        "1-words-i-length-16"
+      ]
+    },
+    {
+      "intent": "Determine the overall maximum chain length from all computed DP values.",
+      "structures": [
+        "ds"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-length-of-the-longest-possible-word-chain"
+      ],
+      "constraints": [
+        "k-1"
+      ]
+    }
+  ]
+}

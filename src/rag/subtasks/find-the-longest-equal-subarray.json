@@ -1,0 +1,55 @@
+{
+  "slug": "find-the-longest-equal-subarray",
+  "link": "https://leetcode.com/problems/find-the-longest-equal-subarray/",
+  "difficulty": "Medium",
+  "index": "2398",
+  "description_full": "You are given a 0-indexed integer array nums and an integer k.\n\nA subarray is called equal if all of its elements are equal. Note that the empty subarray is an equal subarray.\n\nReturn the length of the longest possible equal subarray after deleting at most k elements from nums.\n\nA subarray is a contiguous, possibly empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: nums = [1,3,2,3,1,3], k = 3\nOutput: 3\nExplanation: It's optimal to delete the elements at index 2 and index 4.\nAfter deleting them, nums becomes equal to [1, 3, 3, 3].\nThe longest equal subarray starts at i = 1 and ends at j = 3 with length equal to 3.\nIt can be proven that no longer equal subarrays can be created.\n\n\nExample 2:\n\n\nInput: nums = [1,1,2,2,1,1], k = 2\nOutput: 4\nExplanation: It's optimal to delete the elements at index 2 and index 3.\nAfter deleting them, nums becomes equal to [1, 1, 1, 1].\nThe array itself is an equal subarray, so the answer is 4.\nIt can be proven that no longer equal subarrays can be created.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= nums.length\n\t0 <= k <= nums.length\n\n",
+  "description": "You are given a 0-indexed integer array nums and an integer k.\n\nA subarray is called equal if all of its elements are equal. Note that the empty subarray is an equal subarray.\n\nReturn the length of the longest possible equal subarray after deleting at most k elements from nums.\n\nA subarray is a contiguous, possibly empty sequence of elements within an array.",
+  "example": "Input: nums = [1,3,2,3,1,3], k = 3\nOutput: 3\nExplanation: It's optimal to delete the elements at index 2 and index 4.\nAfter deleting them, nums becomes equal to [1, 3, 3, 3].\nThe longest equal subarray starts at i = 1 and ends at j = 3 with length equal to 3.\nIt can be proven that no longer equal subarrays can be created.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= nums.length\n\t0 <= k <= nums.length",
+  "templates": {
+    "c": "int longestEqualSubarray(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int longestEqualSubarray(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int longestEqualSubarray(List<Integer> nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar longestEqualSubarray = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def longestEqualSubarray(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Create a mapping from each unique number to a list of its 0-indexed positions in the input array.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "0-indexed-integer-array-nums",
+        "all-of-its-elements-are-equal"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "1-nums-i-nums-length"
+      ]
+    },
+    {
+      "intent": "For each number's list of indices, use a sliding window to find the longest sequence of indices where the count of elements to delete is at most k.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "two-pointers",
+        "max-window"
+      ],
+      "cues": [
+        "longest-possible-equal-subarray",
+        "deleting-at-most-k-elements"
+      ],
+      "constraints": [
+        "0-k-nums-length"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "maximum-difference-between-even-and-odd-frequency-i",
+  "link": "https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-i/",
+  "difficulty": "Easy",
+  "index": "2372",
+  "description_full": "You are given a string s consisting of lowercase English letters.\n\nYour task is to find the maximum difference diff = freq(a1) - freq(a2) between the frequency of characters a1 and a2 in the string such that:\n\n\n\ta1 has an odd frequency in the string.\n\ta2 has an even frequency in the string.\n\n\nReturn this maximum difference.\n\n \nExample 1:\n\n\nInput: s = \"aaaaabbc\"\n\nOutput: 3\n\nExplanation:\n\n\n\tThe character 'a' has an odd frequency of 5, and 'b' has an even frequency of 2.\n\tThe maximum difference is 5 - 2 = 3.\n\n\n\nExample 2:\n\n\nInput: s = \"abcabcab\"\n\nOutput: 1\n\nExplanation:\n\n\n\tThe character 'a' has an odd frequency of 3, and 'c' has an even frequency of 2.\n\tThe maximum difference is 3 - 2 = 1.\n\n\n\n \nConstraints:\n\n\n\t3 <= s.length <= 100\n\ts consists only of lowercase English letters.\n\ts contains at least one character with an odd frequency and one with an even frequency.\n\n",
+  "description": "You are given a string s consisting of lowercase English letters.\n\nYour task is to find the maximum difference diff = freq(a1) - freq(a2) between the frequency of characters a1 and a2 in the string such that:\n\n\n\ta1 has an odd frequency in the string.\n\ta2 has an even frequency in the string.\n\n\nReturn this maximum difference.",
+  "example": "Input: s = \"aaaaabbc\"\n\nOutput: 3\n\nExplanation:\n\n\n\tThe character 'a' has an odd frequency of 5, and 'b' has an even frequency of 2.\n\tThe maximum difference is 5 - 2 = 3.",
+  "constraints_text": "3 <= s.length <= 100\n\ts consists only of lowercase English letters.\n\ts contains at least one character with an odd frequency and one with an even frequency.",
+  "templates": {
+    "c": "int maxDifference(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxDifference(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxDifference(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar maxDifference = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def maxDifference(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count the frequency of each lowercase English letter in the input string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "string-s",
+        "frequency-of-characters"
+      ],
+      "constraints": [
+        "lowercase-english-letters",
+        "s-length-100"
+      ]
+    },
+    {
+      "intent": "Find the maximum odd frequency and minimum even frequency, then calculate their difference.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "maximum-difference",
+        "odd-frequency",
+        "even-frequency"
+      ],
+      "constraints": [
+        "at-least-one-odd",
+        "at-least-one-even"
+      ]
+    }
+  ]
+}

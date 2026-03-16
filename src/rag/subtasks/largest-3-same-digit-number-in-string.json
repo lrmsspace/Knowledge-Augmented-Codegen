@@ -1,0 +1,40 @@
+{
+  "slug": "largest-3-same-digit-number-in-string",
+  "link": "https://leetcode.com/problems/largest-3-same-digit-number-in-string/",
+  "difficulty": "Easy",
+  "index": "484",
+  "description_full": "You are given a string num representing a large integer. An integer is good if it meets the following conditions:\n\n\n\tIt is a substring of num with length 3.\n\tIt consists of only one unique digit.\n\n\nReturn the maximum good integer as a string or an empty string \"\" if no such integer exists.\n\nNote:\n\n\n\tA substring is a contiguous sequence of characters within a string.\n\tThere may be leading zeroes in num or a good integer.\n\n\n \nExample 1:\n\n\nInput: num = \"6777133339\"\nOutput: \"777\"\nExplanation: There are two distinct good integers: \"777\" and \"333\".\n\"777\" is the largest, so we return \"777\".\n\n\nExample 2:\n\n\nInput: num = \"2300019\"\nOutput: \"000\"\nExplanation: \"000\" is the only good integer.\n\n\nExample 3:\n\n\nInput: num = \"42352338\"\nOutput: \"\"\nExplanation: No substring of length 3 consists of only one unique digit. Therefore, there are no good integers.\n\n\n \nConstraints:\n\n\n\t3 <= num.length <= 1000\n\tnum only consists of digits.\n\n",
+  "description": "You are given a string num representing a large integer. An integer is good if it meets the following conditions:\n\n\n\tIt is a substring of num with length 3.\n\tIt consists of only one unique digit.\n\n\nReturn the maximum good integer as a string or an empty string \"\" if no such integer exists.\n\nNote:\n\n\n\tA substring is a contiguous sequence of characters within a string.\n\tThere may be leading zeroes in num or a good integer.",
+  "example": "Input: num = \"6777133339\"\nOutput: \"777\"\nExplanation: There are two distinct good integers: \"777\" and \"333\".\n\"777\" is the largest, so we return \"777\".",
+  "constraints_text": "3 <= num.length <= 1000\n\tnum only consists of digits.",
+  "templates": {
+    "c": "char* largestGoodInteger(char* num) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string largestGoodInteger(string num) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String largestGoodInteger(String num) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @return {string}\n */\nvar largestGoodInteger = function(num) {\n    \n};",
+    "python": "class Solution(object):\n    def largestGoodInteger(self, num):\n        \"\"\"\n        :type num: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through all length-3 substrings of the input number string, identify those composed of a single repeated digit, and track the numerically largest one found.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "substring-of-num-with-length-3",
+        "consists-of-only-one-unique-digit",
+        "maximum-good-integer"
+      ],
+      "constraints": [
+        "3-num-length-1000",
+        "num-only-consists-of-digits"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits",
+  "link": "https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/",
+  "difficulty": "Hard",
+  "index": "2017",
+  "description_full": "You are given a string num representing the digits of a very large integer and an integer k. You are allowed to swap any two adjacent digits of the integer at most k times.\n\nReturn the minimum integer you can obtain also as a string.\n\n \nExample 1:\n\n\nInput: num = \"4321\", k = 4\nOutput: \"1342\"\nExplanation: The steps to obtain the minimum integer from 4321 with 4 adjacent swaps are shown.\n\n\nExample 2:\n\n\nInput: num = \"100\", k = 1\nOutput: \"010\"\nExplanation: It's ok for the output to have leading zeros, but the input is guaranteed not to have any leading zeros.\n\n\nExample 3:\n\n\nInput: num = \"36789\", k = 1000\nOutput: \"36789\"\nExplanation: We can keep the number without any swaps.\n\n\n \nConstraints:\n\n\n\t1 <= num.length <= 3 * 104\n\tnum consists of only digits and does not contain leading zeros.\n\t1 <= k <= 109\n\n",
+  "description": "You are given a string num representing the digits of a very large integer and an integer k. You are allowed to swap any two adjacent digits of the integer at most k times.\n\nReturn the minimum integer you can obtain also as a string.",
+  "example": "Input: num = \"4321\", k = 4\nOutput: \"1342\"\nExplanation: The steps to obtain the minimum integer from 4321 with 4 adjacent swaps are shown.",
+  "constraints_text": "1 <= num.length <= 3 * 104\n\tnum consists of only digits and does not contain leading zeros.\n\t1 <= k <= 109",
+  "templates": {
+    "c": "char* minInteger(char* num, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string minInteger(string num, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String minInteger(String num, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} num\n * @param {number} k\n * @return {string}\n */\nvar minInteger = function(num, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minInteger(self, num, k):\n        \"\"\"\n        :type num: str\n        :type k: int\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Initialize digit position queues and a Fenwick tree for efficient swap cost tracking.",
+      "structures": [
+        "array",
+        "queue"
+      ],
+      "actions": [
+        "enumeration",
+        "bit-fenwick"
+      ],
+      "cues": [
+        "num-representing-the-digits",
+        "original-indices"
+      ],
+      "constraints": [
+        "1-num-length-3-104"
+      ]
+    },
+    {
+      "intent": "Greedily select and place the smallest available digit at each target position, updating the swap budget and Fenwick tree.",
+      "structures": [
+        "array",
+        "queue"
+      ],
+      "actions": [
+        "greedy",
+        "bit-fenwick",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-integer",
+        "at-most-k-times",
+        "adjacent-digits"
+      ],
+      "constraints": [
+        "1-k-109"
+      ]
+    },
+    {
+      "intent": "Append any remaining digits to the result string, preserving their original relative order.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "return-the-minimum-integer",
+        "remaining-digits"
+      ],
+      "constraints": []
+    }
+  ]
+}

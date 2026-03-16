@@ -1,0 +1,71 @@
+{
+  "slug": "reverse-subarray-to-maximize-array-value",
+  "link": "https://leetcode.com/problems/reverse-subarray-to-maximize-array-value/",
+  "difficulty": "Hard",
+  "index": 1982,
+  "description_full": "You are given an integer array nums. The value of this array is defined as the sum of |nums[i] - nums[i + 1]| for all 0 <= i < nums.length - 1.\n\nYou are allowed to select any subarray of the given array and reverse it. You can perform this operation only once.\n\nFind maximum possible value of the final array.\n\n \nExample 1:\n\n\nInput: nums = [2,3,1,5,4]\nOutput: 10\nExplanation: By reversing the subarray [3,1,5] the array becomes [2,5,1,3,4] whose value is 10.\n\n\nExample 2:\n\n\nInput: nums = [2,4,9,24,2,1,10]\nOutput: 68\n\n\n \nConstraints:\n\n\n\t2 <= nums.length <= 3 * 104\n\t-105 <= nums[i] <= 105\n\tThe answer is guaranteed to fit in a 32-bit integer.\n\n",
+  "description": "You are given an integer array nums. The value of this array is defined as the sum of |nums[i] - nums[i + 1]| for all 0 <= i < nums.length - 1.\n\nYou are allowed to select any subarray of the given array and reverse it. You can perform this operation only once.\n\nFind maximum possible value of the final array.",
+  "example": "Input: nums = [2,3,1,5,4]\nOutput: 10\nExplanation: By reversing the subarray [3,1,5] the array becomes [2,5,1,3,4] whose value is 10.",
+  "constraints_text": "2 <= nums.length <= 3 * 104\n\t-105 <= nums[i] <= 105\n\tThe answer is guaranteed to fit in a 32-bit integer.",
+  "templates": {
+    "c": "int maxValueAfterReverse(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int maxValueAfterReverse(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int maxValueAfterReverse(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar maxValueAfterReverse = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def maxValueAfterReverse(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the initial array value (sum of absolute differences).",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "prefix-sum"
+      ],
+      "cues": [
+        "nums",
+        "value of array",
+        "initial sum"
+      ],
+      "constraints": [
+        ""
+      ]
+    },
+    {
+      "intent": "Iterate through all possible reverse operations (subarrays) and calculate the maximum potential change (gain) in value.",
+      "structures": [
+        "array",
+        "interval"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "subarray",
+        "reverse",
+        "maximum possible value"
+      ],
+      "constraints": [
+        "maximize new_value - initial_value"
+      ]
+    },
+    {
+      "intent": "Identify the optimal reverse subarray by analyzing boundary cases and min/max elements.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "min",
+        "max",
+        "boundary conditions"
+      ],
+      "constraints": [
+        ""
+      ]
+    }
+  ]
+}

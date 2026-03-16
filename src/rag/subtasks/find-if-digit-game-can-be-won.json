@@ -1,0 +1,55 @@
+{
+  "slug": "find-if-digit-game-can-be-won",
+  "link": "https://leetcode.com/problems/find-if-digit-game-can-be-won/",
+  "difficulty": "Easy",
+  "index": "2337",
+  "description_full": "You are given an array of positive integers nums.\n\nAlice and Bob are playing a game. In the game, Alice can choose either all single-digit numbers or all double-digit numbers from nums, and the rest of the numbers are given to Bob. Alice wins if the sum of her numbers is strictly greater than the sum of Bob's numbers.\n\nReturn true if Alice can win this game, otherwise, return false.\n\n \nExample 1:\n\n\nInput: nums = [1,2,3,4,10]\n\nOutput: false\n\nExplanation:\n\nAlice cannot win by choosing either single-digit or double-digit numbers.\n\n\nExample 2:\n\n\nInput: nums = [1,2,3,4,5,14]\n\nOutput: true\n\nExplanation:\n\nAlice can win by choosing single-digit numbers which have a sum equal to 15.\n\n\nExample 3:\n\n\nInput: nums = [5,5,5,25]\n\nOutput: true\n\nExplanation:\n\nAlice can win by choosing double-digit numbers which have a sum equal to 25.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 100\n\t1 <= nums[i] <= 99\n\n",
+  "description": "You are given an array of positive integers nums.\n\nAlice and Bob are playing a game. In the game, Alice can choose either all single-digit numbers or all double-digit numbers from nums, and the rest of the numbers are given to Bob. Alice wins if the sum of her numbers is strictly greater than the sum of Bob's numbers.\n\nReturn true if Alice can win this game, otherwise, return false.",
+  "example": "Input: nums = [1,2,3,4,10]\n\nOutput: false\n\nExplanation:\n\nAlice cannot win by choosing either single-digit or double-digit numbers.",
+  "constraints_text": "1 <= nums.length <= 100\n\t1 <= nums[i] <= 99",
+  "templates": {
+    "c": "bool canAliceWin(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool canAliceWin(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean canAliceWin(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {boolean}\n */\nvar canAliceWin = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def canAliceWin(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the total sum, sum of single-digit numbers, and sum of double-digit numbers from the input array.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "array-of-positive-integers-nums",
+        "single-digit-numbers",
+        "double-digit-numbers"
+      ],
+      "constraints": [
+        "1-nums-i-99"
+      ]
+    },
+    {
+      "intent": "Determine if Alice can win by evaluating both strategies (single-digit or double-digit choice) against Bob's sum.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "greedy"
+      ],
+      "cues": [
+        "alice-wins-if-the-sum-of-her-numbers-is-strictly-greater-than-the-sum-of-bob-s-numbers",
+        "return-true-if-alice-can-win"
+      ],
+      "constraints": [
+        "strictly-greater"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "slug": "string-compression-ii",
+  "link": "https://leetcode.com/problems/string-compression-ii/",
+  "difficulty": "Hard",
+  "index": "2023",
+  "description_full": "Run-length encoding is a string compression method that works by replacing consecutive identical characters (repeated 2 or more times) with the concatenation of the character and the number marking the count of the characters (length of the run). For example, to compress the string \"aabccc\" we replace \"aa\" by \"a2\" and replace \"ccc\" by \"c3\". Thus the compressed string becomes \"a2bc3\".\n\nNotice that in this problem, we are not adding '1' after single characters.\n\nGiven a string s and an integer k. You need to delete at most k characters from s such that the run-length encoded version of s has minimum length.\n\nFind the minimum length of the run-length encoded version of s after deleting at most k characters.\n\n \nExample 1:\n\n\nInput: s = \"aaabcccd\", k = 2\nOutput: 4\nExplanation: Compressing s without deleting anything will give us \"a3bc3d\" of length 6. Deleting any of the characters 'a' or 'c' would at most decrease the length of the compressed string to 5, for instance delete 2 'a' then we will have s = \"abcccd\" which compressed is abc3d. Therefore, the optimal way is to delete 'b' and 'd', then the compressed version of s will be \"a3c3\" of length 4.\n\nExample 2:\n\n\nInput: s = \"aabbaa\", k = 2\nOutput: 2\nExplanation: If we delete both 'b' characters, the resulting compressed string would be \"a4\" of length 2.\n\n\nExample 3:\n\n\nInput: s = \"aaaaaaaaaaa\", k = 0\nOutput: 3\nExplanation: Since k is zero, we cannot delete anything. The compressed string is \"a11\" of length 3.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 100\n\t0 <= k <= s.length\n\ts contains only lowercase English letters.\n\n",
+  "description": "Run-length encoding is a string compression method that works by replacing consecutive identical characters (repeated 2 or more times) with the concatenation of the character and the number marking the count of the characters (length of the run). For example, to compress the string \"aabccc\" we replace \"aa\" by \"a2\" and replace \"ccc\" by \"c3\". Thus the compressed string becomes \"a2bc3\".\n\nNotice that in this problem, we are not adding '1' after single characters.\n\nGiven a string s and an integer k. You need to delete at most k characters from s such that the run-length encoded version of s has minimum length.\n\nFind the minimum length of the run-length encoded version of s after deleting at most k characters.",
+  "example": "Input: s = \"aaabcccd\", k = 2\nOutput: 4\nExplanation: Compressing s without deleting anything will give us \"a3bc3d\" of length 6. Deleting any of the characters 'a' or 'c' would at most decrease the length of the compressed string to 5, for instance delete 2 'a' then we will have s = \"abcccd\" which compressed is abc3d. Therefore, the optimal way is to delete 'b' and 'd', then the compressed version of s will be \"a3c3\" of length 4.",
+  "constraints_text": "1 <= s.length <= 100\n\t0 <= k <= s.length\n\ts contains only lowercase English letters.",
+  "templates": {
+    "c": "int getLengthOfOptimalCompression(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int getLengthOfOptimalCompression(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int getLengthOfOptimalCompression(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {number}\n */\nvar getLengthOfOptimalCompression = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def getLengthOfOptimalCompression(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Implement a helper function to calculate the run-length encoded string length for a given character count.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "run-length-encoded-version",
+        "length"
+      ],
+      "constraints": [
+        "not-adding-1-after-single-characters"
+      ]
+    },
+    {
+      "intent": "Initialize and fill a 2D dynamic programming table where dp[i][j] stores the minimum RLE length for suffix s[i:] using exactly j deletions.",
+      "structures": [
+        "array",
+        "string",
+        "number"
+      ],
+      "actions": [
+        "dp-2d",
+        "enumeration",
+        "greedy",
+        "counting"
+      ],
+      "cues": [
+        "minimum-length",
+        "delete-at-most-k-characters"
+      ],
+      "constraints": [
+        "n-up-to-100",
+        "k-up-to-n"
+      ]
+    },
+    {
+      "intent": "Determine the final minimum RLE length by finding the minimum value in the first row of the DP table, considering all allowed deletions up to k.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-length",
+        "at-most-k-characters"
+      ],
+      "constraints": [
+        "k-is-the-maximum-allowed-deletions"
+      ]
+    }
+  ]
+}

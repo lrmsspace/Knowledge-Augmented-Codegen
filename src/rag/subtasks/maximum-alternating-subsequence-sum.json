@@ -1,0 +1,38 @@
+{
+  "slug": "maximum-alternating-subsequence-sum",
+  "link": "https://leetcode.com/problems/maximum-alternating-subsequence-sum/",
+  "difficulty": "Medium",
+  "index": "1420",
+  "description_full": "The alternating sum of a 0-indexed array is defined as the sum of the elements at even indices minus the sum of the elements at odd indices.\r\n\r\n\r\n\tFor example, the alternating sum of [4,2,5,3] is (4 + 5) - (2 + 3) = 4.\r\n\r\n\r\nGiven an array nums, return the maximum alternating sum of any subsequence of nums (after reindexing the elements of the subsequence).\r\n\r\n\r\n\r\n\r\nA subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the remaining elements' relative order. For example, [2,7,4] is a subsequence of [4,2,3,7,2,1,4] (the underlined elements), while [2,4,2] is not.\r\n\r\n \r\nExample 1:\r\n\r\n\r\nInput: nums = [4,2,5,3]\r\nOutput: 7\r\nExplanation: It is optimal to choose the subsequence [4,2,5] with alternating sum (4 + 5) - 2 = 7.\r\n\r\n\r\nExample 2:\r\n\r\n\r\nInput: nums = [5,6,7,8]\r\nOutput: 8\r\nExplanation: It is optimal to choose the subsequence [8] with alternating sum 8.\r\n\r\n\r\nExample 3:\r\n\r\n\r\nInput: nums = [6,2,1,2,4,5]\r\nOutput: 10\r\nExplanation: It is optimal to choose the subsequence [6,1,5] with alternating sum (6 + 5) - 1 = 10.\r\n\r\n\r\n \r\nConstraints:\r\n\r\n\r\n\t1 <= nums.length <= 105\r\n\t1 <= nums[i] <= 105\r\n",
+  "description": "The alternating sum of a 0-indexed array is defined as the sum of the elements at even indices minus the sum of the elements at odd indices.\r\n\r\n\r\n\tFor example, the alternating sum of [4,2,5,3] is (4 + 5) - (2 + 3) = 4.\r\n\r\n\r\nGiven an array nums, return the maximum alternating sum of any subsequence of nums (after reindexing the elements of the subsequence).\r\n\r\n\r\n\r\n\r\nA subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the remaining elements' relative order. For example, [2,7,4] is a subsequence of [4,2,3,7,2,1,4] (the underlined elements), while [2,4,2] is not.",
+  "example": "Input: nums = [4,2,5,3]\r\nOutput: 7\r\nExplanation: It is optimal to choose the subsequence [4,2,5] with alternating sum (4 + 5) - 2 = 7.",
+  "constraints_text": "1 <= nums.length <= 105\r\n\t1 <= nums[i] <= 105",
+  "templates": {
+    "c": "long long maxAlternatingSum(int* nums, int numsSize){\r\n\r\n}",
+    "cpp": "class Solution {\r\npublic:\r\n    long long maxAlternatingSum(vector<int>& nums) {\r\n        \r\n    }\r\n};",
+    "java": "class Solution {\r\n    public long maxAlternatingSum(int[] nums) {\r\n        \r\n    }\r\n}",
+    "javascript": "/**\r\n * @param {number[]} nums\r\n * @return {number}\r\n */\r\nvar maxAlternatingSum = function(nums) {\r\n    \r\n};",
+    "python": "class Solution(object):\r\n    def maxAlternatingSum(self, nums):\r\n        \"\"\"\r\n        :type nums: List[int]\r\n        :rtype: int\r\n        \"\"\""
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the maximum alternating sum of any subsequence by iteratively updating maximum sums for even and odd positions.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "dp-1d"
+      ],
+      "cues": [
+        "maximum-alternating-sum",
+        "subsequence",
+        "reindexing"
+      ],
+      "constraints": [
+        "n-up-to-10-5",
+        "nums-i-up-to-10-9"
+      ]
+    }
+  ]
+}

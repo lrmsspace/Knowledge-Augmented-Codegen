@@ -1,0 +1,72 @@
+{
+  "slug": "select-k-disjoint-special-substrings",
+  "link": "https://leetcode.com/problems/select-k-disjoint-special-substrings/",
+  "difficulty": "Medium",
+  "index": "2615",
+  "description_full": "Given a string s of length n and an integer k, determine whether it is possible to select k disjoint special substrings.\n\nA special substring is a substring where:\n\n\n\tAny character present inside the substring should not appear outside it in the string.\n\tThe substring is not the entire string s.\n\n\nNote that all k substrings must be disjoint, meaning they cannot overlap.\n\nReturn true if it is possible to select k such disjoint special substrings; otherwise, return false.\n\n \nExample 1:\n\n\nInput: s = \"abcdbaefab\", k = 2\n\nOutput: true\n\nExplanation:\n\n\n\tWe can select two disjoint special substrings: \"cd\" and \"ef\".\n\t\"cd\" contains the characters 'c' and 'd', which do not appear elsewhere in s.\n\t\"ef\" contains the characters 'e' and 'f', which do not appear elsewhere in s.\n\n\n\nExample 2:\n\n\nInput: s = \"cdefdc\", k = 3\n\nOutput: false\n\nExplanation:\n\nThere can be at most 2 disjoint special substrings: \"e\" and \"f\". Since k = 3, the output is false.\n\n\nExample 3:\n\n\nInput: s = \"abeabe\", k = 0\n\nOutput: true\n\n\n \nConstraints:\n\n\n\t2 <= n == s.length <= 5 * 104\n\t0 <= k <= 26\n\ts consists only of lowercase English letters.\n\n",
+  "description": "Given a string s of length n and an integer k, determine whether it is possible to select k disjoint special substrings.\n\nA special substring is a substring where:\n\n\n\tAny character present inside the substring should not appear outside it in the string.\n\tThe substring is not the entire string s.\n\n\nNote that all k substrings must be disjoint, meaning they cannot overlap.\n\nReturn true if it is possible to select k such disjoint special substrings; otherwise, return false.",
+  "example": "Input: s = \"abcdbaefab\", k = 2\n\nOutput: true\n\nExplanation:\n\n\n\tWe can select two disjoint special substrings: \"cd\" and \"ef\".\n\t\"cd\" contains the characters 'c' and 'd', which do not appear elsewhere in s.\n\t\"ef\" contains the characters 'e' and 'f', which do not appear elsewhere in s.",
+  "constraints_text": "2 <= n == s.length <= 5 * 104\n\t0 <= k <= 26\n\ts consists only of lowercase English letters.",
+  "templates": {
+    "c": "bool maxSubstringLength(char* s, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool maxSubstringLength(string s, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean maxSubstringLength(String s, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {number} k\n * @return {boolean}\n */\nvar maxSubstringLength = function(s, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSubstringLength(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute first and last occurrence indices for each character in the string.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "any-character-present-inside-the-substring-should-not-appear-outside-it"
+      ],
+      "constraints": [
+        "n"
+      ]
+    },
+    {
+      "intent": "Identify and collect all valid special substrings based on precomputed character occurrences.",
+      "structures": [
+        "string",
+        "array",
+        "interval"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "special-substring",
+        "not-the-entire-string-s"
+      ],
+      "constraints": [
+        "j-i-1-n"
+      ]
+    },
+    {
+      "intent": "Determine if it's possible to select k disjoint special substrings from the identified list.",
+      "structures": [
+        "interval",
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "interval-scheduling"
+      ],
+      "cues": [
+        "k-disjoint-special-substrings",
+        "disjoint-meaning-they-cannot-overlap"
+      ],
+      "constraints": [
+        "k"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "build-an-array-with-stack-operations",
+  "link": "https://leetcode.com/problems/build-an-array-with-stack-operations/",
+  "difficulty": "Medium",
+  "index": "1242",
+  "description_full": "You are given an integer array target and an integer n.\n\nYou have an empty stack with the two following operations:\n\n\n\t\"Push\": pushes an integer to the top of the stack.\n\t\"Pop\": removes the integer on the top of the stack.\n\n\nYou also have a stream of the integers in the range [1, n].\n\nUse the two stack operations to make the numbers in the stack (from the bottom to the top) equal to target. You should follow the following rules:\n\n\n\tIf the stream of the integers is not empty, pick the next integer from the stream and push it to the top of the stack.\n\tIf the stack is not empty, pop the integer at the top of the stack.\n\tIf, at any moment, the elements in the stack (from the bottom to the top) are equal to target, do not read new integers from the stream and do not do more operations on the stack.\n\n\nReturn the stack operations needed to build target following the mentioned rules. If there are multiple valid answers, return any of them.\n\n \nExample 1:\n\n\nInput: target = [1,3], n = 3\nOutput: [\"Push\",\"Push\",\"Pop\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nPop the integer on the top of the stack. s = [1].\nRead 3 from the stream and push it to the stack. s = [1,3].\n\n\nExample 2:\n\n\nInput: target = [1,2,3], n = 3\nOutput: [\"Push\",\"Push\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nRead 3 from the stream and push it to the stack. s = [1,2,3].\n\n\nExample 3:\n\n\nInput: target = [1,2], n = 4\nOutput: [\"Push\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nSince the stack (from the bottom to the top) is equal to target, we stop the stack operations.\nThe answers that read integer 3 from the stream are not accepted.\n\n\n \nConstraints:\n\n\n\t1 <= target.length <= 100\n\t1 <= n <= 100\n\t1 <= target[i] <= n\n\ttarget is strictly increasing.\n\n",
+  "description": "You are given an integer array target and an integer n.\n\nYou have an empty stack with the two following operations:\n\n\n\t\"Push\": pushes an integer to the top of the stack.\n\t\"Pop\": removes the integer on the top of the stack.\n\n\nYou also have a stream of the integers in the range [1, n].\n\nUse the two stack operations to make the numbers in the stack (from the bottom to the top) equal to target. You should follow the following rules:\n\n\n\tIf the stream of the integers is not empty, pick the next integer from the stream and push it to the top of the stack.\n\tIf the stack is not empty, pop the integer at the top of the stack.\n\tIf, at any moment, the elements in the stack (from the bottom to the top) are equal to target, do not read new integers from the stream and do not do more operations on the stack.\n\n\nReturn the stack operations needed to build target following the mentioned rules. If there are multiple valid answers, return any of them.",
+  "example": "Input: target = [1,3], n = 3\nOutput: [\"Push\",\"Push\",\"Pop\",\"Push\"]\nExplanation: Initially the stack s is empty. The last element is the top of the stack.\nRead 1 from the stream and push it to the stack. s = [1].\nRead 2 from the stream and push it to the stack. s = [1,2].\nPop the integer on the top of the stack. s = [1].\nRead 3 from the stream and push it to the stack. s = [1,3].",
+  "constraints_text": "1 <= target.length <= 100\n\t1 <= n <= 100\n\t1 <= target[i] <= n\n\ttarget is strictly increasing.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** buildArray(int* target, int targetSize, int n, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> buildArray(vector<int>& target, int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> buildArray(int[] target, int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} target\n * @param {number} n\n * @return {string[]}\n */\nvar buildArray = function(target, n) {\n    \n};",
+    "python": "class Solution(object):\n    def buildArray(self, target, n):\n        \"\"\"\n        :type target: List[int]\n        :type n: int\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate stack operations by iterating through numbers 1 to N, pushing each, and popping if it's not the next required target element.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "stream-of-integers-1-n",
+        "make-numbers-in-stack-equal-to-target",
+        "return-stack-operations"
+      ],
+      "constraints": [
+        "empty-stack",
+        "rules-for-push-pop",
+        "stop-when-stack-equals-target"
+      ]
+    }
+  ]
+}

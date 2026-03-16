@@ -1,0 +1,54 @@
+{
+  "slug": "minimum-number-of-valid-strings-to-form-target-ii",
+  "link": "https://leetcode.com/problems/minimum-number-of-valid-strings-to-form-target-ii/",
+  "difficulty": "Hard",
+  "index": "2760",
+  "description_full": "You are given an array of strings words and a string target.\n\nA string x is called valid if x is a prefix of any string in words.\n\nReturn the minimum number of valid strings that can be concatenated to form target. If it is not possible to form target, return -1.\n\n \nExample 1:\n\n\nInput: words = [\"abc\",\"aaaaa\",\"bcdef\"], target = \"aabcdabc\"\n\nOutput: 3\n\nExplanation:\n\nThe target string can be formed by concatenating:\n\n\n\tPrefix of length 2 of words[1], i.e. \"aa\".\n\tPrefix of length 3 of words[2], i.e. \"bcd\".\n\tPrefix of length 3 of words[0], i.e. \"abc\".\n\n\n\nExample 2:\n\n\nInput: words = [\"abababab\",\"ab\"], target = \"ababaababa\"\n\nOutput: 2\n\nExplanation:\n\nThe target string can be formed by concatenating:\n\n\n\tPrefix of length 5 of words[0], i.e. \"ababa\".\n\tPrefix of length 5 of words[0], i.e. \"ababa\".\n\n\n\nExample 3:\n\n\nInput: words = [\"abcdef\"], target = \"xyz\"\n\nOutput: -1\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 100\n\t1 <= words[i].length <= 5 * 104\n\tThe input is generated such that sum(words[i].length) <= 105.\n\twords[i] consists only of lowercase English letters.\n\t1 <= target.length <= 5 * 104\n\ttarget consists only of lowercase English letters.\n\n",
+  "description": "You are given an array of strings words and a string target.\n\nA string x is called valid if x is a prefix of any string in words.\n\nReturn the minimum number of valid strings that can be concatenated to form target. If it is not possible to form target, return -1.",
+  "example": "Input: words = [\"abc\",\"aaaaa\",\"bcdef\"], target = \"aabcdabc\"\n\nOutput: 3\n\nExplanation:\n\nThe target string can be formed by concatenating:\n\n\n\tPrefix of length 2 of words[1], i.e. \"aa\".\n\tPrefix of length 3 of words[2], i.e. \"bcd\".\n\tPrefix of length 3 of words[0], i.e. \"abc\".",
+  "constraints_text": "1 <= words.length <= 100\n\t1 <= words[i].length <= 5 * 104\n\tThe input is generated such that sum(words[i].length) <= 105.\n\twords[i] consists only of lowercase English letters.\n\t1 <= target.length <= 5 * 104\n\ttarget consists only of lowercase English letters.",
+  "templates": {
+    "c": "int minValidStrings(char** words, int wordsSize, char* target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minValidStrings(vector<string>& words, string target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minValidStrings(String[] words, String target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @param {string} target\n * @return {number}\n */\nvar minValidStrings = function(words, target) {\n    \n};",
+    "python": "class Solution(object):\n    def minValidStrings(self, words, target):\n        \"\"\"\n        :type words: List[str]\n        :type target: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Build a Trie from all words to efficiently identify valid prefixes.",
+      "structures": [
+        "trie",
+        "string"
+      ],
+      "actions": [
+        "dfs"
+      ],
+      "cues": [
+        "prefix-of-any-string-in-words",
+        "valid-string"
+      ],
+      "constraints": [
+        "sum-words-i-length-5-104"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum number of valid strings to form the target using dynamic programming.",
+      "structures": [
+        "array",
+        "string"
+      ],
+      "actions": [
+        "dp-1d",
+        "trie-match"
+      ],
+      "cues": [
+        "minimum-number",
+        "concatenated-to-form-target"
+      ],
+      "constraints": [
+        "target-length-5-104"
+      ]
+    }
+  ]
+}

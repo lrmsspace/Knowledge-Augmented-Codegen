@@ -1,0 +1,57 @@
+{
+  "slug": "most-frequent-subtree-sum",
+  "link": "https://leetcode.com/problems/most-frequent-subtree-sum/",
+  "difficulty": "Medium",
+  "index": "843",
+  "description_full": "Given the root of a binary tree, return the most frequent subtree sum. If there is a tie, return all the values with the highest frequency in any order.\n\nThe subtree sum of a node is defined as the sum of all the node values formed by the subtree rooted at that node (including the node itself).\n\n \nExample 1:\n\n\nInput: root = [5,2,-3]\nOutput: [2,-3,4]\n\n\nExample 2:\n\n\nInput: root = [5,2,-5]\nOutput: [2]\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 104].\n\t-105 <= Node.val <= 105\n\n",
+  "description": "Given the root of a binary tree, return the most frequent subtree sum. If there is a tie, return all the values with the highest frequency in any order.\n\nThe subtree sum of a node is defined as the sum of all the node values formed by the subtree rooted at that node (including the node itself).",
+  "example": "Input: root = [5,2,-3]\nOutput: [2,-3,4]",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 104].\n\t-105 <= Node.val <= 105",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\n/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nint* findFrequentTreeSum(struct TreeNode* root, int* returnSize) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    vector<int> findFrequentTreeSum(TreeNode* root) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int[] findFrequentTreeSum(TreeNode root) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @return {number[]}\n */\nvar findFrequentTreeSum = function(root) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def findFrequentTreeSum(self, root):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :rtype: List[int]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Perform a post-order DFS to compute subtree sums for all nodes and store their frequencies in a map.",
+      "structures": [
+        "tree",
+        "number",
+        "ds"
+      ],
+      "actions": [
+        "dfs",
+        "recursion",
+        "counting"
+      ],
+      "cues": [
+        "subtree-sum",
+        "binary-tree",
+        "most-frequent"
+      ],
+      "constraints": [
+        "nodes-in-1-10-4",
+        "node-val-in-10-5-10-5"
+      ]
+    },
+    {
+      "intent": "Iterate through the recorded sum frequencies to find the maximum frequency and collect all sums that achieve this frequency.",
+      "structures": [
+        "ds",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "most-frequent",
+        "tie-return-all-values"
+      ],
+      "constraints": []
+    }
+  ]
+}

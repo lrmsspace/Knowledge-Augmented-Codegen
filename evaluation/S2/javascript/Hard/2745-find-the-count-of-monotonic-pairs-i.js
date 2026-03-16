@@ -1,0 +1,88 @@
+// Source: https://leetcode.com/problems/find-the-count-of-monotonic-pairs-i/   |   Difficulty: Hard
+//
+// Problem Description:
+// You are given an array of positive integers nums of length n.
+//
+// We call a pair of non-negative integer arrays (arr1, arr2) monotonic if:
+//
+//
+// 	The lengths of both arrays are n.
+// 	arr1 is monotonically non-decreasing, in other words, arr1[0] <= arr1[1] <= ... <= arr1[n - 1].
+// 	arr2 is monotonically non-increasing, in other words, arr2[0] >= arr2[1] >= ... >= arr2[n - 1].
+// 	arr1[i] + arr2[i] == nums[i] for all 0 <= i <= n - 1.
+//
+//
+// Return the count of monotonic pairs.
+//
+// Since the answer may be very large, return it modulo 109 + 7.
+//
+// Example:
+// Input: nums = [2,3,2]
+//
+// Output: 4
+//
+// Explanation:
+//
+// The good pairs are:
+//
+//
+// 	([0, 1, 1], [2, 2, 1])
+// 	([0, 1, 2], [2, 2, 0])
+// 	([0, 2, 2], [2, 1, 0])
+// 	([1, 2, 2], [1, 1, 0])
+//
+// Constraints:
+// 1 <= n == nums.length <= 2000
+// 	1 <= nums[i] <= 50
+//
+// Helpful references (internal KB):
+// - Binomial Coefficients (array, enumeration)
+//   • When to use: When you need to calculate the number of ways to choose k items from n distinct items, often under modular constraints.
+//   • Idea: Binomial coefficients represent the number of ways to choose k items from a set of n distinct items. They can be computed using Pascal's identity or factorials, with complexity varying based on the method and modulo requirements.
+//   • Invariants: For Pascal's triangle, dp[i][j] stores C(i, j).; For factorial method, fact[i] stores i! % M.
+//   • Tips: Use Pascal's triangle for small n and k values.; Precompute factorials and inverse factorials for larger n modulo a prime.
+//   • Pitfalls: Overflow with large factorials if not using modular arithmetic.; Division by zero when computing inverse modulo if modulus is not prime.
+// - Digit DP (array, number, digit-dp, recursion)
+//   • When to use: Used for counting numbers or summing properties of numbers within a given range [A, B] that satisfy certain digit-based conditions.
+//   • Idea: Digit DP is a dynamic programming technique to count numbers or calculate sums of properties for numbers in a given range [A, B] by building them digit by digit. It typically operates in O(D * S) time, where D is the number of digits and S is the maximum sum/property value.
+//   • Invariants: The `tight` parameter correctly reflects if the current digit choice is restricted by the original number's digit at the current position.; The `sum` parameter accurately accumulates the sum of digits chosen for the prefix constructed so far.
+//   • Tips: Convert the upper bound number into a digit array for easier processing.; Define the DP state to include current index, tight constraint, and any relevant accumulated property (e.g., sum, count).
+//   • Pitfalls: Incorrectly handling the `tight` constraint, leading to overcounting or undercounting.; Forgetting to memoize or using an insufficient DP table size for state parameters.
+// - Disjoint Sparse Table tutorial (array, ds, sparse-table, prefix-sum)
+//   • When to use: Use when you need to perform O(1) range queries on a static array for an associative operation, after an O(N log N) preprocessing step.
+//   • Idea: A data structure that precomputes answers for all possible range queries using an associative operation on a static array. It achieves O(1) query time and O(N log N) build time by storing prefix-like sums within logarithmically sized blocks.
+//   • Invariants: For each level k, the array is partitioned into 2^k segments.; Within each segment, table[k][j] stores the result of the associative operation from j to the segment's midpoint (or midpoint to j).
+//   • Tips: Ensure the operation is associative (e.g., min, max, sum, gcd, bitwise operations).; Preprocessing takes O(N log N) time and space.
+//   • Pitfalls: Not suitable for mutable arrays; updates require rebuilding the table.; Requires O(N log N) memory, which can be substantial for very large N.
+//
+// Notes:
+// - Keep the given function signature unchanged.
+// - Do not add custom input parsing or console I/O unless the template explicitly requires it; rely on parameters/return value only.
+// - Use standard ECMAScript features supported by LeetCode (Node.js runtime); no external packages.
+// - Be careful with number precision: JavaScript Number is double; use BigInt only when necessary and keep return type consistent with the problem requirements.
+// - If you introduce helper functions, define them in the same file and avoid relying on global mutable state across test cases.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var countOfPairs = function(nums) {
+    const mod = 1e9 + 7;
+    const n = nums.length;
+    const count = new Array(51).fill(0);
+    for (const num of nums) {
+        count[num]++;
+    }
+    let result = 0;
+    for (let i = 0; i <= 50; i++) {
+        for (let j = i; j <= 50; j++) {
+            if (i + j > 50) break;
+            if (i === j) {
+                result = (result + count[i] * (count[i] - 1) / 2) % mod;
+            } else {
+                result = (result + count[i] * count[j]) % mod;
+            }
+        }
+    }
+    return result;
+};

@@ -1,0 +1,55 @@
+{
+  "slug": "special-positions-in-a-binary-matrix",
+  "link": "https://leetcode.com/problems/special-positions-in-a-binary-matrix/",
+  "difficulty": "Easy",
+  "index": "334",
+  "description_full": "Given an m x n binary matrix mat, return the number of special positions in mat.\n\nA position (i, j) is called special if mat[i][j] == 1 and all other elements in row i and column j are 0 (rows and columns are 0-indexed).\n\n \nExample 1:\n\n\nInput: mat = [[1,0,0],[0,0,1],[1,0,0]]\nOutput: 1\nExplanation: (1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.\n\n\nExample 2:\n\n\nInput: mat = [[1,0,0],[0,1,0],[0,0,1]]\nOutput: 3\nExplanation: (0, 0), (1, 1) and (2, 2) are special positions.\n\n\n \nConstraints:\n\n\n\tm == mat.length\n\tn == mat[i].length\n\t1 <= m, n <= 100\n\tmat[i][j] is either 0 or 1.\n\n",
+  "description": "Given an m x n binary matrix mat, return the number of special positions in mat.\n\nA position (i, j) is called special if mat[i][j] == 1 and all other elements in row i and column j are 0 (rows and columns are 0-indexed).",
+  "example": "Input: mat = [[1,0,0],[0,0,1],[1,0,0]]\nOutput: 1\nExplanation: (1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.",
+  "constraints_text": "m == mat.length\n\tn == mat[i].length\n\t1 <= m, n <= 100\n\tmat[i][j] is either 0 or 1.",
+  "templates": {
+    "c": "int numSpecial(int** mat, int matSize, int* matColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numSpecial(vector<vector<int>>& mat) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numSpecial(int[][] mat) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} mat\n * @return {number}\n */\nvar numSpecial = function(mat) {\n    \n};",
+    "python": "class Solution(object):\n    def numSpecial(self, mat):\n        \"\"\"\n        :type mat: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Compute the sum of 1s for each row and each column in the matrix.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "all-other-elements-in-row-i-and-column-j-are-0"
+      ],
+      "constraints": [
+        "m-mat-length",
+        "n-mat-i-length"
+      ]
+    },
+    {
+      "intent": "Iterate through the matrix to find and count special positions using precomputed row and column sums.",
+      "structures": [
+        "matrix",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "mat-i-j-1",
+        "return-the-number-of-special-positions"
+      ],
+      "constraints": [
+        "mat-i-j-is-either-0-or-1"
+      ]
+    }
+  ]
+}

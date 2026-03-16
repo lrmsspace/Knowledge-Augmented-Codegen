@@ -1,0 +1,41 @@
+{
+  "slug": "count-the-number-of-good-subarrays",
+  "link": "https://leetcode.com/problems/count-the-number-of-good-subarrays/",
+  "difficulty": "Medium",
+  "index": "1661",
+  "description_full": "Given an integer array nums and an integer k, return the number of good subarrays of nums.\n\nA subarray arr is good if there are at least k pairs of indices (i, j) such that i < j and arr[i] == arr[j].\n\nA subarray is a contiguous non-empty sequence of elements within an array.\n\n \nExample 1:\n\n\nInput: nums = [1,1,1,1,1], k = 10\nOutput: 1\nExplanation: The only good subarray is the array nums itself.\n\n\nExample 2:\n\n\nInput: nums = [3,1,4,3,2,2,4], k = 2\nOutput: 4\nExplanation: There are 4 different good subarrays:\n- [3,1,4,3,2,2] that has 2 pairs.\n- [3,1,4,3,2,2,4] that has 3 pairs.\n- [1,4,3,2,2,4] that has 2 pairs.\n- [4,3,2,2,4] that has 2 pairs.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i], k <= 109\n\n",
+  "description": "Given an integer array nums and an integer k, return the number of good subarrays of nums.\n\nA subarray arr is good if there are at least k pairs of indices (i, j) such that i < j and arr[i] == arr[j].\n\nA subarray is a contiguous non-empty sequence of elements within an array.",
+  "example": "Input: nums = [1,1,1,1,1], k = 10\nOutput: 1\nExplanation: The only good subarray is the array nums itself.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i], k <= 109",
+  "templates": {
+    "c": "long long countGood(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long countGood(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long countGood(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar countGood = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def countGood(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count good subarrays by iterating with a two-pointer sliding window, maintaining element frequencies and the total number of valid pairs.",
+      "structures": [
+        "array",
+        "ds",
+        "number"
+      ],
+      "actions": [
+        "two-pointers",
+        "sliding-window",
+        "counting"
+      ],
+      "cues": [
+        "good-subarrays",
+        "at-least-k-pairs",
+        "i-j-and-arr-i-arr-j"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "1-nums-i-k-109"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "three-divisors",
+  "link": "https://leetcode.com/problems/three-divisors/",
+  "difficulty": "Easy",
+  "index": "418",
+  "description_full": "Given an integer n, return true if n has exactly three positive divisors. Otherwise, return false.\n\nAn integer m is a divisor of n if there exists an integer k such that n = k * m.\n\n \nExample 1:\n\n\nInput: n = 2\nOutput: false\nExplantion: 2 has only two divisors: 1 and 2.\n\n\nExample 2:\n\n\nInput: n = 4\nOutput: true\nExplantion: 4 has three divisors: 1, 2, and 4.\n\n\n \nConstraints:\n\n\n\t1 <= n <= 104\n\n",
+  "description": "Given an integer n, return true if n has exactly three positive divisors. Otherwise, return false.\n\nAn integer m is a divisor of n if there exists an integer k such that n = k * m.",
+  "example": "Input: n = 2\nOutput: false\nExplantion: 2 has only two divisors: 1 and 2.",
+  "constraints_text": "1 <= n <= 104",
+  "templates": {
+    "c": "bool isThree(int n) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool isThree(int n) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean isThree(int n) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number} n\n * @return {boolean}\n */\nvar isThree = function(n) {\n    \n};",
+    "python": "class Solution(object):\n    def isThree(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine if the given integer n is the square of a prime number, which implies it has exactly three divisors.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "exactly-three-positive-divisors"
+      ],
+      "constraints": [
+        "1-n-10-4"
+      ]
+    }
+  ]
+}

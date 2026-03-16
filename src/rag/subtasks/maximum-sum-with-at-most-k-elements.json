@@ -1,0 +1,54 @@
+{
+  "slug": "maximum-sum-with-at-most-k-elements",
+  "link": "https://leetcode.com/problems/maximum-sum-with-at-most-k-elements/",
+  "difficulty": "Medium",
+  "index": "2616",
+  "description_full": "You are given a 2D integer matrix grid of size n x m, an integer array limits of length n, and an integer k. The task is to find the maximum sum of at most k elements from the matrix grid such that:\n\n\n\t\n\tThe number of elements taken from the ith row of grid does not exceed limits[i].\n\t\n\n\nReturn the maximum sum.\n\n \nExample 1:\n\n\nInput: grid = [[1,2],[3,4]], limits = [1,2], k = 2\n\nOutput: 7\n\nExplanation:\n\n\n\tFrom the second row, we can take at most 2 elements. The elements taken are 4 and 3.\n\tThe maximum possible sum of at most 2 selected elements is 4 + 3 = 7.\n\n\n\nExample 2:\n\n\nInput: grid = [[5,3,7],[8,2,6]], limits = [2,2], k = 3\n\nOutput: 21\n\nExplanation:\n\n\n\tFrom the first row, we can take at most 2 elements. The element taken is 7.\n\tFrom the second row, we can take at most 2 elements. The elements taken are 8 and 6.\n\tThe maximum possible sum of at most 3 selected elements is 7 + 8 + 6 = 21.\n\n\n\n \nConstraints:\n\n\n\tn == grid.length == limits.length\n\tm == grid[i].length\n\t1 <= n, m <= 500\n\t0 <= grid[i][j] <= 105\n\t0 <= limits[i] <= m\n\t0 <= k <= min(n * m, sum(limits))\n\n",
+  "description": "You are given a 2D integer matrix grid of size n x m, an integer array limits of length n, and an integer k. The task is to find the maximum sum of at most k elements from the matrix grid such that:\n\n\n\t\n\tThe number of elements taken from the ith row of grid does not exceed limits[i].\n\t\n\n\nReturn the maximum sum.",
+  "example": "Input: grid = [[1,2],[3,4]], limits = [1,2], k = 2\n\nOutput: 7\n\nExplanation:\n\n\n\tFrom the second row, we can take at most 2 elements. The elements taken are 4 and 3.\n\tThe maximum possible sum of at most 2 selected elements is 4 + 3 = 7.",
+  "constraints_text": "n == grid.length == limits.length\n\tm == grid[i].length\n\t1 <= n, m <= 500\n\t0 <= grid[i][j] <= 105\n\t0 <= limits[i] <= m\n\t0 <= k <= min(n * m, sum(limits))",
+  "templates": {
+    "c": "long long maxSum(int** grid, int gridSize, int* gridColSize, int* limits, int limitsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long maxSum(vector<vector<int>>& grid, vector<int>& limits, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long maxSum(int[][] grid, int[] limits, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @param {number[]} limits\n * @param {number} k\n * @return {number}\n */\nvar maxSum = function(grid, limits, k) {\n    \n};",
+    "python": "class Solution(object):\n    def maxSum(self, grid, limits, k):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type limits: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "For each row, identify and collect the largest elements up to its specified limit.",
+      "structures": [
+        "matrix",
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "number-of-elements-taken-from-the-ith-row-of-grid-does-not-exceed-limits-i"
+      ],
+      "constraints": [
+        "1-n-m-500",
+        "0-limits-i-m"
+      ]
+    },
+    {
+      "intent": "Calculate the maximum sum by selecting the overall top K elements from all collected candidates.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "prefix-sum"
+      ],
+      "cues": [
+        "maximum-sum-of-at-most-k-elements"
+      ],
+      "constraints": [
+        "0-k-min-n-m-sum-limits"
+      ]
+    }
+  ]
+}

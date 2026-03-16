@@ -1,0 +1,41 @@
+{
+  "slug": "find-winner-on-a-tic-tac-toe-game",
+  "link": "https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/",
+  "difficulty": "Easy",
+  "index": "264",
+  "description_full": "Tic-tac-toe is played by two players A and B on a 3 x 3 grid. The rules of Tic-Tac-Toe are:\n\n\n\tPlayers take turns placing characters into empty squares ' '.\n\tThe first player A always places 'X' characters, while the second player B always places 'O' characters.\n\t'X' and 'O' characters are always placed into empty squares, never on filled ones.\n\tThe game ends when there are three of the same (non-empty) character filling any row, column, or diagonal.\n\tThe game also ends if all squares are non-empty.\n\tNo more moves can be played if the game is over.\n\n\nGiven a 2D integer array moves where moves[i] = [rowi, coli] indicates that the ith move will be played on grid[rowi][coli]. return the winner of the game if it exists (A or B). In case the game ends in a draw return \"Draw\". If there are still movements to play return \"Pending\".\n\nYou can assume that moves is valid (i.e., it follows the rules of Tic-Tac-Toe), the grid is initially empty, and A will play first.\n\n \nExample 1:\n\n\nInput: moves = [[0,0],[2,0],[1,1],[2,1],[2,2]]\nOutput: \"A\"\nExplanation: A wins, they always play first.\n\n\nExample 2:\n\n\nInput: moves = [[0,0],[1,1],[0,1],[0,2],[1,0],[2,0]]\nOutput: \"B\"\nExplanation: B wins.\n\n\nExample 3:\n\n\nInput: moves = [[0,0],[1,1],[2,0],[1,0],[1,2],[2,1],[0,1],[0,2],[2,2]]\nOutput: \"Draw\"\nExplanation: The game ends in a draw since there are no moves to make.\n\n\n \nConstraints:\n\n\n\t1 <= moves.length <= 9\n\tmoves[i].length == 2\n\t0 <= rowi, coli <= 2\n\tThere are no repeated elements on moves.\n\tmoves follow the rules of tic tac toe.\n\n",
+  "description": "Tic-tac-toe is played by two players A and B on a 3 x 3 grid. The rules of Tic-Tac-Toe are:\n\n\n\tPlayers take turns placing characters into empty squares ' '.\n\tThe first player A always places 'X' characters, while the second player B always places 'O' characters.\n\t'X' and 'O' characters are always placed into empty squares, never on filled ones.\n\tThe game ends when there are three of the same (non-empty) character filling any row, column, or diagonal.\n\tThe game also ends if all squares are non-empty.\n\tNo more moves can be played if the game is over.\n\n\nGiven a 2D integer array moves where moves[i] = [rowi, coli] indicates that the ith move will be played on grid[rowi][coli]. return the winner of the game if it exists (A or B). In case the game ends in a draw return \"Draw\". If there are still movements to play return \"Pending\".\n\nYou can assume that moves is valid (i.e., it follows the rules of Tic-Tac-Toe), the grid is initially empty, and A will play first.",
+  "example": "Input: moves = [[0,0],[2,0],[1,1],[2,1],[2,2]]\nOutput: \"A\"\nExplanation: A wins, they always play first.",
+  "constraints_text": "1 <= moves.length <= 9\n\tmoves[i].length == 2\n\t0 <= rowi, coli <= 2\n\tThere are no repeated elements on moves.\n\tmoves follow the rules of tic tac toe.",
+  "templates": {
+    "c": "char* tictactoe(int** moves, int movesSize, int* movesColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string tictactoe(vector<vector<int>>& moves) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String tictactoe(int[][] moves) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} moves\n * @return {string}\n */\nvar tictactoe = function(moves) {\n    \n};",
+    "python": "class Solution(object):\n    def tictactoe(self, moves):\n        \"\"\"\n        :type moves: List[List[int]]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate Tic-Tac-Toe moves on a 3x3 grid, detect win conditions, and determine the final game outcome.",
+      "structures": [
+        "matrix",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "enumeration"
+      ],
+      "cues": [
+        "3x3-grid",
+        "moves",
+        "winner",
+        "draw",
+        "pending"
+      ],
+      "constraints": [
+        "1-moves-length-9",
+        "0-rowi-coli-2"
+      ]
+    }
+  ]
+}

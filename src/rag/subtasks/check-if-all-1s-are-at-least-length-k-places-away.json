@@ -1,0 +1,38 @@
+{
+  "slug": "check-if-all-1s-are-at-least-length-k-places-away",
+  "link": "https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/",
+  "difficulty": "Easy",
+  "index": "303",
+  "description_full": "Given an binary array nums and an integer k, return true if all 1's are at least k places away from each other, otherwise return false.\n\n \nExample 1:\n\n\nInput: nums = [1,0,0,0,1,0,0,1], k = 2\nOutput: true\nExplanation: Each of the 1s are at least 2 places away from each other.\n\n\nExample 2:\n\n\nInput: nums = [1,0,0,1,0,1], k = 2\nOutput: false\nExplanation: The second 1 and third 1 are only one apart from each other.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t0 <= k <= nums.length\n\tnums[i] is 0 or 1\n\n",
+  "description": "Given an binary array nums and an integer k, return true if all 1's are at least k places away from each other, otherwise return false.",
+  "example": "Input: nums = [1,0,0,0,1,0,0,1], k = 2\nOutput: true\nExplanation: Each of the 1s are at least 2 places away from each other.",
+  "constraints_text": "1 <= nums.length <= 105\n\t0 <= k <= nums.length\n\tnums[i] is 0 or 1",
+  "templates": {
+    "c": "bool kLengthApart(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool kLengthApart(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean kLengthApart(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {boolean}\n */\nvar kLengthApart = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def kLengthApart(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the array, track the index of the last encountered '1', and verify the distance to the current '1'.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "binary-array",
+        "all-1-s-are-at-least-k-places-away"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "0-k-nums-length"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "number-of-good-leaf-nodes-pairs",
+  "link": "https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/",
+  "difficulty": "Medium",
+  "index": "1277",
+  "description_full": "You are given the root of a binary tree and an integer distance. A pair of two different leaf nodes of a binary tree is said to be good if the length of the shortest path between them is less than or equal to distance.\n\nReturn the number of good leaf node pairs in the tree.\n\n \nExample 1:\n\n\nInput: root = [1,2,3,null,4], distance = 3\nOutput: 1\nExplanation: The leaf nodes of the tree are 3 and 4 and the length of the shortest path between them is 3. This is the only good pair.\n\n\nExample 2:\n\n\nInput: root = [1,2,3,4,5,6,7], distance = 3\nOutput: 2\nExplanation: The good pairs are [4,5] and [6,7] with shortest path = 2. The pair [4,6] is not good because the length of ther shortest path between them is 4.\n\n\nExample 3:\n\n\nInput: root = [7,1,4,6,null,5,3,null,null,null,null,null,2], distance = 3\nOutput: 1\nExplanation: The only good pair is [2,5].\n\n\n \nConstraints:\n\n\n\tThe number of nodes in the tree is in the range [1, 210].\n\t1 <= Node.val <= 100\n\t1 <= distance <= 10\n\n",
+  "description": "You are given the root of a binary tree and an integer distance. A pair of two different leaf nodes of a binary tree is said to be good if the length of the shortest path between them is less than or equal to distance.\n\nReturn the number of good leaf node pairs in the tree.",
+  "example": "Input: root = [1,2,3,null,4], distance = 3\nOutput: 1\nExplanation: The leaf nodes of the tree are 3 and 4 and the length of the shortest path between them is 3. This is the only good pair.",
+  "constraints_text": "The number of nodes in the tree is in the range [1, 210].\n\t1 <= Node.val <= 100\n\t1 <= distance <= 10",
+  "templates": {
+    "c": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     struct TreeNode *left;\n *     struct TreeNode *right;\n * };\n */\nint countPairs(struct TreeNode* root, int distance) {\n    \n}",
+    "cpp": "/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass Solution {\npublic:\n    int countPairs(TreeNode* root, int distance) {\n        \n    }\n};",
+    "java": "/**\n * Definition for a binary tree node.\n * public class TreeNode {\n *     int val;\n *     TreeNode left;\n *     TreeNode right;\n *     TreeNode() {}\n *     TreeNode(int val) { this.val = val; }\n *     TreeNode(int val, TreeNode left, TreeNode right) {\n *         this.val = val;\n *         this.left = left;\n *         this.right = right;\n *     }\n * }\n */\nclass Solution {\n    public int countPairs(TreeNode root, int distance) {\n        \n    }\n}",
+    "javascript": "/**\n * Definition for a binary tree node.\n * function TreeNode(val, left, right) {\n *     this.val = (val===undefined ? 0 : val)\n *     this.left = (left===undefined ? null : left)\n *     this.right = (right===undefined ? null : right)\n * }\n */\n/**\n * @param {TreeNode} root\n * @param {number} distance\n * @return {number}\n */\nvar countPairs = function(root, distance) {\n    \n};",
+    "python": "# Definition for a binary tree node.\n# class TreeNode(object):\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution(object):\n    def countPairs(self, root, distance):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type distance: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Recursively count good leaf node pairs by aggregating leaf distances from subtrees.",
+      "structures": [
+        "tree",
+        "array"
+      ],
+      "actions": [
+        "dfs",
+        "recursion",
+        "counting"
+      ],
+      "cues": [
+        "leaf-nodes",
+        "shortest-path",
+        "distance",
+        "number-of-good-leaf-node-pairs"
+      ],
+      "constraints": [
+        "1-distance-10"
+      ]
+    }
+  ]
+}

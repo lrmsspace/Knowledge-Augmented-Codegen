@@ -1,0 +1,41 @@
+{
+  "slug": "find-the-array-concatenation-value",
+  "link": "https://leetcode.com/problems/find-the-array-concatenation-value/",
+  "difficulty": "Easy",
+  "index": "545",
+  "description_full": "You are given a 0-indexed integer array nums.\n\nThe concatenation of two numbers is the number formed by concatenating their numerals.\n\n\n\tFor example, the concatenation of 15, 49 is 1549.\n\n\nThe concatenation value of nums is initially equal to 0. Perform this operation until nums becomes empty:\n\n\n\tIf nums has a size greater than one, add the value of the concatenation of the first and the last element to the concatenation value of nums, and remove those two elements from nums. For example, if the nums was [1, 2, 4, 5, 6], add 16 to the concatenation value.\n\tIf only one element exists in nums, add its value to the concatenation value of nums, then remove it.\n\n\nReturn the concatenation value of nums.\n\n \nExample 1:\n\n\nInput: nums = [7,52,2,4]\nOutput: 596\nExplanation: Before performing any operation, nums is [7,52,2,4] and concatenation value is 0.\n - In the first operation:\nWe pick the first element, 7, and the last element, 4.\nTheir concatenation is 74, and we add it to the concatenation value, so it becomes equal to 74.\nThen we delete them from nums, so nums becomes equal to [52,2].\n - In the second operation:\nWe pick the first element, 52, and the last element, 2.\nTheir concatenation is 522, and we add it to the concatenation value, so it becomes equal to 596.\nThen we delete them from the nums, so nums becomes empty.\nSince the concatenation value is 596 so the answer is 596.\n\n\nExample 2:\n\n\nInput: nums = [5,14,13,8,12]\nOutput: 673\nExplanation: Before performing any operation, nums is [5,14,13,8,12] and concatenation value is 0.\n - In the first operation:\nWe pick the first element, 5, and the last element, 12.\nTheir concatenation is 512, and we add it to the concatenation value, so it becomes equal to 512.\nThen we delete them from the nums, so nums becomes equal to [14,13,8].\n - In the second operation:\nWe pick the first element, 14, and the last element, 8.\nTheir concatenation is 148, and we add it to the concatenation value, so it becomes equal to 660.\nThen we delete them from the nums, so nums becomes equal to [13].\n - In the third operation:\nnums has only one element, so we pick 13 and add it to the concatenation value, so it becomes equal to 673.\nThen we delete it from nums, so nums become empty.\nSince the concatenation value is 673 so the answer is 673.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 1000\n\t1 <= nums[i] <= 104\n\n\n \n.spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; \n}\n.spoiler {overflow:hidden;}\n.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}\n.spoilerbutton[value=\"Show Message\"] + .spoiler > div {margin-top:-500%;}\n.spoilerbutton[value=\"Hide Message\"] + .spoiler {padding:5px;}\n\n",
+  "description": "You are given a 0-indexed integer array nums.\n\nThe concatenation of two numbers is the number formed by concatenating their numerals.\n\n\n\tFor example, the concatenation of 15, 49 is 1549.\n\n\nThe concatenation value of nums is initially equal to 0. Perform this operation until nums becomes empty:\n\n\n\tIf nums has a size greater than one, add the value of the concatenation of the first and the last element to the concatenation value of nums, and remove those two elements from nums. For example, if the nums was [1, 2, 4, 5, 6], add 16 to the concatenation value.\n\tIf only one element exists in nums, add its value to the concatenation value of nums, then remove it.\n\n\nReturn the concatenation value of nums.",
+  "example": "Input: nums = [7,52,2,4]\nOutput: 596\nExplanation: Before performing any operation, nums is [7,52,2,4] and concatenation value is 0.\n - In the first operation:\nWe pick the first element, 7, and the last element, 4.\nTheir concatenation is 74, and we add it to the concatenation value, so it becomes equal to 74.\nThen we delete them from nums, so nums becomes equal to [52,2].\n - In the second operation:\nWe pick the first element, 52, and the last element, 2.\nTheir concatenation is 522, and we add it to the concatenation value, so it becomes equal to 596.\nThen we delete them from the nums, so nums becomes empty.\nSince the concatenation value is 596 so the answer is 596.",
+  "constraints_text": "1 <= nums.length <= 1000\n\t1 <= nums[i] <= 104\n\n\n \n.spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; \n}\n.spoiler {overflow:hidden;}\n.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}\n.spoilerbutton[value=\"Show Message\"] + .spoiler > div {margin-top:-500%;}\n.spoilerbutton[value=\"Hide Message\"] + .spoiler {padding:5px;}",
+  "templates": {
+    "c": "long long findTheArrayConcVal(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long findTheArrayConcVal(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long findTheArrayConcVal(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar findTheArrayConcVal = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def findTheArrayConcVal(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Simulate the process of pairing elements from both ends of the array, concatenating them numerically, and summing the results.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "concatenation-value",
+        "first-and-last-element",
+        "remove-elements",
+        "until-nums-becomes-empty"
+      ],
+      "constraints": [
+        "0-indexed-integer-array",
+        "size-greater-than-one",
+        "only-one-element"
+      ]
+    }
+  ]
+}

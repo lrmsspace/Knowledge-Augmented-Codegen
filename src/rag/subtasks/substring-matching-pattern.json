@@ -1,0 +1,52 @@
+{
+  "slug": "substring-matching-pattern",
+  "link": "https://leetcode.com/problems/substring-matching-pattern/",
+  "difficulty": "Easy",
+  "index": "2365",
+  "description_full": "You are given a string s and a pattern string p, where p contains exactly one '*' character.\n\nThe '*' in p can be replaced with any sequence of zero or more characters.\n\nReturn true if p can be made a substring of s, and false otherwise.\n\n \nExample 1:\n\n\nInput: s = \"leetcode\", p = \"ee*e\"\n\nOutput: true\n\nExplanation:\n\nBy replacing the '*' with \"tcod\", the substring \"eetcode\" matches the pattern.\n\n\nExample 2:\n\n\nInput: s = \"car\", p = \"c*v\"\n\nOutput: false\n\nExplanation:\n\nThere is no substring matching the pattern.\n\n\nExample 3:\n\n\nInput: s = \"luck\", p = \"u*\"\n\nOutput: true\n\nExplanation:\n\nThe substrings \"u\", \"uc\", and \"uck\" match the pattern.\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 50\n\t1 <= p.length <= 50 \n\ts contains only lowercase English letters.\n\tp contains only lowercase English letters and exactly one '*'\n\n",
+  "description": "You are given a string s and a pattern string p, where p contains exactly one '*' character.\n\nThe '*' in p can be replaced with any sequence of zero or more characters.\n\nReturn true if p can be made a substring of s, and false otherwise.",
+  "example": "Input: s = \"leetcode\", p = \"ee*e\"\n\nOutput: true\n\nExplanation:\n\nBy replacing the '*' with \"tcod\", the substring \"eetcode\" matches the pattern.",
+  "constraints_text": "1 <= s.length <= 50\n\t1 <= p.length <= 50 \n\ts contains only lowercase English letters.\n\tp contains only lowercase English letters and exactly one '*'",
+  "templates": {
+    "c": "bool hasMatch(char* s, char* p) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    bool hasMatch(string s, string p) {\n        \n    }\n};",
+    "java": "class Solution {\n    public boolean hasMatch(String s, String p) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @param {string} p\n * @return {boolean}\n */\nvar hasMatch = function(s, p) {\n    \n};",
+    "python": "class Solution(object):\n    def hasMatch(self, s, p):\n        \"\"\"\n        :type s: str\n        :type p: str\n        :rtype: bool\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine the exact prefix and suffix strings from the pattern p by locating the single '*' character.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "exactly-one"
+      ],
+      "constraints": [
+        "p-length-50"
+      ]
+    },
+    {
+      "intent": "Search for a substring in s that matches the identified prefix, followed by any sequence of characters (including empty), and then the identified suffix.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "simulation",
+        "two-pointers"
+      ],
+      "cues": [
+        "p-can-be-made-a-substring-of-s",
+        "zero-or-more-characters"
+      ],
+      "constraints": [
+        "s-length-50",
+        "p-length-50"
+      ]
+    }
+  ]
+}

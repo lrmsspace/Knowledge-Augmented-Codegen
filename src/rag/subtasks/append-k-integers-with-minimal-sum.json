@@ -1,0 +1,57 @@
+{
+  "slug": "append-k-integers-with-minimal-sum",
+  "link": "https://leetcode.com/problems/append-k-integers-with-minimal-sum/",
+  "difficulty": "Medium",
+  "index": "1528",
+  "description_full": "You are given an integer array nums and an integer k. Append k unique positive integers that do not appear in nums to nums such that the resulting total sum is minimum.\n\nReturn the sum of the k integers appended to nums.\n\n \nExample 1:\n\n\nInput: nums = [1,4,25,10,25], k = 2\nOutput: 5\nExplanation: The two unique positive integers that do not appear in nums which we append are 2 and 3.\nThe resulting sum of nums is 1 + 4 + 25 + 10 + 25 + 2 + 3 = 70, which is the minimum.\nThe sum of the two integers appended is 2 + 3 = 5, so we return 5.\n\nExample 2:\n\n\nInput: nums = [5,6], k = 6\nOutput: 25\nExplanation: The six unique positive integers that do not appear in nums which we append are 1, 2, 3, 4, 7, and 8.\nThe resulting sum of nums is 5 + 6 + 1 + 2 + 3 + 4 + 7 + 8 = 36, which is the minimum. \nThe sum of the six integers appended is 1 + 2 + 3 + 4 + 7 + 8 = 25, so we return 25.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\t1 <= k <= 108\n\n",
+  "description": "You are given an integer array nums and an integer k. Append k unique positive integers that do not appear in nums to nums such that the resulting total sum is minimum.\n\nReturn the sum of the k integers appended to nums.",
+  "example": "Input: nums = [1,4,25,10,25], k = 2\nOutput: 5\nExplanation: The two unique positive integers that do not appear in nums which we append are 2 and 3.\nThe resulting sum of nums is 1 + 4 + 25 + 10 + 25 + 2 + 3 = 70, which is the minimum.\nThe sum of the two integers appended is 2 + 3 = 5, so we return 5.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 109\n\t1 <= k <= 108",
+  "templates": {
+    "c": "long long minimalKSum(int* nums, int numsSize, int k) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    long long minimalKSum(vector<int>& nums, int k) {\n        \n    }\n};",
+    "java": "class Solution {\n    public long minimalKSum(int[] nums, int k) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @param {number} k\n * @return {number}\n */\nvar minimalKSum = function(nums, k) {\n    \n};",
+    "python": "class Solution(object):\n    def minimalKSum(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Sort the input array and remove duplicate elements to efficiently identify numbers already present.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "unique-positive-integers",
+        "do-not-appear-in-nums"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "1-nums-i-109"
+      ]
+    },
+    {
+      "intent": "Iterate through positive integers, adding the smallest missing ones to a running sum until k numbers are collected, using arithmetic series for large gaps.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "two-pointers",
+        "prefix-sum"
+      ],
+      "cues": [
+        "minimum-total-sum",
+        "append-k-unique-positive-integers",
+        "sum-of-the-k-integers-appended"
+      ],
+      "constraints": [
+        "1-k-108"
+      ]
+    }
+  ]
+}

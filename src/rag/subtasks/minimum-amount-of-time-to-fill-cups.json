@@ -1,0 +1,40 @@
+{
+  "slug": "minimum-amount-of-time-to-fill-cups",
+  "link": "https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/",
+  "difficulty": "Easy",
+  "index": "498",
+  "description_full": "You have a water dispenser that can dispense cold, warm, and hot water. Every second, you can either fill up 2 cups with different types of water, or 1 cup of any type of water.\n\nYou are given a 0-indexed integer array amount of length 3 where amount[0], amount[1], and amount[2] denote the number of cold, warm, and hot water cups you need to fill respectively. Return the minimum number of seconds needed to fill up all the cups.\n\n \nExample 1:\n\n\nInput: amount = [1,4,2]\nOutput: 4\nExplanation: One way to fill up the cups is:\nSecond 1: Fill up a cold cup and a warm cup.\nSecond 2: Fill up a warm cup and a hot cup.\nSecond 3: Fill up a warm cup and a hot cup.\nSecond 4: Fill up a warm cup.\nIt can be proven that 4 is the minimum number of seconds needed.\n\n\nExample 2:\n\n\nInput: amount = [5,4,4]\nOutput: 7\nExplanation: One way to fill up the cups is:\nSecond 1: Fill up a cold cup, and a hot cup.\nSecond 2: Fill up a cold cup, and a warm cup.\nSecond 3: Fill up a cold cup, and a warm cup.\nSecond 4: Fill up a warm cup, and a hot cup.\nSecond 5: Fill up a cold cup, and a hot cup.\nSecond 6: Fill up a cold cup, and a warm cup.\nSecond 7: Fill up a hot cup.\n\n\nExample 3:\n\n\nInput: amount = [5,0,0]\nOutput: 5\nExplanation: Every second, we fill up a cold cup.\n\n\n \nConstraints:\n\n\n\tamount.length == 3\n\t0 <= amount[i] <= 100\n\n",
+  "description": "You have a water dispenser that can dispense cold, warm, and hot water. Every second, you can either fill up 2 cups with different types of water, or 1 cup of any type of water.\n\nYou are given a 0-indexed integer array amount of length 3 where amount[0], amount[1], and amount[2] denote the number of cold, warm, and hot water cups you need to fill respectively. Return the minimum number of seconds needed to fill up all the cups.",
+  "example": "Input: amount = [1,4,2]\nOutput: 4\nExplanation: One way to fill up the cups is:\nSecond 1: Fill up a cold cup and a warm cup.\nSecond 2: Fill up a warm cup and a hot cup.\nSecond 3: Fill up a warm cup and a hot cup.\nSecond 4: Fill up a warm cup.\nIt can be proven that 4 is the minimum number of seconds needed.",
+  "constraints_text": "amount.length == 3\n\t0 <= amount[i] <= 100",
+  "templates": {
+    "c": "int fillCups(int* amount, int amountSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int fillCups(vector<int>& amount) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int fillCups(int[] amount) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} amount\n * @return {number}\n */\nvar fillCups = function(amount) {\n    \n};",
+    "python": "class Solution(object):\n    def fillCups(self, amount):\n        \"\"\"\n        :type amount: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Calculate the minimum time to fill all water cups by prioritizing filling two different types simultaneously.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "counting",
+        "enumeration"
+      ],
+      "cues": [
+        "minimum-number-of-seconds",
+        "fill-up-2-cups-with-different-types",
+        "1-cup-of-any-type"
+      ],
+      "constraints": [
+        "amount-length-3",
+        "0-amount-i-100"
+      ]
+    }
+  ]
+}

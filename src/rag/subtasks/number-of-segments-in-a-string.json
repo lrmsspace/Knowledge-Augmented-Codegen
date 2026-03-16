@@ -1,0 +1,38 @@
+{
+  "slug": "number-of-segments-in-a-string",
+  "link": "https://leetcode.com/problems/number-of-segments-in-a-string/",
+  "difficulty": "Easy",
+  "index": "91",
+  "description_full": "Given a string s, return the number of segments in the string.\n\nA segment is defined to be a contiguous sequence of non-space characters.\n\n \nExample 1:\n\n\nInput: s = \"Hello, my name is John\"\nOutput: 5\nExplanation: The five segments are [\"Hello,\", \"my\", \"name\", \"is\", \"John\"]\n\n\nExample 2:\n\n\nInput: s = \"Hello\"\nOutput: 1\n\n\n \nConstraints:\n\n\n\t0 <= s.length <= 300\n\ts consists of lowercase and uppercase English letters, digits, or one of the following characters \"!@#$%^&*()_+-=',.:\".\n\tThe only space character in s is ' '.\n\n",
+  "description": "Given a string s, return the number of segments in the string.\n\nA segment is defined to be a contiguous sequence of non-space characters.",
+  "example": "Input: s = \"Hello, my name is John\"\nOutput: 5\nExplanation: The five segments are [\"Hello,\", \"my\", \"name\", \"is\", \"John\"]",
+  "constraints_text": "0 <= s.length <= 300\n\ts consists of lowercase and uppercase English letters, digits, or one of the following characters \"!@#$%^&*()_+-=',.:\".\n\tThe only space character in s is ' '.",
+  "templates": {
+    "c": "int countSegments(char* s) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int countSegments(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int countSegments(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {number}\n */\nvar countSegments = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def countSegments(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Iterate through the string, identifying and counting contiguous sequences of non-space characters to determine the total number of segments.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "simulation",
+        "counting"
+      ],
+      "cues": [
+        "number-of-segments",
+        "contiguous-sequence-of-non-space-characters"
+      ],
+      "constraints": [
+        "0-s-length-300",
+        "only-space-character-is"
+      ]
+    }
+  ]
+}

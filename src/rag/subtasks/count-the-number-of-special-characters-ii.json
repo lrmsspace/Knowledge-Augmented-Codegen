@@ -1,0 +1,52 @@
+{
+  "slug": "count-the-number-of-special-characters-ii",
+  "link": "https://leetcode.com/problems/count-the-number-of-special-characters-ii/",
+  "difficulty": "Medium",
+  "index": "2497",
+  "description_full": "You are given a string word. A letter c is called special if it appears both in lowercase and uppercase in word, and every lowercase occurrence of c appears before the first uppercase occurrence of c.\n\nReturn the number of special letters in word.\n\n \nExample 1:\n\n\nInput: word = \"aaAbcBC\"\n\nOutput: 3\n\nExplanation:\n\nThe special characters are 'a', 'b', and 'c'.\n\n\nExample 2:\n\n\nInput: word = \"abc\"\n\nOutput: 0\n\nExplanation:\n\nThere are no special characters in word.\n\n\nExample 3:\n\n\nInput: word = \"AbBCab\"\n\nOutput: 0\n\nExplanation:\n\nThere are no special characters in word.\n\n\n \nConstraints:\n\n\n\t1 <= word.length <= 2 * 105\n\tword consists of only lowercase and uppercase English letters.\n\n",
+  "description": "You are given a string word. A letter c is called special if it appears both in lowercase and uppercase in word, and every lowercase occurrence of c appears before the first uppercase occurrence of c.\n\nReturn the number of special letters in word.",
+  "example": "Input: word = \"aaAbcBC\"\n\nOutput: 3\n\nExplanation:\n\nThe special characters are 'a', 'b', and 'c'.",
+  "constraints_text": "1 <= word.length <= 2 * 105\n\tword consists of only lowercase and uppercase English letters.",
+  "templates": {
+    "c": "int numberOfSpecialChars(char* word) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int numberOfSpecialChars(string word) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int numberOfSpecialChars(String word) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} word\n * @return {number}\n */\nvar numberOfSpecialChars = function(word) {\n    \n};",
+    "python": "class Solution(object):\n    def numberOfSpecialChars(self, word):\n        \"\"\"\n        :type word: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute the last index of each lowercase letter and the first index of each uppercase letter.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "every-lowercase-occurrence",
+        "first-uppercase-occurrence"
+      ],
+      "constraints": [
+        "1-word-length-2-105",
+        "word-consists-of-only-lowercase-and-uppercase-english-letters"
+      ]
+    },
+    {
+      "intent": "Iterate through all possible letters and count those satisfying the special condition.",
+      "structures": [
+        "array"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "return-the-number-of-special-letters"
+      ],
+      "constraints": []
+    }
+  ]
+}

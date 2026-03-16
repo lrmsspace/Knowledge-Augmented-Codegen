@@ -1,0 +1,57 @@
+{
+  "slug": "find-the-shortest-superstring",
+  "link": "https://leetcode.com/problems/find-the-shortest-superstring/",
+  "difficulty": "Hard",
+  "index": "1925",
+  "description_full": "Given an array of strings words, return the smallest string that contains each string in words as a substring. If there are multiple valid strings of the smallest length, return any of them.\n\nYou may assume that no string in words is a substring of another string in words.\n\n \nExample 1:\n\n\nInput: words = [\"alex\",\"loves\",\"leetcode\"]\nOutput: \"alexlovesleetcode\"\nExplanation: All permutations of \"alex\",\"loves\",\"leetcode\" would also be accepted.\n\n\nExample 2:\n\n\nInput: words = [\"catg\",\"ctaagt\",\"gcta\",\"ttca\",\"atgcatc\"]\nOutput: \"gctaagttcatgcatc\"\n\n\n \nConstraints:\n\n\n\t1 <= words.length <= 12\n\t1 <= words[i].length <= 20\n\twords[i] consists of lowercase English letters.\n\tAll the strings of words are unique.\n\n",
+  "description": "Given an array of strings words, return the smallest string that contains each string in words as a substring. If there are multiple valid strings of the smallest length, return any of them.\n\nYou may assume that no string in words is a substring of another string in words.",
+  "example": "Input: words = [\"alex\",\"loves\",\"leetcode\"]\nOutput: \"alexlovesleetcode\"\nExplanation: All permutations of \"alex\",\"loves\",\"leetcode\" would also be accepted.",
+  "constraints_text": "1 <= words.length <= 12\n\t1 <= words[i].length <= 20\n\twords[i] consists of lowercase English letters.\n\tAll the strings of words are unique.",
+  "templates": {
+    "c": "char* shortestSuperstring(char** words, int wordsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string shortestSuperstring(vector<string>& words) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String shortestSuperstring(String[] words) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string[]} words\n * @return {string}\n */\nvar shortestSuperstring = function(words) {\n    \n};",
+    "python": "class Solution(object):\n    def shortestSuperstring(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Precompute maximum overlap lengths for all pairs of words to determine potential length reductions.",
+      "structures": [
+        "array",
+        "string",
+        "matrix"
+      ],
+      "actions": [
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-string",
+        "contains-each-string"
+      ],
+      "constraints": [
+        "words-i-length-20"
+      ]
+    },
+    {
+      "intent": "Use dynamic programming with bitmask to find the optimal permutation of words that yields the shortest common superstring and reconstruct it.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "bitmask-dp",
+        "dp-2d",
+        "recursion",
+        "enumeration"
+      ],
+      "cues": [
+        "smallest-string",
+        "words-length-12"
+      ],
+      "constraints": [
+        "words-length-12"
+      ]
+    }
+  ]
+}

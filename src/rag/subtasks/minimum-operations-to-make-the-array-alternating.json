@@ -1,0 +1,73 @@
+{
+  "slug": "minimum-operations-to-make-the-array-alternating",
+  "link": "https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/",
+  "difficulty": "Medium",
+  "index": "1518",
+  "description_full": "You are given a 0-indexed array nums consisting of n positive integers.\n\nThe array nums is called alternating if:\n\n\n\tnums[i - 2] == nums[i], where 2 <= i <= n - 1.\n\tnums[i - 1] != nums[i], where 1 <= i <= n - 1.\n\n\nIn one operation, you can choose an index i and change nums[i] into any positive integer.\n\nReturn the minimum number of operations required to make the array alternating.\n\n \nExample 1:\n\n\nInput: nums = [3,1,3,2,4,3]\nOutput: 3\nExplanation:\nOne way to make the array alternating is by converting it to [3,1,3,1,3,1].\nThe number of operations required in this case is 3.\nIt can be proven that it is not possible to make the array alternating in less than 3 operations. \n\n\nExample 2:\n\n\nInput: nums = [1,2,2,2,2]\nOutput: 2\nExplanation:\nOne way to make the array alternating is by converting it to [1,2,1,2,1].\nThe number of operations required in this case is 2.\nNote that the array cannot be converted to [2,2,2,2,2] because in this case nums[0] == nums[1] which violates the conditions of an alternating array.\n\n\n \nConstraints:\n\n\n\t1 <= nums.length <= 105\n\t1 <= nums[i] <= 105\n\n",
+  "description": "You are given a 0-indexed array nums consisting of n positive integers.\n\nThe array nums is called alternating if:\n\n\n\tnums[i - 2] == nums[i], where 2 <= i <= n - 1.\n\tnums[i - 1] != nums[i], where 1 <= i <= n - 1.\n\n\nIn one operation, you can choose an index i and change nums[i] into any positive integer.\n\nReturn the minimum number of operations required to make the array alternating.",
+  "example": "Input: nums = [3,1,3,2,4,3]\nOutput: 3\nExplanation:\nOne way to make the array alternating is by converting it to [3,1,3,1,3,1].\nThe number of operations required in this case is 3.\nIt can be proven that it is not possible to make the array alternating in less than 3 operations.",
+  "constraints_text": "1 <= nums.length <= 105\n\t1 <= nums[i] <= 105",
+  "templates": {
+    "c": "int minimumOperations(int* nums, int numsSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumOperations(vector<int>& nums) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumOperations(int[] nums) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} nums\n * @return {number}\n */\nvar minimumOperations = function(nums) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumOperations(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Populate frequency arrays for elements at even and odd indices.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "0-indexed-array",
+        "even-odd-indices"
+      ],
+      "constraints": [
+        "1-nums-length-105",
+        "1-nums-i-105"
+      ]
+    },
+    {
+      "intent": "Find the top two most frequent elements and their counts from the even and odd frequency arrays.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "greedy"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "most-frequent"
+      ],
+      "constraints": [
+        "1-nums-i-105"
+      ]
+    },
+    {
+      "intent": "Compute the minimum operations based on the top frequencies, handling the alternating constraint.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy",
+        "simulation"
+      ],
+      "cues": [
+        "minimum-number-of-operations",
+        "nums-i-1-nums-i"
+      ],
+      "constraints": [
+        "x-y"
+      ]
+    }
+  ]
+}

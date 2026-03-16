@@ -1,0 +1,38 @@
+{
+  "slug": "letter-case-permutation",
+  "link": "https://leetcode.com/problems/letter-case-permutation/",
+  "difficulty": "Medium",
+  "index": "948",
+  "description_full": "Given a string s, you can transform every letter individually to be lowercase or uppercase to create another string.\n\nReturn a list of all possible strings we could create. Return the output in any order.\n\n \nExample 1:\n\n\nInput: s = \"a1b2\"\nOutput: [\"a1b2\",\"a1B2\",\"A1b2\",\"A1B2\"]\n\n\nExample 2:\n\n\nInput: s = \"3z4\"\nOutput: [\"3z4\",\"3Z4\"]\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 12\n\ts consists of lowercase English letters, uppercase English letters, and digits.\n\n",
+  "description": "Given a string s, you can transform every letter individually to be lowercase or uppercase to create another string.\n\nReturn a list of all possible strings we could create. Return the output in any order.",
+  "example": "Input: s = \"a1b2\"\nOutput: [\"a1b2\",\"a1B2\",\"A1b2\",\"A1B2\"]",
+  "constraints_text": "1 <= s.length <= 12\n\ts consists of lowercase English letters, uppercase English letters, and digits.",
+  "templates": {
+    "c": "/**\n * Note: The returned array must be malloced, assume caller calls free().\n */\nchar** letterCasePermutation(char* s, int* returnSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    vector<string> letterCasePermutation(string s) {\n        \n    }\n};",
+    "java": "class Solution {\n    public List<String> letterCasePermutation(String s) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s\n * @return {string[]}\n */\nvar letterCasePermutation = function(s) {\n    \n};",
+    "python": "class Solution(object):\n    def letterCasePermutation(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: List[str]\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Generate all possible letter case permutations of the input string using a recursive backtracking approach.",
+      "structures": [
+        "string",
+        "array"
+      ],
+      "actions": [
+        "backtracking",
+        "recursion"
+      ],
+      "cues": [
+        "transform-every-letter-individually",
+        "all-possible-strings"
+      ],
+      "constraints": [
+        "1-s-length-12",
+        "s-consists-of-letters-and-digits"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
+  "link": "https://leetcode.com/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum/",
+  "difficulty": "Medium",
+  "index": "1258",
+  "description_full": "You are given an array of integers arr and an integer target.\n\nYou have to find two non-overlapping sub-arrays of arr each with a sum equal target. There can be multiple answers so you have to find an answer where the sum of the lengths of the two sub-arrays is minimum.\n\nReturn the minimum sum of the lengths of the two required sub-arrays, or return -1 if you cannot find such two sub-arrays.\n\n \nExample 1:\n\n\nInput: arr = [3,2,2,4,3], target = 3\nOutput: 2\nExplanation: Only two sub-arrays have sum = 3 ([3] and [3]). The sum of their lengths is 2.\n\n\nExample 2:\n\n\nInput: arr = [7,3,4,7], target = 7\nOutput: 2\nExplanation: Although we have three non-overlapping sub-arrays of sum = 7 ([7], [3,4] and [7]), but we will choose the first and third sub-arrays as the sum of their lengths is 2.\n\n\nExample 3:\n\n\nInput: arr = [4,3,2,6,2,3,4], target = 6\nOutput: -1\nExplanation: We have only one sub-array of sum = 6.\n\n\n \nConstraints:\n\n\n\t1 <= arr.length <= 105\n\t1 <= arr[i] <= 1000\n\t1 <= target <= 108\n\n",
+  "description": "You are given an array of integers arr and an integer target.\n\nYou have to find two non-overlapping sub-arrays of arr each with a sum equal target. There can be multiple answers so you have to find an answer where the sum of the lengths of the two sub-arrays is minimum.\n\nReturn the minimum sum of the lengths of the two required sub-arrays, or return -1 if you cannot find such two sub-arrays.",
+  "example": "Input: arr = [3,2,2,4,3], target = 3\nOutput: 2\nExplanation: Only two sub-arrays have sum = 3 ([3] and [3]). The sum of their lengths is 2.",
+  "constraints_text": "1 <= arr.length <= 105\n\t1 <= arr[i] <= 1000\n\t1 <= target <= 108",
+  "templates": {
+    "c": "int minSumOfLengths(int* arr, int arrSize, int target) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minSumOfLengths(vector<int>& arr, int target) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minSumOfLengths(int[] arr, int target) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[]} arr\n * @param {number} target\n * @return {number}\n */\nvar minSumOfLengths = function(arr, target) {\n    \n};",
+    "python": "class Solution(object):\n    def minSumOfLengths(self, arr, target):\n        \"\"\"\n        :type arr: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Find the minimum sum of lengths for two non-overlapping subarrays, each summing to target, using a single pass.",
+      "structures": [
+        "array",
+        "number"
+      ],
+      "actions": [
+        "sliding-window",
+        "dp-1d",
+        "prefix-sum"
+      ],
+      "cues": [
+        "two-non-overlapping-sub-arrays",
+        "sum-equal-target",
+        "minimum-sum-of-the-lengths"
+      ],
+      "constraints": [
+        "arr-length-105",
+        "o-n-time-complexity"
+      ]
+    }
+  ]
+}

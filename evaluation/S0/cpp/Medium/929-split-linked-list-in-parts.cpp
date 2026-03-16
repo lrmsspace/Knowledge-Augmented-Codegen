@@ -1,0 +1,73 @@
+// Source: https://leetcode.com/problems/split-linked-list-in-parts/   |   Difficulty: Medium
+//
+// Problem Description:
+// Given the head of a singly linked list and an integer k, split the linked list into k consecutive linked list parts.
+//
+// The length of each part should be as equal as possible: no two parts should have a size differing by more than one. This may lead to some parts being null.
+//
+// The parts should be in the order of occurrence in the input list, and parts occurring earlier should always have a size greater than or equal to parts occurring later.
+//
+// Return an array of the k parts.
+//
+// Example:
+// Input: head = [1,2,3], k = 5
+// Output: [[1],[2],[3],[],[]]
+// Explanation:
+// The first element output[0] has output[0].val = 1, output[0].next = null.
+// The last element output[4] is null, but its string representation as a ListNode is [].
+//
+// Constraints:
+// The number of nodes in the list is in the range [0, 1000].
+// 	0 <= Node.val <= 1000
+// 	1 <= k <= 50
+//
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    vector<ListNode*> splitListToParts(ListNode* head, int k) {
+        vector<ListNode*> parts(k, nullptr);
+        int totalLength = 0;
+        ListNode* current = head;
+
+        // Calculate the total length of the linked list
+        while (current) {
+            totalLength++;
+            current = current->next;
+        }
+
+        int baseSize = totalLength / k; // Minimum size of each part
+        int extraNodes = totalLength % k; // Number of parts that will have an extra node
+
+        current = head;
+        for (int i = 0; i < k && current; ++i) {
+            parts[i] = current;
+            int currentPartSize = baseSize + (i < extraNodes ? 1 : 0);
+
+            // Move to the end of the current part
+            for (int j = 1; j < currentPartSize; ++j) {
+                if (current) {
+                    current = current->next;
+                }
+            }
+
+            // Disconnect the current part from the rest of the list
+            if (current) {
+                ListNode* nextPartHead = current->next;
+                current->next = nullptr;
+                current = nextPartHead;
+            }
+        }
+
+        return parts;           
+    }
+};

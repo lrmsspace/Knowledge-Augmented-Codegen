@@ -1,0 +1,68 @@
+{
+  "slug": "generate-tag-for-video-caption",
+  "link": "https://leetcode.com/problems/generate-tag-for-video-caption/",
+  "difficulty": "Easy",
+  "index": "2392",
+  "description_full": "You are given a string caption representing the caption for a video.\n\nThe following actions must be performed in order to generate a valid tag for the video:\n\n\n\t\n\tCombine all words in the string into a single camelCase string prefixed with '#'. A camelCase string is one where the first letter of all words except the first one is capitalized. All characters after the first character in each word must be lowercase.\n\t\n\t\n\tRemove all characters that are not an English letter, except the first '#'.\n\t\n\t\n\tTruncate the result to a maximum of 100 characters.\n\t\n\n\nReturn the tag after performing the actions on caption.\n\n \nExample 1:\n\n\nInput: caption = \"Leetcode daily streak achieved\"\n\nOutput: \"#leetcodeDailyStreakAchieved\"\n\nExplanation:\n\nThe first letter for all words except \"leetcode\" should be capitalized.\n\n\nExample 2:\n\n\nInput: caption = \"can I Go There\"\n\nOutput: \"#canIGoThere\"\n\nExplanation:\n\nThe first letter for all words except \"can\" should be capitalized.\n\n\nExample 3:\n\n\nInput: caption = \"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\"\n\nOutput: \"#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\"\n\nExplanation:\n\nSince the first word has length 101, we need to truncate the last two letters from the word.\n\n\n \nConstraints:\n\n\n\t1 <= caption.length <= 150\n\tcaption consists only of English letters and ' '.\n\n",
+  "description": "You are given a string caption representing the caption for a video.\n\nThe following actions must be performed in order to generate a valid tag for the video:\n\n\n\t\n\tCombine all words in the string into a single camelCase string prefixed with '#'. A camelCase string is one where the first letter of all words except the first one is capitalized. All characters after the first character in each word must be lowercase.\n\t\n\t\n\tRemove all characters that are not an English letter, except the first '#'.\n\t\n\t\n\tTruncate the result to a maximum of 100 characters.\n\t\n\n\nReturn the tag after performing the actions on caption.",
+  "example": "Input: caption = \"Leetcode daily streak achieved\"\n\nOutput: \"#leetcodeDailyStreakAchieved\"\n\nExplanation:\n\nThe first letter for all words except \"leetcode\" should be capitalized.",
+  "constraints_text": "1 <= caption.length <= 150\n\tcaption consists only of English letters and ' '.",
+  "templates": {
+    "c": "char* generateTag(char* caption) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    string generateTag(string caption) {\n        \n    }\n};",
+    "java": "class Solution {\n    public String generateTag(String caption) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} caption\n * @return {string}\n */\nvar generateTag = function(caption) {\n    \n};",
+    "python": "class Solution(object):\n    def generateTag(self, caption):\n        \"\"\"\n        :type caption: str\n        :rtype: str\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Construct initial camelCase tag from words, prefixed with '#', handling capitalization and lowercasing.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "combine-all-words",
+        "camelcase",
+        "prefixed-with",
+        "first-letter-capitalized-except-first-word",
+        "after-first-char-lowercase"
+      ],
+      "constraints": [
+        "caption-consists-only-of-english-letters-and"
+      ]
+    },
+    {
+      "intent": "Filter out any non-English letter characters from the generated string, preserving the initial '#'.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "remove-all-characters-that-are-not-an-english-letter-except-the-first"
+      ],
+      "constraints": []
+    },
+    {
+      "intent": "Truncate the processed string to a maximum length of 100 characters.",
+      "structures": [
+        "string"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "truncate-the-result-to-a-maximum-of-100-characters"
+      ],
+      "constraints": [
+        "maximum-of-100-characters"
+      ]
+    }
+  ]
+}

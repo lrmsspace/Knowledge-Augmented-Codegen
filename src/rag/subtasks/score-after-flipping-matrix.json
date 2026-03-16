@@ -1,0 +1,64 @@
+{
+  "slug": "score-after-flipping-matrix",
+  "link": "https://leetcode.com/problems/score-after-flipping-matrix/",
+  "difficulty": "Medium",
+  "index": "993",
+  "description_full": "You are given an m x n binary matrix grid.\n\nA move consists of choosing any row or column and toggling each value in that row or column (i.e., changing all 0's to 1's, and all 1's to 0's).\n\nEvery row of the matrix is interpreted as a binary number, and the score of the matrix is the sum of these numbers.\n\nReturn the highest possible score after making any number of moves (including zero moves).\n\n \nExample 1:\n\n\nInput: grid = [[0,0,1,1],[1,0,1,0],[1,1,0,0]]\nOutput: 39\nExplanation: 0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39\n\n\nExample 2:\n\n\nInput: grid = [[0]]\nOutput: 1\n\n\n \nConstraints:\n\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 20\n\tgrid[i][j] is either 0 or 1.\n\n",
+  "description": "You are given an m x n binary matrix grid.\n\nA move consists of choosing any row or column and toggling each value in that row or column (i.e., changing all 0's to 1's, and all 1's to 0's).\n\nEvery row of the matrix is interpreted as a binary number, and the score of the matrix is the sum of these numbers.\n\nReturn the highest possible score after making any number of moves (including zero moves).",
+  "example": "Input: grid = [[0,0,1,1],[1,0,1,0],[1,1,0,0]]\nOutput: 39\nExplanation: 0b1111 + 0b1001 + 0b1111 = 15 + 9 + 15 = 39",
+  "constraints_text": "m == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 20\n\tgrid[i][j] is either 0 or 1.",
+  "templates": {
+    "c": "int matrixScore(int** grid, int gridSize, int* gridColSize) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int matrixScore(vector<vector<int>>& grid) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int matrixScore(int[][] grid) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {number[][]} grid\n * @return {number}\n */\nvar matrixScore = function(grid) {\n    \n};",
+    "python": "class Solution(object):\n    def matrixScore(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Determine optimal row toggles to ensure all MSBs are 1s, and initialize the total score with the contribution from the first column.",
+      "structures": [
+        "matrix",
+        "number",
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "choosing-any-row",
+        "toggling-each-value",
+        "first-element",
+        "score-of-the-matrix"
+      ],
+      "constraints": [
+        "1-m-n-20"
+      ]
+    },
+    {
+      "intent": "For each subsequent column, apply greedy toggles based on 1s count and add its maximized contribution to the total score.",
+      "structures": [
+        "matrix",
+        "number",
+        "array"
+      ],
+      "actions": [
+        "greedy",
+        "counting",
+        "enumeration",
+        "simulation"
+      ],
+      "cues": [
+        "choosing-any-column",
+        "toggling-each-value",
+        "count-1s",
+        "sum-of-these-numbers"
+      ],
+      "constraints": [
+        "1-m-n-20"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "slug": "minimum-swaps-to-make-strings-equal",
+  "link": "https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/",
+  "difficulty": "Medium",
+  "index": "1163",
+  "description_full": "You are given two strings s1 and s2 of equal length consisting of letters \"x\" and \"y\" only. Your task is to make these two strings equal to each other. You can swap any two characters that belong to different strings, which means: swap s1[i] and s2[j].\n\nReturn the minimum number of swaps required to make s1 and s2 equal, or return -1 if it is impossible to do so.\n\n \nExample 1:\n\n\nInput: s1 = \"xx\", s2 = \"yy\"\nOutput: 1\nExplanation: Swap s1[0] and s2[1], s1 = \"yx\", s2 = \"yx\".\n\n\nExample 2:\n\n\nInput: s1 = \"xy\", s2 = \"yx\"\nOutput: 2\nExplanation: Swap s1[0] and s2[0], s1 = \"yy\", s2 = \"xx\".\nSwap s1[0] and s2[1], s1 = \"xy\", s2 = \"xy\".\nNote that you cannot swap s1[0] and s1[1] to make s1 equal to \"yx\", cause we can only swap chars in different strings.\n\n\nExample 3:\n\n\nInput: s1 = \"xx\", s2 = \"xy\"\nOutput: -1\n\n\n \nConstraints:\n\n\n\t1 <= s1.length, s2.length <= 1000\n\ts1.length == s2.length\n\ts1, s2 only contain 'x' or 'y'.\n\n",
+  "description": "You are given two strings s1 and s2 of equal length consisting of letters \"x\" and \"y\" only. Your task is to make these two strings equal to each other. You can swap any two characters that belong to different strings, which means: swap s1[i] and s2[j].\n\nReturn the minimum number of swaps required to make s1 and s2 equal, or return -1 if it is impossible to do so.",
+  "example": "Input: s1 = \"xx\", s2 = \"yy\"\nOutput: 1\nExplanation: Swap s1[0] and s2[1], s1 = \"yx\", s2 = \"yx\".",
+  "constraints_text": "1 <= s1.length, s2.length <= 1000\n\ts1.length == s2.length\n\ts1, s2 only contain 'x' or 'y'.",
+  "templates": {
+    "c": "int minimumSwap(char* s1, char* s2) {\n    \n}",
+    "cpp": "class Solution {\npublic:\n    int minimumSwap(string s1, string s2) {\n        \n    }\n};",
+    "java": "class Solution {\n    public int minimumSwap(String s1, String s2) {\n        \n    }\n}",
+    "javascript": "/**\n * @param {string} s1\n * @param {string} s2\n * @return {number}\n */\nvar minimumSwap = function(s1, s2) {\n    \n};",
+    "python": "class Solution(object):\n    def minimumSwap(self, s1, s2):\n        \"\"\"\n        :type s1: str\n        :type s2: str\n        :rtype: int\n        \"\"\"\n        "
+  },
+  "subtasks": [
+    {
+      "intent": "Count occurrences of 'xy' and 'yx' mismatches between s1 and s2.",
+      "structures": [
+        "string",
+        "number"
+      ],
+      "actions": [
+        "enumeration",
+        "counting"
+      ],
+      "cues": [
+        "s1-i",
+        "s2-i",
+        "x",
+        "y"
+      ],
+      "constraints": [
+        "s1-length-s2-length",
+        "1-length-1000"
+      ]
+    },
+    {
+      "intent": "Determine if string equalization is possible based on mismatch counts' parity.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "count-xy",
+        "count-yx",
+        "parity"
+      ],
+      "constraints": [
+        "return-1-if-impossible"
+      ]
+    },
+    {
+      "intent": "Calculate the minimum number of swaps required to equalize the strings.",
+      "structures": [
+        "number"
+      ],
+      "actions": [
+        "greedy"
+      ],
+      "cues": [
+        "count-xy",
+        "count-yx",
+        "parity"
+      ],
+      "constraints": [
+        "minimum-swaps"
+      ]
+    }
+  ]
+}
